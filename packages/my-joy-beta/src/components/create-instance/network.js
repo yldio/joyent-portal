@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import { Field } from 'redux-form';
 import { Margin, Padding } from 'styled-components-spacing';
@@ -71,14 +72,10 @@ export const Collapsed = ({ name, fabric, ...network }) => (
                     <FlexItem>
                       <Flex alignCenter>
                         <FlexItem>
-                          <Margin right={1}>
-                            {fabric ? <FabricIcon /> : <DataCenterIcon />}
-                          </Margin>
+                          <Margin right={1}>{fabric ? <FabricIcon /> : <DataCenterIcon />}</Margin>
                         </FlexItem>
                         <FlexItem>
-                          <P>
-                            {fabric ? 'Fabric network' : 'Data center network'}
-                          </P>
+                          <P>{fabric ? 'Fabric network' : 'Data center network'}</P>
                         </FlexItem>
                       </Flex>
                     </FlexItem>
@@ -146,14 +143,10 @@ export const Expanded = ({
                   <FlexItem>
                     <Flex alignCenter>
                       <FlexItem>
-                        <Margin right={1}>
-                          {fabric ? <FabricIcon /> : <DataCenterIcon />}
-                        </Margin>
+                        <Margin right={1}>{fabric ? <FabricIcon /> : <DataCenterIcon />}</Margin>
                       </FlexItem>
                       <FlexItem>
-                        <P>
-                          {fabric ? 'Fabric network' : 'Data center network'}
-                        </P>
+                        <P>{fabric ? 'Fabric network' : 'Data center network'}</P>
                       </FlexItem>
                     </Flex>
                   </FlexItem>
@@ -162,11 +155,7 @@ export const Expanded = ({
               {fabric ? (
                 <Margin top={3}>
                   <Card collapsed={!infoExpanded} actionable={!infoExpanded}>
-                    <CardHeader
-                      secondary={false}
-                      transparent={false}
-                      onClick={onInfoClick}
-                    >
+                    <CardHeader secondary={false} transparent={false} onClick={onInfoClick}>
                       <CardHeaderMeta>
                         <Padding left={3} right={3}>
                           <P>Network information</P>
@@ -185,11 +174,7 @@ export const Expanded = ({
                                 <Margin bottom={3}>
                                   <Flex alignCenter>
                                     <Margin right={1}>
-                                      <DotIcon
-                                        width={remcalc(12)}
-                                        height={remcalc(12)}
-                                        color="green"
-                                      />
+                                      <DotIcon size={remcalc(12)} color="green" />
                                     </Margin>
                                     <Small bold noMargin>
                                       Outbound internet access enabled
@@ -201,28 +186,16 @@ export const Expanded = ({
                             <FlexItem>
                               <FormGroup name="id">
                                 <FormLabel>ID</FormLabel>
-                                <Margin top={0.5}>
-                                  <Input
-                                    onBlur={null}
-                                    big
-                                    monospace
-                                    type="text"
-                                    value={id}
-                                  />
+                                <Margin top={0.5} bottom={2}>
+                                  <Input onBlur={null} big monospace type="text" value={id} />
                                 </Margin>
                               </FormGroup>
                             </FlexItem>
                             <FlexItem>
                               <FormGroup name="subnet">
                                 <FormLabel>Subnet</FormLabel>
-                                <Margin top={0.5}>
-                                  <Input
-                                    onBlur={null}
-                                    big
-                                    monospace
-                                    type="text"
-                                    value={subnet}
-                                  />
+                                <Margin top={0.5} bottom={2}>
+                                  <Input onBlur={null} big monospace type="text" value={subnet} />
                                 </Margin>
                               </FormGroup>
                             </FlexItem>

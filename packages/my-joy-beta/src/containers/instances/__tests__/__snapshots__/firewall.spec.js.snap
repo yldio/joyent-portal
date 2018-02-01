@@ -18,493 +18,8 @@ Array [
   margin-top: 1.875rem;
 }
 
-.c18 {
-  margin-bottom: 0.75rem;
-}
-
-.c16 {
-  padding: 2.25rem;
-}
-
-.c5 {
-  color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c5 + p,
-.c5 + small,
-.c5 + h1,
-.c5 + h2,
-.c5 + label,
-.c5 + h3,
-.c5 + h4,
-.c5 + h5,
-.c5 + div,
-.c5 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c9 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
-}
-
-.c2 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c3 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c20 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c20 + p,
-.c20 + small,
-.c20 + h1,
-.c20 + h2,
-.c20 + label,
-.c20 + h3,
-.c20 + h4,
-.c20 + h5,
-.c20 + div,
-.c20 + span {
-  margin-top: 1.5rem;
-}
-
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c7 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c10 {
-  position: relative;
-  vertical-align: text-bottom;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c11 {
-  display: none;
-}
-
-.c11:checked + label {
-  background: #3B46CC;
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c11:checked + label:after {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c11:checked + label:active {
-  box-shadow: none;
-}
-
-.c12 {
-  outline: 0;
-  display: block;
-  width: 2.875rem;
-  height: 1.5rem;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  background: rgb(250,250,250);
-  border-radius: 1.4375rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
-}
-
-.c12::selection {
-  background: none;
-}
-
-.c12:active {
-  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
-}
-
-.c12:hover {
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c12:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c12:after,
-.c12:before {
-  position: relative;
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-}
-
-.c12:after {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-  border-radius: 50%;
-  background: rgb(255,255,255);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
-.c12:active {
-  box-shadow: inset 0 0 0 2em rgb(216,216,216);
-}
-
-.c12:before {
-  display: none;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c19 {
-  color: rgb(151,151,151);
-}
-
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 56rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 59rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
-<div
-    className="c0"
->
-    <div
-        className="c1"
-    >
-        <div
-            className="c2"
-        >
-            <div
-                className="c3"
-            >
-                <div
-                    className="c4"
-                >
-                    <p
-                        className="c5"
-                    >
-                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
-                         
-                        <a
-                            href="https://docs.joyent.com/private-cloud/install/cns"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            Read the docs
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div
-        className="c6"
-    >
-        <form
-            onChange={[Function]}
-        >
-            <div
-                className="baseline-jVaZNU kXgQxt c7"
-                name="enabled"
-                role="group"
-                style={undefined}
-                type="checkbox"
-            >
-                <div
-                    className="c8"
-                >
-                    <label
-                        className="c9"
-                        htmlFor="k"
-                    >
-                        Enable Firewall
-                    </label>
-                    <div
-                        className="c10"
-                    >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            disabled={false}
-                            id="k"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            disabled={false}
-                            htmlFor="k"
-                            id="k"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            disabled={false}
-                            htmlFor="k"
-                            id="k"
-                            onBlur={undefined}
-                        >
-                             
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div
-        className="c13 c2"
-        height="0.0625rem"
-    />
-    <div
-        className="c14"
-    >
-        <div
-            className="c15"
-            disabled={false}
-            name="card"
-        >
-            <div
-                className="c16"
-            >
-                <div
-                    className="c17"
-                >
-                    <div
-                        className="c18"
-                    >
-                        <img
-                            src="no-packages.svg"
-                        />
-                    </div>
-                    <h3
-                        className="c19 c20"
-                    >
-                        Sorry, but we weren’t able to find any firewall rules.
-                    </h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>,
-  .c1 {
-  margin-bottom: 0.375rem;
-}
-
-.c4 {
-  margin-bottom: 1.125rem;
-}
-
-.c6 {
-  margin-bottom: 2.625rem;
-}
-
-.c15 {
-  margin-top: 1.875rem;
-}
-
 .c19 {
   margin-bottom: 0.75rem;
-}
-
-.c14 {
-  margin-top: 1.5rem;
 }
 
 .c17 {
@@ -802,6 +317,500 @@ Array [
 
 .c20 {
   color: rgb(151,151,151);
+}
+
+.c15 {
+  width: 100%;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 56rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 59rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <form
+            onChange={[Function]}
+        >
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="enabled"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <label
+                        className="c9"
+                        htmlFor="k"
+                    >
+                        Enable Firewall
+                    </label>
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            disabled={false}
+                            id="k"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            disabled={false}
+                            htmlFor="k"
+                            id="k"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            disabled={false}
+                            htmlFor="k"
+                            id="k"
+                            onBlur={undefined}
+                        >
+                             
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c13 c2"
+        height="0.0625rem"
+    />
+    <div
+        className="c14"
+    >
+        <div
+            className="c15 c16"
+            disabled={false}
+            name="card"
+        >
+            <div
+                className="c17"
+            >
+                <div
+                    className="c18"
+                >
+                    <div
+                        className="c19"
+                    >
+                        <img
+                            alt="Sad Animal"
+                            src="no-packages.svg"
+                        />
+                    </div>
+                    <h3
+                        className="c20 c21"
+                    >
+                        Sorry, but we weren’t able to find any firewall rules.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>,
+  .c1 {
+  margin-bottom: 0.375rem;
+}
+
+.c4 {
+  margin-bottom: 1.125rem;
+}
+
+.c6 {
+  margin-bottom: 2.625rem;
+}
+
+.c15 {
+  margin-top: 1.875rem;
+}
+
+.c20 {
+  margin-bottom: 0.75rem;
+}
+
+.c14 {
+  margin-top: 1.5rem;
+}
+
+.c18 {
+  padding: 2.25rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c22 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c22 + p,
+.c22 + small,
+.c22 + h1,
+.c22 + h2,
+.c22 + label,
+.c22 + h3,
+.c22 + h4,
+.c22 + h5,
+.c22 + div,
+.c22 + span {
+  margin-top: 1.5rem;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c17 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c21 {
+  color: rgb(151,151,151);
+}
+
+.c16 {
+  width: 100%;
 }
 
 @media only screen and (min-width:48em) {
@@ -985,25 +994,26 @@ Array [
         className="c15"
     >
         <div
-            className="c16"
+            className="c16 c17"
             disabled={false}
             name="card"
         >
             <div
-                className="c17"
+                className="c18"
             >
                 <div
-                    className="c18"
+                    className="c19"
                 >
                     <div
-                        className="c19"
+                        className="c20"
                     >
                         <img
+                            alt="Sad Animal"
                             src="no-packages.svg"
                         />
                     </div>
                     <h3
-                        className="c20 c21"
+                        className="c21 c22"
                     >
                         Sorry, but we weren’t able to find any firewall rules.
                     </h3>
@@ -1033,493 +1043,8 @@ Array [
   margin-top: 1.875rem;
 }
 
-.c18 {
-  margin-bottom: 0.75rem;
-}
-
-.c16 {
-  padding: 2.25rem;
-}
-
-.c5 {
-  color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c5 + p,
-.c5 + small,
-.c5 + h1,
-.c5 + h2,
-.c5 + label,
-.c5 + h3,
-.c5 + h4,
-.c5 + h5,
-.c5 + div,
-.c5 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c9 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-right: 0.75rem;
-  font-weight: bold;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
-}
-
-.c2 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c3 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c20 {
-  color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c20 + p,
-.c20 + small,
-.c20 + h1,
-.c20 + h2,
-.c20 + label,
-.c20 + h3,
-.c20 + h4,
-.c20 + h5,
-.c20 + div,
-.c20 + span {
-  margin-top: 1.5rem;
-}
-
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgba(73,73,73,1);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c7 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c10 {
-  position: relative;
-  vertical-align: text-bottom;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c11 {
-  display: none;
-}
-
-.c11:checked + label {
-  background: #3B46CC;
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c11:checked + label:after {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c11:checked + label:active {
-  box-shadow: none;
-}
-
-.c12 {
-  outline: 0;
-  display: block;
-  width: 2.875rem;
-  height: 1.5rem;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  background: rgb(250,250,250);
-  border-radius: 1.4375rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
-}
-
-.c12::selection {
-  background: none;
-}
-
-.c12:active {
-  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
-}
-
-.c12:hover {
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c12:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c12:after,
-.c12:before {
-  position: relative;
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-}
-
-.c12:after {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-  border-radius: 50%;
-  background: rgb(255,255,255);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
-.c12:active {
-  box-shadow: inset 0 0 0 2em rgb(216,216,216);
-}
-
-.c12:before {
-  display: none;
-}
-
-.c8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c19 {
-  color: rgb(151,151,151);
-}
-
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 56rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 59rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
-<div
-    className="c0"
->
-    <div
-        className="c1"
-    >
-        <div
-            className="c2"
-        >
-            <div
-                className="c3"
-            >
-                <div
-                    className="c4"
-                >
-                    <p
-                        className="c5"
-                    >
-                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
-                         
-                        <a
-                            href="https://docs.joyent.com/private-cloud/install/cns"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                        >
-                            Read the docs
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div
-        className="c6"
-    >
-        <form
-            onChange={[Function]}
-        >
-            <div
-                className="baseline-jVaZNU kXgQxt c7"
-                name="enabled"
-                role="group"
-                style={undefined}
-                type="checkbox"
-            >
-                <div
-                    className="c8"
-                >
-                    <label
-                        className="c9"
-                        htmlFor="n"
-                    >
-                        Enable Firewall
-                    </label>
-                    <div
-                        className="c10"
-                    >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            disabled={false}
-                            id="n"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            disabled={false}
-                            htmlFor="n"
-                            id="n"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            disabled={false}
-                            htmlFor="n"
-                            id="n"
-                            onBlur={undefined}
-                        >
-                             
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div
-        className="c13 c2"
-        height="0.0625rem"
-    />
-    <div
-        className="c14"
-    >
-        <div
-            className="c15"
-            disabled={false}
-            name="card"
-        >
-            <div
-                className="c16"
-            >
-                <div
-                    className="c17"
-                >
-                    <div
-                        className="c18"
-                    >
-                        <img
-                            src="no-packages.svg"
-                        />
-                    </div>
-                    <h3
-                        className="c19 c20"
-                    >
-                        Sorry, but we weren’t able to find any firewall rules.
-                    </h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>,
-  .c1 {
-  margin-bottom: 0.375rem;
-}
-
-.c4 {
-  margin-bottom: 1.125rem;
-}
-
-.c6 {
-  margin-bottom: 2.625rem;
-}
-
-.c15 {
-  margin-top: 1.875rem;
-}
-
 .c19 {
   margin-bottom: 0.75rem;
-}
-
-.c14 {
-  margin-top: 1.5rem;
 }
 
 .c17 {
@@ -1819,6 +1344,500 @@ Array [
   color: rgb(151,151,151);
 }
 
+.c15 {
+  width: 100%;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 56rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 59rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c3 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c3 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+  }
+}
+
+<div
+    className="c0"
+>
+    <div
+        className="c1"
+    >
+        <div
+            className="c2"
+        >
+            <div
+                className="c3"
+            >
+                <div
+                    className="c4"
+                >
+                    <p
+                        className="c5"
+                    >
+                        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
+                         
+                        <a
+                            href="https://docs.joyent.com/private-cloud/install/cns"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                        >
+                            Read the docs
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        className="c6"
+    >
+        <form
+            onChange={[Function]}
+        >
+            <div
+                className="baseline-jVaZNU kXgQxt c7"
+                name="enabled"
+                role="group"
+                style={undefined}
+                type="checkbox"
+            >
+                <div
+                    className="c8"
+                >
+                    <label
+                        className="c9"
+                        htmlFor="n"
+                    >
+                        Enable Firewall
+                    </label>
+                    <div
+                        className="c10"
+                    >
+                        <input
+                            checked={undefined}
+                            className="c11"
+                            disabled={false}
+                            id="n"
+                            onBlur={undefined}
+                            type="checkbox"
+                        />
+                        <label
+                            className="c12"
+                            disabled={false}
+                            htmlFor="n"
+                            id="n"
+                            onBlur={undefined}
+                        />
+                        <label
+                            className="c9"
+                            disabled={false}
+                            htmlFor="n"
+                            id="n"
+                            onBlur={undefined}
+                        >
+                             
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div
+        className="c13 c2"
+        height="0.0625rem"
+    />
+    <div
+        className="c14"
+    >
+        <div
+            className="c15 c16"
+            disabled={false}
+            name="card"
+        >
+            <div
+                className="c17"
+            >
+                <div
+                    className="c18"
+                >
+                    <div
+                        className="c19"
+                    >
+                        <img
+                            alt="Sad Animal"
+                            src="no-packages.svg"
+                        />
+                    </div>
+                    <h3
+                        className="c20 c21"
+                    >
+                        Sorry, but we weren’t able to find any firewall rules.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>,
+  .c1 {
+  margin-bottom: 0.375rem;
+}
+
+.c4 {
+  margin-bottom: 1.125rem;
+}
+
+.c6 {
+  margin-bottom: 2.625rem;
+}
+
+.c15 {
+  margin-top: 1.875rem;
+}
+
+.c20 {
+  margin-bottom: 0.75rem;
+}
+
+.c14 {
+  margin-top: 1.5rem;
+}
+
+.c18 {
+  padding: 2.25rem;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c9 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-right: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c3 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c22 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c22 + p,
+.c22 + small,
+.c22 + h1,
+.c22 + h2,
+.c22 + label,
+.c22 + h3,
+.c22 + h4,
+.c22 + h5,
+.c22 + div,
+.c22 + span {
+  margin-top: 1.5rem;
+}
+
+.c13 {
+  background-color: rgb(216,216,216);
+  margin: 0;
+  height: 0.0625rem;
+}
+
+.c17 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c7 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c10 {
+  position: relative;
+  vertical-align: text-bottom;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: none;
+}
+
+.c11:checked + label {
+  background: #3B46CC;
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c11:checked + label:after {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c11:checked + label:active {
+  box-shadow: none;
+}
+
+.c12 {
+  outline: 0;
+  display: block;
+  width: 2.875rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background: rgb(250,250,250);
+  border-radius: 1.4375rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 0.0625rem solid rgb(216,216,216);
+  margin-right: 0.375rem;
+}
+
+.c12::selection {
+  background: none;
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
+}
+
+.c12:hover {
+  border: 0.0625rem solid rgb(59,70,204);
+}
+
+.c12:hover:after {
+  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
+}
+
+.c12:after,
+.c12:before {
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+}
+
+.c12:after {
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  border-radius: 50%;
+  background: rgb(255,255,255);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
+.c12:active {
+  box-shadow: inset 0 0 0 2em rgb(216,216,216);
+}
+
+.c12:before {
+  display: none;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c21 {
+  color: rgb(151,151,151);
+}
+
+.c16 {
+  width: 100%;
+}
+
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -2000,25 +2019,26 @@ Array [
         className="c15"
     >
         <div
-            className="c16"
+            className="c16 c17"
             disabled={false}
             name="card"
         >
             <div
-                className="c17"
+                className="c18"
             >
                 <div
-                    className="c18"
+                    className="c19"
                 >
                     <div
-                        className="c19"
+                        className="c20"
                     >
                         <img
+                            alt="Sad Animal"
                             src="no-packages.svg"
                         />
                     </div>
                     <h3
-                        className="c20 c21"
+                        className="c21 c22"
                     >
                         Sorry, but we weren’t able to find any firewall rules.
                     </h3>
@@ -2570,7 +2590,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   margin-top: 1.875rem;
 }
 
-.c24 {
+.c25 {
   margin-bottom: 0.75rem;
 }
 
@@ -2578,7 +2598,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c22 {
+.c23 {
   padding: 2.25rem;
 }
 
@@ -2676,7 +2696,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   display: block;
 }
 
-.c26 {
+.c27 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -2684,16 +2704,16 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c26 + p,
-.c26 + small,
-.c26 + h1,
-.c26 + h2,
-.c26 + label,
-.c26 + h3,
-.c26 + h4,
-.c26 + h5,
-.c26 + div,
-.c26 + span {
+.c27 + p,
+.c27 + small,
+.c27 + h1,
+.c27 + h2,
+.c27 + label,
+.c27 + h3,
+.c27 + h4,
+.c27 + h5,
+.c27 + div,
+.c27 + span {
   margin-top: 1.5rem;
 }
 
@@ -2711,7 +2731,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   height: 0.0625rem;
 }
 
-.c21 {
+.c22 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2896,7 +2916,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c23 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2927,8 +2947,12 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c25 {
+.c26 {
   color: rgb(151,151,151);
+}
+
+.c21 {
+  width: 100%;
 }
 
 @media only screen and (min-width:48em) {
@@ -3093,25 +3117,26 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
     className="c20"
   >
     <div
-      className="c21"
+      className="c21 c22"
       disabled={false}
       name="card"
     >
       <div
-        className="c22"
+        className="c23"
       >
         <div
-          className="c23"
+          className="c24"
         >
           <div
-            className="c24"
+            className="c25"
           >
             <img
+              alt="Sad Animal"
               src="no-packages.svg"
             />
           </div>
           <h3
-            className="c25 c26"
+            className="c26 c27"
           >
             Sorry, but we weren’t able to find any firewall rules.
           </h3>
@@ -3139,7 +3164,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   margin-top: 1.875rem;
 }
 
-.c24 {
+.c25 {
   margin-bottom: 0.75rem;
 }
 
@@ -3147,7 +3172,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c22 {
+.c23 {
   padding: 2.25rem;
 }
 
@@ -3245,7 +3270,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   display: block;
 }
 
-.c26 {
+.c27 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -3253,16 +3278,16 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c26 + p,
-.c26 + small,
-.c26 + h1,
-.c26 + h2,
-.c26 + label,
-.c26 + h3,
-.c26 + h4,
-.c26 + h5,
-.c26 + div,
-.c26 + span {
+.c27 + p,
+.c27 + small,
+.c27 + h1,
+.c27 + h2,
+.c27 + label,
+.c27 + h3,
+.c27 + h4,
+.c27 + h5,
+.c27 + div,
+.c27 + span {
   margin-top: 1.5rem;
 }
 
@@ -3280,7 +3305,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   height: 0.0625rem;
 }
 
-.c21 {
+.c22 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3465,7 +3490,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c23 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3496,8 +3521,12 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c25 {
+.c26 {
   color: rgb(151,151,151);
+}
+
+.c21 {
+  width: 100%;
 }
 
 @media only screen and (min-width:48em) {
@@ -3662,25 +3691,26 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
     className="c20"
   >
     <div
-      className="c21"
+      className="c21 c22"
       disabled={false}
       name="card"
     >
       <div
-        className="c22"
+        className="c23"
       >
         <div
-          className="c23"
+          className="c24"
         >
           <div
-            className="c24"
+            className="c25"
           >
             <img
+              alt="Sad Animal"
               src="no-packages.svg"
             />
           </div>
           <h3
-            className="c25 c26"
+            className="c26 c27"
           >
             Sorry, but we weren’t able to find any firewall rules.
           </h3>
@@ -5094,6 +5124,11 @@ Array [
                                         >
                                             <strong
                                                 className="c25"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 From: 
                                             </strong>
@@ -5107,6 +5142,11 @@ Array [
                                         >
                                             <p
                                                 className="c5"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 Any
                                             </p>
@@ -5128,6 +5168,11 @@ Array [
                                         >
                                             <strong
                                                 className="c25"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 To: 
                                             </strong>
@@ -5175,6 +5220,11 @@ Array [
                                         >
                                             <strong
                                                 className="c25"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 Protocol: 
                                             </strong>
@@ -5188,6 +5238,11 @@ Array [
                                         >
                                             <p
                                                 className="c5"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 tcp
                                             </p>
@@ -5209,6 +5264,11 @@ Array [
                                         >
                                             <strong
                                                 className="c25"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 Ports: 
                                             </strong>
@@ -5222,6 +5282,11 @@ Array [
                                         >
                                             <p
                                                 className="c5"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 all
                                             </p>
@@ -5243,6 +5308,11 @@ Array [
                                         >
                                             <strong
                                                 className="c25"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 Action: 
                                             </strong>
@@ -5256,6 +5326,11 @@ Array [
                                         >
                                             <p
                                                 className="c5"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 Allow
                                             </p>
@@ -6676,6 +6751,11 @@ Array [
                                         >
                                             <strong
                                                 className="c25"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 From: 
                                             </strong>
@@ -6689,6 +6769,11 @@ Array [
                                         >
                                             <p
                                                 className="c5"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 Any
                                             </p>
@@ -6710,6 +6795,11 @@ Array [
                                         >
                                             <strong
                                                 className="c25"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 To: 
                                             </strong>
@@ -6757,6 +6847,11 @@ Array [
                                         >
                                             <strong
                                                 className="c25"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 Protocol: 
                                             </strong>
@@ -6770,6 +6865,11 @@ Array [
                                         >
                                             <p
                                                 className="c5"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 tcp
                                             </p>
@@ -6791,6 +6891,11 @@ Array [
                                         >
                                             <strong
                                                 className="c25"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 Ports: 
                                             </strong>
@@ -6804,6 +6909,11 @@ Array [
                                         >
                                             <p
                                                 className="c5"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 all
                                             </p>
@@ -6825,6 +6935,11 @@ Array [
                                         >
                                             <strong
                                                 className="c25"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 Action: 
                                             </strong>
@@ -6838,6 +6953,11 @@ Array [
                                         >
                                             <p
                                                 className="c5"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
                                             >
                                                 Allow
                                             </p>

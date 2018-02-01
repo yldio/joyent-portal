@@ -1,35 +1,26 @@
+/* eslint-disable camelcase */
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import { Margin, Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 
-import {
-  H3,
-  FormGroup,
-  FormLabel,
-  Toggle,
-  TagList,
-  P,
-  Strong,
-  Card
-} from 'joyent-ui-toolkit';
+import { H3, FormGroup, FormLabel, Toggle, TagList, P, Strong, Card } from 'joyent-ui-toolkit';
 
 import Tag from '@components/tags';
 
-const capitalizeFirstLetter = string =>
-  string.charAt(0).toUpperCase() + string.slice(1);
+const capitalizeFirstLetter = string => string.charAt(0).toUpperCase() + string.slice(1);
 
 const Wildcards = {
   vmall: 'All VMs in DC',
   any: 'Any'
 };
 
-const parsePartial = (p, index) => {
+const parsePartial = (p, index, style) => {
   if (p[0] === 'wildcard') {
     return (
       <Margin key={index} top={0.5} bottom={0.5}>
-        <P>{Wildcards[p[1]]}</P>
+        <P style={style}>{Wildcards[p[1]]}</P>
       </Margin>
     );
   }
@@ -41,7 +32,7 @@ const parsePartial = (p, index) => {
     return (
       <Margin left={0.5}>
         <TagList>
-          <Tag norMargin key={index} name={name} value={value} />
+          <Tag style={style} norMargin key={index} name={name} value={value} />
         </TagList>
       </Margin>
     );
@@ -51,9 +42,12 @@ const parsePartial = (p, index) => {
 const Rule = ({ enabled, rule_obj }) => {
   const { action, protocol } = rule_obj;
 
-  const froms = rule_obj.from.map(parsePartial);
-  const tos = rule_obj.to.map(parsePartial);
+  const style = {
+    color: !enabled ? '#D8D8D8' : null
+  };
 
+  const froms = rule_obj.from.map((p, index) => parsePartial(p, index, style));
+  const tos = rule_obj.to.map((p, index) => parsePartial(p, index, style));
   return (
     <Card disabled={!enabled}>
       <Padding left={3} right={3} top={1.5} bottom={1.5}>
@@ -62,7 +56,7 @@ const Rule = ({ enabled, rule_obj }) => {
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
-                  <Strong>From: </Strong>
+                  <Strong style={style}>From: </Strong>
                 </FlexItem>
               </Margin>
               <Flex alignCenter>{froms}</Flex>
@@ -72,7 +66,7 @@ const Rule = ({ enabled, rule_obj }) => {
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
-                  <Strong>To: </Strong>
+                  <Strong style={style}>To: </Strong>
                 </FlexItem>
               </Margin>
               <Flex alignCenter>{tos}</Flex>
@@ -82,12 +76,12 @@ const Rule = ({ enabled, rule_obj }) => {
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
-                  <Strong>Protocol: </Strong>
+                  <Strong style={style}>Protocol: </Strong>
                 </FlexItem>
               </Margin>
               <Flex alignCenter>
                 <Margin top={0.5} bottom={0.5}>
-                  <P>{protocol.name}</P>
+                  <P style={style}>{protocol.name}</P>
                 </Margin>
               </Flex>
             </Flex>
@@ -96,12 +90,12 @@ const Rule = ({ enabled, rule_obj }) => {
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
-                  <Strong>Ports: </Strong>
+                  <Strong style={style}>Ports: </Strong>
                 </FlexItem>
               </Margin>
               <Flex alignCenter>
                 <Margin top={0.5} bottom={0.5}>
-                  <P>{protocol.targets.join(';')}</P>
+                  <P style={style}>{protocol.targets.join(';')}</P>
                 </Margin>
               </Flex>
             </Flex>
@@ -110,12 +104,12 @@ const Rule = ({ enabled, rule_obj }) => {
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right={0.5}>
                 <FlexItem>
-                  <Strong>Action: </Strong>
+                  <Strong style={style}>Action: </Strong>
                 </FlexItem>
               </Margin>
               <Flex alignCenter>
                 <Margin top={0.5} bottom={0.5}>
-                  <P>{capitalizeFirstLetter(action)}</P>
+                  <P style={style}>{capitalizeFirstLetter(action)}</P>
                 </Margin>
               </Flex>
             </Flex>

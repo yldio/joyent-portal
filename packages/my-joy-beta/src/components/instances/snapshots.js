@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import titleCase from 'title-case';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
@@ -23,24 +23,17 @@ import {
 } from 'joyent-ui-toolkit';
 
 import KeyValue from '@components/key-value';
+import Empty from '@components/empty';
 
 const stateColor = {
   QUEUED: 'primary',
   CREATED: 'green'
 };
 
-export const Item = ({
-  name,
-  state,
-  created,
-  onStart,
-  onRemove,
-  updated,
-  mutating
-}) => (
+export const Item = ({ name, state, created, onStart, onRemove, updated, mutating }) => (
   <TableTr>
     {!mutating ? (
-      [
+      <Fragment>
         <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
           <FormGroup paddingTop={remcalc(4)} name={name} field={Field}>
             <Checkbox noMargin />
@@ -50,13 +43,7 @@ export const Item = ({
           {name}
         </TableTd>,
         <TableTd middle left>
-          <DotIcon
-            width={remcalc(11)}
-            height={remcalc(11)}
-            borderRadius={remcalc(11)}
-            color={stateColor[state]}
-          />{' '}
-          {titleCase(state)}
+          <DotIcon size={remcalc(12)} color={stateColor[state]} /> {titleCase(state)}
         </TableTd>,
         <TableTd xs="0" sm="160" middle left>
           {distanceInWordsToNow(created)}
@@ -75,7 +62,7 @@ export const Item = ({
             </Popover>
           </TableTd>
         </PopoverContainer>
-      ]
+      </Fragment>
     ) : (
       <TableTd colSpan="6">
         <StatusLoader />
@@ -85,15 +72,7 @@ export const Item = ({
 );
 
 export const AddForm = props => (
-  <KeyValue
-    {...props}
-    method="create"
-    input="input"
-    type="snapshot"
-    expanded
-    onlyName
-    noRemove
-  />
+  <KeyValue {...props} method="create" input="input" type="snapshot" expanded onlyName noRemove />
 );
 
 export default ({
@@ -111,8 +90,8 @@ export default ({
   onStart,
   onRemove,
   ...rest
-}) => {
-  return (
+}) => (
+  <Fragment>
     <Table>
       <TableThead>
         <TableTr>
@@ -132,8 +111,7 @@ export default ({
             showSort={sortBy === 'name'}
             left
             middle
-            actionable
-          >
+            actionable>
             <span>Name </span>
           </TableTh>
           <TableTh
@@ -143,8 +121,7 @@ export default ({
             showSort={sortBy === 'state'}
             left
             middle
-            actionable
-          >
+            actionable>
             <span>Status </span>
           </TableTh>
           <TableTh
@@ -155,8 +132,7 @@ export default ({
             showSort={sortBy === 'created'}
             left
             middle
-            actionable
-          >
+            actionable>
             <span>Created </span>
           </TableTh>
           <TableTh
@@ -167,23 +143,25 @@ export default ({
             showSort={sortBy === 'updated'}
             left
             middle
-            actionable
-          >
+            actionable>
             <span>Updated </span>
           </TableTh>
           <TableTh xs="60" padding="0" />
         </TableTr>
       </TableThead>
       <TableTbody>
-        {snapshots.map(snapshot => (
-          <Item
-            onStart={() => onStart(snapshot)}
-            onRemove={() => onRemove(snapshot)}
-            key={snapshot.id}
-            {...snapshot}
-          />
-        ))}
+        {snapshots.length
+          ? snapshots.map(snapshot => (
+              <Item
+                onStart={() => onStart(snapshot)}
+                onRemove={() => onRemove(snapshot)}
+                key={snapshot.id}
+                {...snapshot}
+              />
+            ))
+          : null}
       </TableTbody>
     </Table>
-  );
-};
+    {!snapshots.length ? <Empty>You have no Snapshots</Empty> : null}
+  </Fragment>
+);

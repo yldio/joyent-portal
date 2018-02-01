@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React, { Fragment } from 'react';
 import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
@@ -37,25 +38,21 @@ const Firewall = ({
   step
 }) => (
   <Fragment>
-    {console.log(!expanded && !proceeded)}
     <Title
       id={step}
       onClick={!expanded && !proceeded && handleEdit}
       collapsed={!expanded && !proceeded}
-      icon={<FirewallIcon />}
-    >
+      icon={<FirewallIcon />}>
       Firewall
     </Title>
     {expanded ? (
       <Description>
-        Cloud Firewall rules control traffic across instances. Enabling the
-        firewall adds a default set of rules and rules defined by your chosen
-        tags.{' '}
+        Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default
+        set of rules and rules defined by your chosen tags.{' '}
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/network/firewall"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Read more
         </a>
       </Description>
@@ -65,36 +62,25 @@ const Firewall = ({
         <ReduxForm
           form={`${FORM_NAME}-enabled`}
           destroyOnUnmount={false}
-          forceUnregisterOnUnmount={true}
-        >
+          forceUnregisterOnUnmount={true}>
           {props =>
             expanded ? (
               <Margin right={4}>
                 <ToggleFirewallForm {...props} submitting={loading} left />
               </Margin>
-            ) : null
-          }
+            ) : null}
         </ReduxForm>
       </FlexItem>
       <FlexItem>
         <ReduxForm
           form={`${FORM_NAME}-inactive`}
           destroyOnUnmount={false}
-          forceUnregisterOnUnmount={true}
-        >
-          {props =>
-            enabled && expanded && !loading ? (
-              <ToggleInactiveForm {...props} />
-            ) : null
-          }
+          forceUnregisterOnUnmount={true}>
+          {props => (enabled && expanded && !loading ? <ToggleInactiveForm {...props} /> : null)}
         </ReduxForm>
       </FlexItem>
     </Flex>
-    {enabled &&
-    expanded &&
-    !loading &&
-    !defaultRules.length &&
-    !tagRules.length ? (
+    {enabled && expanded && !loading && !defaultRules.length && !tagRules.length ? (
       <Margin top={4}>
         <Empty>Sorry, but we weren’t able to find any firewall rules.</Empty>
       </Margin>
@@ -109,19 +95,15 @@ const Firewall = ({
         <TagRules rules={tagRules} />
       </Margin>
     ) : null}
-    {!loading &&
-    expanded &&
-    enabled &&
-    (tagRules.length || defaultRules.length) ? (
+    {!loading && expanded && enabled && (tagRules.length || defaultRules.length) ? (
       <Margin TOP={4}>
         <P>
-          *Other firewall rules may apply as defined by wildcard(s), IP(s),
-          subnet(s), tag(s) or VM(s). Please see{' '}
+          *Other firewall rules may apply as defined by wildcard(s), IP(s), subnet(s), tag(s) or
+          VM(s). Please see{' '}
           <a
             href="https://apidocs.joyent.com/cloudapi/#firewall-rule-syntax"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             firewall rule list
           </a>{' '}
           for more details.
@@ -161,9 +143,7 @@ export default compose(
     }),
     (dispatch, { history }) => ({
       handleNext: () => {
-        dispatch(
-          set({ name: 'create-instance-firewall-proceeded', value: true })
-        );
+        dispatch(set({ name: 'create-instance-firewall-proceeded', value: true }));
 
         return history.push('/instances/~create/cns');
       },
@@ -182,12 +162,7 @@ export default compose(
     props: ({ ownProps, data }) => {
       const { showInactive } = ownProps;
 
-      const {
-        firewall_rules_create_machine = [],
-        loading,
-        error,
-        refetch
-      } = data;
+      const { firewall_rules_create_machine = [], loading, error, refetch } = data;
 
       const rules = forceArray(firewall_rules_create_machine).filter(
         ({ enabled }) => enabled || showInactive

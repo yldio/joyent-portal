@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Actions /> without throwing 1`] = `
-.c9 {
+Array [
+  .c9 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -358,139 +359,257 @@ exports[`renders <Actions /> without throwing 1`] = `
 }
 
 <table
-  className="c0"
+    className="c0"
 >
-  <thead
-    className="c1"
-    disabled={undefined}
-    name="thdead"
-    selected={undefined}
-  >
-    <tr
-      className="c2"
-      disabled={undefined}
-      name="tr"
-      selected={undefined}
+    <thead
+        className="c1"
+        disabled={undefined}
+        name="thdead"
+        selected={undefined}
     >
-      <th
-        className="c3 c4"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      >
-        <div
-          className="c5 baseline-jVaZNU c5 c6"
-          role="group"
-          style={undefined}
+        <tr
+            className="c2"
+            disabled={undefined}
+            name="tr"
+            selected={undefined}
         >
-          <li
-            className="c7"
-          >
-            <div
-              checked={false}
-              className="c8"
-              disabled={false}
-              id="t"
-              onBlur={undefined}
-              onChange={[Function]}
-              type="checkbox"
+            <th
+                className="c3 c4"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
             >
-              <input
-                checked={false}
-                className="c9"
-                disabled={false}
-                id="u"
-                onBlur={undefined}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <label
-                className="c10"
-                htmlFor="u"
-              />
-            </div>
-          </li>
-        </div>
-      </th>
-      <th
-        className="c11"
+                <div
+                    className="c5 baseline-jVaZNU c5 c6"
+                    role="group"
+                    style={undefined}
+                >
+                    <li
+                        className="c7"
+                    >
+                        <div
+                            checked={false}
+                            className="c8"
+                            disabled={false}
+                            id="t"
+                            onBlur={undefined}
+                            onChange={[Function]}
+                            type="checkbox"
+                        >
+                            <input
+                                checked={false}
+                                className="c9"
+                                disabled={false}
+                                id="u"
+                                onBlur={undefined}
+                                onChange={[Function]}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c10"
+                                htmlFor="u"
+                            />
+                        </div>
+                    </li>
+                </div>
+            </th>
+            <th
+                className="c11"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Name 
+                </span>
+                <svg
+                    className="c12"
+                    height="6"
+                    innerRef={undefined}
+                    marginBottom="0.125rem"
+                    marginLeft="0.5625rem"
+                    style={
+                        Object {
+                            "transform": "rotate(180deg)",
+                          }
+                    }
+                    viewBox="0 0 9.6 6"
+                    width="9.6"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgba(73, 73, 73, 1)"
+                    />
+                </svg>
+            </th>
+            <th
+                className="c13"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Status 
+                </span>
+            </th>
+            <th
+                className="c14"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Created 
+                </span>
+            </th>
+            <th
+                className="c14"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Updated 
+                </span>
+            </th>
+            <th
+                className="c15 c16"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            />
+        </tr>
+    </thead>
+    <tbody
+        className="c17"
         disabled={undefined}
-        name="th"
-        onClick={[Function]}
+        name="tbody"
         selected={undefined}
-      >
-        <span>
-          Name 
-        </span>
-        <svg
-          className="c12"
-          height="6"
-          innerRef={undefined}
-          marginBottom="0.125rem"
-          marginLeft="0.5625rem"
-          style={
-            Object {
-              "transform": "rotate(180deg)",
-            }
-          }
-          viewBox="0 0 9.6 6"
-          width="9.6"
-          xmlns="http://www.w3.org/2000/svg"
+    />
+</table>,
+  .c6 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c6 + p,
+.c6 + small,
+.c6 + h1,
+.c6 + h2,
+.c6 + label,
+.c6 + h3,
+.c6 + h4,
+.c6 + h5,
+.c6 + div,
+.c6 + span {
+  margin-top: 1.5rem;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c4 {
+  margin-bottom: 0.75rem;
+}
+
+.c2 {
+  padding: 2.25rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  color: rgb(151,151,151);
+}
+
+.c0 {
+  width: 100%;
+}
+
+<div
+    className="c0 c1"
+    disabled={false}
+    name="card"
+>
+    <div
+        className="c2"
+    >
+        <div
+            className="c3"
         >
-          <path
-            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-            fill="rgba(73, 73, 73, 1)"
-          />
-        </svg>
-      </th>
-      <th
-        className="c13"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Status 
-        </span>
-      </th>
-      <th
-        className="c14"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Created 
-        </span>
-      </th>
-      <th
-        className="c14"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Updated 
-        </span>
-      </th>
-      <th
-        className="c15 c16"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      />
-    </tr>
-  </thead>
-  <tbody
-    className="c17"
-    disabled={undefined}
-    name="tbody"
-    selected={undefined}
-  />
-</table>
+            <div
+                className="c4"
+            >
+                <img
+                    alt="Sad Animal"
+                    src="no-packages.svg"
+                />
+            </div>
+            <h3
+                className="c5 c6"
+            >
+                You have no Snapshots
+            </h3>
+        </div>
+    </div>
+</div>,
+]
 `;
 
 exports[`renders <Item /> without throwing 1`] = `
@@ -566,19 +685,13 @@ exports[`renders <Item /> without throwing 1`] = `
   padding-top: 0.25rem;
 }
 
-.c9 {
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 0.6875rem;
-}
-
-.c12 {
+.c11 {
   padding: 0rem;
 }
 
-.c10 {
-  width: 0.375rem;
-  height: 0.375rem;
+.c9 {
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   display: inline-block;
 }
@@ -658,7 +771,7 @@ exports[`renders <Item /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c14 {
+.c13 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -698,7 +811,7 @@ exports[`renders <Item /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -714,15 +827,15 @@ exports[`renders <Item /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c11:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c11:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
-.c13 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -735,11 +848,11 @@ exports[`renders <Item /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c13:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -760,7 +873,7 @@ exports[`renders <Item /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c11 {
+  .c10 {
     width: 10rem;
     display: table-cell;
   }
@@ -811,12 +924,14 @@ exports[`renders <Item /> without throwing 1`] = `
       </li>
     </div>
   </td>
+  ,
   <td
     className="c2"
     disabled={undefined}
     name="td"
     selected={undefined}
   />
+  ,
   <td
     className="c2"
     disabled={undefined}
@@ -824,39 +939,41 @@ exports[`renders <Item /> without throwing 1`] = `
     selected={undefined}
   >
     <span
-      className="c9 c10"
+      className="c9"
       color={undefined}
-      height="0.6875rem"
-      width="0.6875rem"
+      size="0.75rem"
     />
      
     
   </td>
+  ,
   <td
-    className="c11"
+    className="c10"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     almost NaN years
   </td>
+  ,
   <td
-    className="c11"
+    className="c10"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     almost NaN years
   </td>
+  ,
   <td
-    className="c12 c13"
+    className="c11 c12"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     <div
       box={true}
-      className="c14"
+      className="c13"
       onClick={[Function]}
       onMouseEnter={undefined}
       onMouseLeave={undefined}
@@ -958,19 +1075,13 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   padding-top: 0.25rem;
 }
 
-.c9 {
-  height: 0.6875rem;
-  width: 0.6875rem;
-  border-radius: 0.6875rem;
-}
-
-.c12 {
+.c11 {
   padding: 0rem;
 }
 
-.c10 {
-  width: 0.375rem;
-  height: 0.375rem;
+.c9 {
+  width: 0.75rem;
+  height: 0.75rem;
   border-radius: 50%;
   display: inline-block;
 }
@@ -1050,7 +1161,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c14 {
+.c13 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -1090,7 +1201,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1106,15 +1217,15 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c11:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c11:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
-.c13 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1127,11 +1238,11 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c13:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1152,7 +1263,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c11 {
+  .c10 {
     width: 10rem;
     display: table-cell;
   }
@@ -1203,6 +1314,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
       </li>
     </div>
   </td>
+  ,
   <td
     className="c2"
     disabled={undefined}
@@ -1211,6 +1323,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   >
     name
   </td>
+  ,
   <td
     className="c2"
     disabled={undefined}
@@ -1218,39 +1331,41 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
     selected={undefined}
   >
     <span
-      className="c9 c10"
+      className="c9"
       color={undefined}
-      height="0.6875rem"
-      width="0.6875rem"
+      size="0.75rem"
     />
      
     Started
   </td>
+  ,
   <td
-    className="c11"
+    className="c10"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     about 2 months
   </td>
+  ,
   <td
-    className="c11"
+    className="c10"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     about 2 months
   </td>
+  ,
   <td
-    className="c12 c13"
+    className="c11 c12"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     <div
       box={true}
-      className="c14"
+      className="c13"
       onClick={[Function]}
       onMouseEnter={undefined}
       onMouseLeave={undefined}
@@ -1479,7 +1594,8 @@ exports[`renders <Item mutating /> without throwing 1`] = `
 `;
 
 exports[`renders <SnapshotList /> without throwing 1`] = `
-.c9 {
+Array [
+  .c9 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1836,143 +1952,262 @@ exports[`renders <SnapshotList /> without throwing 1`] = `
 }
 
 <table
-  className="c0"
+    className="c0"
 >
-  <thead
-    className="c1"
-    disabled={undefined}
-    name="thdead"
-    selected={undefined}
-  >
-    <tr
-      className="c2"
-      disabled={undefined}
-      name="tr"
-      selected={undefined}
+    <thead
+        className="c1"
+        disabled={undefined}
+        name="thdead"
+        selected={undefined}
     >
-      <th
-        className="c3 c4"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      >
-        <div
-          className="c5 baseline-jVaZNU c5 c6"
-          role="group"
-          style={undefined}
+        <tr
+            className="c2"
+            disabled={undefined}
+            name="tr"
+            selected={undefined}
         >
-          <li
-            className="c7"
-          >
-            <div
-              checked={false}
-              className="c8"
-              disabled={false}
-              id="q"
-              onBlur={undefined}
-              onChange={[Function]}
-              type="checkbox"
+            <th
+                className="c3 c4"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
             >
-              <input
-                checked={false}
-                className="c9"
-                disabled={false}
-                id="r"
-                onBlur={undefined}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <label
-                className="c10"
-                htmlFor="r"
-              />
-            </div>
-          </li>
-        </div>
-      </th>
-      <th
-        className="c11"
+                <div
+                    className="c5 baseline-jVaZNU c5 c6"
+                    role="group"
+                    style={undefined}
+                >
+                    <li
+                        className="c7"
+                    >
+                        <div
+                            checked={false}
+                            className="c8"
+                            disabled={false}
+                            id="q"
+                            onBlur={undefined}
+                            onChange={[Function]}
+                            type="checkbox"
+                        >
+                            <input
+                                checked={false}
+                                className="c9"
+                                disabled={false}
+                                id="r"
+                                onBlur={undefined}
+                                onChange={[Function]}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c10"
+                                htmlFor="r"
+                            />
+                        </div>
+                    </li>
+                </div>
+            </th>
+            <th
+                className="c11"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Name 
+                </span>
+                <svg
+                    className="c12"
+                    height="6"
+                    innerRef={undefined}
+                    marginBottom="0.125rem"
+                    marginLeft="0.5625rem"
+                    style={
+                        Object {
+                            "transform": "rotate(180deg)",
+                          }
+                    }
+                    viewBox="0 0 9.6 6"
+                    width="9.6"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgba(73, 73, 73, 1)"
+                    />
+                </svg>
+            </th>
+            <th
+                className="c13"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Status 
+                </span>
+            </th>
+            <th
+                className="c14"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Created 
+                </span>
+            </th>
+            <th
+                className="c14"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Updated 
+                </span>
+            </th>
+            <th
+                className="c15 c16"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            />
+        </tr>
+    </thead>
+    <tbody
+        className="c17"
         disabled={undefined}
-        name="th"
-        onClick={[Function]}
+        name="tbody"
         selected={undefined}
-      >
-        <span>
-          Name 
-        </span>
-        <svg
-          className="c12"
-          height="6"
-          innerRef={undefined}
-          marginBottom="0.125rem"
-          marginLeft="0.5625rem"
-          style={
-            Object {
-              "transform": "rotate(180deg)",
-            }
-          }
-          viewBox="0 0 9.6 6"
-          width="9.6"
-          xmlns="http://www.w3.org/2000/svg"
+    />
+</table>,
+  .c6 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c6 + p,
+.c6 + small,
+.c6 + h1,
+.c6 + h2,
+.c6 + label,
+.c6 + h3,
+.c6 + h4,
+.c6 + h5,
+.c6 + div,
+.c6 + span {
+  margin-top: 1.5rem;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c4 {
+  margin-bottom: 0.75rem;
+}
+
+.c2 {
+  padding: 2.25rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  color: rgb(151,151,151);
+}
+
+.c0 {
+  width: 100%;
+}
+
+<div
+    className="c0 c1"
+    disabled={false}
+    name="card"
+>
+    <div
+        className="c2"
+    >
+        <div
+            className="c3"
         >
-          <path
-            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-            fill="rgba(73, 73, 73, 1)"
-          />
-        </svg>
-      </th>
-      <th
-        className="c13"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Status 
-        </span>
-      </th>
-      <th
-        className="c14"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Created 
-        </span>
-      </th>
-      <th
-        className="c14"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Updated 
-        </span>
-      </th>
-      <th
-        className="c15 c16"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      />
-    </tr>
-  </thead>
-  <tbody
-    className="c17"
-    disabled={undefined}
-    name="tbody"
-    selected={undefined}
-  />
-</table>
+            <div
+                className="c4"
+            >
+                <img
+                    alt="Sad Animal"
+                    src="no-packages.svg"
+                />
+            </div>
+            <h3
+                className="c5 c6"
+            >
+                You have no Snapshots
+            </h3>
+        </div>
+    </div>
+</div>,
+]
 `;
 
 exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
-.c9 {
+Array [
+  .c9 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2329,143 +2564,262 @@ exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
 }
 
 <table
-  className="c0"
+    className="c0"
 >
-  <thead
-    className="c1"
-    disabled={undefined}
-    name="thdead"
-    selected={undefined}
-  >
-    <tr
-      className="c2"
-      disabled={undefined}
-      name="tr"
-      selected={undefined}
+    <thead
+        className="c1"
+        disabled={undefined}
+        name="thdead"
+        selected={undefined}
     >
-      <th
-        className="c3 c4"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      >
-        <div
-          className="c5 baseline-jVaZNU c5 c6"
-          role="group"
-          style={undefined}
+        <tr
+            className="c2"
+            disabled={undefined}
+            name="tr"
+            selected={undefined}
         >
-          <li
-            className="c7"
-          >
-            <div
-              checked={true}
-              className="c8"
-              disabled={false}
-              id="F"
-              onBlur={undefined}
-              onChange={[Function]}
-              type="checkbox"
+            <th
+                className="c3 c4"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
             >
-              <input
-                checked={true}
-                className="c9"
-                disabled={false}
-                id="G"
-                onBlur={undefined}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <label
-                className="c10"
-                htmlFor="G"
-              />
-            </div>
-          </li>
-        </div>
-      </th>
-      <th
-        className="c11"
+                <div
+                    className="c5 baseline-jVaZNU c5 c6"
+                    role="group"
+                    style={undefined}
+                >
+                    <li
+                        className="c7"
+                    >
+                        <div
+                            checked={true}
+                            className="c8"
+                            disabled={false}
+                            id="F"
+                            onBlur={undefined}
+                            onChange={[Function]}
+                            type="checkbox"
+                        >
+                            <input
+                                checked={true}
+                                className="c9"
+                                disabled={false}
+                                id="G"
+                                onBlur={undefined}
+                                onChange={[Function]}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c10"
+                                htmlFor="G"
+                            />
+                        </div>
+                    </li>
+                </div>
+            </th>
+            <th
+                className="c11"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Name 
+                </span>
+                <svg
+                    className="c12"
+                    height="6"
+                    innerRef={undefined}
+                    marginBottom="0.125rem"
+                    marginLeft="0.5625rem"
+                    style={
+                        Object {
+                            "transform": "rotate(180deg)",
+                          }
+                    }
+                    viewBox="0 0 9.6 6"
+                    width="9.6"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgba(73, 73, 73, 1)"
+                    />
+                </svg>
+            </th>
+            <th
+                className="c13"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Status 
+                </span>
+            </th>
+            <th
+                className="c14"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Created 
+                </span>
+            </th>
+            <th
+                className="c14"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Updated 
+                </span>
+            </th>
+            <th
+                className="c15 c16"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            />
+        </tr>
+    </thead>
+    <tbody
+        className="c17"
         disabled={undefined}
-        name="th"
-        onClick={[Function]}
+        name="tbody"
         selected={undefined}
-      >
-        <span>
-          Name 
-        </span>
-        <svg
-          className="c12"
-          height="6"
-          innerRef={undefined}
-          marginBottom="0.125rem"
-          marginLeft="0.5625rem"
-          style={
-            Object {
-              "transform": "rotate(180deg)",
-            }
-          }
-          viewBox="0 0 9.6 6"
-          width="9.6"
-          xmlns="http://www.w3.org/2000/svg"
+    />
+</table>,
+  .c6 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c6 + p,
+.c6 + small,
+.c6 + h1,
+.c6 + h2,
+.c6 + label,
+.c6 + h3,
+.c6 + h4,
+.c6 + h5,
+.c6 + div,
+.c6 + span {
+  margin-top: 1.5rem;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c4 {
+  margin-bottom: 0.75rem;
+}
+
+.c2 {
+  padding: 2.25rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  color: rgb(151,151,151);
+}
+
+.c0 {
+  width: 100%;
+}
+
+<div
+    className="c0 c1"
+    disabled={false}
+    name="card"
+>
+    <div
+        className="c2"
+    >
+        <div
+            className="c3"
         >
-          <path
-            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-            fill="rgba(73, 73, 73, 1)"
-          />
-        </svg>
-      </th>
-      <th
-        className="c13"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Status 
-        </span>
-      </th>
-      <th
-        className="c14"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Created 
-        </span>
-      </th>
-      <th
-        className="c14"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Updated 
-        </span>
-      </th>
-      <th
-        className="c15 c16"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      />
-    </tr>
-  </thead>
-  <tbody
-    className="c17"
-    disabled={undefined}
-    name="tbody"
-    selected={undefined}
-  />
-</table>
+            <div
+                className="c4"
+            >
+                <img
+                    alt="Sad Animal"
+                    src="no-packages.svg"
+                />
+            </div>
+            <h3
+                className="c5 c6"
+            >
+                You have no Snapshots
+            </h3>
+        </div>
+    </div>
+</div>,
+]
 `;
 
 exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
-.c9 {
+Array [
+  .c9 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2822,143 +3176,262 @@ exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
 }
 
 <table
-  className="c0"
+    className="c0"
 >
-  <thead
-    className="c1"
-    disabled={undefined}
-    name="thdead"
-    selected={undefined}
-  >
-    <tr
-      className="c2"
-      disabled={undefined}
-      name="tr"
-      selected={undefined}
+    <thead
+        className="c1"
+        disabled={undefined}
+        name="thdead"
+        selected={undefined}
     >
-      <th
-        className="c3 c4"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      >
-        <div
-          className="c5 baseline-jVaZNU c5 c6"
-          role="group"
-          style={undefined}
+        <tr
+            className="c2"
+            disabled={undefined}
+            name="tr"
+            selected={undefined}
         >
-          <li
-            className="c7"
-          >
-            <div
-              checked={false}
-              className="c8"
-              disabled={false}
-              id="w"
-              onBlur={undefined}
-              onChange={[Function]}
-              type="checkbox"
+            <th
+                className="c3 c4"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
             >
-              <input
-                checked={false}
-                className="c9"
-                disabled={false}
-                id="x"
-                onBlur={undefined}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <label
-                className="c10"
-                htmlFor="x"
-              />
-            </div>
-          </li>
-        </div>
-      </th>
-      <th
-        className="c11"
+                <div
+                    className="c5 baseline-jVaZNU c5 c6"
+                    role="group"
+                    style={undefined}
+                >
+                    <li
+                        className="c7"
+                    >
+                        <div
+                            checked={false}
+                            className="c8"
+                            disabled={false}
+                            id="w"
+                            onBlur={undefined}
+                            onChange={[Function]}
+                            type="checkbox"
+                        >
+                            <input
+                                checked={false}
+                                className="c9"
+                                disabled={false}
+                                id="x"
+                                onBlur={undefined}
+                                onChange={[Function]}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c10"
+                                htmlFor="x"
+                            />
+                        </div>
+                    </li>
+                </div>
+            </th>
+            <th
+                className="c11"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Name 
+                </span>
+            </th>
+            <th
+                className="c12"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Status 
+                </span>
+                <svg
+                    className="c13"
+                    height="6"
+                    innerRef={undefined}
+                    marginBottom="0.125rem"
+                    marginLeft="0.5625rem"
+                    style={
+                        Object {
+                            "transform": "rotate(180deg)",
+                          }
+                    }
+                    viewBox="0 0 9.6 6"
+                    width="9.6"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgba(73, 73, 73, 1)"
+                    />
+                </svg>
+            </th>
+            <th
+                className="c14"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Created 
+                </span>
+            </th>
+            <th
+                className="c14"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Updated 
+                </span>
+            </th>
+            <th
+                className="c15 c16"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            />
+        </tr>
+    </thead>
+    <tbody
+        className="c17"
         disabled={undefined}
-        name="th"
-        onClick={[Function]}
+        name="tbody"
         selected={undefined}
-      >
-        <span>
-          Name 
-        </span>
-      </th>
-      <th
-        className="c12"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Status 
-        </span>
-        <svg
-          className="c13"
-          height="6"
-          innerRef={undefined}
-          marginBottom="0.125rem"
-          marginLeft="0.5625rem"
-          style={
-            Object {
-              "transform": "rotate(180deg)",
-            }
-          }
-          viewBox="0 0 9.6 6"
-          width="9.6"
-          xmlns="http://www.w3.org/2000/svg"
+    />
+</table>,
+  .c6 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c6 + p,
+.c6 + small,
+.c6 + h1,
+.c6 + h2,
+.c6 + label,
+.c6 + h3,
+.c6 + h4,
+.c6 + h5,
+.c6 + div,
+.c6 + span {
+  margin-top: 1.5rem;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c4 {
+  margin-bottom: 0.75rem;
+}
+
+.c2 {
+  padding: 2.25rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  color: rgb(151,151,151);
+}
+
+.c0 {
+  width: 100%;
+}
+
+<div
+    className="c0 c1"
+    disabled={false}
+    name="card"
+>
+    <div
+        className="c2"
+    >
+        <div
+            className="c3"
         >
-          <path
-            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-            fill="rgba(73, 73, 73, 1)"
-          />
-        </svg>
-      </th>
-      <th
-        className="c14"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Created 
-        </span>
-      </th>
-      <th
-        className="c14"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Updated 
-        </span>
-      </th>
-      <th
-        className="c15 c16"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      />
-    </tr>
-  </thead>
-  <tbody
-    className="c17"
-    disabled={undefined}
-    name="tbody"
-    selected={undefined}
-  />
-</table>
+            <div
+                className="c4"
+            >
+                <img
+                    alt="Sad Animal"
+                    src="no-packages.svg"
+                />
+            </div>
+            <h3
+                className="c5 c6"
+            >
+                You have no Snapshots
+            </h3>
+        </div>
+    </div>
+</div>,
+]
 `;
 
 exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
-.c9 {
+Array [
+  .c9 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3315,143 +3788,262 @@ exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
 }
 
 <table
-  className="c0"
+    className="c0"
 >
-  <thead
-    className="c1"
-    disabled={undefined}
-    name="thdead"
-    selected={undefined}
-  >
-    <tr
-      className="c2"
-      disabled={undefined}
-      name="tr"
-      selected={undefined}
+    <thead
+        className="c1"
+        disabled={undefined}
+        name="thdead"
+        selected={undefined}
     >
-      <th
-        className="c3 c4"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      >
-        <div
-          className="c5 baseline-jVaZNU c5 c6"
-          role="group"
-          style={undefined}
+        <tr
+            className="c2"
+            disabled={undefined}
+            name="tr"
+            selected={undefined}
         >
-          <li
-            className="c7"
-          >
-            <div
-              checked={false}
-              className="c8"
-              disabled={false}
-              id="z"
-              onBlur={undefined}
-              onChange={[Function]}
-              type="checkbox"
+            <th
+                className="c3 c4"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
             >
-              <input
-                checked={false}
-                className="c9"
-                disabled={false}
-                id="A"
-                onBlur={undefined}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <label
-                className="c10"
-                htmlFor="A"
-              />
-            </div>
-          </li>
-        </div>
-      </th>
-      <th
-        className="c11"
+                <div
+                    className="c5 baseline-jVaZNU c5 c6"
+                    role="group"
+                    style={undefined}
+                >
+                    <li
+                        className="c7"
+                    >
+                        <div
+                            checked={false}
+                            className="c8"
+                            disabled={false}
+                            id="z"
+                            onBlur={undefined}
+                            onChange={[Function]}
+                            type="checkbox"
+                        >
+                            <input
+                                checked={false}
+                                className="c9"
+                                disabled={false}
+                                id="A"
+                                onBlur={undefined}
+                                onChange={[Function]}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c10"
+                                htmlFor="A"
+                            />
+                        </div>
+                    </li>
+                </div>
+            </th>
+            <th
+                className="c11"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Name 
+                </span>
+            </th>
+            <th
+                className="c12"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Status 
+                </span>
+                <svg
+                    className="c13"
+                    height="6"
+                    innerRef={undefined}
+                    marginBottom="0.125rem"
+                    marginLeft="0.5625rem"
+                    style={
+                        Object {
+                            "transform": "rotate(0deg)",
+                          }
+                    }
+                    viewBox="0 0 9.6 6"
+                    width="9.6"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgba(73, 73, 73, 1)"
+                    />
+                </svg>
+            </th>
+            <th
+                className="c14"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Created 
+                </span>
+            </th>
+            <th
+                className="c14"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Updated 
+                </span>
+            </th>
+            <th
+                className="c15 c16"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            />
+        </tr>
+    </thead>
+    <tbody
+        className="c17"
         disabled={undefined}
-        name="th"
-        onClick={[Function]}
+        name="tbody"
         selected={undefined}
-      >
-        <span>
-          Name 
-        </span>
-      </th>
-      <th
-        className="c12"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Status 
-        </span>
-        <svg
-          className="c13"
-          height="6"
-          innerRef={undefined}
-          marginBottom="0.125rem"
-          marginLeft="0.5625rem"
-          style={
-            Object {
-              "transform": "rotate(0deg)",
-            }
-          }
-          viewBox="0 0 9.6 6"
-          width="9.6"
-          xmlns="http://www.w3.org/2000/svg"
+    />
+</table>,
+  .c6 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c6 + p,
+.c6 + small,
+.c6 + h1,
+.c6 + h2,
+.c6 + label,
+.c6 + h3,
+.c6 + h4,
+.c6 + h5,
+.c6 + div,
+.c6 + span {
+  margin-top: 1.5rem;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c4 {
+  margin-bottom: 0.75rem;
+}
+
+.c2 {
+  padding: 2.25rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  color: rgb(151,151,151);
+}
+
+.c0 {
+  width: 100%;
+}
+
+<div
+    className="c0 c1"
+    disabled={false}
+    name="card"
+>
+    <div
+        className="c2"
+    >
+        <div
+            className="c3"
         >
-          <path
-            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-            fill="rgba(73, 73, 73, 1)"
-          />
-        </svg>
-      </th>
-      <th
-        className="c14"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Created 
-        </span>
-      </th>
-      <th
-        className="c14"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Updated 
-        </span>
-      </th>
-      <th
-        className="c15 c16"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      />
-    </tr>
-  </thead>
-  <tbody
-    className="c17"
-    disabled={undefined}
-    name="tbody"
-    selected={undefined}
-  />
-</table>
+            <div
+                className="c4"
+            >
+                <img
+                    alt="Sad Animal"
+                    src="no-packages.svg"
+                />
+            </div>
+            <h3
+                className="c5 c6"
+            >
+                You have no Snapshots
+            </h3>
+        </div>
+    </div>
+</div>,
+]
 `;
 
 exports[`renders <SnapshotList submitting /> without throwing 1`] = `
-.c9 {
+Array [
+  .c9 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3808,137 +4400,255 @@ exports[`renders <SnapshotList submitting /> without throwing 1`] = `
 }
 
 <table
-  className="c0"
+    className="c0"
 >
-  <thead
-    className="c1"
-    disabled={undefined}
-    name="thdead"
-    selected={undefined}
-  >
-    <tr
-      className="c2"
-      disabled={undefined}
-      name="tr"
-      selected={undefined}
+    <thead
+        className="c1"
+        disabled={undefined}
+        name="thdead"
+        selected={undefined}
     >
-      <th
-        className="c3 c4"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      >
-        <div
-          className="c5 baseline-jVaZNU c5 c6"
-          role="group"
-          style={undefined}
+        <tr
+            className="c2"
+            disabled={undefined}
+            name="tr"
+            selected={undefined}
         >
-          <li
-            className="c7"
-          >
-            <div
-              checked={false}
-              className="c8"
-              disabled={true}
-              id="C"
-              onBlur={undefined}
-              onChange={[Function]}
-              type="checkbox"
+            <th
+                className="c3 c4"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
             >
-              <input
-                checked={false}
-                className="c9"
-                disabled={true}
-                id="D"
-                onBlur={undefined}
-                onChange={[Function]}
-                type="checkbox"
-              />
-              <label
-                className="c10"
-                htmlFor="D"
-              />
-            </div>
-          </li>
-        </div>
-      </th>
-      <th
-        className="c11"
+                <div
+                    className="c5 baseline-jVaZNU c5 c6"
+                    role="group"
+                    style={undefined}
+                >
+                    <li
+                        className="c7"
+                    >
+                        <div
+                            checked={false}
+                            className="c8"
+                            disabled={true}
+                            id="C"
+                            onBlur={undefined}
+                            onChange={[Function]}
+                            type="checkbox"
+                        >
+                            <input
+                                checked={false}
+                                className="c9"
+                                disabled={true}
+                                id="D"
+                                onBlur={undefined}
+                                onChange={[Function]}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c10"
+                                htmlFor="D"
+                            />
+                        </div>
+                    </li>
+                </div>
+            </th>
+            <th
+                className="c11"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Name 
+                </span>
+                <svg
+                    className="c12"
+                    height="6"
+                    innerRef={undefined}
+                    marginBottom="0.125rem"
+                    marginLeft="0.5625rem"
+                    style={
+                        Object {
+                            "transform": "rotate(180deg)",
+                          }
+                    }
+                    viewBox="0 0 9.6 6"
+                    width="9.6"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgba(73, 73, 73, 1)"
+                    />
+                </svg>
+            </th>
+            <th
+                className="c13"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Status 
+                </span>
+            </th>
+            <th
+                className="c14"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Created 
+                </span>
+            </th>
+            <th
+                className="c14"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Updated 
+                </span>
+            </th>
+            <th
+                className="c15 c16"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            />
+        </tr>
+    </thead>
+    <tbody
+        className="c17"
         disabled={undefined}
-        name="th"
-        onClick={[Function]}
+        name="tbody"
         selected={undefined}
-      >
-        <span>
-          Name 
-        </span>
-        <svg
-          className="c12"
-          height="6"
-          innerRef={undefined}
-          marginBottom="0.125rem"
-          marginLeft="0.5625rem"
-          style={
-            Object {
-              "transform": "rotate(180deg)",
-            }
-          }
-          viewBox="0 0 9.6 6"
-          width="9.6"
-          xmlns="http://www.w3.org/2000/svg"
+    />
+</table>,
+  .c6 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c6 + p,
+.c6 + small,
+.c6 + h1,
+.c6 + h2,
+.c6 + label,
+.c6 + h3,
+.c6 + h4,
+.c6 + h5,
+.c6 + div,
+.c6 + span {
+  margin-top: 1.5rem;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c4 {
+  margin-bottom: 0.75rem;
+}
+
+.c2 {
+  padding: 2.25rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  color: rgb(151,151,151);
+}
+
+.c0 {
+  width: 100%;
+}
+
+<div
+    className="c0 c1"
+    disabled={false}
+    name="card"
+>
+    <div
+        className="c2"
+    >
+        <div
+            className="c3"
         >
-          <path
-            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-            fill="rgba(73, 73, 73, 1)"
-          />
-        </svg>
-      </th>
-      <th
-        className="c13"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Status 
-        </span>
-      </th>
-      <th
-        className="c14"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Created 
-        </span>
-      </th>
-      <th
-        className="c14"
-        disabled={undefined}
-        name="th"
-        onClick={[Function]}
-        selected={undefined}
-      >
-        <span>
-          Updated 
-        </span>
-      </th>
-      <th
-        className="c15 c16"
-        disabled={undefined}
-        name="th"
-        selected={undefined}
-      />
-    </tr>
-  </thead>
-  <tbody
-    className="c17"
-    disabled={undefined}
-    name="tbody"
-    selected={undefined}
-  />
-</table>
+            <div
+                className="c4"
+            >
+                <img
+                    alt="Sad Animal"
+                    src="no-packages.svg"
+                />
+            </div>
+            <h3
+                className="c5 c6"
+            >
+                You have no Snapshots
+            </h3>
+        </div>
+    </div>
+</div>,
+]
 `;

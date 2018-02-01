@@ -78,14 +78,11 @@ const Snapshots = ({
 
   const _createSnapshot =
     !loading && createSnapshotOpen ? (
-      <ReduxForm form={CREATE_FORM_NAME} onSubmit={handleCreateSnapshot}>
-        {props => (
-          <SnapshotAddForm
-            {...props}
-            onCancel={() => toggleCreateSnapshotOpen(false)}
-          />
-        )}
-      </ReduxForm>
+      <Margin bottom={4}>
+        <ReduxForm form={CREATE_FORM_NAME} onSubmit={handleCreateSnapshot}>
+          {props => <SnapshotAddForm {...props} onCancel={() => toggleCreateSnapshotOpen(false)} />}
+        </ReduxForm>
+      </Margin>
     ) : null;
 
   const _footer =
@@ -100,10 +97,12 @@ const Snapshots = ({
     ) : null;
 
   const _mutationError = mutationError ? (
-    <Message error>
-      <MessageTitle>Ooops!</MessageTitle>
-      <MessageDescription>{mutationError}</MessageDescription>
-    </Message>
+    <Margin bottom={4}>
+      <Message error>
+        <MessageTitle>Ooops!</MessageTitle>
+        <MessageDescription>{mutationError}</MessageDescription>
+      </Message>
+    </Margin>
   ) : null;
 
   const _items = !_loading ? (
@@ -166,9 +165,7 @@ export default compose(
 
       const snapshots = get(instance, 'snapshots', []);
 
-      const index = GenIndex(
-        snapshots.map(({ name, ...rest }) => ({ ...rest, id: name }))
-      );
+      const index = GenIndex(snapshots.map(({ name, ...rest }) => ({ ...rest, id: name })));
 
       return {
         index,
@@ -267,23 +264,17 @@ export default compose(
 
           // none are selected, toggle to all
           if (!hasSelected) {
-            return dispatch(
-              snapshots.map(({ name }) => change(TABLE_FORM_NAME, name, true))
-            );
+            return dispatch(snapshots.map(({ name }) => change(TABLE_FORM_NAME, name, true)));
           }
 
           // all are selected, toggle to none
           if (hasSelected && same) {
-            return dispatch(
-              snapshots.map(({ name }) => change(TABLE_FORM_NAME, name, false))
-            );
+            return dispatch(snapshots.map(({ name }) => change(TABLE_FORM_NAME, name, false)));
           }
 
           // some are selected, toggle to all
           if (hasSelected && !same) {
-            return dispatch(
-              snapshots.map(({ name }) => change(TABLE_FORM_NAME, name, true))
-            );
+            return dispatch(snapshots.map(({ name }) => change(TABLE_FORM_NAME, name, true)));
           }
         },
 
@@ -332,9 +323,7 @@ export default compose(
 
           // wait for everything to finish and catch the error
           const [err] = await intercept(
-            Promise.resolve(
-              dispatch([flipSubmitTrue, setIngTrue, ...setMutatingTrue])
-            ).then(() => {
+            Promise.resolve(dispatch([flipSubmitTrue, setIngTrue, ...setMutatingTrue])).then(() => {
               // starts all the mutations for all the selected items
               return Promise.all(
                 selected.map(({ name }) =>
@@ -362,16 +351,11 @@ export default compose(
           // when action === remove, let it stay spinning
           const setMutatingFalse =
             name !== 'remove' &&
-            selected.map(({ id }) =>
-              set({ name: `${id}-mutating`, value: false })
-            );
+            selected.map(({ id }) => set({ name: `${id}-mutating`, value: false }));
 
-          const actions = [
-            flipSubmitFalse,
-            clearSelected,
-            setIngFalse,
-            ...setMutatingFalse
-          ].filter(Boolean);
+          const actions = [flipSubmitFalse, clearSelected, setIngFalse, ...setMutatingFalse].filter(
+            Boolean
+          );
 
           // refetch list - even though we poll anyway - after clearing everything
           return Promise.resolve(dispatch(actions)).then(() => refetch());

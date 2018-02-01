@@ -395,7 +395,43 @@ Array [
         </div>
     </div>
 </div>,
-  .c23 {
+  .c1 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c1 + p,
+.c1 + small,
+.c1 + h1,
+.c1 + h2,
+.c1 + label,
+.c1 + h3,
+.c1 + h4,
+.c1 + h5,
+.c1 + div,
+.c1 + span {
+  margin-top: 1.5rem;
+}
+
+.c0 {
+  margin-bottom: 1.5rem;
+}
+
+<div
+    className="c0"
+>
+    <h3
+        className="c1"
+    >
+        0
+         key:value pair
+        s
+    </h3>
+</div>,
+  .c24 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -408,22 +444,22 @@ Array [
   min-width: 7.5rem;
 }
 
-.c23::-moz-focus-inner,
-.c23[type='button']::-moz-focus-inner,
-.c23[type='reset']::-moz-focus-inner,
-.c23[type='submit']::-moz-focus-inner {
+.c24::-moz-focus-inner,
+.c24[type='button']::-moz-focus-inner,
+.c24[type='reset']::-moz-focus-inner,
+.c24[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c23:-moz-focusring,
-.c23[type='button']:-moz-focusring,
-.c23[type='reset']:-moz-focusring,
-.c23[type='submit']:-moz-focusring {
+.c24:-moz-focusring,
+.c24[type='button']:-moz-focusring,
+.c24[type='reset']:-moz-focusring,
+.c24[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23 + button {
+.c24 + button {
   margin-left: 0.375rem;
 }
 
@@ -439,11 +475,11 @@ Array [
   width: 100%;
 }
 
-.c22 {
+.c23 {
   display: inline-block;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -487,50 +523,50 @@ Array [
   margin: 0;
 }
 
-.c21:focus {
+.c22:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c21:hover {
+.c22:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c21[disabled] {
+.c22[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c21:focus {
+.c22:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c21:hover {
+.c22:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -575,50 +611,50 @@ Array [
   margin: 0;
 }
 
-.c24:focus {
+.c25:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c24[disabled] {
+.c25[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c24:focus {
+.c25:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c24:hover {
+.c25:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c24:active,
-.c24:active:hover,
-.c24:active:focus {
+.c25:active,
+.c25:active:hover,
+.c25:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -675,73 +711,73 @@ Array [
   float: right;
 }
 
-.c26:focus {
+.c27:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c26:hover {
+.c27:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c26[disabled] {
+.c27[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c26:focus {
+.c27:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c26:hover {
+.c27:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c26:focus {
+.c27:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c26:hover {
+.c27:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c26 svg + span {
+.c27 svg + span {
   margin-left: 0.75rem;
 }
 
-.c26 svg {
+.c27 svg {
   max-height: 1.125rem;
 }
 
@@ -791,7 +827,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -820,7 +856,7 @@ Array [
   display: block;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1183,6 +1219,10 @@ Array [
   margin-top: 0.1875rem;
 }
 
+.c20 {
+  margin-top: 0.75rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -1237,7 +1277,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1246,7 +1286,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1264,7 +1304,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c26 {
     display: none;
   }
 }
@@ -1392,63 +1432,67 @@ Array [
                     className="c20"
                 >
                     <div
-                        className="c11"
+                        className="c21"
                     >
-                        <button
-                            className="c21 c22 c23"
-                            disabled={false}
-                            href=""
-                            onClick={[Function]}
-                            type="button"
+                        <div
+                            className="c11"
                         >
-                            <span>
-                                Cancel
-                            </span>
-                        </button>
-                        <button
-                            className="c24 c22 c23"
-                            disabled={true}
-                            href=""
-                            type="submit"
-                        >
-                            <span>
-                                Create
-                            </span>
-                        </button>
-                    </div>
-                    <div
-                        className="c25"
-                    >
-                        <button
-                            className="c26 c22 c23"
-                            disabled={false}
-                            href=""
-                            icon={true}
-                            onClick={[Function]}
-                            type="button"
-                        >
-                            <svg
-                                className=""
-                                height="16"
-                                innerRef={undefined}
-                                style={
-                                    Object {
-                                        "transform": "rotate(0deg)",
-                                      }
-                                }
-                                viewBox="0 0 12 16"
-                                width="12"
-                                xmlns="http://www.w3.org/2000/svg"
+                            <button
+                                className="c22 c23 c24"
+                                disabled={false}
+                                href=""
+                                onClick={[Function]}
+                                type="button"
                             >
-                                <path
-                                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                                    fill="rgb(210, 67, 58)"
-                                />
-                            </svg>
-                            <span>
-                                Remove
-                            </span>
-                        </button>
+                                <span>
+                                    Cancel
+                                </span>
+                            </button>
+                            <button
+                                className="c25 c23 c24"
+                                disabled={true}
+                                href=""
+                                type="submit"
+                            >
+                                <span>
+                                    Create
+                                </span>
+                            </button>
+                        </div>
+                        <div
+                            className="c26"
+                        >
+                            <button
+                                className="c27 c23 c24"
+                                disabled={false}
+                                href=""
+                                icon={true}
+                                onClick={[Function]}
+                                type="button"
+                            >
+                                <svg
+                                    className=""
+                                    height="16"
+                                    innerRef={undefined}
+                                    style={
+                                        Object {
+                                            "transform": "rotate(0deg)",
+                                          }
+                                    }
+                                    viewBox="0 0 12 16"
+                                    width="12"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                                        fill="rgb(210, 67, 58)"
+                                    />
+                                </svg>
+                                <span>
+                                    Remove
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1945,6 +1989,42 @@ Array [
         </div>
     </div>
 </div>,
+  .c1 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c1 + p,
+.c1 + small,
+.c1 + h1,
+.c1 + h2,
+.c1 + label,
+.c1 + h3,
+.c1 + h4,
+.c1 + h5,
+.c1 + div,
+.c1 + span {
+  margin-top: 1.5rem;
+}
+
+.c0 {
+  margin-bottom: 1.5rem;
+}
+
+<div
+    className="c0"
+>
+    <h3
+        className="c1"
+    >
+        0
+         key:value pair
+        s
+    </h3>
+</div>,
   .c3 {
   font-family: sans-serif;
   font-size: 100%;
@@ -2309,7 +2389,7 @@ Array [
         />
     </div>
 </div>,
-  .c24 {
+  .c25 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2322,22 +2402,22 @@ Array [
   min-width: 7.5rem;
 }
 
-.c24::-moz-focus-inner,
-.c24[type='button']::-moz-focus-inner,
-.c24[type='reset']::-moz-focus-inner,
-.c24[type='submit']::-moz-focus-inner {
+.c25::-moz-focus-inner,
+.c25[type='button']::-moz-focus-inner,
+.c25[type='reset']::-moz-focus-inner,
+.c25[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c24:-moz-focusring,
-.c24[type='button']:-moz-focusring,
-.c24[type='reset']:-moz-focusring,
-.c24[type='submit']:-moz-focusring {
+.c25:-moz-focusring,
+.c25[type='button']:-moz-focusring,
+.c25[type='reset']:-moz-focusring,
+.c25[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c24 + button {
+.c25 + button {
   margin-left: 0.375rem;
 }
 
@@ -2353,11 +2433,11 @@ Array [
   width: 100%;
 }
 
-.c23 {
+.c24 {
   display: inline-block;
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2401,50 +2481,50 @@ Array [
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2489,50 +2569,50 @@ Array [
   margin: 0;
 }
 
-.c25:focus {
+.c26:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c25[disabled] {
+.c26[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c25:focus {
+.c26:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c27 {
+.c28 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2589,73 +2669,73 @@ Array [
   float: right;
 }
 
-.c27:focus {
+.c28:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c28:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c28:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:hover {
+.c28:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c27 svg + span {
+.c28 svg + span {
   margin-left: 0.75rem;
 }
 
-.c27 svg {
+.c28 svg {
   max-height: 1.125rem;
 }
 
@@ -2705,7 +2785,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2734,7 +2814,7 @@ Array [
   display: block;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -2744,7 +2824,7 @@ Array [
   display: block;
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3088,6 +3168,10 @@ Array [
   margin-top: 0.1875rem;
 }
 
+.c20 {
+  margin-top: 0.75rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -3151,7 +3235,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -3160,7 +3244,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -3178,7 +3262,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c22 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -3187,7 +3271,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c27 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -3344,61 +3428,65 @@ Array [
                     <div
                         className="c21"
                     >
-                        <button
-                            className="c22 c23 c24"
-                            disabled={false}
-                            href=""
-                            onClick={[Function]}
-                            type="button"
+                        <div
+                            className="c22"
                         >
-                            <span>
-                                Cancel
-                            </span>
-                        </button>
-                        <button
-                            className="c25 c23 c24"
-                            disabled={true}
-                            href=""
-                            type="submit"
-                        >
-                            <span>
-                                Save
-                            </span>
-                        </button>
-                    </div>
-                    <div
-                        className="c26"
-                    >
-                        <button
-                            className="c27 c23 c24"
-                            disabled={false}
-                            href=""
-                            icon={true}
-                            onClick={[Function]}
-                            type="button"
-                        >
-                            <svg
-                                className=""
-                                height="16"
-                                innerRef={undefined}
-                                style={
-                                    Object {
-                                        "transform": "rotate(0deg)",
-                                      }
-                                }
-                                viewBox="0 0 12 16"
-                                width="12"
-                                xmlns="http://www.w3.org/2000/svg"
+                            <button
+                                className="c23 c24 c25"
+                                disabled={false}
+                                href=""
+                                onClick={[Function]}
+                                type="button"
                             >
-                                <path
-                                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                                    fill="rgb(210, 67, 58)"
-                                />
-                            </svg>
-                            <span>
-                                Remove
-                            </span>
-                        </button>
+                                <span>
+                                    Cancel
+                                </span>
+                            </button>
+                            <button
+                                className="c26 c24 c25"
+                                disabled={true}
+                                href=""
+                                type="submit"
+                            >
+                                <span>
+                                    Save
+                                </span>
+                            </button>
+                        </div>
+                        <div
+                            className="c27"
+                        >
+                            <button
+                                className="c28 c24 c25"
+                                disabled={false}
+                                href=""
+                                icon={true}
+                                onClick={[Function]}
+                                type="button"
+                            >
+                                <svg
+                                    className=""
+                                    height="16"
+                                    innerRef={undefined}
+                                    style={
+                                        Object {
+                                            "transform": "rotate(0deg)",
+                                          }
+                                    }
+                                    viewBox="0 0 12 16"
+                                    width="12"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                                        fill="rgb(210, 67, 58)"
+                                    />
+                                </svg>
+                                <span>
+                                    Remove
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -3435,7 +3523,7 @@ Array [
     className="c0 c1"
     height="0.75rem"
 />,
-  .c24 {
+  .c25 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3448,22 +3536,22 @@ Array [
   min-width: 7.5rem;
 }
 
-.c24::-moz-focus-inner,
-.c24[type='button']::-moz-focus-inner,
-.c24[type='reset']::-moz-focus-inner,
-.c24[type='submit']::-moz-focus-inner {
+.c25::-moz-focus-inner,
+.c25[type='button']::-moz-focus-inner,
+.c25[type='reset']::-moz-focus-inner,
+.c25[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c24:-moz-focusring,
-.c24[type='button']:-moz-focusring,
-.c24[type='reset']:-moz-focusring,
-.c24[type='submit']:-moz-focusring {
+.c25:-moz-focusring,
+.c25[type='button']:-moz-focusring,
+.c25[type='reset']:-moz-focusring,
+.c25[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c24 + button {
+.c25 + button {
   margin-left: 0.375rem;
 }
 
@@ -3479,11 +3567,11 @@ Array [
   width: 100%;
 }
 
-.c23 {
+.c24 {
   display: inline-block;
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3527,50 +3615,50 @@ Array [
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3615,50 +3703,50 @@ Array [
   margin: 0;
 }
 
-.c25:focus {
+.c26:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c25[disabled] {
+.c26[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c25:focus {
+.c26:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c27 {
+.c28 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3715,73 +3803,73 @@ Array [
   float: right;
 }
 
-.c27:focus {
+.c28:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c28:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c28:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:hover {
+.c28:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c27 svg + span {
+.c28 svg + span {
   margin-left: 0.75rem;
 }
 
-.c27 svg {
+.c28 svg {
   max-height: 1.125rem;
 }
 
@@ -3831,7 +3919,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3860,7 +3948,7 @@ Array [
   display: block;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3870,7 +3958,7 @@ Array [
   display: block;
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4214,6 +4302,10 @@ Array [
   margin-top: 0.1875rem;
 }
 
+.c20 {
+  margin-top: 0.75rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -4277,7 +4369,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4286,7 +4378,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4304,7 +4396,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c22 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4313,7 +4405,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c27 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -4470,61 +4562,65 @@ Array [
                     <div
                         className="c21"
                     >
-                        <button
-                            className="c22 c23 c24"
-                            disabled={false}
-                            href=""
-                            onClick={[Function]}
-                            type="button"
+                        <div
+                            className="c22"
                         >
-                            <span>
-                                Cancel
-                            </span>
-                        </button>
-                        <button
-                            className="c25 c23 c24"
-                            disabled={true}
-                            href=""
-                            type="submit"
-                        >
-                            <span>
-                                Save
-                            </span>
-                        </button>
-                    </div>
-                    <div
-                        className="c26"
-                    >
-                        <button
-                            className="c27 c23 c24"
-                            disabled={false}
-                            href=""
-                            icon={true}
-                            onClick={[Function]}
-                            type="button"
-                        >
-                            <svg
-                                className=""
-                                height="16"
-                                innerRef={undefined}
-                                style={
-                                    Object {
-                                        "transform": "rotate(0deg)",
-                                      }
-                                }
-                                viewBox="0 0 12 16"
-                                width="12"
-                                xmlns="http://www.w3.org/2000/svg"
+                            <button
+                                className="c23 c24 c25"
+                                disabled={false}
+                                href=""
+                                onClick={[Function]}
+                                type="button"
                             >
-                                <path
-                                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                                    fill="rgb(210, 67, 58)"
-                                />
-                            </svg>
-                            <span>
-                                Remove
-                            </span>
-                        </button>
+                                <span>
+                                    Cancel
+                                </span>
+                            </button>
+                            <button
+                                className="c26 c24 c25"
+                                disabled={true}
+                                href=""
+                                type="submit"
+                            >
+                                <span>
+                                    Save
+                                </span>
+                            </button>
+                        </div>
+                        <div
+                            className="c27"
+                        >
+                            <button
+                                className="c28 c24 c25"
+                                disabled={false}
+                                href=""
+                                icon={true}
+                                onClick={[Function]}
+                                type="button"
+                            >
+                                <svg
+                                    className=""
+                                    height="16"
+                                    innerRef={undefined}
+                                    style={
+                                        Object {
+                                            "transform": "rotate(0deg)",
+                                          }
+                                    }
+                                    viewBox="0 0 12 16"
+                                    width="12"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                                        fill="rgb(210, 67, 58)"
+                                    />
+                                </svg>
+                                <span>
+                                    Remove
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -4809,7 +4905,43 @@ Array [
         </div>
     </div>
 </div>,
-  .c24 {
+  .c1 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c1 + p,
+.c1 + small,
+.c1 + h1,
+.c1 + h2,
+.c1 + label,
+.c1 + h3,
+.c1 + h4,
+.c1 + h5,
+.c1 + div,
+.c1 + span {
+  margin-top: 1.5rem;
+}
+
+.c0 {
+  margin-bottom: 1.5rem;
+}
+
+<div
+    className="c0"
+>
+    <h3
+        className="c1"
+    >
+        2
+         key:value pair
+        s
+    </h3>
+</div>,
+  .c25 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -4822,22 +4954,22 @@ Array [
   min-width: 7.5rem;
 }
 
-.c24::-moz-focus-inner,
-.c24[type='button']::-moz-focus-inner,
-.c24[type='reset']::-moz-focus-inner,
-.c24[type='submit']::-moz-focus-inner {
+.c25::-moz-focus-inner,
+.c25[type='button']::-moz-focus-inner,
+.c25[type='reset']::-moz-focus-inner,
+.c25[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c24:-moz-focusring,
-.c24[type='button']:-moz-focusring,
-.c24[type='reset']:-moz-focusring,
-.c24[type='submit']:-moz-focusring {
+.c25:-moz-focusring,
+.c25[type='button']:-moz-focusring,
+.c25[type='reset']:-moz-focusring,
+.c25[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c24 + button {
+.c25 + button {
   margin-left: 0.375rem;
 }
 
@@ -4853,11 +4985,11 @@ Array [
   width: 100%;
 }
 
-.c23 {
+.c24 {
   display: inline-block;
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4901,50 +5033,50 @@ Array [
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4989,50 +5121,50 @@ Array [
   margin: 0;
 }
 
-.c25:focus {
+.c26:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c25[disabled] {
+.c26[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c25:focus {
+.c26:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c27 {
+.c28 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5089,73 +5221,73 @@ Array [
   float: right;
 }
 
-.c27:focus {
+.c28:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c28:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c28:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:hover {
+.c28:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c27 svg + span {
+.c28 svg + span {
   margin-left: 0.75rem;
 }
 
-.c27 svg {
+.c28 svg {
   max-height: 1.125rem;
 }
 
@@ -5205,7 +5337,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5234,7 +5366,7 @@ Array [
   display: block;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -5244,7 +5376,7 @@ Array [
   display: block;
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -5588,6 +5720,10 @@ Array [
   margin-top: 0.1875rem;
 }
 
+.c20 {
+  margin-top: 0.75rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -5651,7 +5787,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -5660,7 +5796,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -5678,7 +5814,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c22 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -5687,7 +5823,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c27 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -5844,61 +5980,65 @@ Array [
                     <div
                         className="c21"
                     >
-                        <button
-                            className="c22 c23 c24"
-                            disabled={false}
-                            href=""
-                            onClick={[Function]}
-                            type="button"
+                        <div
+                            className="c22"
                         >
-                            <span>
-                                Cancel
-                            </span>
-                        </button>
-                        <button
-                            className="c25 c23 c24"
-                            disabled={true}
-                            href=""
-                            type="submit"
-                        >
-                            <span>
-                                Save
-                            </span>
-                        </button>
-                    </div>
-                    <div
-                        className="c26"
-                    >
-                        <button
-                            className="c27 c23 c24"
-                            disabled={false}
-                            href=""
-                            icon={true}
-                            onClick={[Function]}
-                            type="button"
-                        >
-                            <svg
-                                className=""
-                                height="16"
-                                innerRef={undefined}
-                                style={
-                                    Object {
-                                        "transform": "rotate(0deg)",
-                                      }
-                                }
-                                viewBox="0 0 12 16"
-                                width="12"
-                                xmlns="http://www.w3.org/2000/svg"
+                            <button
+                                className="c23 c24 c25"
+                                disabled={false}
+                                href=""
+                                onClick={[Function]}
+                                type="button"
                             >
-                                <path
-                                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                                    fill="rgb(210, 67, 58)"
-                                />
-                            </svg>
-                            <span>
-                                Remove
-                            </span>
-                        </button>
+                                <span>
+                                    Cancel
+                                </span>
+                            </button>
+                            <button
+                                className="c26 c24 c25"
+                                disabled={true}
+                                href=""
+                                type="submit"
+                            >
+                                <span>
+                                    Save
+                                </span>
+                            </button>
+                        </div>
+                        <div
+                            className="c27"
+                        >
+                            <button
+                                className="c28 c24 c25"
+                                disabled={false}
+                                href=""
+                                icon={true}
+                                onClick={[Function]}
+                                type="button"
+                            >
+                                <svg
+                                    className=""
+                                    height="16"
+                                    innerRef={undefined}
+                                    style={
+                                        Object {
+                                            "transform": "rotate(0deg)",
+                                          }
+                                    }
+                                    viewBox="0 0 12 16"
+                                    width="12"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                                        fill="rgb(210, 67, 58)"
+                                    />
+                                </svg>
+                                <span>
+                                    Remove
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -5935,7 +6075,7 @@ Array [
     className="c0 c1"
     height="0.75rem"
 />,
-  .c24 {
+  .c25 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -5948,22 +6088,22 @@ Array [
   min-width: 7.5rem;
 }
 
-.c24::-moz-focus-inner,
-.c24[type='button']::-moz-focus-inner,
-.c24[type='reset']::-moz-focus-inner,
-.c24[type='submit']::-moz-focus-inner {
+.c25::-moz-focus-inner,
+.c25[type='button']::-moz-focus-inner,
+.c25[type='reset']::-moz-focus-inner,
+.c25[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c24:-moz-focusring,
-.c24[type='button']:-moz-focusring,
-.c24[type='reset']:-moz-focusring,
-.c24[type='submit']:-moz-focusring {
+.c25:-moz-focusring,
+.c25[type='button']:-moz-focusring,
+.c25[type='reset']:-moz-focusring,
+.c25[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c24 + button {
+.c25 + button {
   margin-left: 0.375rem;
 }
 
@@ -5979,11 +6119,11 @@ Array [
   width: 100%;
 }
 
-.c23 {
+.c24 {
   display: inline-block;
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6027,50 +6167,50 @@ Array [
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6115,50 +6255,50 @@ Array [
   margin: 0;
 }
 
-.c25:focus {
+.c26:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c25[disabled] {
+.c26[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c25:focus {
+.c26:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c27 {
+.c28 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6215,73 +6355,73 @@ Array [
   float: right;
 }
 
-.c27:focus {
+.c28:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c28:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c28:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:hover {
+.c28:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c27 svg + span {
+.c28 svg + span {
   margin-left: 0.75rem;
 }
 
-.c27 svg {
+.c28 svg {
   max-height: 1.125rem;
 }
 
@@ -6331,7 +6471,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6360,7 +6500,7 @@ Array [
   display: block;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6370,7 +6510,7 @@ Array [
   display: block;
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6714,6 +6854,10 @@ Array [
   margin-top: 0.1875rem;
 }
 
+.c20 {
+  margin-top: 0.75rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -6777,7 +6921,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -6786,7 +6930,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -6804,7 +6948,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c22 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -6813,7 +6957,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c27 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -6970,61 +7114,65 @@ Array [
                     <div
                         className="c21"
                     >
-                        <button
-                            className="c22 c23 c24"
-                            disabled={false}
-                            href=""
-                            onClick={[Function]}
-                            type="button"
+                        <div
+                            className="c22"
                         >
-                            <span>
-                                Cancel
-                            </span>
-                        </button>
-                        <button
-                            className="c25 c23 c24"
-                            disabled={true}
-                            href=""
-                            type="submit"
-                        >
-                            <span>
-                                Save
-                            </span>
-                        </button>
-                    </div>
-                    <div
-                        className="c26"
-                    >
-                        <button
-                            className="c27 c23 c24"
-                            disabled={false}
-                            href=""
-                            icon={true}
-                            onClick={[Function]}
-                            type="button"
-                        >
-                            <svg
-                                className=""
-                                height="16"
-                                innerRef={undefined}
-                                style={
-                                    Object {
-                                        "transform": "rotate(0deg)",
-                                      }
-                                }
-                                viewBox="0 0 12 16"
-                                width="12"
-                                xmlns="http://www.w3.org/2000/svg"
+                            <button
+                                className="c23 c24 c25"
+                                disabled={false}
+                                href=""
+                                onClick={[Function]}
+                                type="button"
                             >
-                                <path
-                                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                                    fill="rgb(210, 67, 58)"
-                                />
-                            </svg>
-                            <span>
-                                Remove
-                            </span>
-                        </button>
+                                <span>
+                                    Cancel
+                                </span>
+                            </button>
+                            <button
+                                className="c26 c24 c25"
+                                disabled={true}
+                                href=""
+                                type="submit"
+                            >
+                                <span>
+                                    Save
+                                </span>
+                            </button>
+                        </div>
+                        <div
+                            className="c27"
+                        >
+                            <button
+                                className="c28 c24 c25"
+                                disabled={false}
+                                href=""
+                                icon={true}
+                                onClick={[Function]}
+                                type="button"
+                            >
+                                <svg
+                                    className=""
+                                    height="16"
+                                    innerRef={undefined}
+                                    style={
+                                        Object {
+                                            "transform": "rotate(0deg)",
+                                          }
+                                    }
+                                    viewBox="0 0 12 16"
+                                    width="12"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                                        fill="rgb(210, 67, 58)"
+                                    />
+                                </svg>
+                                <span>
+                                    Remove
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

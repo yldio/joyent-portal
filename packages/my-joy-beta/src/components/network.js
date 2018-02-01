@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
@@ -72,14 +73,10 @@ export const Collapsed = ({ name, fabric, ...network }) => (
                     <FlexItem>
                       <Flex alignCenter>
                         <FlexItem>
-                          <Margin right={1}>
-                            {fabric ? <FabricIcon /> : <DataCenterIcon />}
-                          </Margin>
+                          <Margin right={1}>{fabric ? <FabricIcon /> : <DataCenterIcon />}</Margin>
                         </FlexItem>
                         <FlexItem>
-                          <P>
-                            {fabric ? 'Fabric network' : 'Data center network'}
-                          </P>
+                          <P>{fabric ? 'Fabric network' : 'Data center network'}</P>
                         </FlexItem>
                       </Flex>
                     </FlexItem>
@@ -155,14 +152,10 @@ export const Expanded = ({
                   <FlexItem>
                     <Flex alignCenter>
                       <FlexItem>
-                        <Margin right={1}>
-                          {fabric ? <FabricIcon /> : <DataCenterIcon />}
-                        </Margin>
+                        <Margin right={1}>{fabric ? <FabricIcon /> : <DataCenterIcon />}</Margin>
                       </FlexItem>
                       <FlexItem>
-                        <P>
-                          {fabric ? 'Fabric network' : 'Data center network'}
-                        </P>
+                        <P>{fabric ? 'Fabric network' : 'Data center network'}</P>
                       </FlexItem>
                     </Flex>
                   </FlexItem>
@@ -177,11 +170,7 @@ export const Expanded = ({
                           </Margin>
                         </FlexItem>
                         <FlexItem>
-                          <P>
-                            {`${machines.length} instance${
-                              machines.length === 1 ? '' : 's'
-                            }`}
-                          </P>
+                          <P>{`${machines.length} instance${machines.length === 1 ? '' : 's'}`}</P>
                         </FlexItem>
                       </Flex>
                     </FlexItem>
@@ -192,11 +181,7 @@ export const Expanded = ({
                 <Fragment>
                   <Margin top={3}>
                     <Card collapsed={!infoExpanded} actionable={!infoExpanded}>
-                      <CardHeader
-                        secondary={false}
-                        transparent={false}
-                        onClick={onInfoClick}
-                      >
+                      <CardHeader secondary={false} transparent={false} onClick={onInfoClick}>
                         <CardHeaderMeta>
                           <Padding left={3} right={3}>
                             <P>Network information</P>
@@ -214,12 +199,8 @@ export const Expanded = ({
                                 <FlexItem>
                                   <Margin bottom={3}>
                                     <Flex alignCenter>
-                                      <Margin right={1}>
-                                        <DotIcon
-                                          width={remcalc(12)}
-                                          height={remcalc(12)}
-                                          color="green"
-                                        />
+                                      <Margin right={1} top={0.5}>
+                                        <DotIcon size={remcalc(12)} color="green" />
                                       </Margin>
                                       <Small bold noMargin>
                                         Outbound internet access enabled
@@ -229,30 +210,20 @@ export const Expanded = ({
                                 </FlexItem>
                               ) : null}
                               <FlexItem>
-                                <FormGroup name="id">
-                                  <FormLabel>ID</FormLabel>
-                                  <Margin top={0.5}>
-                                    <Input
-                                      onBlur={null}
-                                      big
-                                      monospace
-                                      type="text"
-                                      value={id}
-                                    />
-                                  </Margin>
-                                </FormGroup>
+                                <Margin bottom={2}>
+                                  <FormGroup name="id">
+                                    <FormLabel>ID</FormLabel>
+                                    <Margin top={0.5}>
+                                      <Input onBlur={null} big monospace type="text" value={id} />
+                                    </Margin>
+                                  </FormGroup>
+                                </Margin>
                               </FlexItem>
                               <FlexItem>
                                 <FormGroup name="subnet">
                                   <FormLabel>Subnet</FormLabel>
                                   <Margin top={0.5}>
-                                    <Input
-                                      onBlur={null}
-                                      big
-                                      monospace
-                                      type="text"
-                                      value={subnet}
-                                    />
+                                    <Input onBlur={null} big monospace type="text" value={subnet} />
                                   </Margin>
                                 </FormGroup>
                               </FlexItem>
@@ -278,24 +249,15 @@ export const Expanded = ({
                   </Margin>
                   {machines.length ? (
                     <Margin top={3}>
-                      <Card
-                        collapsed={!machinesExpanded}
-                        actionable={!machinesExpanded}
-                      >
-                        <CardHeader
-                          secondary={false}
-                          transparent={false}
-                          onClick={onMachinesClick}
-                        >
+                      <Card collapsed={!machinesExpanded} actionable={!machinesExpanded}>
+                        <CardHeader secondary={false} transparent={false} onClick={onMachinesClick}>
                           <CardHeaderMeta>
                             <Padding left={3} right={3}>
                               <P>Instances on network</P>
                             </Padding>
                           </CardHeaderMeta>
                           <CardHeaderBox>
-                            <ArrowIcon
-                              direction={machinesExpanded ? 'up' : 'down'}
-                            />
+                            <ArrowIcon direction={machinesExpanded ? 'up' : 'down'} />
                           </CardHeaderBox>
                         </CardHeader>
                         {machinesExpanded ? (

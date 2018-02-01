@@ -10,15 +10,19 @@ const NoPackagesTitle = styled(H3)`
   color: ${props => props.theme.greyDark};
 `;
 
+const FullWidthCard = styled(Card)`
+  width: 100%;
+`
+
 export default ({ children }) => (
-  <Card>
+  <FullWidthCard>
     <Padding all={6}>
       <Flex alignCenter justifyCenter column>
         <Margin bottom={2}>
-          <img src={NoPackagesImage} />
+          <img src={NoPackagesImage} alt="Sad Animal"/>
         </Margin>
         <NoPackagesTitle>{children}</NoPackagesTitle>
       </Flex>
     </Padding>
-  </Card>
+  </FullWidthCard>
 );

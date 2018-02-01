@@ -44,13 +44,15 @@ const Animated = WrappedComponent =>
       }
     }
 
+    shouldComponentUpdate = nextProps =>
+      this.props.match.params.step !== nextProps.match.params.step;
+
     render() {
       return (
         <div
           ref={w => {
             this.wrapper = w;
-          }}
-        >
+          }}>
           <WrappedComponent {...this.props} />
         </div>
       );

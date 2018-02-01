@@ -1238,15 +1238,15 @@ exports[`renders <Package /> without throwing 1`] = `
 `;
 
 exports[`renders <Packages expanded /> without throwing 1`] = `
-.c10 {
+.c11 {
   margin-bottom: 0.75rem;
 }
 
-.c8 {
+.c9 {
   padding: 2.25rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1282,7 +1282,7 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
   margin-left: 0.5625rem;
 }
 
-.c12 {
+.c13 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -1290,20 +1290,20 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
   margin: 0;
 }
 
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
   margin-top: 1.5rem;
 }
 
-.c7 {
+.c8 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1439,8 +1439,12 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c11 {
+.c12 {
   color: rgb(151,151,151);
+}
+
+.c7 {
+  width: 100%;
 }
 
 <form>
@@ -1533,25 +1537,26 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
     />
   </table>
   <div
-    className="c7"
+    className="c7 c8"
     disabled={false}
     name="card"
   >
     <div
-      className="c8"
+      className="c9"
     >
       <div
-        className="c9"
+        className="c10"
       >
         <div
-          className="c10"
+          className="c11"
         >
           <img
+            alt="Sad Animal"
             src="no-packages.svg"
           />
         </div>
         <h3
-          className="c11 c12"
+          className="c12 c13"
         >
           Sorry, but we weren’t able to find any packages with that filter
         </h3>
@@ -1562,15 +1567,15 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
 `;
 
 exports[`renders <Packages isVmSelected /> without throwing 1`] = `
-.c10 {
+.c11 {
   margin-bottom: 0.75rem;
 }
 
-.c8 {
+.c9 {
   padding: 2.25rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1606,7 +1611,7 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
   margin-left: 0.5625rem;
 }
 
-.c12 {
+.c13 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -1614,20 +1619,20 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
   margin: 0;
 }
 
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
   margin-top: 1.5rem;
 }
 
-.c7 {
+.c8 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1763,8 +1768,12 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c11 {
+.c12 {
   color: rgb(151,151,151);
+}
+
+.c7 {
+  width: 100%;
 }
 
 <form>
@@ -1857,25 +1866,26 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
     />
   </table>
   <div
-    className="c7"
+    className="c7 c8"
     disabled={false}
     name="card"
   >
     <div
-      className="c8"
+      className="c9"
     >
       <div
-        className="c9"
+        className="c10"
       >
         <div
-          className="c10"
+          className="c11"
         >
           <img
+            alt="Sad Animal"
             src="no-packages.svg"
           />
         </div>
         <h3
-          className="c11 c12"
+          className="c12 c13"
         >
           Sorry, but we weren’t able to find any packages with that filter
         </h3>
@@ -1886,15 +1896,15 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
 `;
 
 exports[`renders <Packages loading /> without throwing 1`] = `
-.c10 {
+.c11 {
   margin-bottom: 0.75rem;
 }
 
-.c8 {
+.c9 {
   padding: 2.25rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1930,7 +1940,7 @@ exports[`renders <Packages loading /> without throwing 1`] = `
   margin-left: 0.5625rem;
 }
 
-.c12 {
+.c13 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -1938,20 +1948,20 @@ exports[`renders <Packages loading /> without throwing 1`] = `
   margin: 0;
 }
 
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
   margin-top: 1.5rem;
 }
 
-.c7 {
+.c8 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2087,8 +2097,12 @@ exports[`renders <Packages loading /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c11 {
+.c12 {
   color: rgb(151,151,151);
+}
+
+.c7 {
+  width: 100%;
 }
 
 <form>
@@ -2181,25 +2195,26 @@ exports[`renders <Packages loading /> without throwing 1`] = `
     />
   </table>
   <div
-    className="c7"
+    className="c7 c8"
     disabled={false}
     name="card"
   >
     <div
-      className="c8"
+      className="c9"
     >
       <div
-        className="c9"
+        className="c10"
       >
         <div
-          className="c10"
+          className="c11"
         >
           <img
+            alt="Sad Animal"
             src="no-packages.svg"
           />
         </div>
         <h3
-          className="c11 c12"
+          className="c12 c13"
         >
           Sorry, but we weren’t able to find any packages with that filter
         </h3>
@@ -2422,15 +2437,15 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
 `;
 
 exports[`renders <Packages pristine={false} /> without throwing 1`] = `
-.c10 {
+.c11 {
   margin-bottom: 0.75rem;
 }
 
-.c8 {
+.c9 {
   padding: 2.25rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2466,7 +2481,7 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
   margin-left: 0.5625rem;
 }
 
-.c12 {
+.c13 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -2474,20 +2489,20 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
   margin: 0;
 }
 
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
+.c13 + p,
+.c13 + small,
+.c13 + h1,
+.c13 + h2,
+.c13 + label,
+.c13 + h3,
+.c13 + h4,
+.c13 + h5,
+.c13 + div,
+.c13 + span {
   margin-top: 1.5rem;
 }
 
-.c7 {
+.c8 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2623,8 +2638,12 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c11 {
+.c12 {
   color: rgb(151,151,151);
+}
+
+.c7 {
+  width: 100%;
 }
 
 <form>
@@ -2717,25 +2736,26 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
     />
   </table>
   <div
-    className="c7"
+    className="c7 c8"
     disabled={false}
     name="card"
   >
     <div
-      className="c8"
+      className="c9"
     >
       <div
-        className="c9"
+        className="c10"
       >
         <div
-          className="c10"
+          className="c11"
         >
           <img
+            alt="Sad Animal"
             src="no-packages.svg"
           />
         </div>
         <h3
-          className="c11 c12"
+          className="c12 c13"
         >
           Sorry, but we weren’t able to find any packages with that filter
         </h3>
