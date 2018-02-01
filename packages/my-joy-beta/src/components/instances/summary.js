@@ -131,26 +131,19 @@ export class CopyToClipboardTooltip extends Component {
   );
 }
 
-export const CopiableField = ({ label, text, ...rest }) => (
+export const CopiableField = ({ md, label, text, ...rest }) => (
   <Row>
-    <Col xs={12} md={7}>
-      <FormLabel>{label}</FormLabel>
+    <Col xs={12} md={md || 7}>
+      {label ? <FormLabel>{label}</FormLabel> : null }
       <InputIconWrapper {...rest}>
-        <Input monospace onBlur={null} fluid value={text} />
+        <Input {...rest} monospace onBlur={null} fluid value={text} />
         <CopyToClipboardTooltip>{text}</CopyToClipboardTooltip>
       </InputIconWrapper>
     </Col>
   </Row>
 );
 
-export const Meta = ({
-  created,
-  updated,
-  state,
-  brand,
-  image,
-  ...instance
-}) => [
+export const Meta = ({ created, updated, state, brand, image, ...instance }) => [
   <Row middle="xs">
     <Col xs={12}>
       <H2>{(instance.package || {}).name}</H2>
@@ -158,22 +151,12 @@ export const Meta = ({
   </Row>,
   <Margin top={2} bottom={3}>
     <Flex>
-      <Label>
-        {image && image.name ? titleCase(image.name) : 'Custom Image'}
-      </Label>
+      <Label>{image && image.name ? titleCase(image.name) : 'Custom Image'}</Label>
       <VerticalDivider />
-      <Label>
-        {brand === 'LX'
-          ? 'Infrastructure Container'
-          : 'Hardware Virtual Machine'}
-      </Label>
+      <Label>{brand === 'LX' ? 'Infrastructure Container' : 'Hardware Virtual Machine'}</Label>
       <VerticalDivider />
       <Flex>
-        <DotIcon
-          marginRight={remcalc(6)}
-          size={remcalc(15)}
-          color={stateColor[state]}
-        />
+        <DotIcon marginRight={remcalc(6)} size={remcalc(15)} color={stateColor[state]} />
         {titleCase(state)}
       </Flex>
     </Flex>
@@ -219,8 +202,7 @@ export default withTheme(
                       onClick={() => onAction('start')}
                       secondary
                       small
-                      icon
-                    >
+                      icon>
                       <StartIcon disabled={instance.state !== 'STOPPED'} />
                     </Button>
                   </SmallOnly>
@@ -232,8 +214,7 @@ export default withTheme(
                       onClick={() => onAction('start')}
                       secondary
                       bold
-                      icon
-                    >
+                      icon>
                       <StartIcon disabled={instance.state !== 'STOPPED'} />
                       <span>Start</span>
                     </Button>
@@ -246,8 +227,7 @@ export default withTheme(
                       onClick={() => onAction('stop')}
                       secondary
                       small
-                      icon
-                    >
+                      icon>
                       <StopIcon disabled={instance.state !== 'RUNNING'} />
                     </Button>
                   </SmallOnly>
@@ -259,8 +239,7 @@ export default withTheme(
                       onClick={() => onAction('stop')}
                       secondary
                       bold
-                      icon
-                    >
+                      icon>
                       <StopIcon disabled={instance.state !== 'RUNNING'} />
                       <span>Stop</span>
                     </Button>
@@ -273,8 +252,7 @@ export default withTheme(
                       onClick={() => onAction('reboot')}
                       secondary
                       small
-                      icon
-                    >
+                      icon>
                       <ResetIcon disabled={instance.state !== 'RUNNING'} />
                     </Button>
                   </SmallOnly>
@@ -286,8 +264,7 @@ export default withTheme(
                       onClick={() => onAction('reboot')}
                       secondary
                       bold
-                      icon
-                    >
+                      icon>
                       <ResetIcon disabled={instance.state !== 'RUNNING'} />
                       <span>Reboot</span>
                     </Button>
@@ -298,21 +275,16 @@ export default withTheme(
                     <Button
                       type="button"
                       loading={removing}
-                      disabled={
-                        ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
-                      }
+                      disabled={['RUNNING', 'STOPPED'].indexOf(instance.state) < 0}
                       onClick={() => onAction('remove')}
                       secondary
                       small
                       right
                       icon
-                      error
-                    >
+                      error>
                       <DeleteIcon
                         fill={theme.red}
-                        disabled={
-                          ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
-                        }
+                        disabled={['RUNNING', 'STOPPED'].indexOf(instance.state) < 0}
                       />
                     </Button>
                   </SmallOnly>
@@ -320,25 +292,20 @@ export default withTheme(
                     <Button
                       type="button"
                       loading={removing}
-                      disabled={
-                        ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
-                      }
+                      disabled={['RUNNING', 'STOPPED'].indexOf(instance.state) < 0}
                       onClick={() => onAction('remove')}
                       secondary
                       bold
                       right
                       icon
-                      error
-                    >
+                      error>
                       <DeleteIcon
                         fill={
                           ['RUNNING', 'STOPPED'].indexOf(instance.state) >= 0
                             ? theme.red
                             : undefined
                         }
-                        disabled={
-                          ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
-                        }
+                        disabled={['RUNNING', 'STOPPED'].indexOf(instance.state) < 0}
                       />
                       <span>Remove</span>
                     </Button>
@@ -348,20 +315,12 @@ export default withTheme(
               <Margin bottom={5} top={4}>
                 <Divider height={remcalc(1)} />
               </Margin>
-              <CopiableField
-                text={(instance.id || '').split('-')[0]}
-                label="Short ID"
-              />
+              <CopiableField text={(instance.id || '').split('-')[0]} label="Short ID" />
               <CopiableField text={instance.id} label="ID" />
               <CopiableField text={instance.compute_node} label="CN UUID" />
               {instance.image &&
-                instance.image.id && (
-                  <CopiableField text={instance.image.id} label="Image UUID" />
-                )}
-              <CopiableField
-                text={`ssh root@${instance.primary_ip}`}
-                label="Login"
-              />
+                instance.image.id && <CopiableField text={instance.image.id} label="Image UUID" />}
+              <CopiableField text={`ssh root@${instance.primary_ip}`} label="Login" />
               {(instance.ips || []).map((ip, i) => (
                 <CopiableField
                   key={i}

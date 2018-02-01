@@ -4,6 +4,8 @@ import remcalc from 'remcalc';
 import { Margin, Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import { Field } from 'redux-form';
+import copy from 'clipboard-copy';
+import { CopiableField } from '@components/instances/summary';
 
 import {
   P,
@@ -76,7 +78,7 @@ export const HostnamesHeader = () => (
 
 export const AddServiceForm = ({ handleSubmit, submitting, disabled, pristine }) => (
   <form onSubmit={handleSubmit}>
-    <Flex alignEnd>
+    <Flex alignEnd wrap>
       <FlexItem>
         <FormGroup name="name" field={Field}>
           <FormLabel>Attach to new CNS service name</FormLabel>
@@ -103,7 +105,7 @@ export const AddServiceForm = ({ handleSubmit, submitting, disabled, pristine })
   </form>
 );
 
-export const Hostname = ({ values = [], network, service, ...hostname }) => (
+export const Hostname = ({ copy, values = [], network, service, ...hostname }) => (
   <Fragment>
     {values.length ? (
       <Margin bottom={4}>
@@ -125,7 +127,11 @@ export const Hostname = ({ values = [], network, service, ...hostname }) => (
           <Margin
             top={0.5}
             bottom={values.length !== 1 && values.length !== i + 1 ? '1' : undefined}>
-            <Input onBlur={null} disabled monospace fluid value={value} />
+            {copy ? (
+              <CopiableField disabled md={12} text={value} />
+            ) : (
+              <Input onBlur={null} disabled monospace fluid value={value} />
+            )}
           </Margin>
         ))}
       </Margin>
@@ -133,12 +139,12 @@ export const Hostname = ({ values = [], network, service, ...hostname }) => (
   </Fragment>
 );
 
-const DefaultHostnames = ({ hostnames }) => (
+const DefaultHostnames = ({ hostnames, copy }) => (
   <Fragment>
     <Header />
     <Flex column>
       {hostnames.map(({ value, ...hostname }) => (
-        <Hostname key={value} value={value} {...hostname} />
+        <Hostname copy={copy} key={value} value={value} {...hostname} />
       ))}
     </Flex>
   </Fragment>
@@ -148,7 +154,8 @@ const CnsHostnames = ({
   hostnames = [],
   services = [],
   onRemoveService = () => null,
-  children = null
+  children = null,
+  copy = false
 }) => (
   <Fragment>
     <HostnamesHeader />
@@ -173,20 +180,21 @@ const CnsHostnames = ({
     <Margin top={4}>
       <Flex column>
         {hostnames.map(({ value, ...hostname }) => (
-          <Hostname key={value} value={value} {...hostname} />
+          <Hostname copy={copy} key={value} value={value} {...hostname} />
         ))}
       </Flex>
     </Margin>
   </Fragment>
 );
 
-export default ({ hostnames = [], services = [], onRemoveService, children = null }) => (
+export default ({ copy, hostnames = [], services = [], onRemoveService, children = null }) => (
   <Card>
     <Padding all={4} bottom={0}>
-      <DefaultHostnames hostnames={hostnames.filter(({ service }) => !service)} />
+      <DefaultHostnames copy={copy} hostnames={hostnames.filter(({ service }) => !service)} />
       <Divider height={remcalc(1)} />
       <Margin top={4}>
         <CnsHostnames
+          copy={copy}
           services={services}
           hostnames={hostnames.filter(({ service }) => service)}
           onRemoveService={onRemoveService}>

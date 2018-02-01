@@ -38,19 +38,19 @@ export const Item = ({ name, state, created, onStart, onRemove, updated, mutatin
           <FormGroup paddingTop={remcalc(4)} name={name} field={Field}>
             <Checkbox noMargin />
           </FormGroup>
-        </TableTd>,
+        </TableTd>
         <TableTd middle left>
           {name}
-        </TableTd>,
+        </TableTd>
         <TableTd middle left>
           <DotIcon size={remcalc(12)} color={stateColor[state]} /> {titleCase(state)}
-        </TableTd>,
+        </TableTd>
         <TableTd xs="0" sm="160" middle left>
           {distanceInWordsToNow(created)}
-        </TableTd>,
+        </TableTd>
         <TableTd xs="0" sm="160" middle left>
           {distanceInWordsToNow(updated)}
-        </TableTd>,
+        </TableTd>
         <PopoverContainer clickable>
           <TableTd padding="0" hasBorder="left">
             <PopoverTarget box>

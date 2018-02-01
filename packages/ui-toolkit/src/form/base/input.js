@@ -5,19 +5,15 @@ import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
 
-const colorWithDisabled = props =>
-  props.disabled ? props.theme.disabled : props.theme.text;
+const colorWithDisabled = props => (props.disabled ? props.theme.disabled : props.theme.text);
 
 const colorWithDefaultValue = props =>
-  props.value === props.defaultValue
-    ? props.theme.disabled
-    : colorWithDisabled(props);
+  props.value === props.defaultValue ? props.theme.disabled : colorWithDisabled(props);
 
 const color = props =>
   props.defaultValue ? colorWithDefaultValue(props) : colorWithDisabled(props);
 
-const height = props =>
-  props.multiple ? 'auto' : props.textarea ? remcalc(96) : remcalc(48);
+const height = props => (props.multiple ? 'auto' : props.textarea ? remcalc(96) : remcalc(48));
 
 const paddingTop = props => (props.multiple ? remcalc(20) : remcalc(13));
 
@@ -90,10 +86,6 @@ const style = css`
 
   ${is('small')`
     width: ${remcalc(120)};
-  `};
-
-  ${is('big')`
-    width: ${remcalc(355)};
   `};
 
   ${is('monospace')`
@@ -188,6 +180,11 @@ const style = css`
     border-color: ${props => props.theme.primary};
     outline: 0;
   }
+
+  ${is('big')`
+    width: ${remcalc(355)};
+    max-width: 100%;
+  `};
 `;
 
 const BaseInput = Component => ({ resize, onBlur, type, ...props }) => {
@@ -231,8 +228,7 @@ BaseInput.propTypes = {
 export default BaseInput;
 
 export const Stylable = Component => {
-  const stylable =
-    typeof Component === 'string' ? styled[Component] : styled(Component);
+  const stylable = typeof Component === 'string' ? styled[Component] : styled(Component);
 
   return stylable`
     ${style}

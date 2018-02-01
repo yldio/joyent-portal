@@ -74,6 +74,7 @@ const CnsContainer = ({
     {!loading && !disabled ? (
       <Margin bottom={4}>
         <Cns
+          copy
           services={services}
           hostnames={hostnames}
           onRemoveService={!mutating && (name => handleRemoveService(name, services))}>

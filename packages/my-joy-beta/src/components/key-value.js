@@ -98,7 +98,7 @@ const TextareaKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
 );
 
 const InputKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
-  <Flex justifyStart contentStretch>
+  <Flex wrap justifyStart contentStretch>
     {!onlyValue ? (
       <FlexItem basis="auto">
         <FormGroup name="name" field={Field} fluid>
