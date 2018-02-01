@@ -6,5 +6,4 @@ export { default as Networks } from './networks';
 export { default as Firewall } from './firewall';
 export { default as Cns } from './cns';
 export { default as Snapshots } from './snapshots';
-export { default as Resize } from './resize';
 export { default as UserScript } from './user-script';

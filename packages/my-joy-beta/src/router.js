@@ -17,7 +17,6 @@ import {
   Firewall as InstanceFirewall,
   Cns as InstanceCns,
   Snapshots as InstanceSnapshots,
-  Resize as InstanceResize,
   UserScript as InstanceUserScript
 } from '@containers/instances';
 
@@ -113,16 +112,6 @@ export default () => (
           component={() => <Redirect to="/instances/~create/name" />}
         />
         <Route path="/instances/~create/:step" component={CreateInstance} />
-        <Route
-          path="/instances/~resize/:instance"
-          exact
-          component={InstanceResize}
-        />
-        <Route
-          path="/instances/:instance/:section?/~resize"
-          exact
-          component={InstanceResize}
-        />
       </Switch>
 
       <Route path="/" exact component={() => <Redirect to="/instances" />} />
