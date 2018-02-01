@@ -128,6 +128,7 @@ const InputKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
 );
 
 export const KeyValue = ({
+  disabled = false,
   input = 'input',
   type = 'metadata',
   method = 'add',
@@ -177,7 +178,7 @@ export const KeyValue = ({
                 </CollapsedKeyValue>
               )}
             </Meta>
-            {method === 'edit' ? (
+            {method === 'edit' && !disabled? (
               <ArrowIcon onClick={onToggleExpanded} direction={expanded ? 'up' : 'down'} />
             ) : null}
           </Flex>

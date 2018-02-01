@@ -15,12 +15,7 @@ import { destroy } from 'redux-form';
 
 import { PackageIcon, StatusLoader, Button } from 'joyent-ui-toolkit';
 
-import {
-  Filters,
-  Packages,
-  Package,
-  Overview
-} from '@components/create-instance/package';
+import { Filters, Packages, Package, Overview } from '@components/create-instance/package';
 
 import Animated from '@containers/create-instance/animated';
 import Title from '@components/create-instance/title';
@@ -51,19 +46,16 @@ const PackageContainer = ({
       id={step}
       onClick={!expanded && !selected.id && handleEdit}
       collapsed={!expanded && !proceeded}
-      icon={<PackageIcon />}
-    >
+      icon={<PackageIcon />}>
       Package
     </Title>
     {expanded ? (
       <Description>
-        A package defines the specs of your instance. On Triton, packages can
-        only increase in size.{' '}
+        A package defines the specs of your instance. On Triton, packages can only increase in size.{' '}
         <a
           href="https://docs.joyent.com/private-cloud/packages"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Read the docs
         </a>
       </Description>
@@ -71,20 +63,15 @@ const PackageContainer = ({
     <ReduxForm
       form={`${FORM_NAME}-filters`}
       destroyOnUnmount={false}
-      forceUnregisterOnUnmount={true}
-    >
+      forceUnregisterOnUnmount={true}>
       {props =>
-        !loading && expanded ? (
-          <Filters {...props} onResetFilters={handleResetFilters} />
-        ) : null
-      }
+        !loading && expanded ? <Filters {...props} onResetFilters={handleResetFilters} /> : null}
     </ReduxForm>
     <ReduxForm
       form={FORM_NAME}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
-      onSubmit={handleNext}
-    >
+      onSubmit={handleNext}>
       {props =>
         expanded ? (
           loading ? (
@@ -96,14 +83,14 @@ const PackageContainer = ({
               sortBy={sortBy}
               sortOrder={sortOrder}
               onSortBy={handleSortBy}
-              packages={packages.length}
-            >
+              packages={packages.length}>
               {packages.map(({ id, ...pkg }) => (
                 <Package
                   key={id}
                   id={id}
                   selected={selected.id === id}
                   hasVms={hasVms}
+                  sortBy={sortBy}
                   {...pkg}
                 />
               ))}
@@ -111,8 +98,7 @@ const PackageContainer = ({
           )
         ) : selected.id ? (
           <Overview {...selected} hasVms={hasVms} onCancel={handleEdit} />
-        ) : null
-      }
+        ) : null}
     </ReduxForm>
     {expanded ? (
       !loading ? (
@@ -149,9 +135,7 @@ export default compose(
           disk: pkg.disk * 1000000,
           price: packagePrice.cost || 0,
           name: titleCase(packageName.replace(/-/g, ' ')),
-          group: constantCase(
-            pkg.group.replace(/optimized|purpose|KVM/gi, '').trim()
-          )
+          group: constantCase(pkg.group.replace(/optimized|purpose|KVM/gi, '').trim())
         };
       })
     })
@@ -163,29 +147,13 @@ export default compose(
       const _sortOrder = get(values, 'packages-list-sort-order', 'asc');
       const ssdOnly = get(form, `${FILTERS}.values.ssd`, false);
 
-      const computeOptimized = get(
-        form,
-        `${FILTERS}.values.compute-optimized`,
-        false
-      );
+      const computeOptimized = get(form, `${FILTERS}.values.compute-optimized`, false);
 
-      const generalPurpose = get(
-        form,
-        `${FILTERS}.values.general-purpose`,
-        false
-      );
+      const generalPurpose = get(form, `${FILTERS}.values.general-purpose`, false);
 
-      const storageOptimized = get(
-        form,
-        `${FILTERS}.values.storage-optimized`,
-        false
-      );
+      const storageOptimized = get(form, `${FILTERS}.values.storage-optimized`, false);
 
-      const memoryOptimized = get(
-        form,
-        `${FILTERS}.values.memory-optimized`,
-        false
-      );
+      const memoryOptimized = get(form, `${FILTERS}.values.memory-optimized`, false);
 
       const vmSelected = get(form, 'create-instance-image.values.vms', false);
       const pkgSelected = get(form, `${FORM_NAME}.values.package`, null);
@@ -196,12 +164,7 @@ export default compose(
         .filter(p => (ssdOnly ? p.ssd === ssdOnly : true))
         .filter(p => p.vm === vmSelected);
 
-      if (
-        computeOptimized ||
-        generalPurpose ||
-        storageOptimized ||
-        memoryOptimized
-      ) {
+      if (computeOptimized || generalPurpose || storageOptimized || memoryOptimized) {
         filtered = filtered.filter(
           p =>
             (memoryOptimized && p.group === 'MEMORY') ||
@@ -223,9 +186,7 @@ export default compose(
     },
     (dispatch, { history }) => ({
       handleNext: () => {
-        dispatch(
-          set({ name: 'create-instance-package-proceeded', value: true })
-        );
+        dispatch(set({ name: 'create-instance-package-proceeded', value: true }));
 
         return history.push('/instances/~create/tags');
       },

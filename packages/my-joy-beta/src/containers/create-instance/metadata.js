@@ -79,6 +79,7 @@ export const Metadata = ({
               {...props}
               initialValues={{ name, value }}
               expanded={open}
+              disabled={!expanded}
               method="edit"
               input="textarea"
               type="metadata"
