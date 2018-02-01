@@ -58,7 +58,7 @@ export const Tags = ({
     ) : null}
     {proceeded || expanded ? (
       <Fragment>
-        <Margin bottom={4}>
+        <Margin bottom={3}>
           <H3>
             {tags.length} Tag{tags.length === 1 ? '' : 's'}
           </H3>
