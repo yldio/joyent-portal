@@ -1297,7 +1297,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -1451,6 +1451,8 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c3 {
@@ -1529,6 +1531,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -1572,6 +1575,22 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c33:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c33:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c33:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c33:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c33:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
 }
 
 .c33:focus {
@@ -3377,7 +3396,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -3531,6 +3550,8 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c3 {
@@ -3609,6 +3630,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -3652,6 +3674,22 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c33:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c33:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c33:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c33:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c33:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
 }
 
 .c33:focus {

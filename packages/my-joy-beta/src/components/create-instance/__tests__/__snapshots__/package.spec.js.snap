@@ -63,6 +63,9 @@ exports[`renders <Filters /> without throwing 1`] = `
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -267,7 +270,7 @@ exports[`renders <Filters /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -384,6 +387,7 @@ exports[`renders <Filters /> without throwing 1`] = `
   </h4>
   <div
     className="c2"
+    wrap={true}
   >
     <div
       className="baseline-jVaZNU kXgQxt c3"
@@ -722,6 +726,10 @@ exports[`renders <Filters /> without throwing 1`] = `
 exports[`renders <Overview /> without throwing 1`] = `
 Array [
   .c0 {
+  margin-bottom: 0.75rem;
+}
+
+.c1 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -730,24 +738,15 @@ Array [
   font-weight: 600;
 }
 
-.c0 + p,
-.c0 + small,
-.c0 + h1,
-.c0 + h2,
-.c0 + label,
-.c0 + h3,
-.c0 + h4,
-.c0 + h5,
-.c0 + div,
-.c0 + span {
-  margin-top: 1.5rem;
-}
-
-<h3
+<div
     className="c0"
 >
-    test
-</h3>,
+    <h3
+        className="c1"
+    >
+        test
+    </h3>
+</div>,
   .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -817,6 +816,10 @@ Array [
 exports[`renders <Overview hasVms/> without throwing 1`] = `
 Array [
   .c0 {
+  margin-bottom: 0.75rem;
+}
+
+.c1 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -825,24 +828,15 @@ Array [
   font-weight: 600;
 }
 
-.c0 + p,
-.c0 + small,
-.c0 + h1,
-.c0 + h2,
-.c0 + label,
-.c0 + h3,
-.c0 + h4,
-.c0 + h5,
-.c0 + div,
-.c0 + span {
-  margin-top: 1.5rem;
-}
-
-<h3
+<div
     className="c0"
 >
-    test
-</h3>,
+    <h3
+        className="c1"
+    >
+        test
+    </h3>
+</div>,
   .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1021,7 +1015,7 @@ exports[`renders <Package /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -1201,6 +1195,11 @@ exports[`renders <Package /> without throwing 1`] = `
               <label
                 className="c10"
                 htmlFor="l"
+                style={
+                  Object {
+                    "fontWeight": "normal",
+                  }
+                }
               >
                 test
               </label>
@@ -1349,10 +1348,6 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
 
 .c6 {
   width: 100%;
-}
-
-.c6 tr:first-child td {
-  border-top: none;
 }
 
 .c3 {
@@ -1680,10 +1675,6 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
   width: 100%;
 }
 
-.c6 tr:first-child td {
-  border-top: none;
-}
-
 .c3 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -2009,10 +2000,6 @@ exports[`renders <Packages loading /> without throwing 1`] = `
   width: 100%;
 }
 
-.c6 tr:first-child td {
-  border-top: none;
-}
-
 .c3 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -2254,10 +2241,6 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
 
 .c6 {
   width: 100%;
-}
-
-.c6 tr:first-child td {
-  border-top: none;
 }
 
 .c3 {
@@ -2548,10 +2531,6 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
 
 .c6 {
   width: 100%;
-}
-
-.c6 tr:first-child td {
-  border-top: none;
 }
 
 .c3 {

@@ -184,10 +184,6 @@ Array [
   width: 100%;
 }
 
-.c17 tr:first-child td {
-  border-top: none;
-}
-
 .c4 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -694,6 +690,8 @@ exports[`renders <Item /> without throwing 1`] = `
   height: 0.75rem;
   border-radius: 50%;
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c8 {
@@ -1084,6 +1082,8 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   height: 0.75rem;
   border-radius: 50%;
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c8 {
@@ -1490,10 +1490,6 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   width: 100%;
 }
 
-.c1 tr:first-child td {
-  border-top: none;
-}
-
 .c3 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -1775,10 +1771,6 @@ Array [
 
 .c17 {
   width: 100%;
-}
-
-.c17 tr:first-child td {
-  border-top: none;
 }
 
 .c4 {
@@ -2389,10 +2381,6 @@ Array [
   width: 100%;
 }
 
-.c17 tr:first-child td {
-  border-top: none;
-}
-
 .c4 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -2999,10 +2987,6 @@ Array [
 
 .c17 {
   width: 100%;
-}
-
-.c17 tr:first-child td {
-  border-top: none;
 }
 
 .c4 {
@@ -3613,10 +3597,6 @@ Array [
   width: 100%;
 }
 
-.c17 tr:first-child td {
-  border-top: none;
-}
-
 .c4 {
   border-width: 0.0625rem;
   border-style: solid;
@@ -4223,10 +4203,6 @@ Array [
 
 .c17 {
   width: 100%;
-}
-
-.c17 tr:first-child td {
-  border-top: none;
 }
 
 .c4 {

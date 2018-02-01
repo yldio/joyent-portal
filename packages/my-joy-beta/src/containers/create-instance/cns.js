@@ -8,13 +8,12 @@ import { Margin } from 'styled-components-spacing';
 import { set } from 'react-redux-values';
 import punycode from 'punycode';
 
-import { CnsIcon, H3, Button, FormLabel, TagList } from 'joyent-ui-toolkit';
+import { CnsIcon, H3, Button } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import Animated from '@containers/create-instance/animated';
 import Cns, { Footer, AddServiceForm } from '@components/cns';
 import Description from '@components/description';
-import Tag from '@components/tags';
 import GetAccount from '@graphql/get-account.gql';
 
 const CNS_FORM = 'create-instance-cns';

@@ -9,41 +9,36 @@ exports[`renders <Cns /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c12 {
+.c6 {
+  margin-bottom: 1.5rem;
+}
+
+.c13 {
   margin-top: 1.5rem;
 }
 
-.c18 {
+.c19 {
   margin-top: 0.1875rem;
 }
 
-.c20 {
+.c21 {
   margin-left: 0.75rem;
 }
 
-.c25 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.c30 {
-  margin-bottom: 1.5rem;
-}
-
-.c7 {
+.c8 {
   padding: 1.5rem;
   padding-bottom: 0rem;
 }
 
-.c9 {
+.c10 {
   padding-bottom: 0.75rem;
 }
 
-.c13 {
+.c14 {
   padding-bottom: 1.125rem;
 }
 
-.c23 {
+.c24 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -56,22 +51,22 @@ exports[`renders <Cns /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c23::-moz-focus-inner,
-.c23[type='button']::-moz-focus-inner,
-.c23[type='reset']::-moz-focus-inner,
-.c23[type='submit']::-moz-focus-inner {
+.c24::-moz-focus-inner,
+.c24[type='button']::-moz-focus-inner,
+.c24[type='reset']::-moz-focus-inner,
+.c24[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c23:-moz-focusring,
-.c23[type='button']:-moz-focusring,
-.c23[type='reset']:-moz-focusring,
-.c23[type='submit']:-moz-focusring {
+.c24:-moz-focusring,
+.c24[type='button']:-moz-focusring,
+.c24[type='reset']:-moz-focusring,
+.c24[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23 + button {
+.c24 + button {
   margin-left: 0.375rem;
 }
 
@@ -95,11 +90,11 @@ exports[`renders <Cns /> without throwing 1`] = `
   padding-bottom: 2.25rem;
 }
 
-.c22 {
+.c23 {
   display: inline-block;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -138,33 +133,33 @@ exports[`renders <Cns /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c21:focus {
+.c22:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c21:hover {
+.c22:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c21:active,
-.c21:active:hover,
-.c21:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c21[disabled] {
+.c22[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c17 {
+.c18 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -173,7 +168,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -216,7 +211,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   display: block;
 }
 
-.c8 {
+.c9 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -224,33 +219,33 @@ exports[`renders <Cns /> without throwing 1`] = `
   margin: 0;
 }
 
-.c8 + p,
-.c8 + small,
-.c8 + h1,
-.c8 + h2,
-.c8 + label,
-.c8 + h3,
-.c8 + h4,
-.c8 + h5,
-.c8 + div,
-.c8 + span {
+.c9 + p,
+.c9 + small,
+.c9 + h1,
+.c9 + h2,
+.c9 + label,
+.c9 + h3,
+.c9 + h4,
+.c9 + h5,
+.c9 + div,
+.c9 + span {
   margin-top: 1.5rem;
 }
 
-.c11 {
+.c12 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c24 {
+.c25 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.25rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -272,7 +267,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c16 {
+.c17 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -287,7 +282,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c19 {
+.c20 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -309,41 +304,41 @@ exports[`renders <Cns /> without throwing 1`] = `
   outline: 0;
 }
 
-.c19::-webkit-input-placeholder {
+.c20::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c19::-moz-placeholder {
+.c20::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c19:-ms-input-placeholder {
+.c20:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c19:invalid {
+.c20:invalid {
   box-shadow: none;
 }
 
-.c19:disabled {
+.c20:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c19:disabled::-webkit-input-placeholder {
+.c20:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c19:disabled::-moz-placeholder {
+.c20:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c19:disabled:-ms-input-placeholder {
+.c20:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c19:focus {
+.c20:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -446,7 +441,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   display: none;
 }
 
-.c15 {
+.c16 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -463,7 +458,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   display: block;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -486,7 +481,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -611,125 +606,129 @@ exports[`renders <Cns /> without throwing 1`] = `
   </div>
   <div
     className="c6"
-    disabled={false}
-    name="card"
   >
     <div
       className="c7"
+      disabled={false}
+      name="card"
     >
-      <h3
+      <div
         className="c8"
       >
-        Hostnames
-      </h3>
-      <div
-        className="c9"
-      >
-        <p
-          className="c5"
+        <h3
+          className="c9"
         >
-          Default hostnames are automatically generated from both the instance name and any attached networks.
-        </p>
-      </div>
-      <div
-        className="c10"
-      />
-      <div
-        className="c11 c2"
-        height="0.0625rem"
-      />
-      <div
-        className="c12"
-      >
+          Hostnames
+        </h3>
         <div
-          className="c12"
+          className="c10"
         >
-          <h3
-            className="c8"
+          <p
+            className="c5"
           >
-            CNS service hostnames
-          </h3>
+            Default hostnames are automatically generated from both the instance name and any attached networks.
+          </p>
+        </div>
+        <div
+          className="c11"
+        />
+        <div
+          className="c12 c2"
+          height="0.0625rem"
+        />
+        <div
+          className="c13"
+        >
           <div
             className="c13"
           >
-            <p
-              className="c5"
+            <h3
+              className="c9"
             >
-              CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
-            </p>
+              CNS service hostnames
+            </h3>
+            <div
+              className="c14"
+            >
+              <p
+                className="c5"
+              >
+                CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+              </p>
+            </div>
           </div>
-        </div>
-        <form
-          onSubmit={undefined}
-        >
-          <div
-            className="c14"
+          <form
+            onSubmit={undefined}
           >
             <div
               className="c15"
             >
               <div
-                className="baseline-jVaZNU kXgQxt c16"
-                name="name"
-                role="group"
-                style={undefined}
+                className="c16"
               >
-                <label
-                  className="c17"
-                  htmlFor="k"
-                >
-                  Attach to new CNS service name
-                </label>
                 <div
-                  className="c18"
+                  className="baseline-jVaZNU kXgQxt c17"
+                  name="name"
+                  role="group"
+                  style={undefined}
                 >
-                  <input
+                  <label
+                    className="c18"
+                    htmlFor="k"
+                  >
+                    Attach to new CNS service name
+                  </label>
+                  <div
                     className="c19"
-                    disabled={false}
-                    id="k"
-                    onBlur={null}
-                    placeholder="Example: mySQLdb"
+                  >
+                    <input
+                      className="c20"
+                      disabled={false}
+                      id="k"
+                      onBlur={null}
+                      placeholder="Example: mySQLdb"
+                      required={true}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                className="c16"
+              >
+                <div
+                  className="c21"
+                >
+                  <button
+                    className="c22 c23 c24"
+                    href=""
+                    type="submit"
+                  >
+                    Add
+                  </button>
+                  <div
+                    className="c25 c2"
+                    height="0.25rem"
                   />
                 </div>
               </div>
             </div>
-            <div
-              className="c15"
-            >
-              <div
-                className="c20"
-              >
-                <button
-                  className="c21 c22 c23"
-                  disabled={undefined}
-                  href=""
-                  type="submit"
-                >
-                  Add
-                </button>
-                <div
-                  className="c24 c2"
-                  height="0.25rem"
-                />
-              </div>
-            </div>
-          </div>
-        </form>
-        <div
-          className="c12"
-        >
+          </form>
           <div
-            className="c10"
-          />
+            className="c13"
+          >
+            <div
+              className="c11"
+            />
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="c25"
+    className="c6"
   >
     <div
-      className="baseline-jVaZNU kXgQxt c16"
+      className="baseline-jVaZNU kXgQxt c17"
       name="cns-enabled"
       role="group"
       style={undefined}
@@ -738,7 +737,7 @@ exports[`renders <Cns /> without throwing 1`] = `
         className="c26"
       >
         <label
-          className="c17"
+          className="c18"
           disabled={false}
           htmlFor="l"
         >
@@ -767,7 +766,7 @@ exports[`renders <Cns /> without throwing 1`] = `
           />
           <label
             checked={true}
-            className="c17"
+            className="c18"
             disabled={false}
             htmlFor="l"
             id="l"
@@ -782,7 +781,7 @@ exports[`renders <Cns /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c30"
+    className="c6"
   >
     <p
       className="c5"
@@ -803,7 +802,6 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
 }
 
 .c6 {
-  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -836,7 +834,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -1159,6 +1157,10 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
+.c6 {
+  margin-bottom: 1.5rem;
+}
+
 .c21 {
   margin-top: 1.5rem;
 }
@@ -1171,15 +1173,6 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   margin-left: 0.75rem;
 }
 
-.c33 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.c11 {
-  margin-bottom: 1.5rem;
-}
-
 .c16 {
   margin-right: 0.375rem;
 }
@@ -1189,12 +1182,12 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   margin-bottom: 0.375rem;
 }
 
-.c7 {
+.c8 {
   padding: 1.5rem;
   padding-bottom: 0rem;
 }
 
-.c9 {
+.c10 {
   padding-bottom: 0.75rem;
 }
 
@@ -1349,7 +1342,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -1392,7 +1385,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   display: block;
 }
 
-.c8 {
+.c9 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -1400,16 +1393,16 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   margin: 0;
 }
 
-.c8 + p,
-.c8 + small,
-.c8 + h1,
-.c8 + h2,
-.c8 + label,
-.c8 + h3,
-.c8 + h4,
-.c8 + h5,
-.c8 + div,
-.c8 + span {
+.c9 + p,
+.c9 + small,
+.c9 + h1,
+.c9 + h2,
+.c9 + label,
+.c9 + h3,
+.c9 + h4,
+.c9 + h5,
+.c9 + div,
+.c9 + span {
   margin-top: 1.5rem;
 }
 
@@ -1426,7 +1419,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   height: 0.25rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1616,7 +1609,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   outline: 0;
 }
 
-.c35 {
+.c34 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -1629,27 +1622,27 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   align-items: center;
 }
 
-.c36 {
+.c35 {
   display: none;
 }
 
-.c36:checked + label {
+.c35:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c36:checked + label:after {
+.c35:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c36:checked + label:active {
+.c35:checked + label:active {
   box-shadow: none;
 }
 
-.c37 {
+.c36 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -1669,24 +1662,24 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   margin-right: 0.375rem;
 }
 
-.c37::selection {
+.c36::selection {
   background: none;
 }
 
-.c37:active {
+.c36:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c37:hover {
+.c36:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c37:hover:after {
+.c36:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c37:after,
-.c37:before {
+.c36:after,
+.c36:before {
   position: relative;
   display: block;
   content: '';
@@ -1694,7 +1687,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   height: 100%;
 }
 
-.c37:after {
+.c36:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -1706,11 +1699,11 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c37:active {
+.c36:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c37:before {
+.c36:before {
   display: none;
 }
 
@@ -1731,7 +1724,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   display: block;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1778,7 +1771,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c34 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1905,405 +1898,409 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   </div>
   <div
     className="c6"
-    disabled={false}
-    name="card"
   >
     <div
       className="c7"
+      disabled={false}
+      name="card"
     >
-      <h3
+      <div
         className="c8"
       >
-        Hostnames
-      </h3>
-      <div
-        className="c9"
-      >
-        <p
-          className="c5"
+        <h3
+          className="c9"
         >
-          Default hostnames are automatically generated from both the instance name and any attached networks.
-        </p>
-      </div>
-      <div
-        className="c10"
-      >
+          Hostnames
+        </h3>
         <div
-          className="c11"
+          className="c10"
         >
-          <div
-            className="c12"
+          <p
+            className="c5"
           >
-            <small
-              className="c13 c14"
-            >
-              Instance name
-               
-              hostname
-              
-            </small>
-            <div
-              className="c15"
-            >
-              <div
-                className="c16"
-              >
-                <svg
-                  className=""
-                  height="16"
-                  innerRef={undefined}
-                  style={
-                    Object {
-                      "transform": "rotate(0deg)",
-                    }
-                  }
-                  viewBox="0 0 12 16"
-                  width="12"
-                >
-                  <path
-                    d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
-                    fill="rgba(73, 73, 73, 1)"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              className="c15"
-            >
-              <small
-                className="c17"
-              >
-                Public
-              </small>
-            </div>
-          </div>
-          <div
-            className="c18"
-          >
-            <input
-              className="c19"
-              disabled={true}
-              id=""
-              onBlur={null}
-              value="stuffy-stuff"
-            />
-          </div>
+            Default hostnames are automatically generated from both the instance name and any attached networks.
+          </p>
         </div>
         <div
           className="c11"
         >
           <div
-            className="c12"
+            className="c6"
           >
-            <small
-              className="c13 c14"
-            >
-              Instance name
-               
-              hostname
-              
-            </small>
             <div
-              className="c15"
+              className="c12"
             >
-              <div
-                className="c16"
+              <small
+                className="c13 c14"
               >
-                <svg
-                  className=""
-                  height="16"
-                  innerRef={undefined}
-                  style={
-                    Object {
-                      "transform": "rotate(0deg)",
-                    }
-                  }
-                  viewBox="0 0 12 16"
-                  width="12"
-                  xmlns="http://www.w3.org/2000/svg"
+                Instance name
+                 
+                hostname
+                
+              </small>
+              <div
+                className="c15"
+              >
+                <div
+                  className="c16"
                 >
-                  <path
-                    d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
-                    fill="rgba(73, 73, 73, 1)"
-                  />
-                </svg>
+                  <svg
+                    className=""
+                    height="16"
+                    innerRef={undefined}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    viewBox="0 0 12 16"
+                    width="12"
+                  >
+                    <path
+                      d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
+                      fill="rgba(73, 73, 73, 1)"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                className="c15"
+              >
+                <small
+                  className="c17"
+                >
+                  Public
+                </small>
               </div>
             </div>
             <div
-              className="c15"
+              className="c18"
             >
-              <small
-                className="c17"
-              >
-                Private
-              </small>
+              <input
+                className="c19"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="stuffy-stuff"
+              />
             </div>
           </div>
           <div
-            className="c18"
+            className="c6"
           >
-            <input
-              className="c19"
-              disabled={true}
-              id=""
-              onBlur={null}
-              value="stuffy-stuff"
-            />
+            <div
+              className="c12"
+            >
+              <small
+                className="c13 c14"
+              >
+                Instance name
+                 
+                hostname
+                
+              </small>
+              <div
+                className="c15"
+              >
+                <div
+                  className="c16"
+                >
+                  <svg
+                    className=""
+                    height="16"
+                    innerRef={undefined}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    viewBox="0 0 12 16"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                      fill="rgba(73, 73, 73, 1)"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                className="c15"
+              >
+                <small
+                  className="c17"
+                >
+                  Private
+                </small>
+              </div>
+            </div>
+            <div
+              className="c18"
+            >
+              <input
+                className="c19"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="stuffy-stuff"
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="c20 c2"
-        height="0.0625rem"
-      />
-      <div
-        className="c21"
-      >
+        <div
+          className="c20 c2"
+          height="0.0625rem"
+        />
         <div
           className="c21"
         >
-          <h3
-            className="c8"
-          >
-            CNS service hostnames
-          </h3>
           <div
-            className="c22"
+            className="c21"
           >
-            <p
-              className="c5"
+            <h3
+              className="c9"
             >
-              CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
-            </p>
+              CNS service hostnames
+            </h3>
+            <div
+              className="c22"
+            >
+              <p
+                className="c5"
+              >
+                CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+              </p>
+            </div>
           </div>
-        </div>
-        <form
-          onSubmit={undefined}
-        >
-          <div
-            className="c23"
+          <form
+            onSubmit={undefined}
           >
             <div
-              className="c15"
+              className="c23"
             >
               <div
-                className="baseline-jVaZNU kXgQxt c24"
-                name="name"
-                role="group"
-                style={undefined}
+                className="c15"
               >
-                <label
-                  className="c25"
-                  htmlFor="u"
+                <div
+                  className="baseline-jVaZNU kXgQxt c24"
+                  name="name"
+                  role="group"
+                  style={undefined}
                 >
-                  Attach to new CNS service name
-                </label>
+                  <label
+                    className="c25"
+                    htmlFor="u"
+                  >
+                    Attach to new CNS service name
+                  </label>
+                  <div
+                    className="c18"
+                  >
+                    <input
+                      className="c26"
+                      disabled={false}
+                      id="u"
+                      onBlur={null}
+                      placeholder="Example: mySQLdb"
+                      required={true}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                className="c15"
+              >
+                <div
+                  className="c27"
+                >
+                  <button
+                    className="c28 c29 c30"
+                    href=""
+                    type="submit"
+                  >
+                    Add
+                  </button>
+                  <div
+                    className="c31 c2"
+                    height="0.25rem"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+          <div
+            className="c21"
+          >
+            <div
+              className="c11"
+            >
+              <div
+                className="c6"
+              >
+                <div
+                  className="c12"
+                >
+                  <small
+                    className="c13 c14"
+                  >
+                    CNS service
+                     
+                    hostname
+                    s
+                  </small>
+                  <div
+                    className="c15"
+                  >
+                    <div
+                      className="c16"
+                    >
+                      <svg
+                        className=""
+                        height="16"
+                        innerRef={undefined}
+                        style={
+                          Object {
+                            "transform": "rotate(0deg)",
+                          }
+                        }
+                        viewBox="0 0 12 16"
+                        width="12"
+                      >
+                        <path
+                          d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
+                          fill="rgba(73, 73, 73, 1)"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    className="c15"
+                  >
+                    <small
+                      className="c17"
+                    >
+                      Public
+                    </small>
+                  </div>
+                </div>
+                <div
+                  className="c32"
+                >
+                  <input
+                    className="c19"
+                    disabled={true}
+                    id=""
+                    onBlur={null}
+                    value="serbice"
+                  />
+                </div>
+                <div
+                  className="c32"
+                >
+                  <input
+                    className="c19"
+                    disabled={true}
+                    id=""
+                    onBlur={null}
+                    value="dssasda"
+                  />
+                </div>
                 <div
                   className="c18"
                 >
                   <input
-                    className="c26"
-                    disabled={false}
-                    id="u"
+                    className="c19"
+                    disabled={true}
+                    id=""
                     onBlur={null}
-                    placeholder="Example: mySQLdb"
+                    value="dsasd"
                   />
                 </div>
               </div>
-            </div>
-            <div
-              className="c15"
-            >
               <div
-                className="c27"
+                className="c6"
               >
-                <button
-                  className="c28 c29 c30"
-                  disabled={undefined}
-                  href=""
-                  type="submit"
-                >
-                  Add
-                </button>
                 <div
-                  className="c31 c2"
-                  height="0.25rem"
-                />
-              </div>
-            </div>
-          </div>
-        </form>
-        <div
-          className="c21"
-        >
-          <div
-            className="c10"
-          >
-            <div
-              className="c11"
-            >
-              <div
-                className="c12"
-              >
-                <small
-                  className="c13 c14"
+                  className="c12"
                 >
-                  CNS service
-                   
-                  hostname
-                  s
-                </small>
-                <div
-                  className="c15"
-                >
-                  <div
-                    className="c16"
+                  <small
+                    className="c13 c14"
                   >
-                    <svg
-                      className=""
-                      height="16"
-                      innerRef={undefined}
-                      style={
-                        Object {
-                          "transform": "rotate(0deg)",
-                        }
-                      }
-                      viewBox="0 0 12 16"
-                      width="12"
+                    CNS service
+                     
+                    hostname
+                    s
+                  </small>
+                  <div
+                    className="c15"
+                  >
+                    <div
+                      className="c16"
                     >
-                      <path
-                        d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
-                        fill="rgba(73, 73, 73, 1)"
-                      />
-                    </svg>
+                      <svg
+                        className=""
+                        height="16"
+                        innerRef={undefined}
+                        style={
+                          Object {
+                            "transform": "rotate(0deg)",
+                          }
+                        }
+                        viewBox="0 0 12 16"
+                        width="12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                          fill="rgba(73, 73, 73, 1)"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    className="c15"
+                  >
+                    <small
+                      className="c17"
+                    >
+                      Private
+                    </small>
                   </div>
                 </div>
                 <div
-                  className="c15"
+                  className="c32"
                 >
-                  <small
-                    className="c17"
-                  >
-                    Public
-                  </small>
-                </div>
-              </div>
-              <div
-                className="c32"
-              >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id=""
-                  onBlur={null}
-                  value="serbice"
-                />
-              </div>
-              <div
-                className="c32"
-              >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id=""
-                  onBlur={null}
-                  value="dssasda"
-                />
-              </div>
-              <div
-                className="c18"
-              >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id=""
-                  onBlur={null}
-                  value="dsasd"
-                />
-              </div>
-            </div>
-            <div
-              className="c11"
-            >
-              <div
-                className="c12"
-              >
-                <small
-                  className="c13 c14"
-                >
-                  CNS service
-                   
-                  hostname
-                  s
-                </small>
-                <div
-                  className="c15"
-                >
-                  <div
-                    className="c16"
-                  >
-                    <svg
-                      className=""
-                      height="16"
-                      innerRef={undefined}
-                      style={
-                        Object {
-                          "transform": "rotate(0deg)",
-                        }
-                      }
-                      viewBox="0 0 12 16"
-                      width="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
-                        fill="rgba(73, 73, 73, 1)"
-                      />
-                    </svg>
-                  </div>
+                  <input
+                    className="c19"
+                    disabled={true}
+                    id=""
+                    onBlur={null}
+                    value="serbice"
+                  />
                 </div>
                 <div
-                  className="c15"
+                  className="c32"
                 >
-                  <small
-                    className="c17"
-                  >
-                    Private
-                  </small>
+                  <input
+                    className="c19"
+                    disabled={true}
+                    id=""
+                    onBlur={null}
+                    value="dssasda"
+                  />
                 </div>
-              </div>
-              <div
-                className="c32"
-              >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id=""
-                  onBlur={null}
-                  value="serbice"
-                />
-              </div>
-              <div
-                className="c32"
-              >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id=""
-                  onBlur={null}
-                  value="dssasda"
-                />
-              </div>
-              <div
-                className="c18"
-              >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id=""
-                  onBlur={null}
-                  value="dsasd"
-                />
+                <div
+                  className="c18"
+                >
+                  <input
+                    className="c19"
+                    disabled={true}
+                    id=""
+                    onBlur={null}
+                    value="dsasd"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -2312,7 +2309,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c33"
+    className="c6"
   >
     <div
       className="baseline-jVaZNU kXgQxt c24"
@@ -2321,7 +2318,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
       style={undefined}
     >
       <div
-        className="c34"
+        className="c33"
       >
         <label
           className="c25"
@@ -2331,11 +2328,11 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
           Disabled CNS
         </label>
         <div
-          className="c35"
+          className="c34"
         >
           <input
             checked={true}
-            className="c36"
+            className="c35"
             disabled={false}
             id="v"
             onBlur={undefined}
@@ -2344,7 +2341,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
           />
           <label
             checked={true}
-            className="c37"
+            className="c36"
             disabled={false}
             htmlFor="v"
             id="v"
@@ -2368,7 +2365,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c11"
+    className="c6"
   >
     <p
       className="c5"
@@ -2650,6 +2647,10 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
+.c6 {
+  margin-bottom: 1.5rem;
+}
+
 .c18 {
   margin-top: 1.5rem;
 }
@@ -2660,10 +2661,6 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
 
 .c26 {
   margin-left: 0.75rem;
-}
-
-.c6 {
-  margin-bottom: 1.5rem;
 }
 
 .c13 {
@@ -2831,7 +2828,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -3205,117 +3202,121 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c12"
-    disabled={false}
-    name="card"
+    className="c6"
   >
     <div
-      className="c13"
+      className="c12"
+      disabled={false}
+      name="card"
     >
-      <h3
-        className="c14"
-      >
-        Hostnames
-      </h3>
       <div
-        className="c15"
+        className="c13"
       >
-        <p
-          className="c5"
+        <h3
+          className="c14"
         >
-          Default hostnames are automatically generated from both the instance name and any attached networks.
-        </p>
-      </div>
-      <div
-        className="c16"
-      />
-      <div
-        className="c17 c2"
-        height="0.0625rem"
-      />
-      <div
-        className="c18"
-      >
+          Hostnames
+        </h3>
+        <div
+          className="c15"
+        >
+          <p
+            className="c5"
+          >
+            Default hostnames are automatically generated from both the instance name and any attached networks.
+          </p>
+        </div>
+        <div
+          className="c16"
+        />
+        <div
+          className="c17 c2"
+          height="0.0625rem"
+        />
         <div
           className="c18"
         >
-          <h3
-            className="c14"
-          >
-            CNS service hostnames
-          </h3>
           <div
-            className="c19"
+            className="c18"
           >
-            <p
-              className="c5"
+            <h3
+              className="c14"
             >
-              CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
-            </p>
+              CNS service hostnames
+            </h3>
+            <div
+              className="c19"
+            >
+              <p
+                className="c5"
+              >
+                CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+              </p>
+            </div>
           </div>
-        </div>
-        <form
-          onSubmit={undefined}
-        >
-          <div
-            className="c20"
+          <form
+            onSubmit={undefined}
           >
             <div
-              className="c21"
+              className="c20"
             >
               <div
-                className="baseline-jVaZNU kXgQxt c22"
-                name="name"
-                role="group"
-                style={undefined}
+                className="c21"
               >
-                <label
-                  className="c23"
-                  htmlFor="m"
-                >
-                  Attach to new CNS service name
-                </label>
                 <div
-                  className="c24"
+                  className="baseline-jVaZNU kXgQxt c22"
+                  name="name"
+                  role="group"
+                  style={undefined}
                 >
-                  <input
-                    className="c25"
-                    disabled={false}
-                    id="m"
-                    onBlur={null}
-                    placeholder="Example: mySQLdb"
+                  <label
+                    className="c23"
+                    htmlFor="m"
+                  >
+                    Attach to new CNS service name
+                  </label>
+                  <div
+                    className="c24"
+                  >
+                    <input
+                      className="c25"
+                      disabled={false}
+                      id="m"
+                      onBlur={null}
+                      placeholder="Example: mySQLdb"
+                      required={true}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                className="c21"
+              >
+                <div
+                  className="c26"
+                >
+                  <button
+                    className="c27 c28 c29"
+                    href=""
+                    type="submit"
+                  >
+                    Add
+                  </button>
+                  <div
+                    className="c30 c2"
+                    height="0.25rem"
                   />
                 </div>
               </div>
             </div>
-            <div
-              className="c21"
-            >
-              <div
-                className="c26"
-              >
-                <button
-                  className="c27 c28 c29"
-                  disabled={undefined}
-                  href=""
-                  type="submit"
-                >
-                  Add
-                </button>
-                <div
-                  className="c30 c2"
-                  height="0.25rem"
-                />
-              </div>
-            </div>
-          </div>
-        </form>
-        <div
-          className="c18"
-        >
+          </form>
           <div
-            className="c16"
-          />
+            className="c18"
+          >
+            <div
+              className="c16"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -3332,6 +3333,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
+.c6 {
+  margin-bottom: 1.5rem;
+}
+
 .c21 {
   margin-top: 1.5rem;
 }
@@ -3342,15 +3347,6 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
 
 .c32 {
   margin-left: 0.75rem;
-}
-
-.c38 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.c11 {
-  margin-bottom: 1.5rem;
 }
 
 .c16 {
@@ -3371,12 +3367,12 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   margin-bottom: 0.375rem;
 }
 
-.c7 {
+.c8 {
   padding: 1.5rem;
   padding-bottom: 0rem;
 }
 
-.c9 {
+.c10 {
   padding-bottom: 0.75rem;
 }
 
@@ -3494,11 +3490,6 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
 }
 
 .c33:focus {
@@ -3527,23 +3518,6 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   pointer-events: none;
 }
 
-.c33:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c33:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
 .c23 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -3553,12 +3527,12 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c40 {
+.c39 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -3567,7 +3541,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   color: rgb(216,216,216);
@@ -3611,7 +3585,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   display: block;
 }
 
-.c8 {
+.c9 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -3619,16 +3593,16 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   margin: 0;
 }
 
-.c8 + p,
-.c8 + small,
-.c8 + h1,
-.c8 + h2,
-.c8 + label,
-.c8 + h3,
-.c8 + h4,
-.c8 + h5,
-.c8 + div,
-.c8 + span {
+.c9 + p,
+.c9 + small,
+.c9 + h1,
+.c9 + h2,
+.c9 + label,
+.c9 + h3,
+.c9 + h4,
+.c9 + h5,
+.c9 + div,
+.c9 + span {
   margin-top: 1.5rem;
 }
 
@@ -3660,7 +3634,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   flex-grow: 1;
 }
 
-.c6 {
+.c7 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3865,7 +3839,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   outline: 0;
 }
 
-.c41 {
+.c40 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -3878,27 +3852,27 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   align-items: center;
 }
 
-.c42 {
+.c41 {
   display: none;
 }
 
-.c42:checked + label {
+.c41:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c42:checked + label:after {
+.c41:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c42:checked + label:active {
+.c41:checked + label:active {
   box-shadow: none;
 }
 
-.c43 {
+.c42 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -3919,24 +3893,24 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c43::selection {
+.c42::selection {
   background: none;
 }
 
-.c43:active {
+.c42:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c43:hover {
+.c42:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c43:hover:after {
+.c42:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c43:after,
-.c43:before {
+.c42:after,
+.c42:before {
   position: relative;
   display: block;
   content: '';
@@ -3944,7 +3918,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   height: 100%;
 }
 
-.c43:after {
+.c42:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -3956,36 +3930,36 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c43:active {
+.c42:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c43:before {
+.c42:before {
   display: none;
 }
 
-.c43:active {
+.c42:active {
   box-shadow: none;
 }
 
-.c43:active:after {
+.c42:active:after {
   padding-right: 0;
 }
 
-.c43:before {
+.c42:before {
   cursor: not-allowed;
 }
 
-.c43:after {
+.c42:after {
   cursor: not-allowed;
   background: rgb(230,230,230);
 }
 
-.c43:hover {
+.c42:hover {
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c43:hover:after {
+.c42:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
@@ -4042,7 +4016,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4089,7 +4063,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c39 {
+.c38 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4216,465 +4190,469 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   </div>
   <div
     className="c6"
-    disabled={false}
-    name="card"
   >
     <div
       className="c7"
+      disabled={false}
+      name="card"
     >
-      <h3
+      <div
         className="c8"
       >
-        Hostnames
-      </h3>
-      <div
-        className="c9"
-      >
-        <p
-          className="c5"
+        <h3
+          className="c9"
         >
-          Default hostnames are automatically generated from both the instance name and any attached networks.
-        </p>
-      </div>
-      <div
-        className="c10"
-      >
+          Hostnames
+        </h3>
         <div
-          className="c11"
+          className="c10"
         >
-          <div
-            className="c12"
+          <p
+            className="c5"
           >
-            <small
-              className="c13 c14"
-            >
-              Instance name
-               
-              hostname
-              
-            </small>
-            <div
-              className="c15"
-            >
-              <div
-                className="c16"
-              >
-                <svg
-                  className=""
-                  height="16"
-                  innerRef={undefined}
-                  style={
-                    Object {
-                      "transform": "rotate(0deg)",
-                    }
-                  }
-                  viewBox="0 0 12 16"
-                  width="12"
-                >
-                  <path
-                    d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
-                    fill="rgba(73, 73, 73, 1)"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div
-              className="c15"
-            >
-              <small
-                className="c17"
-              >
-                Public
-              </small>
-            </div>
-          </div>
-          <div
-            className="c18"
-          >
-            <input
-              className="c19"
-              disabled={true}
-              id=""
-              onBlur={null}
-              value="stuffy-stuff"
-            />
-          </div>
+            Default hostnames are automatically generated from both the instance name and any attached networks.
+          </p>
         </div>
         <div
           className="c11"
         >
           <div
-            className="c12"
+            className="c6"
           >
-            <small
-              className="c13 c14"
-            >
-              Instance name
-               
-              hostname
-              
-            </small>
             <div
-              className="c15"
+              className="c12"
             >
-              <div
-                className="c16"
+              <small
+                className="c13 c14"
               >
-                <svg
-                  className=""
-                  height="16"
-                  innerRef={undefined}
-                  style={
-                    Object {
-                      "transform": "rotate(0deg)",
-                    }
-                  }
-                  viewBox="0 0 12 16"
-                  width="12"
-                  xmlns="http://www.w3.org/2000/svg"
+                Instance name
+                 
+                hostname
+                
+              </small>
+              <div
+                className="c15"
+              >
+                <div
+                  className="c16"
                 >
-                  <path
-                    d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
-                    fill="rgba(73, 73, 73, 1)"
-                  />
-                </svg>
+                  <svg
+                    className=""
+                    height="16"
+                    innerRef={undefined}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    viewBox="0 0 12 16"
+                    width="12"
+                  >
+                    <path
+                      d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
+                      fill="rgba(73, 73, 73, 1)"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                className="c15"
+              >
+                <small
+                  className="c17"
+                >
+                  Public
+                </small>
               </div>
             </div>
             <div
-              className="c15"
+              className="c18"
             >
-              <small
-                className="c17"
-              >
-                Private
-              </small>
+              <input
+                className="c19"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="stuffy-stuff"
+              />
             </div>
           </div>
           <div
-            className="c18"
+            className="c6"
           >
-            <input
-              className="c19"
-              disabled={true}
-              id=""
-              onBlur={null}
-              value="stuffy-stuff"
-            />
+            <div
+              className="c12"
+            >
+              <small
+                className="c13 c14"
+              >
+                Instance name
+                 
+                hostname
+                
+              </small>
+              <div
+                className="c15"
+              >
+                <div
+                  className="c16"
+                >
+                  <svg
+                    className=""
+                    height="16"
+                    innerRef={undefined}
+                    style={
+                      Object {
+                        "transform": "rotate(0deg)",
+                      }
+                    }
+                    viewBox="0 0 12 16"
+                    width="12"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                      fill="rgba(73, 73, 73, 1)"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                className="c15"
+              >
+                <small
+                  className="c17"
+                >
+                  Private
+                </small>
+              </div>
+            </div>
+            <div
+              className="c18"
+            >
+              <input
+                className="c19"
+                disabled={true}
+                id=""
+                onBlur={null}
+                value="stuffy-stuff"
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className="c20 c2"
-        height="0.0625rem"
-      />
-      <div
-        className="c21"
-      >
+        <div
+          className="c20 c2"
+          height="0.0625rem"
+        />
         <div
           className="c21"
         >
-          <h3
-            className="c8"
-          >
-            CNS service hostnames
-          </h3>
           <div
-            className="c22"
+            className="c21"
           >
-            <p
-              className="c5"
+            <h3
+              className="c9"
             >
-              CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
-            </p>
-          </div>
-        </div>
-        <div
-          className="c4"
-        >
-          <label
-            className="c23"
-            htmlFor=""
-          >
-            Existing CNS service name(s)
-          </label>
-          <div
-            className="c24"
-          >
-            <ul
-              className="c25"
+              CNS service hostnames
+            </h3>
+            <div
+              className="c22"
             >
-              <div
-                className="c26"
+              <p
+                className="c5"
               >
-                <div
-                  className="c27"
-                >
-                  <li
-                    className="c28"
-                    onClick={undefined}
-                  >
-                    serbice
-                  </li>
-                </div>
-              </div>
-              <div
-                className="c26"
-              >
-                <div
-                  className="c27"
-                >
-                  <li
-                    className="c28"
-                    onClick={undefined}
-                  >
-                    dssasda
-                  </li>
-                </div>
-              </div>
-              <div
-                className="c26"
-              >
-                <div
-                  className="c27"
-                >
-                  <li
-                    className="c28"
-                    onClick={undefined}
-                  >
-                    dsasd
-                  </li>
-                </div>
-              </div>
-            </ul>
+                CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+              </p>
+            </div>
           </div>
-        </div>
-        <form
-          onSubmit={undefined}
-        >
           <div
-            className="c29"
+            className="c4"
+          >
+            <label
+              className="c23"
+              htmlFor=""
+            >
+              Existing CNS service name(s)
+            </label>
+            <div
+              className="c24"
+            >
+              <ul
+                className="c25"
+              >
+                <div
+                  className="c26"
+                >
+                  <div
+                    className="c27"
+                  >
+                    <li
+                      className="c28"
+                      onClick={undefined}
+                    >
+                      serbice
+                    </li>
+                  </div>
+                </div>
+                <div
+                  className="c26"
+                >
+                  <div
+                    className="c27"
+                  >
+                    <li
+                      className="c28"
+                      onClick={undefined}
+                    >
+                      dssasda
+                    </li>
+                  </div>
+                </div>
+                <div
+                  className="c26"
+                >
+                  <div
+                    className="c27"
+                  >
+                    <li
+                      className="c28"
+                      onClick={undefined}
+                    >
+                      dsasd
+                    </li>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <form
+            onSubmit={undefined}
           >
             <div
-              className="c15"
+              className="c29"
             >
               <div
-                className="baseline-jVaZNU kXgQxt c30"
-                name="name"
-                role="group"
-                style={undefined}
+                className="c15"
               >
-                <label
-                  className="c23"
-                  htmlFor="p"
+                <div
+                  className="baseline-jVaZNU kXgQxt c30"
+                  name="name"
+                  role="group"
+                  style={undefined}
                 >
-                  Attach to new CNS service name
-                </label>
+                  <label
+                    className="c23"
+                    htmlFor="p"
+                  >
+                    Attach to new CNS service name
+                  </label>
+                  <div
+                    className="c18"
+                  >
+                    <input
+                      className="c31"
+                      disabled={true}
+                      id="p"
+                      onBlur={null}
+                      placeholder="Example: mySQLdb"
+                      required={true}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                className="c15"
+              >
+                <div
+                  className="c32"
+                >
+                  <button
+                    className="c33 c34 c35"
+                    href=""
+                    type="submit"
+                  >
+                    Add
+                  </button>
+                  <div
+                    className="c36 c2"
+                    height="0.25rem"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+          <div
+            className="c21"
+          >
+            <div
+              className="c11"
+            >
+              <div
+                className="c6"
+              >
+                <div
+                  className="c12"
+                >
+                  <small
+                    className="c13 c14"
+                  >
+                    CNS service
+                     
+                    hostname
+                    s
+                  </small>
+                  <div
+                    className="c15"
+                  >
+                    <div
+                      className="c16"
+                    >
+                      <svg
+                        className=""
+                        height="16"
+                        innerRef={undefined}
+                        style={
+                          Object {
+                            "transform": "rotate(0deg)",
+                          }
+                        }
+                        viewBox="0 0 12 16"
+                        width="12"
+                      >
+                        <path
+                          d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
+                          fill="rgba(73, 73, 73, 1)"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    className="c15"
+                  >
+                    <small
+                      className="c17"
+                    >
+                      Public
+                    </small>
+                  </div>
+                </div>
+                <div
+                  className="c37"
+                >
+                  <input
+                    className="c19"
+                    disabled={true}
+                    id=""
+                    onBlur={null}
+                    value="serbice"
+                  />
+                </div>
+                <div
+                  className="c37"
+                >
+                  <input
+                    className="c19"
+                    disabled={true}
+                    id=""
+                    onBlur={null}
+                    value="dssasda"
+                  />
+                </div>
                 <div
                   className="c18"
                 >
                   <input
-                    className="c31"
+                    className="c19"
                     disabled={true}
-                    id="p"
+                    id=""
                     onBlur={null}
-                    placeholder="Example: mySQLdb"
+                    value="dsasd"
                   />
                 </div>
               </div>
-            </div>
-            <div
-              className="c15"
-            >
               <div
-                className="c32"
+                className="c6"
               >
-                <button
-                  className="c33 c34 c35"
-                  disabled={true}
-                  href=""
-                  type="submit"
-                >
-                  Add
-                </button>
                 <div
-                  className="c36 c2"
-                  height="0.25rem"
-                />
-              </div>
-            </div>
-          </div>
-        </form>
-        <div
-          className="c21"
-        >
-          <div
-            className="c10"
-          >
-            <div
-              className="c11"
-            >
-              <div
-                className="c12"
-              >
-                <small
-                  className="c13 c14"
+                  className="c12"
                 >
-                  CNS service
-                   
-                  hostname
-                  s
-                </small>
-                <div
-                  className="c15"
-                >
-                  <div
-                    className="c16"
+                  <small
+                    className="c13 c14"
                   >
-                    <svg
-                      className=""
-                      height="16"
-                      innerRef={undefined}
-                      style={
-                        Object {
-                          "transform": "rotate(0deg)",
-                        }
-                      }
-                      viewBox="0 0 12 16"
-                      width="12"
+                    CNS service
+                     
+                    hostname
+                    s
+                  </small>
+                  <div
+                    className="c15"
+                  >
+                    <div
+                      className="c16"
                     >
-                      <path
-                        d="M6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Zm4-7V4A4,4,0,0,0,2,4H4c0-1.65.35-2,2-2s2,.35,2,2V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6Zm0,7a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1Z"
-                        fill="rgba(73, 73, 73, 1)"
-                      />
-                    </svg>
+                      <svg
+                        className=""
+                        height="16"
+                        innerRef={undefined}
+                        style={
+                          Object {
+                            "transform": "rotate(0deg)",
+                          }
+                        }
+                        viewBox="0 0 12 16"
+                        width="12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+                          fill="rgba(73, 73, 73, 1)"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    className="c15"
+                  >
+                    <small
+                      className="c17"
+                    >
+                      Private
+                    </small>
                   </div>
                 </div>
                 <div
-                  className="c15"
+                  className="c37"
                 >
-                  <small
-                    className="c17"
-                  >
-                    Public
-                  </small>
-                </div>
-              </div>
-              <div
-                className="c37"
-              >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id=""
-                  onBlur={null}
-                  value="serbice"
-                />
-              </div>
-              <div
-                className="c37"
-              >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id=""
-                  onBlur={null}
-                  value="dssasda"
-                />
-              </div>
-              <div
-                className="c18"
-              >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id=""
-                  onBlur={null}
-                  value="dsasd"
-                />
-              </div>
-            </div>
-            <div
-              className="c11"
-            >
-              <div
-                className="c12"
-              >
-                <small
-                  className="c13 c14"
-                >
-                  CNS service
-                   
-                  hostname
-                  s
-                </small>
-                <div
-                  className="c15"
-                >
-                  <div
-                    className="c16"
-                  >
-                    <svg
-                      className=""
-                      height="16"
-                      innerRef={undefined}
-                      style={
-                        Object {
-                          "transform": "rotate(0deg)",
-                        }
-                      }
-                      viewBox="0 0 12 16"
-                      width="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
-                        fill="rgba(73, 73, 73, 1)"
-                      />
-                    </svg>
-                  </div>
+                  <input
+                    className="c19"
+                    disabled={true}
+                    id=""
+                    onBlur={null}
+                    value="serbice"
+                  />
                 </div>
                 <div
-                  className="c15"
+                  className="c37"
                 >
-                  <small
-                    className="c17"
-                  >
-                    Private
-                  </small>
+                  <input
+                    className="c19"
+                    disabled={true}
+                    id=""
+                    onBlur={null}
+                    value="dssasda"
+                  />
                 </div>
-              </div>
-              <div
-                className="c37"
-              >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id=""
-                  onBlur={null}
-                  value="serbice"
-                />
-              </div>
-              <div
-                className="c37"
-              >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id=""
-                  onBlur={null}
-                  value="dssasda"
-                />
-              </div>
-              <div
-                className="c18"
-              >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id=""
-                  onBlur={null}
-                  value="dsasd"
-                />
+                <div
+                  className="c18"
+                >
+                  <input
+                    className="c19"
+                    disabled={true}
+                    id=""
+                    onBlur={null}
+                    value="dsasd"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -4683,7 +4661,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c38"
+    className="c6"
   >
     <div
       className="baseline-jVaZNU kXgQxt c30"
@@ -4692,21 +4670,21 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
       style={undefined}
     >
       <div
-        className="c39"
+        className="c38"
       >
         <label
-          className="c40"
+          className="c39"
           disabled={true}
           htmlFor="q"
         >
           Disabled CNS
         </label>
         <div
-          className="c41"
+          className="c40"
         >
           <input
             checked={true}
-            className="c42"
+            className="c41"
             disabled={true}
             id="q"
             onBlur={undefined}
@@ -4715,7 +4693,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
           />
           <label
             checked={true}
-            className="c43"
+            className="c42"
             disabled={true}
             htmlFor="q"
             id="q"
@@ -4724,7 +4702,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
           />
           <label
             checked={true}
-            className="c40"
+            className="c39"
             disabled={true}
             htmlFor="q"
             id="q"
@@ -4739,7 +4717,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c11"
+    className="c6"
   >
     <p
       className="c5"
@@ -4759,6 +4737,10 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
+.c6 {
+  margin-bottom: 1.5rem;
+}
+
 .c18 {
   margin-top: 1.5rem;
 }
@@ -4769,15 +4751,6 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
 
 .c26 {
   margin-left: 0.75rem;
-}
-
-.c31 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.c6 {
-  margin-bottom: 1.5rem;
 }
 
 .c13 {
@@ -4945,7 +4918,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -5128,7 +5101,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   outline: 0;
 }
 
-.c33 {
+.c32 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -5141,27 +5114,27 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c34 {
+.c33 {
   display: none;
 }
 
-.c34:checked + label {
+.c33:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c34:checked + label:after {
+.c33:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c34:checked + label:active {
+.c33:checked + label:active {
   box-shadow: none;
 }
 
-.c35 {
+.c34 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -5181,24 +5154,24 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   margin-right: 0.375rem;
 }
 
-.c35::selection {
+.c34::selection {
   background: none;
 }
 
-.c35:active {
+.c34:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c35:hover {
+.c34:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c35:hover:after {
+.c34:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c35:after,
-.c35:before {
+.c34:after,
+.c34:before {
   position: relative;
   display: block;
   content: '';
@@ -5206,7 +5179,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   height: 100%;
 }
 
-.c35:after {
+.c34:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -5218,11 +5191,11 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c35:active {
+.c34:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c35:before {
+.c34:before {
   display: none;
 }
 
@@ -5316,7 +5289,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c32 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5441,123 +5414,127 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c12"
-    disabled={false}
-    name="card"
+    className="c6"
   >
     <div
-      className="c13"
+      className="c12"
+      disabled={false}
+      name="card"
     >
-      <h3
-        className="c14"
-      >
-        Hostnames
-      </h3>
       <div
-        className="c15"
+        className="c13"
       >
-        <p
-          className="c5"
+        <h3
+          className="c14"
         >
-          Default hostnames are automatically generated from both the instance name and any attached networks.
-        </p>
-      </div>
-      <div
-        className="c16"
-      />
-      <div
-        className="c17 c2"
-        height="0.0625rem"
-      />
-      <div
-        className="c18"
-      >
+          Hostnames
+        </h3>
+        <div
+          className="c15"
+        >
+          <p
+            className="c5"
+          >
+            Default hostnames are automatically generated from both the instance name and any attached networks.
+          </p>
+        </div>
+        <div
+          className="c16"
+        />
+        <div
+          className="c17 c2"
+          height="0.0625rem"
+        />
         <div
           className="c18"
         >
-          <h3
-            className="c14"
-          >
-            CNS service hostnames
-          </h3>
           <div
-            className="c19"
+            className="c18"
           >
-            <p
-              className="c5"
+            <h3
+              className="c14"
             >
-              CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
-            </p>
+              CNS service hostnames
+            </h3>
+            <div
+              className="c19"
+            >
+              <p
+                className="c5"
+              >
+                CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+              </p>
+            </div>
           </div>
-        </div>
-        <form
-          onSubmit={undefined}
-        >
-          <div
-            className="c20"
+          <form
+            onSubmit={undefined}
           >
             <div
-              className="c21"
+              className="c20"
             >
               <div
-                className="baseline-jVaZNU kXgQxt c22"
-                name="name"
-                role="group"
-                style={undefined}
+                className="c21"
               >
-                <label
-                  className="c23"
-                  htmlFor="n"
-                >
-                  Attach to new CNS service name
-                </label>
                 <div
-                  className="c24"
+                  className="baseline-jVaZNU kXgQxt c22"
+                  name="name"
+                  role="group"
+                  style={undefined}
                 >
-                  <input
-                    className="c25"
-                    disabled={false}
-                    id="n"
-                    onBlur={null}
-                    placeholder="Example: mySQLdb"
+                  <label
+                    className="c23"
+                    htmlFor="n"
+                  >
+                    Attach to new CNS service name
+                  </label>
+                  <div
+                    className="c24"
+                  >
+                    <input
+                      className="c25"
+                      disabled={false}
+                      id="n"
+                      onBlur={null}
+                      placeholder="Example: mySQLdb"
+                      required={true}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                className="c21"
+              >
+                <div
+                  className="c26"
+                >
+                  <button
+                    className="c27 c28 c29"
+                    href=""
+                    type="submit"
+                  >
+                    Add
+                  </button>
+                  <div
+                    className="c30 c2"
+                    height="0.25rem"
                   />
                 </div>
               </div>
             </div>
-            <div
-              className="c21"
-            >
-              <div
-                className="c26"
-              >
-                <button
-                  className="c27 c28 c29"
-                  disabled={undefined}
-                  href=""
-                  type="submit"
-                >
-                  Add
-                </button>
-                <div
-                  className="c30 c2"
-                  height="0.25rem"
-                />
-              </div>
-            </div>
-          </div>
-        </form>
-        <div
-          className="c18"
-        >
+          </form>
           <div
-            className="c16"
-          />
+            className="c18"
+          >
+            <div
+              className="c16"
+            />
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="c31"
+    className="c6"
   >
     <div
       className="baseline-jVaZNU kXgQxt c22"
@@ -5566,7 +5543,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
       style={undefined}
     >
       <div
-        className="c32"
+        className="c31"
       >
         <label
           className="c23"
@@ -5576,11 +5553,11 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
           Disabled CNS
         </label>
         <div
-          className="c33"
+          className="c32"
         >
           <input
             checked={true}
-            className="c34"
+            className="c33"
             disabled={false}
             id="o"
             onBlur={undefined}
@@ -5589,7 +5566,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
           />
           <label
             checked={true}
-            className="c35"
+            className="c34"
             disabled={false}
             htmlFor="o"
             id="o"
@@ -5633,50 +5610,45 @@ exports[`renders <Cns services /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c12 {
+.c6 {
+  margin-bottom: 1.5rem;
+}
+
+.c13 {
   margin-top: 1.5rem;
 }
 
-.c24 {
+.c25 {
   margin-top: 0.1875rem;
 }
 
-.c26 {
+.c27 {
   margin-left: 0.75rem;
 }
 
-.c31 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.c36 {
-  margin-bottom: 1.5rem;
-}
-
-.c15 {
+.c16 {
   margin-top: 0.375rem;
 }
 
-.c17 {
+.c18 {
   margin-right: 0.375rem;
   margin-bottom: 0.375rem;
 }
 
-.c7 {
+.c8 {
   padding: 1.5rem;
   padding-bottom: 0rem;
 }
 
-.c9 {
+.c10 {
   padding-bottom: 0.75rem;
 }
 
-.c13 {
+.c14 {
   padding-bottom: 1.125rem;
 }
 
-.c29 {
+.c30 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -5689,26 +5661,26 @@ exports[`renders <Cns services /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c29::-moz-focus-inner,
-.c29[type='button']::-moz-focus-inner,
-.c29[type='reset']::-moz-focus-inner,
-.c29[type='submit']::-moz-focus-inner {
+.c30::-moz-focus-inner,
+.c30[type='button']::-moz-focus-inner,
+.c30[type='reset']::-moz-focus-inner,
+.c30[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c29:-moz-focusring,
-.c29[type='button']:-moz-focusring,
-.c29[type='reset']:-moz-focusring,
-.c29[type='submit']:-moz-focusring {
+.c30:-moz-focusring,
+.c30[type='button']:-moz-focusring,
+.c30[type='reset']:-moz-focusring,
+.c30[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c29 + button {
+.c30 + button {
   margin-left: 0.375rem;
 }
 
-.c20 {
+.c21 {
   margin-left: 0.75rem;
   cursor: pointer;
 }
@@ -5733,11 +5705,11 @@ exports[`renders <Cns services /> without throwing 1`] = `
   padding-bottom: 2.25rem;
 }
 
-.c28 {
+.c29 {
   display: inline-block;
 }
 
-.c27 {
+.c28 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5776,33 +5748,33 @@ exports[`renders <Cns services /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c27:focus {
+.c28:focus {
   outline: 0;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c14 {
+.c15 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -5811,7 +5783,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -5854,7 +5826,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   display: block;
 }
 
-.c8 {
+.c9 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -5862,33 +5834,33 @@ exports[`renders <Cns services /> without throwing 1`] = `
   margin: 0;
 }
 
-.c8 + p,
-.c8 + small,
-.c8 + h1,
-.c8 + h2,
-.c8 + label,
-.c8 + h3,
-.c8 + h4,
-.c8 + h5,
-.c8 + div,
-.c8 + span {
+.c9 + p,
+.c9 + small,
+.c9 + h1,
+.c9 + h2,
+.c9 + label,
+.c9 + h3,
+.c9 + h4,
+.c9 + h5,
+.c9 + div,
+.c9 + span {
   margin-top: 1.5rem;
 }
 
-.c11 {
+.c12 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c30 {
+.c31 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.25rem;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5903,7 +5875,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   flex-grow: 1;
 }
 
-.c6 {
+.c7 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5925,7 +5897,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c23 {
+.c24 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -5940,7 +5912,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -5962,41 +5934,41 @@ exports[`renders <Cns services /> without throwing 1`] = `
   outline: 0;
 }
 
-.c25::-webkit-input-placeholder {
+.c26::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25::-moz-placeholder {
+.c26::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:-ms-input-placeholder {
+.c26:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:invalid {
+.c26:invalid {
   box-shadow: none;
 }
 
-.c25:disabled {
+.c26:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c25:disabled::-webkit-input-placeholder {
+.c26:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:disabled::-moz-placeholder {
+.c26:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:disabled:-ms-input-placeholder {
+.c26:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:focus {
+.c26:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
@@ -6099,7 +6071,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   display: none;
 }
 
-.c22 {
+.c23 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -6116,7 +6088,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   display: block;
 }
 
-.c19 {
+.c20 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.1875rem;
@@ -6139,7 +6111,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   background: rgba(59,70,204,.1);
 }
 
-.c16 {
+.c17 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -6152,7 +6124,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c10 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6175,7 +6147,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6300,242 +6272,246 @@ exports[`renders <Cns services /> without throwing 1`] = `
   </div>
   <div
     className="c6"
-    disabled={false}
-    name="card"
   >
     <div
       className="c7"
+      disabled={false}
+      name="card"
     >
-      <h3
+      <div
         className="c8"
       >
-        Hostnames
-      </h3>
-      <div
-        className="c9"
-      >
-        <p
-          className="c5"
+        <h3
+          className="c9"
         >
-          Default hostnames are automatically generated from both the instance name and any attached networks.
-        </p>
-      </div>
-      <div
-        className="c10"
-      />
-      <div
-        className="c11 c2"
-        height="0.0625rem"
-      />
-      <div
-        className="c12"
-      >
+          Hostnames
+        </h3>
         <div
-          className="c12"
+          className="c10"
         >
-          <h3
-            className="c8"
+          <p
+            className="c5"
           >
-            CNS service hostnames
-          </h3>
+            Default hostnames are automatically generated from both the instance name and any attached networks.
+          </p>
+        </div>
+        <div
+          className="c11"
+        />
+        <div
+          className="c12 c2"
+          height="0.0625rem"
+        />
+        <div
+          className="c13"
+        >
           <div
             className="c13"
           >
-            <p
-              className="c5"
+            <h3
+              className="c9"
             >
-              CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
-            </p>
+              CNS service hostnames
+            </h3>
+            <div
+              className="c14"
+            >
+              <p
+                className="c5"
+              >
+                CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+              </p>
+            </div>
           </div>
-        </div>
-        <div
-          className="c4"
-        >
-          <label
-            className="c14"
-            htmlFor=""
-          >
-            Existing CNS service name(s)
-          </label>
           <div
-            className="c15"
+            className="c4"
           >
-            <ul
+            <label
+              className="c15"
+              htmlFor=""
+            >
+              Existing CNS service name(s)
+            </label>
+            <div
               className="c16"
             >
-              <div
+              <ul
                 className="c17"
               >
                 <div
                   className="c18"
                 >
-                  <li
+                  <div
                     className="c19"
-                    onClick={undefined}
                   >
-                    serbice
-                    <svg
+                    <li
                       className="c20"
-                      height="11.31"
-                      innerRef={undefined}
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "transform": "rotate(0deg)",
-                        }
-                      }
-                      viewBox="0 0 11.31 11.31"
-                      width="11.31"
-                      xmlns="http://www.w3.org/2000/svg"
+                      onClick={undefined}
                     >
-                      <path
-                        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
-                        fill="rgb(45, 56, 132)"
-                      />
-                    </svg>
-                  </li>
+                      serbice
+                      <svg
+                        className="c21"
+                        height="11.31"
+                        innerRef={undefined}
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "transform": "rotate(0deg)",
+                          }
+                        }
+                        viewBox="0 0 11.31 11.31"
+                        width="11.31"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
+                          fill="rgb(45, 56, 132)"
+                        />
+                      </svg>
+                    </li>
+                  </div>
                 </div>
-              </div>
-              <div
-                className="c17"
-              >
                 <div
                   className="c18"
                 >
-                  <li
+                  <div
                     className="c19"
-                    onClick={undefined}
                   >
-                    dssasda
-                    <svg
+                    <li
                       className="c20"
-                      height="11.31"
-                      innerRef={undefined}
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "transform": "rotate(0deg)",
-                        }
-                      }
-                      viewBox="0 0 11.31 11.31"
-                      width="11.31"
-                      xmlns="http://www.w3.org/2000/svg"
+                      onClick={undefined}
                     >
-                      <path
-                        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
-                        fill="rgb(45, 56, 132)"
-                      />
-                    </svg>
-                  </li>
+                      dssasda
+                      <svg
+                        className="c21"
+                        height="11.31"
+                        innerRef={undefined}
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "transform": "rotate(0deg)",
+                          }
+                        }
+                        viewBox="0 0 11.31 11.31"
+                        width="11.31"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
+                          fill="rgb(45, 56, 132)"
+                        />
+                      </svg>
+                    </li>
+                  </div>
                 </div>
-              </div>
-              <div
-                className="c17"
-              >
                 <div
                   className="c18"
                 >
-                  <li
+                  <div
                     className="c19"
-                    onClick={undefined}
                   >
-                    dsasd
-                    <svg
+                    <li
                       className="c20"
-                      height="11.31"
-                      innerRef={undefined}
-                      onClick={[Function]}
-                      style={
-                        Object {
-                          "transform": "rotate(0deg)",
-                        }
-                      }
-                      viewBox="0 0 11.31 11.31"
-                      width="11.31"
-                      xmlns="http://www.w3.org/2000/svg"
+                      onClick={undefined}
                     >
-                      <path
-                        d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
-                        fill="rgb(45, 56, 132)"
-                      />
-                    </svg>
-                  </li>
+                      dsasd
+                      <svg
+                        className="c21"
+                        height="11.31"
+                        innerRef={undefined}
+                        onClick={[Function]}
+                        style={
+                          Object {
+                            "transform": "rotate(0deg)",
+                          }
+                        }
+                        viewBox="0 0 11.31 11.31"
+                        width="11.31"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.31,1.41,9.9,0,5.66,4.24,1.41,0,0,1.41,4.24,5.66,0,9.9l1.41,1.41L5.66,7.07,9.9,11.31,11.31,9.9,7.07,5.66Z"
+                          fill="rgb(45, 56, 132)"
+                        />
+                      </svg>
+                    </li>
+                  </div>
                 </div>
-              </div>
-            </ul>
+              </ul>
+            </div>
           </div>
-        </div>
-        <form
-          onSubmit={undefined}
-        >
-          <div
-            className="c21"
+          <form
+            onSubmit={undefined}
           >
             <div
               className="c22"
             >
               <div
-                className="baseline-jVaZNU kXgQxt c23"
-                name="name"
-                role="group"
-                style={undefined}
+                className="c23"
               >
-                <label
-                  className="c14"
-                  htmlFor="s"
-                >
-                  Attach to new CNS service name
-                </label>
                 <div
-                  className="c24"
+                  className="baseline-jVaZNU kXgQxt c24"
+                  name="name"
+                  role="group"
+                  style={undefined}
                 >
-                  <input
+                  <label
+                    className="c15"
+                    htmlFor="s"
+                  >
+                    Attach to new CNS service name
+                  </label>
+                  <div
                     className="c25"
-                    disabled={false}
-                    id="s"
-                    onBlur={null}
-                    placeholder="Example: mySQLdb"
+                  >
+                    <input
+                      className="c26"
+                      disabled={false}
+                      id="s"
+                      onBlur={null}
+                      placeholder="Example: mySQLdb"
+                      required={true}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                className="c23"
+              >
+                <div
+                  className="c27"
+                >
+                  <button
+                    className="c28 c29 c30"
+                    href=""
+                    type="submit"
+                  >
+                    Add
+                  </button>
+                  <div
+                    className="c31 c2"
+                    height="0.25rem"
                   />
                 </div>
               </div>
             </div>
-            <div
-              className="c22"
-            >
-              <div
-                className="c26"
-              >
-                <button
-                  className="c27 c28 c29"
-                  disabled={undefined}
-                  href=""
-                  type="submit"
-                >
-                  Add
-                </button>
-                <div
-                  className="c30 c2"
-                  height="0.25rem"
-                />
-              </div>
-            </div>
-          </div>
-        </form>
-        <div
-          className="c12"
-        >
+          </form>
           <div
-            className="c10"
-          />
+            className="c13"
+          >
+            <div
+              className="c11"
+            />
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    className="c31"
+    className="c6"
   >
     <div
-      className="baseline-jVaZNU kXgQxt c23"
+      className="baseline-jVaZNU kXgQxt c24"
       name="cns-enabled"
       role="group"
       style={undefined}
@@ -6544,7 +6520,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
         className="c32"
       >
         <label
-          className="c14"
+          className="c15"
           disabled={false}
           htmlFor="t"
         >
@@ -6573,7 +6549,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
           />
           <label
             checked={true}
-            className="c14"
+            className="c15"
             disabled={false}
             htmlFor="t"
             id="t"
@@ -6588,7 +6564,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c36"
+    className="c6"
   >
     <p
       className="c5"
@@ -6609,7 +6585,6 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
 }
 
 .c6 {
-  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -6642,7 +6617,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }

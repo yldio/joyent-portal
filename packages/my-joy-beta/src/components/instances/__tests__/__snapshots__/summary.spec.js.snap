@@ -737,7 +737,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -774,6 +774,8 @@ exports[`renders <Summary /> without throwing 1`] = `
   height: 0.9375rem;
   border-radius: 50%;
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c2 {
@@ -852,6 +854,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
@@ -898,6 +901,22 @@ exports[`renders <Summary /> without throwing 1`] = `
   color: rgba(73,73,73,0.5);
 }
 
+.c30:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c30:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c30:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c30:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
 .c30:focus {
   border-color: rgb(59,70,204);
   outline: 0;
@@ -913,6 +932,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -956,6 +976,22 @@ exports[`renders <Summary /> without throwing 1`] = `
 
 .c32:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c32:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
 }
 
 .c32:focus {
@@ -2662,7 +2698,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -2700,6 +2736,8 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c2 {
@@ -2778,6 +2816,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -2821,6 +2860,22 @@ exports[`renders <Summary instance /> without throwing 1`] = `
 
 .c32:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c32:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
 }
 
 .c32:focus {
@@ -4704,7 +4759,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -4742,6 +4797,8 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c2 {
@@ -4820,6 +4877,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -4863,6 +4921,22 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 
 .c32:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c32:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
 }
 
 .c32:focus {
@@ -6635,7 +6709,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -6672,6 +6746,8 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   height: 0.9375rem;
   border-radius: 50%;
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c2 {
@@ -6750,6 +6826,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
@@ -6796,6 +6873,22 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   color: rgba(73,73,73,0.5);
 }
 
+.c34:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c34:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c34:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c34:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
 .c34:focus {
   border-color: rgb(59,70,204);
   outline: 0;
@@ -6811,6 +6904,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -6854,6 +6948,22 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c36:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c36:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c36:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c36:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c36:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
 }
 
 .c36:focus {
@@ -8612,7 +8722,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -8650,6 +8760,8 @@ exports[`renders <Summary state /> without throwing 1`] = `
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c2 {
@@ -8728,6 +8840,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
@@ -8774,6 +8887,22 @@ exports[`renders <Summary state /> without throwing 1`] = `
   color: rgba(73,73,73,0.5);
 }
 
+.c32:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
 .c32:focus {
   border-color: rgb(59,70,204);
   outline: 0;
@@ -8789,6 +8918,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -8832,6 +8962,22 @@ exports[`renders <Summary state /> without throwing 1`] = `
 
 .c34:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c34:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c34:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c34:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c34:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
 }
 
 .c34:focus {
@@ -10538,7 +10684,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -10576,6 +10722,8 @@ exports[`renders <Summary state /> without throwing 2`] = `
   border-radius: 50%;
   background-color: rgb(216,216,216);
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c2 {
@@ -10654,6 +10802,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
@@ -10700,6 +10849,22 @@ exports[`renders <Summary state /> without throwing 2`] = `
   color: rgba(73,73,73,0.5);
 }
 
+.c32:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
 .c32:focus {
   border-color: rgb(59,70,204);
   outline: 0;
@@ -10715,6 +10880,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -10758,6 +10924,22 @@ exports[`renders <Summary state /> without throwing 2`] = `
 
 .c34:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c34:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c34:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c34:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c34:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
 }
 
 .c34:focus {
@@ -12300,7 +12482,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   color: rgb(70,70,70);
   text-align: left;
   margin-right: 0.75rem;
-  font-weight: bold;
+  font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
@@ -12338,6 +12520,8 @@ exports[`renders <Summary state /> without throwing 3`] = `
   border-radius: 50%;
   background-color: rgb(59,70,204);
   display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
 }
 
 .c2 {
@@ -12416,6 +12600,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
@@ -12462,6 +12647,22 @@ exports[`renders <Summary state /> without throwing 3`] = `
   color: rgba(73,73,73,0.5);
 }
 
+.c30:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c30:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c30:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c30:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
 .c30:focus {
   border-color: rgb(59,70,204);
   outline: 0;
@@ -12477,6 +12678,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-family: "Roboto Mono",monospace;
   width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -12520,6 +12722,22 @@ exports[`renders <Summary state /> without throwing 3`] = `
 
 .c32:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c32:disabled {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled::-moz-placeholder {
+  color: rgba(73,73,73,1);
+}
+
+.c32:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,1);
 }
 
 .c32:focus {
