@@ -58,7 +58,7 @@ export const Tags = ({
     ) : null}
     {proceeded || expanded ? (
       <Fragment>
-        <Margin bottom={3}>
+        <Margin bottom={4}>
           <H3>
             {tags.length} Tag{tags.length === 1 ? '' : 's'}
           </H3>
@@ -73,7 +73,6 @@ export const Tags = ({
             />
           ))}
         </TagList>
-        <Divider height={remcalc(12)} transparent />
       </Fragment>
     ) : null}
     <ReduxForm

@@ -38,56 +38,50 @@ const Box = styled.div`
 `;
 
 export const Collapsed = ({ name, fabric, ...network }) => (
-  <Row>
-    <Col xs={12} sm={8}>
-      <Margin inline right={3} top={3}>
-        <Box>
-          <Flex column>
-            <FlexItem>
-              <Margin left={3} right={3} top={2} bottom={2}>
-                <P>{name}</P>
-              </Margin>
-            </FlexItem>
-            <FlexItem>
-              <Divider height={remcalc(1)} />
-            </FlexItem>
-            <FlexItem>
-              <Margin left={3} right={3} top={2} bottom={2}>
-                <Flex>
-                  <Margin right={4}>
+  <Margin inline right={3} top={3}>
+    <Box>
+      <Flex column>
+        <FlexItem>
+          <Margin left={3} right={3} top={2} bottom={2}>
+            <P>{name}</P>
+          </Margin>
+        </FlexItem>
+        <FlexItem>
+          <Divider height={remcalc(1)} />
+        </FlexItem>
+        <FlexItem>
+          <Margin left={3} right={3} top={2} bottom={2}>
+            <Flex>
+              <Margin right={4}>
+                <FlexItem>
+                  <Flex alignCenter>
                     <FlexItem>
-                      <Flex alignCenter>
-                        <FlexItem>
-                          <Margin right={1}>
-                            {network.public ? <PublicIcon /> : <PrivateIcon />}
-                          </Margin>
-                        </FlexItem>
-                        <FlexItem>
-                          <P>{network.public ? 'Public' : 'Private'}</P>
-                        </FlexItem>
-                      </Flex>
+                      <Margin right={1}>{network.public ? <PublicIcon /> : <PrivateIcon />}</Margin>
                     </FlexItem>
-                  </Margin>
-                  <Margin>
                     <FlexItem>
-                      <Flex alignCenter>
-                        <FlexItem>
-                          <Margin right={1}>{fabric ? <FabricIcon /> : <DataCenterIcon />}</Margin>
-                        </FlexItem>
-                        <FlexItem>
-                          <P>{fabric ? 'Fabric network' : 'Data center network'}</P>
-                        </FlexItem>
-                      </Flex>
+                      <P>{network.public ? 'Public' : 'Private'}</P>
                     </FlexItem>
-                  </Margin>
-                </Flex>
+                  </Flex>
+                </FlexItem>
               </Margin>
-            </FlexItem>
-          </Flex>
-        </Box>
-      </Margin>
-    </Col>
-  </Row>
+              <Margin>
+                <FlexItem>
+                  <Flex alignCenter>
+                    <FlexItem>
+                      <Margin right={1}>{fabric ? <FabricIcon /> : <DataCenterIcon />}</Margin>
+                    </FlexItem>
+                    <FlexItem>
+                      <P>{fabric ? 'Fabric network' : 'Data center network'}</P>
+                    </FlexItem>
+                  </Flex>
+                </FlexItem>
+              </Margin>
+            </Flex>
+          </Margin>
+        </FlexItem>
+      </Flex>
+    </Box>
+  </Margin>
 );
 
 export const Expanded = ({
@@ -173,9 +167,7 @@ export const Expanded = ({
                               <FlexItem>
                                 <Margin bottom={3}>
                                   <Flex alignCenter>
-                                    <Margin right={1}>
-                                      <DotIcon size={remcalc(12)} color="green" />
-                                    </Margin>
+                                    <DotIcon right={remcalc(6)} size={remcalc(12)} color="green" />
                                     <Small bold noMargin>
                                       Outbound internet access enabled
                                     </Small>

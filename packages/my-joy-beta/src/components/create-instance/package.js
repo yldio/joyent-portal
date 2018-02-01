@@ -138,10 +138,10 @@ export const Package = ({
       </FormGroup>
     </TableTd>
     <TableTd right selected={selected}>
-      {bytes(memory, { decimalPlaces: 0 })}
+      {bytes(memory, { decimalPlaces: 0, unitSeparator: ' ' })}
     </TableTd>
     <TableTd right selected={selected}>
-      {bytes(disk, { decimalPlaces: 0 })}
+      {bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })}
       {ssd && (
         <Margin inline left={1}>
           <Sup badge>SSD</Sup>
@@ -179,8 +179,7 @@ export const Packages = ({
             left
             middle
             xs="200"
-            actionable
-          >
+            actionable>
             <span>Name </span>
           </TableTh>
           <TableTh
@@ -190,8 +189,7 @@ export const Packages = ({
             showSort={sortBy === 'memory'}
             right
             middle
-            actionable
-          >
+            actionable>
             <span>RAM </span>
           </TableTh>
           <TableTh
@@ -201,8 +199,7 @@ export const Packages = ({
             showSort={sortBy === 'disk'}
             right
             middle
-            actionable
-          >
+            actionable>
             <span>Disk </span>
           </TableTh>
           {hasVms && (
@@ -213,8 +210,7 @@ export const Packages = ({
               showSort={sortBy === 'vcpu'}
               right
               middle
-              actionable
-            >
+              actionable>
               <span>vCPU</span>
             </TableTh>
           )}
@@ -225,8 +221,7 @@ export const Packages = ({
             showSort={sortBy === 'price'}
             right
             middle
-            actionable
-          >
+            actionable>
             <span>$/hour</span>
           </TableTh>
         </TableTr>
@@ -234,29 +229,18 @@ export const Packages = ({
       <TableTbody>{children}</TableTbody>
     </Table>
     {!packages ? (
-      <Empty>
-        Sorry, but we weren’t able to find any packages with that filter
-      </Empty>
+      <Empty>Sorry, but we weren’t able to find any packages with that filter</Empty>
     ) : null}
   </form>
 );
 
-export const Overview = ({
-  name,
-  price,
-  memory,
-  vcpus,
-  hasVms,
-  ssd,
-  disk,
-  onCancel
-}) => (
+export const Overview = ({ name, price, memory, vcpus, hasVms, ssd, disk, onCancel }) => (
   <Fragment>
-    <H3 bold>{name}</H3>
+    <Margin bottom={2}><H3 bold noMargin>{name}</H3></Margin>
     <Flex alignCenter>
       <span>{price} $</span>
       <VerticalDivider />
-      <span>{bytes(memory, { decimalPlaces: 0 })}</span>
+      <span>{bytes(memory, { decimalPlaces: 0, unitSeparator: ' ' })}</span>
       {hasVms && (
         <Fragment>
           <VerticalDivider />
@@ -264,7 +248,7 @@ export const Overview = ({
         </Fragment>
       )}
       <VerticalDivider />
-      <span>{bytes(disk, { decimalPlaces: 0 })} disk</span>
+      <span>{bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })} disk</span>
       <VerticalDivider />
       {ssd && <span>SSD</span>}
     </Flex>

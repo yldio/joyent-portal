@@ -49,6 +49,7 @@ const PaddingMaxWidth = styled(Padding)`
 
 const Meta = styled(CardHeaderMeta)`
   height: ${remcalc(47)};
+  max-width: 98%;
 `;
 
 class ValueTextareaField extends PureComponent {
@@ -166,9 +167,9 @@ export const KeyValue = ({
                   {initialValues.name ? (
                     <Fragment>
                       {expanded ? (
-                        <span>{`${initialValues.name}${type === 'metadata' ? '-' : ':'}`}</span>
+                        <span>{`${initialValues.name}${type === 'metadata' ? '—å' : ':'}`}</span>
                       ) : (
-                        <b>{`${initialValues.name}${type === 'metadata' ? '-' : ':'}`}</b>
+                        <b>{`${initialValues.name}${type === 'metadata' ? '—å' : ':'}`}</b>
                       )}
                       <span>{initialValues.value}</span>
                     </Fragment>
@@ -215,7 +216,7 @@ export const KeyValue = ({
               />
             ) : null}
             {input !== 'textarea' && input !== 'input' ? input(submitting) : null}
-            <Margin top={2}>
+            <Margin top={1}>
               <Row between="xs" middle="xs">
                 <Col xs={method === 'add' ? 12 : 7}>
                   <Button

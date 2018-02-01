@@ -23,8 +23,7 @@ import {
   PopoverItem,
   PopoverDivider,
   DotIcon,
-  ActionsIcon,
-  Strong
+  ActionsIcon
 } from 'joyent-ui-toolkit';
 
 const stateColor = {
@@ -39,7 +38,8 @@ const stateColor = {
 const A = styled(Anchor)`
   color: ${props => props.theme.text};
   text-decoration: none;
-`
+  font-weight: ${props => props.theme.font.weight.semibold};
+`;
 
 export const Item = ({
   id = '',
@@ -60,20 +60,16 @@ export const Item = ({
       </FormGroup>
     </TableTd>
     <TableTd middle left>
-      <Strong><A to={`/instances/${name}`} component={Link}>
+      <A to={`/instances/${name}`} component={Link}>
         {name}
-      </A></Strong>
+      </A>
     </TableTd>
     <TableTd middle left>
       {mutating ? (
         <StatusLoader small />
       ) : (
         <span>
-          <DotIcon
-            size={remcalc(12)}
-            color={stateColor[state]}
-          />{' '}
-          {titleCase(state)}
+          <DotIcon size={remcalc(12)} color={stateColor[state]} /> {titleCase(state)}
         </span>
       )}
     </TableTd>
@@ -143,8 +139,7 @@ export default ({
             showSort={sortBy === 'name'}
             left
             middle
-            actionable
-          >
+            actionable>
             <span>Name </span>
           </TableTh>
           <TableTh
@@ -154,8 +149,7 @@ export default ({
             showSort={sortBy === 'state'}
             left
             middle
-            actionable
-          >
+            actionable>
             <span>Status </span>
           </TableTh>
           <TableTh
@@ -166,8 +160,7 @@ export default ({
             showSort={sortBy === 'created'}
             left
             middle
-            actionable
-          >
+            actionable>
             <span>Created </span>
           </TableTh>
           <TableTh
@@ -178,8 +171,7 @@ export default ({
             showSort={sortBy === 'id'}
             left
             middle
-            actionable
-          >
+            actionable>
             <span>Short ID </span>
           </TableTh>
           <TableTh xs="60" padding="0" />

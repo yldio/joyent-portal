@@ -137,7 +137,7 @@ export default compose(
             id
           };
         })
-        .sort((a, b) => a.name < b.name);
+        .sort((_, b) => b.selected);
 
       return {
         proceeded: get(values, 'create-instance-networks-proceeded', false),

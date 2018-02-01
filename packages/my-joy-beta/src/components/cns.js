@@ -43,7 +43,7 @@ export const Header = () => (
 
 export const Footer = ({ enabled, submitting, onToggle }) => (
   <Fragment>
-    <Margin bottom={4} top={4}>
+    <Margin bottom={4}>
       <FormGroup name="cns-enabled">
         <Flex alignCenter>
           <FormLabel disabled={submitting}>Disabled CNS</FormLabel>
@@ -85,6 +85,7 @@ export const AddServiceForm = ({ handleSubmit, submitting, disabled, pristine })
               onBlur={null}
               type="text"
               placeholder="Example: mySQLdb"
+              required
               disabled={disabled || submitting}
             />
           </Margin>
@@ -92,7 +93,7 @@ export const AddServiceForm = ({ handleSubmit, submitting, disabled, pristine })
       </FlexItem>
       <FlexItem>
         <Margin left={2}>
-          <Button type="submit" disabled={disabled || pristine} loading={submitting} inline>
+          <Button type="submit" loading={submitting} inline>
             Add
           </Button>
           <Divider height={remcalc(4)} transparent />

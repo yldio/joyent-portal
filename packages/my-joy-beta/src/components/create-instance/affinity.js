@@ -7,9 +7,14 @@ import remcalc from 'remcalc';
 
 import { H5, Select, Input, FormGroup } from 'joyent-ui-toolkit';
 
+const style = {
+  lineHeight: '48px',
+  fontSize: '18px'
+};
+
 const Values = touched => (
   <Margin right={1}>
-    <Select touched={touched} embedded width={remcalc(120)}>
+    <Select style={style} touched={touched} embedded width={remcalc(130)}>
       <option value="equalling">equalling</option>
       <option value="not-equalling">not equalling</option>
       <option value="containing">containing</option>
@@ -20,39 +25,39 @@ const Values = touched => (
 );
 
 export const Rule = rule => (
-  <Margin top={2} bottom={4}>
+  <Margin bottom={4}>
     <Flex alignCenter wrap>
-      <H5 inline noMargin>
+      <H5 style={style} inline noMargin>
         The instance
       </H5>
       <FormGroup name="rule-instance-conditional" field={Field}>
         <Select
+          style={style}
           touched={rule['rule-instance-conditional']}
           width={remcalc(66)}
-          embedded
-        >
+          embedded>
           <option value="must">must</option>
           <option value="should">should</option>
         </Select>
       </FormGroup>
-      <H5 inline noMargin>
+      <H5 style={style} inline noMargin>
         be on
       </H5>
       <FormGroup name="rule-instance-placement" field={Field}>
         <Select
+          style={style}
           touched={rule['rule-instance-placement']}
           width={remcalc(90)}
-          embedded
-        >
+          embedded>
           <option value="same">the same</option>
           <option value="different">a different</option>
         </Select>
       </FormGroup>
-      <H5 inline noMargin>
+      <H5 style={style} inline noMargin>
         node as the instance(s) identified by the
       </H5>
       <FormGroup name="rule-type" field={Field}>
-        <Select touched={rule['rule-type']} width={remcalc(120)} embedded left>
+        <Select style={style} touched={rule['rule-type']} width={remcalc(120)} embedded left>
           <option value="name">instance name</option>
           <option value="tag">tag</option>
         </Select>
@@ -61,6 +66,7 @@ export const Rule = rule => (
         <Fragment>
           <FormGroup name="rule-instance-tag-key" field={Field}>
             <Input
+              style={style}
               onBlur={null}
               small
               embedded
@@ -69,7 +75,7 @@ export const Rule = rule => (
               placeholder="key"
             />
           </FormGroup>
-          <H5 inline noMargin>
+          <H5 style={style} inline noMargin>
             and value{' '}
           </H5>
           <FormGroup name="rule-instance-tag-value-pattern" field={Field}>
@@ -77,6 +83,7 @@ export const Rule = rule => (
           </FormGroup>
           <FormGroup name="rule-instance-tag-value" field={Field}>
             <Input
+              style={style}
               onBlur={null}
               small
               embedded
@@ -95,6 +102,7 @@ export const Rule = rule => (
             <Input
               onBlur={null}
               embedded
+              style={style}
               type="text"
               required
               placeholder="Example instance name: nginx"
@@ -108,9 +116,8 @@ export const Rule = rule => (
 
 export const Header = rule => (
   <Fragment>
-    <b>{titleCase(rule['rule-instance-conditional'])}:</b> be on a{' '}
-    {rule['rule-instance-placement']} node as the instance(s) identified by the
-    instance {rule['rule-type']}
+    <b>{titleCase(rule['rule-instance-conditional'])}:</b> be on a {rule['rule-instance-placement']}{' '}
+    node as the instance(s) identified by the instance {rule['rule-type']}
     {rule['rule-type'] === 'name' ? (
       <Fragment>
         {' '}

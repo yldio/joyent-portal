@@ -112,7 +112,7 @@ const Firewall = ({
     ) : null}
     {proceeded && !expanded ? (
       <Margin bottom={4}>
-        <H3>{enabled ? 'Firewall Enabled' : 'Firewall Not Enabled'}</H3>
+        <H3>{enabled ? 'Firewall enabled' : 'Firewall not enabled'}</H3>
       </Margin>
     ) : null}
     {expanded ? (

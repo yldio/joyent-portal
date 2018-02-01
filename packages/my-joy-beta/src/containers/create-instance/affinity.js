@@ -42,7 +42,6 @@ export const Affinity = ({
   handleToggleExpanded,
   handleCancelEdit,
   handleChangeAddOpen,
-  handleNext,
   handleEdit,
   rule,
   step
@@ -136,9 +135,6 @@ export const Affinity = ({
             Create Affinity Rule
           </Button>
         ) : null}
-        <Button type="submit" onClick={handleNext}>
-          Next
-        </Button>
       </Margin>
     ) : proceeded ? (
       <Margin top={2} bottom={4}>
@@ -162,13 +158,6 @@ export default compose(
     rule: get(form, `${FORM_NAME_CREATE}.values`, {})
   })),
   connect(null, (dispatch, { affinityRules = [], history }) => ({
-    handleNext: () => {
-      dispatch(
-        set({ name: 'create-instance-affinity-proceeded', value: true })
-      );
-
-      return history.push(`/instances/~create/summary`);
-    },
     handleEdit: () => {
       return history.push(`/instances/~create/affinity`);
     },

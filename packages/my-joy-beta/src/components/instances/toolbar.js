@@ -25,7 +25,7 @@ export const Toolbar = ({
       <FormGroup name="filter" fluid field={Field}>
         <FormLabel>{searchLabel}</FormLabel>
         <Margin top={0.5}>
-          <Input placeholder={searchPlaceholder} disabled={!searchable} fluid />
+          <Input placeholder={searchPlaceholder} disabled={!searchable} />
         </Margin>
       </FormGroup>
     </Col>

@@ -11,19 +11,9 @@ import get from 'lodash.get';
 import intercept from 'apr-intercept';
 import remcalc from 'remcalc';
 
-import {
-  ViewContainer,
-  StatusLoader,
-  Divider,
-  H3,
-  TagList
-} from 'joyent-ui-toolkit';
+import { ViewContainer, StatusLoader, Divider, H3, TagList } from 'joyent-ui-toolkit';
 
-import {
-  default as Tag,
-  AddForm as TagsAddForm,
-  EditForm as TagsEditForm
-} from '@components/tags';
+import { default as Tag, AddForm as TagsAddForm, EditForm as TagsEditForm } from '@components/tags';
 
 import ToolbarForm from '@components/instances/toolbar';
 import GetTags from '@graphql/list-tags.gql';
@@ -55,8 +45,7 @@ export const Tags = ({
     <ReduxForm
       form={ADD_FORM_NAME}
       onSubmit={handleCreate}
-      onCancel={() => handleToggleAddOpen(false)}
-    >
+      onCancel={() => handleToggleAddOpen(false)}>
       {TagsAddForm}
     </ReduxForm>
   ) : null;
@@ -69,7 +58,7 @@ export const Tags = ({
     : null;
 
   const _count = !_loading ? (
-    <Margin bottom={4} top={addOpen && 4}>
+    <Margin bottom={4} top={(addOpen || editing) ? 4: 0}>
       <H3>
         {tags.length} tag{tags.length === 1 ? '' : 's'}
       </H3>
@@ -94,8 +83,7 @@ export const Tags = ({
     <ReduxForm
       form={editing.form}
       initialValues={{ name: editing.name, value: editing.value }}
-      onSubmit={handleEdit}
-    >
+      onSubmit={handleEdit}>
       {props => (
         <TagsEditForm
           {...props}
@@ -177,8 +165,7 @@ export default compose(
       const editingTagName = get(values, 'editing-tag', null);
       const removingTagName = get(values, 'removing-tag', null);
       const removingTag = editingTagName === removingTagName;
-      const editingTag =
-        editingTagName && find(filtered, ['name', editingTagName]);
+      const editingTag = editingTagName && find(filtered, ['name', editingTagName]);
 
       return {
         ...ownProps,
@@ -196,10 +183,8 @@ export default compose(
     },
     (dispatch, ownProps) => {
       return {
-        handleToggleAddOpen: value =>
-          dispatch(set({ name: `add-tags-open`, value })),
-        handleToggleEditing: value =>
-          dispatch(set({ name: `editing-tag`, value })),
+        handleToggleAddOpen: value => dispatch(set({ name: `add-tags-open`, value })),
+        handleToggleEditing: value => dispatch(set({ name: `editing-tag`, value })),
         handleEdit: async ({ name, value }, _, { form, initialValues }) => {
           const { instance, deleteTag, updateTags, refetch } = ownProps;
 
@@ -231,8 +216,7 @@ export default compose(
             });
           };
 
-          const mutation =
-            initialValues.name === name ? updateValue : replaceTag;
+          const mutation = initialValues.name === name ? updateValue : replaceTag;
 
           const [err] = await intercept(mutation());
 
@@ -243,11 +227,7 @@ export default compose(
             });
           }
 
-          dispatch([
-            set({ name: `editing-tag`, value: false }),
-            reset(form),
-            startSubmit(form)
-          ]);
+          dispatch([set({ name: `editing-tag`, value: false }), reset(form), startSubmit(form)]);
 
           // fetch tags again (even though we are polling)
           return refetch();
@@ -255,10 +235,7 @@ export default compose(
         handleRemove: async (form, { name }) => {
           const { instance, deleteTag, refetch } = ownProps;
 
-          dispatch([
-            set({ name: `removing-tag`, value: name }),
-            startSubmit(form)
-          ]);
+          dispatch([set({ name: `removing-tag`, value: name }), startSubmit(form)]);
 
           // call mutation
           const [err] = await intercept(

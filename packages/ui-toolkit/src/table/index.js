@@ -162,10 +162,6 @@ const BaseTbody = styled.tbody`
   ${is('disabled')`
     border-color: ${props => props.theme.grey};
   `};
-
-  tr:first-child td {
-    border-top: none;
-  }
 `;
 
 const BaseTh = styled.th`
