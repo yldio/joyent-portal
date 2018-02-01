@@ -40,7 +40,7 @@ const GetProducts = gql`
   }
 `;
 
-const Services = ({ expanded = false, categories = [], products }) =>
+const Services = ({ expanded = false, categories = [], products = [] }) =>
   expanded ? (
     <Overlay>
       <Container>

@@ -99,7 +99,6 @@ export default compose(
   graphql(getAccount, {
     props: ({ data }) => {
       const { account = {}, loading = false, error = null } = data;
-
       const { login } = account;
 
       return { login, loading, error };
