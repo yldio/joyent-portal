@@ -3,7 +3,13 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import { Rules, TagRules, DefaultRules, ToggleFirewallForm, ToggleInactiveForm } from '../firewall';
+import {
+  Rules,
+  TagRules,
+  DefaultRules,
+  ToggleFirewallForm,
+  ToggleInactiveForm
+} from '../firewall';
 
 import Theme from '@mocks/theme';
 

@@ -52,7 +52,12 @@ export const Metadata = ({
 
   const _add = addOpen ? (
     <ReduxForm form={ADD_FORM_NAME} onSubmit={handleCreate}>
-      {props => <MetadataAddForm {...props} onCancel={() => handleToggleAddOpen(false)} />}
+      {props => (
+        <MetadataAddForm
+          {...props}
+          onCancel={() => handleToggleAddOpen(false)}
+        />
+      )}
     </ReduxForm>
   ) : null;
 
@@ -80,7 +85,8 @@ export const Metadata = ({
           key={form}
           initialValues={initialValues}
           destroyOnUnmount={false}
-          onSubmit={handleUpdate}>
+          onSubmit={handleUpdate}
+        >
           {props => (
             <MetadataEditForm
               {...props}
@@ -102,7 +108,9 @@ export const Metadata = ({
       <Margin bottom={4}>
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
-          <MessageDescription>An error occurred while loading your metadata</MessageDescription>
+          <MessageDescription>
+            An error occurred while loading your metadata
+          </MessageDescription>
         </Message>
       </Margin>
     ) : null;
@@ -180,12 +188,22 @@ export default compose(
       }))
     }),
     (dispatch, ownProps) => {
-      const { instance, metadata, updateMetadata, deleteMetadata, refetch } = ownProps;
+      const {
+        instance,
+        metadata,
+        updateMetadata,
+        deleteMetadata,
+        refetch
+      } = ownProps;
 
       return {
         handleCancel: form =>
-          dispatch([set({ name: `${form}-expanded`, value: false }), dispatch(reset(form))]),
-        handleToggleAddOpen: value => dispatch(set({ name: `add-metadata-open`, value })),
+          dispatch([
+            set({ name: `${form}-expanded`, value: false }),
+            dispatch(reset(form))
+          ]),
+        handleToggleAddOpen: value =>
+          dispatch(set({ name: `add-metadata-open`, value })),
         handleUpdateExpanded: (form, expanded) =>
           dispatch(set({ name: `${form}-expanded`, value: expanded })),
         handleCreate: async ({ name, value }) => {
@@ -224,7 +242,10 @@ export default compose(
               deleteMetadata({
                 variables: {
                   id: instance.id,
-                  name: get(find(metadata, ['form', form]), 'initialValues.name')
+                  name: get(
+                    find(metadata, ['form', form]),
+                    'initialValues.name'
+                  )
                 }
               }),
               updateMetadata({
@@ -254,7 +275,10 @@ export default compose(
           return refetch();
         },
         handleRemove: async form => {
-          dispatch([set({ name: `${form}-removing`, value: true }), startSubmit(form)]);
+          dispatch([
+            set({ name: `${form}-removing`, value: true }),
+            startSubmit(form)
+          ]);
 
           // call mutation
           const [err] = await intercept(
@@ -273,7 +297,10 @@ export default compose(
             });
           }
 
-          dispatch([stopSubmit(form), set({ name: `${form}-removing`, value: false })]);
+          dispatch([
+            stopSubmit(form),
+            set({ name: `${form}-removing`, value: false })
+          ]);
 
           // fetch metadata again (even though we are polling)
           return refetch();

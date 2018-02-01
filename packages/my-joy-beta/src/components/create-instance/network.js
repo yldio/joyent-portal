@@ -56,7 +56,9 @@ export const Collapsed = ({ name, fabric, ...network }) => (
                 <FlexItem>
                   <Flex alignCenter>
                     <FlexItem>
-                      <Margin right={1}>{network.public ? <PublicIcon /> : <PrivateIcon />}</Margin>
+                      <Margin right={1}>
+                        {network.public ? <PublicIcon /> : <PrivateIcon />}
+                      </Margin>
                     </FlexItem>
                     <FlexItem>
                       <P>{network.public ? 'Public' : 'Private'}</P>
@@ -68,7 +70,9 @@ export const Collapsed = ({ name, fabric, ...network }) => (
                 <FlexItem>
                   <Flex alignCenter>
                     <FlexItem>
-                      <Margin right={1}>{fabric ? <FabricIcon /> : <DataCenterIcon />}</Margin>
+                      <Margin right={1}>
+                        {fabric ? <FabricIcon /> : <DataCenterIcon />}
+                      </Margin>
                     </FlexItem>
                     <FlexItem>
                       <P>{fabric ? 'Fabric network' : 'Data center network'}</P>
@@ -137,10 +141,14 @@ export const Expanded = ({
                   <FlexItem>
                     <Flex alignCenter>
                       <FlexItem>
-                        <Margin right={1}>{fabric ? <FabricIcon /> : <DataCenterIcon />}</Margin>
+                        <Margin right={1}>
+                          {fabric ? <FabricIcon /> : <DataCenterIcon />}
+                        </Margin>
                       </FlexItem>
                       <FlexItem>
-                        <P>{fabric ? 'Fabric network' : 'Data center network'}</P>
+                        <P>
+                          {fabric ? 'Fabric network' : 'Data center network'}
+                        </P>
                       </FlexItem>
                     </Flex>
                   </FlexItem>
@@ -149,7 +157,11 @@ export const Expanded = ({
               {fabric ? (
                 <Margin top={3}>
                   <Card collapsed={!infoExpanded} actionable={!infoExpanded}>
-                    <CardHeader secondary={false} transparent={false} onClick={onInfoClick}>
+                    <CardHeader
+                      secondary={false}
+                      transparent={false}
+                      onClick={onInfoClick}
+                    >
                       <CardHeaderMeta>
                         <Padding left={3} right={3}>
                           <P>Network information</P>
@@ -167,7 +179,11 @@ export const Expanded = ({
                               <FlexItem>
                                 <Margin bottom={3}>
                                   <Flex alignCenter>
-                                    <DotIcon right={remcalc(6)} size={remcalc(12)} color="green" />
+                                    <DotIcon
+                                      right={remcalc(6)}
+                                      size={remcalc(12)}
+                                      color="green"
+                                    />
                                     <Small bold noMargin>
                                       Outbound internet access enabled
                                     </Small>
@@ -179,7 +195,13 @@ export const Expanded = ({
                               <FormGroup name="id">
                                 <FormLabel>ID</FormLabel>
                                 <Margin top={0.5} bottom={2}>
-                                  <Input onBlur={null} big monospace type="text" value={id} />
+                                  <Input
+                                    onBlur={null}
+                                    big
+                                    monospace
+                                    type="text"
+                                    value={id}
+                                  />
                                 </Margin>
                               </FormGroup>
                             </FlexItem>
@@ -187,7 +209,13 @@ export const Expanded = ({
                               <FormGroup name="subnet">
                                 <FormLabel>Subnet</FormLabel>
                                 <Margin top={0.5} bottom={2}>
-                                  <Input onBlur={null} big monospace type="text" value={subnet} />
+                                  <Input
+                                    onBlur={null}
+                                    big
+                                    monospace
+                                    type="text"
+                                    value={subnet}
+                                  />
                                 </Margin>
                               </FormGroup>
                             </FlexItem>

@@ -34,21 +34,61 @@ const CreateInstance = ({ step, disabled, handleSubmit, history, match }) => (
     <Margin top={4} bottom={4}>
       <H2>Create Instances</H2>
     </Margin>
-    <Name history={history} match={match} step="name" expanded={step === 'name'} />
-    <Image history={history} match={match} step="image" expanded={step === 'image'} />
-    <Package history={history} match={match} step="package" expanded={step === 'package'} />
-    <Tags history={history} match={match} step="tags" expanded={step === 'tags'} />
-    <Metadata history={history} match={match} step="metadata" expanded={step === 'metadata'} />
+    <Name
+      history={history}
+      match={match}
+      step="name"
+      expanded={step === 'name'}
+    />
+    <Image
+      history={history}
+      match={match}
+      step="image"
+      expanded={step === 'image'}
+    />
+    <Package
+      history={history}
+      match={match}
+      step="package"
+      expanded={step === 'package'}
+    />
+    <Tags
+      history={history}
+      match={match}
+      step="tags"
+      expanded={step === 'tags'}
+    />
+    <Metadata
+      history={history}
+      match={match}
+      step="metadata"
+      expanded={step === 'metadata'}
+    />
     <UserScript
       history={history}
       match={match}
       step="user-script"
       expanded={step === 'user-script'}
     />
-    <Networks history={history} match={match} step="networks" expanded={step === 'networks'} />
-    <Firewall history={history} match={match} step="firewall" expanded={step === 'firewall'} />
+    <Networks
+      history={history}
+      match={match}
+      step="networks"
+      expanded={step === 'networks'}
+    />
+    <Firewall
+      history={history}
+      match={match}
+      step="firewall"
+      expanded={step === 'firewall'}
+    />
     <CNS history={history} match={match} step="cns" expanded={step === 'cns'} />
-    <Affinity history={history} match={match} step="affinity" expanded={step === 'affinity'} />
+    <Affinity
+      history={history}
+      match={match}
+      step="affinity"
+      expanded={step === 'affinity'}
+    />
     <Margin top={7} bottom={10}>
       <ReduxForm form={CREATE_FORM} onSubmit={handleSubmit}>
         {({ handleSubmit, submitting }) => (
@@ -76,13 +116,29 @@ export default compose(
       return { disabled, step };
     }
 
-    const name = get(form, 'create-instance-name.values.name', '<instance-name>');
+    const name = get(
+      form,
+      'create-instance-name.values.name',
+      '<instance-name>'
+    );
 
-    const firewall_enabled = get(form, 'CREATE-INSTANCE-FIREWALL.values.enabled', false);
+    const firewall_enabled = get(
+      form,
+      'CREATE-INSTANCE-FIREWALL.values.enabled',
+      false
+    );
 
-    const image = get(form, 'create-instance-image.values.image', '<instance-image>');
+    const image = get(
+      form,
+      'create-instance-image.values.image',
+      '<instance-image>'
+    );
 
-    const pkg = get(form, 'create-instance-package.values.package', '<instance-pkg>');
+    const pkg = get(
+      form,
+      'create-instance-package.values.package',
+      '<instance-pkg>'
+    );
 
     const networks = get(form, 'CREATE-INSTANCE-NETWORKS.values', {});
 
@@ -172,7 +228,9 @@ export default compose(
         const _name = name.toLowerCase();
         const _metadata = metadata.map(a => omit(a, 'open'));
         const _tags = uniqBy(tags, 'name').map(a => omit(a, 'expanded'));
-        const _networks = Object.keys(networks).filter(network => networks[network]);
+        const _networks = Object.keys(networks).filter(
+          network => networks[network]
+        );
 
         if (userScript && userScript.value) {
           _metadata.push({ name: 'user-script', value: userScript.value });

@@ -38,18 +38,20 @@ const CNSContainer = ({
       id={step}
       onClick={!expanded && !proceeded && handleEdit}
       collapsed={!expanded && !proceeded}
-      icon={<CnsIcon />}>
+      icon={<CnsIcon />}
+    >
       Container Name Service
     </Title>
     {expanded ? (
       <Description>
-        Triton CNS is used to automatically update hostnames for your instances*. You can serve
-        multiple instances (with multiple IP addresses) under the same hostname by matching the CNS
-        service names.{' '}
+        Triton CNS is used to automatically update hostnames for your
+        instances*. You can serve multiple instances (with multiple IP
+        addresses) under the same hostname by matching the CNS service names.{' '}
         <a
           href="https://docs.joyent.com/private-cloud/install/cns"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Read the docs
         </a>
       </Description>
@@ -57,12 +59,17 @@ const CNSContainer = ({
     <div>
       {expanded && cnsEnabled ? (
         <Margin bottom={4}>
-          <Cns hostnames={hostnames} services={serviceNames} onRemoveService={handleRemoveService}>
+          <Cns
+            hostnames={hostnames}
+            services={serviceNames}
+            onRemoveService={handleRemoveService}
+          >
             <ReduxForm
               form={`${CNS_FORM}-new-service`}
               destroyOnUnmount={false}
               forceUnregisterOnUnmount={true}
-              onSubmit={handleAddService}>
+              onSubmit={handleAddService}
+            >
               {props => <AddServiceForm {...props} />}
             </ReduxForm>
           </Cns>
@@ -102,7 +109,11 @@ export default compose(
     })
   }),
   connect(({ form, values }, { id }) => {
-    const instanceName = get(form, 'create-instance-name.values.name', '<instance-name>');
+    const instanceName = get(
+      form,
+      'create-instance-name.values.name',
+      '<instance-name>'
+    );
 
     const serviceNames = get(values, `${CNS_FORM}-services`, []);
 
@@ -157,7 +168,9 @@ export default compose(
     handleToggleCnsEnabled: ({ target }) =>
       dispatch(set({ name: `${CNS_FORM}-enabled`, value: !cnsEnabled })),
     handleAddService: ({ name }) => {
-      const serviceName = punycode.encode(name.toLowerCase().replace(/\s/g, '-')).replace(/-$/, '');
+      const serviceName = punycode
+        .encode(name.toLowerCase().replace(/\s/g, '-'))
+        .replace(/-$/, '');
 
       dispatch([
         destroy(`${CNS_FORM}-new-service`),

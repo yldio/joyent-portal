@@ -43,13 +43,14 @@ const CnsContainer = ({
   <ViewContainer main>
     <Margin bottom={1}>
       <Description>
-        Triton CNS is used to automatically update hostnames for your instances*. You can serve
-        multiple instances (with multiple IP addresses) under the same hostname by matching the CNS
-        service names.{' '}
+        Triton CNS is used to automatically update hostnames for your
+        instances*. You can serve multiple instances (with multiple IP
+        addresses) under the same hostname by matching the CNS service names.{' '}
         <a
           href="https://docs.joyent.com/private-cloud/install/cns"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Read the docs
         </a>
       </Description>
@@ -59,7 +60,9 @@ const CnsContainer = ({
       <Margin bottom={4}>
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
-          <MessageDescription>An error occurred while loading your CNS services</MessageDescription>
+          <MessageDescription>
+            An error occurred while loading your CNS services
+          </MessageDescription>
         </Message>
       </Margin>
     ) : null}
@@ -77,12 +80,16 @@ const CnsContainer = ({
           copy
           services={services}
           hostnames={hostnames}
-          onRemoveService={!mutating && (name => handleRemoveService(name, services))}>
+          onRemoveService={
+            !mutating && (name => handleRemoveService(name, services))
+          }
+        >
           <ReduxForm
             form={FORM_NAME}
             destroyOnUnmount={false}
             forceUnregisterOnUnmount={true}
-            onSubmit={val => handleAddService(val, services)}>
+            onSubmit={val => handleAddService(val, services)}
+          >
             {props => <AddServiceForm {...props} disabled={mutating} />}
           </ReduxForm>
         </Cns>
@@ -159,8 +166,16 @@ export default compose(
       const toggling = get(values, `cns-${instance.id}-toggling`, false);
       const removing = get(values, `cns-${instance.id}-removing`, false);
       const enabled = get(values, `cns-${instance.id}-enabled`, undefined);
-      const togglingError = get(values, `cns-${instance.id}-toggling-error`, null);
-      const removingError = get(values, `cns-${instance.id}-removing-error`, null);
+      const togglingError = get(
+        values,
+        `cns-${instance.id}-toggling-error`,
+        null
+      );
+      const removingError = get(
+        values,
+        `cns-${instance.id}-removing-error`,
+        null
+      );
       const svcs = get(values, `cns-${instance.id}-svcs`, undefined);
 
       if (isBoolean(enabled)) {
@@ -201,7 +216,9 @@ export default compose(
         return {
           ...hostname,
           values: services.map(name => {
-            const postfix = hostname.public ? '.triton.zone' : '.cns.joyent.com';
+            const postfix = hostname.public
+              ? '.triton.zone'
+              : '.cns.joyent.com';
             return `${name}.svc.${id}.${dataCenter}${postfix}`;
           })
         };

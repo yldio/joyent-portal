@@ -4,7 +4,6 @@ import remcalc from 'remcalc';
 import { Margin, Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import { Field } from 'redux-form';
-import copy from 'clipboard-copy';
 import { CopiableField } from '@components/instances/summary';
 
 import {
@@ -36,8 +35,8 @@ export const Header = () => (
     <H3>Hostnames</H3>
     <Padding bottom={2}>
       <P>
-        Default hostnames are automatically generated from both the instance name and any attached
-        networks.
+        Default hostnames are automatically generated from both the instance
+        name and any attached networks.
       </P>
     </Padding>
   </Fragment>
@@ -68,15 +67,20 @@ export const HostnamesHeader = () => (
     <H3>CNS service hostnames</H3>
     <Padding bottom={3}>
       <P>
-        CNS service hostnames are created by attaching a CNS service name to one or more instances.
-        You can serve multiple instances under the same hostname by assigning them to a matching CNS
-        service name.
+        CNS service hostnames are created by attaching a CNS service name to one
+        or more instances. You can serve multiple instances under the same
+        hostname by assigning them to a matching CNS service name.
       </P>
     </Padding>
   </Margin>
 );
 
-export const AddServiceForm = ({ handleSubmit, submitting, disabled, pristine }) => (
+export const AddServiceForm = ({
+  handleSubmit,
+  submitting,
+  disabled,
+  pristine
+}) => (
   <form onSubmit={handleSubmit}>
     <Flex alignEnd wrap>
       <FlexItem>
@@ -105,7 +109,13 @@ export const AddServiceForm = ({ handleSubmit, submitting, disabled, pristine })
   </form>
 );
 
-export const Hostname = ({ copy, values = [], network, service, ...hostname }) => (
+export const Hostname = ({
+  copy,
+  values = [],
+  network,
+  service,
+  ...hostname
+}) => (
   <Fragment>
     {values.length ? (
       <Margin bottom={4}>
@@ -113,11 +123,15 @@ export const Hostname = ({ copy, values = [], network, service, ...hostname }) =
           <SmallBordered bold noMargin>
             {network && service
               ? 'Network CNS service'
-              : network ? 'Network' : service ? 'CNS service' : 'Instance name'}{' '}
+              : network
+                ? 'Network'
+                : service ? 'CNS service' : 'Instance name'}{' '}
             hostname{values.length === 1 ? '' : 's'}
           </SmallBordered>
           <FlexItem>
-            <Margin right={1}>{hostname.public ? <PublicIcon /> : <PrivateIcon />}</Margin>
+            <Margin right={1}>
+              {hostname.public ? <PublicIcon /> : <PrivateIcon />}
+            </Margin>
           </FlexItem>
           <FlexItem>
             <Small noMargin>{hostname.public ? 'Public' : 'Private'}</Small>
@@ -126,7 +140,10 @@ export const Hostname = ({ copy, values = [], network, service, ...hostname }) =
         {values.map((value, i) => (
           <Margin
             top={0.5}
-            bottom={values.length !== 1 && values.length !== i + 1 ? '1' : undefined}>
+            bottom={
+              values.length !== 1 && values.length !== i + 1 ? '1' : undefined
+            }
+          >
             {copy ? (
               <CopiableField disabled md={12} text={value} />
             ) : (
@@ -169,7 +186,9 @@ const CnsHostnames = ({
                 active
                 key={value}
                 value={value}
-                onRemoveClick={onRemoveService && (() => onRemoveService(value))}
+                onRemoveClick={
+                  onRemoveService && (() => onRemoveService(value))
+                }
               />
             ))}
           </TagList>
@@ -187,17 +206,27 @@ const CnsHostnames = ({
   </Fragment>
 );
 
-export default ({ copy, hostnames = [], services = [], onRemoveService, children = null }) => (
+export default ({
+  copy,
+  hostnames = [],
+  services = [],
+  onRemoveService,
+  children = null
+}) => (
   <Card>
     <Padding all={4} bottom={0}>
-      <DefaultHostnames copy={copy} hostnames={hostnames.filter(({ service }) => !service)} />
+      <DefaultHostnames
+        copy={copy}
+        hostnames={hostnames.filter(({ service }) => !service)}
+      />
       <Divider height={remcalc(1)} />
       <Margin top={4}>
         <CnsHostnames
           copy={copy}
           services={services}
           hostnames={hostnames.filter(({ service }) => service)}
-          onRemoveService={onRemoveService}>
+          onRemoveService={onRemoveService}
+        >
           {children}
         </CnsHostnames>
       </Margin>

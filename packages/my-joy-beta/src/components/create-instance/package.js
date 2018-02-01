@@ -132,7 +132,11 @@ export const Package = ({
           <Flex alignCenter>
             {GroupIcons[group]}
             <Margin left={1} right={2}>
-              <FormLabel style={{fontWeight: sortBy === 'name' ? 'bold': 'normal'}}>{name}</FormLabel>
+              <FormLabel
+                style={{ fontWeight: sortBy === 'name' ? 'bold' : 'normal' }}
+              >
+                {name}
+              </FormLabel>
             </Margin>
           </Flex>
         </Radio>
@@ -180,7 +184,8 @@ export const Packages = ({
             left
             middle
             xs="200"
-            actionable>
+            actionable
+          >
             <span>Name </span>
           </TableTh>
           <TableTh
@@ -190,7 +195,8 @@ export const Packages = ({
             showSort={sortBy === 'memory'}
             right
             middle
-            actionable>
+            actionable
+          >
             <span>RAM </span>
           </TableTh>
           <TableTh
@@ -200,7 +206,8 @@ export const Packages = ({
             showSort={sortBy === 'disk'}
             right
             middle
-            actionable>
+            actionable
+          >
             <span>Disk </span>
           </TableTh>
           {hasVms && (
@@ -211,7 +218,8 @@ export const Packages = ({
               showSort={sortBy === 'vcpu'}
               right
               middle
-              actionable>
+              actionable
+            >
               <span>vCPU</span>
             </TableTh>
           )}
@@ -222,7 +230,8 @@ export const Packages = ({
             showSort={sortBy === 'price'}
             right
             middle
-            actionable>
+            actionable
+          >
             <span>$/hour</span>
           </TableTh>
         </TableTr>
@@ -230,12 +239,23 @@ export const Packages = ({
       <TableTbody>{children}</TableTbody>
     </Table>
     {!packages ? (
-      <Empty>Sorry, but we weren’t able to find any packages with that filter</Empty>
+      <Empty>
+        Sorry, but we weren’t able to find any packages with that filter
+      </Empty>
     ) : null}
   </form>
 );
 
-export const Overview = ({ name, price, memory, vcpus, hasVms, ssd, disk, onCancel }) => (
+export const Overview = ({
+  name,
+  price,
+  memory,
+  vcpus,
+  hasVms,
+  ssd,
+  disk,
+  onCancel
+}) => (
   <Fragment>
     <Margin bottom={2}>
       <H3 bold noMargin>

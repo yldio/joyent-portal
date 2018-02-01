@@ -35,7 +35,8 @@ export const Rule = rule => (
           style={style}
           touched={rule['rule-instance-conditional']}
           width={remcalc(66)}
-          embedded>
+          embedded
+        >
           <option value="must">must</option>
           <option value="should">should</option>
         </Select>
@@ -48,7 +49,8 @@ export const Rule = rule => (
           style={style}
           touched={rule['rule-instance-placement']}
           width={remcalc(90)}
-          embedded>
+          embedded
+        >
           <option value="same">the same</option>
           <option value="different">a different</option>
         </Select>
@@ -57,7 +59,13 @@ export const Rule = rule => (
         node as the instance(s) identified by the
       </H5>
       <FormGroup name="rule-type" field={Field}>
-        <Select style={style} touched={rule['rule-type']} width={remcalc(120)} embedded left>
+        <Select
+          style={style}
+          touched={rule['rule-type']}
+          width={remcalc(120)}
+          embedded
+          left
+        >
           <option value="name">instance name</option>
           <option value="tag">tag</option>
         </Select>
@@ -116,8 +124,9 @@ export const Rule = rule => (
 
 export const Header = rule => (
   <Fragment>
-    <b>{titleCase(rule['rule-instance-conditional'])}:</b> be on a {rule['rule-instance-placement']}{' '}
-    node as the instance(s) identified by the instance {rule['rule-type']}
+    <b>{titleCase(rule['rule-instance-conditional'])}:</b> be on a{' '}
+    {rule['rule-instance-placement']} node as the instance(s) identified by the
+    instance {rule['rule-type']}
     {rule['rule-type'] === 'name' ? (
       <Fragment>
         {' '}

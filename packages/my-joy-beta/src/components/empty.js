@@ -12,14 +12,14 @@ const NoPackagesTitle = styled(H3)`
 
 const FullWidthCard = styled(Card)`
   width: 100%;
-`
+`;
 
 export default ({ children }) => (
   <FullWidthCard>
     <Padding all={6}>
       <Flex alignCenter justifyCenter column>
         <Margin bottom={2}>
-          <img src={NoPackagesImage} alt="Sad Animal"/>
+          <img src={NoPackagesImage} alt="Sad Animal" />
         </Margin>
         <NoPackagesTitle>{children}</NoPackagesTitle>
       </Flex>

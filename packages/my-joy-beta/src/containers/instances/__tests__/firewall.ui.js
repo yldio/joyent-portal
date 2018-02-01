@@ -167,8 +167,13 @@ it('<Firewall tagRules />', async () => {
     await screenshot(
       <Theme ss>
         <Fragment>
-          <Firewall tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)} />
-          <Firewall tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)} inactive />
+          <Firewall
+            tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
+          />
+          <Firewall
+            tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
+            inactive
+          />
           <Firewall
             tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
             enabled
@@ -185,8 +190,13 @@ it('<Firewall tagRules />', async () => {
     await screenshot(
       <Theme ss>
         <Fragment>
-          <Firewall defaultRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)} />
-          <Firewall defaultRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)} inactive />
+          <Firewall
+            defaultRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
+          />
+          <Firewall
+            defaultRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
+            inactive
+          />
           <Firewall
             defaultRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
             enabled

@@ -174,8 +174,13 @@ it('renders <Firewall tagRules /> without throwing', () => {
       .create(
         <Theme>
           <Fragment>
-            <Firewall tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)} />
-            <Firewall tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)} inactive />
+            <Firewall
+              tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
+            />
+            <Firewall
+              tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
+              inactive
+            />
             <Firewall
               tagRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
               enabled
@@ -194,13 +199,21 @@ it('renders <Firewall tagRules /> without throwing', () => {
       .create(
         <Theme>
           <Fragment>
-            <Firewall defaultRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)} />
             <Firewall
-              defaultRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
+              defaultRules={rules.filter(
+                ({ rule_obj }) => rule_obj.tags.length
+              )}
+            />
+            <Firewall
+              defaultRules={rules.filter(
+                ({ rule_obj }) => rule_obj.tags.length
+              )}
               inactive
             />
             <Firewall
-              defaultRules={rules.filter(({ rule_obj }) => rule_obj.tags.length)}
+              defaultRules={rules.filter(
+                ({ rule_obj }) => rule_obj.tags.length
+              )}
               enabled
               inactive
             />
