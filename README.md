@@ -33,6 +33,7 @@
 #### styled-components
 
 * [normalized-styled-components](https://github.com/yldio/normalized-styled-components)
+* [joyent-react-styled-flexboxgrid](https://github.com/yldio/joyent-react-styled-flexboxgrid)
 * [styled-is](https://github.com/yldio/styled-is)
 
 #### Utilities
@@ -45,6 +46,7 @@
 
 #### Tooling
 
+* [react-screenshot-renderer](https://github.com/yldio/react-screenshot-renderer)
 * [stylelint-config-joyent-portal](https://github.com/yldio/stylelint-config-joyent-portal)
 * [joyent-react-scripts](https://github.com/yldio/joyent-react-scripts)
 * [babel-preset-joyent-portal](https://github.com/yldio/babel-preset-joyent-portal)
