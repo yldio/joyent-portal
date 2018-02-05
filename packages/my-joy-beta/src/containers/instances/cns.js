@@ -285,6 +285,7 @@ export default compose(
         });
 
         if (err) {
+          window.Rollbar.error(parseError(err), err);
           return dispatch([
             setLoadingFalse,
             set({
@@ -323,6 +324,7 @@ export default compose(
         });
 
         if (err) {
+          window.Rollbar.error(parseError(err), err);
           return dispatch([
             setLoadingFalse,
             set({
@@ -355,6 +357,7 @@ export default compose(
         );
 
         if (err) {
+          window.Rollbar.error(parseError(err), err);
           dispatch(set({ name: `cns-${instance.id}-svcs`, services }));
 
           throw new SubmissionError({

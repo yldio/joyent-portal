@@ -103,7 +103,8 @@ export const List = ({
           sortBy={sortBy}
           sortOrder={sortOrder}
           toggleSelectAll={toggleSelectAll}
-          onSortBy={handleSortBy}>
+          onSortBy={handleSortBy}
+        >
           {_instances.map(({ id, ...rest }) => (
             <InstanceListItem
               key={id}
@@ -186,6 +187,13 @@ export default compose(
           remove: state !== 'PROVISIONING'
         }
       }));
+
+      if (error) {
+        window.Rollbar.error(
+          'An error occurred while loading your instances',
+          error
+        );
+      }
 
       return {
         instances,
@@ -337,6 +345,10 @@ export default compose(
             );
           })
         );
+
+        if (err) {
+          window.Rollbar.error(mutationError, mutationError);
+        }
 
         // reverts submitting flag to false and propagates the error if it exists
         const flipSubmitFalse = stopSubmit(TABLE_FORM_NAME, {

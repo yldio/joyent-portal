@@ -138,6 +138,10 @@ export default compose(
           })
         );
 
+        if (err) {
+          window.Rollbar.error(parseError(err), err);
+        }
+
         if (!err && action === 'remove') {
           const { history } = ownProps;
           return history.push(`/instances/`);

@@ -187,6 +187,7 @@ export default compose(
           );
 
           if (err) {
+            window.Rollbar.error(parseError(err), err);
             throw new SubmissionError({
               _error: parseError(err)
             });

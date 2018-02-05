@@ -114,6 +114,10 @@ export default compose(
     props: ({ data }) => {
       const { networks = [], loading = false, error = null, refetch } = data;
 
+      if (error) {
+        window.Rollbar.error(error, error);
+      }
+
       return {
         networks: forceArray(networks),
         loading,
@@ -123,7 +127,7 @@ export default compose(
     }
   }),
   connect(
-    ({ values, form }, { networks }) => {
+    ({ values, form }, { networks, error }) => {
       const selected = get(form, `${FORM_NAME}.values`, {});
       const empty = id => !includes(Object.keys(selected), id);
 
