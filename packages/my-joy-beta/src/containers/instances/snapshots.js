@@ -299,6 +299,7 @@ export default compose(
           );
 
           if (err) {
+            window.Rollbar.error(parseError(err), err);
             return dispatch(
               stopSubmit(TABLE_FORM_NAME, {
                 _error: parseError(err)

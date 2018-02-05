@@ -31,15 +31,15 @@ const server = Hapi.server({
 
 Main(async () => {
   await server.register([
-    // {
-    //   plugin: Rollover,
-    //   options: {
-    //     rollbar: {
-    //       accessToken: ROLLBAR_SERVER_TOKEN,
-    //       reportLevel: 'error'
-    //     }
-    //   }
-    // },
+    {
+      plugin: Rollover,
+      options: {
+        rollbar: {
+          accessToken: ROLLBAR_SERVER_TOKEN,
+          reportLevel: 'error'
+        }
+      }
+    },
     {
       plugin: Brule,
       options: {

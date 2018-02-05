@@ -218,6 +218,7 @@ export default compose(
           );
 
           if (err) {
+            window.Rollbar.error(parseError(err), err);
             // show mutation error
             throw new SubmissionError({
               _error: parseError(err)
@@ -258,6 +259,7 @@ export default compose(
           );
 
           if (err) {
+            window.Rollbar.error(parseError(err), err);
             // show mutation error
             throw new SubmissionError({
               _error: parseError(err)
@@ -291,6 +293,7 @@ export default compose(
           );
 
           if (err) {
+            window.Rollbar.error(parseError(err), err);
             // show mutation error
             throw new SubmissionError({
               _error: parseError(err)

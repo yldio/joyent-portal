@@ -189,6 +189,10 @@ export default compose(
         refetch
       } = data;
 
+      if (error) {
+        window.Rollbar.error(error, error);
+      }
+
       const rules = forceArray(firewall_rules_create_machine).filter(
         ({ enabled }) => enabled || showInactive
       );
