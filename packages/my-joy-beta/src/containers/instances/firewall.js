@@ -7,6 +7,7 @@ import ReduxForm from 'declarative-redux-form';
 import { SubmissionError } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
 import remcalc from 'remcalc';
+import isBoolean from 'lodash.isboolean';
 import find from 'lodash.find';
 import get from 'lodash.get';
 
@@ -36,7 +37,7 @@ import parseError from '@state/parse-error';
 export const Firewall = ({
   defaultRules = [],
   tagRules = [],
-  enabled = false,
+  enabled,
   inactive = false,
   loading = false,
   loadingError = null,
@@ -81,7 +82,7 @@ export const Firewall = ({
       form="fw-enabled"
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
-      initialValues={{ enabled }}
+      {...{ initialValues: isBoolean(enabled) ? { enabled } : undefined }}
       onSubmit={handleEnabledToggle}
     >
       {props =>
@@ -142,7 +143,7 @@ export default compose(
       const { name } = variables;
 
       const instance = find(get(rest, 'machines', []), ['name', name]);
-      const enabled = get(instance, 'firewall_enabled', false);
+      const enabled = get(instance, 'firewall_enabled');
       const rules = get(instance, 'firewall_rules', []);
 
       return {
@@ -175,7 +176,7 @@ export default compose(
 
       return {
         handleEnabledToggle: async ({ enabled }) => {
-          const mutation = enabled ? enableFirewall : disableFirewall;
+          const mutation = enabled ? disableFirewall : enableFirewall;
 
           const [err] = await intercept(
             mutation({
