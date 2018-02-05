@@ -1436,10 +1436,12 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
 
 .c12 {
   color: rgb(151,151,151);
+  text-align: center;
 }
 
 .c7 {
-  width: 100%;
+  width: calc(100% - 2px);
+  border-top: none;
 }
 
 <form>
@@ -1761,10 +1763,12 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
 
 .c12 {
   color: rgb(151,151,151);
+  text-align: center;
 }
 
 .c7 {
-  width: 100%;
+  width: calc(100% - 2px);
+  border-top: none;
 }
 
 <form>
@@ -2086,10 +2090,12 @@ exports[`renders <Packages loading /> without throwing 1`] = `
 
 .c12 {
   color: rgb(151,151,151);
+  text-align: center;
 }
 
 .c7 {
-  width: 100%;
+  width: calc(100% - 2px);
+  border-top: none;
 }
 
 <form>
@@ -2619,10 +2625,12 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
 
 .c12 {
   color: rgb(151,151,151);
+  text-align: center;
 }
 
 .c7 {
-  width: 100%;
+  width: calc(100% - 2px);
+  border-top: none;
 }
 
 <form>
