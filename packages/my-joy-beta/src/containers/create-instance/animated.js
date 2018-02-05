@@ -51,7 +51,8 @@ const Animated = WrappedComponent =>
         <div
           ref={w => {
             this.wrapper = w;
-          }}>
+          }}
+        >
           <WrappedComponent {...this.props} />
         </div>
       );

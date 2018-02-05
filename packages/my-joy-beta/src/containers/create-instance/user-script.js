@@ -7,12 +7,12 @@ import { Margin } from 'styled-components-spacing';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
 
-import { ScriptIcon, Button } from 'joyent-ui-toolkit';
+import { ScriptIcon, Button, KeyValue } from 'joyent-ui-toolkit';
+import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
 import Title from '@components/create-instance/title';
 import Animated from '@containers/create-instance/animated';
 import Description from '@components/description';
-import KeyValue from '@components/key-value';
 
 const FORM_NAME = 'create-instance-user-script';
 
@@ -62,6 +62,7 @@ export const UserScript = ({
             onToggleExpanded={() => handleChangeOpenForm(!formOpen)}
             onCancel={() => handleChangeOpenForm(false)}
             onRemove={handleRemove}
+            editor={Editor}
             onlyValue
           />
         )

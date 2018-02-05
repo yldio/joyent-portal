@@ -1,165 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <KeyValue /> without throwing 1`] = `
-.c14 {
-  margin-top: 0.1875rem;
-}
-
-.c18 {
-  margin-top: 0.375rem;
-}
-
-.c3 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c9 {
-  padding: 1.125rem;
-}
-
-.c19 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c20 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c25 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c11 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-}
-
-.c17 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: 0.75rem;
-  -ms-flex-preferred-size: 0.75rem;
-  flex-basis: 0.75rem;
-}
-
 .c23 {
   font-family: sans-serif;
   font-size: 100%;
@@ -525,6 +366,45 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   float: none;
 }
 
+.c19 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c25 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c7 {
   color: rgba(73,73,73,1);
   font-weight: 600;
@@ -544,6 +424,126 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 .c7 + div,
 .c7 + span {
   margin-top: 0.75rem;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
+}
+
+.c18 {
+  margin-top: 0.375rem;
+}
+
+.c3 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c9 {
+  padding: 1.125rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c11 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c17 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: 0.75rem;
+  -ms-flex-preferred-size: 0.75rem;
+  flex-basis: 0.75rem;
 }
 
 .c0 {
@@ -833,187 +833,212 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   }
 }
 
-<div
-  className="c0"
-  disabled={false}
-  name="card"
+<form
+  onSubmit={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     disabled={false}
-    name="card-header"
-    onClick={false}
+    name="card"
   >
     <div
-      className="c2 c3"
+      className="c1"
+      disabled={false}
+      name="card-header"
+      onClick={false}
     >
       <div
-        className="c4"
+        className="c2 c3"
       >
         <div
-          className="c5 c6"
-          disabled={false}
-          name="card-header-meta"
+          className="c4"
         >
-          <h4
-            className="c7"
+          <div
+            className="c5 c6"
+            disabled={false}
+            name="card-header-meta"
           >
-            Add metadata
-          </h4>
+            <h4
+              className="c7"
+            >
+              Add metadata
+            </h4>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c8"
-    name="card-outlet"
-  >
     <div
-      className="c9"
+      className="c8"
+      name="card-outlet"
     >
       <div
-        className="c10"
-        wrap={true}
+        className="c9"
       >
         <div
-          className="c11"
+          className="c10"
+          wrap={true}
         >
           <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="name"
-            role="group"
-            style={undefined}
+            className="c11"
           >
-            <label
-              className="c13"
-              htmlFor="k"
-            >
-              Metadata
-               key
-            </label>
             <div
-              className="c14"
+              className="baseline-jVaZNU kXgQxt c12"
+              name="name"
+              role="group"
+              style={undefined}
             >
-              <input
-                className="c15"
-                disabled={false}
-                id="k"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-        <div
-          className="c17"
-        />
-        <div
-          className="c11"
-        >
-          <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="value"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c13"
-              htmlFor="l"
-            >
-              Metadata
-               value
-            </label>
-            <div
-              className="c14"
-            >
-              <input
-                className="c15"
-                disabled={false}
-                id="l"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="c18"
-      >
-        <div
-          className="c19"
-        >
-          <div
-            className="c20"
-          >
-            <button
-              className="c21 c22 c23"
-              disabled={false}
-              href=""
-              onClick={[Function]}
-              type="button"
-            >
-              <span>
-                Cancel
-              </span>
-            </button>
-            <button
-              className="c24 c22 c23"
-              disabled={true}
-              href=""
-              type="submit"
-            >
-              <span>
-                Create
-              </span>
-            </button>
-          </div>
-          <div
-            className="c25"
-          >
-            <button
-              className="c26 c22 c23"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className=""
-                height="16"
-                innerRef={undefined}
-                style={
-                  Object {
-                    "transform": "rotate(0deg)",
-                  }
-                }
-                viewBox="0 0 12 16"
-                width="12"
-                xmlns="http://www.w3.org/2000/svg"
+              <label
+                className="c13"
+                htmlFor="k"
               >
-                <path
-                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                  fill="rgba(73, 73, 73, 1)"
+                Metadata
+                 key
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="k"
+                  onBlur={null}
                 />
-              </svg>
-              <span>
-                Remove
-              </span>
-            </button>
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+          <div
+            className="c17"
+          />
+          <div
+            className="c11"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c12"
+              name="value"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c13"
+                htmlFor="l"
+              >
+                Metadata
+                 value
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="l"
+                  onBlur={null}
+                />
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="c18"
+        >
+          <div
+            className="c19"
+          >
+            <div
+              className="c20"
+            >
+              <button
+                className="c21 c22 c23"
+                disabled={false}
+                href=""
+                onClick={[Function]}
+                type="button"
+              >
+                <span>
+                  Cancel
+                </span>
+              </button>
+              <button
+                className="c24 c22 c23"
+                disabled={true}
+                href=""
+                type="submit"
+              >
+                <span>
+                  Create
+                </span>
+              </button>
+            </div>
+            <div
+              className="c25"
+            >
+              <button
+                className="c26 c22 c23"
+                disabled={false}
+                href=""
+                icon={true}
+                onClick={[Function]}
+                type="button"
+              >
+                <svg
+                  className=""
+                  height="16"
+                  innerRef={undefined}
+                  style={
+                    Object {
+                      "transform": "rotate(0deg)",
+                    }
+                  }
+                  viewBox="0 0 12 16"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                    fill="rgb(210, 67, 58)"
+                  />
+                </svg>
+                <span>
+                  Remove
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</form>
 `;
 
 exports[`renders <KeyValue expanded={false} /> without throwing 1`] = `
+.c7 {
+  color: rgba(73,73,73,1);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c7 + p,
+.c7 + small,
+.c7 + h1,
+.c7 + h2,
+.c7 + label,
+.c7 + h3,
+.c7 + h4,
+.c7 + h5,
+.c7 + div,
+.c7 + span {
+  margin-top: 0.75rem;
+}
+
 .c3 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
@@ -1050,27 +1075,6 @@ exports[`renders <KeyValue expanded={false} /> without throwing 1`] = `
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
-}
-
-.c7 {
-  color: rgba(73,73,73,1);
-  font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c7 + p,
-.c7 + small,
-.c7 + h1,
-.c7 + h2,
-.c7 + label,
-.c7 + h3,
-.c7 + h4,
-.c7 + h5,
-.c7 + div,
-.c7 + span {
-  margin-top: 0.75rem;
 }
 
 .c6 {
@@ -1214,200 +1218,45 @@ exports[`renders <KeyValue expanded={false} /> without throwing 1`] = `
   max-width: 98%;
 }
 
-<div
-  className="c0"
-  disabled={false}
-  name="card"
+<form
+  onSubmit={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     disabled={false}
-    name="card-header"
-    onClick={false}
+    name="card"
   >
     <div
-      className="c2 c3"
+      className="c1"
+      disabled={false}
+      name="card-header"
+      onClick={false}
     >
       <div
-        className="c4"
+        className="c2 c3"
       >
         <div
-          className="c5 c6"
-          disabled={false}
-          name="card-header-meta"
+          className="c4"
         >
-          <h4
-            className="c7"
+          <div
+            className="c5 c6"
+            disabled={false}
+            name="card-header-meta"
           >
-            Add metadata
-          </h4>
+            <h4
+              className="c7"
+            >
+              Add metadata
+            </h4>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</form>
 `;
 
 exports[`renders <KeyValue input="input" /> without throwing 1`] = `
-.c14 {
-  margin-top: 0.1875rem;
-}
-
-.c18 {
-  margin-top: 0.375rem;
-}
-
-.c3 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c9 {
-  padding: 1.125rem;
-}
-
-.c19 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c20 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c25 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c11 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-}
-
-.c17 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: 0.75rem;
-  -ms-flex-preferred-size: 0.75rem;
-  flex-basis: 0.75rem;
-}
-
 .c23 {
   font-family: sans-serif;
   font-size: 100%;
@@ -1773,6 +1622,45 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   float: none;
 }
 
+.c19 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c25 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c7 {
   color: rgba(73,73,73,1);
   font-weight: 600;
@@ -1792,6 +1680,126 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
 .c7 + div,
 .c7 + span {
   margin-top: 0.75rem;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
+}
+
+.c18 {
+  margin-top: 0.375rem;
+}
+
+.c3 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c9 {
+  padding: 1.125rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c11 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c17 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: 0.75rem;
+  -ms-flex-preferred-size: 0.75rem;
+  flex-basis: 0.75rem;
 }
 
 .c0 {
@@ -2081,295 +2089,191 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   }
 }
 
-<div
-  className="c0"
-  disabled={false}
-  name="card"
+<form
+  onSubmit={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     disabled={false}
-    name="card-header"
-    onClick={false}
+    name="card"
   >
     <div
-      className="c2 c3"
+      className="c1"
+      disabled={false}
+      name="card-header"
+      onClick={false}
     >
       <div
-        className="c4"
+        className="c2 c3"
       >
         <div
-          className="c5 c6"
-          disabled={false}
-          name="card-header-meta"
+          className="c4"
         >
-          <h4
-            className="c7"
+          <div
+            className="c5 c6"
+            disabled={false}
+            name="card-header-meta"
           >
-            Add metadata
-          </h4>
+            <h4
+              className="c7"
+            >
+              Add metadata
+            </h4>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c8"
-    name="card-outlet"
-  >
     <div
-      className="c9"
+      className="c8"
+      name="card-outlet"
     >
       <div
-        className="c10"
-        wrap={true}
+        className="c9"
       >
         <div
-          className="c11"
+          className="c10"
+          wrap={true}
         >
           <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="name"
-            role="group"
-            style={undefined}
+            className="c11"
           >
-            <label
-              className="c13"
-              htmlFor="m"
-            >
-              Metadata
-               key
-            </label>
             <div
-              className="c14"
+              className="baseline-jVaZNU kXgQxt c12"
+              name="name"
+              role="group"
+              style={undefined}
             >
-              <input
-                className="c15"
-                disabled={false}
-                id="m"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-        <div
-          className="c17"
-        />
-        <div
-          className="c11"
-        >
-          <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="value"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c13"
-              htmlFor="n"
-            >
-              Metadata
-               value
-            </label>
-            <div
-              className="c14"
-            >
-              <input
-                className="c15"
-                disabled={false}
-                id="n"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="c18"
-      >
-        <div
-          className="c19"
-        >
-          <div
-            className="c20"
-          >
-            <button
-              className="c21 c22 c23"
-              disabled={false}
-              href=""
-              onClick={[Function]}
-              type="button"
-            >
-              <span>
-                Cancel
-              </span>
-            </button>
-            <button
-              className="c24 c22 c23"
-              disabled={true}
-              href=""
-              type="submit"
-            >
-              <span>
-                Create
-              </span>
-            </button>
-          </div>
-          <div
-            className="c25"
-          >
-            <button
-              className="c26 c22 c23"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className=""
-                height="16"
-                innerRef={undefined}
-                style={
-                  Object {
-                    "transform": "rotate(0deg)",
-                  }
-                }
-                viewBox="0 0 12 16"
-                width="12"
-                xmlns="http://www.w3.org/2000/svg"
+              <label
+                className="c13"
+                htmlFor="m"
               >
-                <path
-                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                  fill="rgba(73, 73, 73, 1)"
+                Metadata
+                 key
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="m"
+                  onBlur={null}
                 />
-              </svg>
-              <span>
-                Remove
-              </span>
-            </button>
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+          <div
+            className="c17"
+          />
+          <div
+            className="c11"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c12"
+              name="value"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c13"
+                htmlFor="n"
+              >
+                Metadata
+                 value
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="n"
+                  onBlur={null}
+                />
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="c18"
+        >
+          <div
+            className="c19"
+          >
+            <div
+              className="c20"
+            >
+              <button
+                className="c21 c22 c23"
+                disabled={false}
+                href=""
+                onClick={[Function]}
+                type="button"
+              >
+                <span>
+                  Cancel
+                </span>
+              </button>
+              <button
+                className="c24 c22 c23"
+                disabled={true}
+                href=""
+                type="submit"
+              >
+                <span>
+                  Create
+                </span>
+              </button>
+            </div>
+            <div
+              className="c25"
+            >
+              <button
+                className="c26 c22 c23"
+                disabled={false}
+                href=""
+                icon={true}
+                onClick={[Function]}
+                type="button"
+              >
+                <svg
+                  className=""
+                  height="16"
+                  innerRef={undefined}
+                  style={
+                    Object {
+                      "transform": "rotate(0deg)",
+                    }
+                  }
+                  viewBox="0 0 12 16"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                    fill="rgb(210, 67, 58)"
+                  />
+                </svg>
+                <span>
+                  Remove
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</form>
 `;
 
 exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
-.c14 {
-  margin-top: 0.1875rem;
-}
-
-.c20 {
-  margin-top: 0.375rem;
-}
-
-.c3 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c9 {
-  padding: 1.125rem;
-}
-
-.c21 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c10 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c11 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c26 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
 .c24 {
   font-family: sans-serif;
   font-size: 100%;
@@ -2747,6 +2651,64 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   float: none;
 }
 
+.c21 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c10 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c11 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c26 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c7 {
   color: rgba(73,73,73,1);
   font-weight: 600;
@@ -2773,6 +2735,56 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   margin: 0;
   background-color: transparent;
   height: 0.75rem;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
+}
+
+.c20 {
+  margin-top: 0.375rem;
+}
+
+.c3 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c9 {
+  padding: 1.125rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
 }
 
 .c0 {
@@ -3141,354 +3153,199 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   }
 }
 
-<div
-  className="c0"
-  disabled={false}
-  name="card"
+<form
+  onSubmit={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     disabled={false}
-    name="card-header"
-    onClick={false}
+    name="card"
   >
     <div
-      className="c2 c3"
+      className="c1"
+      disabled={false}
+      name="card-header"
+      onClick={false}
     >
       <div
-        className="c4"
+        className="c2 c3"
       >
         <div
-          className="c5 c6"
-          disabled={false}
-          name="card-header-meta"
+          className="c4"
         >
-          <h4
-            className="c7"
+          <div
+            className="c5 c6"
+            disabled={false}
+            name="card-header-meta"
           >
-            Add metadata
-          </h4>
+            <h4
+              className="c7"
+            >
+              Add metadata
+            </h4>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c8"
-    name="card-outlet"
-  >
     <div
-      className="c9"
+      className="c8"
+      name="card-outlet"
     >
       <div
-        className="c10"
+        className="c9"
       >
         <div
-          className="c11"
-        >
-          <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="name"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c13"
-              htmlFor="o"
-            >
-              Metadata
-               key
-            </label>
-            <div
-              className="c14"
-            >
-              <input
-                className="c15"
-                disabled={false}
-                id="o"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-          <div
-            className="c17 c10"
-            height="0.75rem"
-          />
-        </div>
-      </div>
-      <div
-        className="c10"
-      >
-        <div
-          className="c11"
-        >
-          <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="value"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c13"
-              htmlFor="p"
-            >
-              Metadata
-               value
-            </label>
-            <div
-              className="c14"
-            >
-              <textarea
-                className="c18 c19"
-                disabled={false}
-                id="p"
-                onBlur={undefined}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-          <div
-            className="c17 c10"
-            height="0.75rem"
-          />
-        </div>
-      </div>
-      <div
-        className="c20"
-      >
-        <div
-          className="c21"
+          className="c10"
         >
           <div
             className="c11"
           >
-            <button
-              className="c22 c23 c24"
-              disabled={false}
-              href=""
-              onClick={[Function]}
-              type="button"
+            <div
+              className="baseline-jVaZNU kXgQxt c12"
+              name="name"
+              role="group"
+              style={undefined}
             >
-              <span>
-                Cancel
-              </span>
-            </button>
-            <button
-              className="c25 c23 c24"
-              disabled={true}
-              href=""
-              type="submit"
-            >
-              <span>
-                Create
-              </span>
-            </button>
-          </div>
-          <div
-            className="c26"
-          >
-            <button
-              className="c27 c23 c24"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className=""
-                height="16"
-                innerRef={undefined}
-                style={
-                  Object {
-                    "transform": "rotate(0deg)",
-                  }
-                }
-                viewBox="0 0 12 16"
-                width="12"
-                xmlns="http://www.w3.org/2000/svg"
+              <label
+                className="c13"
+                htmlFor="o"
               >
-                <path
-                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                  fill="rgba(73, 73, 73, 1)"
+                Metadata
+                 key
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="o"
+                  onBlur={null}
                 />
-              </svg>
-              <span>
-                Remove
-              </span>
-            </button>
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+            <div
+              className="c17 c10"
+              height="0.75rem"
+            />
+          </div>
+        </div>
+        <div
+          className="c10"
+        >
+          <div
+            className="c11"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c12"
+              name="value"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c13"
+                htmlFor="p"
+              >
+                Metadata
+                 value
+              </label>
+              <div
+                className="c14"
+              >
+                <textarea
+                  className="c18 c19"
+                  disabled={false}
+                  id="p"
+                  onBlur={undefined}
+                />
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+            <div
+              className="c17 c10"
+              height="0.75rem"
+            />
+          </div>
+        </div>
+        <div
+          className="c20"
+        >
+          <div
+            className="c21"
+          >
+            <div
+              className="c11"
+            >
+              <button
+                className="c22 c23 c24"
+                disabled={false}
+                href=""
+                onClick={[Function]}
+                type="button"
+              >
+                <span>
+                  Cancel
+                </span>
+              </button>
+              <button
+                className="c25 c23 c24"
+                disabled={true}
+                href=""
+                type="submit"
+              >
+                <span>
+                  Create
+                </span>
+              </button>
+            </div>
+            <div
+              className="c26"
+            >
+              <button
+                className="c27 c23 c24"
+                disabled={false}
+                href=""
+                icon={true}
+                onClick={[Function]}
+                type="button"
+              >
+                <svg
+                  className=""
+                  height="16"
+                  innerRef={undefined}
+                  style={
+                    Object {
+                      "transform": "rotate(0deg)",
+                    }
+                  }
+                  viewBox="0 0 12 16"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                    fill="rgb(210, 67, 58)"
+                  />
+                </svg>
+                <span>
+                  Remove
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</form>
 `;
 
 exports[`renders <KeyValue method="add" /> without throwing 1`] = `
-.c14 {
-  margin-top: 0.1875rem;
-}
-
-.c18 {
-  margin-top: 0.375rem;
-}
-
-.c3 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c9 {
-  padding: 1.125rem;
-}
-
-.c19 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c20 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c25 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c11 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-}
-
-.c17 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: 0.75rem;
-  -ms-flex-preferred-size: 0.75rem;
-  flex-basis: 0.75rem;
-}
-
 .c23 {
   font-family: sans-serif;
   font-size: 100%;
@@ -3854,6 +3711,45 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   float: none;
 }
 
+.c19 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c25 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c7 {
   color: rgba(73,73,73,1);
   font-weight: 600;
@@ -3873,6 +3769,126 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 .c7 + div,
 .c7 + span {
   margin-top: 0.75rem;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
+}
+
+.c18 {
+  margin-top: 0.375rem;
+}
+
+.c3 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c9 {
+  padding: 1.125rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c11 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c17 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: 0.75rem;
+  -ms-flex-preferred-size: 0.75rem;
+  flex-basis: 0.75rem;
 }
 
 .c0 {
@@ -4162,346 +4178,191 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   }
 }
 
-<div
-  className="c0"
-  disabled={false}
-  name="card"
+<form
+  onSubmit={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     disabled={false}
-    name="card-header"
-    onClick={false}
+    name="card"
   >
     <div
-      className="c2 c3"
+      className="c1"
+      disabled={false}
+      name="card-header"
+      onClick={false}
     >
       <div
-        className="c4"
+        className="c2 c3"
       >
         <div
-          className="c5 c6"
-          disabled={false}
-          name="card-header-meta"
+          className="c4"
         >
-          <h4
-            className="c7"
+          <div
+            className="c5 c6"
+            disabled={false}
+            name="card-header-meta"
           >
-            Add metadata
-          </h4>
+            <h4
+              className="c7"
+            >
+              Add metadata
+            </h4>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c8"
-    name="card-outlet"
-  >
     <div
-      className="c9"
+      className="c8"
+      name="card-outlet"
     >
       <div
-        className="c10"
-        wrap={true}
+        className="c9"
       >
         <div
-          className="c11"
+          className="c10"
+          wrap={true}
         >
           <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="name"
-            role="group"
-            style={undefined}
+            className="c11"
           >
-            <label
-              className="c13"
-              htmlFor="s"
-            >
-              Metadata
-               key
-            </label>
             <div
-              className="c14"
+              className="baseline-jVaZNU kXgQxt c12"
+              name="name"
+              role="group"
+              style={undefined}
             >
-              <input
-                className="c15"
-                disabled={false}
-                id="s"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-        <div
-          className="c17"
-        />
-        <div
-          className="c11"
-        >
-          <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="value"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c13"
-              htmlFor="t"
-            >
-              Metadata
-               value
-            </label>
-            <div
-              className="c14"
-            >
-              <input
-                className="c15"
-                disabled={false}
-                id="t"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="c18"
-      >
-        <div
-          className="c19"
-        >
-          <div
-            className="c20"
-          >
-            <button
-              className="c21 c22 c23"
-              disabled={false}
-              href=""
-              onClick={[Function]}
-              type="button"
-            >
-              <span>
-                Cancel
-              </span>
-            </button>
-            <button
-              className="c24 c22 c23"
-              disabled={true}
-              href=""
-              type="submit"
-            >
-              <span>
-                Create
-              </span>
-            </button>
-          </div>
-          <div
-            className="c25"
-          >
-            <button
-              className="c26 c22 c23"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className=""
-                height="16"
-                innerRef={undefined}
-                style={
-                  Object {
-                    "transform": "rotate(0deg)",
-                  }
-                }
-                viewBox="0 0 12 16"
-                width="12"
-                xmlns="http://www.w3.org/2000/svg"
+              <label
+                className="c13"
+                htmlFor="s"
               >
-                <path
-                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                  fill="rgba(73, 73, 73, 1)"
+                Metadata
+                 key
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="s"
+                  onBlur={null}
                 />
-              </svg>
-              <span>
-                Remove
-              </span>
-            </button>
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+          <div
+            className="c17"
+          />
+          <div
+            className="c11"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c12"
+              name="value"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c13"
+                htmlFor="t"
+              >
+                Metadata
+                 value
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="t"
+                  onBlur={null}
+                />
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="c18"
+        >
+          <div
+            className="c19"
+          >
+            <div
+              className="c20"
+            >
+              <button
+                className="c21 c22 c23"
+                disabled={false}
+                href=""
+                onClick={[Function]}
+                type="button"
+              >
+                <span>
+                  Cancel
+                </span>
+              </button>
+              <button
+                className="c24 c22 c23"
+                disabled={true}
+                href=""
+                type="submit"
+              >
+                <span>
+                  Create
+                </span>
+              </button>
+            </div>
+            <div
+              className="c25"
+            >
+              <button
+                className="c26 c22 c23"
+                disabled={false}
+                href=""
+                icon={true}
+                onClick={[Function]}
+                type="button"
+              >
+                <svg
+                  className=""
+                  height="16"
+                  innerRef={undefined}
+                  style={
+                    Object {
+                      "transform": "rotate(0deg)",
+                    }
+                  }
+                  viewBox="0 0 12 16"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                    fill="rgb(210, 67, 58)"
+                  />
+                </svg>
+                <span>
+                  Remove
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</form>
 `;
 
 exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
-.c14 {
-  margin-top: 0.1875rem;
-}
-
-.c18 {
-  margin-top: 0.375rem;
-}
-
-.c3 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c9 {
-  padding: 1.125rem;
-}
-
-.c19 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c20 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c25 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c11 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-}
-
-.c17 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: 0.75rem;
-  -ms-flex-preferred-size: 0.75rem;
-  flex-basis: 0.75rem;
-}
-
 .c23 {
   font-family: sans-serif;
   font-size: 100%;
@@ -4865,6 +4726,165 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   float: right;
   font-size: 0.8125rem;
   float: none;
+}
+
+.c19 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c25 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
+}
+
+.c18 {
+  margin-top: 0.375rem;
+}
+
+.c3 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c9 {
+  padding: 1.125rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c11 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c17 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: 0.75rem;
+  -ms-flex-preferred-size: 0.75rem;
+  flex-basis: 0.75rem;
 }
 
 .c0 {
@@ -5168,363 +5188,208 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   }
 }
 
-<div
-  className="c0"
-  disabled={false}
-  name="card"
+<form
+  onSubmit={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     disabled={false}
-    name="card-header"
-    onClick={[Function]}
+    name="card"
   >
     <div
-      className="c2 c3"
+      className="c1"
+      disabled={false}
+      name="card-header"
+      onClick={[Function]}
     >
       <div
-        className="c4"
+        className="c2 c3"
       >
         <div
-          className="c5 c6"
-          disabled={false}
-          name="card-header-meta"
+          className="c4"
         >
           <div
-            className="c7"
-          />
-        </div>
-        <svg
-          className=""
-          height="6"
-          innerRef={undefined}
-          onClick={[Function]}
-          style={
-            Object {
-              "transform": "rotate(180deg)",
+            className="c5 c6"
+            disabled={false}
+            name="card-header-meta"
+          >
+            <div
+              className="c7"
+            />
+          </div>
+          <svg
+            className=""
+            height="6"
+            innerRef={undefined}
+            onClick={[Function]}
+            style={
+              Object {
+                "transform": "rotate(180deg)",
+              }
             }
-          }
-          viewBox="0 0 9.6 6"
-          width="9.6"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-            fill="rgba(73, 73, 73, 1)"
-          />
-        </svg>
+            viewBox="0 0 9.6 6"
+            width="9.6"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+              fill="rgba(73, 73, 73, 1)"
+            />
+          </svg>
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c8"
-    name="card-outlet"
-  >
     <div
-      className="c9"
+      className="c8"
+      name="card-outlet"
     >
       <div
-        className="c10"
-        wrap={true}
+        className="c9"
       >
         <div
-          className="c11"
+          className="c10"
+          wrap={true}
         >
           <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="name"
-            role="group"
-            style={undefined}
+            className="c11"
           >
-            <label
-              className="c13"
-              htmlFor="u"
-            >
-              Metadata
-               key
-            </label>
             <div
-              className="c14"
+              className="baseline-jVaZNU kXgQxt c12"
+              name="name"
+              role="group"
+              style={undefined}
             >
-              <input
-                className="c15"
-                disabled={false}
-                id="u"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-        <div
-          className="c17"
-        />
-        <div
-          className="c11"
-        >
-          <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="value"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c13"
-              htmlFor="v"
-            >
-              Metadata
-               value
-            </label>
-            <div
-              className="c14"
-            >
-              <input
-                className="c15"
-                disabled={false}
-                id="v"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="c18"
-      >
-        <div
-          className="c19"
-        >
-          <div
-            className="c20"
-          >
-            <button
-              className="c21 c22 c23"
-              disabled={false}
-              href=""
-              onClick={[Function]}
-              type="button"
-            >
-              <span>
-                Cancel
-              </span>
-            </button>
-            <button
-              className="c24 c22 c23"
-              disabled={true}
-              href=""
-              type="submit"
-            >
-              <span>
-                Save
-              </span>
-            </button>
-          </div>
-          <div
-            className="c25"
-          >
-            <button
-              className="c26 c22 c23"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className=""
-                height="16"
-                innerRef={undefined}
-                style={
-                  Object {
-                    "transform": "rotate(0deg)",
-                  }
-                }
-                viewBox="0 0 12 16"
-                width="12"
-                xmlns="http://www.w3.org/2000/svg"
+              <label
+                className="c13"
+                htmlFor="u"
               >
-                <path
-                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                  fill="rgba(73, 73, 73, 1)"
+                Metadata
+                 key
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="u"
+                  onBlur={null}
                 />
-              </svg>
-              <span>
-                Remove
-              </span>
-            </button>
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+          <div
+            className="c17"
+          />
+          <div
+            className="c11"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c12"
+              name="value"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c13"
+                htmlFor="v"
+              >
+                Metadata
+                 value
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="v"
+                  onBlur={null}
+                />
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="c18"
+        >
+          <div
+            className="c19"
+          >
+            <div
+              className="c20"
+            >
+              <button
+                className="c21 c22 c23"
+                disabled={false}
+                href=""
+                onClick={[Function]}
+                type="button"
+              >
+                <span>
+                  Cancel
+                </span>
+              </button>
+              <button
+                className="c24 c22 c23"
+                disabled={true}
+                href=""
+                type="submit"
+              >
+                <span>
+                  Save
+                </span>
+              </button>
+            </div>
+            <div
+              className="c25"
+            >
+              <button
+                className="c26 c22 c23"
+                disabled={false}
+                href=""
+                icon={true}
+                onClick={[Function]}
+                type="button"
+              >
+                <svg
+                  className=""
+                  height="16"
+                  innerRef={undefined}
+                  style={
+                    Object {
+                      "transform": "rotate(0deg)",
+                    }
+                  }
+                  viewBox="0 0 12 16"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                    fill="rgb(210, 67, 58)"
+                  />
+                </svg>
+                <span>
+                  Remove
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</form>
 `;
 
 exports[`renders <KeyValue removing /> without throwing 1`] = `
-.c14 {
-  margin-top: 0.1875rem;
-}
-
-.c18 {
-  margin-top: 0.375rem;
-}
-
-.c3 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c9 {
-  padding: 1.125rem;
-}
-
-.c19 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c20 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c25 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c11 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-}
-
-.c17 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: 0.75rem;
-  -ms-flex-preferred-size: 0.75rem;
-  flex-basis: 0.75rem;
-}
-
 .c23 {
   font-family: sans-serif;
   font-size: 100%;
@@ -5965,6 +5830,45 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   float: none;
 }
 
+.c19 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c25 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c7 {
   color: rgba(73,73,73,1);
   font-weight: 600;
@@ -5984,6 +5888,126 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 .c7 + div,
 .c7 + span {
   margin-top: 0.75rem;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
+}
+
+.c18 {
+  margin-top: 0.375rem;
+}
+
+.c3 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c9 {
+  padding: 1.125rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c11 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c17 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: 0.75rem;
+  -ms-flex-preferred-size: 0.75rem;
+  flex-basis: 0.75rem;
 }
 
 .c0 {
@@ -6273,355 +6297,200 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   }
 }
 
-<div
-  className="c0"
-  disabled={false}
-  name="card"
+<form
+  onSubmit={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     disabled={false}
-    name="card-header"
-    onClick={false}
+    name="card"
   >
     <div
-      className="c2 c3"
+      className="c1"
+      disabled={false}
+      name="card-header"
+      onClick={false}
     >
       <div
-        className="c4"
+        className="c2 c3"
       >
         <div
-          className="c5 c6"
-          disabled={false}
-          name="card-header-meta"
+          className="c4"
         >
-          <h4
-            className="c7"
+          <div
+            className="c5 c6"
+            disabled={false}
+            name="card-header-meta"
           >
-            Add metadata
-          </h4>
+            <h4
+              className="c7"
+            >
+              Add metadata
+            </h4>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c8"
-    name="card-outlet"
-  >
     <div
-      className="c9"
+      className="c8"
+      name="card-outlet"
     >
       <div
-        className="c10"
-        wrap={true}
+        className="c9"
       >
         <div
-          className="c11"
+          className="c10"
+          wrap={true}
         >
           <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="name"
-            role="group"
-            style={undefined}
+            className="c11"
           >
-            <label
-              className="c13"
-              htmlFor="w"
-            >
-              Metadata
-               key
-            </label>
             <div
-              className="c14"
+              className="baseline-jVaZNU kXgQxt c12"
+              name="name"
+              role="group"
+              style={undefined}
             >
-              <input
-                className="c15"
-                disabled={false}
-                id="w"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-        <div
-          className="c17"
-        />
-        <div
-          className="c11"
-        >
-          <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="value"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c13"
-              htmlFor="x"
-            >
-              Metadata
-               value
-            </label>
-            <div
-              className="c14"
-            >
-              <input
-                className="c15"
-                disabled={false}
-                id="x"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="c18"
-      >
-        <div
-          className="c19"
-        >
-          <div
-            className="c20"
-          >
-            <button
-              className="c21 c22 c23"
-              disabled={false}
-              href=""
-              onClick={[Function]}
-              type="button"
-            >
-              <span>
-                Cancel
-              </span>
-            </button>
-            <button
-              className="c24 c22 c23"
-              disabled={true}
-              href=""
-              type="submit"
-            >
-              <span>
-                Create
-              </span>
-            </button>
-          </div>
-          <div
-            className="c25"
-          >
-            <button
-              className="c26 c22 c23"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              <div
-                className="c27"
+              <label
+                className="c13"
+                htmlFor="w"
               >
-                <svg
-                  height="10"
-                  width="28"
-                >
-                  <rect
-                    className="c28"
-                    height="6"
-                    width="6"
-                    x="2"
-                    y="2"
-                  />
-                  <rect
-                    className="c29"
-                    height="6"
-                    width="6"
-                    x="11"
-                    y="2"
-                  />
-                  <rect
-                    className="c30"
-                    height="6"
-                    width="6"
-                    x="20"
-                    y="2"
-                  />
-                </svg>
+                Metadata
+                 key
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="w"
+                  onBlur={null}
+                />
               </div>
-            </button>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+          <div
+            className="c17"
+          />
+          <div
+            className="c11"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c12"
+              name="value"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c13"
+                htmlFor="x"
+              >
+                Metadata
+                 value
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="x"
+                  onBlur={null}
+                />
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="c18"
+        >
+          <div
+            className="c19"
+          >
+            <div
+              className="c20"
+            >
+              <button
+                className="c21 c22 c23"
+                disabled={false}
+                href=""
+                onClick={[Function]}
+                type="button"
+              >
+                <span>
+                  Cancel
+                </span>
+              </button>
+              <button
+                className="c24 c22 c23"
+                disabled={true}
+                href=""
+                type="submit"
+              >
+                <span>
+                  Create
+                </span>
+              </button>
+            </div>
+            <div
+              className="c25"
+            >
+              <button
+                className="c26 c22 c23"
+                disabled={false}
+                href=""
+                icon={true}
+                onClick={[Function]}
+                type="button"
+              >
+                <div
+                  className="c27"
+                >
+                  <svg
+                    height="10"
+                    width="28"
+                  >
+                    <rect
+                      className="c28"
+                      height="6"
+                      width="6"
+                      x="2"
+                      y="2"
+                    />
+                    <rect
+                      className="c29"
+                      height="6"
+                      width="6"
+                      x="11"
+                      y="2"
+                    />
+                    <rect
+                      className="c30"
+                      height="6"
+                      width="6"
+                      x="20"
+                      y="2"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</form>
 `;
 
 exports[`renders <KeyValue submitting /> without throwing 1`] = `
-.c14 {
-  margin-top: 0.1875rem;
-}
-
-.c18 {
-  margin-top: 0.375rem;
-}
-
-.c3 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c9 {
-  padding: 1.125rem;
-}
-
-.c19 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c20 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c29 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c11 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-}
-
-.c17 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: 0.75rem;
-  -ms-flex-preferred-size: 0.75rem;
-  flex-basis: 0.75rem;
-}
-
 .c23 {
   font-family: sans-serif;
   font-size: 100%;
@@ -7084,6 +6953,45 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   float: none;
 }
 
+.c19 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c29 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c7 {
   color: rgba(73,73,73,1);
   font-weight: 600;
@@ -7103,6 +7011,126 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 .c7 + div,
 .c7 + span {
   margin-top: 0.75rem;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
+}
+
+.c18 {
+  margin-top: 0.375rem;
+}
+
+.c3 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c9 {
+  padding: 1.125rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c11 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c17 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: 0.75rem;
+  -ms-flex-preferred-size: 0.75rem;
+  flex-basis: 0.75rem;
 }
 
 .c0 {
@@ -7407,373 +7435,218 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   }
 }
 
-<div
-  className="c0"
-  disabled={false}
-  name="card"
+<form
+  onSubmit={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     disabled={false}
-    name="card-header"
-    onClick={false}
+    name="card"
   >
     <div
-      className="c2 c3"
+      className="c1"
+      disabled={false}
+      name="card-header"
+      onClick={false}
     >
       <div
-        className="c4"
+        className="c2 c3"
       >
         <div
-          className="c5 c6"
-          disabled={false}
-          name="card-header-meta"
+          className="c4"
         >
-          <h4
-            className="c7"
+          <div
+            className="c5 c6"
+            disabled={false}
+            name="card-header-meta"
           >
-            Add metadata
-          </h4>
+            <h4
+              className="c7"
+            >
+              Add metadata
+            </h4>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c8"
-    name="card-outlet"
-  >
     <div
-      className="c9"
+      className="c8"
+      name="card-outlet"
     >
       <div
-        className="c10"
-        wrap={true}
+        className="c9"
       >
         <div
-          className="c11"
+          className="c10"
+          wrap={true}
         >
           <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="name"
-            role="group"
-            style={undefined}
+            className="c11"
           >
-            <label
-              className="c13"
-              htmlFor="y"
-            >
-              Metadata
-               key
-            </label>
             <div
-              className="c14"
+              className="baseline-jVaZNU kXgQxt c12"
+              name="name"
+              role="group"
+              style={undefined}
             >
-              <input
-                className="c15"
-                disabled={true}
-                id="y"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-        <div
-          className="c17"
-        />
-        <div
-          className="c11"
-        >
-          <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="value"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c13"
-              htmlFor="z"
-            >
-              Metadata
-               value
-            </label>
-            <div
-              className="c14"
-            >
-              <input
-                className="c15"
-                disabled={true}
-                id="z"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="c18"
-      >
-        <div
-          className="c19"
-        >
-          <div
-            className="c20"
-          >
-            <button
-              className="c21 c22 c23"
-              disabled={true}
-              href=""
-              onClick={[Function]}
-              type="button"
-            >
-              <span>
-                Cancel
-              </span>
-            </button>
-            <button
-              className="c24 c22 c23"
-              disabled={true}
-              href=""
-              type="submit"
-            >
+              <label
+                className="c13"
+                htmlFor="y"
+              >
+                Metadata
+                 key
+              </label>
               <div
-                className="c25"
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={true}
+                  id="y"
+                  onBlur={null}
+                />
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+          <div
+            className="c17"
+          />
+          <div
+            className="c11"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c12"
+              name="value"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c13"
+                htmlFor="z"
+              >
+                Metadata
+                 value
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={true}
+                  id="z"
+                  onBlur={null}
+                />
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="c18"
+        >
+          <div
+            className="c19"
+          >
+            <div
+              className="c20"
+            >
+              <button
+                className="c21 c22 c23"
+                disabled={true}
+                href=""
+                onClick={[Function]}
+                type="button"
+              >
+                <span>
+                  Cancel
+                </span>
+              </button>
+              <button
+                className="c24 c22 c23"
+                disabled={true}
+                href=""
+                type="submit"
+              >
+                <div
+                  className="c25"
+                >
+                  <svg
+                    height="10"
+                    width="28"
+                  >
+                    <rect
+                      className="c26"
+                      height="6"
+                      width="6"
+                      x="2"
+                      y="2"
+                    />
+                    <rect
+                      className="c27"
+                      height="6"
+                      width="6"
+                      x="11"
+                      y="2"
+                    />
+                    <rect
+                      className="c28"
+                      height="6"
+                      width="6"
+                      x="20"
+                      y="2"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div
+              className="c29"
+            >
+              <button
+                className="c30 c22 c23"
+                disabled={true}
+                href=""
+                icon={true}
+                onClick={[Function]}
+                type="button"
               >
                 <svg
-                  height="10"
-                  width="28"
+                  className=""
+                  height="16"
+                  innerRef={undefined}
+                  style={
+                    Object {
+                      "transform": "rotate(0deg)",
+                    }
+                  }
+                  viewBox="0 0 12 16"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <rect
-                    className="c26"
-                    height="6"
-                    width="6"
-                    x="2"
-                    y="2"
-                  />
-                  <rect
-                    className="c27"
-                    height="6"
-                    width="6"
-                    x="11"
-                    y="2"
-                  />
-                  <rect
-                    className="c28"
-                    height="6"
-                    width="6"
-                    x="20"
-                    y="2"
+                  <path
+                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                    fill="rgb(216, 216, 216)"
                   />
                 </svg>
-              </div>
-            </button>
-          </div>
-          <div
-            className="c29"
-          >
-            <button
-              className="c30 c22 c23"
-              disabled={true}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className=""
-                height="16"
-                innerRef={undefined}
-                style={
-                  Object {
-                    "transform": "rotate(0deg)",
-                  }
-                }
-                viewBox="0 0 12 16"
-                width="12"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                  fill="rgb(216, 216, 216)"
-                />
-              </svg>
-              <span>
-                Remove
-              </span>
-            </button>
+                <span>
+                  Remove
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</form>
 `;
 
 exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
-.c14 {
-  margin-top: 0.1875rem;
-}
-
-.c18 {
-  margin-top: 0.375rem;
-}
-
-.c3 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c9 {
-  padding: 1.125rem;
-}
-
-.c19 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c20 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c25 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c11 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-}
-
-.c17 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: 0.75rem;
-  -ms-flex-preferred-size: 0.75rem;
-  flex-basis: 0.75rem;
-}
-
 .c23 {
   font-family: sans-serif;
   font-size: 100%;
@@ -8139,6 +8012,45 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   float: none;
 }
 
+.c19 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c25 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c7 {
   color: rgba(73,73,73,1);
   font-weight: 600;
@@ -8158,6 +8070,126 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 .c7 + div,
 .c7 + span {
   margin-top: 0.75rem;
+}
+
+.c14 {
+  margin-top: 0.1875rem;
+}
+
+.c18 {
+  margin-top: 0.375rem;
+}
+
+.c3 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c9 {
+  padding: 1.125rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c11 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c17 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: 0.75rem;
+  -ms-flex-preferred-size: 0.75rem;
+  flex-basis: 0.75rem;
 }
 
 .c0 {
@@ -8447,182 +8479,186 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   }
 }
 
-<div
-  className="c0"
-  disabled={false}
-  name="card"
+<form
+  onSubmit={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     disabled={false}
-    name="card-header"
-    onClick={false}
+    name="card"
   >
     <div
-      className="c2 c3"
+      className="c1"
+      disabled={false}
+      name="card-header"
+      onClick={false}
     >
       <div
-        className="c4"
+        className="c2 c3"
       >
         <div
-          className="c5 c6"
-          disabled={false}
-          name="card-header-meta"
+          className="c4"
         >
-          <h4
-            className="c7"
+          <div
+            className="c5 c6"
+            disabled={false}
+            name="card-header-meta"
           >
-            Add tag
-          </h4>
+            <h4
+              className="c7"
+            >
+              Add tag
+            </h4>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="c8"
-    name="card-outlet"
-  >
     <div
-      className="c9"
+      className="c8"
+      name="card-outlet"
     >
       <div
-        className="c10"
-        wrap={true}
+        className="c9"
       >
         <div
-          className="c11"
+          className="c10"
+          wrap={true}
         >
           <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="name"
-            role="group"
-            style={undefined}
+            className="c11"
           >
-            <label
-              className="c13"
-              htmlFor="q"
-            >
-              Tag
-               key
-            </label>
             <div
-              className="c14"
+              className="baseline-jVaZNU kXgQxt c12"
+              name="name"
+              role="group"
+              style={undefined}
             >
-              <input
-                className="c15"
-                disabled={false}
-                id="q"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-        <div
-          className="c17"
-        />
-        <div
-          className="c11"
-        >
-          <div
-            className="baseline-jVaZNU kXgQxt c12"
-            name="value"
-            role="group"
-            style={undefined}
-          >
-            <label
-              className="c13"
-              htmlFor="r"
-            >
-              Tag
-               value
-            </label>
-            <div
-              className="c14"
-            >
-              <input
-                className="c15"
-                disabled={false}
-                id="r"
-                onBlur={null}
-              />
-            </div>
-            <label
-              className="c16"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="c18"
-      >
-        <div
-          className="c19"
-        >
-          <div
-            className="c20"
-          >
-            <button
-              className="c21 c22 c23"
-              disabled={false}
-              href=""
-              onClick={[Function]}
-              type="button"
-            >
-              <span>
-                Cancel
-              </span>
-            </button>
-            <button
-              className="c24 c22 c23"
-              disabled={true}
-              href=""
-              type="submit"
-            >
-              <span>
-                Create
-              </span>
-            </button>
-          </div>
-          <div
-            className="c25"
-          >
-            <button
-              className="c26 c22 c23"
-              disabled={false}
-              href=""
-              icon={true}
-              onClick={[Function]}
-              type="button"
-            >
-              <svg
-                className=""
-                height="16"
-                innerRef={undefined}
-                style={
-                  Object {
-                    "transform": "rotate(0deg)",
-                  }
-                }
-                viewBox="0 0 12 16"
-                width="12"
-                xmlns="http://www.w3.org/2000/svg"
+              <label
+                className="c13"
+                htmlFor="q"
               >
-                <path
-                  d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                  fill="rgba(73, 73, 73, 1)"
+                Tag
+                 key
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="q"
+                  onBlur={null}
                 />
-              </svg>
-              <span>
-                Remove
-              </span>
-            </button>
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+          <div
+            className="c17"
+          />
+          <div
+            className="c11"
+          >
+            <div
+              className="baseline-jVaZNU kXgQxt c12"
+              name="value"
+              role="group"
+              style={undefined}
+            >
+              <label
+                className="c13"
+                htmlFor="r"
+              >
+                Tag
+                 value
+              </label>
+              <div
+                className="c14"
+              >
+                <input
+                  className="c15"
+                  disabled={false}
+                  id="r"
+                  onBlur={null}
+                />
+              </div>
+              <label
+                className="c16"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="c18"
+        >
+          <div
+            className="c19"
+          >
+            <div
+              className="c20"
+            >
+              <button
+                className="c21 c22 c23"
+                disabled={false}
+                href=""
+                onClick={[Function]}
+                type="button"
+              >
+                <span>
+                  Cancel
+                </span>
+              </button>
+              <button
+                className="c24 c22 c23"
+                disabled={true}
+                href=""
+                type="submit"
+              >
+                <span>
+                  Create
+                </span>
+              </button>
+            </div>
+            <div
+              className="c25"
+            >
+              <button
+                className="c26 c22 c23"
+                disabled={false}
+                href=""
+                icon={true}
+                onClick={[Function]}
+                type="button"
+              >
+                <svg
+                  className=""
+                  height="16"
+                  innerRef={undefined}
+                  style={
+                    Object {
+                      "transform": "rotate(0deg)",
+                    }
+                  }
+                  viewBox="0 0 12 16"
+                  width="12"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                    fill="rgb(210, 67, 58)"
+                  />
+                </svg>
+                <span>
+                  Remove
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</form>
 `;

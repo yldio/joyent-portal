@@ -1,0 +1,37 @@
+{
+  "name": "joyent-logo-assets",
+  "version": "1.0.0",
+  "license": "MPL-2.0",
+  "repository": "github:yldio/joyent-portal",
+  "main": "dist/umd/index.js",
+  "jsnext:main": "dist/es/index.js",
+  "module": "dist/es/index.js",
+  "scripts": {
+    "test-ci": "redrun -s test",
+    "test": "NODE_ENV=test joyent-react-scripts test --env=jsdom",
+    "compile:es": "babel src --out-dir dist/es",
+    "compile:umd": "UMD=1 babel src --out-dir dist/umd",
+    "compile": "redrun -p compile:*",
+    "dev": "NODE_ENV=development npm run compile -- -- --watch --source-maps inline",
+    "prepublish": "NODE_ENV=production npm run compile"
+  },
+  "devDependencies": {
+    "apr-for-each": "^3.0.3",
+    "apr-main": "^4.0.3",
+    "babel-cli": "^6.26.0",
+    "babel-preset-joyent-portal": "^6.0.3",
+    "eslint": "^4.16.0",
+    "eslint-config-joyent-portal": "^3.3.1",
+    "execa": "^0.9.0",
+    "globby": "^7.1.1",
+    "htmltojsx": "^0.3.0",
+    "joyent-react-scripts": "^7.2.2",
+    "mz": "^2.7.0",
+    "prettier": "^1.10.2",
+    "react": "^16.2.0",
+    "redrun": "^5.10.0"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0"
+  }
+}

@@ -8,13 +8,12 @@ import { connect } from 'react-redux';
 import get from 'lodash.get';
 import remcalc from 'remcalc';
 
-import { AffinityIcon, Button, H3, Divider } from 'joyent-ui-toolkit';
+import { AffinityIcon, Button, H3, Divider, KeyValue } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import { Rule, Header } from '@components/create-instance/affinity';
 import Animated from '@containers/create-instance/animated';
 import Description from '@components/description';
-import KeyValue from '@components/key-value';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-AFFINITY-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-AFFINITY-EDIT-${i}`;

@@ -1,0 +1,18 @@
+query images {
+  images(public: false) {
+    id
+    name
+    os
+    version
+    type
+    homepage
+    published_at
+    owner
+    public
+    state
+    error {
+      code
+      message
+    }
+  }
+}

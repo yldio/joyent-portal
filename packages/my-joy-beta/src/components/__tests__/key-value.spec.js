@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
-import { KeyValue } from '../key-value';
+import { KeyValue } from 'joyent-ui-toolkit';
 import Theme from '@mocks/theme';
 
 it('renders <KeyValue /> without throwing', () => {

@@ -4,9 +4,10 @@ import { Field } from 'redux-form';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Margin } from 'styled-components-spacing';
 import Flex from 'styled-flex-component';
-import remcalc from 'remcalc';
+import pascalCase from 'pascal-case';
 import titleCase from 'title-case';
 import includes from 'lodash.includes';
+import remcalc from 'remcalc';
 
 import {
   H3,
@@ -19,6 +20,8 @@ import {
   Card
 } from 'joyent-ui-toolkit';
 
+import * as Assets from 'joyent-logo-assets';
+
 const Version = styled(Select)`
   min-width: 100%;
   width: ${remcalc(144)};
@@ -30,22 +33,6 @@ const Version = styled(Select)`
     border-top-right-radius: 0;
   }
 `;
-
-const getImage = name => {
-  try {
-    return {
-      url: require(`@assets/${name}.svg`),
-      size: 42,
-      bottom: 0
-    };
-  } catch (e) {
-    return {
-      url: require('@assets/placeholder.svg'),
-      size: 36,
-      bottom: 6
-    };
-  }
-};
 
 export const Preview = ({ name, version, isVm }) => (
   <Fragment>
@@ -62,21 +49,17 @@ const Image = ({ onClick, active, ...image }) => {
   const { imageName = '', versions = [] } = image;
 
   const ids = [`image-card-${imageName}`, `image-img-${imageName}`];
+
   const handleClick = ev =>
     includes(ids, ev.target.id) ? onClick(image) : null;
+
+  const Logo = Assets[pascalCase(imageName)] || Assets.Placeholder;
 
   return (
     <Col md={2} sm={3}>
       <Margin bottom={3}>
         <Card id={ids[0]} onClick={handleClick} active={active} preview>
-          <img
-            id={ids[1]}
-            src={getImage(imageName).url}
-            width={getImage(imageName).size}
-            height={getImage(imageName).size}
-            style={{ marginBottom: getImage(imageName).bottom }}
-            alt={imageName}
-          />
+          <Logo id={ids[1]} />
           <H4>{titleCase(imageName)}</H4>
           <FormGroup name="image" field={Field}>
             <Version onBlur={null}>

@@ -34,7 +34,6 @@ const InputIconWrapper = styled.div`
   }
 `;
 
-
 const ClipboardIconActionable = Clipboard.extend`
   cursor: pointer;
 `;

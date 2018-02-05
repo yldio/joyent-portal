@@ -1,8 +1,7 @@
 import React from 'react';
 import { Margin } from 'styled-components-spacing';
 
-import { TagItem } from 'joyent-ui-toolkit';
-import KeyValue from '@components/key-value';
+import { TagItem, KeyValue } from 'joyent-ui-toolkit';
 
 export const AddForm = props => (
   <KeyValue {...props} method="add" input="input" type="tag" expanded />

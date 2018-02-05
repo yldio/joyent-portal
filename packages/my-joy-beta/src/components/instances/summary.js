@@ -48,7 +48,6 @@ const Flex = styled.div`
   }
 `;
 
-
 const VerticalDivider = styled.div`
   width: ${remcalc(1)};
   background: ${props => props.theme.grey};
@@ -61,7 +60,6 @@ const VerticalDivider = styled.div`
     display: none;
   }
 `;
-
 
 export const Meta = ({
   created,

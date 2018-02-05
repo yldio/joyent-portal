@@ -2,7 +2,7 @@ import React from 'react';
 import { toMatchImageSnapshot } from 'jest-image-snapshot';
 import screenshot from 'react-screenshot-renderer';
 
-import { KeyValue } from '../key-value';
+import { KeyValue } from 'joyent-ui-toolkit';
 import Theme from '@mocks/theme';
 
 expect.extend({

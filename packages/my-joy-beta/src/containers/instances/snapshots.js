@@ -294,7 +294,13 @@ export default compose(
         handleCreateSnapshot: async ({ name }) => {
           const [err] = await intercept(
             createSnapshot({
-              variables: { name: name.trim().split(' ').join('_'), id: instance.id }
+              variables: {
+                name: name
+                  .trim()
+                  .split(' ')
+                  .join('_'),
+                id: instance.id
+              }
             })
           );
 
