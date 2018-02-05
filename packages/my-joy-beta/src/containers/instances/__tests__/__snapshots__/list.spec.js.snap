@@ -5,6 +5,14 @@ exports[`renders <List /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
+.c36 {
+  margin-bottom: 0.75rem;
+}
+
+.c34 {
+  padding: 2.25rem;
+}
+
 .c12 {
   font-family: sans-serif;
   font-size: 100%;
@@ -247,6 +255,27 @@ exports[`renders <List /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
+.c38 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c38 + p,
+.c38 + small,
+.c38 + h1,
+.c38 + h2,
+.c38 + label,
+.c38 + h3,
+.c38 + h4,
+.c38 + h5,
+.c38 + div,
+.c38 + span {
+  margin-top: 1.5rem;
+}
+
 .c1 {
   background-color: rgb(216,216,216);
   margin: 0;
@@ -266,6 +295,28 @@ exports[`renders <List /> without throwing 1`] = `
   margin: 0;
   background-color: transparent;
   height: 1.25rem;
+}
+
+.c33 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
 }
 
 .c23 {
@@ -664,6 +715,47 @@ exports[`renders <List /> without throwing 1`] = `
   justify-content: space-between;
 }
 
+.c35 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c37 {
+  color: rgb(151,151,151);
+  text-align: center;
+}
+
+.c32 {
+  width: calc(100% - 2px);
+  border-top: none;
+}
+
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -902,6 +994,35 @@ exports[`renders <List /> without throwing 1`] = `
       />
     </table>
   </form>
+  <div
+    className="c32 c33"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c34"
+    >
+      <div
+        className="c35"
+      >
+        <div
+          className="c36"
+        >
+          <img
+            alt="Sad Animal"
+            src="no-packages.svg"
+          />
+        </div>
+        <h3
+          className="c37 c38"
+        >
+          You haven't created any instances yet, but they're really easy to set up.
+          <br />
+          Click above to get going.
+        </h3>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -910,8 +1031,16 @@ exports[`renders <List error /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
+.c42 {
+  margin-bottom: 0.75rem;
+}
+
 .c14 {
   margin-bottom: 1.5rem;
+}
+
+.c40 {
+  padding: 2.25rem;
 }
 
 .c12 {
@@ -1178,6 +1307,27 @@ exports[`renders <List error /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
+.c44 {
+  color: rgba(73,73,73,1);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+.c44 + p,
+.c44 + small,
+.c44 + h1,
+.c44 + h2,
+.c44 + label,
+.c44 + h3,
+.c44 + h4,
+.c44 + h5,
+.c44 + div,
+.c44 + span {
+  margin-top: 1.5rem;
+}
+
 .c18 {
   color: rgba(73,73,73,1);
   font-weight: 600;
@@ -1205,6 +1355,28 @@ exports[`renders <List error /> without throwing 1`] = `
   margin: 0;
   background-color: transparent;
   height: 1.25rem;
+}
+
+.c39 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgba(73,73,73,1);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
 }
 
 .c29 {
@@ -1629,6 +1801,47 @@ exports[`renders <List error /> without throwing 1`] = `
   justify-content: space-between;
 }
 
+.c41 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c43 {
+  color: rgb(151,151,151);
+  text-align: center;
+}
+
+.c38 {
+  width: calc(100% - 2px);
+  border-top: none;
+}
+
 @media only screen and (min-width:48em) {
   .c0 {
     width: 46rem;
@@ -1892,6 +2105,35 @@ exports[`renders <List error /> without throwing 1`] = `
       />
     </table>
   </form>
+  <div
+    className="c38 c39"
+    disabled={false}
+    name="card"
+  >
+    <div
+      className="c40"
+    >
+      <div
+        className="c41"
+      >
+        <div
+          className="c42"
+        >
+          <img
+            alt="Sad Animal"
+            src="no-packages.svg"
+          />
+        </div>
+        <h3
+          className="c43 c44"
+        >
+          You haven't created any instances yet, but they're really easy to set up.
+          <br />
+          Click above to get going.
+        </h3>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
