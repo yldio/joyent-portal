@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
 import scrollToElement from 'scroll-to-element';
 
-const ANIMATION_TIME = 400;
-
-function slideDown(el, timing) {
+function slideDown(el) {
   const { style } = el;
   const INITIAL = 'initial';
   const HIDDEN = 'hidden';
-  timing = timing || `${ANIMATION_TIME}ms ease-out`;
 
   // Get element height
   style.transition = INITIAL;
   style.visibility = HIDDEN;
   style.maxHeight = INITIAL;
-  const height = el.offsetHeight + 'px';
+  const offsetHeight = el.offsetHeight;
+  const height = offsetHeight + 'px';
   style.removeProperty('visibility');
   style.maxHeight = '0';
   style.overflow = HIDDEN;
 
+  const timing = `${parseInt(height, 10) * 1.9}ms linear`;
+
   // Begin transition
   style.transition = `max-height ${timing}, opacity ${timing}`;
-
   requestAnimationFrame(() => {
     style.maxHeight = height;
     style.opacity = '1';
@@ -52,8 +51,7 @@ const Animated = WrappedComponent =>
         <div
           ref={w => {
             this.wrapper = w;
-          }}
-        >
+          }}>
           <WrappedComponent {...this.props} />
         </div>
       );
