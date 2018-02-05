@@ -14,6 +14,7 @@ import {
   TableTbody,
   TableTd,
   Checkbox,
+  KeyValue,
   Popover,
   PopoverContainer,
   PopoverTarget,
@@ -22,7 +23,6 @@ import {
   DotIcon
 } from 'joyent-ui-toolkit';
 
-import KeyValue from '@components/key-value';
 import Empty from '@components/empty';
 
 const stateColor = {

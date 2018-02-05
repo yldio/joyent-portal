@@ -111,7 +111,9 @@ export default compose(
     const nameFilled = get(form, `${FORM_NAME}.values.name`, '');
 
     const disabled = ['name', 'image', 'package', 'networks'].some(
-      step => !get(values, `create-instance-${step}-proceeded`, false) || !nameFilled.length
+      step =>
+        !get(values, `create-instance-${step}-proceeded`, false) ||
+        !nameFilled.length
     );
 
     if (disabled) {

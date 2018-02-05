@@ -18,17 +18,4 @@ export default styled.p`
   ${is('monospace')`
     font-family: ${props => props.theme.monoFont.families};
   `};
-
-  + p,
-  + small,
-  + h1,
-  + h2,
-  + label,
-  + h3,
-  + h4,
-  + h5,
-  + div,
-  + span {
-    padding-bottom: ${remcalc(36)};
-  }
 `;

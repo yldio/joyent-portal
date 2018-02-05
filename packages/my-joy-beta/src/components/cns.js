@@ -142,7 +142,8 @@ export const Hostname = ({
             top={0.5}
             bottom={
               values.length !== 1 && values.length !== i + 1 ? '1' : undefined
-            }>
+            }
+          >
             {copy ? (
               <CopiableField disabled md={12} text={value} />
             ) : (
@@ -224,7 +225,8 @@ export default ({
           copy={copy}
           services={services}
           hostnames={hostnames.filter(({ service }) => service)}
-          onRemoveService={onRemoveService}>
+          onRemoveService={onRemoveService}
+        >
           {children}
         </CnsHostnames>
       </Margin>

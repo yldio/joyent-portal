@@ -16,19 +16,6 @@ exports[`renders <Networks /> without throwing 1`] = `
   margin: 0;
 }
 
-.c5 + p,
-.c5 + small,
-.c5 + h1,
-.c5 + h2,
-.c5 + label,
-.c5 + h3,
-.c5 + h4,
-.c5 + h5,
-.c5 + div,
-.c5 + span {
-  padding-bottom: 2.25rem;
-}
-
 .c0 {
   margin-right: auto;
   margin-left: auto;
@@ -190,19 +177,6 @@ exports[`renders <Networks error /> without throwing 1`] = `
   margin: 0;
 }
 
-.c5 + p,
-.c5 + small,
-.c5 + h1,
-.c5 + h2,
-.c5 + label,
-.c5 + h3,
-.c5 + h4,
-.c5 + h5,
-.c5 + div,
-.c5 + span {
-  padding-bottom: 2.25rem;
-}
-
 .c12 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -210,19 +184,6 @@ exports[`renders <Networks error /> without throwing 1`] = `
   margin: 0;
   line-height: 0.875rem;
   font-size: 0.8125rem;
-}
-
-.c12 + p,
-.c12 + small,
-.c12 + h1,
-.c12 + h2,
-.c12 + label,
-.c12 + h3,
-.c12 + h4,
-.c12 + h5,
-.c12 + div,
-.c12 + span {
-  padding-bottom: 2.25rem;
 }
 
 .c0 {
@@ -466,19 +427,6 @@ exports[`renders <Networks loading /> without throwing 1`] = `
   margin: 0;
 }
 
-.c5 + p,
-.c5 + small,
-.c5 + h1,
-.c5 + h2,
-.c5 + label,
-.c5 + h3,
-.c5 + h4,
-.c5 + h5,
-.c5 + div,
-.c5 + span {
-  padding-bottom: 2.25rem;
-}
-
 .c11 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
@@ -493,19 +441,6 @@ exports[`renders <Networks loading /> without throwing 1`] = `
   text-align: center;
   margin-bottom: 0;
   margin-left: 0.375rem;
-}
-
-.c11 + p,
-.c11 + small,
-.c11 + h1,
-.c11 + h2,
-.c11 + label,
-.c11 + h3,
-.c11 + h4,
-.c11 + h5,
-.c11 + div,
-.c11 + span {
-  padding-bottom: 2.25rem;
 }
 
 .c7 {
@@ -753,19 +688,6 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   margin: 0;
 }
 
-.c5 + p,
-.c5 + small,
-.c5 + h1,
-.c5 + h2,
-.c5 + label,
-.c5 + h3,
-.c5 + h4,
-.c5 + h5,
-.c5 + div,
-.c5 + span {
-  padding-bottom: 2.25rem;
-}
-
 .c0 {
   margin-right: auto;
   margin-left: auto;
@@ -846,6 +768,67 @@ exports[`renders <Networks networks /> without throwing 1`] = `
 .c12 + div,
 .c12 + span {
   margin-top: 0.75rem;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c17 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
 }
 
 .c8 {
@@ -1200,67 +1183,6 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   border-width: 0;
   border-radius: 0;
   box-shadow: none;
-}
-
-.c17 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-}
-
-.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 @media only screen and (min-width:48em) {

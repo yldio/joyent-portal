@@ -8,11 +8,17 @@ import { connect } from 'react-redux';
 import get from 'lodash.get';
 import remcalc from 'remcalc';
 
-import { TagsIcon, Button, H3, TagList, Divider } from 'joyent-ui-toolkit';
+import {
+  TagsIcon,
+  Button,
+  H3,
+  TagList,
+  Divider,
+  KeyValue
+} from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import Animated from '@containers/create-instance/animated';
-import KeyValue from '@components/key-value';
 import Description from '@components/description';
 import Tag from '@components/tags';
 

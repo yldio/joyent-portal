@@ -103,7 +103,8 @@ export const List = ({
           sortBy={sortBy}
           sortOrder={sortOrder}
           toggleSelectAll={toggleSelectAll}
-          onSortBy={handleSortBy}>
+          onSortBy={handleSortBy}
+        >
           {_instances.map(({ id, ...rest }) => (
             <InstanceListItem
               key={id}

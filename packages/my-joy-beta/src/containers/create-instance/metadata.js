@@ -8,12 +8,12 @@ import { connect } from 'react-redux';
 import get from 'lodash.get';
 import remcalc from 'remcalc';
 
-import { MetadataIcon, Button, H3, Divider } from 'joyent-ui-toolkit';
+import { MetadataIcon, Button, H3, Divider, KeyValue } from 'joyent-ui-toolkit';
+import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
 import Title from '@components/create-instance/title';
 import Animated from '@containers/create-instance/animated';
 import Description from '@components/description';
-import KeyValue from '@components/key-value';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-METADATA-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-METADATA-EDIT-${i}`;
@@ -88,6 +88,7 @@ export const Metadata = ({
               }
               onCancel={() => handleCancelEdit(index)}
               onRemove={() => handleRemoveMetadata(index)}
+              editor={Editor}
             />
             <Divider
               height={remcalc(index === metadata.length - 1 ? 18 : 12)}
@@ -111,8 +112,9 @@ export const Metadata = ({
               method="add"
               input="textarea"
               type="metadata"
-              expanded
               onCancel={() => handleChangeAddOpen(false)}
+              editor={Editor}
+              expanded
             />
             <Divider height={remcalc(18)} transparent />
           </Fragment>
