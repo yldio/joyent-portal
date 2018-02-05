@@ -36,6 +36,7 @@ import {
   Item as InstanceListItem
 } from '@components/instances/list';
 
+import Empty from '@components/empty';
 import InstanceListActions from '@components/instances/footer';
 
 const TABLE_FORM_NAME = 'instance-list-table';
@@ -102,8 +103,7 @@ export const List = ({
           sortBy={sortBy}
           sortOrder={sortOrder}
           toggleSelectAll={toggleSelectAll}
-          onSortBy={handleSortBy}
-        >
+          onSortBy={handleSortBy}>
           {_instances.map(({ id, ...rest }) => (
             <InstanceListItem
               key={id}
@@ -119,6 +119,15 @@ export const List = ({
       )}
     </ReduxForm>
   ) : null;
+
+  const _empty =
+    !loading && !_instances.length ? (
+      <Empty>
+        You haven't created any instances yet, but they're really easy to set
+        up.<br />
+        Click above to get going.
+      </Empty>
+    ) : null;
 
   const _footer =
     !loading && selected.length ? (
@@ -151,6 +160,7 @@ export const List = ({
       {_mutationError}
       {_loading}
       {_table}
+      {_empty}
       {_footer}
     </ViewContainer>
   );

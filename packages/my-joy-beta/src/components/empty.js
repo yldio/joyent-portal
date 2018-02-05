@@ -8,10 +8,12 @@ import NoPackagesImage from '@assets/no-packages.svg';
 
 const NoPackagesTitle = styled(H3)`
   color: ${props => props.theme.greyDark};
+  text-align: center;
 `;
 
 const FullWidthCard = styled(Card)`
-  width: 100%;
+  width: calc(100% - 2px);
+  border-top: none;
 `;
 
 export default ({ children }) => (
