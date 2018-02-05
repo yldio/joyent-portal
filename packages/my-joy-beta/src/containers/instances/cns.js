@@ -22,6 +22,7 @@ import {
 import Description from '@components/description';
 import Cns, { Footer, AddServiceForm } from '@components/cns';
 import GetAccount from '@graphql/get-account.gql';
+import DeleteTag from '@graphql/delete-tag.gql';
 import UpdateTags from '@graphql/update-tags.gql';
 import GetTags from '@graphql/list-tags.gql';
 import parseError from '@state/parse-error';
@@ -121,6 +122,7 @@ class CnsClass extends PureComponent {
 
 export default compose(
   graphql(UpdateTags, { name: 'updateTags' }),
+  graphql(DeleteTag, { name: 'deleteTag' }),
   graphql(GetAccount, {
     props: ({ data }) => {
       const { account = {} } = data;
@@ -166,17 +168,19 @@ export default compose(
       const toggling = get(values, `cns-${instance.id}-toggling`, false);
       const removing = get(values, `cns-${instance.id}-removing`, false);
       const enabled = get(values, `cns-${instance.id}-enabled`, undefined);
+      const svcs = get(values, `cns-${instance.id}-svcs`, undefined);
+
       const togglingError = get(
         values,
         `cns-${instance.id}-toggling-error`,
         null
       );
+
       const removingError = get(
         values,
         `cns-${instance.id}-removing-error`,
         null
       );
-      const svcs = get(values, `cns-${instance.id}-svcs`, undefined);
 
       if (isBoolean(enabled)) {
         disabled = !enabled;
@@ -232,7 +236,7 @@ export default compose(
         mutationError: togglingError || removingError
       };
     },
-    (dispatch, { instance = {}, refetch, updateTags }) => ({
+    (dispatch, { instance = {}, refetch, updateTags, deleteTag }) => ({
       reset: () => {
         dispatch([
           destroyValue({ name: `cns-${instance.id}-removing` }),
@@ -253,19 +257,27 @@ export default compose(
           set({ name: `cns-${instance.id}-svcs`, value })
         ]);
 
-        const [err] = await intercept(
-          updateTags({
-            variables: {
-              id: instance.id,
-              tags: [
-                {
-                  name: 'triton.cns.services',
-                  value: value.join(',')
-                }
-              ]
-            }
-          })
-        );
+        const newValue = value.join(',');
+        const mutation = !newValue.length
+          ? deleteTag({
+              variables: {
+                id: instance.id,
+                name: 'triton.cns.services'
+              }
+            })
+          : updateTags({
+              variables: {
+                id: instance.id,
+                tags: [
+                  {
+                    name: 'triton.cns.services',
+                    value: value.join(',')
+                  }
+                ]
+              }
+            });
+
+        const [err] = await intercept(mutation);
 
         const setLoadingFalse = set({
           name: `cns-${instance.id}-removing`,
