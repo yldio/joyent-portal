@@ -1,13 +1,7 @@
 import React from 'react';
 
 export default props => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={42}
-    height={42}
-    viewBox="0 0 42 42"
-    {...props}
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42" {...props}>
     <title>Artboard 1 copy 17</title>
     <path
       fill="#1B3240"

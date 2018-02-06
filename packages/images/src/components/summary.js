@@ -22,14 +22,7 @@ import {
   DotIcon
 } from 'joyent-ui-toolkit';
 
-import {
-  Linux,
-  Freebsd,
-  Illumos,
-  Smart,
-  Windows,
-  Placeholder
-} from 'joyent-logo-assets';
+import { ImageType, OS } from '../constants';
 
 const { SmallOnly, Medium } = QueryBreakpoints;
 
@@ -51,14 +44,6 @@ const GreyLabel = styled(Label)`
   padding-right: ${remcalc(3)};
 `;
 
-const ImageType = {
-  ZONE_DATASET: 'Hardware Virtual Machine',
-  LX_DATASET: 'Infrastructure Container',
-  ZVOL: 'Hardware Virtual Machine',
-  DOCKER: 'Docker Container',
-  OTHER: 'Hardware Virtual Machine'
-};
-
 const StateColor = {
   ACTIVE: 'green',
   UNACTIVATED: 'grey',
@@ -67,15 +52,7 @@ const StateColor = {
   FAILED: 'red'
 };
 
-const OS = {
-  SMARTOS: Smart,
-  LINUX: Linux,
-  WINDOWS: Windows,
-  BSD: Freebsd,
-  ILLUMOS: Illumos,
-  OTHER: Placeholder
-};
-
+// eslint-disable-next-line camelcase
 export const Meta = ({ name, version, type, published_at, state, os }) => (
   <Fragment>
     <Flex alignCenter>

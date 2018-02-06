@@ -12,8 +12,7 @@ const NoPackagesTitle = styled(H3)`
 `;
 
 const FullWidthCard = styled(Card)`
-  width: calc(100% - 2px);
-  border-top: none;
+  width: 100%;
 `;
 
 export default ({ children }) => (
