@@ -21,7 +21,7 @@ export default ({ children }) => (
     <Padding all={6}>
       <Flex alignCenter justifyCenter column>
         <Margin bottom={2}>
-          <img src={NoPackages} alt="Sad Animal" />
+          <NoPackages />
         </Margin>
         <NoPackagesTitle>{children}</NoPackagesTitle>
       </Flex>
