@@ -6,7 +6,6 @@ import remcalc from 'remcalc';
 import is from 'styled-is';
 import titleCase from 'title-case';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
-import copy from 'clipboard-copy';
 
 import {
   Card,
@@ -14,7 +13,6 @@ import {
   Divider,
   ResetIcon,
   Button,
-  FormLabel,
   Input,
   H2,
   Label,
@@ -23,10 +21,7 @@ import {
   DeleteIcon,
   StartIcon,
   StopIcon,
-  TooltipContainer,
-  TooltipTarget,
-  Tooltip,
-  ClipboardIcon
+  CopiableField
 } from 'joyent-ui-toolkit';
 
 const { SmallOnly, Medium } = QueryBreakpoints;
@@ -55,24 +50,6 @@ const Flex = styled.div`
   }
 `;
 
-const InputIconWrapper = styled.div`
-  display: flex;
-  margin-bottom: ${remcalc(10)};
-  align-items: center;
-
-  ${is('noMargin')`
-    margin-bottom: ${remcalc(0)};
-  `};
-
-  input {
-    padding-right: ${remcalc(30)};
-  }
-
-  div {
-    position: relative;
-    left: ${remcalc(-26)};
-  }
-`;
 
 const VerticalDivider = styled.div`
   width: ${remcalc(1)};
@@ -87,61 +64,6 @@ const VerticalDivider = styled.div`
   }
 `;
 
-const ClipboardIconActionable = styled(ClipboardIcon)`
-  cursor: pointer;
-`;
-
-export class CopyToClipboardTooltip extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      copied: false
-    };
-  }
-
-  handleClick = () => {
-    const { children: text } = this.props;
-
-    copy(text);
-
-    this.setState(
-      {
-        copied: true
-      },
-      () => {
-        setTimeout(() => {
-          this.setState({
-            copied: false
-          });
-        }, 4000);
-      }
-    );
-  };
-
-  render = () => (
-    <TooltipContainer hoverable>
-      <TooltipTarget>
-        <ClipboardIconActionable onClick={this.handleClick} />
-      </TooltipTarget>
-      <Tooltip placement="top" success={Boolean(this.state.copied)}>
-        {this.state.copied ? 'Copied To Clipboard' : 'Copy To Clipboard'}
-      </Tooltip>
-    </TooltipContainer>
-  );
-}
-
-export const CopiableField = ({ md, label, text, ...rest }) => (
-  <Row>
-    <Col xs={12} md={md || 7}>
-      {label ? <FormLabel>{label}</FormLabel> : null}
-      <InputIconWrapper {...rest}>
-        <Input {...rest} monospace onBlur={null} fluid value={text} />
-        <CopyToClipboardTooltip>{text}</CopyToClipboardTooltip>
-      </InputIconWrapper>
-    </Col>
-  </Row>
-);
 
 export const Meta = ({
   created,
