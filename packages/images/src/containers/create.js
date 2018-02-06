@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default () => (<p>hello world</p>);
+export default () => <p>hello world</p>;

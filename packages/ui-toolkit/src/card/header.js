@@ -29,6 +29,14 @@ const BaseHeader = BaseCard.extend`
     `};
   `};
 
+  ${is('white')`
+    color: ${props => props.theme.text};
+    -webkit-text-fill-color: currentcolor;
+    background: ${props => props.theme.white};
+    box-shadow: none;
+    border-color: ${props => props.theme.grey};;
+  `};
+
   ${is('disabled')`
     color: ${props => props.theme.text};
     -webkit-text-fill-color: currentcolor;

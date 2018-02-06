@@ -11,6 +11,10 @@ const Divider = styled(Row)`
   ${is('transparent')`
     background-color: transparent;
   `};
+
+  ${is('vertical')`
+    transform: rotate(90deg);
+  `};
 `;
 
 export default Baseline(Divider);

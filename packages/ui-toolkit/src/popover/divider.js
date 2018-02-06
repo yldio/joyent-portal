@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import remcalc from 'remcalc';
+import is from 'styled-is';
 
 export default styled.div`
   width: calc(100% + ${remcalc(36)});
