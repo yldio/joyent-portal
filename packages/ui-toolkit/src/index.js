@@ -43,7 +43,8 @@ export {
   RadioList,
   Select,
   Toggle,
-  InputDropdown
+  InputDropdown,
+  CopiableField
 } from './form';
 
 export {

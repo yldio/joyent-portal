@@ -9,4 +9,5 @@ export { default as FormMeta } from './meta';
 export { default as Radio, RadioList } from './radio';
 export { default as Select } from './select';
 export { default as Toggle } from './toggle';
+export { default as CopiableField } from './copiable-field';
 export { default as InputDropdown } from './input-dropdown';

@@ -4,7 +4,6 @@ import remcalc from 'remcalc';
 import { Margin, Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import { Field } from 'redux-form';
-import { CopiableField } from '@components/instances/summary';
 
 import {
   P,
@@ -19,7 +18,8 @@ import {
   FormGroup,
   FormLabel,
   PublicIcon,
-  PrivateIcon
+  PrivateIcon,
+  CopiableField
 } from 'joyent-ui-toolkit';
 
 import Tag from '@components/tags';
@@ -142,8 +142,7 @@ export const Hostname = ({
             top={0.5}
             bottom={
               values.length !== 1 && values.length !== i + 1 ? '1' : undefined
-            }
-          >
+            }>
             {copy ? (
               <CopiableField disabled md={12} text={value} />
             ) : (
@@ -225,8 +224,7 @@ export default ({
           copy={copy}
           services={services}
           hostnames={hostnames.filter(({ service }) => service)}
-          onRemoveService={onRemoveService}
-        >
+          onRemoveService={onRemoveService}>
           {children}
         </CnsHostnames>
       </Margin>
