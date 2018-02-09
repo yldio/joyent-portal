@@ -106,10 +106,12 @@ const CreateInstance = ({ step, disabled, handleSubmit, history, match }) => (
 export default compose(
   graphql(CreateInstanceMutation, { name: 'createInstance' }),
   connect(({ form, values }, { match }) => {
+    const FORM_NAME = 'create-instance-name';
     const step = get(match, 'params.step', 'name');
+    const nameFilled = get(form, `${FORM_NAME}.values.name`, '');
 
     const disabled = ['name', 'image', 'package', 'networks'].some(
-      step => !get(values, `create-instance-${step}-proceeded`, false)
+      step => !get(values, `create-instance-${step}-proceeded`, false) || !nameFilled.length
     );
 
     if (disabled) {
