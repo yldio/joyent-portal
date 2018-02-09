@@ -34,9 +34,7 @@ export const Summary = ({
   rebooting,
   removing
 }) => {
-  const { name } = instance || {};
-
-  const _loading = loading && !name && <StatusLoader />;
+  const _loading = loading || !instance ? <StatusLoader /> : null;
   const _summary = !_loading &&
     instance && (
       <SummaryScreen
