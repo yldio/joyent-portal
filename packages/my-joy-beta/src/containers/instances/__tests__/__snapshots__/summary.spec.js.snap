@@ -1,6 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Summary /> without throwing 1`] = `
+.c2 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c3 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c4 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: 0.375rem;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
 .c0 {
   margin-right: auto;
   margin-left: auto;
@@ -8,6 +90,27 @@ exports[`renders <Summary /> without throwing 1`] = `
   width: 100%;
   max-width: 62.5rem;
   padding-bottom: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media only screen and (min-width:48em) {
@@ -37,7 +140,43 @@ exports[`renders <Summary /> without throwing 1`] = `
 
 <div
   className="c0"
-/>
+>
+  <div
+    className="c1"
+  >
+    <svg
+      height="10"
+      width="28"
+    >
+      <rect
+        className="c2"
+        height="6"
+        width="6"
+        x="2"
+        y="2"
+      />
+      <rect
+        className="c3"
+        height="6"
+        width="6"
+        x="11"
+        y="2"
+      />
+      <rect
+        className="c4"
+        height="6"
+        width="6"
+        x="20"
+        y="2"
+      />
+    </svg>
+    <p
+      className="c5"
+    >
+      Loading...
+    </p>
+  </div>
+</div>
 `;
 
 exports[`renders <Summary loading /> without throwing 1`] = `
@@ -220,139 +359,45 @@ exports[`renders <Summary loading /> without throwing 1`] = `
 `;
 
 exports[`renders <Summary loadingError /> without throwing 1`] = `
-.c1 {
-  margin-bottom: 1.5rem;
-}
-
-.c6 {
-  color: rgba(73,73,73,1);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-  line-height: 0.875rem;
-  font-size: 0.8125rem;
-}
-
-.c6 + p,
-.c6 + small,
-.c6 + h1,
-.c6 + h2,
-.c6 + label,
-.c6 + h3,
-.c6 + h4,
-.c6 + h5,
-.c6 + div,
-.c6 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
-}
-
-.c5 {
-  color: rgba(73,73,73,1);
-  font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
 .c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  background-color: rgb(255,255,255);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-  border: 0.0625rem solid rgb(216,216,216);
-  border-radius: 0.1875rem;
-  width: 100%;
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
 .c3 {
-  border-radius: 0.1875rem 0 0 0.1875rem;
-  margin: -0.0625rem 0 -0.0625rem -0.0625rem;
-  min-width: 0.75rem;
-  min-height: 100%;
-  background-color: rgb(0,152,88);
-  background-color: rgb(210,67,58);
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .c4 {
-  padding: 1.125rem 1.125rem;
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 56rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 59rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-}
-
-<div
-  className="c0"
->
-  <div
-    className="c1"
-  >
-    <div
-      className="c2"
-    >
-      <div
-        className="c3"
-      />
-      <div
-        className="c4"
-      >
-        <h4
-          className="c5"
-        >
-          Ooops!
-        </h4>
-        <p
-          className="c6"
-        >
-          An error occurred while loading your instance summary
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`renders <Summary mutationError /> without throwing 1`] = `
 .c5 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
-  line-height: 0.875rem;
-  font-size: 0.8125rem;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: 0.375rem;
 }
 
 .c5 + p,
@@ -368,6 +413,34 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
   padding-bottom: 2.25rem;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
 .c0 {
   margin-right: auto;
   margin-left: auto;
@@ -375,9 +448,231 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
   width: 100%;
   max-width: 62.5rem;
   padding-bottom: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (min-width:48em) {
+  .c0 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c0 {
+    width: 56rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c0 {
+    width: 59rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <svg
+      height="10"
+      width="28"
+    >
+      <rect
+        className="c2"
+        height="6"
+        width="6"
+        x="2"
+        y="2"
+      />
+      <rect
+        className="c3"
+        height="6"
+        width="6"
+        x="11"
+        y="2"
+      />
+      <rect
+        className="c4"
+        height="6"
+        width="6"
+        x="20"
+        y="2"
+      />
+    </svg>
+    <p
+      className="c5"
+    >
+      Loading...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders <Summary mutationError /> without throwing 1`] = `
+.c2 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c3 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .c4 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: 0.375rem;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c10 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  line-height: 0.875rem;
+  font-size: 0.8125rem;
+}
+
+.c10 + p,
+.c10 + small,
+.c10 + h1,
+.c10 + h2,
+.c10 + label,
+.c10 + h3,
+.c10 + h4,
+.c10 + h5,
+.c10 + div,
+.c10 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c0 {
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c9 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -385,7 +680,7 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c1 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -398,7 +693,7 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
   width: 100%;
 }
 
-.c2 {
+.c7 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
@@ -407,7 +702,7 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
   background-color: rgb(210,67,58);
 }
 
-.c3 {
+.c8 {
   padding: 1.125rem 1.125rem;
 }
 
@@ -442,19 +737,54 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
   <div
     className="c1"
   >
+    <svg
+      height="10"
+      width="28"
+    >
+      <rect
+        className="c2"
+        height="6"
+        width="6"
+        x="2"
+        y="2"
+      />
+      <rect
+        className="c3"
+        height="6"
+        width="6"
+        x="11"
+        y="2"
+      />
+      <rect
+        className="c4"
+        height="6"
+        width="6"
+        x="20"
+        y="2"
+      />
+    </svg>
+    <p
+      className="c5"
+    >
+      Loading...
+    </p>
+  </div>
+  <div
+    className="c6"
+  >
     <div
-      className="c2"
+      className="c7"
     />
     <div
-      className="c3"
+      className="c8"
     >
       <h4
-        className="c4"
+        className="c9"
       >
         Ooops!
       </h4>
       <p
-        className="c5"
+        className="c10"
       >
         some mutation error
       </p>
@@ -464,6 +794,88 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
 `;
 
 exports[`renders <Summary starting stopping rebooting removing /> without throwing 1`] = `
+.c2 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c3 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c4 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c5 {
+  color: rgba(73,73,73,1);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 0;
+  margin-left: 0.375rem;
+}
+
+.c5 + p,
+.c5 + small,
+.c5 + h1,
+.c5 + h2,
+.c5 + label,
+.c5 + h3,
+.c5 + h4,
+.c5 + h5,
+.c5 + div,
+.c5 + span {
+  padding-bottom: 2.25rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
 .c0 {
   margin-right: auto;
   margin-left: auto;
@@ -471,6 +883,27 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   width: 100%;
   max-width: 62.5rem;
   padding-bottom: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media only screen and (min-width:48em) {
@@ -500,7 +933,43 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 <div
   className="c0"
-/>
+>
+  <div
+    className="c1"
+  >
+    <svg
+      height="10"
+      width="28"
+    >
+      <rect
+        className="c2"
+        height="6"
+        width="6"
+        x="2"
+        y="2"
+      />
+      <rect
+        className="c3"
+        height="6"
+        width="6"
+        x="11"
+        y="2"
+      />
+      <rect
+        className="c4"
+        height="6"
+        width="6"
+        x="20"
+        y="2"
+      />
+    </svg>
+    <p
+      className="c5"
+    >
+      Loading...
+    </p>
+  </div>
+</div>
 `;
 
 exports[`renders <Summary starting stopping rebooting removing /> without throwing 2`] = `
