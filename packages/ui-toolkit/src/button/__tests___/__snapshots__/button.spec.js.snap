@@ -3,6 +3,7 @@
 exports[`Button Default Button 1`] = `
 .c3 {
   background-color: transparent;
+  -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
@@ -13,6 +14,7 @@ exports[`Button Default Button 1`] = `
 }
 
 .c2:hover {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -38,6 +40,7 @@ exports[`Button Default Button 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -46,6 +49,7 @@ exports[`Button Default Button 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -61,6 +65,7 @@ exports[`Button Default Button 1`] = `
 
 .c0:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -96,6 +101,7 @@ exports[`Button Default Button 1`] = `
 exports[`Button Disabled Button 1`] = `
 .c3 {
   background-color: transparent;
+  -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
@@ -109,10 +115,12 @@ exports[`Button Disabled Button 1`] = `
 }
 
 .c2:hover {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2:hover {
+  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
@@ -138,6 +146,7 @@ exports[`Button Disabled Button 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -146,6 +155,7 @@ exports[`Button Disabled Button 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -166,6 +176,7 @@ exports[`Button Disabled Button 1`] = `
 
 .c0:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -219,6 +230,7 @@ exports[`Button Disabled Button 1`] = `
 exports[`Button Error Button 1`] = `
 .c3 {
   background-color: transparent;
+  -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
@@ -229,6 +241,7 @@ exports[`Button Error Button 1`] = `
 }
 
 .c2:hover {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -254,6 +267,7 @@ exports[`Button Error Button 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -262,6 +276,7 @@ exports[`Button Error Button 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -281,6 +296,7 @@ exports[`Button Error Button 1`] = `
 
 .c0:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -335,6 +351,7 @@ exports[`Button Error Button 1`] = `
 exports[`Button Loading Button 1`] = `
 .c3 {
   background-color: transparent;
+  -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
@@ -348,10 +365,12 @@ exports[`Button Loading Button 1`] = `
 }
 
 .c2:hover {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
 .c2:hover {
+  -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
@@ -377,6 +396,7 @@ exports[`Button Loading Button 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -385,6 +405,7 @@ exports[`Button Loading Button 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -405,6 +426,7 @@ exports[`Button Loading Button 1`] = `
 
 .c0:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -458,6 +480,7 @@ exports[`Button Loading Button 1`] = `
 exports[`Button Secondary Button 1`] = `
 .c3 {
   background-color: transparent;
+  -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
@@ -470,6 +493,7 @@ exports[`Button Secondary Button 1`] = `
 }
 
 .c2:hover {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -495,6 +519,7 @@ exports[`Button Secondary Button 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -503,6 +528,7 @@ exports[`Button Secondary Button 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -522,6 +548,7 @@ exports[`Button Secondary Button 1`] = `
 
 .c0:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);

@@ -132,6 +132,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -188,6 +189,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -196,6 +198,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -231,6 +234,7 @@ exports[`renders <Summary /> without throwing 1`] = `
 
 .c18:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -315,6 +319,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -323,6 +328,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -356,6 +362,7 @@ exports[`renders <Summary /> without throwing 1`] = `
 
 .c21:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -440,6 +447,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -448,6 +456,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -488,6 +497,7 @@ exports[`renders <Summary /> without throwing 1`] = `
 
 .c23:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -591,6 +601,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -599,6 +610,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -637,6 +649,7 @@ exports[`renders <Summary /> without throwing 1`] = `
 
 .c24:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -729,6 +742,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -739,6 +753,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -861,6 +876,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -1931,6 +1947,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -1987,6 +2004,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -1995,6 +2013,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -2030,6 +2049,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
 
 .c18:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -2114,6 +2134,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -2122,6 +2143,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -2155,6 +2177,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
 
 .c21:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -2239,6 +2262,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -2247,6 +2271,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -2277,6 +2302,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
 
 .c22:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -2344,6 +2370,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -2352,6 +2379,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -2380,6 +2408,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
 
 .c23:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -2447,6 +2476,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -2455,6 +2485,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -2490,6 +2521,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
 
 .c25:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -2576,6 +2608,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -2584,6 +2617,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -2617,6 +2651,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
 
 .c26:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -2692,6 +2727,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -2702,6 +2738,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -3993,6 +4030,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -4049,6 +4087,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -4057,6 +4096,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -4092,6 +4132,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 
 .c18:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -4176,6 +4217,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -4184,6 +4226,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -4217,6 +4260,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 
 .c21:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -4301,6 +4345,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -4309,6 +4354,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -4339,6 +4385,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 
 .c22:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -4406,6 +4453,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -4414,6 +4462,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -4442,6 +4491,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 
 .c23:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -4509,6 +4559,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -4517,6 +4568,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -4552,6 +4604,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 
 .c25:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -4638,6 +4691,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -4646,6 +4700,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -4679,6 +4734,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 
 .c26:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -4754,6 +4810,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -4764,6 +4821,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -6055,6 +6113,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -6164,6 +6223,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -6172,6 +6232,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -6207,6 +6268,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c18:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -6291,6 +6353,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -6299,6 +6362,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -6332,6 +6396,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c25:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -6416,6 +6481,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -6424,6 +6490,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -6464,6 +6531,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c27:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -6567,6 +6635,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -6575,6 +6644,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -6613,6 +6683,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c28:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -6705,6 +6776,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -6715,6 +6787,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -6837,6 +6910,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -7959,6 +8033,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -8015,6 +8090,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -8023,6 +8099,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -8058,6 +8135,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
 
 .c18:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -8142,6 +8220,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -8150,6 +8229,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -8183,6 +8263,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
 
 .c21:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -8267,6 +8348,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -8275,6 +8357,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -8305,6 +8388,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
 
 .c22:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -8372,6 +8456,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -8380,6 +8465,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -8408,6 +8494,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
 
 .c23:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -8475,6 +8562,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -8483,6 +8571,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -8518,6 +8607,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
 
 .c25:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -8604,6 +8694,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -8612,6 +8703,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -8645,6 +8737,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
 
 .c26:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -8720,6 +8813,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -8730,6 +8824,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -8853,6 +8948,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -9923,6 +10019,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -9979,6 +10076,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -9987,6 +10085,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -10022,6 +10121,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
 
 .c22:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -10106,6 +10206,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -10114,6 +10215,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -10147,6 +10249,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
 
 .c23:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -10231,6 +10334,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -10239,6 +10343,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -10269,6 +10374,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
 
 .c18:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -10336,6 +10442,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -10344,6 +10451,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -10372,6 +10480,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
 
 .c21:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -10439,6 +10548,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -10447,6 +10557,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -10482,6 +10593,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
 
 .c25:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -10568,6 +10680,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -10576,6 +10689,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -10609,6 +10723,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
 
 .c26:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -10684,6 +10799,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -10694,6 +10810,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -10817,6 +10934,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -11887,6 +12005,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -11943,6 +12062,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -11951,6 +12071,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -11986,6 +12107,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
 
 .c18:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -12070,6 +12192,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -12078,6 +12201,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -12111,6 +12235,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
 
 .c21:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -12195,6 +12320,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -12203,6 +12329,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -12243,6 +12370,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
 
 .c23:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -12346,6 +12474,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -12354,6 +12483,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -12392,6 +12522,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
 
 .c24:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -12484,6 +12615,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
 }
 
@@ -12494,6 +12626,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -12617,6 +12750,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
