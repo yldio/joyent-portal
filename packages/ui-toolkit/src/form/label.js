@@ -11,15 +11,15 @@ const StyledLabel = Label.extend`
   white-space: pre;
   font-size: ${remcalc(13)};
 
-  ${is('disabled') `
+  ${is('disabled')`
     color:  ${props => props.theme.grey};
   `};
 
-  ${is('big') `
+  ${is('big')`
     font-size: ${remcalc(15)};
   `};
 
-  ${is('normal') `
+  ${is('normal')`
       font-weight: ${props => props.theme.font.weight.normal};
   `};
 `;

@@ -46,7 +46,7 @@ export const BaseCard = styled.div`
 
   ${is('radius')`
     border-radius: ${remcalc(4)};
-  `}
+  `};
 
   ${is('shadow')`
     /* primary */
