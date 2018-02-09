@@ -9,6 +9,7 @@ exports[`renders <Menu links /> without throwing 1`] = `
 
 .c6 {
   background-color: transparent;
+  -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
@@ -19,6 +20,7 @@ exports[`renders <Menu links /> without throwing 1`] = `
 }
 
 .c5:hover {
+  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -39,6 +41,7 @@ exports[`renders <Menu links /> without throwing 1`] = `
 
 .c4 {
   color: rgb(70,70,70);
+  -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }

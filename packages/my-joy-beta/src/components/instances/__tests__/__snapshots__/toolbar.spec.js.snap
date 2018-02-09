@@ -35,6 +35,7 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -83,6 +84,7 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -91,6 +93,7 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -116,6 +119,7 @@ exports[`renders <Toolbar /> without throwing 1`] = `
 
 .c8:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -155,6 +159,7 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -230,6 +235,7 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
   max-width: 22.1875rem;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -365,6 +371,7 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -413,6 +420,7 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -421,6 +429,7 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -446,6 +455,7 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
 
 .c8:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -485,6 +495,7 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -560,6 +571,7 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
   max-width: 22.1875rem;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -695,6 +707,7 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -743,6 +756,7 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -751,6 +765,7 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -781,6 +796,7 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
 
 .c8:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -837,6 +853,7 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -912,6 +929,7 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
   max-width: 22.1875rem;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -1047,6 +1065,7 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -1095,6 +1114,7 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -1103,6 +1123,7 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -1128,6 +1149,7 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
 
 .c8:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -1167,6 +1189,7 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -1242,6 +1265,7 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
   max-width: 22.1875rem;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -1377,6 +1401,7 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -1425,6 +1450,7 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -1433,6 +1459,7 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -1458,6 +1485,7 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
 
 .c8:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -1497,6 +1525,7 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -1572,6 +1601,7 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
   max-width: 22.1875rem;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -1707,6 +1737,7 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -1755,6 +1786,7 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -1763,6 +1795,7 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -1788,6 +1821,7 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
 
 .c8:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -1827,6 +1861,7 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -1902,6 +1937,7 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
   max-width: 22.1875rem;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -2037,6 +2073,7 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -2085,6 +2122,7 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -2093,6 +2131,7 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  -webkit-text-decoration: none;
   text-decoration: none;
   white-space: nowrap;
   vertical-align: middle;
@@ -2118,6 +2157,7 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
 
 .c8:focus {
   outline: 0;
+  -webkit-text-decoration: none;
   text-decoration: none;
   background-color: rgb(59,70,204);
   border-color: rgb(45,56,132);
@@ -2157,6 +2197,7 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -2235,6 +2276,7 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   color: rgb(216,216,216);
   cursor: not-allowed;
   max-width: 22.1875rem;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
