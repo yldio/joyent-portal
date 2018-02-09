@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import styled, { withTheme } from 'styled-components';
 import { Margin, Padding } from 'styled-components-spacing';
 import remcalc from 'remcalc';
-import is from 'styled-is';
 import titleCase from 'title-case';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 
@@ -13,7 +12,6 @@ import {
   Divider,
   ResetIcon,
   Button,
-  Input,
   H2,
   Label,
   QueryBreakpoints,
