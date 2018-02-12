@@ -114,6 +114,7 @@ const style = css`
 
   ${is('fluid')`
     width: 100%;
+    min-width: 100%;
   `};
 
   ${is('xSmall')`

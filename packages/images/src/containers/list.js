@@ -32,7 +32,8 @@ export const List = ({
   allImages = [],
   loading = false,
   error = null,
-  history
+  history,
+  typeValue
 }) => (
   <ViewContainer main>
     <Divider height={remcalc(30)} transparent />
@@ -63,7 +64,11 @@ export const List = ({
           form={TOGGLE_FORM_DETAILS}
           initialValues={{ 'image-type': 'all' }}
         >
-          {props => (allImages.length ? <Filters {...props} /> : null)}
+          {props =>
+            allImages.length ? (
+              <Filters selected={typeValue} {...props} />
+            ) : null
+          }
         </ReduxForm>
       </Margin>
       <Row>
@@ -124,7 +129,8 @@ export default compose(
             return true;
         }
       }),
-      allImages: images
+      allImages: images,
+      typeValue
     };
   })
 )(List);
