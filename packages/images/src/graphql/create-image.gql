@@ -1,0 +1,18 @@
+mutation createImage(
+  $machine: ID!
+  $name: String!
+  $version: String!
+  $description: String
+  $tags: [KeyValueInput]
+) {
+  createImageFromMachine(
+    machine: $machine
+    name: $name
+    version: $version
+    description: $description
+    tags: $tags
+  ) {
+    id
+    name
+  }
+}

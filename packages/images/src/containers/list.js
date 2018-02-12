@@ -20,10 +20,8 @@ import {
 
 import ToolbarForm from '@components/toolbar';
 import Empty from '@components/empty';
-
-import { ImageType } from '../constants';
+import { ImageType } from '@root/constants';
 import ListImages from '@graphql/list-images.gql';
-
 import { Image, Filters } from '@components/image';
 
 const TOGGLE_FORM_DETAILS = 'images-list-toggle';
@@ -54,7 +52,7 @@ export const List = ({
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>
-            An error occurred while loading your instances
+            An error occurred while loading your images
           </MessageDescription>
         </Message>
       </Margin>
@@ -94,7 +92,11 @@ export default compose(
   }),
   connect(({ form, values }, { index, error, images = [] }) => {
     const filter = get(form, `${MENU_FORM_DETAILS}.values.filter`, false);
-    const typeValue = get(form, `${TOGGLE_FORM_DETAILS}.values.image-type`, 'all');
+    const typeValue = get(
+      form,
+      `${TOGGLE_FORM_DETAILS}.values.image-type`,
+      'all'
+    );
 
     const virtual = Object.keys(ImageType).filter(
       i => ImageType[i] === 'Hardware Virtual Machine'

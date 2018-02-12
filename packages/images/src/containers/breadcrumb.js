@@ -8,6 +8,7 @@ import { Breadcrumb, BreadcrumbItem } from 'joyent-ui-toolkit';
 export default ({ match }) => {
   const image = get(match, 'params.image');
   const create = get(match, 'params.step');
+  const instance = get(match, 'params.instance');
 
   const links = [
     {
@@ -16,10 +17,14 @@ export default ({ match }) => {
     }
   ]
     .concat(
-    create && [
+      create && [
         {
           name: 'Create Image',
           pathname: `/~create`
+        },
+        {
+          name: instance,
+          pathname: `/~create/${instance}`
         }
       ]
     )

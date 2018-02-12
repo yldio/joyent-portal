@@ -14,6 +14,7 @@ export const ImageType = {
   DOCKER: 'Docker Container',
   OTHER: 'Hardware Virtual Machine'
 };
+
 export const OS = {
   SMARTOS: Smart,
   LINUX: Linux,
@@ -29,4 +30,4 @@ export const Forms = {
   FORM_DETAILS: 'CREATE-IMAGE-DETAILS',
   CREATE_FORM: 'CREATE-IMAGE',
   CREATE_TAGS: 'CREATE-IMAGE-TAGS'
-}
+};

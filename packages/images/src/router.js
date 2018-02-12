@@ -16,13 +16,13 @@ export default () => (
     <PageContainer>
       {/* Breadcrumb */}
       <Switch>
-        <Route path="/~create/:step" exact component={Breadcrumb} />
+        <Route path="/~create/:instance/:step?" exact component={Breadcrumb} />
         <Route path="/:image?" component={Breadcrumb} />
       </Switch>
       {/* Menu */}
       <Switch>
         <Route path="/:image/:section?" component={Menu} />
-        <Route path="/~create/:step" component={() => {}} />
+        <Route path="/~create/:instance/:step?" component={() => {}} />
       </Switch>
       {/* Images */}
       <Switch>
@@ -33,18 +33,20 @@ export default () => (
           path="/:image"
           exact
           component={({ match }) => (
-              <Redirect to={`/${get(match, 'params.image')}/summary`} />
+            <Redirect to={`/${get(match, 'params.image')}/summary`} />
           )}
         />
       </Switch>
       {/* Create Image */}
       <Switch>
         <Route
-          path="/~create/"
+          path="/~create/:instance?"
           exact
-          component={() => <Redirect to="/~create/name" />}
+          component={({ match }) => (
+            <Redirect to={`/~create/${match.params.instance}/name`} />
+          )}
         />
-        <Route path="/~create/:step" component={Create} />
+        <Route path="/~create/:instance/:step" component={Create} />
       </Switch>
       <Footer />
     </PageContainer>

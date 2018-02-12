@@ -22,7 +22,7 @@ import {
   DotIcon
 } from 'joyent-ui-toolkit';
 
-import { ImageType, OS } from '../constants';
+import { ImageType, OS } from '@root/constants';
 
 const { SmallOnly, Medium } = QueryBreakpoints;
 
