@@ -22,3 +22,11 @@ export const OS = {
   ILLUMOS: Illumos,
   OTHER: Placeholder
 };
+
+export const Forms = {
+  FORM_TAGS_CREATE: 'CREATE-IMAGE-TAGS-ADD',
+  FORM_TAGS_EDIT: i => `CREATE-IMAGE-TAGS-EDIT-${i}`,
+  FORM_DETAILS: 'CREATE-IMAGE-DETAILS',
+  CREATE_FORM: 'CREATE-IMAGE',
+  CREATE_TAGS: 'CREATE-IMAGE-TAGS'
+}

@@ -8,18 +8,17 @@ import { connect } from 'react-redux';
 import intercept from 'apr-intercept';
 import get from 'lodash.get';
 import punycode from 'punycode';
+import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 
 import { NameIcon, H3, Button, H4, P } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-image/title';
 import Animated from '@containers/create-image/animated';
-import Name from '@components/create-image/name';
+import Details from '@components/create-image/details';
 import Description from '@components/description';
 import GetRandomName from '@graphql/get-random-name.gql';
 import { client } from '@state/store';
-import { Row, Col } from 'joyent-react-styled-flexboxgrid';
-
-const FORM_NAME = 'create-image-details';
+import { Forms } from '../../constants';
 
 const NameContainer = ({
     expanded,
@@ -51,7 +50,7 @@ const NameContainer = ({
       </Description>
             ) : null}
             <ReduxForm
-                form={FORM_NAME}
+                form={Forms.FORM_DETAILS}
                 destroyOnUnmount={false}
                 forceUnregisterOnUnmount={true}
                 onSubmit={handleNext}
@@ -60,7 +59,7 @@ const NameContainer = ({
             >
                 {props =>
                     expanded ? (
-                        <Name
+                        <Details
                             {...props}
                             placeholderName={placeholderName}
                             randomizing={randomizing}
@@ -69,9 +68,14 @@ const NameContainer = ({
                     ) : name ? (
                         <Margin top={3}>
                             <H3 bold noMargin>{name}</H3>
-                            <Margin top={2}><H4 bold noMargin>{version}</H4></Margin>
-                                <Row>
-                                    <Col xs={12} sm={8}><Margin top={1}><P>{description}</P></Margin></Col></Row>
+                            {version ? <Margin top={2}><H4 bold noMargin>{version}</H4></Margin> : null}
+                            {description ? <Row>
+                                <Col xs={12} sm={8}>
+                                    <Margin top={1}>
+                                        <P>{description}</P>
+                                    </Margin>
+                                </Col>
+                            </Row> : null}
                         </Margin>
                     ) : null
                 }
@@ -80,13 +84,13 @@ const NameContainer = ({
                 <Margin top={4} bottom={7}>
                     <Button type="button" disabled={!name} onClick={handleNext}>
                         Next
-        </Button>
+                    </Button>
                 </Margin>
             ) : proceeded ? (
                 <Margin top={4} bottom={7}>
                     <Button type="button" onClick={handleEdit} secondary>
                         Edit
-        </Button>
+                    </Button>
                 </Margin>
             ) : null}
         </Fragment>
@@ -102,11 +106,11 @@ export default compose(
     }),
     connect(
         ({ form, values }, ownProps) => {
-            const name = get(form, `${FORM_NAME}.values.name`, '');
-            const version = get(form, `${FORM_NAME}.values.version`, '');
-            const description = get(form, `${FORM_NAME}.values.description`, '');
+            const name = get(form, `${Forms.FORM_DETAILS}.values.name`, '');
+            const version = get(form, `${Forms.FORM_DETAILS}.values.version`, '');
+            const description = get(form, `${Forms.FORM_DETAILS}.values.description`, '');
 
-            const proceeded = get(values, 'create-image-name-proceeded', false);
+            const proceeded = get(values, `${Forms.FORM_DETAILS}-proceeded`, false);
 
             const randomizing = get(
                 values,
@@ -143,7 +147,7 @@ export default compose(
                 }
             },
             handleNext: () => {
-                dispatch(set({ name: 'create-image-name-proceeded', value: true }));
+                dispatch(set({ name: `${Forms.FORM_DETAILS}-proceeded`, value: true }));
 
                 return history.push(`/~create/tag`);
             },
@@ -172,7 +176,7 @@ export default compose(
                 const { data } = res;
                 const { rndName } = data;
 
-                return dispatch(change(FORM_NAME, 'name', rndName));
+                return dispatch(change(Forms.FORM_DETAILS, 'name', rndName));
             }
         })
     )

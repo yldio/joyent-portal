@@ -21,11 +21,11 @@ import Tag from '@components/tags';
 import ToolbarForm from '@components/toolbar';
 import GetTags from '@graphql/get-tags.gql';
 
-const MENU_FORM_NAME = 'image-tags-list-menu';
+const MENU_FORM_DETAILS = 'image-tags-list-menu';
 
 export const Tags = ({ tags = [], loading = false, error = null }) => (
   <ViewContainer main>
-    <ReduxForm form={MENU_FORM_NAME}>
+    <ReduxForm form={MENU_FORM_DETAILS}>
       {props => (
         <Margin bottom="4">
           <ToolbarForm

@@ -9,28 +9,20 @@ import List from '@containers/list';
 import Summary from '@containers/summary';
 import Create from '@containers/create';
 import Tags from '@containers/tags';
+import Footer from '@components/footer';
 
 export default () => (
   <BrowserRouter>
     <PageContainer>
       {/* Breadcrumb */}
       <Switch>
-        <Route path="/~create" component={Breadcrumb} />
+        <Route path="/~create/:step" exact component={Breadcrumb} />
         <Route path="/:image?" component={Breadcrumb} />
       </Switch>
       {/* Menu */}
       <Switch>
-        <Route path="/~create" component={Menu} />
         <Route path="/:image/:section?" component={Menu} />
-      </Switch>
-      {/* Create Image */}
-      <Switch>
-        <Route
-          path="/~create/"
-          exact
-          component={() => <Redirect to="/~create/name" />}
-        />
-        <Route path="/~create/:step" component={Create} />
+        <Route path="/~create/:step" component={() => {}} />
       </Switch>
       {/* Images */}
       <Switch>
@@ -41,10 +33,20 @@ export default () => (
           path="/:image"
           exact
           component={({ match }) => (
-            <Redirect to={`/${get(match, 'params.image')}/summary`} />
+              <Redirect to={`/${get(match, 'params.image')}/summary`} />
           )}
         />
       </Switch>
+      {/* Create Image */}
+      <Switch>
+        <Route
+          path="/~create/"
+          exact
+          component={() => <Redirect to="/~create/name" />}
+        />
+        <Route path="/~create/:step" component={Create} />
+      </Switch>
+      <Footer />
     </PageContainer>
   </BrowserRouter>
 );

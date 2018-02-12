@@ -9,77 +9,73 @@ import { compose } from 'react-apollo';
 import get from 'lodash.get';
 import uniqBy from 'lodash.uniqby';
 import omit from 'lodash.omit';
-import remcalc from 'remcalc';
 
-import { ViewContainer, H2, Button, Divider } from 'joyent-ui-toolkit';
+import { ViewContainer, H2, Button } from 'joyent-ui-toolkit';
 
-import Name from '@containers/create-image/name';
+import Details from '@containers/create-image/details';
 import Tags from '@containers/create-image/tags';
-
-const CREATE_FORM = 'CREATE-IMAGE';
+import { Forms } from '../constants';
 
 const CreateImage = ({ step, history, location, match, disabled, handleSubmit }) => (
     <ViewContainer>
         <Margin top={4} bottom={4}>
             <H2>Create Image</H2>
         </Margin>
-        <Name
+        <Details
             history={history}
             match={match}
             step="name"
-            expanded={match.params.step === 'name'}
+            expanded={step === 'name'}
         />
         <Tags
             history={history}
             match={match}
             step="tag"
-            expanded={match.params.step === 'tag'}
-        />
-        <Margin top={7}><Divider height={remcalc(1)} /></Margin>
-        <Margin top={4} bottom={10}>
-            <ReduxForm form={CREATE_FORM} onSubmit={handleSubmit}>
+            expanded={step === 'tag'}>
+
+            <ReduxForm form={Forms.CREATE_FORM} onSubmit={handleSubmit} >
                 {({ handleSubmit, submitting }) => (
                     <form onSubmit={handleSubmit}>
                         <Button disabled={disabled} loading={submitting}>
                             Create Image
-            </Button>
+                        </Button>
                     </form>
                 )}
             </ReduxForm>
-        </Margin>
+        </Tags>
     </ViewContainer>
 );
 
 export default compose(
-    connect(({ form, values }) => {
-        const FORM_NAME = 'create-image-details';
-        const nameFilled = get(form, `${FORM_NAME}.values.name`, '');
+    connect(({ form, values }, { match }) => {
+        const nameFilled = get(form, `${Forms.FORM_DETAILS}.values.name`, '');
+        const step = get(match, 'params.step', 'name');
 
-        const disabled = !get(values, `create-image-name-proceeded`, false) || !nameFilled.length
+        const disabled = !get(values, `${Forms.FORM_DETAILS}-proceeded`, false) || !nameFilled.length
 
         if (disabled) {
-            return { disabled };
+            return { disabled, step };
         }
 
         const name = get(
             form,
-            `${FORM_NAME}.values.name`,
+            `${Forms.FORM_DETAILS}.values.name`,
             '<instance-name>'
         );
 
         const description = get(
             form,
-            `${FORM_NAME}.values.description`,
+            `${Forms.FORM_DETAILS}.values.description`,
             '<instance-description>'
         );
 
         const version = get(
             form,
-            `${FORM_NAME}.values.version`,
+            `${Forms.FORM_DETAILS}.values.version`,
             '<instance-version>'
         );
 
-        const tags = get(values, 'create-image-tags', []);
+        const tags = get(values, Forms.CREATE_TAGS, []);
 
         return {
             forms: Object.keys(form), // improve this
@@ -87,7 +83,8 @@ export default compose(
             description,
             version,
             tags,
-            disabled
+            disabled,
+            step
         };
     }),
     connect(null, (dispatch, {
@@ -111,7 +108,6 @@ export default compose(
             //             name: _name,
             //             version: _version,
             //             description: _description,
-            //             package: pkg,
             //             tags: _tags,
             //         }
             //     })
@@ -132,7 +128,7 @@ export default compose(
                     description: ${_description}
                     version: ${_version}
                     tags: ${_tags.map(tag => tag.name)}
-                `)
+            `)
 
             dispatch([destroyAll(), forms.map(name => destroy(name))]);
 
