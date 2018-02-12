@@ -20,13 +20,21 @@ export default () => (
       </Switch>
       {/* Menu */}
       <Switch>
-        <Route path="/~create" component={() => null} />
+        <Route path="/~create" component={Menu} />
         <Route path="/:image/:section?" component={Menu} />
+      </Switch>
+      {/* Create Image */}
+      <Switch>
+        <Route
+          path="/~create/"
+          exact
+          component={() => <Redirect to="/~create/name" />}
+        />
+        <Route path="/~create/:step" component={Create} />
       </Switch>
       {/* Images */}
       <Switch>
         <Route path="/" exact component={List} />
-        <Route path="/~create" exact component={Create} />
         <Route path="/:image/summary" exact component={Summary} />
         <Route path="/:image/tags" exact component={Tags} />
         <Route
