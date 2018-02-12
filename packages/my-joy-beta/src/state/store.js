@@ -25,7 +25,7 @@ const initialState = {
     sections: {
       instances: [
         'Summary',
-        'CNS & DNS',
+        'CNS',
         'Snapshots',
         'Tags',
         'Metadata',
