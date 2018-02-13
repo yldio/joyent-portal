@@ -44,6 +44,10 @@ export const BaseCard = styled.div`
   background-color: ${props => props.theme.white};
   border-color: ${props => props.theme.grey};
 
+  ${is('radius')`
+    border-radius: ${remcalc(4)};
+  `}
+
   ${is('shadow')`
     /* primary */
     box-shadow: ${props => props.theme.shadows.bottomShadow};

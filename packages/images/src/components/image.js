@@ -30,64 +30,99 @@ const A = styled(Anchor)`
   font-weight: ${props => props.theme.font.weight.semibold};
 `;
 
+const CardAnchor = styled(Anchor)`
+  color: ${props => props.theme.text};
+  text-decoration: none;
+`;
+
+const Type = styled(Margin)`
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+`;
+
+const Content = styled(Padding)`
+  max-width: calc(100% - 48px);
+  overflow: hidden;
+`;
+
+const Max = styled(Flex)`
+  max-width: 100%;
+  height: 100%;
+`;
+
+const DividerContainer = styled(Margin)`
+  height: 100%;
+`;
+
+const Actions = styled(Flex)`
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+`;
+
 export const Image = ({ name, os, version, type }) => (
   <Margin bottom={3}>
-    <Card>
-      <CardHeader white>
-        <Padding left={2} right={2}>
-          <Flex full alignCenter>
-            <Margin right={2}>
-              {React.createElement(OS[os], {
-                width: '24',
-                height: '24'
-              })}
-            </Margin>
-            <A to={`/${name}`} component={Link}>
-              {name}
-            </A>
-          </Flex>
-        </Padding>
-      </CardHeader>
-      <Flex justifyBetween>
-        <Padding left={2} top={2} bottom={2}>
-          <Flex justifyBetween>
-            <Flex>
-              <Flex>{version}</Flex>
-              <Margin left={1}>
-                <Divider width={remcalc(1)} height="100%" />
+    <CardAnchor to={`/${name}`} component={Link}>
+      <Card radius>
+        <CardHeader white radius>
+          <Padding left={2} right={2}>
+            <Flex full alignCenter>
+              <Margin right={2}>
+                {React.createElement(OS[os], {
+                  width: '24',
+                  height: '24'
+                })}
               </Margin>
-              <Padding left={2}>{ImageType[type]}</Padding>
+              <A to={`/${name}`} component={Link}>
+                {name}
+              </A>
             </Flex>
-          </Flex>
-        </Padding>
-        <PopoverContainer clickable>
-          <FlexItem basis={remcalc(48)}>
-            <PopoverTarget box style={{ borderLeft: '1px solid #D8D8D8' }}>
-              <ActionsIcon />
-            </PopoverTarget>
-            <Popover placement="bottom">
-              <PopoverItem disabled={false} onClick={() => {}}>
-                Create Instance
-              </PopoverItem>
-              <PopoverDivider />
-              <PopoverItem disabled={false} onClick={() => {}}>
-                Remove
-              </PopoverItem>
-            </Popover>
-          </FlexItem>
-        </PopoverContainer>
-      </Flex>
-    </Card>
+          </Padding>
+        </CardHeader>
+        <Flex justifyBetween>
+          <Content left={2} top={2} bottom={2}>
+            <Max justifyBetween>
+              <Max alignCenter>
+                <Flex>{version}</Flex>
+                <DividerContainer left={2}>
+                  <Divider width={remcalc(1)} height="100%" />
+                </DividerContainer>
+                <Type left={2}>{ImageType[type]}</Type>
+              </Max>
+            </Max>
+          </Content>
+          <PopoverContainer clickable>
+            <Actions>
+              <PopoverTarget box style={{ borderLeft: '1px solid #D8D8D8' }}>
+                <ActionsIcon />
+              </PopoverTarget>
+              <Popover placement="bottom">
+                <PopoverItem disabled={false} onClick={() => {}}>
+                  Create Instance
+                </PopoverItem>
+                <PopoverDivider />
+                <PopoverItem disabled={false} onClick={() => {}}>
+                  Remove
+                </PopoverItem>
+              </Popover>
+            </Actions>
+          </PopoverContainer>
+        </Flex>
+      </Card>
+    </CardAnchor>
   </Margin>
 );
 
-export const Filters = () => (
+export const Filters = ({ selected }) => (
   <Fragment>
     <FormGroup name="image-type" value="all" field={Field} type="radio">
       <Radio noMargin>
         <Flex alignCenter>
           <Margin right={2}>
-            <FormLabel>All</FormLabel>
+            <FormLabel big normal={selected !== 'all'}>
+              All
+            </FormLabel>
           </Margin>
         </Flex>
       </Radio>
@@ -101,7 +136,9 @@ export const Filters = () => (
       <Radio noMargin>
         <Flex alignCenter>
           <Margin right={2}>
-            <FormLabel>Virtual machines</FormLabel>
+            <FormLabel big normal={selected !== 'hardware-virtual-machine'}>
+              Virtual machines
+            </FormLabel>
           </Margin>
         </Flex>
       </Radio>
@@ -115,7 +152,9 @@ export const Filters = () => (
       <Radio noMargin>
         <Flex alignCenter>
           <Margin right={2}>
-            <FormLabel>Infrastructure container</FormLabel>
+            <FormLabel big normal={selected !== 'infrastructure-container'}>
+              Infrastructure container
+            </FormLabel>
           </Margin>
         </Flex>
       </Radio>

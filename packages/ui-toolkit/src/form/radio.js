@@ -10,10 +10,6 @@ const Li = styled.li`
   list-style-type: none;
   display: flex;
   align-items: center;
-
-  label {
-    font-weight: 400;
-  }
 `;
 
 const Ul = styled.ul`

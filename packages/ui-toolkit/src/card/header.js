@@ -17,6 +17,12 @@ const BaseHeader = BaseCard.extend`
 
   margin: ${remcalc(-1)} ${remcalc(-1)} 0 ${remcalc(-1)};
 
+  ${is('radius')`
+    border-radius: ${remcalc(4)};
+    border-bottom-right-radius: ${remcalc(0)};
+    border-bottom-left-radius: ${remcalc(0)};
+  `}
+
   ${is('parentCollapsed')`
     margin: ${remcalc(-1)};
     box-shadow: none;

@@ -19,7 +19,9 @@ import {
   CopiableField,
   DuplicateIcon,
   DeleteIcon,
-  DotIcon
+  DotIcon,
+  FormLabel,
+  Input
 } from 'joyent-ui-toolkit';
 
 import { ImageType, OS } from '@root/constants';
@@ -139,10 +141,17 @@ export default withTheme(({ theme = {}, ...image }) => (
             </Margin>
             <CopiableField text={(image.id || '').split('-')[0]} label="ID" />
             <CopiableField text={image.id} label="UUID" />
-            <CopiableField
-              text={titleCase(image.os)}
-              label="Operating system"
-            />
+            <Row>
+              <Col xs={12} md={7}>
+                <FormLabel>Operating system</FormLabel>
+                <Input
+                  monospace
+                  onBlur={null}
+                  fluid
+                  value={titleCase(image.os)}
+                />
+              </Col>
+            </Row>
           </Padding>
         </CardOutlet>
       </Card>
