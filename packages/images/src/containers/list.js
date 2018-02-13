@@ -20,14 +20,12 @@ import {
 
 import ToolbarForm from '@components/toolbar';
 import Empty from '@components/empty';
-
-import { ImageType } from '../constants';
+import { ImageType } from '@root/constants';
 import ListImages from '@graphql/list-images.gql';
-
 import { Image, Filters } from '@components/image';
 
-const TOGGLE_FORM_NAME = 'images-list-toggle';
-const MENU_FORM_NAME = 'images-list-menu';
+const TOGGLE_FORM_DETAILS = 'images-list-toggle';
+const MENU_FORM_DETAILS = 'images-list-menu';
 
 export const List = ({
   images = [],
@@ -38,7 +36,7 @@ export const List = ({
 }) => (
   <ViewContainer main>
     <Divider height={remcalc(30)} transparent />
-    <ReduxForm form={MENU_FORM_NAME}>
+    <ReduxForm form={MENU_FORM_DETAILS}>
       {props => <ToolbarForm {...props} actionable={!loading} />}
     </ReduxForm>
     <Divider height={remcalc(1)} />
@@ -54,7 +52,7 @@ export const List = ({
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>
-            An error occurred while loading your instances
+            An error occurred while loading your images
           </MessageDescription>
         </Message>
       </Margin>
@@ -62,7 +60,7 @@ export const List = ({
     <Fragment>
       <Margin bottom={4}>
         <ReduxForm
-          form={TOGGLE_FORM_NAME}
+          form={TOGGLE_FORM_DETAILS}
           initialValues={{ 'image-type': 'all' }}
         >
           {props => (allImages.length ? <Filters {...props} /> : null)}
@@ -93,8 +91,12 @@ export default compose(
     }
   }),
   connect(({ form, values }, { index, error, images = [] }) => {
-    const filter = get(form, `${MENU_FORM_NAME}.values.filter`, false);
-    const typeValue = get(form, `${TOGGLE_FORM_NAME}.values.image-type`, 'all');
+    const filter = get(form, `${MENU_FORM_DETAILS}.values.filter`, false);
+    const typeValue = get(
+      form,
+      `${TOGGLE_FORM_DETAILS}.values.image-type`,
+      'all'
+    );
 
     const virtual = Object.keys(ImageType).filter(
       i => ImageType[i] === 'Hardware Virtual Machine'

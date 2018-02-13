@@ -14,6 +14,7 @@ const BaseTextarea = TextareaInput.extend`
   ${is('fluid')`
     flex: 1 1 auto;
     width: 100%;
+    max-width: 100%;
   `};
 `;
 

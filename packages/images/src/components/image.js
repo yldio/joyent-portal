@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import { Field } from 'redux-form';
+import Flex, { FlexItem } from 'styled-flex-component';
+import { Padding, Margin } from 'styled-components-spacing';
+
 import {
   Card,
   Anchor,
@@ -19,10 +22,7 @@ import {
   FormGroup
 } from 'joyent-ui-toolkit';
 
-import Flex, { FlexItem } from 'styled-flex-component';
-import { Padding, Margin } from 'styled-components-spacing';
-
-import { ImageType, OS } from '../constants';
+import { ImageType, OS } from '@root/constants';
 
 const A = styled(Anchor)`
   color: ${props => props.theme.text};
