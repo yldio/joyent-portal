@@ -92,7 +92,7 @@ export default compose(
     },
     (dispatch, { removeImage, image, history }) => ({
       handleRemove: async () => {
-        dispatch([set({ name: 'remove-mutation-loading', value: true })]);
+        dispatch(set({ name: 'remove-mutation-loading', value: true }));
 
         const [err, res] = await intercept(
           removeImage({
@@ -110,7 +110,7 @@ export default compose(
         }
 
         if (res) {
-          dispatch([set({ name: 'remove-mutation-loading', value: false })]);
+          dispatch(set({ name: 'remove-mutation-loading', value: false }));
           history.push(`/`);
         }
       }

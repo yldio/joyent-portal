@@ -32,7 +32,7 @@ export const Toolbar = ({
       <FormGroup right>
         <Divider height={remcalc(21)} transparent />
         <Button
-          type={onActionClick ? 'button' : 'submit'}
+          type="button"
           disabled={!actionable}
           onClick={onActionClick}
           icon

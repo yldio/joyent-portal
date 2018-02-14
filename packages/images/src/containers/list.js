@@ -22,14 +22,13 @@ import {
 
 import ToolbarForm from '@components/toolbar';
 import Empty from '@components/empty';
-import { ImageType } from '@root/constants';
+import { ImageType, Forms } from '@root/constants';
 import ListImages from '@graphql/list-images.gql';
 import { Image, Filters } from '@components/image';
 import RemoveImage from '@graphql/remove-image.gql';
 import parseError from '@state/parse-error';
 
-const TOGGLE_FORM_DETAILS = 'images-list-toggle';
-const MENU_FORM_DETAILS = 'images-list-menu';
+const { LIST_TOOLBAR_FORM, LIST_TOGGLE_TYPE_FORM } = Forms;
 
 export const List = ({
   images = [],
@@ -42,7 +41,7 @@ export const List = ({
 }) => (
   <ViewContainer main>
     <Divider height={remcalc(30)} transparent />
-    <ReduxForm form={MENU_FORM_DETAILS}>
+    <ReduxForm form={LIST_TOOLBAR_FORM}>
       {props => <ToolbarForm {...props} actionable={!loading} />}
     </ReduxForm>
     <Divider height={remcalc(1)} />
@@ -66,7 +65,7 @@ export const List = ({
     <Fragment>
       <Margin bottom={4}>
         <ReduxForm
-          form={TOGGLE_FORM_DETAILS}
+          form={LIST_TOGGLE_TYPE_FORM}
           initialValues={{ 'image-type': 'all' }}
         >
           {props =>
@@ -91,25 +90,26 @@ export const List = ({
 );
 
 export default compose(
-  graphql(RemoveImage, { name: 'removeImage' }),
+  graphql(RemoveImage, {
+    name: 'removeImage'
+  }),
   graphql(ListImages, {
-    options: { pollInterval: 5000 },
-    props: ({ data: { images, loading, error, refetch } }) => {
-      return {
-        images,
-        loading,
-        error
-      };
-    }
+    fetchPolicy: 'network-only',
+    pollInterval: 1000,
+    props: ({ data: { images, loading, error, refetch } }) => ({
+      images,
+      loading,
+      error
+    })
   }),
   connect(
     ({ form, values }, { index, error, images = [] }) => {
-      const filter = get(form, `${MENU_FORM_DETAILS}.values.filter`, false);
+      const filter = get(form, `${LIST_TOOLBAR_FORM}.values.filter`, false);
       const mutationError = get(values, 'remove-mutation-error', null);
 
       const typeValue = get(
         form,
-        `${TOGGLE_FORM_DETAILS}.values.image-type`,
+        `${LIST_TOGGLE_TYPE_FORM}.values.image-type`,
         'all'
       );
 
@@ -171,9 +171,10 @@ export default compose(
         }
 
         if (res) {
-          dispatch([
+          dispatch(
             set({ name: `remove-mutation-${id}-loading`, value: false })
-          ]);
+          );
+
           history.push(`/`);
         }
       }
