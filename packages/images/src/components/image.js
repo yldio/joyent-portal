@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import { Field } from 'redux-form';
-import Flex, { FlexItem } from 'styled-flex-component';
+import Flex from 'styled-flex-component';
 import { Padding, Margin } from 'styled-components-spacing';
 
 import {
@@ -19,7 +19,8 @@ import {
   PopoverContainer,
   Radio,
   FormLabel,
-  FormGroup
+  FormGroup,
+  StatusLoader
 } from 'joyent-ui-toolkit';
 
 import { ImageType, OS } from '@root/constants';
@@ -61,54 +62,71 @@ const Actions = styled(Flex)`
   min-width: 48px;
 `;
 
-export const Image = ({ name, os, version, type }) => (
+export const Image = ({ name, os, version, type, removing, onRemove }) => (
   <Margin bottom={3}>
     <CardAnchor to={`/${name}`} component={Link}>
       <Card radius>
-        <CardHeader white radius>
-          <Padding left={2} right={2}>
-            <Flex full alignCenter>
-              <Margin right={2}>
-                {React.createElement(OS[os], {
-                  width: '24',
-                  height: '24'
-                })}
-              </Margin>
-              <A to={`/${name}`} component={Link}>
-                {name}
-              </A>
-            </Flex>
+        {removing ? (
+          <Padding all={2}>
+            <StatusLoader />
           </Padding>
-        </CardHeader>
-        <Flex justifyBetween>
-          <Content left={2} top={2} bottom={2}>
-            <Max justifyBetween>
-              <Max alignCenter>
-                <Flex>{version}</Flex>
-                <DividerContainer left={2}>
-                  <Divider width={remcalc(1)} height="100%" />
-                </DividerContainer>
-                <Type left={2}>{ImageType[type]}</Type>
-              </Max>
-            </Max>
-          </Content>
-          <PopoverContainer clickable>
-            <Actions>
-              <PopoverTarget box style={{ borderLeft: '1px solid #D8D8D8' }}>
-                <ActionsIcon />
-              </PopoverTarget>
-              <Popover placement="bottom">
-                <PopoverItem disabled={false} onClick={() => {}}>
-                  Create Instance
-                </PopoverItem>
-                <PopoverDivider />
-                <PopoverItem disabled={false} onClick={() => {}}>
-                  Remove
-                </PopoverItem>
-              </Popover>
-            </Actions>
-          </PopoverContainer>
-        </Flex>
+        ) : (
+          <Fragment>
+            <CardHeader white radius>
+              <Padding left={2} right={2}>
+                <Flex full alignCenter>
+                  <Margin right={2}>
+                    {React.createElement(OS[os], {
+                      width: '24',
+                      height: '24'
+                    })}
+                  </Margin>
+                  <A to={`/${name}`} component={Link}>
+                    {name}
+                  </A>
+                </Flex>
+              </Padding>
+            </CardHeader>
+            <Flex justifyBetween>
+              <Content left={2} top={2} bottom={2}>
+                <Max justifyBetween>
+                  <Max alignCenter>
+                    <Flex>{version}</Flex>
+                    <DividerContainer left={2}>
+                      <Divider width={remcalc(1)} height="100%" />
+                    </DividerContainer>
+                    <Type left={2}>{ImageType[type]}</Type>
+                  </Max>
+                </Max>
+              </Content>
+              <PopoverContainer clickable>
+                <Actions>
+                  <PopoverTarget
+                    box
+                    style={{ borderLeft: '1px solid #D8D8D8' }}
+                  >
+                    <ActionsIcon />
+                  </PopoverTarget>
+                  <Popover placement="bottom">
+                    <PopoverItem disabled={false}>
+                      <Anchor
+                        noUnderline
+                        black
+                        href={`instances/~create/?image=${name}`}
+                      >
+                        Create Instance
+                      </Anchor>
+                    </PopoverItem>
+                    <PopoverDivider />
+                    <PopoverItem disabled={removing} onClick={onRemove}>
+                      Remove
+                    </PopoverItem>
+                  </Popover>
+                </Actions>
+              </PopoverContainer>
+            </Flex>
+          </Fragment>
+        )}
       </Card>
     </CardAnchor>
   </Margin>
