@@ -98,7 +98,7 @@ export const Meta = ({ name, version, type, published_at, state, os }) => (
   </Fragment>
 );
 
-export default withTheme(({ theme = {}, ...image }) => (
+export default withTheme(({ theme = {}, onRemove, removing, ...image }) => (
   <Row>
     <Col xs={12} sm={12} md={9}>
       <Card>
@@ -113,7 +113,12 @@ export default withTheme(({ theme = {}, ...image }) => (
                   </Button>
                 </SmallOnly>
                 <Medium>
-                  <Button type="button" bold icon>
+                  <Button
+                    type="button"
+                    href={`instances/~create/?image=${image.name}`}
+                    bold
+                    icon
+                  >
                     <DuplicateIcon light />
                     <span>Create Instance</span>
                   </Button>
@@ -126,7 +131,15 @@ export default withTheme(({ theme = {}, ...image }) => (
                   </Button>
                 </SmallOnly>
                 <Medium>
-                  <Button type="button" bold icon error right>
+                  <Button
+                    type="button"
+                    loading={removing}
+                    onClick={onRemove}
+                    bold
+                    icon
+                    error
+                    right
+                  >
                     <DeleteIcon fill={theme.red} />
                     <span>Remove</span>
                   </Button>

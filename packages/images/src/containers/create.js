@@ -112,33 +112,21 @@ export default compose(
     }
   }),
   connect(({ form, values }, { match }) => {
-    const nameFilled = get(form, `${Forms.FORM_DETAILS}.values.name`, '');
     const step = get(match, 'params.step', 'name');
 
-    const disabled =
-      !get(values, `${Forms.FORM_DETAILS}-proceeded`, false) ||
-      !nameFilled.length;
+    const name = get(form, `${Forms.FORM_DETAILS}.values.name`, '');
+    const version = get(form, `${Forms.FORM_DETAILS}.values.version`, '');
+
+    const disabled = !(name.length && version.length);
 
     if (disabled) {
       return { disabled, step };
     }
 
-    const name = get(
-      form,
-      `${Forms.FORM_DETAILS}.values.name`,
-      '<instance-name>'
-    );
-
     const description = get(
       form,
       `${Forms.FORM_DETAILS}.values.description`,
       '<instance-description>'
-    );
-
-    const version = get(
-      form,
-      `${Forms.FORM_DETAILS}.values.version`,
-      '<instance-version>'
     );
 
     const tags = get(values, Forms.CREATE_TAGS, []);

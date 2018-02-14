@@ -1,7 +1,6 @@
 const Inert = require('inert');
 const Path = require('path');
 const Execa = require('execa');
-const { readFile } = require('mz/fs');
 
 const ROOT = Path.join(__dirname, '../build');
 

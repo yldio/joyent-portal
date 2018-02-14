@@ -82,11 +82,7 @@ export default () => (
           exact
           component={InstanceSnapshots}
         />
-        <Route
-          path="/instances/:instance/cns-dns"
-          exact
-          component={InstanceCns}
-        />
+        <Route path="/instances/:instance/cns" exact component={InstanceCns} />
         <Route
           path="/instances/:instance/user-script"
           exact

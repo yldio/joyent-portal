@@ -8,6 +8,8 @@ import { connect } from 'react-redux';
 import get from 'lodash.get';
 import find from 'lodash.find';
 import Index from '@state/gen-index';
+import intercept from 'apr-intercept';
+import { set } from 'react-redux-values';
 
 import {
   ViewContainer,
@@ -23,6 +25,8 @@ import Empty from '@components/empty';
 import { ImageType } from '@root/constants';
 import ListImages from '@graphql/list-images.gql';
 import { Image, Filters } from '@components/image';
+import RemoveImage from '@graphql/remove-image.gql';
+import parseError from '@state/parse-error';
 
 const TOGGLE_FORM_DETAILS = 'images-list-toggle';
 const MENU_FORM_DETAILS = 'images-list-menu';
@@ -33,7 +37,8 @@ export const List = ({
   loading = false,
   error = null,
   history,
-  typeValue
+  typeValue,
+  handleRemove
 }) => (
   <ViewContainer main>
     <Divider height={remcalc(30)} transparent />
@@ -72,9 +77,9 @@ export const List = ({
         </ReduxForm>
       </Margin>
       <Row>
-        {images.map(image => (
+        {images.map((image) => (
           <Col sm={4}>
-            <Image {...image} />
+            <Image {...image} onRemove={() => handleRemove(image.id)} />
           </Col>
         ))}
         {!images.length && !loading ? (
@@ -86,7 +91,9 @@ export const List = ({
 );
 
 export default compose(
+  graphql(RemoveImage, { name: 'removeImage' }),
   graphql(ListImages, {
+    options: { pollInterval: 5000 },
     props: ({ data: { images, loading, error, refetch } }) => {
       return {
         images,
@@ -95,42 +102,77 @@ export default compose(
       };
     }
   }),
-  connect(({ form, values }, { index, error, images = [] }) => {
-    const filter = get(form, `${MENU_FORM_DETAILS}.values.filter`, false);
-    const typeValue = get(
-      form,
-      `${TOGGLE_FORM_DETAILS}.values.image-type`,
-      'all'
-    );
+  connect(
+    ({ form, values }, { index, error, images = [] }) => {
+      const filter = get(form, `${MENU_FORM_DETAILS}.values.filter`, false);
+      const mutationError = get(values, 'remove-mutation-error', null);
 
-    const virtual = Object.keys(ImageType).filter(
-      i => ImageType[i] === 'Hardware Virtual Machine'
-    );
-    const container = Object.keys(ImageType).filter(
-      i => ImageType[i] === 'Infrastructure Container'
-    );
+      const typeValue = get(
+        form,
+        `${TOGGLE_FORM_DETAILS}.values.image-type`,
+        'all'
+      );
 
-    const filtered = filter
-      ? Index(images)
-          .search(filter)
-          .map(({ ref }) => find(images, ['id', ref]))
-      : images;
+      const virtual = Object.keys(ImageType).filter(
+        i => ImageType[i] === 'Hardware Virtual Machine'
+      );
 
-    return {
-      images: filtered.filter(image => {
-        switch (typeValue) {
-          case 'all':
-            return true;
-          case 'hardware-virtual-machine':
-            return virtual.includes(image.type);
-          case 'infrastructure-container':
-            return container.includes(image.type);
-          default:
-            return true;
+      const container = Object.keys(ImageType).filter(
+        i => ImageType[i] === 'Infrastructure Container'
+      );
+
+      const filtered = filter
+        ? Index(images)
+            .search(filter)
+            .map(({ ref }) => find(images, ['id', ref]))
+        : images;
+
+      return {
+        images: filtered.filter(image => {
+          switch (typeValue) {
+            case 'all':
+              return true;
+            case 'hardware-virtual-machine':
+              return virtual.includes(image.type);
+            case 'infrastructure-container':
+              return container.includes(image.type);
+            default:
+              return true;
+          }
+        }).map(({ id, ...image }) => ({
+          ...image,
+          id,
+          removing: get(values, `remove-mutation-${id}-loading`, false)
+        })),
+        allImages: images,
+        mutationError,
+        typeValue
+      };
+    },
+    (dispatch, { removeImage, history }) => ({
+      handleRemove: async id => {
+        dispatch([set({ name: `remove-mutation-${id}-loading`, value: true })]);
+
+        const [err, res] = await intercept(
+          removeImage({
+            variables: {
+              id
+            }
+          })
+        );
+
+        if (err) {
+          dispatch([
+            set({ name: 'remove-mutation-error', value: parseError(err) }),
+            set({ name: `remove-mutation-${id}-loading`, value: false })
+          ]);
         }
-      }),
-      allImages: images,
-      typeValue
-    };
-  })
+
+        if (res) {
+          dispatch([set({ name: `remove-mutation-${id}-loading`, value: false })]);
+          history.push(`/`);
+        }
+      }
+    })
+  )
 )(List);
