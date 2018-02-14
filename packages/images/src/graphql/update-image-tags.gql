@@ -1,0 +1,5 @@
+mutation updateImageTags($id: ID!, $tags: [KeyValueInput]!) {
+  updateImage(id: $id, tags: $tags) {
+    id
+  }
+}
