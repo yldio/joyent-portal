@@ -1,0 +1,9 @@
+query Image($name: String) {
+  images(name: $name) {
+    id
+    name
+    os
+    version
+    type
+  }
+}

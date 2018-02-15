@@ -116,13 +116,14 @@ export default compose(
       };
     },
     (dispatch, { history }) => ({
-      handleEdit: () => history.push(`/instances/~create/user-script`),
+      handleEdit: () =>
+        history.push(`/~create/user-script${history.location.search}`),
       handleNext: () => {
         dispatch(
           set({ name: 'create-instance-user-script-proceeded', value: true })
         );
 
-        return history.push(`/instances/~create/networks`);
+        return history.push(`/~create/networks${history.location.search}`);
       },
       handleChangeOpenForm: value => {
         return dispatch([

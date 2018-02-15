@@ -41,6 +41,12 @@ const A = styled(Anchor)`
   font-weight: ${props => props.theme.font.weight.semibold};
 `;
 
+const ItemAnchor = styled(Anchor)`
+  color: ${props => props.theme.text};
+  -webkit-text-fill-color: currentcolor;
+  text-decoration: none;
+`;
+
 export const Item = ({
   id = '',
   name,
@@ -48,6 +54,7 @@ export const Item = ({
   created,
   allowedActions = {},
   mutating = false,
+  onCreateImage,
   onStart,
   onStop,
   onReboot,
@@ -60,7 +67,7 @@ export const Item = ({
       </FormGroup>
     </TableTd>
     <TableTd middle left>
-      <A to={`/instances/${name}`} component={Link}>
+      <A to={`/${name}`} component={Link}>
         {name}
       </A>
     </TableTd>
@@ -95,6 +102,16 @@ export const Item = ({
             </PopoverItem>
             <PopoverItem disabled={!allowedActions.reboot} onClick={onReboot}>
               Reboot
+            </PopoverItem>
+            <PopoverDivider />
+            <PopoverItem disabled={false} onClick={onCreateImage}>
+              <ItemAnchor
+                href={`http://localhost:3070/~create/${name}`}
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                Create Image
+              </ItemAnchor>
             </PopoverItem>
             <PopoverDivider />
             <PopoverItem disabled={!allowedActions.remove} onClick={onRemove}>

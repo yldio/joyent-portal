@@ -96,7 +96,7 @@ exports[`renders <Menu links /> without throwing 1`] = `
       >
         <a
           className="c4 c5 c6"
-          to="/instances/:name/summary"
+          to="/:name/summary"
         >
           summary
         </a>
@@ -106,7 +106,7 @@ exports[`renders <Menu links /> without throwing 1`] = `
       >
         <a
           className="c4 c5 c6"
-          to="/instances/:name/tags"
+          to="/:name/tags"
         >
           tags
         </a>
@@ -116,7 +116,7 @@ exports[`renders <Menu links /> without throwing 1`] = `
       >
         <a
           className="c4 c5 c6"
-          to="/instances/:name/metadata"
+          to="/:name/metadata"
         >
           metadata
         </a>
@@ -126,7 +126,7 @@ exports[`renders <Menu links /> without throwing 1`] = `
       >
         <a
           className="c4 c5 c6"
-          to="/instances/:name/networks"
+          to="/:name/networks"
         >
           networks
         </a>
@@ -136,7 +136,7 @@ exports[`renders <Menu links /> without throwing 1`] = `
       >
         <a
           className="c4 c5 c6"
-          to="/instances/:name/firewall"
+          to="/:name/firewall"
         >
           firewall
         </a>
@@ -146,7 +146,7 @@ exports[`renders <Menu links /> without throwing 1`] = `
       >
         <a
           className="c4 c5 c6"
-          to="/instances/:name/dns"
+          to="/:name/dns"
         >
           dns
         </a>
@@ -156,7 +156,7 @@ exports[`renders <Menu links /> without throwing 1`] = `
       >
         <a
           className="c4 c5 c6"
-          to="/instances/:name/snapshots"
+          to="/:name/snapshots"
         >
           snapshots
         </a>

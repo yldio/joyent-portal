@@ -165,10 +165,10 @@ export default compose(
           set({ name: 'create-instance-networks-proceeded', value: true })
         );
 
-        return history.push('/instances/~create/firewall');
+        return history.push(`/~create/firewall${history.location.search}`);
       },
       handleEdit: () => {
-        return history.push('/instances/~create/networks');
+        return history.push(`/~create/networks${history.location.search}`);
       },
       setInfoExpanded: (id, expanded) => {
         return dispatch(

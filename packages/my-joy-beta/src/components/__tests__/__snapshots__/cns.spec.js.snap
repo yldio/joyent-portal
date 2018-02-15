@@ -82,12 +82,18 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c9 + button {
+.c9 + button,
+.c9 + a {
   margin-left: 0.375rem;
 }
 
 .c8 {
   display: inline-block;
+}
+
+.c8 + button,
+.c8 + a {
+  margin-left: 0.375rem;
 }
 
 .c7 {
@@ -417,12 +423,18 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c9 + button {
+.c9 + button,
+.c9 + a {
   margin-left: 0.375rem;
 }
 
 .c8 {
   display: inline-block;
+}
+
+.c8 + button,
+.c8 + a {
+  margin-left: 0.375rem;
 }
 
 .c7 {

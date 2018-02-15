@@ -228,9 +228,10 @@ export default compose(
           set({ name: 'create-instance-package-proceeded', value: true })
         );
 
-        return history.push('/instances/~create/tags');
+        return history.push(`/~create/tags${history.location.search}`);
       },
-      handleEdit: () => history.push('/instances/~create/package'),
+      handleEdit: () =>
+        history.push(`/~create/package${history.location.search}`),
       handleResetFilters: () => {
         dispatch(destroy(`${FORM_NAME}-filters`));
       },

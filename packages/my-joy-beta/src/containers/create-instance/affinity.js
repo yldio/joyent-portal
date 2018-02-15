@@ -158,7 +158,7 @@ export default compose(
   })),
   connect(null, (dispatch, { affinityRules = [], history }) => ({
     handleEdit: () => {
-      return history.push(`/instances/~create/affinity`);
+      return history.push(`/~create/affinity${history.location.search}`);
     },
     handleAddAffinityRules: ({ ...rule }) => {
       const toggleToClosed = set({

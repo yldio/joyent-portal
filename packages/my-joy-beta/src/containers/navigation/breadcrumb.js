@@ -11,14 +11,14 @@ export default ({ match }) => {
   const links = [
     {
       name: 'Instances',
-      pathname: '/instances'
+      pathname: '/'
     }
   ]
     .concat(
       instance && [
         {
           name: paramCase(instance),
-          pathname: `/instances/${instance}`
+          pathname: `/${instance}`
         }
       ]
     )

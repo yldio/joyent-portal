@@ -43,7 +43,8 @@ exports[`renders <Footer/> without throwing 1`] = `
     <a
       className="c2"
       href="https://www.joyent.com/about/policies"
-      target="_blank"
+      rel="noopener noreferrer"
+      target="__blank"
     >
       Policies
     </a>
@@ -54,6 +55,8 @@ exports[`renders <Footer/> without throwing 1`] = `
     <a
       className="c2"
       href="https://www.joyent.com/networking-and-security/security-compliance"
+      rel="noopener noreferrer"
+      target="__blank"
     >
       Compliance
     </a>

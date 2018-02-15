@@ -105,7 +105,8 @@ exports[`renders <Filters /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c16 + button {
+.c16 + button,
+.c16 + a {
   margin-left: 0.375rem;
 }
 
@@ -174,6 +175,11 @@ exports[`renders <Filters /> without throwing 1`] = `
 
 .c15 {
   display: inline-block;
+}
+
+.c15 + button,
+.c15 + a {
+  margin-left: 0.375rem;
 }
 
 .c14 {

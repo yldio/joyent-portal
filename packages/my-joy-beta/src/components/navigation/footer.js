@@ -30,12 +30,20 @@ const Link = styled.a`
 export default () => (
   <List>
     <ListItem>
-      <Link href="https://www.joyent.com/about/policies" target="_blank">
+      <Link
+        href="https://www.joyent.com/about/policies"
+        target="__blank"
+        rel="noopener noreferrer"
+      >
         Policies
       </Link>
     </ListItem>
     <ListItem>
-      <Link href="https://www.joyent.com/networking-and-security/security-compliance">
+      <Link
+        href="https://www.joyent.com/networking-and-security/security-compliance"
+        target="__blank"
+        rel="noopener noreferrer"
+      >
         Compliance
       </Link>
     </ListItem>

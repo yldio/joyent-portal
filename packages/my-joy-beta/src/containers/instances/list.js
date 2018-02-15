@@ -55,6 +55,7 @@ export const List = ({
   submitting,
   handleAction,
   toggleSelectAll,
+  handleCreateImage,
   handleSortBy,
   history
 }) => {
@@ -110,6 +111,7 @@ export const List = ({
               key={id}
               id={id}
               {...rest}
+              onCreateImage={() => handleCreateImage(rest)}
               onStart={() => handleStart([{ id }])}
               onStop={() => handleStop([{ id }])}
               onReboot={() => handleReboot([{ id }])}
@@ -153,7 +155,7 @@ export const List = ({
             searchLabel="Filter instances"
             searchable={!_loading}
             actionLabel="Create Instance"
-            onActionClick={() => history.push(`/instances/~create`)}
+            onActionClick={() => history.push(`/~create`)}
           />
         )}
       </ReduxForm>
@@ -260,6 +262,8 @@ export default compose(
       };
     },
     (dispatch, { refetch, ...ownProps }) => ({
+      handleCreateImage: ({ name }) =>
+        window.open(`http://localhost:3070/~create/${name}`, '_blank').focus(),
       handleSortBy: ({ sortBy: currentSortBy, sortOrder }) => newSortBy => {
         // sort prop is the same, toggle
         if (currentSortBy === newSortBy) {

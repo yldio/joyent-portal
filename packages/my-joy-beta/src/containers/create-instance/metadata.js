@@ -157,10 +157,10 @@ export default compose(
         set({ name: 'create-instance-metadata-proceeded', value: true })
       );
 
-      return history.push('/instances/~create/user-script');
+      return history.push(`/~create/user-script${history.location.search}`);
     },
     handleEdit: () => {
-      return history.push(`/instances/~create/metadata`);
+      return history.push(`/~create/metadata${history.location.search}`);
     },
     handleAddMetadata: value => {
       const toggleToClosed = set({

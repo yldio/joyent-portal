@@ -39,12 +39,18 @@ exports[`renders <Tags /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c9 {
@@ -526,12 +532,18 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c9 {
@@ -1896,12 +1908,18 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c9 {
@@ -2383,12 +2401,18 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c34 {
@@ -3806,7 +3830,8 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
@@ -3865,6 +3890,11 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c34 {
@@ -5300,12 +5330,18 @@ exports[`renders <Tags error /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c9 {
@@ -5769,7 +5805,8 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
@@ -5845,6 +5882,11 @@ exports[`renders <Tags loading /> without throwing 1`] = `
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c9 {
@@ -6299,12 +6341,18 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c9 {

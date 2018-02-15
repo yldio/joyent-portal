@@ -155,7 +155,7 @@ export default compose(
       handleRemoveTag: async name => {
         dispatch(set({ name: `${image.id}-mutating`, value: true }));
 
-        const [err, res] = await intercept(
+        const [err] = await intercept(
           updateTags({
             variables: {
               id: image.id,
@@ -180,7 +180,7 @@ export default compose(
       handleAddTag: async ({ name, value }) => {
         dispatch(set({ name: `${image.id}-mutating`, value: true }));
 
-        const [err, res] = await intercept(
+        const [err] = await intercept(
           updateTags({
             variables: {
               id: image.id,
