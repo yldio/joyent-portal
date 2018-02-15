@@ -5035,6 +5035,16 @@ handlebars@^4.0.2, handlebars@^4.0.3:
   optionalDependencies:
     uglify-js "^2.6"
 
+hapi-triton-auth@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/hapi-triton-auth/-/hapi-triton-auth-1.0.0.tgz#b9fcf8808edae5dd1951683821eec4356d7b253e"
+  dependencies:
+    boom "7.1.x"
+    bounce "1.2.x"
+    cryptiles "4.1.x"
+    hoek "5.0.x"
+    wreck "14.0.x"
+
 hapi@^17.2.0:
   version "17.2.0"
   resolved "https://registry.yarnpkg.com/hapi/-/hapi-17.2.0.tgz#e5d74b65235b443225e05d7b7510cdb80d4887e7"
@@ -7241,16 +7251,6 @@ minimist@~0.0.1:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
 
-minio-proto-auth@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/minio-proto-auth/-/minio-proto-auth-1.1.0.tgz#6eb0487d9366ed07d42374107a6ba80795eec7e3"
-  dependencies:
-    boom "7.1.x"
-    bounce "1.2.x"
-    cryptiles "4.1.x"
-    hoek "5.0.x"
-    wreck "14.0.x"
-
 mississippi@^1.3.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/mississippi/-/mississippi-1.3.1.tgz#2a8bb465e86550ac8b36a7b6f45599171d78671e"
@@ -8722,7 +8722,7 @@ react-apollo@^2.0.4:
     lodash.pick "^4.4.0"
     prop-types "^15.5.8"
 
-react-bundle@^1.0.4:
+react-bundle@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-bundle/-/react-bundle-1.1.0.tgz#d243de62ecb28639440dfb35d25bc5721d93a9b1"
   dependencies:

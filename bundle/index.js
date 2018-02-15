@@ -1,12 +1,15 @@
-
+'use strict';
 
 const Brule = require('brule');
 const Hapi = require('hapi');
-const Inert = require('inert');
-const Main = require('apr-main');
 const Rollover = require('rollover');
+const { homedir } = require('os');
+const { join } = require('path');
 
-const Sso = require('minio-proto-auth');
+process.env.SDC_KEY_PATH =
+  process.env.SDC_KEY_PATH || join(homedir(), '.ssh/id_rsa');
+
+const Sso = require('hapi-triton-auth');
 const Ui = require('my-joy-beta');
 const Nav = require('joyent-navigation');
 const Api = require('cloudapi-gql');
@@ -29,17 +32,17 @@ const server = Hapi.server({
   host: '127.0.0.1'
 });
 
-Main(async () => {
+async function main () {
   await server.register([
-    // {
-    //   plugin: Rollover,
-    //   options: {
-    //     rollbar: {
-    //       accessToken: ROLLBAR_SERVER_TOKEN,
-    //       reportLevel: 'error'
-    //     }
-    //   }
-    // },
+    {
+      plugin: Rollover,
+      options: {
+        rollbar: {
+          accessToken: ROLLBAR_SERVER_TOKEN,
+          reportLevel: 'error'
+        }
+      }
+    },
     {
       plugin: Brule,
       options: {
@@ -80,6 +83,12 @@ Main(async () => {
 
   server.auth.default('sso');
 
+  process.on('unhandledRejection', (err) => {
+    server.log(['error'], err);
+  });
+
   await server.start();
   console.log(`server started at http://localhost:${server.info.port}`);
-});
+}
+
+main();

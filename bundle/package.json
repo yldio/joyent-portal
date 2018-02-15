@@ -4,7 +4,7 @@
   "private": true,
   "license": "MPL-2.0",
   "scripts": {
-    "start": "NODE_ENV=development PORT=3069 REACT_APP_GQL_PORT=3069 REACT_APP_GQL_PROTOCOL=http node -r ./_env.js index.js",
+    "start": "NODE_ENV=development PORT=3069 REACT_APP_GQL_PORT=3069 REACT_APP_GQL_PROTOCOL=http node index.js",
     "lint-ci": "echo 0",
     "lint": "echo 0",
     "test-ci": "echo 0",
@@ -12,14 +12,13 @@
     "prepublish": "echo 0"
   },
   "dependencies": {
-    "apr-main": "^4.0.3",
     "brule": "^3.1.0",
     "cloudapi-gql": "^4.6.0",
     "hapi": "^17.2.0",
+    "hapi-triton-auth": "^1.0.0",
     "inert": "^5.1.0",
-    "joyent-navigation": "^1.0.0",
-    "minio-proto-auth": "^1.1.0",
-    "my-joy-beta": "^1.0.0",
+    "joyent-navigation": "*",
+    "my-joy-beta": "*",
     "rollover": "^1.0.0"
   }
 }
