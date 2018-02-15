@@ -138,7 +138,7 @@ export default compose(
 
         if (!err && action === 'remove') {
           const { history } = ownProps;
-          return history.push(`/instances/`);
+          return history.push(`/`);
         }
 
         // after mutation, sets loading back to false

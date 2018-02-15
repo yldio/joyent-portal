@@ -14,12 +14,13 @@ import {
   Button,
   H2,
   Label,
+  CopiableField,
   QueryBreakpoints,
   DotIcon,
   DeleteIcon,
   StartIcon,
   StopIcon,
-  CopiableField
+  InstanceTypeIcon
 } from 'joyent-ui-toolkit';
 
 const { SmallOnly, Medium } = QueryBreakpoints;
@@ -129,6 +130,16 @@ export default withTheme(
               <Meta {...instance} />
               <Row between="xs">
                 <Col xs={9}>
+                  <Button
+                    href={`http://localhost:3070/~create/${instance.name}`}
+                    target="__blank"
+                    rel="noopener noreferrer"
+                    secondary
+                    small
+                    icon
+                  >
+                    <InstanceTypeIcon />
+                  </Button>
                   <SmallOnly>
                     <Button
                       type="button"

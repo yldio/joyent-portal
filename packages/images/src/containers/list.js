@@ -37,6 +37,7 @@ export const List = ({
   error = null,
   history,
   typeValue,
+  handleCreateInstance,
   handleRemove
 }) => (
   <ViewContainer main>
@@ -78,7 +79,11 @@ export const List = ({
       <Row>
         {images.map(image => (
           <Col sm={4}>
-            <Image {...image} onRemove={() => handleRemove(image.id)} />
+            <Image
+              {...image}
+              onCreateInstance={() => handleCreateInstance(image)}
+              onRemove={() => handleRemove(image.id)}
+            />
           </Col>
         ))}
         {!images.length && !loading ? (
@@ -152,6 +157,10 @@ export default compose(
       };
     },
     (dispatch, { removeImage, history }) => ({
+      handleCreateInstance: image =>
+        window
+          .open(`http://localhost:3069/~create/?image=${image.name}`, '_blank')
+          .focus(),
       handleRemove: async id => {
         dispatch([set({ name: `remove-mutation-${id}-loading`, value: true })]);
 

@@ -165,10 +165,10 @@ export default compose(
           set({ name: 'create-instance-firewall-proceeded', value: true })
         );
 
-        return history.push('/instances/~create/cns');
+        return history.push(`/~create/cns${history.location.search}`);
       },
       handleEdit: () => {
-        return history.push('/instances/~create/firewall');
+        return history.push(`/~create/firewall${history.location.search}`);
       }
     })
   ),

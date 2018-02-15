@@ -42,7 +42,8 @@ exports[`renders <List /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c12 + button {
+.c12 + button,
+.c12 + a {
   margin-left: 0.375rem;
 }
 
@@ -129,6 +130,11 @@ exports[`renders <List /> without throwing 1`] = `
 
 .c11 {
   display: inline-block;
+}
+
+.c11 + button,
+.c11 + a {
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -1303,7 +1309,8 @@ exports[`renders <List error /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c12 + button {
+.c12 + button,
+.c12 + a {
   margin-left: 0.375rem;
 }
 
@@ -1399,6 +1406,11 @@ exports[`renders <List error /> without throwing 1`] = `
 
 .c11 {
   display: inline-block;
+}
+
+.c11 + button,
+.c11 + a {
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -2627,7 +2639,8 @@ exports[`renders <List instances /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c12 + button {
+.c12 + button,
+.c12 + a {
   margin-left: 0.375rem;
 }
 
@@ -2724,6 +2737,11 @@ exports[`renders <List instances /> without throwing 1`] = `
 
 .c11 {
   display: inline-block;
+}
+
+.c11 + button,
+.c11 + a {
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -3726,7 +3744,7 @@ exports[`renders <List instances /> without throwing 1`] = `
           >
             <a
               className="c34 c35 c36"
-              to="/instances/2252839a"
+              to="/2252839a"
             >
               2252839a
             </a>
@@ -3853,7 +3871,7 @@ exports[`renders <List instances /> without throwing 1`] = `
           >
             <a
               className="c34 c35 c36"
-              to="/instances/f1bd1730"
+              to="/f1bd1730"
             >
               f1bd1730
             </a>
@@ -3974,7 +3992,8 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c12 + button {
+.c12 + button,
+.c12 + a {
   margin-left: 0.375rem;
 }
 
@@ -4071,6 +4090,11 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 
 .c11 {
   display: inline-block;
+}
+
+.c11 + button,
+.c11 + a {
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -5789,7 +5813,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <a
               className="c34 c35 c36"
-              to="/instances/2252839a"
+              to="/2252839a"
             >
               2252839a
             </a>
@@ -5916,7 +5940,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <a
               className="c34 c35 c36"
-              to="/instances/f1bd1730"
+              to="/f1bd1730"
             >
               f1bd1730
             </a>
@@ -6357,7 +6381,8 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c12 + button {
+.c12 + button,
+.c12 + a {
   margin-left: 0.375rem;
 }
 
@@ -6454,6 +6479,11 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 
 .c11 {
   display: inline-block;
+}
+
+.c11 + button,
+.c11 + a {
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -8172,7 +8202,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <a
               className="c34 c35 c36"
-              to="/instances/2252839a"
+              to="/2252839a"
             >
               2252839a
             </a>
@@ -8299,7 +8329,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <a
               className="c34 c35 c36"
-              to="/instances/f1bd1730"
+              to="/f1bd1730"
             >
               f1bd1730
             </a>
@@ -8740,7 +8770,8 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c12 + button {
+.c12 + button,
+.c12 + a {
   margin-left: 0.375rem;
 }
 
@@ -8837,6 +8868,11 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 
 .c11 {
   display: inline-block;
+}
+
+.c11 + button,
+.c11 + a {
+  margin-left: 0.375rem;
 }
 
 .c10 {
@@ -10768,7 +10804,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <a
               className="c34 c35 c36"
-              to="/instances/2252839a"
+              to="/2252839a"
             >
               2252839a
             </a>
@@ -10895,7 +10931,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <a
               className="c34 c35 c36"
-              to="/instances/f1bd1730"
+              to="/f1bd1730"
             >
               f1bd1730
             </a>
@@ -11329,7 +11365,8 @@ exports[`renders <List loading /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c12 + button {
+.c12 + button,
+.c12 + a {
   margin-left: 0.375rem;
 }
 
@@ -11405,6 +11442,11 @@ exports[`renders <List loading /> without throwing 1`] = `
 
 .c11 {
   display: inline-block;
+}
+
+.c11 + button,
+.c11 + a {
+  margin-left: 0.375rem;
 }
 
 .c10 {

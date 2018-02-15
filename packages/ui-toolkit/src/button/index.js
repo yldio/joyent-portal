@@ -12,7 +12,8 @@ import StatusLoader from '../status-loader';
 const StyledButton = NButton.extend`
   min-width: ${remcalc(120)};
 
-  & + button {
+  & + button,
+  & + a {
     margin-left: ${remcalc(6)};
   }
 `;
@@ -21,6 +22,11 @@ const InlineAnchor = styled(({ component, children, ...rest }) =>
   React.createElement(component, rest, children)
 )`
   display: inline-block;
+
+  & + button,
+  & + a {
+    margin-left: ${remcalc(6)};
+  }
 `;
 
 /**

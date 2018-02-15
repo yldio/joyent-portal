@@ -38,12 +38,18 @@ exports[`renders <Metadata /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c9 {
@@ -509,7 +515,8 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
@@ -528,6 +535,11 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c9 {
@@ -1901,7 +1913,8 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
@@ -1916,6 +1929,11 @@ exports[`renders <Metadata error /> without throwing 1`] = `
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c9 {
@@ -2422,7 +2440,8 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
@@ -2498,6 +2517,11 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c9 {
@@ -2985,7 +3009,8 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button {
+.c11 + button,
+.c11 + a {
   margin-left: 0.375rem;
 }
 
@@ -3057,6 +3082,11 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 
 .c10 {
   display: inline-block;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
 }
 
 .c9 {

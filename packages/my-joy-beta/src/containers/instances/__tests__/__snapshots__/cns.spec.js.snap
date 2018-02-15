@@ -67,7 +67,8 @@ exports[`renders <Cns /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c24 + button {
+.c24 + button,
+.c24 + a {
   margin-left: 0.375rem;
 }
 
@@ -80,6 +81,11 @@ exports[`renders <Cns /> without throwing 1`] = `
 
 .c23 {
   display: inline-block;
+}
+
+.c23 + button,
+.c23 + a {
+  margin-left: 0.375rem;
 }
 
 .c22 {
@@ -1226,7 +1232,8 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c33 + button {
+.c33 + button,
+.c33 + a {
   margin-left: 0.375rem;
 }
 
@@ -1243,6 +1250,11 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
 
 .c32 {
   display: inline-block;
+}
+
+.c32 + button,
+.c32 + a {
+  margin-left: 0.375rem;
 }
 
 .c31 {
@@ -3028,7 +3040,8 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c29 + button {
+.c29 + button,
+.c29 + a {
   margin-left: 0.375rem;
 }
 
@@ -3050,6 +3063,11 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
 
 .c28 {
   display: inline-block;
+}
+
+.c28 + button,
+.c28 + a {
+  margin-left: 0.375rem;
 }
 
 .c27 {
@@ -3733,7 +3751,8 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c38 + button {
+.c38 + button,
+.c38 + a {
   margin-left: 0.375rem;
 }
 
@@ -3750,6 +3769,11 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
 
 .c37 {
   display: inline-block;
+}
+
+.c37 + button,
+.c37 + a {
+  margin-left: 0.375rem;
 }
 
 .c36 {
@@ -5466,7 +5490,8 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c29 + button {
+.c29 + button,
+.c29 + a {
   margin-left: 0.375rem;
 }
 
@@ -5488,6 +5513,11 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
 
 .c28 {
   display: inline-block;
+}
+
+.c28 + button,
+.c28 + a {
+  margin-left: 0.375rem;
 }
 
 .c27 {
@@ -6332,7 +6362,8 @@ exports[`renders <Cns services /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c30 + button {
+.c30 + button,
+.c30 + a {
   margin-left: 0.375rem;
 }
 
@@ -6350,6 +6381,11 @@ exports[`renders <Cns services /> without throwing 1`] = `
 
 .c29 {
   display: inline-block;
+}
+
+.c29 + button,
+.c29 + a {
+  margin-left: 0.375rem;
 }
 
 .c28 {

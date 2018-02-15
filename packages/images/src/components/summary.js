@@ -115,7 +115,9 @@ export default withTheme(({ theme = {}, onRemove, removing, ...image }) => (
                 <Medium>
                   <Button
                     type="button"
-                    href={`instances/~create/?image=${image.name}`}
+                    href={`http://localhost:3069/~create/?image=${image.name}`}
+                    target="__blank"
+                    rel="noopener noreferrer"
                     bold
                     icon
                   >

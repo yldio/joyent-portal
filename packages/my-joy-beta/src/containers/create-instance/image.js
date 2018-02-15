@@ -20,10 +20,23 @@ import Animated from '@containers/create-instance/animated';
 import Description from '@components/description';
 import imageData from '@data/images-map.json';
 import GetImages from '@graphql/get-images.gql';
+import GetImage from '@graphql/get-image.gql';
+
+const HarcodedImage = image => (
+  <Fragment>
+    <Title icon={<InstanceTypeIcon />} collapsed={false}>
+      Instance type and image
+    </Title>
+    <Margin bottom={7}>
+      <Preview {...image} />
+    </Margin>
+  </Fragment>
+);
 
 const ImageContainer = ({
   expanded,
   proceeded,
+  queryImage,
   image = {},
   handleNext,
   handleEdit,
@@ -32,7 +45,11 @@ const ImageContainer = ({
   images,
   vms,
   step
-}) => (
+}) => queryImage ? (
+  <Fragment>
+    <HarcodedImage {...queryImage} />
+  </Fragment>
+) : (
   <Fragment>
     <Title
       id={step}
@@ -119,9 +136,10 @@ export default compose(
       handleNext: () => {
         dispatch(set({ name: 'create-instance-image-proceeded', value: true }));
 
-        return history.push(`/instances/~create/package`);
+        return history.push(`/~create/package${history.location.search}`);
       },
-      handleEdit: () => history.push(`/instances/~create/image`),
+      handleEdit: () =>
+        history.push(`/~create/image${history.location.search}`),
       handleSelectLatest: ({ versions }) => {
         const id = versions[0].id;
         return dispatch(change('create-instance-image', 'image', id));
@@ -130,8 +148,12 @@ export default compose(
   ),
   graphql(GetImages, {
     props: ({ ownProps, data }) => {
-      const { image = '' } = ownProps;
+      const { image = '', query } = ownProps;
       const { loading = false, images = [] } = data;
+
+      const queryImage = query.image
+        ? find(images, ['name', query.image])
+        : null;
 
       const values = images
         .reduce((acc, img) => {
@@ -186,6 +208,7 @@ export default compose(
       return {
         loading,
         images: values,
+        queryImage,
         image: {
           ...selected,
           isVm: !includes(selected.type || '', 'DATASET')

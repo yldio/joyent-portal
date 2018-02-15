@@ -58,12 +58,18 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c10 + button,
+.c10 + a {
   margin-left: 0.375rem;
 }
 
 .c9 {
   display: inline-block;
+}
+
+.c9 + button,
+.c9 + a {
+  margin-left: 0.375rem;
 }
 
 .c8 {
@@ -394,12 +400,18 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c10 + button,
+.c10 + a {
   margin-left: 0.375rem;
 }
 
 .c9 {
   display: inline-block;
+}
+
+.c9 + button,
+.c9 + a {
+  margin-left: 0.375rem;
 }
 
 .c8 {
@@ -730,12 +742,18 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c10 + button,
+.c10 + a {
   margin-left: 0.375rem;
 }
 
 .c9 {
   display: inline-block;
+}
+
+.c9 + button,
+.c9 + a {
+  margin-left: 0.375rem;
 }
 
 .c8 {
@@ -1088,12 +1106,18 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c10 + button,
+.c10 + a {
   margin-left: 0.375rem;
 }
 
 .c9 {
   display: inline-block;
+}
+
+.c9 + button,
+.c9 + a {
+  margin-left: 0.375rem;
 }
 
 .c8 {
@@ -1424,12 +1448,18 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c10 + button,
+.c10 + a {
   margin-left: 0.375rem;
 }
 
 .c9 {
   display: inline-block;
+}
+
+.c9 + button,
+.c9 + a {
+  margin-left: 0.375rem;
 }
 
 .c8 {
@@ -1760,12 +1790,18 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c10 + button,
+.c10 + a {
   margin-left: 0.375rem;
 }
 
 .c9 {
   display: inline-block;
+}
+
+.c9 + button,
+.c9 + a {
+  margin-left: 0.375rem;
 }
 
 .c8 {
@@ -2096,12 +2132,18 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button {
+.c10 + button,
+.c10 + a {
   margin-left: 0.375rem;
 }
 
 .c9 {
   display: inline-block;
+}
+
+.c9 + button,
+.c9 + a {
+  margin-left: 0.375rem;
 }
 
 .c8 {

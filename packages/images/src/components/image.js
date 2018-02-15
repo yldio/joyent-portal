@@ -36,6 +36,12 @@ const CardAnchor = styled(Anchor)`
   text-decoration: none;
 `;
 
+const ItemAnchor = styled(Anchor)`
+  color: ${props => props.theme.text};
+  -webkit-text-fill-color: currentcolor;
+  text-decoration: none;
+`;
+
 const Type = styled(Margin)`
   overflow: hidden;
   white-space: nowrap;
@@ -62,7 +68,15 @@ const Actions = styled(Flex)`
   min-width: 48px;
 `;
 
-export const Image = ({ name, os, version, type, removing, onRemove }) => (
+export const Image = ({
+  name,
+  os,
+  version,
+  type,
+  removing,
+  onRemove,
+  onCreateInstance
+}) => (
   <Margin bottom={3}>
     <CardAnchor to={`/${name}`} component={Link}>
       <Card radius>
@@ -108,14 +122,14 @@ export const Image = ({ name, os, version, type, removing, onRemove }) => (
                     <ActionsIcon />
                   </PopoverTarget>
                   <Popover placement="bottom">
-                    <PopoverItem disabled={false}>
-                      <Anchor
-                        noUnderline
-                        black
-                        href={`instances/~create/?image=${name}`}
+                    <PopoverItem disabled={false} onClick={onCreateInstance}>
+                      <ItemAnchor
+                        href={`http://localhost:3069/~create/?image=${name}`}
+                        target="__blank"
+                        rel="noopener noreferrer"
                       >
                         Create Instance
-                      </Anchor>
+                      </ItemAnchor>
                     </PopoverItem>
                     <PopoverDivider />
                     <PopoverItem disabled={removing} onClick={onRemove}>

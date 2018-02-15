@@ -21,31 +21,31 @@ it('renders <Menu links /> without throwing', () => {
   const links = [
     {
       name: 'summary',
-      pathname: '/instances/:name/summary'
+      pathname: '/:name/summary'
     },
     {
       name: 'tags',
-      pathname: '/instances/:name/tags'
+      pathname: '/:name/tags'
     },
     {
       name: 'metadata',
-      pathname: '/instances/:name/metadata'
+      pathname: '/:name/metadata'
     },
     {
       name: 'networks',
-      pathname: '/instances/:name/networks'
+      pathname: '/:name/networks'
     },
     {
       name: 'firewall',
-      pathname: '/instances/:name/firewall'
+      pathname: '/:name/firewall'
     },
     {
       name: 'dns',
-      pathname: '/instances/:name/dns'
+      pathname: '/:name/dns'
     },
     {
       name: 'snapshots',
-      pathname: '/instances/:name/snapshots'
+      pathname: '/:name/snapshots'
     }
   ];
 

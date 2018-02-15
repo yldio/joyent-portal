@@ -99,12 +99,18 @@ exports[`renders <Name /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c13 + button {
+.c13 + button,
+.c13 + a {
   margin-left: 0.375rem;
 }
 
 .c12 {
   display: inline-block;
+}
+
+.c12 + button,
+.c12 + a {
+  margin-left: 0.375rem;
 }
 
 .c11 {
@@ -529,12 +535,18 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c13 + button {
+.c13 + button,
+.c13 + a {
   margin-left: 0.375rem;
 }
 
 .c12 {
   display: inline-block;
+}
+
+.c12 + button,
+.c12 + a {
+  margin-left: 0.375rem;
 }
 
 .c11 {
@@ -959,12 +971,18 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c13 + button {
+.c13 + button,
+.c13 + a {
   margin-left: 0.375rem;
 }
 
 .c12 {
   display: inline-block;
+}
+
+.c12 + button,
+.c12 + a {
+  margin-left: 0.375rem;
 }
 
 .c11 {
@@ -1389,12 +1407,18 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c13 + button {
+.c13 + button,
+.c13 + a {
   margin-left: 0.375rem;
 }
 
 .c12 {
   display: inline-block;
+}
+
+.c12 + button,
+.c12 + a {
+  margin-left: 0.375rem;
 }
 
 .c11 {

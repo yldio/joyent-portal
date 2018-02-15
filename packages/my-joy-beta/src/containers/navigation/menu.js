@@ -10,7 +10,7 @@ export default connect((state, { match }) => {
 
   const links = sections.map(({ name, pathname }) => ({
     name,
-    pathname: `/instances/${instanceSlug}/${pathname}`
+    pathname: `/${instanceSlug}/${pathname}`
   }));
 
   return {

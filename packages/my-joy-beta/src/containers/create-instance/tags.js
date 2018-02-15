@@ -137,10 +137,10 @@ export default compose(
     handleNext: () => {
       dispatch(set({ name: 'create-instance-tags-proceeded', value: true }));
 
-      return history.push(`/instances/~create/metadata`);
+      return history.push(`/~create/metadata${history.location.search}`);
     },
     handleEdit: () => {
-      return history.push(`/instances/~create/tags`);
+      return history.push(`/~create/tags${history.location.search}`);
     },
     handleAddTag: value => {
       const toggleToClosed = set({

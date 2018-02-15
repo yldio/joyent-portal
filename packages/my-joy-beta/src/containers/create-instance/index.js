@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+
 import React from 'react';
 import { Margin } from 'styled-components-spacing';
 import ReduxForm from 'declarative-redux-form';
@@ -8,6 +9,7 @@ import { destroyAll } from 'react-redux-values';
 import { graphql, compose } from 'react-apollo';
 import intercept from 'apr-intercept';
 import constantCase from 'constant-case';
+import queryString from 'query-string';
 import get from 'lodash.get';
 import omit from 'lodash.omit';
 import uniqBy from 'lodash.uniqby';
@@ -29,23 +31,43 @@ import parseError from '@state/parse-error';
 
 const CREATE_FORM = 'CREATE-INSTANCE';
 
-const CreateInstance = ({ step, disabled, handleSubmit, history, match }) => (
+const CreateInstance = ({
+  step,
+  disabled,
+  handleSubmit,
+  history,
+  match,
+  query
+}) => (
   <ViewContainer>
     <Margin top={4} bottom={4}>
       <H2>Create Instances</H2>
     </Margin>
+    {query.image ? (
+      <Image
+        history={history}
+        match={match}
+        query={query}
+        step="image"
+        expanded={step === 'image'}
+      />
+    ) : null}
     <Name
       history={history}
       match={match}
+      query={query}
       step="name"
       expanded={step === 'name'}
     />
-    <Image
-      history={history}
-      match={match}
-      step="image"
-      expanded={step === 'image'}
-    />
+    {!query.image ? (
+      <Image
+        history={history}
+        match={match}
+        query={query}
+        step="image"
+        expanded={step === 'image'}
+      />
+    ) : null}
     <Package
       history={history}
       match={match}
@@ -105,7 +127,8 @@ const CreateInstance = ({ step, disabled, handleSubmit, history, match }) => (
 
 export default compose(
   graphql(CreateInstanceMutation, { name: 'createInstance' }),
-  connect(({ form, values }, { match }) => {
+  connect(({ form, values }, { match, location }) => {
+    const query = queryString.parse(location.search);
     const FORM_NAME = 'create-instance-name';
     const step = get(match, 'params.step', 'name');
     const nameFilled = get(form, `${FORM_NAME}.values.name`, '');
@@ -117,7 +140,11 @@ export default compose(
     );
 
     if (disabled) {
-      return { disabled, step };
+      return {
+        query,
+        disabled,
+        step
+      };
     }
 
     const name = get(
@@ -162,6 +189,7 @@ export default compose(
     }
 
     return {
+      query,
       forms: Object.keys(form), // improve this
       name,
       pkg,
@@ -265,7 +293,7 @@ export default compose(
 
         dispatch([destroyAll(), forms.map(name => destroy(name))]);
 
-        history.push(`/instances/${res.data.createMachine.name}`);
+        history.push(`/${res.data.createMachine.name}`);
       }
     };
   })

@@ -114,7 +114,7 @@ export default compose(
         name
       };
     },
-    (dispatch, { history }) => ({
+    (dispatch, { history, query }) => ({
       shouldAsyncValidate: ({ trigger }) => trigger === 'submit',
       handleAsyncValidation: async ({ name }) => {
         const sanitized = punycode.encode(name).replace(/-$/, '');
@@ -160,10 +160,13 @@ export default compose(
       },
       handleNext: () => {
         dispatch(set({ name: 'create-instance-name-proceeded', value: true }));
-
-        return history.push(`/instances/~create/image`);
+        return history.push(
+          `/~create/${query.image ? 'package' : 'image'}${
+            history.location.search
+          }`
+        );
       },
-      handleEdit: () => history.push(`/instances/~create/name`),
+      handleEdit: () => history.push(`/~create/name${history.location.search}`),
       handleRandomize: async () => {
         dispatch(
           set({ name: 'create-instance-name-randomizing', value: true })

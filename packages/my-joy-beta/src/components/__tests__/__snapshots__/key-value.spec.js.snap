@@ -30,12 +30,18 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23 + button {
+.c23 + button,
+.c23 + a {
   margin-left: 0.375rem;
 }
 
 .c22 {
   display: inline-block;
+}
+
+.c22 + button,
+.c22 + a {
+  margin-left: 0.375rem;
 }
 
 .c21 {
@@ -1299,12 +1305,18 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23 + button {
+.c23 + button,
+.c23 + a {
   margin-left: 0.375rem;
 }
 
 .c22 {
   display: inline-block;
+}
+
+.c22 + button,
+.c22 + a {
+  margin-left: 0.375rem;
 }
 
 .c21 {
@@ -2329,7 +2341,8 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c24 + button {
+.c24 + button,
+.c24 + a {
   margin-left: 0.375rem;
 }
 
@@ -2348,6 +2361,11 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 
 .c23 {
   display: inline-block;
+}
+
+.c23 + button,
+.c23 + a {
+  margin-left: 0.375rem;
 }
 
 .c22 {
@@ -3417,12 +3435,18 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23 + button {
+.c23 + button,
+.c23 + a {
   margin-left: 0.375rem;
 }
 
 .c22 {
   display: inline-block;
+}
+
+.c22 + button,
+.c22 + a {
+  margin-left: 0.375rem;
 }
 
 .c21 {
@@ -4447,12 +4471,18 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23 + button {
+.c23 + button,
+.c23 + a {
   margin-left: 0.375rem;
 }
 
 .c22 {
   display: inline-block;
+}
+
+.c22 + button,
+.c22 + a {
+  margin-left: 0.375rem;
 }
 
 .c21 {
@@ -5488,7 +5518,8 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23 + button {
+.c23 + button,
+.c23 + a {
   margin-left: 0.375rem;
 }
 
@@ -5547,6 +5578,11 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 
 .c22 {
   display: inline-block;
+}
+
+.c22 + button,
+.c22 + a {
+  margin-left: 0.375rem;
 }
 
 .c21 {
@@ -6602,7 +6638,8 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23 + button {
+.c23 + button,
+.c23 + a {
   margin-left: 0.375rem;
 }
 
@@ -6661,6 +6698,11 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 
 .c22 {
   display: inline-block;
+}
+
+.c22 + button,
+.c22 + a {
+  margin-left: 0.375rem;
 }
 
 .c24 {
@@ -7771,12 +7813,18 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c23 + button {
+.c23 + button,
+.c23 + a {
   margin-left: 0.375rem;
 }
 
 .c22 {
   display: inline-block;
+}
+
+.c22 + button,
+.c22 + a {
+  margin-left: 0.375rem;
 }
 
 .c21 {
