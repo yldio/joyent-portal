@@ -38,7 +38,7 @@ const NameContainer = ({
   <Fragment>
     <Title
       id={step}
-      onClick={!expanded && !name && handleEdit}
+      onClick={!expanded && !proceeded && handleEdit}
       collapsed={!expanded && !proceeded}
       icon={<NameIcon />}
     >

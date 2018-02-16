@@ -77,7 +77,7 @@ export const List = ({
         </ReduxForm>
       </Margin>
       <Row>
-        {images.map((image) => (
+        {images.map(image => (
           <Col sm={4}>
             <Image {...image} onRemove={() => handleRemove(image.id)} />
           </Col>
@@ -128,22 +128,24 @@ export default compose(
         : images;
 
       return {
-        images: filtered.filter(image => {
-          switch (typeValue) {
-            case 'all':
-              return true;
-            case 'hardware-virtual-machine':
-              return virtual.includes(image.type);
-            case 'infrastructure-container':
-              return container.includes(image.type);
-            default:
-              return true;
-          }
-        }).map(({ id, ...image }) => ({
-          ...image,
-          id,
-          removing: get(values, `remove-mutation-${id}-loading`, false)
-        })),
+        images: filtered
+          .filter(image => {
+            switch (typeValue) {
+              case 'all':
+                return true;
+              case 'hardware-virtual-machine':
+                return virtual.includes(image.type);
+              case 'infrastructure-container':
+                return container.includes(image.type);
+              default:
+                return true;
+            }
+          })
+          .map(({ id, ...image }) => ({
+            ...image,
+            id,
+            removing: get(values, `remove-mutation-${id}-loading`, false)
+          })),
         allImages: images,
         mutationError,
         typeValue
@@ -169,7 +171,9 @@ export default compose(
         }
 
         if (res) {
-          dispatch([set({ name: `remove-mutation-${id}-loading`, value: false })]);
+          dispatch([
+            set({ name: `remove-mutation-${id}-loading`, value: false })
+          ]);
           history.push(`/`);
         }
       }
