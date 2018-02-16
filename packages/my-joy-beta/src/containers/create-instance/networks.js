@@ -152,8 +152,7 @@ export default compose(
             ),
             id
           };
-        })
-        .sort((_, b) => b.selected);
+        });
 
       return {
         proceeded: get(values, 'create-instance-networks-proceeded', false),
