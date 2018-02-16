@@ -123,7 +123,7 @@ export default compose(
       },
       handleEdit: () => history.push(`/instances/~create/image`),
       handleSelectLatest: ({ versions }) => {
-        const id = versions[versions.length - 1].id;
+        const id = versions[0].id;
         return dispatch(change('create-instance-image', 'image', id));
       }
     })
