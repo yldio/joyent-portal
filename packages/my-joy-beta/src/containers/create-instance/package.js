@@ -49,7 +49,7 @@ const PackageContainer = ({
   <Fragment>
     <Title
       id={step}
-      onClick={!expanded && !selected.id && handleEdit}
+      onClick={!expanded && !proceeded && handleEdit}
       collapsed={!expanded && !proceeded}
       icon={<PackageIcon />}
     >

@@ -36,7 +36,7 @@ const ImageContainer = ({
   <Fragment>
     <Title
       id={step}
-      onClick={!expanded && !image.id && handleEdit}
+      onClick={!expanded && !proceeded && handleEdit}
       collapsed={!expanded && !proceeded}
       icon={<InstanceTypeIcon />}
     >

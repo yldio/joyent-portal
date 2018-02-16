@@ -127,32 +127,31 @@ export default compose(
       const selected = get(form, `${FORM_NAME}.values`, {});
       const empty = id => !includes(Object.keys(selected), id);
 
-      const _networks = networks
-        .map(({ id, name, ...network }) => {
-          if (empty(id) && name === 'Joyent-SDC-Public') {
-            selected[id] = true;
-          }
+      const _networks = networks.map(({ id, name, ...network }) => {
+        if (empty(id) && name === 'Joyent-SDC-Public') {
+          selected[id] = true;
+        }
 
-          return {
-            ...network,
-            name,
-            selected:
-              empty(id) && name === 'Joyent-SDC-Public'
-                ? true
-                : Boolean(selected[id]),
-            infoExpanded: get(
-              values,
-              `create-instance-networks-${id}-info-expanded`,
-              false
-            ),
-            machinesExpanded: get(
-              values,
-              `create-instance-networks-${id}-machines-expanded`,
-              false
-            ),
-            id
-          };
-        });
+        return {
+          ...network,
+          name,
+          selected:
+            empty(id) && name === 'Joyent-SDC-Public'
+              ? true
+              : Boolean(selected[id]),
+          infoExpanded: get(
+            values,
+            `create-instance-networks-${id}-info-expanded`,
+            false
+          ),
+          machinesExpanded: get(
+            values,
+            `create-instance-networks-${id}-machines-expanded`,
+            false
+          ),
+          id
+        };
+      });
 
       return {
         proceeded: get(values, 'create-instance-networks-proceeded', false),
