@@ -1,14 +1,8 @@
 const Inert = require('inert');
 const Path = require('path');
-const Execa = require('execa');
 const { readFile } = require('mz/fs');
 
 exports.register = async server => {
-  await Execa('npm', ['run', 'build'], {
-    cwd: Path.join(__dirname, '..'),
-    stdio: 'inherit'
-  });
-
   const indexFile = await readFile(
     Path.join(__dirname, '../build/index.html'),
     'utf-8'

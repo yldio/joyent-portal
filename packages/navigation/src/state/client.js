@@ -7,12 +7,13 @@ import { withClientState } from 'apollo-link-state';
 import defaultState from './local';
 
 const {
-  REACT_APP_GQL_PORT = 443,
-  REACT_APP_GQL_PROTOCOL = 'https',
+  REACT_APP_GQL_PORT = window.location.port,
+  REACT_APP_GQL_PROTOCOL = window.location.protocol.replace(/\:$/, ''),
   REACT_APP_GQL_HOSTNAME = window.location.hostname
 } = process.env;
 
-const URI = `${REACT_APP_GQL_PROTOCOL}://${REACT_APP_GQL_HOSTNAME}:${REACT_APP_GQL_PORT}/graphql`;
+const PORT = REACT_APP_GQL_PORT ? `:${REACT_APP_GQL_PORT}` : '';
+const URI = `${REACT_APP_GQL_PROTOCOL}://${REACT_APP_GQL_HOSTNAME}${PORT}/graphql`;
 
 const cache = new InMemoryCache();
 const remote = new HttpLink({ uri: URI });

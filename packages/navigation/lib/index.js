@@ -1,15 +1,9 @@
 const Inert = require('inert');
 const Path = require('path');
-const Execa = require('execa');
 
 const ROOT = Path.join(__dirname, '../build');
 
 exports.register = async server => {
-  await Execa('npm', ['run', 'build'], {
-    cwd: Path.join(__dirname, '..'),
-    stdio: 'inherit'
-  });
-
   const manifest = require('../build/asset-manifest.json');
 
   await server.register(Inert);
@@ -30,7 +24,9 @@ exports.register = async server => {
             return h.continue;
           }
 
-          return h.file(Path.join(ROOT, file), { confine: ROOT });
+          return h.file(Path.join(ROOT, file), {
+            confine: ROOT
+          });
         }
       }
     }

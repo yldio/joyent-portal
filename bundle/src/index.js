@@ -32,7 +32,7 @@ const server = Hapi.server({
   host: '127.0.0.1'
 });
 
-async function main () {
+async function main() {
   await server.register([
     {
       plugin: Rollover,
@@ -83,7 +83,7 @@ async function main () {
 
   server.auth.default('sso');
 
-  process.on('unhandledRejection', (err) => {
+  process.on('unhandledRejection', err => {
     server.log(['error'], err);
   });
 

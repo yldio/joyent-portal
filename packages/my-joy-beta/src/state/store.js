@@ -8,16 +8,17 @@ import { reducer as valuesReducer } from 'react-redux-values';
 import paramCase from 'param-case';
 
 const {
-  REACT_APP_GQL_PORT = 443,
-  REACT_APP_GQL_PROTOCOL = 'https',
+  REACT_APP_GQL_PORT = window.location.port,
+  REACT_APP_GQL_PROTOCOL = window.location.protocol.replace(/\:$/, ''),
   REACT_APP_GQL_HOSTNAME = window.location.hostname
 } = process.env;
 
+const PORT = REACT_APP_GQL_PORT ? `:${REACT_APP_GQL_PORT}` : '';
+const URI = `${REACT_APP_GQL_PROTOCOL}://${REACT_APP_GQL_HOSTNAME}${PORT}/graphql`;
+
 export const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link: new HttpLink({
-    uri: `${REACT_APP_GQL_PROTOCOL}://${REACT_APP_GQL_HOSTNAME}:${REACT_APP_GQL_PORT}/graphql`
-  })
+  link: new HttpLink({ uri: URI })
 });
 
 const initialState = {

@@ -10,6 +10,7 @@
     "lint": "eslint . --fix --ext .js --ext .md",
     "test-ci": "echo 0",
     "test": "echo 0",
+    "postinstall": "npm run build",
     "prepublish": "echo 0"
   },
   "dependencies": {
@@ -21,7 +22,6 @@
     "babel-preset-joyent-portal": "^6.0.3",
     "emotion": "^8.0.12",
     "emotion-theming": "^8.0.12",
-    "execa": "^0.9.0",
     "graphql-tag": "^2.6.1",
     "inert": "^5.1.0",
     "joyent-icons": "^5.0.0",
@@ -29,7 +29,6 @@
     "joyent-react-scripts": "^7.3.0",
     "lodash.chunk": "^4.2.0",
     "lodash.keys": "^4.2.0",
-    "mz": "^2.7.0",
     "outy": "^0.1.2",
     "param-case": "^2.1.1",
     "pascal-case": "^2.0.1",

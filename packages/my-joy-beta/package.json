@@ -13,6 +13,7 @@
     "lint": "eslint . --fix --ext .js --ext .md",
     "test-ci": "NODE_ENV=test joyent-react-scripts test --env=jsdom --testPathIgnorePatterns='.ui.js'",
     "test": "DEFAULT_TIMEOUT_INTERVAL=100000 NODE_ENV=test joyent-react-scripts test --env=jsdom",
+    "postinstall": "npm run build",
     "prepublish": "echo 0"
   },
   "dependencies": {
@@ -46,7 +47,6 @@
     "lodash.sortby": "^4.7.0",
     "lodash.uniqby": "^4.7.0",
     "lunr": "^2.1.5",
-    "mz": "^2.7.0",
     "normalized-styled-components": "^1.0.18",
     "param-case": "^2.1.1",
     "prop-types": "^15.6.0",
