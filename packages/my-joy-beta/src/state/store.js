@@ -18,7 +18,10 @@ const URI = `${REACT_APP_GQL_PROTOCOL}://${REACT_APP_GQL_HOSTNAME}${PORT}/graphq
 
 export const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link: new HttpLink({ uri: URI })
+  link: new HttpLink({
+    credentials: 'same-origin',
+    uri: URI
+  })
 });
 
 const initialState = {
