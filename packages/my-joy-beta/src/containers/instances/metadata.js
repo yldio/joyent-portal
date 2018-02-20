@@ -156,6 +156,7 @@ export default compose(
   graphql(DeleteMetadata, { name: 'deleteMetadata' }),
   graphql(GetMetadata, {
     options: ({ match }) => ({
+      ssr: false,
       pollInterval: 1000,
       variables: {
         name: get(match, 'params.instance')

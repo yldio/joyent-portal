@@ -172,6 +172,7 @@ export default compose(
   ),
   graphql(ListFwRules, {
     options: ({ tags, expanded, enabled }) => ({
+      ssr: false,
       fetchPolicy: expanded && enabled ? 'cache-first' : 'cache-only',
       variables: {
         tags: tags.map(({ name, value }) => ({ name, value }))
@@ -201,86 +202,3 @@ export default compose(
     }
   })
 )(Firewall);
-
-// <ReduxForm
-//   form="fw-enabled"
-//   destroyOnUnmount={false}
-//   forceUnregisterOnUnmount={true}
-//   initialValues={{ enabled }}
-//   onSubmit={handleEnabledToggle}
-// >
-//   {props =>
-//     loading ? null : (
-//       <Fragment>
-//         <Margin bottom={7}>
-//           <ToggleFirewallForm {...props} />
-//         </Margin>
-//         <Divider height={remcalc(1)} />
-//       </Fragment>
-//     )
-//   }
-// </ReduxForm>
-// <ReduxForm
-//   form="fw-inactive"
-//   destroyOnUnmount={false}
-//   forceUnregisterOnUnmount={true}
-//   initialValues={{ inactive }}
-// >
-//   {props =>
-//     !enabled || loading ? null : (
-//       <Margin top={4}>
-//         <ToggleInactiveForm {...props} />
-//       </Margin>
-//     )
-//   }
-// </ReduxForm>
-// {!loading && !defaultRules.length && !tagRules.length ? (
-//   <Margin top={5}>
-//     <Empty>Sorry, but we weren’t able to find any firewall rules.</Empty>
-//   </Margin>
-// ) : null}
-// {!loading && enabled && defaultRules.length ? (
-//   <Margin top={5}>
-//     <DefaultRules rules={defaultRules} />
-//   </Margin>
-// ) : null}
-// {!loading && enabled && tagRules.length ? (
-//   <Margin top={8}>
-//     <TagRules rules={tagRules} />
-//   </Margin>
-// ) : null}
-//
-//
-//
-//
-//
-//
-// <ReduxForm
-//   form={FORM_NAME}
-//   destroyOnUnmount={false}
-//   forceUnregisterOnUnmount={true}
-// >
-//   {props =>
-//     expanded && !loading ? (
-//       <FirewallForm
-//         {...props}
-//         defaultRules={defaultRules}
-//         tagRules={tagRules}
-//         enabled={enabled}
-//       />
-//     ) : null
-//   }
-// </ReduxForm>
-// {expanded ? (
-//   <Margin bottom={4}>
-//     <Button type="button" onClick={handleNext}>
-//       Next
-//     </Button>
-//   </Margin>
-// ) : proceeded ? (
-//   <Margin bottom={4}>
-//     <Button type="button" onClick={handleEdit} secondary>
-//       Edit
-//     </Button>
-//   </Margin>
-// ) : null}

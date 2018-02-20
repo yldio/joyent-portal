@@ -149,6 +149,7 @@ export default compose(
   graphql(DeleteTag, { name: 'deleteTag' }),
   graphql(GetTags, {
     options: ({ match }) => ({
+      ssr: false,
       pollInterval: 1000,
       variables: {
         name: get(match, 'params.instance')

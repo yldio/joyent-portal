@@ -170,6 +170,7 @@ export default compose(
   graphql(CreateSnapshotMutation, { name: 'createSnapshot' }),
   graphql(GetSnapshots, {
     options: ({ match }) => ({
+      ssr: false,
       pollInterval: 1000,
       variables: {
         name: get(match, 'params.instance')

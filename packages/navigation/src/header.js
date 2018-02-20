@@ -20,20 +20,20 @@ import {
   HeaderSpace
 } from './components';
 
-const updateHeaderMutation = gql`
+const UpdateHeaderMutation = gql`
   mutation updateHeader($isOpen: Boolean!, $activePanel: String!) {
     updateHeader(isOpen: $isOpen, activePanel: $activePanel) @client
   }
 `;
 
-const getHeader = gql`
+const GetHeader = gql`
   {
     isOpen @client
     activePanel @client
   }
 `;
 
-const getAccount = gql`
+const GetAccount = gql`
   {
     account {
       login
@@ -96,7 +96,10 @@ const Navigation = ({ login, toggleSectionOpen, isOpen, activePanel }) => (
 );
 
 export default compose(
-  graphql(getAccount, {
+  graphql(GetAccount, {
+    options: () => ({
+      ssr: false
+    }),
     props: ({ data }) => {
       const { account = {}, loading = false, error = null } = data;
       const { login } = account;
@@ -104,7 +107,10 @@ export default compose(
       return { login, loading, error };
     }
   }),
-  graphql(getHeader, {
+  graphql(GetHeader, {
+    options: () => ({
+      ssr: false
+    }),
     props: ({ data }) => {
       const {
         isOpen = false,
@@ -116,7 +122,7 @@ export default compose(
       return { isOpen, activePanel, loading, error };
     }
   }),
-  graphql(updateHeaderMutation, {
+  graphql(UpdateHeaderMutation, {
     props: ({ mutate, ownProps }) => ({
       toggleSectionOpen: (name = '') => {
         const { isOpen, activePanel } = ownProps;

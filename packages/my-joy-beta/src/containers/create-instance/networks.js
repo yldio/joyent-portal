@@ -112,6 +112,9 @@ export const Networks = ({
 
 export default compose(
   graphql(ListNetworks, {
+    options: () => ({
+      ssr: false
+    }),
     props: ({ data }) => {
       const { networks = [], loading = false, error = null, refetch } = data;
 

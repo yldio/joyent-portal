@@ -99,8 +99,10 @@ export default compose(
     name: 'removeImage'
   }),
   graphql(ListImages, {
-    fetchPolicy: 'network-only',
-    pollInterval: 1000,
+    options: () => ({
+      ssr: false,
+      pollInterval: 1000
+    }),
     props: ({ data: { images, loading, error, refetch } }) => ({
       images,
       loading,

@@ -1,3 +1,7 @@
 {
-  "presets": "joyent-portal"
+  "ignore": ["_document.js", "_aliases.js"],
+  "presets": [["joyent-portal", {
+    "aliases": true,
+    "autoAliases": true
+  }]]
 }

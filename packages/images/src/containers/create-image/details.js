@@ -17,7 +17,7 @@ import Animated from '@containers/create-image/animated';
 import Details from '@components/create-image/details';
 import Description from '@components/description';
 import GetRandomName from '@graphql/get-random-name.gql';
-import { client } from '@state/store';
+import createStore from '@state/apollo-client';
 import { Forms } from '@root/constants';
 
 const NameContainer = ({
@@ -111,7 +111,10 @@ const NameContainer = ({
 export default compose(
   Animated,
   graphql(GetRandomName, {
-    fetchPolicy: 'network-only',
+    options: () => ({
+      fetchPolicy: 'network-only',
+      ssr: false
+    }),
     props: ({ data }) => ({
       placeholderName: data.rndName || ''
     })
@@ -168,7 +171,7 @@ export default compose(
         dispatch(set({ name: 'create-image-name-randomizing', value: true }));
 
         const [err, res] = await intercept(
-          client.query({
+          createStore().query({
             fetchPolicy: 'network-only',
             query: GetRandomName
           })

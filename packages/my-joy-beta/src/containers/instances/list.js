@@ -181,6 +181,7 @@ export default compose(
   graphql(RemoveInstance, { name: 'remove' }),
   graphql(ListInstances, {
     options: () => ({
+      ssr: false,
       pollInterval: 1000
     }),
     props: ({ data: { machines, loading, error, refetch } }) => {

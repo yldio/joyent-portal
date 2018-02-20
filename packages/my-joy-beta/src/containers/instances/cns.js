@@ -129,6 +129,9 @@ export default compose(
   graphql(UpdateTags, { name: 'updateTags' }),
   graphql(DeleteTag, { name: 'deleteTag' }),
   graphql(GetAccount, {
+    options: () => ({
+      ssr: false
+    }),
     props: ({ data }) => {
       const { account = {} } = data;
       const { id = '<account-id>' } = account;
@@ -137,6 +140,9 @@ export default compose(
     }
   }),
   graphql(GetTags, {
+    options: () => ({
+      ssr: false
+    }),
     options: ({ match }) => ({
       variables: {
         fetchPolicy: 'network-only',

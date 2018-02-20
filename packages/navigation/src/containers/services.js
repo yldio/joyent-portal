@@ -74,12 +74,18 @@ const Services = ({ expanded = false, categories = [], products = [] }) =>
 
 export default compose(
   graphql(GetCategories, {
+    options: () => ({
+      ssr: false
+    }),
     props: ({ data }) => {
       const { categories = [] } = data;
       return { categories };
     }
   }),
   graphql(GetProducts, {
+    options: () => ({
+      ssr: false
+    }),
     props: ({ data }) => {
       const { products = [] } = data;
       return { products };

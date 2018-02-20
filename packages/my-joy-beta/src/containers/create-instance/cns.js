@@ -107,6 +107,9 @@ const CNSContainer = ({
 
 export default compose(
   graphql(GetAccount, {
+    options: () => ({
+      ssr: false
+    }),
     props: ({ data: { account: { id = '<account-id>' } = [] } }) => ({
       id
     })

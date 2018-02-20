@@ -16,7 +16,7 @@ import Name from '@components/create-instance/name';
 import Description from '@components/description';
 import GetInstance from '@graphql/get-instance-small.gql';
 import GetRandomName from '@graphql/get-random-name.gql';
-import { client } from '@state/store';
+import createClient from '@state/apollo-client';
 import parseError from '@state/parse-error';
 import { fieldError } from '@root/constants';
 
@@ -90,7 +90,9 @@ const NameContainer = ({
 
 export default compose(
   graphql(GetRandomName, {
-    fetchPolicy: 'network-only',
+    options: () => ({
+      ssr: false
+    }),
     props: ({ data }) => ({
       placeholderName: data.rndName || ''
     })
@@ -133,7 +135,7 @@ export default compose(
         }
 
         const [err, res] = await intercept(
-          client.query({
+          createClient().query({
             fetchPolicy: 'network-only',
             query: GetInstance,
             variables: { name }
@@ -172,7 +174,7 @@ export default compose(
         );
 
         const [err, res] = await intercept(
-          client.query({
+          createClient().query({
             fetchPolicy: 'network-only',
             query: GetRandomName
           })
