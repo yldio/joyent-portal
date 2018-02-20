@@ -27,7 +27,13 @@ const StyledLabel = Label.extend`
     -webkit-text-fill-color: currentcolor;
   `};
 
+  ${is('top')`
+    margin-top: ${remcalc(0)};
+    margin-bottom: ${remcalc(6)};
+  `};
+
   font-size: ${remcalc(13)};
+  margin-top: ${remcalc(6)};
   float: none;
   width: ${remcalc(300)};
 
@@ -64,8 +70,7 @@ const Meta = props => {
         error={hasError}
         warning={hasWarning}
         success={hasSuccess}
-        right={isRight}
-      >
+        right={isRight}>
         {msg}
       </StyledLabel>
     );

@@ -2,14 +2,13 @@
 
 ```jsx
 const React = require('react');
-const remcalc = require('remcalc');
 const { FormGroup, Checkbox } = require('../form');
 const { default: Table, Thead, Tr, Th, Tbody } = require('./');
 
 <Table>
   <Thead>
     <Tr>
-      <Th xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
+      <Th xs="32" padding="0" paddingLeft="12" middle left>
         <FormGroup style={{ display: 'flex', alignItems: 'center' }}>
           <Checkbox noMargin />
         </FormGroup>
@@ -34,14 +33,13 @@ const { default: Table, Thead, Tr, Th, Tbody } = require('./');
 
 ```jsx
 const React = require('react');
-const remcalc = require('remcalc');
 const { FormGroup, Checkbox } = require('../form');
 const { default: Table, Tfoot, Tr, Th } = require('./');
 
 <Table>
   <Tfoot>
     <Tr>
-      <Th xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
+      <Th xs="32" padding="0" paddingLeft="12" middle left>
         <FormGroup style={{ display: 'flex', alignItems: 'center' }}>
           <Checkbox noMargin />
         </FormGroup>
@@ -65,7 +63,6 @@ const { default: Table, Tfoot, Tr, Th } = require('./');
 
 ```jsx
 const React = require('react');
-const remcalc = require('remcalc');
 const { FormGroup, Checkbox } = require('../form');
 const { default: Table, Thead, Tr, Th, Tbody, Td } = require('./');
 const { Dot, Actions } = require('../icons');
@@ -73,7 +70,7 @@ const { Dot, Actions } = require('../icons');
 <Table>
   <Thead>
     <Tr>
-      <Th xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
+      <Th xs="32" padding="0" paddingLeft="12" middle left>
         <FormGroup>
           <Checkbox noMargin />
         </FormGroup>
@@ -92,8 +89,8 @@ const { Dot, Actions } = require('../icons');
   </Thead>
   <Tbody>
     <Tr>
-      <Td padding="0" paddingLeft={remcalc(12)} middle left>
-        <FormGroup paddingTop={remcalc(4)}>
+      <Td padding="0" paddingLeft="12" middle left>
+        <FormGroup paddingTop={(4)}>
           <Checkbox noMargin checked />
         </FormGroup>
       </Td>
@@ -103,9 +100,9 @@ const { Dot, Actions } = require('../icons');
       <Td middle left>
         <span>
           <Dot
-            width={remcalc(11)}
-            height={remcalc(11)}
-            borderRadius={remcalc(11)}
+            width={(11)}
+            height={(11)}
+            borderRadius={(11)}
             color="primary"
           />{' '}
           Provisioning
@@ -119,8 +116,8 @@ const { Dot, Actions } = require('../icons');
       </Td>
     </Tr>
     <Tr>
-      <Td padding="0" paddingLeft={remcalc(12)} middle left>
-        <FormGroup paddingTop={remcalc(4)}>
+      <Td padding="0" paddingLeft="12" middle left>
+        <FormGroup paddingTop={(4)}>
           <Checkbox noMargin />
         </FormGroup>
       </Td>
@@ -130,9 +127,9 @@ const { Dot, Actions } = require('../icons');
       <Td middle left>
         <span>
           <Dot
-            width={remcalc(11)}
-            height={remcalc(11)}
-            borderRadius={remcalc(11)}
+            width={(11)}
+            height={(11)}
+            borderRadius={(11)}
             color="green"
           />{' '}
           Running
@@ -153,7 +150,6 @@ const { Dot, Actions } = require('../icons');
 
 ```jsx
 const React = require('react');
-const remcalc = require('remcalc');
 const { FormGroup, Radio } = require('../form');
 const { default: Table, Thead, Tr, Th, Tbody, Td } = require('./');
 const { Dot } = require('../icons');
@@ -161,7 +157,7 @@ const { Dot } = require('../icons');
 <Table>
   <Thead>
     <Tr>
-      <Th xs="32" padding="0" paddingLeft={remcalc(12)} middle left />
+      <Th xs="32" padding="0" paddingLeft="12" middle left />
       <Th sortOrder="asc" showSort left middle selected actionable>
         <span>Name </span>
       </Th>
@@ -175,8 +171,8 @@ const { Dot } = require('../icons');
   </Thead>
   <Tbody>
     <Tr>
-      <Td padding="0" paddingLeft={remcalc(12)} middle left selected>
-        <FormGroup paddingTop={remcalc(4)}>
+      <Td padding="0" paddingLeft="12" middle left selected>
+        <FormGroup paddingTop={(4)}>
           <Radio noMargin checked />
         </FormGroup>
       </Td>
@@ -186,9 +182,9 @@ const { Dot } = require('../icons');
       <Td middle left selected>
         <span>
           <Dot
-            width={remcalc(11)}
-            height={remcalc(11)}
-            borderRadius={remcalc(11)}
+            width={(11)}
+            height={(11)}
+            borderRadius={(11)}
             color="primary"
           />{' '}
           Provisioning
@@ -199,8 +195,8 @@ const { Dot } = require('../icons');
       </Td>
     </Tr>
     <Tr>
-      <Td padding="0" paddingLeft={remcalc(12)} middle left>
-        <FormGroup paddingTop={remcalc(4)}>
+      <Td padding="0" paddingLeft="12" middle left>
+        <FormGroup paddingTop={(4)}>
           <Radio noMargin />
         </FormGroup>
       </Td>
@@ -210,9 +206,9 @@ const { Dot } = require('../icons');
       <Td middle left>
         <span>
           <Dot
-            width={remcalc(11)}
-            height={remcalc(11)}
-            borderRadius={remcalc(11)}
+            width={(11)}
+            height={(11)}
+            borderRadius={(11)}
             color="green"
           />{' '}
           Running

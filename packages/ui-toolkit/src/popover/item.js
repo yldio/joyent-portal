@@ -7,6 +7,7 @@ import Baseline from '../baseline';
 
 const BaseItem = styled.span`
   display: block;
+  text-align: left;
 
   &:not(:last-child) {
     margin-bottom: ${remcalc(12)};
