@@ -149,6 +149,9 @@ export default compose(
     })
   ),
   graphql(GetImages, {
+    options: () => ({
+      ssr: false
+    }),
     props: ({ ownProps, data }) => {
       const { image = '', query } = ownProps;
       const { loading = false, images = [] } = data;

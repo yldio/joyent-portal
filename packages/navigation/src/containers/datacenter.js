@@ -25,7 +25,7 @@ const RegionContainer = emotion('div')`
   padding-bottom: ${remcalc(24)};
 `;
 
-const getDatacenters = gql`
+const GetDatacenters = gql`
   {
     regions @client {
       name
@@ -80,7 +80,10 @@ const Datacenters = ({ expanded, regions = [] }) =>
   ) : null;
 
 export default compose(
-  graphql(getDatacenters, {
+  graphql(GetDatacenters, {
+    options: () => ({
+      ssr: false
+    }),
     props: ({ data }) => {
       const {
         regions = [],

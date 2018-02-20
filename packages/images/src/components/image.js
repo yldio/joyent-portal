@@ -95,7 +95,7 @@ export const Image = ({
                       height: '24'
                     })}
                   </Margin>
-                  <A to={`/${name}`} component={Link}>
+                  <A to={`/${name}/summary`} component={Link}>
                     {name}
                   </A>
                 </Flex>

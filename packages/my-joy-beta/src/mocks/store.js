@@ -1,9 +1,8 @@
 import React from 'react';
-import { client, store } from '@root/state/store';
 import { ApolloProvider } from 'react-apollo';
 
+import createClient from '@state/apollo-client';
+
 export default ({ children }) => (
-  <ApolloProvider client={client} store={store}>
-    {children}
-  </ApolloProvider>
+  <ApolloProvider client={createClient()}>{children}</ApolloProvider>
 );

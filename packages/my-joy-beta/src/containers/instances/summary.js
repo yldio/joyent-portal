@@ -84,6 +84,7 @@ export default compose(
   graphql(RemoveInstance, { name: 'remove' }),
   graphql(GetInstance, {
     options: ({ match }) => ({
+      ssr: false,
       pollInterval: 1000,
       variables: {
         name: get(match, 'params.instance')

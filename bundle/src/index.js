@@ -3,6 +3,7 @@
 const Brule = require('brule');
 const Hapi = require('hapi');
 const Rollover = require('rollover');
+const Brok = require('brok');
 const { homedir } = require('os');
 const { join } = require('path');
 
@@ -10,7 +11,6 @@ process.env.SDC_KEY_PATH =
   process.env.SDC_KEY_PATH || join(homedir(), '.ssh/id_rsa');
 
 const Sso = require('hapi-triton-auth');
-const Ui = require('my-joy-beta');
 const Nav = require('joyent-navigation');
 const Api = require('cloudapi-gql');
 
@@ -24,16 +24,28 @@ const {
   SDC_URL,
   BASE_URL = `http://0.0.0.0:${PORT}`,
   ROLLBAR_SERVER_TOKEN,
-  NODE_ENV = 'development'
+  NODE_ENV = 'development',
+  CONSOLE = 'my-joy-beta'
 } = process.env;
 
+const Ui = require(CONSOLE);
+
 const server = Hapi.server({
+  compression: {
+    minBytes: 1
+  },
+  debug: {
+    request: ['error']
+  },
   port: PORT,
   host: '127.0.0.1'
 });
 
 async function main() {
   await server.register([
+    {
+      plugin: Brok
+    },
     {
       plugin: Rollover,
       options: {

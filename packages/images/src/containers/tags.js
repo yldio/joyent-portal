@@ -116,6 +116,7 @@ export default compose(
   }),
   graphql(GetTags, {
     options: ({ match }) => ({
+      ssr: false,
       fetchPolicy: 'network-only',
       pollInterval: 1000,
       variables: {

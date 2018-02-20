@@ -47,6 +47,7 @@ export const UserScript = ({ metadata, loading = false, error = null }) => (
 export default compose(
   graphql(GetMetadata, {
     options: ({ match }) => ({
+      ssr: false,
       variables: {
         fetchPolicy: 'network-only',
         name: get(match, 'params.instance')

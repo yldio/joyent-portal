@@ -136,6 +136,9 @@ const PackageContainer = ({
 
 export default compose(
   graphql(getPackages, {
+    options: () => ({
+      ssr: false
+    }),
     props: ({ data: { loading, packages = [] } }) => ({
       loading,
       packages: packages.map(pkg => {

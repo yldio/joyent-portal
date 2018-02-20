@@ -67,6 +67,7 @@ export default compose(
   graphql(RemoveImage, { name: 'removeImage' }),
   graphql(GetImage, {
     options: ({ match }) => ({
+      ssr: false,
       variables: {
         name: get(match, 'params.image')
       }

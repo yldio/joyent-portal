@@ -133,6 +133,7 @@ export default compose(
   graphql(DisableFirewall, { name: 'disableFirewall' }),
   graphql(GetFirewallRules, {
     options: ({ match }) => ({
+      ssr: false,
       variables: {
         fetchPolicy: 'network-only',
         name: get(match, 'params.instance')

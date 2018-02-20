@@ -95,6 +95,7 @@ export default compose(
   graphql(CreateImage, { name: 'createImage' }),
   graphql(GetInstance, {
     options: ({ match }) => ({
+      ssr: false,
       variables: {
         name: get(match, 'params.instance')
       }

@@ -1,4 +1,16 @@
 import remcalc from 'remcalc';
+import { canUseDOM } from 'exenv';
+
+const globals = (() => {
+  if (!canUseDOM) {
+    return {};
+  }
+
+  return {
+    protocol: window.location.protocol,
+    host: window.location.host
+  };
+})();
 
 const flexboxgrid = {
   gridSize: 12, // rem
@@ -138,10 +150,12 @@ export const font = {
   family: '"Libre Franklin"',
   families:
     '"Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif',
-  href: () =>
-    `${document.location.protocol}//${
-      document.location.host
-    }/fonts/css?family=Libre+Franklin:400,500,600,700`,
+  href: ({ protocol, host } = {}) => {
+    const _protocol = protocol || globals.protocol;
+    const _host = host || globals.host;
+
+    return `${_protocol}//${_host}/fonts/css?family=Libre+Franklin:400,500,600,700`;
+  },
   weight: {
     bold: 700,
     semibold: 600,
@@ -157,10 +171,12 @@ export const monoFont = {
   textMuted: base.secondary,
   family: '"Roboto Mono"',
   families: '"Roboto Mono", monospace',
-  href: () =>
-    `${document.location.protocol}//${
-      document.location.host
-    }/fonts/css?family=Roboto+Mono:700,400`,
+  href: ({ protocol, host } = {}) => {
+    const _protocol = protocol || globals.protocol;
+    const _host = host || globals.host;
+
+    return `${_protocol}//${_host}/fonts/css?family=Roboto+Mono:700,400`;
+  },
   weight: {
     bold: 700,
     normal: 400
