@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import is from 'styled-is';
-import ForEach from 'apr-for-each';
 import remcalc from 'remcalc';
 
 const Wrapper = styled.section`

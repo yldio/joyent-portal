@@ -1,4 +1,4 @@
-#### Header
+#### Table Header
 
 ```jsx
 const React = require('react');
@@ -29,7 +29,7 @@ const { default: Table, Thead, Tr, Th, Tbody } = require('./');
 </Table>;
 ```
 
-#### Footer
+#### Table Footer
 
 ```jsx
 const React = require('react');
@@ -39,21 +39,21 @@ const { default: Table, Tfoot, Tr, Th } = require('./');
 <Table>
   <Tfoot>
     <Tr>
-      <Th xs="32" padding="0" paddingLeft="12" middle left>
+      <Th style={{borderTop: '1px solid rgb(216,216,216)'}} xs="32" padding="0" paddingLeft="12" middle left>
         <FormGroup style={{ display: 'flex', alignItems: 'center' }}>
           <Checkbox noMargin />
         </FormGroup>
       </Th>
-      <Th sortOrder="asc" showSort left middle selected actionable>
+      <Th style={{borderTop: '1px solid rgb(216,216,216)'}} sortOrder="asc" showSort left middle selected actionable>
         <span>Name </span>
       </Th>
-      <Th xs="150" left middle actionable>
+      <Th style={{borderTop: '1px solid rgb(216,216,216)'}} xs="150" left middle actionable>
         <span>Status </span>
       </Th>
-      <Th xs="0" sm="160" left middle actionable>
+      <Th style={{borderTop: '1px solid rgb(216,216,216)'}} xs="0" sm="160" left middle actionable>
         <span>Created </span>
       </Th>
-      <Th xs="60" padding="0" />
+      <Th style={{borderTop: '1px solid rgb(216,216,216)'}} xs="60" padding="0" />
     </Tr>
   </Tfoot>
 </Table>;
@@ -100,9 +100,8 @@ const { Dot, Actions } = require('../icons');
       <Td middle left>
         <span>
           <Dot
-            width={(11)}
-            height={(11)}
-            borderRadius={(11)}
+            size="11px"
+            borderRadius={11}
             color="primary"
           />{' '}
           Provisioning
@@ -127,9 +126,8 @@ const { Dot, Actions } = require('../icons');
       <Td middle left>
         <span>
           <Dot
-            width={(11)}
-            height={(11)}
-            borderRadius={(11)}
+            size="11px"
+            borderRadius={11}
             color="green"
           />{' '}
           Running
@@ -182,9 +180,8 @@ const { Dot } = require('../icons');
       <Td middle left selected>
         <span>
           <Dot
-            width={(11)}
-            height={(11)}
-            borderRadius={(11)}
+            size="11px"
+            borderRadius={11}
             color="primary"
           />{' '}
           Provisioning
@@ -206,9 +203,8 @@ const { Dot } = require('../icons');
       <Td middle left>
         <span>
           <Dot
-            width={(11)}
-            height={(11)}
-            borderRadius={(11)}
+            size="11px"
+            borderRadius={11}
             color="green"
           />{' '}
           Running

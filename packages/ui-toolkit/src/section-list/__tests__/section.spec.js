@@ -68,6 +68,6 @@ describe('SectionList', () => {
       .toJSON();
 
     expect(tree).toMatchSnapshot();
-    expect(tree).toHaveStyleRule('color', theme.primary.replace(/ /g, ''));
+    expect(tree).toHaveStyleRule('color', theme.secondary.replace(/ /g, ''));
   });
 });

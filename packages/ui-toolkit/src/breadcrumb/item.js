@@ -2,11 +2,11 @@ import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import remcalc from 'remcalc';
 
-import { H2 } from '../text/headings';
+import { H4 } from '../text/headings';
 import { Arrow as BaseArrow } from '../icons';
 
-const Name = H2.extend`
-  color: ${props => props.theme.primary};
+const Name = H4.extend`
+  font-weight: normal;
   margin: ${remcalc(12)} 0;
 `;
 
@@ -17,6 +17,12 @@ const Arrow = styled(BaseArrow)`
 const Container = styled.div`
   display: inline-flex;
   align-items: center;
+
+  &:last-child {
+    svg {
+      display: none;
+    }
+  }
 `;
 
 const BaseLink = styled(({ component, children, ...rest }) =>
