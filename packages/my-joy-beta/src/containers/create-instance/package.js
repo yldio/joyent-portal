@@ -188,7 +188,7 @@ export default compose(
         false
       );
 
-      const vmSelected = get(form, 'create-instance-image.values.vms', false);
+      const vmSelected = get(form, 'create-instance-vms.values.vms', false);
       const pkgSelected = get(form, `${FORM_NAME}.values.package`, null);
 
       const sorted = sortBy(packages, [_sortBy]);
