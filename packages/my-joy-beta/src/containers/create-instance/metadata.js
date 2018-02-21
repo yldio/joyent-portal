@@ -18,6 +18,8 @@ const FORM_NAME_CREATE = 'CREATE-INSTANCE-METADATA-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-METADATA-EDIT-${i}`;
 
 export const Metadata = ({
+  id,
+  step,
   metadata = [],
   expanded,
   proceeded,
@@ -30,8 +32,8 @@ export const Metadata = ({
   handleChangeAddOpen,
   handleNext,
   handleEdit,
-  id,
-  step
+  shouldAsyncValidate,
+  asyncValidate
 }) => (
   <Fragment>
     <Title
@@ -71,6 +73,8 @@ export const Metadata = ({
         destroyOnUnmount={false}
         forceUnregisterOnUnmount={true}
         onSubmit={newValue => handleUpdateMetadata(index, newValue)}
+        shouldAsyncValidate={shouldAsyncValidate}
+        asyncValidate={asyncValidate}
       >
         {props => (
           <Fragment>
@@ -102,6 +106,8 @@ export const Metadata = ({
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
       onSubmit={handleAddMetadata}
+      shouldAsyncValidate={shouldAsyncValidate}
+      asyncValidate={asyncValidate}
     >
       {props =>
         expanded && addOpen ? (
@@ -165,6 +171,22 @@ export default compose(
     },
     handleEdit: () => {
       return history.push(`/~create/metadata${history.location.search}`);
+    },
+    shouldAsyncValidate: ({ trigger }) => {
+      return trigger === 'submit';
+    },
+    asyncValidate: async ({ name = '', value = '' }) => {
+      const isNameInvalid = name.length === 0;
+      const isValueInvalid = value.length === 0;
+
+      if (!isNameInvalid && !isValueInvalid) {
+        return;
+      }
+
+      throw {
+        name: isNameInvalid,
+        value: isValueInvalid
+      };
     },
     handleAddMetadata: value => {
       const toggleToClosed = set({

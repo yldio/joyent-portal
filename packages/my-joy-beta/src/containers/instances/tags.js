@@ -48,7 +48,9 @@ export const Tags = ({
   handleCancel,
   handleEdit,
   handleRemove,
-  handleCreate
+  handleCreate,
+  shouldAsyncValidate,
+  asyncValidate
 }) => {
   const _loading = !(loading && !tags.length) ? null : <StatusLoader />;
 
@@ -57,6 +59,8 @@ export const Tags = ({
       form={ADD_FORM_NAME}
       onSubmit={handleCreate}
       onCancel={() => handleToggleAddOpen(false)}
+      shouldAsyncValidate={shouldAsyncValidate}
+      asyncValidate={asyncValidate}
     >
       {TagsAddForm}
     </ReduxForm>
@@ -95,6 +99,8 @@ export const Tags = ({
     <ReduxForm
       form={editing.form}
       initialValues={{ name: editing.name, value: editing.value }}
+      shouldAsyncValidate={shouldAsyncValidate}
+      asyncValidate={asyncValidate}
       onSubmit={handleEdit}
     >
       {props => (
@@ -197,10 +203,28 @@ export default compose(
     },
     (dispatch, ownProps) => {
       return {
-        handleToggleAddOpen: value =>
-          dispatch(set({ name: `add-tags-open`, value })),
-        handleToggleEditing: value =>
-          dispatch(set({ name: `editing-tag`, value })),
+        handleToggleAddOpen: value => {
+          return dispatch(set({ name: `add-tags-open`, value }));
+        },
+        handleToggleEditing: value => {
+          return dispatch(set({ name: `editing-tag`, value }));
+        },
+        shouldAsyncValidate: ({ trigger }) => {
+          return trigger === 'submit';
+        },
+        asyncValidate: async ({ name = '', value = '' }) => {
+          const isNameInvalid = name.length === 0;
+          const isValueInvalid = value.length === 0;
+
+          if (!isNameInvalid && !isValueInvalid) {
+            return;
+          }
+
+          throw {
+            name: isNameInvalid,
+            value: isValueInvalid
+          };
+        },
         handleEdit: async ({ name, value }, _, { form, initialValues }) => {
           const { instance, deleteTag, updateTags, refetch } = ownProps;
 

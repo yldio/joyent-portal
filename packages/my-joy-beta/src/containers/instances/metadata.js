@@ -47,12 +47,19 @@ export const Metadata = ({
   handleCancel,
   handleCreate,
   handleUpdate,
-  handleRemove
+  handleRemove,
+  shouldAsyncValidate,
+  asyncValidate
 }) => {
   const _loading = !(loading && !metadata.length) ? null : <StatusLoader />;
 
   const _add = addOpen ? (
-    <ReduxForm form={ADD_FORM_NAME} onSubmit={handleCreate}>
+    <ReduxForm
+      form={ADD_FORM_NAME}
+      onSubmit={handleCreate}
+      shouldAsyncValidate={shouldAsyncValidate}
+      asyncValidate={asyncValidate}
+    >
       {props => (
         <MetadataAddForm
           {...props}
@@ -87,6 +94,8 @@ export const Metadata = ({
           initialValues={initialValues}
           destroyOnUnmount={false}
           onSubmit={handleUpdate}
+          shouldAsyncValidate={shouldAsyncValidate}
+          asyncValidate={asyncValidate}
         >
           {props => (
             <MetadataEditForm
@@ -198,15 +207,34 @@ export default compose(
       } = ownProps;
 
       return {
-        handleCancel: form =>
-          dispatch([
+        handleCancel: form => {
+          return dispatch([
             set({ name: `${form}-expanded`, value: false }),
             dispatch(reset(form))
-          ]),
-        handleToggleAddOpen: value =>
-          dispatch(set({ name: `add-metadata-open`, value })),
-        handleUpdateExpanded: (form, expanded) =>
-          dispatch(set({ name: `${form}-expanded`, value: expanded })),
+          ]);
+        },
+        handleToggleAddOpen: value => {
+          return dispatch(set({ name: `add-metadata-open`, value }));
+        },
+        handleUpdateExpanded: (form, expanded) => {
+          return dispatch(set({ name: `${form}-expanded`, value: expanded }));
+        },
+        shouldAsyncValidate: ({ trigger }) => {
+          return trigger === 'submit';
+        },
+        asyncValidate: async ({ name = '', value = '' }) => {
+          const isNameInvalid = name.length === 0;
+          const isValueInvalid = value.length === 0;
+
+          if (!isNameInvalid && !isValueInvalid) {
+            return;
+          }
+
+          throw {
+            name: isNameInvalid,
+            value: isValueInvalid
+          };
+        },
         handleCreate: async ({ name, value }) => {
           // call mutation
           const [err] = await intercept(

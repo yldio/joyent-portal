@@ -26,6 +26,7 @@ const FORM_NAME_CREATE = 'CREATE-INSTANCE-TAGS-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-TAGS-EDIT-${i}`;
 
 export const Tags = ({
+  step,
   tags = [],
   expanded,
   proceeded,
@@ -37,8 +38,9 @@ export const Tags = ({
   handleCancelEdit,
   handleChangeAddOpen,
   handleNext,
-  step,
-  handleEdit
+  handleEdit,
+  shouldAsyncValidate,
+  asyncValidate
 }) => (
   <Fragment>
     <Title
@@ -86,6 +88,8 @@ export const Tags = ({
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
       onSubmit={handleAddTag}
+      shouldAsyncValidate={shouldAsyncValidate}
+      asyncValidate={asyncValidate}
     >
       {props =>
         expanded && addOpen ? (
@@ -146,6 +150,22 @@ export default compose(
     },
     handleEdit: () => {
       return history.push(`/~create/tags${history.location.search}`);
+    },
+    shouldAsyncValidate: ({ trigger }) => {
+      return trigger === 'submit';
+    },
+    asyncValidate: async ({ name = '', value = '' }) => {
+      const isNameInvalid = name.length === 0;
+      const isValueInvalid = value.length === 0;
+
+      if (!isNameInvalid && !isValueInvalid) {
+        return;
+      }
+
+      throw {
+        name: isNameInvalid,
+        value: isValueInvalid
+      };
     },
     handleAddTag: value => {
       const toggleToClosed = set({
