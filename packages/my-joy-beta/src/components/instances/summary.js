@@ -72,7 +72,7 @@ export const Meta = ({
 }) => [
   <Row middle="xs">
     <Col xs={12}>
-      <H2>{(instance.package || {}).name}</H2>
+      <H2>{instance.name}</H2>
     </Col>
   </Row>,
   <Margin top={2} bottom={3}>
@@ -87,9 +87,11 @@ export const Meta = ({
           : 'Hardware Virtual Machine'}
       </Label>
       <VerticalDivider />
+      <Label>{(instance.package || {}).name}</Label>
+      <VerticalDivider />
       <Flex>
         <DotIcon
-          marginRight={remcalc(6)}
+          right={remcalc(6)}
           size={remcalc(15)}
           color={stateColor[state]}
         />
