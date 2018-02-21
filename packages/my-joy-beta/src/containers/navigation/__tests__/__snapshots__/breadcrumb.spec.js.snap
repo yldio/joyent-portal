@@ -10,18 +10,9 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
   width: 100%;
   padding-left: 0;
   padding-right: 0;
-  border-bottom: 0.0625rem solid rgb(216,216,216);
 }
 
 .c1 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-}
-
-.c2 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -40,7 +31,7 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c2 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -50,34 +41,34 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
   display: block;
 }
 
-.c5 {
+.c4 {
   color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.875rem;
-  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
   margin: 0;
-  color: rgb(59,70,204);
+  font-weight: normal;
   margin: 0.75rem 0;
 }
 
-.c5 + p,
-.c5 + small,
-.c5 + h1,
-.c5 + h2,
-.c5 + label,
-.c5 + h3,
-.c5 + h4,
-.c5 + h5,
-.c5 + div,
-.c5 + span {
-  margin-top: 1.5rem;
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
+  margin-top: 0.75rem;
 }
 
-.c6 {
+.c5 {
   margin: 0.1875rem 0.625rem;
 }
 
-.c4 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -88,33 +79,12 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
   align-items: center;
 }
 
-@media only screen and (min-width:48em) {
-  .c1 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c1 {
-    width: 56rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c1 {
-    width: 59rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c1 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
+.c3:last-child svg {
+  display: none;
 }
 
 @media only screen and (min-width:0em) {
-  .c3 {
+  .c2 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -127,42 +97,38 @@ exports[`renders <Breadcrumb /> without throwing 1`] = `
 >
   <div
     className="c1"
+    name="breadcrum"
   >
     <div
       className="c2"
-      name="breadcrum"
     >
       <div
         className="c3"
       >
-        <div
+        <h4
           className="c4"
+          name="breadcrum-item"
         >
-          <h2
-            className="c5"
-            name="breadcrum-item"
-          >
-            Instances
-          </h2>
-          <svg
-            className="c6 "
-            height="6"
-            innerRef={undefined}
-            style={
-              Object {
-                "transform": "rotate(-90deg)",
-              }
+          Instances
+        </h4>
+        <svg
+          className="c5 "
+          height="6"
+          innerRef={undefined}
+          style={
+            Object {
+              "transform": "rotate(-90deg)",
             }
-            viewBox="0 0 9.6 6"
-            width="9.6"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-              fill="rgb(151, 151, 151)"
-            />
-          </svg>
-        </div>
+          }
+          viewBox="0 0 9.6 6"
+          width="9.6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+            fill="rgb(151, 151, 151)"
+          />
+        </svg>
       </div>
     </div>
   </div>
@@ -179,18 +145,9 @@ exports[`renders <Breadcrumb match /> without throwing 1`] = `
   width: 100%;
   padding-left: 0;
   padding-right: 0;
-  border-bottom: 0.0625rem solid rgb(216,216,216);
 }
 
 .c1 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-}
-
-.c2 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -209,7 +166,7 @@ exports[`renders <Breadcrumb match /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c2 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -219,34 +176,34 @@ exports[`renders <Breadcrumb match /> without throwing 1`] = `
   display: block;
 }
 
-.c5 {
+.c4 {
   color: rgba(73,73,73,1);
-  font-weight: normal;
-  line-height: 1.875rem;
-  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
   margin: 0;
-  color: rgb(59,70,204);
+  font-weight: normal;
   margin: 0.75rem 0;
 }
 
-.c5 + p,
-.c5 + small,
-.c5 + h1,
-.c5 + h2,
-.c5 + label,
-.c5 + h3,
-.c5 + h4,
-.c5 + h5,
-.c5 + div,
-.c5 + span {
-  margin-top: 1.5rem;
+.c4 + p,
+.c4 + small,
+.c4 + h1,
+.c4 + h2,
+.c4 + label,
+.c4 + h3,
+.c4 + h4,
+.c4 + h5,
+.c4 + div,
+.c4 + span {
+  margin-top: 0.75rem;
 }
 
-.c6 {
+.c5 {
   margin: 0.1875rem 0.625rem;
 }
 
-.c4 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -257,33 +214,12 @@ exports[`renders <Breadcrumb match /> without throwing 1`] = `
   align-items: center;
 }
 
-@media only screen and (min-width:48em) {
-  .c1 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c1 {
-    width: 56rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c1 {
-    width: 59rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c1 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
+.c3:last-child svg {
+  display: none;
 }
 
 @media only screen and (min-width:0em) {
-  .c3 {
+  .c2 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -296,70 +232,66 @@ exports[`renders <Breadcrumb match /> without throwing 1`] = `
 >
   <div
     className="c1"
+    name="breadcrum"
   >
     <div
       className="c2"
-      name="breadcrum"
     >
       <div
         className="c3"
       >
-        <div
+        <h4
           className="c4"
+          name="breadcrum-item"
         >
-          <h2
-            className="c5"
-            name="breadcrum-item"
-          >
-            Instances
-          </h2>
-          <svg
-            className="c6 "
-            height="6"
-            innerRef={undefined}
-            style={
-              Object {
-                "transform": "rotate(-90deg)",
-              }
+          Instances
+        </h4>
+        <svg
+          className="c5 "
+          height="6"
+          innerRef={undefined}
+          style={
+            Object {
+              "transform": "rotate(-90deg)",
             }
-            viewBox="0 0 9.6 6"
-            width="9.6"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-              fill="rgb(151, 151, 151)"
-            />
-          </svg>
-        </div>
-        <div
+          }
+          viewBox="0 0 9.6 6"
+          width="9.6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+            fill="rgb(151, 151, 151)"
+          />
+        </svg>
+      </div>
+      <div
+        className="c3"
+      >
+        <h4
           className="c4"
+          name="breadcrum-item"
         >
-          <h2
-            className="c5"
-            name="breadcrum-item"
-          >
-            name
-          </h2>
-          <svg
-            className="c6 "
-            height="6"
-            innerRef={undefined}
-            style={
-              Object {
-                "transform": "rotate(-90deg)",
-              }
+          name
+        </h4>
+        <svg
+          className="c5 "
+          height="6"
+          innerRef={undefined}
+          style={
+            Object {
+              "transform": "rotate(-90deg)",
             }
-            viewBox="0 0 9.6 6"
-            width="9.6"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-              fill="rgb(151, 151, 151)"
-            />
-          </svg>
-        </div>
+          }
+          viewBox="0 0 9.6 6"
+          width="9.6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+            fill="rgb(151, 151, 151)"
+          />
+        </svg>
       </div>
     </div>
   </div>

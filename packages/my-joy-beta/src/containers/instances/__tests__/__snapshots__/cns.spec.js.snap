@@ -163,6 +163,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -177,8 +178,10 @@ exports[`renders <Cns /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   float: right;
   font-size: 0.8125rem;
+  margin-top: 0.375rem;
   float: none;
   width: 18.75rem;
 }
@@ -384,7 +387,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -834,6 +837,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -1342,6 +1346,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -1356,8 +1361,10 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   float: right;
   font-size: 0.8125rem;
+  margin-top: 0.375rem;
   float: none;
   width: 18.75rem;
 }
@@ -1593,7 +1600,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -1654,7 +1661,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -3006,33 +3013,33 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c18 {
+.c19 {
   margin-top: 1.5rem;
 }
 
-.c24 {
+.c25 {
   margin-top: 0.1875rem;
 }
 
-.c27 {
+.c28 {
   margin-top: 1.3125rem;
   margin-left: 0.75rem;
 }
 
-.c13 {
+.c14 {
   padding: 1.5rem;
   padding-bottom: 0rem;
 }
 
-.c15 {
+.c16 {
   padding-bottom: 0.75rem;
 }
 
-.c19 {
+.c20 {
   padding-bottom: 1.125rem;
 }
 
-.c30 {
+.c31 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3045,23 +3052,23 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c30::-moz-focus-inner,
-.c30[type='button']::-moz-focus-inner,
-.c30[type='reset']::-moz-focus-inner,
-.c30[type='submit']::-moz-focus-inner {
+.c31::-moz-focus-inner,
+.c31[type='button']::-moz-focus-inner,
+.c31[type='reset']::-moz-focus-inner,
+.c31[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c30:-moz-focusring,
-.c30[type='button']:-moz-focusring,
-.c30[type='reset']:-moz-focusring,
-.c30[type='submit']:-moz-focusring {
+.c31:-moz-focusring,
+.c31[type='button']:-moz-focusring,
+.c31[type='reset']:-moz-focusring,
+.c31[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c30 + button,
-.c30 + a {
+.c31 + button,
+.c31 + a {
   margin-left: 0.375rem;
 }
 
@@ -3072,7 +3079,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c11 {
+.c12 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -3081,16 +3088,16 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c29 {
+.c30 {
   display: inline-block;
 }
 
-.c29 + button,
-.c29 + a {
+.c30 + button,
+.c30 + a {
   margin-left: 0.375rem;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3130,7 +3137,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:focus {
+.c29:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3138,26 +3145,26 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c28[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c23 {
+.c24 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -3165,13 +3172,14 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c26 {
+.c27 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -3179,8 +3187,10 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   float: right;
   font-size: 0.8125rem;
+  margin-top: 0.375rem;
   float: none;
   width: 18.75rem;
 }
@@ -3223,7 +3233,17 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   display: block;
 }
 
-.c14 {
+.c7 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c15 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -3231,20 +3251,20 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c14 + p,
-.c14 + small,
-.c14 + h1,
-.c14 + h2,
-.c14 + label,
-.c14 + h3,
-.c14 + h4,
-.c14 + h5,
-.c14 + div,
-.c14 + span {
+.c15 + p,
+.c15 + small,
+.c15 + h1,
+.c15 + h2,
+.c15 + label,
+.c15 + h3,
+.c15 + h4,
+.c15 + h5,
+.c15 + div,
+.c15 + span {
   margin-top: 1.5rem;
 }
 
-.c10 {
+.c11 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -3252,20 +3272,20 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c17 {
+.c18 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c31 {
+.c32 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.25rem;
 }
 
-.c16 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3288,7 +3308,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3311,7 +3331,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c21 {
+.c22 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3328,7 +3348,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   display: block;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3341,7 +3361,30 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c8:before,
+.c8:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.c8:before {
+  top: -0.4375rem;
+  right: 1.0625rem;
+  border-width: 0 0.34375rem 0.4375rem 0.34375rem;
+  border-color: transparent transparent rgb(216,216,216) transparent;
+}
+
+.c8:after {
+  top: -0.375rem;
+  right: 1.125rem;
+  border-width: 0 0.28125rem 0.375rem 0.28125rem;
+  border-color: transparent transparent rgb(255,255,255) transparent;
+}
+
+.c9 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
@@ -3350,11 +3393,11 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   background-color: rgb(210,67,58);
 }
 
-.c9 {
+.c10 {
   padding: 1.125rem 1.125rem;
 }
 
-.c12 {
+.c13 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3376,7 +3419,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c22 {
+.c23 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -3391,12 +3434,12 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -3413,42 +3456,42 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c25:focus {
+.c26:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c25::-webkit-input-placeholder {
+.c26::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25::-moz-placeholder {
+.c26::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:-ms-input-placeholder {
+.c26:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:invalid {
+.c26:invalid {
   box-shadow: none;
 }
 
-.c25:disabled {
+.c26:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c25:disabled::-webkit-input-placeholder {
+.c26:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:disabled::-moz-placeholder {
+.c26:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:disabled:-ms-input-placeholder {
+.c26:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
@@ -3495,6 +3538,24 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   }
 }
 
+@media only screen and (min-width:48em) {
+  .c7 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c7 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
 <div
   className="c0"
 >
@@ -3531,24 +3592,32 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
     className="c6"
   >
     <div
-      className="c7"
+      className="c2"
     >
       <div
-        className="c8"
-      />
-      <div
-        className="c9"
+        className="c7"
       >
-        <h4
-          className="c10"
+        <div
+          className="c8"
         >
-          Ooops!
-        </h4>
-        <p
-          className="c11"
-        >
-          An error occurred while loading your CNS services
-        </p>
+          <div
+            className="c9"
+          />
+          <div
+            className="c10"
+          >
+            <h4
+              className="c11"
+            >
+              Ooops!
+            </h4>
+            <p
+              className="c12"
+            >
+              An error occurred while loading your CNS services
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -3556,20 +3625,20 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
     className="c6"
   >
     <div
-      className="c12"
+      className="c13"
       disabled={false}
       name="card"
     >
       <div
-        className="c13"
+        className="c14"
       >
         <h3
-          className="c14"
+          className="c15"
         >
           Hostnames
         </h3>
         <div
-          className="c15"
+          className="c16"
         >
           <p
             className="c5"
@@ -3578,25 +3647,25 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
           </p>
         </div>
         <div
-          className="c16"
+          className="c17"
         />
         <div
-          className="c17 c2"
+          className="c18 c2"
           height="0.0625rem"
         />
         <div
-          className="c18"
+          className="c19"
         >
           <div
-            className="c18"
+            className="c19"
           >
             <h3
-              className="c14"
+              className="c15"
             >
               CNS service hostnames
             </h3>
             <div
-              className="c19"
+              className="c20"
             >
               <p
                 className="c5"
@@ -3609,29 +3678,29 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
             onSubmit={undefined}
           >
             <div
-              className="c20"
+              className="c21"
               wrap={true}
             >
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="baseline-jVaZNU kXgQxt c22"
+                  className="baseline-jVaZNU kXgQxt c23"
                   name="name"
                   role="group"
                   style={undefined}
                 >
                   <label
-                    className="c23"
+                    className="c24"
                     htmlFor="m"
                   >
                     Attach to new CNS service name
                   </label>
                   <div
-                    className="c24"
+                    className="c25"
                   >
                     <input
-                      className="c25"
+                      className="c26"
                       disabled={false}
                       id="m"
                       onBlur={null}
@@ -3639,19 +3708,19 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
                       required={true}
                     />
                     <label
-                      className="c26"
+                      className="c27"
                     />
                   </div>
                 </div>
               </div>
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c27"
+                  className="c28"
                 >
                   <button
-                    className="c28 c29 c30"
+                    className="c29 c30 c31"
                     disabled={undefined}
                     href=""
                     type="submit"
@@ -3659,7 +3728,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
                     Add
                   </button>
                   <div
-                    className="c31 c2"
+                    className="c32 c2"
                     height="0.25rem"
                   />
                 </div>
@@ -3667,10 +3736,10 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
             </div>
           </form>
           <div
-            className="c18"
+            className="c19"
           >
             <div
-              className="c16"
+              className="c17"
             />
           </div>
         </div>
@@ -3882,6 +3951,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -3896,8 +3966,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   float: right;
   font-size: 0.8125rem;
+  margin-top: 0.375rem;
   float: none;
   width: 18.75rem;
 }
@@ -3910,6 +3982,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -4148,7 +4221,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -4241,7 +4314,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -5486,33 +5559,33 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c18 {
+.c19 {
   margin-top: 1.5rem;
 }
 
-.c24 {
+.c25 {
   margin-top: 0.1875rem;
 }
 
-.c27 {
+.c28 {
   margin-top: 1.3125rem;
   margin-left: 0.75rem;
 }
 
-.c13 {
+.c14 {
   padding: 1.5rem;
   padding-bottom: 0rem;
 }
 
-.c15 {
+.c16 {
   padding-bottom: 0.75rem;
 }
 
-.c19 {
+.c20 {
   padding-bottom: 1.125rem;
 }
 
-.c30 {
+.c31 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -5525,23 +5598,23 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c30::-moz-focus-inner,
-.c30[type='button']::-moz-focus-inner,
-.c30[type='reset']::-moz-focus-inner,
-.c30[type='submit']::-moz-focus-inner {
+.c31::-moz-focus-inner,
+.c31[type='button']::-moz-focus-inner,
+.c31[type='reset']::-moz-focus-inner,
+.c31[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c30:-moz-focusring,
-.c30[type='button']:-moz-focusring,
-.c30[type='reset']:-moz-focusring,
-.c30[type='submit']:-moz-focusring {
+.c31:-moz-focusring,
+.c31[type='button']:-moz-focusring,
+.c31[type='reset']:-moz-focusring,
+.c31[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c30 + button,
-.c30 + a {
+.c31 + button,
+.c31 + a {
   margin-left: 0.375rem;
 }
 
@@ -5552,7 +5625,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c11 {
+.c12 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -5561,16 +5634,16 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c29 {
+.c30 {
   display: inline-block;
 }
 
-.c29 + button,
-.c29 + a {
+.c30 + button,
+.c30 + a {
   margin-left: 0.375rem;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5610,7 +5683,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:focus {
+.c29:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5618,26 +5691,26 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c28:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c28[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c23 {
+.c24 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -5645,13 +5718,14 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c26 {
+.c27 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -5659,8 +5733,10 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   float: right;
   font-size: 0.8125rem;
+  margin-top: 0.375rem;
   float: none;
   width: 18.75rem;
 }
@@ -5703,7 +5779,17 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   display: block;
 }
 
-.c14 {
+.c7 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c15 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -5711,20 +5797,20 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c14 + p,
-.c14 + small,
-.c14 + h1,
-.c14 + h2,
-.c14 + label,
-.c14 + h3,
-.c14 + h4,
-.c14 + h5,
-.c14 + div,
-.c14 + span {
+.c15 + p,
+.c15 + small,
+.c15 + h1,
+.c15 + h2,
+.c15 + label,
+.c15 + h3,
+.c15 + h4,
+.c15 + h5,
+.c15 + div,
+.c15 + span {
   margin-top: 1.5rem;
 }
 
-.c10 {
+.c11 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -5732,20 +5818,20 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c17 {
+.c18 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c31 {
+.c32 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
   height: 0.25rem;
 }
 
-.c16 {
+.c17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5768,7 +5854,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5791,7 +5877,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c32 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5815,7 +5901,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c21 {
+.c22 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -5832,7 +5918,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   display: block;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5845,7 +5931,30 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c8:before,
+.c8:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.c8:before {
+  top: -0.4375rem;
+  right: 1.0625rem;
+  border-width: 0 0.34375rem 0.4375rem 0.34375rem;
+  border-color: transparent transparent rgb(216,216,216) transparent;
+}
+
+.c8:after {
+  top: -0.375rem;
+  right: 1.125rem;
+  border-width: 0 0.28125rem 0.375rem 0.28125rem;
+  border-color: transparent transparent rgb(255,255,255) transparent;
+}
+
+.c9 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
@@ -5854,11 +5963,11 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   background-color: rgb(210,67,58);
 }
 
-.c9 {
+.c10 {
   padding: 1.125rem 1.125rem;
 }
 
-.c12 {
+.c13 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5880,7 +5989,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c22 {
+.c23 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -5895,12 +6004,12 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -5917,46 +6026,46 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c25:focus {
+.c26:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c25::-webkit-input-placeholder {
+.c26::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25::-moz-placeholder {
+.c26::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:-ms-input-placeholder {
+.c26:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:invalid {
+.c26:invalid {
   box-shadow: none;
 }
 
-.c25:disabled {
+.c26:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c25:disabled::-webkit-input-placeholder {
+.c26:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:disabled::-moz-placeholder {
+.c26:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25:disabled:-ms-input-placeholder {
+.c26:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33 {
+.c34 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -5969,27 +6078,27 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c34 {
+.c35 {
   display: none;
 }
 
-.c34:checked + label {
+.c35:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c34:checked + label:after {
+.c35:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c34:checked + label:active {
+.c35:checked + label:active {
   box-shadow: none;
 }
 
-.c35 {
+.c36 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -6009,24 +6118,24 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   margin-right: 0.375rem;
 }
 
-.c35::selection {
+.c36::selection {
   background: none;
 }
 
-.c35:active {
+.c36:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c35:hover {
+.c36:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c35:hover:after {
+.c36:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c35:after,
-.c35:before {
+.c36:after,
+.c36:before {
   position: relative;
   display: block;
   content: '';
@@ -6034,7 +6143,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   height: 100%;
 }
 
-.c35:after {
+.c36:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -6046,11 +6155,11 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c35:active {
+.c36:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c35:before {
+.c36:before {
   display: none;
 }
 
@@ -6097,6 +6206,24 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   }
 }
 
+@media only screen and (min-width:48em) {
+  .c7 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c7 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
 <div
   className="c0"
 >
@@ -6133,24 +6260,32 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
     className="c6"
   >
     <div
-      className="c7"
+      className="c2"
     >
       <div
-        className="c8"
-      />
-      <div
-        className="c9"
+        className="c7"
       >
-        <h4
-          className="c10"
+        <div
+          className="c8"
         >
-          Ooops!
-        </h4>
-        <p
-          className="c11"
-        >
-          mutation error
-        </p>
+          <div
+            className="c9"
+          />
+          <div
+            className="c10"
+          >
+            <h4
+              className="c11"
+            >
+              Ooops!
+            </h4>
+            <p
+              className="c12"
+            >
+              mutation error
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -6158,20 +6293,20 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
     className="c6"
   >
     <div
-      className="c12"
+      className="c13"
       disabled={false}
       name="card"
     >
       <div
-        className="c13"
+        className="c14"
       >
         <h3
-          className="c14"
+          className="c15"
         >
           Hostnames
         </h3>
         <div
-          className="c15"
+          className="c16"
         >
           <p
             className="c5"
@@ -6180,25 +6315,25 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
           </p>
         </div>
         <div
-          className="c16"
+          className="c17"
         />
         <div
-          className="c17 c2"
+          className="c18 c2"
           height="0.0625rem"
         />
         <div
-          className="c18"
+          className="c19"
         >
           <div
-            className="c18"
+            className="c19"
           >
             <h3
-              className="c14"
+              className="c15"
             >
               CNS service hostnames
             </h3>
             <div
-              className="c19"
+              className="c20"
             >
               <p
                 className="c5"
@@ -6211,29 +6346,29 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
             onSubmit={undefined}
           >
             <div
-              className="c20"
+              className="c21"
               wrap={true}
             >
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="baseline-jVaZNU kXgQxt c22"
+                  className="baseline-jVaZNU kXgQxt c23"
                   name="name"
                   role="group"
                   style={undefined}
                 >
                   <label
-                    className="c23"
+                    className="c24"
                     htmlFor="n"
                   >
                     Attach to new CNS service name
                   </label>
                   <div
-                    className="c24"
+                    className="c25"
                   >
                     <input
-                      className="c25"
+                      className="c26"
                       disabled={false}
                       id="n"
                       onBlur={null}
@@ -6241,19 +6376,19 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                       required={true}
                     />
                     <label
-                      className="c26"
+                      className="c27"
                     />
                   </div>
                 </div>
               </div>
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c27"
+                  className="c28"
                 >
                   <button
-                    className="c28 c29 c30"
+                    className="c29 c30 c31"
                     disabled={undefined}
                     href=""
                     type="submit"
@@ -6261,7 +6396,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                     Add
                   </button>
                   <div
-                    className="c31 c2"
+                    className="c32 c2"
                     height="0.25rem"
                   />
                 </div>
@@ -6269,10 +6404,10 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
             </div>
           </form>
           <div
-            className="c18"
+            className="c19"
           >
             <div
-              className="c16"
+              className="c17"
             />
           </div>
         </div>
@@ -6283,27 +6418,27 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
     className="c6"
   >
     <div
-      className="baseline-jVaZNU kXgQxt c22"
+      className="baseline-jVaZNU kXgQxt c23"
       name="cns-enabled"
       role="group"
       style={undefined}
     >
       <div
-        className="c32"
+        className="c33"
       >
         <label
-          className="c23"
+          className="c24"
           disabled={false}
           htmlFor="o"
         >
           Disabled CNS
         </label>
         <div
-          className="c33"
+          className="c34"
         >
           <input
             checked={true}
-            className="c34"
+            className="c35"
             disabled={false}
             id="o"
             onBlur={undefined}
@@ -6312,7 +6447,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
           />
           <label
             checked={true}
-            className="c35"
+            className="c36"
             disabled={false}
             htmlFor="o"
             id="o"
@@ -6321,7 +6456,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
           />
           <label
             checked={true}
-            className="c23"
+            className="c24"
             disabled={false}
             htmlFor="o"
             id="o"
@@ -6524,6 +6659,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -6538,8 +6674,10 @@ exports[`renders <Cns services /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   float: right;
   font-size: 0.8125rem;
+  margin-top: 0.375rem;
   float: none;
   width: 18.75rem;
 }
@@ -6745,7 +6883,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -7363,6 +7501,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
