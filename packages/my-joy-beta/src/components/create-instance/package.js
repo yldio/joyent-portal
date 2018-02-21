@@ -154,7 +154,7 @@ export const Package = ({
       )}
     </TableTd>
     {hasVms && (
-      <TableTd right bold={sortBy === 'vcpu'} selected={selected}>
+      <TableTd right bold={sortBy === 'vcpus'} selected={selected}>
         {vcpus}
       </TableTd>
     )}
@@ -213,9 +213,9 @@ export const Packages = ({
           {hasVms && (
             <TableTh
               xs="100"
-              onClick={() => onSortBy('vcpu', sortOrder)}
+              onClick={() => onSortBy('vcpus', sortOrder)}
               sortOrder={sortOrder}
-              showSort={sortBy === 'vcpu'}
+              showSort={sortBy === 'vcpus'}
               right
               middle
               actionable
