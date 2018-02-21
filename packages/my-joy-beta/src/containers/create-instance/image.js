@@ -44,81 +44,82 @@ const ImageContainer = ({
   images,
   vms,
   step
-}) => queryImage ? (
-  <Fragment>
-    <HarcodedImage {...queryImage} />
-  </Fragment>
-) : (
-  <Fragment>
-    <Title
-      id={step}
-      onClick={!expanded && !proceeded && handleEdit}
-      collapsed={!expanded && !proceeded}
-      icon={<InstanceTypeIcon />}
-    >
-      Instance type and image
-    </Title>
-    {expanded ? (
-      <Description>
-        Hardware virtual machines are generally used for non-containerized
-        applications. Infrastructure containers are generally for running any
-        Linux image on secure, bare metal containers.{' '}
-        <a
-          href="https://docs.joyent.com/private-cloud/images"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Read the docs
-        </a>
-      </Description>
-    ) : null}
-    <ReduxForm
-      form="create-instance-vms"
-      destroyOnUnmount={false}
-      forceUnregisterOnUnmount={true}
-      initialValues={{ vms: true }}
-    >
-      {props => (loading || !expanded ? null : <ImageType {...props} />)}
-    </ReduxForm>
-    <ReduxForm
-      form="create-instance-image"
-      destroyOnUnmount={false}
-      forceUnregisterOnUnmount={true}
-      initialValues={{ vms: true }}
-    >
-      {props =>
-        loading && expanded ? (
-          <StatusLoader />
-        ) : expanded ? (
-          <Image
-            {...props}
-            images={images.filter(i => i.isVm === vms)}
-            onSelectLatest={handleSelectLatest}
-          />
-        ) : image.id ? (
-          <Preview {...image} />
-        ) : null
-      }
-    </ReduxForm>
-    {expanded ? (
-      <Margin top={1} bottom={7}>
-        <Button
-          type="button"
-          onClick={handleNext}
-          disabled={!image.id || vms !== image.isVm}
-        >
-          Next
-        </Button>
-      </Margin>
-    ) : proceeded ? (
-      <Margin top={4} bottom={7}>
-        <Button type="button" onClick={handleEdit} secondary>
-          Edit
-        </Button>
-      </Margin>
-    ) : null}
-  </Fragment>
-);
+}) =>
+  queryImage ? (
+    <Fragment>
+      <HarcodedImage {...queryImage} />
+    </Fragment>
+  ) : (
+    <Fragment>
+      <Title
+        id={step}
+        onClick={!expanded && !proceeded && handleEdit}
+        collapsed={!expanded && !proceeded}
+        icon={<InstanceTypeIcon />}
+      >
+        Instance type and image
+      </Title>
+      {expanded ? (
+        <Description>
+          Hardware virtual machines are generally used for non-containerized
+          applications. Infrastructure containers are generally for running any
+          Linux image on secure, bare metal containers.{' '}
+          <a
+            href="https://docs.joyent.com/private-cloud/images"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Read the docs
+          </a>
+        </Description>
+      ) : null}
+      <ReduxForm
+        form="create-instance-vms"
+        destroyOnUnmount={false}
+        forceUnregisterOnUnmount={true}
+        initialValues={{ vms: true }}
+      >
+        {props => (loading || !expanded ? null : <ImageType {...props} />)}
+      </ReduxForm>
+      <ReduxForm
+        form="create-instance-image"
+        destroyOnUnmount={false}
+        forceUnregisterOnUnmount={true}
+        initialValues={{ vms: true }}
+      >
+        {props =>
+          loading && expanded ? (
+            <StatusLoader />
+          ) : expanded ? (
+            <Image
+              {...props}
+              images={images.filter(i => i.isVm === vms)}
+              onSelectLatest={handleSelectLatest}
+            />
+          ) : image.id ? (
+            <Preview {...image} />
+          ) : null
+        }
+      </ReduxForm>
+      {expanded ? (
+        <Margin top={1} bottom={7}>
+          <Button
+            type="button"
+            onClick={handleNext}
+            disabled={!image.id || vms !== image.isVm}
+          >
+            Next
+          </Button>
+        </Margin>
+      ) : proceeded ? (
+        <Margin top={4} bottom={7}>
+          <Button type="button" onClick={handleEdit} secondary>
+            Edit
+          </Button>
+        </Margin>
+      ) : null}
+    </Fragment>
+  );
 
 export default compose(
   connect(

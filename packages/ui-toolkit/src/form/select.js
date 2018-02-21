@@ -37,12 +37,14 @@ const SelectWrapper = styled.div`
   }
 
   ${is('embedded')`
-      width: auto;
-      margin: 0 ${remcalc(6)};
-      min-width: 0;
-      &:after {
-        right: ${remcalc(6)};
-      }
+    margin: 0 ${remcalc(6)};
+    width: auto;
+    max-width: auto;
+    min-width: 0;
+
+    &:after {
+      right: ${remcalc(6)};
+    }
   `};
 
   ${is('embedded', 'left')`

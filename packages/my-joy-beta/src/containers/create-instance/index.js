@@ -3,7 +3,7 @@
 import React from 'react';
 import { Margin } from 'styled-components-spacing';
 import ReduxForm from 'declarative-redux-form';
-import { stopSubmit, destroy } from 'redux-form';
+import { SubmissionError, destroy } from 'redux-form';
 import { connect } from 'react-redux';
 import { destroyAll } from 'react-redux-values';
 import { graphql, compose } from 'react-apollo';
@@ -15,7 +15,14 @@ import Values from 'lodash.values';
 import omit from 'lodash.omit';
 import uniqBy from 'lodash.uniqby';
 
-import { ViewContainer, H2, Button } from 'joyent-ui-toolkit';
+import {
+  ViewContainer,
+  H2,
+  Button,
+  Message,
+  MessageTitle,
+  MessageDescription
+} from 'joyent-ui-toolkit';
 
 import Name from '@containers/create-instance/name';
 import Image from '@containers/create-instance/image';
@@ -44,6 +51,14 @@ const CreateInstance = ({
     <Margin top={4} bottom={4}>
       <H2>Create Instances</H2>
     </Margin>
+    {error ? (
+      <Margin bottom={4}>
+        <Message error>
+          <MessageTitle>Ooops!</MessageTitle>
+          <MessageDescription>{error}</MessageDescription>
+        </Message>
+      </Margin>
+    ) : null}
     {query.image ? (
       <Image
         history={history}
@@ -113,6 +128,14 @@ const CreateInstance = ({
       expanded={step === 'affinity'}
     />
     <Margin top={7} bottom={10}>
+      {error ? (
+        <Margin bottom={4}>
+          <Message error>
+            <MessageTitle>Ooops!</MessageTitle>
+            <MessageDescription>{error}</MessageDescription>
+          </Message>
+        </Margin>
+      ) : null}
       <ReduxForm form={CREATE_FORM} onSubmit={handleSubmit}>
         {({ handleSubmit, submitting }) => (
           <form onSubmit={handleSubmit}>
@@ -133,6 +156,7 @@ export default compose(
     const FORM_NAME = 'create-instance-name';
     const step = get(match, 'params.step', 'name');
 
+    const error = get(form, `${CREATE_FORM}.error`, null);
     const name = get(form, `${FORM_NAME}.values.name`, '');
     const image = get(form, 'create-instance-image.values.image', '');
     const pkg = get(form, 'create-instance-package.values.package', '');
@@ -146,6 +170,7 @@ export default compose(
 
     if (!enabled) {
       return {
+        error,
         disabled: !enabled,
         step
       };
@@ -178,6 +203,7 @@ export default compose(
     }
 
     return {
+      error,
       query,
       forms: Object.keys(form), // improve this
       name,
@@ -272,11 +298,9 @@ export default compose(
         );
 
         if (err) {
-          return dispatch(
-            stopSubmit(CREATE_FORM, {
-              _error: parseError(err)
-            })
-          );
+          throw new SubmissionError({
+            _error: parseError(err)
+          });
         }
 
         dispatch([destroyAll(), forms.map(name => destroy(name))]);
