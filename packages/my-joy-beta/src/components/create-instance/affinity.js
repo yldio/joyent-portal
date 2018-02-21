@@ -37,8 +37,8 @@ export const Rule = rule => (
           width={remcalc(66)}
           embedded
         >
-          <option value="must">must</option>
           <option value="should">should</option>
+          <option value="must">must</option>
         </Select>
       </FormGroup>
       <H5 style={style} inline noMargin>
@@ -48,7 +48,7 @@ export const Rule = rule => (
         <Select
           style={style}
           touched={rule['rule-instance-placement']}
-          width={remcalc(90)}
+          width={remcalc(100)}
           embedded
         >
           <option value="same">the same</option>
@@ -62,7 +62,7 @@ export const Rule = rule => (
         <Select
           style={style}
           touched={rule['rule-type']}
-          width={remcalc(120)}
+          width={remcalc(135)}
           embedded
           left
         >

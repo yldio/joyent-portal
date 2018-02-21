@@ -124,7 +124,7 @@ export const Affinity = ({
     </ReduxForm>
     {expanded ? (
       <Margin top={2} bottom={4}>
-        {affinityRules.length === 0 ? (
+        {!addOpen && affinityRules.length === 0 ? (
           <Button
             type="button"
             onClick={() => handleChangeAddOpen(true)}

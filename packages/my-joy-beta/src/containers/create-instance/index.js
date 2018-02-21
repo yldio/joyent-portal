@@ -41,6 +41,7 @@ const CREATE_FORM = 'CREATE-INSTANCE';
 
 const CreateInstance = ({
   step,
+  error,
   disabled,
   handleSubmit,
   history,
