@@ -26,6 +26,7 @@ import UpdateMetadata from '@graphql/update-metadata.gql';
 import DeleteMetadata from '@graphql/delete-metadata.gql';
 import parseError from '@state/parse-error';
 import ToolbarForm from '@components/instances/toolbar';
+import Confirm from '@state/confirm';
 
 import {
   AddForm as MetadataAddForm,
@@ -275,6 +276,15 @@ export default compose(
           return refetch();
         },
         handleRemove: async form => {
+          const name = get(
+            find(metadata, ['form', form]),
+            'initialValues.name'
+          );
+
+          if (!await Confirm(`Do you want to remove "${name}"?`)) {
+            return;
+          }
+
           dispatch([
             set({ name: `${form}-removing`, value: true }),
             startSubmit(form)
@@ -285,20 +295,17 @@ export default compose(
             deleteMetadata({
               variables: {
                 id: instance.id,
-                name: get(find(metadata, ['form', form]), 'initialValues.name')
+                name
               }
             })
           );
 
-          if (err) {
-            // show mutation error
-            throw new SubmissionError({
-              _error: parseError(err)
-            });
-          }
+          const flipSubmitFalse = stopSubmit(form, {
+            _error: err && parseError(err)
+          });
 
           dispatch([
-            stopSubmit(form),
+            flipSubmitFalse,
             set({ name: `${form}-removing`, value: false })
           ]);
 

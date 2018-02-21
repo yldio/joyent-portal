@@ -33,6 +33,7 @@ import ToolbarForm from '@components/instances/toolbar';
 import SnapshotsListActions from '@components/instances/footer';
 import parseError from '@state/parse-error';
 import GenIndex from '@state/gen-index';
+import Confirm from '@state/confirm';
 
 const MENU_FORM_NAME = 'snapshot-list-menu';
 const TABLE_FORM_NAME = 'snapshot-list-table';
@@ -322,6 +323,19 @@ export default compose(
         },
 
         handleAction: async ({ name, selected = [] }) => {
+          // eslint-disable-next-line no-alert
+          if (
+            !await Confirm(
+              `Do you want to ${name} ${
+                selected.length === 1
+                  ? `"${selected[0].name}"`
+                  : `${selected.length} snapshots`
+              }`
+            )
+          ) {
+            return;
+          }
+
           const action = ownProps[name];
           const gerund = `${name}ing`;
 

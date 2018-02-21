@@ -138,12 +138,11 @@ export default compose(
     const pkg = get(form, 'create-instance-package.values.package', '');
     const networks = get(form, 'CREATE-INSTANCE-NETWORKS.values', {});
 
-    const enabled = (
+    const enabled =
       name.length &&
       image.length &&
       pkg.length &&
-      Values(networks).filter(Boolean).length
-    );
+      Values(networks).filter(Boolean).length;
 
     if (!enabled) {
       return {
@@ -160,7 +159,11 @@ export default compose(
     const userScript = get(values, 'create-instance-user-script', {});
     const tags = receivedTags.map(a => omit(a, 'expanded'));
 
-    const firewall_enabled = get(form, 'CREATE-INSTANCE-FIREWALL.values.enabled', false);
+    const firewall_enabled = get(
+      form,
+      'CREATE-INSTANCE-FIREWALL.values.enabled',
+      false
+    );
 
     tags.push({
       name: 'triton.cns.disable',

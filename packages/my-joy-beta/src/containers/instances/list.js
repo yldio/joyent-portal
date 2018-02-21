@@ -11,6 +11,7 @@ import intercept from 'apr-intercept';
 import find from 'lodash.find';
 import reverse from 'lodash.reverse';
 import sort from 'lodash.sortby';
+import includes from 'lodash.includes';
 import remcalc from 'remcalc';
 
 import {
@@ -30,6 +31,7 @@ import RemoveInstance from '@graphql/remove-instance.gql';
 import ToolbarForm from '@components/instances/toolbar';
 import Index from '@state/gen-index';
 import parseError from '@state/parse-error';
+import Confirm from '@state/confirm';
 
 import {
   default as InstanceList,
@@ -312,6 +314,19 @@ export default compose(
         }
       },
       handleAction: async ({ selected, name }) => {
+        // eslint-disable-next-line no-alert
+        if (
+          !await Confirm(
+            `Do you want to ${name} ${
+              selected.length === 1
+                ? `"${selected[0].name}"`
+                : `${selected.length} snapshots`
+            }`
+          )
+        ) {
+          return;
+        }
+
         const action = ownProps[name];
         const gerund = `${name}ing`;
 

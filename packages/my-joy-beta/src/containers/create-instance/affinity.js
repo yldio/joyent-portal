@@ -158,7 +158,7 @@ export default compose(
       proceeded: proceeded || affinityRules.length,
       addOpen,
       affinityRules,
-      rule,
+      rule
     };
   }),
   connect(null, (dispatch, { affinityRules = [], history }) => ({

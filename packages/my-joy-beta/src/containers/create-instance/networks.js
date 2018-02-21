@@ -127,12 +127,19 @@ export default compose(
     ({ values, form }, { networks }) => {
       const selected = get(form, `${FORM_NAME}.values`, {});
       const empty = id => !includes(Object.keys(selected), id);
-      const proceeded = get(values, 'create-instance-networks-proceeded', false);
       const _public = find(networks, ['name', 'Joyent-SDC-Public']);
 
-      const initialValues = _public ? {
-        [_public.id]: true
-      } : {};
+      const proceeded = get(
+        values,
+        'create-instance-networks-proceeded',
+        false
+      );
+
+      const initialValues = _public
+        ? {
+            [_public.id]: true
+          }
+        : {};
 
       const _networks = networks.map(({ id, name, ...network }) => {
         if (empty(id) && name === 'Joyent-SDC-Public') {

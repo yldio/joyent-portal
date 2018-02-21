@@ -31,6 +31,7 @@ import UpdateTags from '@graphql/update-tags.gql';
 import DeleteTag from '@graphql/delete-tag.gql';
 import Index from '@state/gen-index';
 import parseError from '@state/parse-error';
+import Confirm from '@state/confirm';
 
 const MENU_FORM_NAME = 'instance-tags-list-menu';
 const ADD_FORM_NAME = 'instance-tags-add-new';
@@ -253,6 +254,11 @@ export default compose(
           return refetch();
         },
         handleRemove: async (form, { name }) => {
+          // eslint-disable-next-line no-alert
+          if (!await Confirm(`Do you want to remove "${name}"?`)) {
+            return;
+          }
+
           const { instance, deleteTag, refetch } = ownProps;
 
           dispatch([
