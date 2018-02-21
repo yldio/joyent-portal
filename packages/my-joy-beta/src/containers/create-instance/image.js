@@ -16,7 +16,6 @@ import { InstanceTypeIcon, StatusLoader, Button } from 'joyent-ui-toolkit';
 
 import Image, { Preview, ImageType } from '@components/create-instance/image';
 import Title from '@components/create-instance/title';
-import Animated from '@containers/create-instance/animated';
 import Description from '@components/description';
 import imageData from '@data/images-map.json';
 import GetImages from '@graphql/get-images.gql';
@@ -122,14 +121,17 @@ const ImageContainer = ({
 );
 
 export default compose(
-  Animated,
   connect(
     ({ form, values }, ownProps) => {
+      const proceeded = get(values, 'create-instance-image-proceeded', false);
+      const vms = get(form, 'create-instance-vms.values.vms', false);
+      const image = get(form, 'create-instance-image.values.image', null);
+
       return {
         ...ownProps,
-        proceeded: get(values, 'create-instance-image-proceeded', false),
-        vms: get(form, 'create-instance-vms.values.vms', false),
-        image: get(form, 'create-instance-image.values.image', null)
+        proceeded: proceeded || image,
+        vms,
+        image
       };
     },
     (dispatch, { history }) => ({

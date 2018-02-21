@@ -12,7 +12,6 @@ import { MetadataIcon, Button, H3, Divider, KeyValue } from 'joyent-ui-toolkit';
 import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
 import Title from '@components/create-instance/title';
-import Animated from '@containers/create-instance/animated';
 import Description from '@components/description';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-METADATA-ADD';
@@ -145,12 +144,17 @@ export const Metadata = ({
 );
 
 export default compose(
-  Animated,
-  connect(({ values }, ownProps) => ({
-    proceeded: get(values, 'create-instance-metadata-proceeded', false),
-    addOpen: get(values, 'create-instance-metadata-add-open', false),
-    metadata: get(values, 'create-instance-metadata', [])
-  })),
+  connect(({ values }, ownProps) => {
+    const proceeded = get(values, 'create-instance-metadata-proceeded', false);
+    const addOpen = get(values, 'create-instance-metadata-add-open', false);
+    const metadata = get(values, 'create-instance-metadata', []);
+
+    return {
+      proceeded: proceeded || metadata.length,
+      addOpen,
+      metadata
+    };
+  }),
   connect(null, (dispatch, { metadata = [], history }) => ({
     handleNext: () => {
       dispatch(

@@ -6,13 +6,13 @@ import { connect } from 'react-redux';
 import { Margin } from 'styled-components-spacing';
 import forceArray from 'force-array';
 import includes from 'lodash.includes';
+import find from 'lodash.find';
 import get from 'lodash.get';
 
 import { NetworkIcon, Button, H3, StatusLoader } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import Network from '@components/create-instance/network';
-import Animated from '@containers/create-instance/animated';
 import Description from '@components/description';
 import ListNetworks from '@graphql/list-networks.gql';
 
@@ -24,6 +24,7 @@ export const Networks = ({
   expanded = false,
   proceeded = false,
   loading = false,
+  initialValues,
   setInfoExpanded,
   setMachinesExpanded,
   handleNext,
@@ -64,6 +65,7 @@ export const Networks = ({
       form={FORM_NAME}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
+      initialValues={initialValues}
     >
       {props =>
         !loading ? (
@@ -109,7 +111,6 @@ export const Networks = ({
 );
 
 export default compose(
-  Animated,
   graphql(ListNetworks, {
     props: ({ data }) => {
       const { networks = [], loading = false, error = null, refetch } = data;
@@ -126,6 +127,12 @@ export default compose(
     ({ values, form }, { networks }) => {
       const selected = get(form, `${FORM_NAME}.values`, {});
       const empty = id => !includes(Object.keys(selected), id);
+      const proceeded = get(values, 'create-instance-networks-proceeded', false);
+      const _public = find(networks, ['name', 'Joyent-SDC-Public']);
+
+      const initialValues = _public ? {
+        [_public.id]: true
+      } : {};
 
       const _networks = networks.map(({ id, name, ...network }) => {
         if (empty(id) && name === 'Joyent-SDC-Public') {
@@ -154,8 +161,9 @@ export default compose(
       });
 
       return {
-        proceeded: get(values, 'create-instance-networks-proceeded', false),
+        proceeded,
         networks: _networks,
+        initialValues,
         selected: Object.keys(selected).filter(n => selected[n])
       };
     },

@@ -11,6 +11,7 @@ import intercept from 'apr-intercept';
 import constantCase from 'constant-case';
 import queryString from 'query-string';
 import get from 'lodash.get';
+import Values from 'lodash.values';
 import omit from 'lodash.omit';
 import uniqBy from 'lodash.uniqby';
 
@@ -131,47 +132,25 @@ export default compose(
     const query = queryString.parse(location.search);
     const FORM_NAME = 'create-instance-name';
     const step = get(match, 'params.step', 'name');
-    const nameFilled = get(form, `${FORM_NAME}.values.name`, '');
 
-    const disabled = ['name', 'image', 'package', 'networks'].some(
-      step =>
-        !get(values, `create-instance-${step}-proceeded`, false) ||
-        !nameFilled.length
+    const name = get(form, `${FORM_NAME}.values.name`, '');
+    const image = get(form, 'create-instance-image.values.image', '');
+    const pkg = get(form, 'create-instance-package.values.package', '');
+    const networks = get(form, 'CREATE-INSTANCE-NETWORKS.values', {});
+
+    const enabled = (
+      name.length &&
+      image.length &&
+      pkg.length &&
+      Values(networks).filter(Boolean).length
     );
 
-    if (disabled) {
+    if (!enabled) {
       return {
-        query,
-        disabled,
+        disabled: !enabled,
         step
       };
     }
-
-    const name = get(
-      form,
-      'create-instance-name.values.name',
-      '<instance-name>'
-    );
-
-    const firewall_enabled = get(
-      form,
-      'CREATE-INSTANCE-FIREWALL.values.enabled',
-      false
-    );
-
-    const image = get(
-      form,
-      'create-instance-image.values.image',
-      '<instance-image>'
-    );
-
-    const pkg = get(
-      form,
-      'create-instance-package.values.package',
-      '<instance-pkg>'
-    );
-
-    const networks = get(form, 'CREATE-INSTANCE-NETWORKS.values', {});
 
     const metadata = get(values, 'create-instance-metadata', []);
     const receivedTags = get(values, 'create-instance-tags', []);
@@ -179,13 +158,20 @@ export default compose(
     const cns = get(values, 'create-instance-cns-enabled', true);
     const cnsServices = get(values, 'create-instance-cns-services', null);
     const userScript = get(values, 'create-instance-user-script', {});
-
     const tags = receivedTags.map(a => omit(a, 'expanded'));
 
-    tags.push({ name: 'triton.cns.disable', value: !cns });
+    const firewall_enabled = get(form, 'CREATE-INSTANCE-FIREWALL.values.enabled', false);
+
+    tags.push({
+      name: 'triton.cns.disable',
+      value: !cns
+    });
 
     if (cnsServices && cns) {
-      tags.push({ name: 'triton.cns.services', value: cnsServices.join(',') });
+      tags.push({
+        name: 'triton.cns.services',
+        value: cnsServices.join(',')
+      });
     }
 
     return {
@@ -200,7 +186,6 @@ export default compose(
       tags,
       firewall_enabled,
       networks,
-      disabled,
       step
     };
   }),

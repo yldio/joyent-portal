@@ -12,7 +12,6 @@ import { AffinityIcon, Button, H3, Divider, KeyValue } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import { Rule, Header } from '@components/create-instance/affinity';
-import Animated from '@containers/create-instance/animated';
 import Description from '@components/description';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-AFFINITY-ADD';
@@ -149,13 +148,19 @@ export const Affinity = ({
 );
 
 export default compose(
-  Animated,
-  connect(({ values, form }, ownProps) => ({
-    proceeded: get(values, 'create-instance-affinity-proceeded', false),
-    addOpen: get(values, 'create-instance-affinity-add-open', false),
-    affinityRules: get(values, 'create-instance-affinity', []),
-    rule: get(form, `${FORM_NAME_CREATE}.values`, {})
-  })),
+  connect(({ values, form }, ownProps) => {
+    const proceeded = get(values, 'create-instance-affinity-proceeded', false);
+    const addOpen = get(values, 'create-instance-affinity-add-open', false);
+    const affinityRules = get(values, 'create-instance-affinity', []);
+    const rule = get(form, `${FORM_NAME_CREATE}.values`, {});
+
+    return {
+      proceeded: proceeded || affinityRules.length,
+      addOpen,
+      affinityRules,
+      rule,
+    };
+  }),
   connect(null, (dispatch, { affinityRules = [], history }) => ({
     handleEdit: () => {
       return history.push(`/~create/affinity${history.location.search}`);

@@ -22,7 +22,6 @@ import {
   Overview
 } from '@components/create-instance/package';
 
-import Animated from '@containers/create-instance/animated';
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import getPackages from '@graphql/get-packages.gql';
@@ -134,7 +133,6 @@ const PackageContainer = ({
 );
 
 export default compose(
-  Animated,
   graphql(getPackages, {
     props: ({ data: { loading, packages = [] } }) => ({
       loading,
@@ -190,6 +188,7 @@ export default compose(
 
       const vmSelected = get(form, 'create-instance-vms.values.vms', false);
       const pkgSelected = get(form, `${FORM_NAME}.values.package`, null);
+      const selected = find(packages, ['id', pkgSelected]);
 
       const sorted = sortBy(packages, [_sortBy]);
 
@@ -219,7 +218,7 @@ export default compose(
         packages: _sortOrder === 'asc' ? filtered : reverse(filtered),
         hasVms: vmSelected,
         selected: find(packages, ['id', pkgSelected]),
-        proceeded
+        proceeded: proceeded || selected
       };
     },
     (dispatch, { history }) => ({

@@ -11,7 +11,6 @@ import punycode from 'punycode';
 import { CnsIcon, H3, Button } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
-import Animated from '@containers/create-instance/animated';
 import Cns, { Footer, AddServiceForm } from '@components/cns';
 import Description from '@components/description';
 import GetAccount from '@graphql/get-account.gql';
@@ -102,13 +101,13 @@ const CNSContainer = ({
 );
 
 export default compose(
-  Animated,
   graphql(GetAccount, {
     props: ({ data: { account: { id = '<account-id>' } = [] } }) => ({
       id
     })
   }),
   connect(({ form, values }, { id }) => {
+    const proceeded = get(values, `${CNS_FORM}-proceeded`, false);
     const instanceName = get(
       form,
       'create-instance-name.values.name',
@@ -154,7 +153,7 @@ export default compose(
     return {
       cnsEnabled: get(values, `${CNS_FORM}-enabled`, true),
       instanceName,
-      proceeded: get(values, `${CNS_FORM}-proceeded`, false),
+      proceeded: proceeded || serviceNames.length,
       hostnames,
       serviceNames
     };

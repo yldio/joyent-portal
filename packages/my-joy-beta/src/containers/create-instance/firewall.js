@@ -19,7 +19,6 @@ import {
 } from '@components/firewall';
 
 import Title from '@components/create-instance/title';
-import Animated from '@containers/create-instance/animated';
 import Description from '@components/description';
 import Empty from '@components/empty';
 import ListFwRules from '@graphql/list-fw-rules.gql';
@@ -150,7 +149,6 @@ const Firewall = ({
 );
 
 export default compose(
-  Animated,
   connect(
     ({ form, values }, ownProps) => ({
       ...ownProps,

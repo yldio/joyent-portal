@@ -12,7 +12,6 @@ import punycode from 'punycode';
 import { NameIcon, H3, Button } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
-import Animated from '@containers/create-instance/animated';
 import Name from '@components/create-instance/name';
 import Description from '@components/description';
 import GetInstance from '@graphql/get-instance-small.gql';
@@ -89,7 +88,6 @@ const NameContainer = ({
 );
 
 export default compose(
-  Animated,
   graphql(GetRandomName, {
     fetchPolicy: 'network-only',
     props: ({ data }) => ({
@@ -109,7 +107,7 @@ export default compose(
 
       return {
         ...ownProps,
-        proceeded,
+        proceeded: proceeded || name.length,
         randomizing,
         name
       };

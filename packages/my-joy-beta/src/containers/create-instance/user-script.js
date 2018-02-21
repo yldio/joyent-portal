@@ -11,7 +11,6 @@ import { ScriptIcon, Button, KeyValue } from 'joyent-ui-toolkit';
 import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
 import Title from '@components/create-instance/title';
-import Animated from '@containers/create-instance/animated';
 import Description from '@components/description';
 
 const FORM_NAME = 'create-instance-user-script';
@@ -94,13 +93,14 @@ export const UserScript = ({
 );
 
 export default compose(
-  Animated,
   connect(
     ({ values }, ownProps) => {
+      const formOpen = get(values, 'create-instance-user-script-open', false);
+
       const script = get(values, 'create-instance-user-script', {
         name: 'user-script'
       });
-      const formOpen = get(values, 'create-instance-user-script-open', false);
+
       const proceeded = get(
         values,
         'create-instance-user-script-proceeded',
@@ -109,7 +109,7 @@ export default compose(
 
       return {
         script,
-        proceeded,
+        proceeded: proceeded || script.value,
         create: !script.value,
         edit: script.value,
         formOpen

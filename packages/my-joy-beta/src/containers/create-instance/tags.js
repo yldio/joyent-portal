@@ -18,7 +18,7 @@ import {
 } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
-import Animated from '@containers/create-instance/animated';
+import KeyValue from '@components/key-value';
 import Description from '@components/description';
 import Tag from '@components/tags';
 
@@ -127,12 +127,17 @@ export const Tags = ({
 );
 
 export default compose(
-  Animated,
-  connect(({ values }, ownProps) => ({
-    proceeded: get(values, 'create-instance-tags-proceeded', false),
-    addOpen: get(values, 'create-instance-tags-add-open', false),
-    tags: get(values, 'create-instance-tags', [])
-  })),
+  connect(({ values }, ownProps) => {
+    const proceeded = get(values, 'create-instance-tags-proceeded', false);
+    const addOpen = get(values, 'create-instance-tags-add-open', false);
+    const tags = get(values, 'create-instance-tags', []);
+
+    return {
+      proceeded: proceeded || tags.length,
+      addOpen,
+      tags
+    };
+  }),
   connect(null, (dispatch, { tags = [], history }) => ({
     handleNext: () => {
       dispatch(set({ name: 'create-instance-tags-proceeded', value: true }));
