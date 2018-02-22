@@ -18,7 +18,6 @@ import {
 } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
-import KeyValue from '@components/key-value';
 import Description from '@components/description';
 import Tag from '@components/tags';
 

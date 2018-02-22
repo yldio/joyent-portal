@@ -37,7 +37,6 @@ exports[`renders <Summary /> without throwing 1`] = `
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  -webkit-text-align: center;
   text-align: center;
   margin-bottom: 0;
   margin-left: 0.375rem;
@@ -204,7 +203,6 @@ exports[`renders <Summary loading /> without throwing 1`] = `
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  -webkit-text-align: center;
   text-align: center;
   margin-bottom: 0;
   margin-left: 0.375rem;
@@ -371,7 +369,6 @@ exports[`renders <Summary loadingError /> without throwing 1`] = `
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  -webkit-text-align: center;
   text-align: center;
   margin-bottom: 0;
   margin-left: 0.375rem;
@@ -538,7 +535,6 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  -webkit-text-align: center;
   text-align: center;
   margin-bottom: 0;
   margin-left: 0.375rem;
@@ -769,7 +765,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
-  -webkit-text-align: center;
   text-align: center;
   margin-bottom: 0;
   margin-left: 0.375rem;
@@ -905,11 +900,11 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 1.125rem;
 }
 
-.c15 {
+.c14 {
   margin-top: 0.375rem;
 }
 
-.c30 {
+.c29 {
   margin-top: 1.5rem;
   margin-bottom: 1.875rem;
 }
@@ -918,20 +913,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding: 1.5rem;
 }
 
-.c22 {
+.c21 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c24 {
+.c23 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -939,56 +933,52 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   min-width: 7.5rem;
 }
 
-.c24::-moz-focus-inner,
-.c24[type='button']::-moz-focus-inner,
-.c24[type='reset']::-moz-focus-inner,
-.c24[type='submit']::-moz-focus-inner {
+.c23::-moz-focus-inner,
+.c23[type='button']::-moz-focus-inner,
+.c23[type='reset']::-moz-focus-inner,
+.c23[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c24:-moz-focusring,
-.c24[type='button']:-moz-focusring,
-.c24[type='reset']:-moz-focusring,
-.c24[type='submit']:-moz-focusring {
+.c23:-moz-focusring,
+.c23[type='button']:-moz-focusring,
+.c23[type='reset']:-moz-focusring,
+.c23[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c24 + button,
-.c24 + a {
+.c23 + button,
+.c23 + a {
   margin-left: 0.375rem;
 }
 
-.c21 {
+.c20 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
   color: rgb(255,255,255);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c21:hover {
+.c20:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c13 {
-  margin-right: 0.375rem;
-}
-
-.c36 {
+.c35 {
   cursor: pointer;
 }
 
-.c20 {
+.c19 {
   display: inline-block;
 }
 
-.c20 + button,
-.c20 + a {
+.c19 + button,
+.c19 + a {
   margin-left: 0.375rem;
 }
 
-.c19 {
+.c18 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1006,7 +996,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
-  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -1044,7 +1033,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c19:focus {
+.c18:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1052,51 +1041,51 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-color: rgb(45,56,132);
 }
 
-.c19:hover {
+.c18:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c19[disabled] {
+.c18[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c19:focus {
+.c18:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c19:hover {
+.c18:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c19 svg + span {
+.c18 svg + span {
   margin-left: 0.75rem;
 }
 
-.c19 svg {
+.c18 svg {
   max-height: 1.125rem;
 }
 
-.c23 {
+.c22 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1114,7 +1103,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
-  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -1157,7 +1145,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c23:focus {
+.c22:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1165,64 +1153,191 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-color: rgb(45,56,132);
 }
 
-.c23:hover {
+.c22:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c23[disabled] {
+.c22[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c23:focus {
+.c22:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c23:hover {
+.c22:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c23:focus {
+.c22:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c23:hover {
+.c22:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c23 svg + span {
+.c22 svg + span {
   margin-left: 0.75rem;
 }
 
-.c23 svg {
+.c22 svg {
+  max-height: 1.125rem;
+}
+
+.c24 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.c24:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c24:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c24[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c24:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c24:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c24:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c24:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c24 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c24 svg {
   max-height: 1.125rem;
 }
 
@@ -1244,7 +1359,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
-  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -1268,11 +1382,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   color: rgb(70,70,70);
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1329,23 +1438,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-color: rgb(216,216,216);
 }
 
-.c25:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c25:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
 .c25 svg + span {
   margin-left: 0.75rem;
 }
@@ -1354,7 +1446,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   max-height: 1.125rem;
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1372,113 +1464,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
-  -webkit-text-align: center;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 500;
-}
-
-.c26:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c26:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c26[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c26:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c26:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c26 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c26 svg {
-  max-height: 1.125rem;
-}
-
-.c28 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -1518,6 +1503,135 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  float: right;
+}
+
+.c27:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c27:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c27[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c27:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c27:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c27:focus {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c27:hover {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
+}
+
+.c27 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c27 svg {
+  max-height: 1.125rem;
+}
+
+.c28 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
   float: right;
 }
 
@@ -1592,136 +1706,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   max-height: 1.125rem;
 }
 
-.c29 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  -webkit-text-align: center;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 500;
-  float: right;
-}
-
-.c29:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c29:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c29[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c29:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c29:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c29:focus {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c29:hover {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
-  background-color: rgba(210,67,58,0.1);
-  border-color: rgb(205,37,27);
-}
-
-.c29 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c29 svg {
-  max-height: 1.125rem;
-}
-
 .c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -1729,18 +1713,16 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
-  -webkit-text-align: left;
   text-align: left;
 }
 
-.c33 {
+.c32 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
-  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -1795,7 +1777,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-left: -0.625rem;
 }
 
-.c17 {
+.c16 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1834,7 +1816,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   display: block;
 }
 
-.c18 {
+.c17 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1844,7 +1826,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   display: block;
 }
 
-.c27 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1854,7 +1836,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   display: block;
 }
 
-.c32 {
+.c31 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1885,19 +1867,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-top: 1.5rem;
 }
 
-.c31 {
+.c30 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c14 {
+.c13 {
   width: 0.9375rem;
   height: 0.9375rem;
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
-  margin-right: 0rem;
+  margin-right: 0.375rem;
   margin-left: 0rem;
 }
 
@@ -1967,7 +1949,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 0.4375rem;
 }
 
-.c35 {
+.c34 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1990,62 +1972,62 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   outline: 0;
 }
 
-.c35::-webkit-input-placeholder {
+.c34::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c35::-moz-placeholder {
+.c34::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c35:-ms-input-placeholder {
+.c34:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c35:invalid {
+.c34:invalid {
   box-shadow: none;
 }
 
-.c35:disabled {
+.c34:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c35:disabled::-webkit-input-placeholder {
+.c34:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c35:disabled::-moz-placeholder {
+.c34:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c35:disabled:-ms-input-placeholder {
+.c34:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c35:disabled {
+.c34:disabled {
   color: rgba(73,73,73,1);
 }
 
-.c35:disabled::-webkit-input-placeholder {
+.c34:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c35:disabled::-moz-placeholder {
+.c34:disabled::-moz-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c35:disabled:-ms-input-placeholder {
+.c34:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c35:focus {
+.c34:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c34 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2057,16 +2039,16 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c34 input {
+.c33 input {
   padding-right: 1.875rem;
 }
 
-.c34 div {
+.c33 div {
   position: relative;
   left: -1.625rem;
 }
 
-.c37 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2079,16 +2061,16 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 0rem;
 }
 
-.c37 input {
+.c36 input {
   padding-right: 1.875rem;
 }
 
-.c37 div {
+.c36 div {
   position: relative;
   left: -1.625rem;
 }
 
-.c16 {
+.c15 {
   opacity: 0.5;
   padding-right: 0.1875rem;
 }
@@ -2119,7 +2101,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  margin: 0 1.125rem;
+  margin: 0 0.75rem;
 }
 
 @media only screen and (min-width:48em) {
@@ -2157,7 +2139,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c16 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -2202,7 +2184,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c18 {
+  .c17 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -2211,7 +2193,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c26 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
@@ -2220,7 +2202,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c32 {
+  .c31 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2229,7 +2211,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:64em) {
-  .c32 {
+  .c31 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -2278,9 +2260,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               >
                 <h2
                   className="c8"
-                >
-                  g4-highcpu-128M
-                </h2>
+                />
               </div>
             </div>
             <div
@@ -2305,11 +2285,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                 <div
                   className="c12"
                 />
+                <label
+                  className="c11"
+                >
+                  g4-highcpu-128M
+                </label>
+                <div
+                  className="c12"
+                />
                 <div
                   className="c10"
                 >
                   <span
-                    className="c13 c14"
+                    className="c13"
                     color="green"
                     size="0.9375rem"
                   />
@@ -2317,7 +2305,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                 </div>
               </div>
               <div
-                className="c15"
+                className="c14"
               >
                 <div
                   className="c10"
@@ -2326,7 +2314,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     className="c10"
                   >
                     <label
-                      className="c16 c11"
+                      className="c15 c11"
                     >
                       Created: 
                     </label>
@@ -2345,7 +2333,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     className="c10"
                   >
                     <label
-                      className="c16 c11"
+                      className="c15 c11"
                     >
                       Updated: 
                     </label>
@@ -2361,13 +2349,13 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               </div>
             </div>
             <div
-              className="c17"
+              className="c16"
             >
               <div
-                className="c18"
+                className="c17"
               >
                 <a
-                  className="c19 c20 c21 c22"
+                  className="c18 c19 c20 c21"
                   href="http://localhost:3070/~create/undefined"
                   icon={true}
                   rel="noopener noreferrer"
@@ -2397,7 +2385,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c23 c20 c24"
+                    className="c22 c19 c23"
                     disabled={true}
                     href=""
                     icon={true}
@@ -2429,7 +2417,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c25 c20 c24"
+                    className="c24 c19 c23"
                     disabled={true}
                     href=""
                     icon={true}
@@ -2464,7 +2452,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c19 c20 c24"
+                    className="c18 c19 c23"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2496,7 +2484,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c26 c20 c24"
+                    className="c25 c19 c23"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2531,7 +2519,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c19 c20 c24"
+                    className="c18 c19 c23"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2579,7 +2567,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c26 c20 c24"
+                    className="c25 c19 c23"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2627,14 +2615,14 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                 </span>
               </div>
               <div
-                className="c27"
+                className="c26"
               >
                 <span
                   name="react-responsive-mock"
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c28 c20 c24"
+                    className="c27 c19 c23"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2666,7 +2654,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c29 c20 c24"
+                    className="c28 c19 c23"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2699,10 +2687,10 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               </div>
             </div>
             <div
-              className="c30"
+              className="c29"
             >
               <div
-                className="c31 c1"
+                className="c30 c1"
                 height="0.0625rem"
               />
             </div>
@@ -2710,19 +2698,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   Short ID
                 </label>
                 <div
-                  className="c34"
+                  className="c33"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -2735,7 +2723,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -2761,19 +2749,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   ID
                 </label>
                 <div
-                  className="c34"
+                  className="c33"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -2786,7 +2774,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -2812,19 +2800,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   CN UUID
                 </label>
                 <div
-                  className="c34"
+                  className="c33"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -2837,7 +2825,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -2863,19 +2851,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   Image UUID
                 </label>
                 <div
-                  className="c34"
+                  className="c33"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -2888,7 +2876,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -2914,19 +2902,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   Login
                 </label>
                 <div
-                  className="c34"
+                  className="c33"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -2939,7 +2927,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -2965,19 +2953,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   IP address 1
                 </label>
                 <div
-                  className="c34"
+                  className="c33"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -2990,7 +2978,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -3016,19 +3004,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   IP address 2
                 </label>
                 <div
-                  className="c37"
+                  className="c36"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -3041,7 +3029,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -3077,11 +3065,11 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 1.125rem;
 }
 
-.c15 {
+.c14 {
   margin-top: 0.375rem;
 }
 
-.c30 {
+.c29 {
   margin-top: 1.5rem;
   margin-bottom: 1.875rem;
 }
@@ -3090,20 +3078,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   padding: 1.5rem;
 }
 
-.c22 {
+.c21 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c24 {
+.c23 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -3111,56 +3098,52 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   min-width: 7.5rem;
 }
 
-.c24::-moz-focus-inner,
-.c24[type='button']::-moz-focus-inner,
-.c24[type='reset']::-moz-focus-inner,
-.c24[type='submit']::-moz-focus-inner {
+.c23::-moz-focus-inner,
+.c23[type='button']::-moz-focus-inner,
+.c23[type='reset']::-moz-focus-inner,
+.c23[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c24:-moz-focusring,
-.c24[type='button']:-moz-focusring,
-.c24[type='reset']:-moz-focusring,
-.c24[type='submit']:-moz-focusring {
+.c23:-moz-focusring,
+.c23[type='button']:-moz-focusring,
+.c23[type='reset']:-moz-focusring,
+.c23[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c24 + button,
-.c24 + a {
+.c23 + button,
+.c23 + a {
   margin-left: 0.375rem;
 }
 
-.c21 {
+.c20 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
   color: rgb(255,255,255);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c21:hover {
+.c20:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c13 {
-  margin-right: 0.375rem;
-}
-
-.c36 {
+.c35 {
   cursor: pointer;
 }
 
-.c20 {
+.c19 {
   display: inline-block;
 }
 
-.c20 + button,
-.c20 + a {
+.c19 + button,
+.c19 + a {
   margin-left: 0.375rem;
 }
 
-.c19 {
+.c18 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3178,7 +3161,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
-  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -3216,7 +3198,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c19:focus {
+.c18:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3224,51 +3206,51 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-color: rgb(45,56,132);
 }
 
-.c19:hover {
+.c18:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c19[disabled] {
+.c18[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c19:focus {
+.c18:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c19:hover {
+.c18:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c19:active,
-.c19:active:hover,
-.c19:active:focus {
+.c18:active,
+.c18:active:hover,
+.c18:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c19 svg + span {
+.c18 svg + span {
   margin-left: 0.75rem;
 }
 
-.c19 svg {
+.c18 svg {
   max-height: 1.125rem;
 }
 
-.c23 {
+.c22 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3286,7 +3268,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
-  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -3329,7 +3310,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c23:focus {
+.c22:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3337,64 +3318,191 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-color: rgb(45,56,132);
 }
 
-.c23:hover {
+.c22:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c23[disabled] {
+.c22[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c23:focus {
+.c22:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c23:hover {
+.c22:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c23:focus {
+.c22:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c23:hover {
+.c22:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c22:active,
+.c22:active:hover,
+.c22:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c23 svg + span {
+.c22 svg + span {
   margin-left: 0.75rem;
 }
 
-.c23 svg {
+.c22 svg {
+  max-height: 1.125rem;
+}
+
+.c24 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.c24:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c24:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c24[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c24:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c24:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c24:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c24:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c24:active,
+.c24:active:hover,
+.c24:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c24 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c24 svg {
   max-height: 1.125rem;
 }
 
@@ -3416,7 +3524,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
-  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -3440,11 +3547,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   color: rgb(70,70,70);
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3501,23 +3603,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-color: rgb(216,216,216);
 }
 
-.c25:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c25:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
 .c25 svg + span {
   margin-left: 0.75rem;
 }
@@ -3526,7 +3611,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   max-height: 1.125rem;
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3544,113 +3629,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
-  -webkit-text-align: center;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 500;
-}
-
-.c26:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c26:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c26[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c26:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c26:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c26 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c26 svg {
-  max-height: 1.125rem;
-}
-
-.c28 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -3690,6 +3668,135 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  float: right;
+}
+
+.c27:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c27:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c27[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c27:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c27:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c27:focus {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c27:hover {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
+}
+
+.c27 svg + span {
+  margin-left: 0.75rem;
+}
+
+.c27 svg {
+  max-height: 1.125rem;
+}
+
+.c28 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
   float: right;
 }
 
@@ -3764,136 +3871,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   max-height: 1.125rem;
 }
 
-.c29 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  -webkit-text-align: center;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 500;
-  float: right;
-}
-
-.c29:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c29:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c29[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c29:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c29:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c29:focus {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c29:hover {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
-  background-color: rgba(210,67,58,0.1);
-  border-color: rgb(205,37,27);
-}
-
-.c29 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c29 svg {
-  max-height: 1.125rem;
-}
-
 .c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -3901,18 +3878,16 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
-  -webkit-text-align: left;
   text-align: left;
 }
 
-.c33 {
+.c32 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
-  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -3967,7 +3942,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-left: -0.625rem;
 }
 
-.c17 {
+.c16 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4006,7 +3981,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   display: block;
 }
 
-.c18 {
+.c17 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4016,7 +3991,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   display: block;
 }
 
-.c27 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4026,7 +4001,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   display: block;
 }
 
-.c32 {
+.c31 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4057,19 +4032,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-top: 1.5rem;
 }
 
-.c31 {
+.c30 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c14 {
+.c13 {
   width: 0.9375rem;
   height: 0.9375rem;
   border-radius: 50%;
   background-color: rgb(0,152,88);
   display: inline-block;
-  margin-right: 0rem;
+  margin-right: 0.375rem;
   margin-left: 0rem;
 }
 
@@ -4139,7 +4114,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 0.4375rem;
 }
 
-.c35 {
+.c34 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -4162,62 +4137,62 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   outline: 0;
 }
 
-.c35::-webkit-input-placeholder {
+.c34::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c35::-moz-placeholder {
+.c34::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c35:-ms-input-placeholder {
+.c34:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c35:invalid {
+.c34:invalid {
   box-shadow: none;
 }
 
-.c35:disabled {
+.c34:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c35:disabled::-webkit-input-placeholder {
+.c34:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c35:disabled::-moz-placeholder {
+.c34:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c35:disabled:-ms-input-placeholder {
+.c34:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c35:disabled {
+.c34:disabled {
   color: rgba(73,73,73,1);
 }
 
-.c35:disabled::-webkit-input-placeholder {
+.c34:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c35:disabled::-moz-placeholder {
+.c34:disabled::-moz-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c35:disabled:-ms-input-placeholder {
+.c34:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
 }
 
-.c35:focus {
+.c34:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c34 {
+.c33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4229,16 +4204,16 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   align-items: center;
 }
 
-.c34 input {
+.c33 input {
   padding-right: 1.875rem;
 }
 
-.c34 div {
+.c33 div {
   position: relative;
   left: -1.625rem;
 }
 
-.c37 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4251,16 +4226,16 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin-bottom: 0rem;
 }
 
-.c37 input {
+.c36 input {
   padding-right: 1.875rem;
 }
 
-.c37 div {
+.c36 div {
   position: relative;
   left: -1.625rem;
 }
 
-.c16 {
+.c15 {
   opacity: 0.5;
   padding-right: 0.1875rem;
 }
@@ -4291,7 +4266,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
-  margin: 0 1.125rem;
+  margin: 0 0.75rem;
 }
 
 @media only screen and (min-width:48em) {
@@ -4329,7 +4304,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c17 {
+  .c16 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4374,7 +4349,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c18 {
+  .c17 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -4383,7 +4358,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c26 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
@@ -4392,7 +4367,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:0em) {
-  .c32 {
+  .c31 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -4401,7 +4376,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 @media only screen and (min-width:64em) {
-  .c32 {
+  .c31 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4450,9 +4425,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               >
                 <h2
                   className="c8"
-                >
-                  g4-highcpu-128M
-                </h2>
+                />
               </div>
             </div>
             <div
@@ -4477,11 +4450,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                 <div
                   className="c12"
                 />
+                <label
+                  className="c11"
+                >
+                  g4-highcpu-128M
+                </label>
+                <div
+                  className="c12"
+                />
                 <div
                   className="c10"
                 >
                   <span
-                    className="c13 c14"
+                    className="c13"
                     color="green"
                     size="0.9375rem"
                   />
@@ -4489,7 +4470,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                 </div>
               </div>
               <div
-                className="c15"
+                className="c14"
               >
                 <div
                   className="c10"
@@ -4498,7 +4479,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     className="c10"
                   >
                     <label
-                      className="c16 c11"
+                      className="c15 c11"
                     >
                       Created: 
                     </label>
@@ -4517,7 +4498,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     className="c10"
                   >
                     <label
-                      className="c16 c11"
+                      className="c15 c11"
                     >
                       Updated: 
                     </label>
@@ -4533,13 +4514,13 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               </div>
             </div>
             <div
-              className="c17"
+              className="c16"
             >
               <div
-                className="c18"
+                className="c17"
               >
                 <a
-                  className="c19 c20 c21 c22"
+                  className="c18 c19 c20 c21"
                   href="http://localhost:3070/~create/undefined"
                   icon={true}
                   rel="noopener noreferrer"
@@ -4569,7 +4550,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c23 c20 c24"
+                    className="c22 c19 c23"
                     disabled={true}
                     href=""
                     icon={true}
@@ -4601,7 +4582,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c25 c20 c24"
+                    className="c24 c19 c23"
                     disabled={true}
                     href=""
                     icon={true}
@@ -4636,7 +4617,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c19 c20 c24"
+                    className="c18 c19 c23"
                     disabled={false}
                     href=""
                     icon={true}
@@ -4668,7 +4649,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c26 c20 c24"
+                    className="c25 c19 c23"
                     disabled={false}
                     href=""
                     icon={true}
@@ -4703,7 +4684,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c19 c20 c24"
+                    className="c18 c19 c23"
                     disabled={false}
                     href=""
                     icon={true}
@@ -4751,7 +4732,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c26 c20 c24"
+                    className="c25 c19 c23"
                     disabled={false}
                     href=""
                     icon={true}
@@ -4799,14 +4780,14 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                 </span>
               </div>
               <div
-                className="c27"
+                className="c26"
               >
                 <span
                   name="react-responsive-mock"
                   query="only screen and (max-width: 47.9375rem)"
                 >
                   <button
-                    className="c28 c20 c24"
+                    className="c27 c19 c23"
                     disabled={false}
                     href=""
                     icon={true}
@@ -4838,7 +4819,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                   query="only screen and (min-width: 48rem)"
                 >
                   <button
-                    className="c29 c20 c24"
+                    className="c28 c19 c23"
                     disabled={false}
                     href=""
                     icon={true}
@@ -4871,10 +4852,10 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               </div>
             </div>
             <div
-              className="c30"
+              className="c29"
             >
               <div
-                className="c31 c1"
+                className="c30 c1"
                 height="0.0625rem"
               />
             </div>
@@ -4882,19 +4863,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   Short ID
                 </label>
                 <div
-                  className="c34"
+                  className="c33"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -4907,7 +4888,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -4933,19 +4914,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   ID
                 </label>
                 <div
-                  className="c34"
+                  className="c33"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -4958,7 +4939,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -4984,19 +4965,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   CN UUID
                 </label>
                 <div
-                  className="c34"
+                  className="c33"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -5009,7 +4990,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -5035,19 +5016,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   Image UUID
                 </label>
                 <div
-                  className="c34"
+                  className="c33"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -5060,7 +5041,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -5086,19 +5067,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   Login
                 </label>
                 <div
-                  className="c34"
+                  className="c33"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -5111,7 +5092,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -5137,19 +5118,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   IP address 1
                 </label>
                 <div
-                  className="c34"
+                  className="c33"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -5162,7 +5143,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
@@ -5188,19 +5169,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
               className="c1"
             >
               <div
-                className="c32"
+                className="c31"
               >
                 <label
-                  className="c33"
+                  className="c32"
                   htmlFor=""
                 >
                   IP address 2
                 </label>
                 <div
-                  className="c37"
+                  className="c36"
                 >
                   <input
-                    className="c35"
+                    className="c34"
                     disabled={false}
                     id=""
                     onBlur={null}
@@ -5213,7 +5194,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     tag={false}
                   >
                     <svg
-                      className="c36"
+                      className="c35"
                       height="19"
                       innerRef={undefined}
                       onClick={[Function]}
