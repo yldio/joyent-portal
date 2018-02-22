@@ -258,7 +258,7 @@ export const Overview = ({
 }) => (
   <Fragment>
     <Margin bottom={2}>
-      <H3 bold noMargin>
+      <H3 noMargin>
         {name}
       </H3>
     </Margin>

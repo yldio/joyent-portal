@@ -34,6 +34,8 @@ const stateColor = {
   FAILED: 'red'
 };
 
+const IpNames = ['Public IP', 'Private IP'];
+
 const GreyLabel = styled(Label)`
   opacity: 0.5;
   padding-right: ${remcalc(3)};
@@ -138,8 +140,7 @@ export default withTheme(
                     rel="noopener noreferrer"
                     secondary
                     small
-                    icon
-                  >
+                    icon>
                     <InstanceTypeIcon />
                   </Button>
                   <SmallOnly>
@@ -150,8 +151,7 @@ export default withTheme(
                       onClick={() => onAction('start')}
                       secondary
                       small
-                      icon
-                    >
+                      icon>
                       <StartIcon disabled={instance.state !== 'STOPPED'} />
                     </Button>
                   </SmallOnly>
@@ -163,8 +163,7 @@ export default withTheme(
                       onClick={() => onAction('start')}
                       secondary
                       bold
-                      icon
-                    >
+                      icon>
                       <StartIcon disabled={instance.state !== 'STOPPED'} />
                       <span>Start</span>
                     </Button>
@@ -177,8 +176,7 @@ export default withTheme(
                       onClick={() => onAction('stop')}
                       secondary
                       small
-                      icon
-                    >
+                      icon>
                       <StopIcon disabled={instance.state !== 'RUNNING'} />
                     </Button>
                   </SmallOnly>
@@ -190,8 +188,7 @@ export default withTheme(
                       onClick={() => onAction('stop')}
                       secondary
                       bold
-                      icon
-                    >
+                      icon>
                       <StopIcon disabled={instance.state !== 'RUNNING'} />
                       <span>Stop</span>
                     </Button>
@@ -204,8 +201,7 @@ export default withTheme(
                       onClick={() => onAction('reboot')}
                       secondary
                       small
-                      icon
-                    >
+                      icon>
                       <ResetIcon disabled={instance.state !== 'RUNNING'} />
                     </Button>
                   </SmallOnly>
@@ -217,8 +213,7 @@ export default withTheme(
                       onClick={() => onAction('reboot')}
                       secondary
                       bold
-                      icon
-                    >
+                      icon>
                       <ResetIcon disabled={instance.state !== 'RUNNING'} />
                       <span>Reboot</span>
                     </Button>
@@ -237,8 +232,7 @@ export default withTheme(
                       small
                       right
                       icon
-                      error
-                    >
+                      error>
                       <DeleteIcon
                         fill={theme.red}
                         disabled={
@@ -259,8 +253,7 @@ export default withTheme(
                       bold
                       right
                       icon
-                      error
-                    >
+                      error>
                       <DeleteIcon
                         fill={
                           ['RUNNING', 'STOPPED'].indexOf(instance.state) >= 0
@@ -298,7 +291,7 @@ export default withTheme(
                   key={i}
                   noMargin={i === instance.ips.length - 1}
                   text={ip}
-                  label={`IP address ${i + 1}`}
+                  label={IpNames[i]}
                 />
               ))}
             </Padding>

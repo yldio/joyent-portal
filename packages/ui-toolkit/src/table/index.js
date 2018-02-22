@@ -269,8 +269,7 @@ const Propagate = ({ children, ...rest }) => (
     {({ disabled, header, selected } = {}) => (
       <Broadcast
         channel="almost-responsive-table"
-        value={{ disabled, header, selected, ...rest }}
-      >
+        value={{ disabled, header, selected, ...rest }}>
         {children({ disabled, header, selected, ...rest })}
       </Broadcast>
     )}
@@ -300,7 +299,7 @@ export const Tfoot = Baseline(({ children, ...rest }) => (
 export const Tr = Baseline(({ children, ...rest }) => (
   <Propagate {...rest}>
     {value => (
-      <BaseTr {...value} name="tr">
+      <BaseTr {...rest} {...value} name="tr">
         {children}
       </BaseTr>
     )}
@@ -310,7 +309,12 @@ export const Tr = Baseline(({ children, ...rest }) => (
 export const Th = Baseline(({ children, ...rest }) => (
   <Propagate {...rest}>
     {({ showSort, sortOrder, header, ...value }) => (
-      <BaseTh {...value} showSort={showSort} header={header} name="th">
+      <BaseTh
+        {...rest}
+        {...value}
+        showSort={showSort}
+        header={header}
+        name="th">
         {children}
         {!showSort || !header ? null : (
           <ArrowIcon
@@ -337,7 +341,7 @@ export const Tbody = Baseline(({ children, ...rest }) => (
 export const Td = Baseline(({ children, ...rest }) => (
   <Propagate {...rest}>
     {value => (
-      <BaseTd {...value} {...rest} name="td">
+      <BaseTd {...rest} {...value} {...rest} name="td">
         {children}
       </BaseTd>
     )}

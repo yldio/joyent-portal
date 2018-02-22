@@ -19,7 +19,8 @@ import {
   MessageDescription,
   MessageTitle,
   StatusLoader,
-  Divider
+  Divider,
+  Anchor
 } from 'joyent-ui-toolkit';
 
 import ListInstances from '@graphql/list-instances.gql';
@@ -105,19 +106,20 @@ export const List = ({
           sortBy={sortBy}
           sortOrder={sortOrder}
           toggleSelectAll={toggleSelectAll}
-          onSortBy={handleSortBy}
-        >
-          {_instances.map(({ id, ...rest }) => (
-            <InstanceListItem
-              key={id}
-              id={id}
-              {...rest}
-              onCreateImage={() => handleCreateImage(rest)}
-              onStart={() => handleStart([{ id }])}
-              onStop={() => handleStop([{ id }])}
-              onReboot={() => handleReboot([{ id }])}
-              onRemove={() => handleRemove([{ id }])}
-            />
+          onSortBy={handleSortBy}>
+          {_instances.map(({ name, id, ...rest }) => (
+              <InstanceListItem
+                key={id}
+                id={id}
+                name={name}
+                {...rest}
+                onClick={() => history.push(`/${name}`)}
+                onCreateImage={() => handleCreateImage(rest)}
+                onStart={() => handleStart([{ id }])}
+                onStop={() => handleStop([{ id }])}
+                onReboot={() => handleReboot([{ id }])}
+                onRemove={() => handleRemove([{ id }])}
+              />
           ))}
         </InstanceList>
       )}
@@ -316,11 +318,9 @@ export default compose(
         // eslint-disable-next-line no-alert
         if (
           !await Confirm(
-            `Do you want to ${name} ${
-              selected.length === 1
-                ? `"${selected[0].name}"`
-                : `${selected.length} snapshots`
-            }`
+            `Do you want to ${name} ${selected.length === 1
+              ? `"${selected[0].name}"`
+              : `${selected.length} snapshots`}`
           )
         ) {
           return;

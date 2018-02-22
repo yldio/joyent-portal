@@ -37,7 +37,7 @@ const Version = styled(Select)`
 export const Preview = ({ name, version, isVm }) => (
   <Fragment>
     <Margin bottom={2} top={3}>
-      <H3 bold>
+      <H3>
         {name} - {version}
       </H3>
       <P>{isVm ? 'Hardware Virtual Machine' : 'Infrastructure Container'} </P>

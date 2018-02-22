@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import titleCase from 'title-case';
 import { Link } from 'react-router-dom';
 import { Field } from 'redux-form';
+import Flex from 'styled-flex-component';
 
 import {
   Anchor,
@@ -35,6 +36,10 @@ const stateColor = {
   FAILED: 'red'
 };
 
+const TableTdClickable = styled(TableTd)`
+  cursor: pointer;
+`;
+
 const A = styled(Anchor)`
   color: ${props => props.theme.text};
   text-decoration: none;
@@ -45,6 +50,12 @@ const ItemAnchor = styled(Anchor)`
   color: ${props => props.theme.text};
   -webkit-text-fill-color: currentcolor;
   text-decoration: none;
+`;
+
+const Actions = styled(Flex)`
+  width: ${remcalc(48)};
+  height: ${remcalc(48)};
+  min-width: ${remcalc(48)};
 `;
 
 export const Item = ({
@@ -58,7 +69,8 @@ export const Item = ({
   onStart,
   onStop,
   onReboot,
-  onRemove
+  onRemove,
+  onClick
 }) => (
   <TableTr>
     <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
@@ -66,12 +78,12 @@ export const Item = ({
         <Checkbox noMargin />
       </FormGroup>
     </TableTd>
-    <TableTd middle left>
+    <TableTdClickable middle left onClick={onClick}>
       <A to={`/${name}`} component={Link}>
         {name}
       </A>
-    </TableTd>
-    <TableTd middle left>
+    </TableTdClickable>
+    <TableTdClickable onClick={onClick} middle left>
       {mutating ? (
         <StatusLoader small />
       ) : (
@@ -80,18 +92,20 @@ export const Item = ({
           {titleCase(state)}
         </span>
       )}
-    </TableTd>
-    <TableTd xs="0" sm="160" middle left>
+    </TableTdClickable>
+    <TableTdClickable onClick={onClick} xs="0" sm="160" middle left>
       {distanceInWordsToNow(created)}
-    </TableTd>
-    <TableTd xs="0" sm="130" middle left>
+    </TableTdClickable>
+    <TableTdClickable onClick={onClick} xs="0" sm="130" middle left>
       <code>{id.substring(0, 7)}</code>
-    </TableTd>
+    </TableTdClickable>
     {!mutating ? (
       <PopoverContainer clickable>
-        <TableTd padding="0" hasBorder="left">
+        <TableTdClickable onClick={onClick} padding="0" hasBorder="left">
           <PopoverTarget box>
-            <ActionsIcon />
+            <Actions alignCenter justifyCenter>
+              <ActionsIcon />
+            </Actions>
           </PopoverTarget>
           <Popover placement="bottom">
             <PopoverItem disabled={!allowedActions.start} onClick={onStart}>
@@ -108,8 +122,7 @@ export const Item = ({
               <ItemAnchor
                 href={`http://localhost:3070/~create/${name}`}
                 target="__blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 Create Image
               </ItemAnchor>
             </PopoverItem>
@@ -118,12 +131,17 @@ export const Item = ({
               Remove
             </PopoverItem>
           </Popover>
-        </TableTd>
+        </TableTdClickable>
       </PopoverContainer>
     ) : (
-      <TableTd padding="0" hasBorder="left" center middle>
+      <TableTdClickable
+        onClick={onClick}
+        padding="0"
+        hasBorder="left"
+        center
+        middle>
         <ActionsIcon disabled />
-      </TableTd>
+      </TableTdClickable>
     )}
   </TableTr>
 );
@@ -157,8 +175,7 @@ export default ({
             showSort={sortBy === 'name'}
             left
             middle
-            actionable
-          >
+            actionable>
             <span>Name </span>
           </TableTh>
           <TableTh
@@ -168,8 +185,7 @@ export default ({
             showSort={sortBy === 'state'}
             left
             middle
-            actionable
-          >
+            actionable>
             <span>Status </span>
           </TableTh>
           <TableTh
@@ -180,8 +196,7 @@ export default ({
             showSort={sortBy === 'created'}
             left
             middle
-            actionable
-          >
+            actionable>
             <span>Created </span>
           </TableTh>
           <TableTh
@@ -192,8 +207,7 @@ export default ({
             showSort={sortBy === 'id'}
             left
             middle
-            actionable
-          >
+            actionable>
             <span>Short ID </span>
           </TableTh>
           <TableTh xs="60" padding="0" />

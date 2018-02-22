@@ -76,6 +76,7 @@ exports[`renders <Name /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -130,6 +131,7 @@ exports[`renders <Name /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -225,6 +227,7 @@ exports[`renders <Name /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -239,6 +242,7 @@ exports[`renders <Name /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   float: right;
   font-size: 0.8125rem;
@@ -298,6 +302,7 @@ exports[`renders <Name /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
   max-width: 22.1875rem;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -507,6 +512,7 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -561,6 +567,7 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -656,6 +663,7 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -670,6 +678,7 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   float: right;
   font-size: 0.8125rem;
@@ -729,6 +738,7 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
   max-width: 22.1875rem;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -938,6 +948,7 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -992,6 +1003,7 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -1087,6 +1099,7 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -1101,6 +1114,7 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   float: right;
   font-size: 0.8125rem;
@@ -1160,6 +1174,7 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
   max-width: 22.1875rem;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
@@ -1369,6 +1384,7 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   line-height: 1.15;
   margin: 0;
   overflow: visible;
+  -webkit-text-transform: none;
   text-transform: none;
   -webkit-appearance: button;
   -moz-appearance: button;
@@ -1423,6 +1439,7 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   position: relative;
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   font-size: 0.9375rem;
+  -webkit-text-align: center;
   text-align: center;
   font-style: normal;
   font-stretch: normal;
@@ -1518,6 +1535,7 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -1532,6 +1550,7 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
+  -webkit-text-align: left;
   text-align: left;
   float: right;
   font-size: 0.8125rem;
@@ -1591,6 +1610,7 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
   max-width: 22.1875rem;
+  -webkit-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
