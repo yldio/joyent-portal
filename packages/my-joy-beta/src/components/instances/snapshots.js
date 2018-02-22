@@ -86,6 +86,7 @@ export const AddForm = props => (
     method="create"
     input="input"
     type="snapshot"
+    typeLabel="name"
     expanded
     onlyName
     noRemove

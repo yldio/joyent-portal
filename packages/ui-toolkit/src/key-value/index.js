@@ -111,12 +111,20 @@ const TextareaKeyValue = ({
   </Fragment>
 );
 
-const InputKeyValue = ({ type, submitting, onlyName, onlyValue }) => (
+const InputKeyValue = ({
+  type,
+  submitting,
+  typeLabel,
+  onlyName,
+  onlyValue
+}) => (
   <Flex wrap justifyStart contentStretch>
     {!onlyValue ? (
       <FlexItem basis="auto">
         <FormGroup name="name" field={Field} fluid>
-          <FormLabel>{titleCase(type)} key</FormLabel>
+          <FormLabel>
+            {titleCase(type)} {typeLabel}
+          </FormLabel>
           <Margin top={0.5}>
             <Input onBlur={null} type="text" disabled={submitting} />
           </Margin>
@@ -145,6 +153,7 @@ export const KeyValue = ({
   disabled = false,
   input = 'input',
   type = 'metadata',
+  typeLabel = 'key',
   method = 'add',
   initialValues = {},
   error = null,
@@ -226,6 +235,7 @@ export const KeyValue = ({
               <InputKeyValue
                 onBlur={null}
                 type={type}
+                typeLabel={typeLabel}
                 submitting={submitting}
                 onlyName={onlyName}
                 onlyValue={onlyValue}
