@@ -55,7 +55,7 @@ const VerticalDivider = styled.div`
   height: ${remcalc(24)};
   display: flex;
   align-self: flex-end;
-  margin: 0 ${remcalc(18)};
+  margin: 0 ${remcalc(12)};
 
   @media (max-width: ${remcalc(767)}) {
     display: none;
