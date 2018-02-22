@@ -118,7 +118,8 @@ export const Item = ({
               <ItemAnchor
                 href={`http://localhost:3070/~create/${name}`}
                 target="__blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 Create Image
               </ItemAnchor>
             </PopoverItem>
@@ -167,7 +168,8 @@ export default ({
             showSort={sortBy === 'name'}
             left
             middle
-            actionable>
+            actionable
+          >
             <span>Name </span>
           </TableTh>
           <TableTh
@@ -177,7 +179,8 @@ export default ({
             showSort={sortBy === 'state'}
             left
             middle
-            actionable>
+            actionable
+          >
             <span>Status </span>
           </TableTh>
           <TableTh
@@ -188,7 +191,8 @@ export default ({
             showSort={sortBy === 'created'}
             left
             middle
-            actionable>
+            actionable
+          >
             <span>Created </span>
           </TableTh>
           <TableTh
@@ -199,7 +203,8 @@ export default ({
             showSort={sortBy === 'id'}
             left
             middle
-            actionable>
+            actionable
+          >
             <span>Short ID </span>
           </TableTh>
           <TableTh xs="60" padding="0" />

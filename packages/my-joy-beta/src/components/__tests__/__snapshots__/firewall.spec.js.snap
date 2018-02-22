@@ -5401,7 +5401,6 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
-  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -5606,7 +5605,6 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
-  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -5621,7 +5619,6 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
-  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;
@@ -5676,6 +5673,15 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
 
 .c4:checked + label:active {
   box-shadow: none;
+}
+
+.c4:checked + label {
+  background: rgb(250,250,250);
+  border: 0.0625rem solid rgb(216,216,216);
+}
+
+.c4:checked + label:after {
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
 .c5 {
@@ -5853,7 +5859,6 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
   font-stretch: normal;
   display: block;
   color: rgb(70,70,70);
-  -webkit-text-align: left;
   text-align: left;
   margin-right: 0.75rem;
   font-weight: 600;

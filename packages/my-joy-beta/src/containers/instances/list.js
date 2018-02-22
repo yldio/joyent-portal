@@ -30,7 +30,6 @@ import RebootInstance from '@graphql/reboot-instance.gql';
 import RemoveInstance from '@graphql/remove-instance.gql';
 import ToolbarForm from '@components/instances/toolbar';
 import Empty from '@components/empty';
-import Index from '@state/gen-index';
 import parseError from '@state/parse-error';
 import Confirm from '@state/confirm';
 
@@ -109,7 +108,7 @@ export const List = ({
           toggleSelectAll={toggleSelectAll}
           onSortBy={handleSortBy}
           noInstances={!_instances.length}
-          >
+        >
           {_instances.map(({ name, id, ...rest }) => (
             <InstanceListItem
               key={id}
@@ -196,11 +195,15 @@ export default compose(
         }
       }));
 
+      const index = new Fuse(instances, {
+        keys: instances.length ? Object.keys(instances[0]) : ['name']
+      });
+
       return {
         instances,
         loading,
         error,
-        index: Index(instances),
+        index,
         refetch
       };
     }
@@ -220,11 +223,7 @@ export default compose(
       const sortOrder = get(values, 'instance-list-sort-order', 'asc');
 
       // if user is searching something, get items that match that query
-      const filtered = filter
-        ? new Fuse(instances, {
-            keys: [...Object.keys(instances[0])]
-          }).search(filter)
-        : instances;
+      const filtered = filter ? index.search(filter) : instances;
 
       // from filtered instances, sort asc
       // set's mutating flag
@@ -324,9 +323,11 @@ export default compose(
         // eslint-disable-next-line no-alert
         if (
           !await Confirm(
-            `Do you want to ${name} ${selected.length === 1
-              ? `"${selected[0].name}"`
-              : `${selected.length} snapshots`}`
+            `Do you want to ${name} ${
+              selected.length === 1
+                ? `"${selected[0].name}"`
+                : `${selected.length} snapshots`
+            }`
           )
         ) {
           return;

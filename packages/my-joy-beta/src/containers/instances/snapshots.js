@@ -33,7 +33,6 @@ import CreateSnapshotMutation from '@graphql/create-snapshot.gql';
 import ToolbarForm from '@components/instances/toolbar';
 import SnapshotsListActions from '@components/instances/footer';
 import parseError from '@state/parse-error';
-import GenIndex from '@state/gen-index';
 import Confirm from '@state/confirm';
 
 const MENU_FORM_NAME = 'snapshot-list-menu';
@@ -171,9 +170,9 @@ export default compose(
       const instance = find(get(rest, 'machines', []), ['name', name]);
       const snapshots = get(instance, 'snapshots', []);
 
-      const index = GenIndex(
-        snapshots.map(({ name, ...rest }) => ({ ...rest, id: name }))
-      );
+      const index = new Fuse(snapshots, {
+        keys: snapshots.length ? Object.keys(snapshots[0]) : ['name']
+      });
 
       return {
         index,
@@ -207,11 +206,7 @@ export default compose(
       const createSnapshotOpen = get(values, 'snapshots-create-open', false);
 
       // if user is searching something, get items that match that query
-      const filtered = filter
-        ? new Fuse(snapshots, {
-            keys: ['name']
-          }).search(filter)
-        : snapshots;
+      const filtered = filter ? index.search(filter) : snapshots;
 
       // from filtered instances, sort asc
       // set's mutating flag
@@ -329,9 +324,11 @@ export default compose(
           // eslint-disable-next-line no-alert
           if (
             !await Confirm(
-              `Do you want to ${name} ${selected.length === 1
-                ? `"${selected[0].name}"`
-                : `${selected.length} snapshots`}`
+              `Do you want to ${name} ${
+                selected.length === 1
+                  ? `"${selected[0].name}"`
+                  : `${selected.length} snapshots`
+              }`
             )
           ) {
             return;

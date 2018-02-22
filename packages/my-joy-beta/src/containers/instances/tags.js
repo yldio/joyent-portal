@@ -30,7 +30,6 @@ import ToolbarForm from '@components/instances/toolbar';
 import GetTags from '@graphql/list-tags.gql';
 import UpdateTags from '@graphql/update-tags.gql';
 import DeleteTag from '@graphql/delete-tag.gql';
-import Index from '@state/gen-index';
 import parseError from '@state/parse-error';
 import Confirm from '@state/confirm';
 
@@ -61,7 +60,8 @@ export const Tags = ({
       onSubmit={handleCreate}
       onCancel={() => handleToggleAddOpen(false)}
       shouldAsyncValidate={shouldAsyncValidate}
-      asyncValidate={asyncValidate}>
+      asyncValidate={asyncValidate}
+    >
       {TagsAddForm}
     </ReduxForm>
   ) : null;
@@ -101,7 +101,8 @@ export const Tags = ({
       initialValues={{ name: editing.name, value: editing.value }}
       shouldAsyncValidate={shouldAsyncValidate}
       asyncValidate={asyncValidate}
-      onSubmit={handleEdit}>
+      onSubmit={handleEdit}
+    >
       {props => (
         <TagsEditForm
           {...props}
@@ -160,10 +161,14 @@ export default compose(
         ({ name = '' }) => !/^triton\.cns\./i.test(name)
       );
 
+      const index = new Fuse(tags, {
+        keys: tags.length ? Object.keys(tags[0]) : ['name']
+      });
+
       return {
         tags,
         instance,
-        index: Index(tags),
+        index,
         loading,
         error,
         refetch
@@ -176,13 +181,7 @@ export default compose(
       const filter = get(form, `${MENU_FORM_NAME}.values.filter`, false);
       // if user is searching something, get items that match that query
       // if user is searching something, get items that match that query
-      const filtered = filter
-        ? new Fuse(tags, {
-            keys: [...Object.keys(tags[0])]
-          }).search(filter)
-        : tags;
-
-      if (filter) console.log(Object.keys(tags[0]));
+      const filtered = filter ? index.search(filter) : tags;
 
       const addOpen = get(values, 'add-tags-open', false);
       const editingTagName = get(values, 'editing-tag', null);

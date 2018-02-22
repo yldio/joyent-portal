@@ -48,7 +48,7 @@ const VerticalDivider = styled.div`
 
 const TableTrActionable = styled(TableTr)`
   cursor: pointer;
-`
+`;
 
 export const Filters = ({ onResetFilters }) => (
   <Margin top={1} bottom={3}>
@@ -138,7 +138,8 @@ export const Package = ({
             {GroupIcons[group]}
             <Margin left={1} right={2}>
               <FormLabel
-                style={{ fontWeight: sortBy === 'name' ? 'bold' : 'normal' }}>
+                style={{ fontWeight: sortBy === 'name' ? 'bold' : 'normal' }}
+              >
                 {name}
               </FormLabel>
             </Margin>
@@ -188,7 +189,8 @@ export const Packages = ({
             left
             middle
             xs="200"
-            actionable>
+            actionable
+          >
             <span>Name </span>
           </TableTh>
           <TableTh
@@ -198,7 +200,8 @@ export const Packages = ({
             showSort={sortBy === 'memory'}
             right
             middle
-            actionable>
+            actionable
+          >
             <span>RAM </span>
           </TableTh>
           <TableTh
@@ -208,7 +211,8 @@ export const Packages = ({
             showSort={sortBy === 'disk'}
             right
             middle
-            actionable>
+            actionable
+          >
             <span>Disk </span>
           </TableTh>
           {hasVms && (
@@ -219,7 +223,8 @@ export const Packages = ({
               showSort={sortBy === 'vcpus'}
               right
               middle
-              actionable>
+              actionable
+            >
               <span>vCPU</span>
             </TableTh>
           )}
@@ -230,7 +235,8 @@ export const Packages = ({
             showSort={sortBy === 'price'}
             right
             middle
-            actionable>
+            actionable
+          >
             <span>$/hour</span>
           </TableTh>
         </TableTr>

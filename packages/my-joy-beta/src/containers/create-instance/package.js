@@ -51,7 +51,8 @@ const PackageContainer = ({
       id={step}
       onClick={!expanded && !proceeded && handleEdit}
       collapsed={!expanded && !proceeded}
-      icon={<PackageIcon />}>
+      icon={<PackageIcon />}
+    >
       Package
     </Title>
     {expanded ? (
@@ -61,7 +62,8 @@ const PackageContainer = ({
         <a
           href="https://docs.joyent.com/private-cloud/packages"
           target="_blank"
-          rel="noopener noreferrer">
+          rel="noopener noreferrer"
+        >
           Read the docs
         </a>
       </Description>
@@ -69,17 +71,20 @@ const PackageContainer = ({
     <ReduxForm
       form={`${FORM_NAME}-filters`}
       destroyOnUnmount={false}
-      forceUnregisterOnUnmount={true}>
+      forceUnregisterOnUnmount={true}
+    >
       {props =>
         !loading && expanded ? (
           <Filters {...props} onResetFilters={handleResetFilters} />
-        ) : null}
+        ) : null
+      }
     </ReduxForm>
     <ReduxForm
       form={FORM_NAME}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
-      onSubmit={handleNext}>
+      onSubmit={handleNext}
+    >
       {props =>
         expanded ? (
           loading ? (
@@ -91,7 +96,8 @@ const PackageContainer = ({
               sortBy={sortBy}
               sortOrder={sortOrder}
               onSortBy={handleSortBy}
-              packages={packages.length}>
+              packages={packages.length}
+            >
               {packages.map(({ id, ...pkg }) => (
                 <Package
                   selectPackage={selectPackage}
@@ -107,7 +113,8 @@ const PackageContainer = ({
           )
         ) : selected.id ? (
           <Overview {...selected} hasVms={hasVms} onCancel={handleEdit} />
-        ) : null}
+        ) : null
+      }
     </ReduxForm>
     {expanded ? (
       !loading ? (
@@ -183,10 +190,7 @@ export default compose(
 
       const vmSelected = get(form, 'create-instance-vms.values.vms', false);
       const pkgSelected = get(values, `package-selectected`, null);
-      const selected = find(packages, [
-        'id',
-        pkgSelected
-      ]);
+      const selected = find(packages, ['id', pkgSelected]);
 
       const sorted = sortBy(packages, [_sortBy]);
 

@@ -269,7 +269,8 @@ const Propagate = ({ children, ...rest }) => (
     {({ disabled, header, selected } = {}) => (
       <Broadcast
         channel="almost-responsive-table"
-        value={{ disabled, header, selected, ...rest }}>
+        value={{ disabled, header, selected, ...rest }}
+      >
         {children({ disabled, header, selected, ...rest })}
       </Broadcast>
     )}
@@ -314,7 +315,8 @@ export const Th = Baseline(({ children, ...rest }) => (
         {...value}
         showSort={showSort}
         header={header}
-        name="th">
+        name="th"
+      >
         {children}
         {!showSort || !header ? null : (
           <ArrowIcon
