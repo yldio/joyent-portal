@@ -19,7 +19,6 @@ import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import imageData from '@data/images-map.json';
 import GetImages from '@graphql/get-images.gql';
-import GetImage from '@graphql/get-image.gql';
 
 const HarcodedImage = image => (
   <Fragment>

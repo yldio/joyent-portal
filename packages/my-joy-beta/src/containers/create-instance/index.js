@@ -172,6 +172,7 @@ export default compose(
     if (!enabled) {
       return {
         error,
+        query,
         disabled: !enabled,
         step
       };
