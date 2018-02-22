@@ -113,7 +113,6 @@ export const List = ({
                 id={id}
                 name={name}
                 {...rest}
-                onClick={() => history.push(`/${name}`)}
                 onCreateImage={() => handleCreateImage(rest)}
                 onStart={() => handleStart([{ id }])}
                 onStop={() => handleStop([{ id }])}

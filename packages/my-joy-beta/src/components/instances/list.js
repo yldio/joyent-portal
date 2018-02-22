@@ -36,10 +36,6 @@ const stateColor = {
   FAILED: 'red'
 };
 
-const TableTdClickable = styled(TableTd)`
-  cursor: pointer;
-`;
-
 const A = styled(Anchor)`
   color: ${props => props.theme.text};
   text-decoration: none;
@@ -78,12 +74,12 @@ export const Item = ({
         <Checkbox noMargin />
       </FormGroup>
     </TableTd>
-    <TableTdClickable middle left onClick={onClick}>
+    <TableTd middle left>
       <A to={`/${name}`} component={Link}>
         {name}
       </A>
-    </TableTdClickable>
-    <TableTdClickable onClick={onClick} middle left>
+    </TableTd>
+    <TableTd middle left>
       {mutating ? (
         <StatusLoader small />
       ) : (
@@ -92,16 +88,16 @@ export const Item = ({
           {titleCase(state)}
         </span>
       )}
-    </TableTdClickable>
-    <TableTdClickable onClick={onClick} xs="0" sm="160" middle left>
+    </TableTd>
+    <TableTd xs="0" sm="160" middle left>
       {distanceInWordsToNow(created)}
-    </TableTdClickable>
-    <TableTdClickable onClick={onClick} xs="0" sm="130" middle left>
+    </TableTd>
+    <TableTd xs="0" sm="130" middle left>
       <code>{id.substring(0, 7)}</code>
-    </TableTdClickable>
+    </TableTd>
     {!mutating ? (
       <PopoverContainer clickable>
-        <TableTdClickable onClick={onClick} padding="0" hasBorder="left">
+        <TableTd padding="0" hasBorder="left">
           <PopoverTarget box>
             <Actions alignCenter justifyCenter>
               <ActionsIcon />
@@ -131,17 +127,17 @@ export const Item = ({
               Remove
             </PopoverItem>
           </Popover>
-        </TableTdClickable>
+        </TableTd>
       </PopoverContainer>
     ) : (
-      <TableTdClickable
-        onClick={onClick}
+      <TableTd
+
         padding="0"
         hasBorder="left"
         center
         middle>
         <ActionsIcon disabled />
-      </TableTdClickable>
+      </TableTd>
     )}
   </TableTr>
 );
