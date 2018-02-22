@@ -46,13 +46,17 @@ const VerticalDivider = styled.div`
   box-sizing: border-box;
 `;
 
+const TableTrActionable = styled(TableTr)`
+  cursor: pointer;
+`
+
 export const Filters = ({ onResetFilters }) => (
   <Margin top={1} bottom={3}>
     <H4>Filters</H4>
     <Flex wrap alignCenter justifyBetween>
       <FormGroup type="checkbox" name="compute-optimized" field={Field}>
         <Checkbox>
-          <FormLabel>
+          <FormLabel actionable>
             <Flex alignCenter>
               {GroupIcons.COMPUTE}
               <Margin right={1} left={1}>
@@ -64,7 +68,7 @@ export const Filters = ({ onResetFilters }) => (
       </FormGroup>
       <FormGroup type="checkbox" name="memory-optimized" field={Field}>
         <Checkbox>
-          <FormLabel>
+          <FormLabel actionable>
             <Flex alignCenter>
               {GroupIcons.MEMORY}
               <Margin left={1} right={2}>
@@ -76,7 +80,7 @@ export const Filters = ({ onResetFilters }) => (
       </FormGroup>
       <FormGroup type="checkbox" name="general-purpose" field={Field}>
         <Checkbox>
-          <FormLabel>
+          <FormLabel actionable>
             <Flex alignCenter>
               {GroupIcons.GENERAL}
               <Margin left={1} right={2}>
@@ -88,7 +92,7 @@ export const Filters = ({ onResetFilters }) => (
       </FormGroup>
       <FormGroup type="checkbox" name="storage-optimized" field={Field}>
         <Checkbox>
-          <FormLabel>
+          <FormLabel actionable>
             <Flex alignCenter>
               {GroupIcons.STORAGE}
               <Margin left={1} right={2}>
@@ -100,7 +104,7 @@ export const Filters = ({ onResetFilters }) => (
       </FormGroup>
       <FormGroup type="checkbox" name="ssd" field={Field}>
         <Checkbox>
-          <FormLabel>SSD</FormLabel>
+          <FormLabel actionable>SSD</FormLabel>
         </Checkbox>
       </FormGroup>
     </Flex>
@@ -123,18 +127,18 @@ export const Package = ({
   disk,
   ssd,
   hasVms,
-  sortBy
+  sortBy,
+  selectPackage
 }) => (
-  <TableTr>
+  <TableTrActionable onClick={() => selectPackage(id)}>
     <TableTd right selected={selected}>
-      <FormGroup name="package" value={id} type="radio" field={Field} fluid>
-        <Radio onBlur={null} noMargin>
+      <FormGroup fluid>
+        <Radio checked={selected} onBlur={null} noMargin>
           <Flex alignCenter>
             {GroupIcons[group]}
             <Margin left={1} right={2}>
               <FormLabel
-                style={{ fontWeight: sortBy === 'name' ? 'bold' : 'normal' }}
-              >
+                style={{ fontWeight: sortBy === 'name' ? 'bold' : 'normal' }}>
                 {name}
               </FormLabel>
             </Margin>
@@ -161,7 +165,7 @@ export const Package = ({
     <TableTd right bold={sortBy === 'price'} selected={selected}>
       {price}
     </TableTd>
-  </TableTr>
+  </TableTrActionable>
 );
 
 export const Packages = ({
@@ -184,8 +188,7 @@ export const Packages = ({
             left
             middle
             xs="200"
-            actionable
-          >
+            actionable>
             <span>Name </span>
           </TableTh>
           <TableTh
@@ -195,8 +198,7 @@ export const Packages = ({
             showSort={sortBy === 'memory'}
             right
             middle
-            actionable
-          >
+            actionable>
             <span>RAM </span>
           </TableTh>
           <TableTh
@@ -206,8 +208,7 @@ export const Packages = ({
             showSort={sortBy === 'disk'}
             right
             middle
-            actionable
-          >
+            actionable>
             <span>Disk </span>
           </TableTh>
           {hasVms && (
@@ -218,8 +219,7 @@ export const Packages = ({
               showSort={sortBy === 'vcpus'}
               right
               middle
-              actionable
-            >
+              actionable>
               <span>vCPU</span>
             </TableTh>
           )}
@@ -230,8 +230,7 @@ export const Packages = ({
             showSort={sortBy === 'price'}
             right
             middle
-            actionable
-          >
+            actionable>
             <span>$/hour</span>
           </TableTh>
         </TableTr>
@@ -258,9 +257,7 @@ export const Overview = ({
 }) => (
   <Fragment>
     <Margin bottom={2}>
-      <H3 noMargin>
-        {name}
-      </H3>
+      <H3 noMargin>{name}</H3>
     </Margin>
     <Flex alignCenter>
       <span>{price} $</span>

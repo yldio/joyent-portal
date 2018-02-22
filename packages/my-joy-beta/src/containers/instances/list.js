@@ -12,6 +12,7 @@ import find from 'lodash.find';
 import reverse from 'lodash.reverse';
 import sort from 'lodash.sortby';
 import remcalc from 'remcalc';
+import Fuse from 'fuse.js';
 
 import {
   ViewContainer,
@@ -19,8 +20,7 @@ import {
   MessageDescription,
   MessageTitle,
   StatusLoader,
-  Divider,
-  Anchor
+  Divider
 } from 'joyent-ui-toolkit';
 
 import ListInstances from '@graphql/list-instances.gql';
@@ -29,6 +29,7 @@ import StartInstance from '@graphql/start-instance.gql';
 import RebootInstance from '@graphql/reboot-instance.gql';
 import RemoveInstance from '@graphql/remove-instance.gql';
 import ToolbarForm from '@components/instances/toolbar';
+import Empty from '@components/empty';
 import Index from '@state/gen-index';
 import parseError from '@state/parse-error';
 import Confirm from '@state/confirm';
@@ -38,7 +39,6 @@ import {
   Item as InstanceListItem
 } from '@components/instances/list';
 
-import Empty from '@components/empty';
 import InstanceListActions from '@components/instances/footer';
 
 const TABLE_FORM_NAME = 'instance-list-table';
@@ -59,7 +59,8 @@ export const List = ({
   toggleSelectAll,
   handleCreateImage,
   handleSortBy,
-  history
+  history,
+  filter
 }) => {
   const _instances = forceArray(instances);
 
@@ -106,19 +107,21 @@ export const List = ({
           sortBy={sortBy}
           sortOrder={sortOrder}
           toggleSelectAll={toggleSelectAll}
-          onSortBy={handleSortBy}>
+          onSortBy={handleSortBy}
+          noInstances={!_instances.length}
+          >
           {_instances.map(({ name, id, ...rest }) => (
-              <InstanceListItem
-                key={id}
-                id={id}
-                name={name}
-                {...rest}
-                onCreateImage={() => handleCreateImage(rest)}
-                onStart={() => handleStart([{ id }])}
-                onStop={() => handleStop([{ id }])}
-                onReboot={() => handleReboot([{ id }])}
-                onRemove={() => handleRemove([{ id }])}
-              />
+            <InstanceListItem
+              key={id}
+              id={id}
+              name={name}
+              {...rest}
+              onCreateImage={() => handleCreateImage(rest)}
+              onStart={() => handleStart([{ id }])}
+              onStop={() => handleStop([{ id }])}
+              onReboot={() => handleReboot([{ id }])}
+              onRemove={() => handleRemove([{ id }])}
+            />
           ))}
         </InstanceList>
       )}
@@ -128,9 +131,10 @@ export const List = ({
   const _empty =
     !loading && !_instances.length ? (
       <Empty>
-        You haven't created any instances yet, but they're really easy to set
-        up.<br />
-        Click above to get going.
+        {filter
+          ? 'You have no Images that match your query'
+          : `You haven't created any instances yet, but they're really easy to set up.
+        Click above to get going.`}
       </Empty>
     ) : null;
 
@@ -217,7 +221,9 @@ export default compose(
 
       // if user is searching something, get items that match that query
       const filtered = filter
-        ? index.search(filter).map(({ ref }) => find(instances, ['id', ref]))
+        ? new Fuse(instances, {
+            keys: [...Object.keys(instances[0])]
+          }).search(filter)
         : instances;
 
       // from filtered instances, sort asc
@@ -260,7 +266,8 @@ export default compose(
         mutationError,
         index,
         sortOrder,
-        sortBy
+        sortBy,
+        filter
       };
     },
     (dispatch, { refetch, ...ownProps }) => ({

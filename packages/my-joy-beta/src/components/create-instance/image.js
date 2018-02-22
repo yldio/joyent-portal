@@ -6,7 +6,6 @@ import { Margin } from 'styled-components-spacing';
 import Flex from 'styled-flex-component';
 import pascalCase from 'pascal-case';
 import titleCase from 'title-case';
-import includes from 'lodash.includes';
 import remcalc from 'remcalc';
 
 import {

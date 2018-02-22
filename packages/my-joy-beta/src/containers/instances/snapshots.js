@@ -11,6 +11,7 @@ import sort from 'lodash.sortby';
 import { set } from 'react-redux-values';
 import ReduxForm from 'declarative-redux-form';
 import intercept from 'apr-intercept';
+import Fuse from 'fuse.js';
 
 import {
   ViewContainer,
@@ -207,7 +208,9 @@ export default compose(
 
       // if user is searching something, get items that match that query
       const filtered = filter
-        ? index.search(filter).map(({ ref }) => find(snapshots, ['name', ref]))
+        ? new Fuse(snapshots, {
+            keys: ['name']
+          }).search(filter)
         : snapshots;
 
       // from filtered instances, sort asc
@@ -326,11 +329,9 @@ export default compose(
           // eslint-disable-next-line no-alert
           if (
             !await Confirm(
-              `Do you want to ${name} ${
-                selected.length === 1
-                  ? `"${selected[0].name}"`
-                  : `${selected.length} snapshots`
-              }`
+              `Do you want to ${name} ${selected.length === 1
+                ? `"${selected[0].name}"`
+                : `${selected.length} snapshots`}`
             )
           ) {
             return;

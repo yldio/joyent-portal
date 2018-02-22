@@ -34,8 +34,6 @@ const stateColor = {
   FAILED: 'red'
 };
 
-const IpNames = ['Public IP', 'Private IP'];
-
 const GreyLabel = styled(Label)`
   opacity: 0.5;
   padding-right: ${remcalc(3)};
@@ -291,7 +289,7 @@ export default withTheme(
                   key={i}
                   noMargin={i === instance.ips.length - 1}
                   text={ip}
-                  label={IpNames[i]}
+                  label={`IP address ${i + 1}`}
                 />
               ))}
             </Padding>

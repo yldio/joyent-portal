@@ -130,12 +130,7 @@ export const Item = ({
         </TableTd>
       </PopoverContainer>
     ) : (
-      <TableTd
-
-        padding="0"
-        hasBorder="left"
-        center
-        middle>
+      <TableTd padding="0" hasBorder="left" center middle>
         <ActionsIcon disabled />
       </TableTd>
     )}
@@ -149,7 +144,8 @@ export default ({
   allSelected = false,
   toggleSelectAll = () => null,
   onSortBy = () => null,
-  children
+  children,
+  noInstances
 }) => (
   <form>
     <Table>
@@ -159,7 +155,7 @@ export default ({
             <FormGroup paddingTop={remcalc(4)}>
               <Checkbox
                 checked={allSelected}
-                disabled={submitting}
+                disabled={submitting || noInstances}
                 onChange={toggleSelectAll}
                 noMargin
               />

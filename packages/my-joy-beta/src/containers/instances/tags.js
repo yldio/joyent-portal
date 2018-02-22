@@ -10,6 +10,7 @@ import find from 'lodash.find';
 import get from 'lodash.get';
 import intercept from 'apr-intercept';
 import remcalc from 'remcalc';
+import Fuse from 'fuse.js';
 
 import {
   ViewContainer,
@@ -60,8 +61,7 @@ export const Tags = ({
       onSubmit={handleCreate}
       onCancel={() => handleToggleAddOpen(false)}
       shouldAsyncValidate={shouldAsyncValidate}
-      asyncValidate={asyncValidate}
-    >
+      asyncValidate={asyncValidate}>
       {TagsAddForm}
     </ReduxForm>
   ) : null;
@@ -101,8 +101,7 @@ export const Tags = ({
       initialValues={{ name: editing.name, value: editing.value }}
       shouldAsyncValidate={shouldAsyncValidate}
       asyncValidate={asyncValidate}
-      onSubmit={handleEdit}
-    >
+      onSubmit={handleEdit}>
       {props => (
         <TagsEditForm
           {...props}
@@ -176,9 +175,14 @@ export default compose(
       // get search value
       const filter = get(form, `${MENU_FORM_NAME}.values.filter`, false);
       // if user is searching something, get items that match that query
+      // if user is searching something, get items that match that query
       const filtered = filter
-        ? index.search(filter).map(({ ref }) => find(tags, ['id', ref]))
+        ? new Fuse(tags, {
+            keys: [...Object.keys(tags[0])]
+          }).search(filter)
         : tags;
+
+      if (filter) console.log(Object.keys(tags[0]));
 
       const addOpen = get(values, 'add-tags-open', false);
       const editingTagName = get(values, 'editing-tag', null);

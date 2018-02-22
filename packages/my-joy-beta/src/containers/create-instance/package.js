@@ -43,15 +43,15 @@ const PackageContainer = ({
   handleResetFilters,
   handleSortBy,
   sortBy,
-  step
+  step,
+  selectPackage
 }) => (
   <Fragment>
     <Title
       id={step}
       onClick={!expanded && !proceeded && handleEdit}
       collapsed={!expanded && !proceeded}
-      icon={<PackageIcon />}
-    >
+      icon={<PackageIcon />}>
       Package
     </Title>
     {expanded ? (
@@ -61,8 +61,7 @@ const PackageContainer = ({
         <a
           href="https://docs.joyent.com/private-cloud/packages"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Read the docs
         </a>
       </Description>
@@ -70,20 +69,17 @@ const PackageContainer = ({
     <ReduxForm
       form={`${FORM_NAME}-filters`}
       destroyOnUnmount={false}
-      forceUnregisterOnUnmount={true}
-    >
+      forceUnregisterOnUnmount={true}>
       {props =>
         !loading && expanded ? (
           <Filters {...props} onResetFilters={handleResetFilters} />
-        ) : null
-      }
+        ) : null}
     </ReduxForm>
     <ReduxForm
       form={FORM_NAME}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
-      onSubmit={handleNext}
-    >
+      onSubmit={handleNext}>
       {props =>
         expanded ? (
           loading ? (
@@ -95,10 +91,10 @@ const PackageContainer = ({
               sortBy={sortBy}
               sortOrder={sortOrder}
               onSortBy={handleSortBy}
-              packages={packages.length}
-            >
+              packages={packages.length}>
               {packages.map(({ id, ...pkg }) => (
                 <Package
+                  selectPackage={selectPackage}
                   key={id}
                   id={id}
                   selected={selected.id === id}
@@ -111,8 +107,7 @@ const PackageContainer = ({
           )
         ) : selected.id ? (
           <Overview {...selected} hasVms={hasVms} onCancel={handleEdit} />
-        ) : null
-      }
+        ) : null}
     </ReduxForm>
     {expanded ? (
       !loading ? (
@@ -187,8 +182,11 @@ export default compose(
       );
 
       const vmSelected = get(form, 'create-instance-vms.values.vms', false);
-      const pkgSelected = get(form, `${FORM_NAME}.values.package`, null);
-      const selected = find(packages, ['id', pkgSelected]);
+      const pkgSelected = get(values, `package-selectected`, null);
+      const selected = find(packages, [
+        'id',
+        pkgSelected
+      ]);
 
       const sorted = sortBy(packages, [_sortBy]);
 
@@ -217,7 +215,7 @@ export default compose(
         sortOrder: _sortOrder,
         packages: _sortOrder === 'asc' ? filtered : reverse(filtered),
         hasVms: vmSelected,
-        selected: find(packages, ['id', pkgSelected]),
+        selected,
         proceeded: proceeded || selected
       };
     },
@@ -228,6 +226,9 @@ export default compose(
         );
 
         return history.push(`/~create/tags${history.location.search}`);
+      },
+      selectPackage: id => {
+        dispatch(set({ name: 'package-selectected', value: id }));
       },
       handleEdit: () =>
         history.push(`/~create/package${history.location.search}`),
