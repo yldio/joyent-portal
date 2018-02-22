@@ -171,6 +171,10 @@ const BaseTh = styled.th`
   color: ${props => props.theme.greyLight};
   font-weight: 500;
 
+  ${is('header')`
+    border-bottom-width: 0;
+  `};
+
   ${isOr('selected', 'showSort')`
     color: ${props => props.theme.text};
     font-weight: bold;
