@@ -10,14 +10,14 @@ const { default: Button } = require('./');
 
 <span>
   <Button>Inspire the lazy</Button>
-</span>
+</span>;
 
 // Tab: Disabled
 const React = require('react');
 const { default: Button } = require('./');
 <span>
   <Button disabled>Inspire the brave</Button>
-</span>
+</span>;
 ```
 
 #### Secondary Button
@@ -38,8 +38,10 @@ const { default: Button } = require('./');
 const React = require('react');
 const { default: Button } = require('./');
 <span>
-  <Button secondary disabled>Inspire the brave</Button>
-</span>
+  <Button secondary disabled>
+    Inspire the brave
+  </Button>
+</span>;
 ```
 
 #### Loading Button
@@ -68,7 +70,7 @@ const { Actions } = require('../icons');
   <Button secondary icon actions>
     <Actions />
   </Button>
-</span>
+</span>;
 
 // Tab: Disabled
 const React = require('react');

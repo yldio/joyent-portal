@@ -13,7 +13,7 @@ const { Message, Title, Description } = require('.');
       more
     </Description>
   </Message>
-  <br/>
+  <br />
   <Message onCloseClick={() => null} warning>
     <Title>Choosing deployment data center</Title>
     <Description>
@@ -22,7 +22,7 @@ const { Message, Title, Description } = require('.');
       more
     </Description>
   </Message>
-  <br/>
+  <br />
   <Message onCloseClick={() => null} error>
     <Title>Choosing deployment data center</Title>
     <Description>
@@ -31,5 +31,5 @@ const { Message, Title, Description } = require('.');
       more
     </Description>
   </Message>
-</div>
+</div>;
 ```

@@ -70,7 +70,8 @@ const Meta = props => {
         error={hasError}
         warning={hasWarning}
         success={hasSuccess}
-        right={isRight}>
+        right={isRight}
+      >
         {msg}
       </StyledLabel>
     );

@@ -156,7 +156,8 @@ class Playground extends Component {
           <TabHeader active={tab === 'component'}>
             <Button
               active={tab === 'component'}
-              onClick={() => this.changeTab('component')}>
+              onClick={() => this.changeTab('component')}
+            >
               {(propCode.split(nameRegex)[1] || 'Component').split(/\s/g)[0]}
             </Button>
           </TabHeader>
@@ -165,7 +166,8 @@ class Playground extends Component {
                 <TabHeader active={tab === state}>
                   <Button
                     active={tab === state}
-                    onClick={() => this.changeTab(state)}>
+                    onClick={() => this.changeTab(state)}
+                  >
                     {state}
                   </Button>
                 </TabHeader>
@@ -174,7 +176,8 @@ class Playground extends Component {
           <TabHeader active={tab === 'code'}>
             <Button
               active={tab === 'code'}
-              onClick={() => this.changeTab('code')}>
+              onClick={() => this.changeTab('code')}
+            >
               Code
             </Button>
           </TabHeader>

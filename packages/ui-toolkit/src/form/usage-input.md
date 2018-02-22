@@ -10,8 +10,7 @@ const { default: Input } = require('./input');
 <FormGroup>
   <Label>Username</Label>
   <Input placeholder="Example: JarJarBinks" type="text" />
-</FormGroup>
-
+</FormGroup>;
 
 // Tab: Disabled
 const React = require('react');
@@ -22,7 +21,7 @@ const { default: Input } = require('./input');
 <FormGroup>
   <Label disabled>Username</Label>
   <Input disabled placeholder="Example: JarJarBinks" type="text" />
-</FormGroup>
+</FormGroup>;
 
 // Tab: Error
 const React = require('react');
@@ -35,5 +34,5 @@ const { default: Input } = require('./input');
   <Label>Username</Label>
   <Input value="anton/s" error type="text" />
   <FormMeta error>Something’s wrong</FormMeta>
-</FormGroup>
+</FormGroup>;
 ```

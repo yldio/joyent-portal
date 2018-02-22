@@ -131,7 +131,6 @@ const Container = styled.div`
     font-size: ${remcalc(15)};
   }
 
-
   ${isNot('noMargin')`
     margin-bottom: ${remcalc(12)};
   `};

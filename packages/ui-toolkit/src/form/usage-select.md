@@ -1,4 +1,5 @@
 #### Select
+
 This is the standard dropdown menu to be used in forms and for multiple choice selections.
 
 ```jsx
@@ -38,8 +39,7 @@ const { default: Select } = require('./select');
     <option>Seoul, South Korea</option>
     <option>Tokyo, Japan</option>
   </Select>
-</FormGroup>
-
+</FormGroup>;
 
 // Tab: Error
 const React = require('react');
@@ -52,7 +52,9 @@ const { default: Select } = require('./select');
 <FormGroup>
   <Flex alignCenter justifyBetween>
     <Label>Your location</Label>
-    <FormMeta top error>Unexpected children error!</FormMeta>
+    <FormMeta top error>
+      Unexpected children error!
+    </FormMeta>
   </Flex>
   <Select>
     <option>Amsterdam, EU</option>
@@ -60,5 +62,5 @@ const { default: Select } = require('./select');
     <option>Seoul, South Korea</option>
     <option>Tokyo, Japan</option>
   </Select>
-</FormGroup>
+</FormGroup>;
 ```

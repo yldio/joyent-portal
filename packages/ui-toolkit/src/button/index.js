@@ -219,7 +219,7 @@ const Button = styled(BaseButton)`
     border-radius: 0;
   `};
 
-  ${is('actions') `
+  ${is('actions')`
     border-radius: 0;
     width: ${remcalc(48)};
     min-width: ${remcalc(0)};

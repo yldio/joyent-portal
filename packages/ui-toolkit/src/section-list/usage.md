@@ -32,5 +32,5 @@ const { default: SectionList } = require('./');
   <SectionListItem>
     <Anchor>Snapshots</Anchor>
   </SectionListItem>
-</SectionList>
+</SectionList>;
 ```

@@ -32,9 +32,7 @@ const UnorderedList = styled.ul`
  * @example ./usage.md
  */
 const SectionList = ({ children, mode, ...rest }) => (
-  <UnorderedList {...rest}>
-  {children}
-  </UnorderedList>
+  <UnorderedList {...rest}>{children}</UnorderedList>
 );
 
 export default Baseline(SectionList);

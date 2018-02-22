@@ -38,7 +38,7 @@ export const Anchor = Baseline(styled(BaseAnchor)`
     font-weight: ${props => props.theme.font.weight.semibold};
 
     &:after {
-      ${border}
+      ${border};
     }
   }
 
