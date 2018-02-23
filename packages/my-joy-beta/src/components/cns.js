@@ -19,7 +19,8 @@ import {
   FormLabel,
   PublicIcon,
   PrivateIcon,
-  CopiableField
+  CopiableField,
+  FormMeta
 } from 'joyent-ui-toolkit';
 
 import Tag from '@components/tags';
@@ -79,10 +80,11 @@ export const AddServiceForm = ({
   handleSubmit,
   submitting,
   disabled,
-  pristine
+  pristine,
+  invalid
 }) => (
   <form onSubmit={handleSubmit}>
-    <Flex alignEnd wrap>
+    <Flex wrap>
       <FlexItem>
         <FormGroup name="name" field={Field}>
           <FormLabel>Attach to new CNS service name</FormLabel>
@@ -94,12 +96,18 @@ export const AddServiceForm = ({
               required
               disabled={disabled || submitting}
             />
+            <FormMeta />
           </Margin>
         </FormGroup>
       </FlexItem>
       <FlexItem>
-        <Margin left={2}>
-          <Button type="submit" loading={submitting} inline>
+        <Margin top={3.5} left={2}>
+          <Button
+            type="submit"
+            disabled={pristine || invalid}
+            loading={submitting}
+            inline
+          >
             Add
           </Button>
           <Divider height={remcalc(4)} transparent />

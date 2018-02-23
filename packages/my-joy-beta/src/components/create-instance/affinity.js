@@ -5,7 +5,7 @@ import { Field } from 'redux-form';
 import titleCase from 'title-case';
 import remcalc from 'remcalc';
 
-import { H5, Select, Input, FormGroup } from 'joyent-ui-toolkit';
+import { H5, Select, Input, FormGroup, FormMeta } from 'joyent-ui-toolkit';
 
 const style = {
   lineHeight: '48px',
@@ -82,6 +82,7 @@ export const Rule = rule => (
               required
               placeholder="key"
             />
+            <FormMeta small />
           </FormGroup>
           <H5 style={style} inline noMargin>
             and value{' '}
@@ -99,6 +100,7 @@ export const Rule = rule => (
               required
               placeholder="value"
             />
+            <FormMeta small />
           </FormGroup>
         </Fragment>
       ) : (
@@ -115,6 +117,7 @@ export const Rule = rule => (
               required
               placeholder="Example instance name: nginx"
             />
+            <FormMeta />
           </FormGroup>
         </Fragment>
       )}

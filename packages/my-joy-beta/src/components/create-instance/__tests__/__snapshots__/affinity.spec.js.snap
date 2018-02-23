@@ -178,6 +178,20 @@ exports[`renders <Rule/> without throwing 1`] = `
   display: none;
 }
 
+.c16 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  width: 18.75rem;
+}
+
 .c2 {
   color: rgba(73,73,73,1);
   font-weight: normal;
@@ -212,6 +226,14 @@ exports[`renders <Rule/> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
   border: none;
   border-bottom: 0.0625rem solid rgba(73,73,73,1);
   border-radius: 0;
@@ -226,13 +248,10 @@ exports[`renders <Rule/> without throwing 1`] = `
   min-height: 0;
   max-width: 22.1875rem;
   text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+}
+
+.c15:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -268,11 +287,6 @@ exports[`renders <Rule/> without throwing 1`] = `
 
 .c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c15:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c4 {
@@ -354,6 +368,14 @@ exports[`renders <Rule/> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
   border: none;
   border-bottom: 0.0625rem solid rgba(73,73,73,1);
   border-radius: 0;
@@ -370,13 +392,10 @@ exports[`renders <Rule/> without throwing 1`] = `
   width: 4.125rem;
   max-width: 4.125rem;
   text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+}
+
+.c6:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -414,11 +433,6 @@ exports[`renders <Rule/> without throwing 1`] = `
   color: rgba(73,73,73,0.5);
 }
 
-.c6:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
 .c8 {
   box-sizing: border-box;
   width: 18.75rem;
@@ -429,6 +443,14 @@ exports[`renders <Rule/> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
   border: none;
   border-bottom: 0.0625rem solid rgba(73,73,73,1);
   border-radius: 0;
@@ -445,13 +467,10 @@ exports[`renders <Rule/> without throwing 1`] = `
   width: 6.25rem;
   max-width: 6.25rem;
   text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+}
+
+.c8:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -489,11 +508,6 @@ exports[`renders <Rule/> without throwing 1`] = `
   color: rgba(73,73,73,0.5);
 }
 
-.c8:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
 .c11 {
   box-sizing: border-box;
   width: 18.75rem;
@@ -504,6 +518,14 @@ exports[`renders <Rule/> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
   border: none;
   border-bottom: 0.0625rem solid rgba(73,73,73,1);
   border-radius: 0;
@@ -520,13 +542,10 @@ exports[`renders <Rule/> without throwing 1`] = `
   width: 8.4375rem;
   max-width: 8.4375rem;
   text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+}
+
+.c11:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -564,11 +583,6 @@ exports[`renders <Rule/> without throwing 1`] = `
   color: rgba(73,73,73,0.5);
 }
 
-.c11:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
 .c14 {
   box-sizing: border-box;
   width: 18.75rem;
@@ -579,6 +593,14 @@ exports[`renders <Rule/> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
   border: none;
   border-bottom: 0.0625rem solid rgba(73,73,73,1);
   border-radius: 0;
@@ -595,13 +617,10 @@ exports[`renders <Rule/> without throwing 1`] = `
   width: 8.125rem;
   max-width: 8.125rem;
   text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+}
+
+.c14:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -637,11 +656,6 @@ exports[`renders <Rule/> without throwing 1`] = `
 
 .c14:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c14:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 <div
@@ -895,6 +909,9 @@ exports[`renders <Rule/> without throwing 1`] = `
           }
         }
       />
+      <label
+        className="c16"
+      />
     </div>
   </div>
 </div>
@@ -1040,6 +1057,20 @@ exports[`renders <Rule/> without throwing 2`] = `
   display: none;
 }
 
+.c16 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  width: 18.75rem;
+}
+
 .c2 {
   color: rgba(73,73,73,1);
   font-weight: normal;
@@ -1074,6 +1105,14 @@ exports[`renders <Rule/> without throwing 2`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
   border: none;
   border-bottom: 0.0625rem solid rgba(73,73,73,1);
   border-radius: 0;
@@ -1088,13 +1127,10 @@ exports[`renders <Rule/> without throwing 2`] = `
   min-height: 0;
   max-width: 22.1875rem;
   text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+}
+
+.c15:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -1130,11 +1166,6 @@ exports[`renders <Rule/> without throwing 2`] = `
 
 .c15:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c15:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c4 {
@@ -1216,6 +1247,14 @@ exports[`renders <Rule/> without throwing 2`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
   border: none;
   border-bottom: 0.0625rem solid rgba(73,73,73,1);
   border-radius: 0;
@@ -1232,13 +1271,10 @@ exports[`renders <Rule/> without throwing 2`] = `
   width: 4.125rem;
   max-width: 4.125rem;
   text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+}
+
+.c6:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -1276,11 +1312,6 @@ exports[`renders <Rule/> without throwing 2`] = `
   color: rgba(73,73,73,0.5);
 }
 
-.c6:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
 .c8 {
   box-sizing: border-box;
   width: 18.75rem;
@@ -1291,6 +1322,14 @@ exports[`renders <Rule/> without throwing 2`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
   border: none;
   border-bottom: 0.0625rem solid rgba(73,73,73,1);
   border-radius: 0;
@@ -1307,13 +1346,10 @@ exports[`renders <Rule/> without throwing 2`] = `
   width: 6.25rem;
   max-width: 6.25rem;
   text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+}
+
+.c8:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -1351,11 +1387,6 @@ exports[`renders <Rule/> without throwing 2`] = `
   color: rgba(73,73,73,0.5);
 }
 
-.c8:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
 .c11 {
   box-sizing: border-box;
   width: 18.75rem;
@@ -1366,6 +1397,14 @@ exports[`renders <Rule/> without throwing 2`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
   border: none;
   border-bottom: 0.0625rem solid rgba(73,73,73,1);
   border-radius: 0;
@@ -1382,13 +1421,10 @@ exports[`renders <Rule/> without throwing 2`] = `
   width: 8.4375rem;
   max-width: 8.4375rem;
   text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+}
+
+.c11:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -1426,11 +1462,6 @@ exports[`renders <Rule/> without throwing 2`] = `
   color: rgba(73,73,73,0.5);
 }
 
-.c11:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
 .c14 {
   box-sizing: border-box;
   width: 18.75rem;
@@ -1441,6 +1472,14 @@ exports[`renders <Rule/> without throwing 2`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
   border: none;
   border-bottom: 0.0625rem solid rgba(73,73,73,1);
   border-radius: 0;
@@ -1457,13 +1496,10 @@ exports[`renders <Rule/> without throwing 2`] = `
   width: 8.125rem;
   max-width: 8.125rem;
   text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+}
+
+.c14:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -1499,11 +1535,6 @@ exports[`renders <Rule/> without throwing 2`] = `
 
 .c14:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c14:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 <div
@@ -1756,6 +1787,9 @@ exports[`renders <Rule/> without throwing 2`] = `
             "lineHeight": "48px",
           }
         }
+      />
+      <label
+        className="c16"
       />
     </div>
   </div>

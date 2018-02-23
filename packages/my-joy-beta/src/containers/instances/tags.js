@@ -32,6 +32,7 @@ import UpdateTags from '@graphql/update-tags.gql';
 import DeleteTag from '@graphql/delete-tag.gql';
 import parseError from '@state/parse-error';
 import Confirm from '@state/confirm';
+import { fieldError } from '@root/constants';
 
 const MENU_FORM_NAME = 'instance-tags-list-menu';
 const ADD_FORM_NAME = 'instance-tags-add-new';
@@ -50,7 +51,7 @@ export const Tags = ({
   handleRemove,
   handleCreate,
   shouldAsyncValidate,
-  asyncValidate
+  handleAsyncValidate
 }) => {
   const _loading = !(loading && !tags.length) ? null : <StatusLoader />;
 
@@ -60,7 +61,7 @@ export const Tags = ({
       onSubmit={handleCreate}
       onCancel={() => handleToggleAddOpen(false)}
       shouldAsyncValidate={shouldAsyncValidate}
-      asyncValidate={asyncValidate}
+      asyncValidate={handleAsyncValidate}
     >
       {TagsAddForm}
     </ReduxForm>
@@ -100,7 +101,7 @@ export const Tags = ({
       form={editing.form}
       initialValues={{ name: editing.name, value: editing.value }}
       shouldAsyncValidate={shouldAsyncValidate}
-      asyncValidate={asyncValidate}
+      handleAsyncValidate={handleAsyncValidate}
       onSubmit={handleEdit}
     >
       {props => (
@@ -212,20 +213,18 @@ export default compose(
         handleToggleEditing: value => {
           return dispatch(set({ name: `editing-tag`, value }));
         },
-        shouldAsyncValidate: ({ trigger }) => {
-          return trigger === 'submit';
-        },
-        asyncValidate: async ({ name = '', value = '' }) => {
-          const isNameInvalid = name.length === 0;
-          const isValueInvalid = value.length === 0;
+        shouldAsyncValidate: ({ trigger }) => trigger === 'change',
+        handleAsyncValidate: async ({ name = '', value = '' }) => {
+          const isNameValid = /^[a-zA-Z_.-]{1,16}$/.test(name);
+          const isValueValid = /^[a-zA-Z_.-]{1,16}$/.test(value);
 
-          if (!isNameInvalid && !isValueInvalid) {
+          if (isNameValid && isValueValid) {
             return;
           }
 
           throw {
-            name: isNameInvalid,
-            value: isValueInvalid
+            name: isNameValid ? null : fieldError,
+            value: isValueValid ? null : fieldError
           };
         },
         handleEdit: async ({ name, value }, _, { form, initialValues }) => {

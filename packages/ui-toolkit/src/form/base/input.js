@@ -34,6 +34,19 @@ const style = css`
   background-color: ${props => props.theme.white};
   border: ${remcalc(1)} solid ${props => props.theme.grey};
   color: ${color};
+  font-size: ${remcalc(15)};
+  line-height: normal !important;
+
+  font-style: normal;
+  font-stretch: normal;
+
+  appearance: none;
+  outline: 0;
+
+  &:focus {
+    border-color: ${props => props.theme.primary};
+    outline: 0;
+  }
 
   &::-webkit-input-placeholder {
     color: ${props => props.theme.textDisabled};
@@ -122,7 +135,11 @@ const style = css`
   `};
 
   ${is('error')`
-    border-color: ${props => props.theme.redDark}
+    border-color: ${props => props.theme.red};
+
+    &:focus {
+      border-color: ${props => props.theme.red};
+    }
   `};
 
   ${is('embedded')`
@@ -171,20 +188,6 @@ const style = css`
   ${is('resize')`
     resize: ${props => props.resize};
   `};
-
-  font-size: ${remcalc(15)};
-  line-height: normal !important;
-
-  font-style: normal;
-  font-stretch: normal;
-
-  appearance: none;
-  outline: 0;
-
-  &:focus {
-    border-color: ${props => props.theme.primary};
-    outline: 0;
-  }
 
   ${is('big')`
     width: ${remcalc(355)};

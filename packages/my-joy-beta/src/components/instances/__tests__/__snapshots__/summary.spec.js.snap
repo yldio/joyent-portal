@@ -994,10 +994,6 @@ exports[`renders <Summary /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -1005,6 +1001,15 @@ exports[`renders <Summary /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.c32:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -1058,11 +1063,6 @@ exports[`renders <Summary /> without throwing 1`] = `
   color: rgba(73,73,73,1);
 }
 
-.c32:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
 .c34 {
   box-sizing: border-box;
   width: 18.75rem;
@@ -1073,9 +1073,6 @@ exports[`renders <Summary /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -1083,6 +1080,14 @@ exports[`renders <Summary /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+}
+
+.c34:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -1134,11 +1139,6 @@ exports[`renders <Summary /> without throwing 1`] = `
 
 .c34:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
-}
-
-.c34:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c31 {
@@ -3023,9 +3023,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -3033,6 +3030,14 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+}
+
+.c33:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -3084,11 +3089,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
 
 .c33:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
-}
-
-.c33:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c32 {
@@ -5150,9 +5150,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -5160,6 +5157,14 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+}
+
+.c33:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -5211,11 +5216,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 
 .c33:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
-}
-
-.c33:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c32 {
@@ -7268,10 +7268,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -7279,6 +7275,15 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.c36:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -7332,11 +7337,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   color: rgba(73,73,73,1);
 }
 
-.c36:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
 .c38 {
   box-sizing: border-box;
   width: 18.75rem;
@@ -7347,9 +7347,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -7357,6 +7354,14 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+}
+
+.c38:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -7408,11 +7413,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c38:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
-}
-
-.c38:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c35 {
@@ -9349,10 +9349,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -9360,6 +9356,15 @@ exports[`renders <Summary state /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.c33:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -9413,11 +9418,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
   color: rgba(73,73,73,1);
 }
 
-.c33:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
 .c35 {
   box-sizing: border-box;
   width: 18.75rem;
@@ -9428,9 +9428,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -9438,6 +9435,14 @@ exports[`renders <Summary state /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+}
+
+.c35:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -9489,11 +9494,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
 
 .c35:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
-}
-
-.c35:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c32 {
@@ -11378,10 +11378,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -11389,6 +11385,15 @@ exports[`renders <Summary state /> without throwing 2`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.c33:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -11442,11 +11447,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
   color: rgba(73,73,73,1);
 }
 
-.c33:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
 .c35 {
   box-sizing: border-box;
   width: 18.75rem;
@@ -11457,9 +11457,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -11467,6 +11464,14 @@ exports[`renders <Summary state /> without throwing 2`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+}
+
+.c35:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -11518,11 +11523,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
 
 .c35:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
-}
-
-.c35:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c32 {
@@ -13346,10 +13346,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -13357,6 +13353,15 @@ exports[`renders <Summary state /> without throwing 3`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.c32:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -13410,11 +13415,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
   color: rgba(73,73,73,1);
 }
 
-.c32:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
 .c34 {
   box-sizing: border-box;
   width: 18.75rem;
@@ -13425,9 +13425,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -13435,6 +13432,14 @@ exports[`renders <Summary state /> without throwing 3`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+}
+
+.c34:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -13486,11 +13491,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
 
 .c34:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
-}
-
-.c34:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c31 {

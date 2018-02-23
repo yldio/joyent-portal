@@ -13,6 +13,7 @@ import { AffinityIcon, Button, H3, Divider, KeyValue } from 'joyent-ui-toolkit';
 import Title from '@components/create-instance/title';
 import { Rule, Header } from '@components/create-instance/affinity';
 import Description from '@components/description';
+import { fieldError } from '@root/constants';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-AFFINITY-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-AFFINITY-EDIT-${i}`;
@@ -37,6 +38,8 @@ export const Affinity = ({
   handleAddAffinityRules,
   handleRemoveAffinityRule,
   handleUpdateAffinityRule,
+  shouldAsyncValidate,
+  handleAsyncValidation,
   handleToggleExpanded,
   handleCancelEdit,
   handleChangeAddOpen,
@@ -79,6 +82,8 @@ export const Affinity = ({
         initialValues={rule}
         destroyOnUnmount={false}
         forceUnregisterOnUnmount={true}
+        shouldAsyncValidate={shouldAsyncValidate}
+        asyncValidation={handleAsyncValidation}
         onSubmit={newValue => handleUpdateAffinityRule(index, newValue)}
       >
         {props => (
@@ -103,6 +108,8 @@ export const Affinity = ({
       form={FORM_NAME_CREATE}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
+      shouldAsyncValidate={shouldAsyncValidate}
+      asyncValidate={handleAsyncValidation}
       onSubmit={handleAddAffinityRules}
     >
       {props =>
@@ -161,7 +168,28 @@ export default compose(
       rule
     };
   }),
-  connect(null, (dispatch, { affinityRules = [], history }) => ({
+  connect(null, (dispatch, { affinityRules = [], rule, history }) => ({
+    shouldAsyncValidate: ({ trigger }) => trigger === 'change',
+    handleAsyncValidation: async rule => {
+      const validName = /^[a-zA-Z_.-]{1,16}$/.test(rule['rule-instance-name']);
+      const validKey = /^[a-zA-Z_.-]{1,16}$/.test(
+        rule['rule-instance-tag-key']
+      );
+      const validValue = /^[a-zA-Z_.-]{1,16}$/.test(
+        rule['rule-instance-tag-value']
+      );
+
+      if (validName && validKey && validValue) {
+        return;
+      }
+
+      // eslint-disable-next-line no-throw-literal
+      throw {
+        'rule-instance-name': fieldError,
+        'rule-instance-tag-key': fieldError,
+        'rule-instance-tag-value': fieldError
+      };
+    },
     handleEdit: () => {
       return history.push(`/~create/affinity${history.location.search}`);
     },

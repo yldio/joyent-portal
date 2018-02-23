@@ -225,8 +225,6 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -234,6 +232,13 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c9:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -269,11 +274,6 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
 
 .c9:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c9:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c6 {

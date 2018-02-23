@@ -5,7 +5,8 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c6 {
+.c7 {
+  margin-top: 1.3125rem;
   margin-left: 0.75rem;
 }
 
@@ -30,10 +31,6 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
 }
 
 .c1 {
@@ -53,7 +50,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   display: block;
 }
 
-.c9 {
+.c10 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -66,19 +63,28 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c9::-moz-focus-inner,
-.c9[type='button']::-moz-focus-inner,
-.c9[type='reset']::-moz-focus-inner,
-.c9[type='submit']::-moz-focus-inner {
+.c10::-moz-focus-inner,
+.c10[type='button']::-moz-focus-inner,
+.c10[type='reset']::-moz-focus-inner,
+.c10[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c9:-moz-focusring,
-.c9[type='button']:-moz-focusring,
-.c9[type='reset']:-moz-focusring,
-.c9[type='submit']:-moz-focusring {
+.c10:-moz-focusring,
+.c10[type='button']:-moz-focusring,
+.c10[type='reset']:-moz-focusring,
+.c10[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
+}
+
+.c9 {
+  display: inline-block;
 }
 
 .c9 + button,
@@ -87,15 +93,6 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
 }
 
 .c8 {
-  display: inline-block;
-}
-
-.c8 + button,
-.c8 + a {
-  margin-left: 0.375rem;
-}
-
-.c7 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -135,7 +132,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c7:focus {
+.c8:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -143,21 +140,21 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c7:hover {
+.c8:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c7:active,
-.c7:active:hover,
-.c7:active:focus {
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c7[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -176,7 +173,21 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c11 {
+.c6 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  width: 18.75rem;
+}
+
+.c12 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -195,7 +206,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c10 {
+.c11 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -227,8 +238,6 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -236,6 +245,13 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c5:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -271,11 +287,6 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
 
 .c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c5:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 <form
@@ -311,6 +322,9 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
             placeholder="Example: mySQLdb"
             required={true}
           />
+          <label
+            className="c6"
+          />
         </div>
       </div>
     </div>
@@ -318,17 +332,18 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
       className="c1"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <button
-          className="c7 c8 c9"
+          className="c8 c9 c10"
+          disabled={undefined}
           href=""
           type="submit"
         >
           Add
         </button>
         <div
-          className="c10 c11"
+          className="c11 c12"
           height="0.25rem"
         />
       </div>
@@ -342,7 +357,8 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c6 {
+.c7 {
+  margin-top: 1.3125rem;
   margin-left: 0.75rem;
 }
 
@@ -367,10 +383,6 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
 }
 
 .c1 {
@@ -390,7 +402,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   display: block;
 }
 
-.c9 {
+.c10 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -403,19 +415,28 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c9::-moz-focus-inner,
-.c9[type='button']::-moz-focus-inner,
-.c9[type='reset']::-moz-focus-inner,
-.c9[type='submit']::-moz-focus-inner {
+.c10::-moz-focus-inner,
+.c10[type='button']::-moz-focus-inner,
+.c10[type='reset']::-moz-focus-inner,
+.c10[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c9:-moz-focusring,
-.c9[type='button']:-moz-focusring,
-.c9[type='reset']:-moz-focusring,
-.c9[type='submit']:-moz-focusring {
+.c10:-moz-focusring,
+.c10[type='button']:-moz-focusring,
+.c10[type='reset']:-moz-focusring,
+.c10[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
+}
+
+.c10 + button,
+.c10 + a {
+  margin-left: 0.375rem;
+}
+
+.c9 {
+  display: inline-block;
 }
 
 .c9 + button,
@@ -424,15 +445,6 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
 }
 
 .c8 {
-  display: inline-block;
-}
-
-.c8 + button,
-.c8 + a {
-  margin-left: 0.375rem;
-}
-
-.c7 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -470,9 +482,14 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
 }
 
-.c7:focus {
+.c8:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -480,23 +497,40 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c7:hover {
+.c8:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c7:active,
-.c7:active:hover,
-.c7:active:focus {
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c7[disabled] {
+.c8[disabled] {
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.c8:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c8:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c8:active,
+.c8:active:hover,
+.c8:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
 }
 
 .c3 {
@@ -513,7 +547,21 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c11 {
+.c6 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  float: right;
+  font-size: 0.8125rem;
+  float: none;
+  width: 18.75rem;
+}
+
+.c12 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -532,7 +580,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c10 {
+.c11 {
   background-color: rgb(216,216,216);
   margin: 0;
   background-color: transparent;
@@ -564,8 +612,6 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -573,6 +619,13 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c5:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -610,11 +663,6 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   color: rgba(73,73,73,0.5);
 }
 
-.c5:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
 <form
   onSubmit={undefined}
 >
@@ -648,6 +696,9 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
             placeholder="Example: mySQLdb"
             required={true}
           />
+          <label
+            className="c6"
+          />
         </div>
       </div>
     </div>
@@ -655,17 +706,18 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
       className="c1"
     >
       <div
-        className="c6"
+        className="c7"
       >
         <button
-          className="c7 c8 c9"
+          className="c8 c9 c10"
+          disabled={true}
           href=""
           type="submit"
         >
           Add
         </button>
         <div
-          className="c10 c11"
+          className="c11 c12"
           height="0.25rem"
         />
       </div>
@@ -809,12 +861,6 @@ exports[`renders <Hostname values /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgb(250,250,250);
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -822,6 +868,17 @@ exports[`renders <Hostname values /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+}
+
+.c8:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -885,11 +942,6 @@ exports[`renders <Hostname values /> without throwing 1`] = `
 
 .c8:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
-}
-
-.c8:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c2 {

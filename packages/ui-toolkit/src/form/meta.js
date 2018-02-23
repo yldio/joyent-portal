@@ -29,6 +29,11 @@ const StyledLabel = Label.extend`
 
   font-size: ${remcalc(13)};
   float: none;
+  width: ${remcalc(300)};
+
+  ${is('small')`
+    width: ${remcalc(120)};
+  `};
 `;
 
 const Meta = props => {

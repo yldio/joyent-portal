@@ -14,6 +14,7 @@ import Title from '@components/create-instance/title';
 import Cns, { Footer, AddServiceForm } from '@components/cns';
 import Description from '@components/description';
 import GetAccount from '@graphql/get-account.gql';
+import { fieldError } from '@root/constants';
 
 const CNS_FORM = 'create-instance-cns';
 
@@ -30,7 +31,9 @@ const CNSContainer = ({
   handleToggleCnsEnabled,
   handleAddService,
   handleRemoveService,
-  step
+  step,
+  shouldAsyncValidate,
+  handleAsyncValidate
 }) => (
   <Fragment>
     <Title
@@ -68,6 +71,8 @@ const CNSContainer = ({
               destroyOnUnmount={false}
               forceUnregisterOnUnmount={true}
               onSubmit={handleAddService}
+              shouldAsyncValidate={shouldAsyncValidate}
+              asyncValidate={handleAsyncValidate}
             >
               {props => <AddServiceForm {...props} />}
             </ReduxForm>
@@ -162,6 +167,20 @@ export default compose(
     handleNext: () => {
       dispatch(set({ name: `${CNS_FORM}-proceeded`, value: true }));
       return history.push(`/~create/affinity${history.location.search}`);
+    },
+    shouldAsyncValidate: ({ trigger }) => trigger === 'change',
+    handleAsyncValidate: async ({ name = '', value = '' }) => {
+      const isNameValid = /^[a-zA-Z_.-]{1,16}$/.test(name);
+      const isValueValid = /^[a-zA-Z_.-]{1,16}$/.test(value);
+
+      if (isNameValid && isValueValid) {
+        return;
+      }
+
+      throw {
+        name: isNameValid ? null : fieldError,
+        value: isValueValid ? null : fieldError
+      };
     },
     handleEdit: () => history.push(`/~create/cns${history.location.search}`),
     handleToggleCnsEnabled: ({ target }) =>

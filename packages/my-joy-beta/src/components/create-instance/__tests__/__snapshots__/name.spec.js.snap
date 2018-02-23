@@ -243,6 +243,7 @@ exports[`renders <Name /> without throwing 1`] = `
   float: right;
   font-size: 0.8125rem;
   float: none;
+  width: 18.75rem;
 }
 
 .c9 {
@@ -297,8 +298,6 @@ exports[`renders <Name /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -306,6 +305,13 @@ exports[`renders <Name /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c5:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -341,11 +347,6 @@ exports[`renders <Name /> without throwing 1`] = `
 
 .c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c5:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 <form>
@@ -674,6 +675,7 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   float: right;
   font-size: 0.8125rem;
   float: none;
+  width: 18.75rem;
 }
 
 .c9 {
@@ -728,8 +730,6 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -737,6 +737,13 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c5:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -772,11 +779,6 @@ exports[`renders <Name expanded /> without throwing 1`] = `
 
 .c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c5:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 <form>
@@ -1105,6 +1107,7 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   float: right;
   font-size: 0.8125rem;
   float: none;
+  width: 18.75rem;
 }
 
 .c9 {
@@ -1159,8 +1162,6 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -1168,6 +1169,13 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c5:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -1203,11 +1211,6 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
 
 .c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c5:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 <form>
@@ -1536,6 +1539,7 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   float: right;
   font-size: 0.8125rem;
   float: none;
+  width: 18.75rem;
 }
 
 .c9 {
@@ -1590,8 +1594,6 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -1599,6 +1601,13 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c5:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -1634,11 +1643,6 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
 
 .c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c5:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 <form>
