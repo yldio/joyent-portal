@@ -128,12 +128,12 @@ export const Package = ({
   ssd,
   hasVms,
   sortBy,
-  selectPackage
+  onRowClick
 }) => (
-  <TableTrActionable onClick={() => selectPackage(id)}>
+  <TableTrActionable onClick={() => onRowClick({ id, selected })}>
     <TableTd right selected={selected}>
-      <FormGroup fluid>
-        <Radio checked={selected} onBlur={null} noMargin>
+      <FormGroup name="package" value={id} type="radio" field={Field} fluid>
+        <Radio onBlur={null} noMargin>
           <Flex alignCenter>
             {GroupIcons[group]}
             <Margin left={1} right={2}>

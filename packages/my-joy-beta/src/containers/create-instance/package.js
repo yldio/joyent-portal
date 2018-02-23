@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
+import { destroy, change } from 'redux-form';
 import { connect } from 'react-redux';
 import titleCase from 'title-case';
 import get from 'lodash.get';
@@ -11,7 +12,6 @@ import find from 'lodash.find';
 import includes from 'lodash.includes';
 import reverse from 'lodash.reverse';
 import constantCase from 'constant-case';
-import { destroy } from 'redux-form';
 
 import { PackageIcon, StatusLoader, Button } from 'joyent-ui-toolkit';
 
@@ -40,11 +40,11 @@ const PackageContainer = ({
   packages,
   selected = {},
   sortOrder,
+  handleRowClick,
   handleResetFilters,
   handleSortBy,
   sortBy,
-  step,
-  selectPackage
+  step
 }) => (
   <Fragment>
     <Title
@@ -100,11 +100,11 @@ const PackageContainer = ({
             >
               {packages.map(({ id, ...pkg }) => (
                 <Package
-                  selectPackage={selectPackage}
                   key={id}
                   id={id}
                   selected={selected.id === id}
                   hasVms={hasVms}
+                  onRowClick={handleRowClick}
                   sortBy={sortBy}
                   {...pkg}
                 />
@@ -189,7 +189,7 @@ export default compose(
       );
 
       const vmSelected = get(form, 'create-instance-vms.values.vms', false);
-      const pkgSelected = get(values, `package-selectected`, null);
+      const pkgSelected = get(form, `${FORM_NAME}.values.package`, null);
       const selected = find(packages, ['id', pkgSelected]);
 
       const sorted = sortBy(packages, [_sortBy]);
@@ -231,13 +231,13 @@ export default compose(
 
         return history.push(`/~create/tags${history.location.search}`);
       },
-      selectPackage: id => {
-        dispatch(set({ name: 'package-selectected', value: id }));
-      },
       handleEdit: () =>
         history.push(`/~create/package${history.location.search}`),
       handleResetFilters: () => {
         dispatch(destroy(`${FORM_NAME}-filters`));
+      },
+      handleRowClick: ({ id, selected }) => {
+        dispatch(change(FORM_NAME, id, !selected));
       },
       handleSortBy: (newSortBy, sortOrder) => {
         dispatch([
