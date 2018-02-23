@@ -26,6 +26,7 @@ import DeleteTag from '@graphql/delete-tag.gql';
 import UpdateTags from '@graphql/update-tags.gql';
 import GetTags from '@graphql/list-tags.gql';
 import parseError from '@state/parse-error';
+import { fieldError } from '@root/constants';
 
 const FORM_NAME = 'cns-new-service';
 
@@ -39,7 +40,9 @@ const CnsContainer = ({
   mutating = false,
   loading = false,
   mutationError = false,
-  loadingError = null
+  loadingError = null,
+  shouldAsyncValidate,
+  handleAsyncValidate
 }) => (
   <ViewContainer main>
     <Margin bottom={1}>
@@ -90,6 +93,8 @@ const CnsContainer = ({
             destroyOnUnmount={false}
             forceUnregisterOnUnmount={true}
             onSubmit={val => handleAddService(val, services)}
+            shouldAsyncValidate={shouldAsyncValidate}
+            asyncValidate={handleAsyncValidate}
           >
             {props => <AddServiceForm {...props} disabled={mutating} />}
           </ReduxForm>
@@ -248,6 +253,18 @@ export default compose(
         ]);
 
         return refetch();
+      },
+      shouldAsyncValidate: ({ trigger }) => trigger === 'change',
+      handleAsyncValidate: async ({ name }) => {
+        const isNameValid = /^[a-zA-Z_.-]{1,16}$/.test(name);
+
+        if (isNameValid) {
+          return;
+        }
+
+        throw {
+          name: fieldError
+        };
       },
       handleRemoveService: async (name, services) => {
         const value = services.filter(svc => name !== svc);

@@ -483,8 +483,6 @@ exports[`renders <List /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -492,6 +490,13 @@ exports[`renders <List /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c7:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -527,11 +532,6 @@ exports[`renders <List /> without throwing 1`] = `
 
 .c7:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c7:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c14 {
@@ -1788,8 +1788,6 @@ exports[`renders <List error /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -1797,6 +1795,13 @@ exports[`renders <List error /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c7:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -1832,11 +1837,6 @@ exports[`renders <List error /> without throwing 1`] = `
 
 .c7:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c7:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c20 {
@@ -3044,8 +3044,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -3053,6 +3051,13 @@ exports[`renders <List instances /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c7:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -3088,11 +3093,6 @@ exports[`renders <List instances /> without throwing 1`] = `
 
 .c7:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c7:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c41 {
@@ -5084,8 +5084,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -5093,6 +5091,13 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c7:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -5128,11 +5133,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 
 .c7:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c7:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c41 {
@@ -7505,8 +7505,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -7514,6 +7512,13 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c7:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -7549,11 +7554,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 
 .c7:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c7:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c41 {
@@ -10137,8 +10137,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -10146,6 +10144,13 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c7:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -10181,11 +10186,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 
 .c7:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c7:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c41 {
@@ -11780,11 +11780,6 @@ exports[`renders <List loading /> without throwing 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgb(250,250,250);
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -11792,6 +11787,16 @@ exports[`renders <List loading /> without throwing 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c7:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -11839,11 +11844,6 @@ exports[`renders <List loading /> without throwing 1`] = `
 
 .c7:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c7:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 @media only screen and (min-width:48em) {

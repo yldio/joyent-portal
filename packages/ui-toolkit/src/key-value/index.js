@@ -82,8 +82,12 @@ const TextareaKeyValue = ({
             <FormLabel>{titleCase(type)} key</FormLabel>
             <Margin top={0.5}>
               <Input onBlur={null} type="text" disabled={submitting} />
+              <Row>
+                <Col sm={7}>
+                  <FormMeta />
+                </Col>
+              </Row>
             </Margin>
-            <FormMeta />
           </FormGroup>
           <Divider height={remcalc(12)} transparent />
         </Col>
@@ -102,7 +106,11 @@ const TextareaKeyValue = ({
                 props={{ submitting, editor }}
               />
             </Margin>
-            <FormMeta />
+            <Row>
+              <Col sm={7}>
+                <FormMeta />
+              </Col>
+            </Row>
           </FormGroup>
           <Divider height={remcalc(12)} transparent />
         </Col>
@@ -127,8 +135,12 @@ const InputKeyValue = ({
           </FormLabel>
           <Margin top={0.5}>
             <Input onBlur={null} type="text" disabled={submitting} />
+            <Row>
+              <Col sm={7}>
+                <FormMeta />
+              </Col>
+            </Row>
           </Margin>
-          <FormMeta />
         </FormGroup>
       </FlexItem>
     ) : null}
@@ -139,9 +151,13 @@ const InputKeyValue = ({
           <FormGroup name="value" field={Field} fluid>
             <FormLabel>{titleCase(type)} value</FormLabel>
             <Margin top={0.5}>
-              <Input onBlur={null} disabled={submitting} />
+              <Input onBlur={null} type="text" disabled={submitting} />
+              <Row>
+                <Col sm={7}>
+                  <FormMeta />
+                </Col>
+              </Row>
             </Margin>
-            <FormMeta />
           </FormGroup>
         </FlexItem>
       </Fragment>
@@ -160,6 +176,7 @@ export const KeyValue = ({
   expanded = true,
   submitting = false,
   pristine = true,
+  invalid = false,
   removing = false,
   handleSubmit,
   onToggleExpanded = () => null,
@@ -173,7 +190,6 @@ export const KeyValue = ({
   customHeader
 }) => {
   const handleHeaderClick = method === 'edit' && onToggleExpanded;
-
   return (
     <Card collapsed={!expanded} actionable={!expanded} shadow>
       <CardHeader
@@ -267,7 +283,7 @@ export const KeyValue = ({
                   </Button>
                   <Button
                     type="submit"
-                    disabled={pristine}
+                    disabled={pristine || invalid}
                     loading={submitting && !removing}
                     marginless
                   >

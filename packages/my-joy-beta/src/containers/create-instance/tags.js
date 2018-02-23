@@ -20,6 +20,7 @@ import {
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import Tag from '@components/tags';
+import { fieldError } from '@root/constants';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-TAGS-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-TAGS-EDIT-${i}`;
@@ -39,7 +40,7 @@ export const Tags = ({
   handleNext,
   handleEdit,
   shouldAsyncValidate,
-  asyncValidate
+  handleAsyncValidate
 }) => (
   <Fragment>
     <Title
@@ -88,7 +89,7 @@ export const Tags = ({
       forceUnregisterOnUnmount={true}
       onSubmit={handleAddTag}
       shouldAsyncValidate={shouldAsyncValidate}
-      asyncValidate={asyncValidate}
+      asyncValidate={handleAsyncValidate}
     >
       {props =>
         expanded && addOpen ? (
@@ -150,20 +151,18 @@ export default compose(
     handleEdit: () => {
       return history.push(`/~create/tags${history.location.search}`);
     },
-    shouldAsyncValidate: ({ trigger }) => {
-      return trigger === 'submit';
-    },
-    asyncValidate: async ({ name = '', value = '' }) => {
-      const isNameInvalid = name.length === 0;
-      const isValueInvalid = value.length === 0;
+    shouldAsyncValidate: ({ trigger }) => trigger === 'change',
+    handleAsyncValidate: async ({ name = '', value = '' }) => {
+      const isNameValid = /^[a-zA-Z_.-]{1,16}$/.test(name);
+      const isValueValid = /^[a-zA-Z_.-]{1,16}$/.test(value);
 
-      if (!isNameInvalid && !isValueInvalid) {
+      if (isNameValid && isValueValid) {
         return;
       }
 
       throw {
-        name: isNameInvalid,
-        value: isValueInvalid
+        name: isNameValid ? null : fieldError,
+        value: isValueValid ? null : fieldError
       };
     },
     handleAddTag: value => {

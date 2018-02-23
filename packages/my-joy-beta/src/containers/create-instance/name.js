@@ -18,6 +18,7 @@ import GetInstance from '@graphql/get-instance-small.gql';
 import GetRandomName from '@graphql/get-random-name.gql';
 import { client } from '@state/store';
 import parseError from '@state/parse-error';
+import { fieldError } from '@root/constants';
 
 const FORM_NAME = 'create-instance-name';
 
@@ -113,21 +114,21 @@ export default compose(
       };
     },
     (dispatch, { history, query }) => ({
-      shouldAsyncValidate: ({ trigger }) => trigger === 'submit',
+      shouldAsyncValidate: ({ trigger }) => trigger === 'change',
       handleAsyncValidation: async ({ name }) => {
         const sanitized = punycode.encode(name).replace(/-$/, '');
 
         if (sanitized !== name) {
           // eslint-disable-next-line no-throw-literal
           throw {
-            name: 'Special characters are not accepted'
+            name: fieldError
           };
         }
 
         if (!/^[a-zA-Z0-9][a-zA-Z0-9\\_\\.\\-]*$/.test(name)) {
           // eslint-disable-next-line no-throw-literal
           throw {
-            name: 'Invalid name'
+            name: fieldError
           };
         }
 

@@ -34,6 +34,7 @@ import ToolbarForm from '@components/instances/toolbar';
 import SnapshotsListActions from '@components/instances/footer';
 import parseError from '@state/parse-error';
 import Confirm from '@state/confirm';
+import { fieldError } from '@root/constants';
 
 const MENU_FORM_NAME = 'snapshot-list-menu';
 const TABLE_FORM_NAME = 'snapshot-list-table';
@@ -56,7 +57,9 @@ const Snapshots = ({
   sortBy,
   toggleSelectAll,
   toggleCreateSnapshotOpen,
-  createSnapshotOpen
+  createSnapshotOpen,
+  shouldAsyncValidate,
+  handleAsyncValidate
 }) => {
   const _values = forceArray(snapshots);
   const _loading = !_values.length && loading ? <StatusLoader /> : null;
@@ -80,13 +83,20 @@ const Snapshots = ({
   const _createSnapshot =
     !loading && createSnapshotOpen ? (
       <Margin bottom={4}>
-        <ReduxForm form={CREATE_FORM_NAME} onSubmit={handleCreateSnapshot}>
-          {props => (
-            <SnapshotAddForm
-              {...props}
-              onCancel={() => toggleCreateSnapshotOpen(false)}
-            />
-          )}
+        <ReduxForm
+          form={CREATE_FORM_NAME}
+          shouldAsyncValidate={shouldAsyncValidate}
+          asyncValidate={handleAsyncValidate}
+          onSubmit={handleCreateSnapshot}
+        >
+          {props => {
+            return (
+              <SnapshotAddForm
+                {...props}
+                onCancel={() => toggleCreateSnapshotOpen(false)}
+              />
+            );
+          }}
         </ReduxForm>
       </Margin>
     ) : null;
@@ -255,6 +265,18 @@ export default compose(
               value: newSortBy
             })
           ]);
+        },
+        shouldAsyncValidate: ({ trigger }) => trigger === 'change',
+        handleAsyncValidate: async ({ name }) => {
+          const isNameValid = /^[a-zA-Z_.-]{1,16}$/.test(name);
+
+          if (isNameValid) {
+            return;
+          }
+
+          throw {
+            name: fieldError
+          };
         },
         toggleCreateSnapshotOpen: value =>
           dispatch(

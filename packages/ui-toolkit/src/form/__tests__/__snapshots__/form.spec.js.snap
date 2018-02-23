@@ -246,6 +246,7 @@ exports[`Form FormMeta 1`] = `
   -webkit-text-fill-color: currentcolor;
   font-size: 0.8125rem;
   float: none;
+  width: 18.75rem;
 }
 
 .c1 {
@@ -261,6 +262,7 @@ exports[`Form FormMeta 1`] = `
   -webkit-text-fill-color: currentcolor;
   font-size: 0.8125rem;
   float: none;
+  width: 18.75rem;
 }
 
 .c2 {
@@ -276,6 +278,7 @@ exports[`Form FormMeta 1`] = `
   -webkit-text-fill-color: currentcolor;
   font-size: 0.8125rem;
   float: none;
+  width: 18.75rem;
 }
 
 <div>
@@ -308,8 +311,6 @@ exports[`Form Input 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -317,6 +318,13 @@ exports[`Form Input 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c0:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -352,11 +360,6 @@ exports[`Form Input 1`] = `
 
 .c0:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c0:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 <input
@@ -603,8 +606,6 @@ exports[`Form Select 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -612,6 +613,13 @@ exports[`Form Select 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c2:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -647,11 +655,6 @@ exports[`Form Select 1`] = `
 
 .c2:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c2:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c1 {
@@ -707,8 +710,6 @@ exports[`Form Textarea 1`] = `
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -716,6 +717,13 @@ exports[`Form Textarea 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c1:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -751,11 +759,6 @@ exports[`Form Textarea 1`] = `
 
 .c1:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
-}
-
-.c1:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c0 {

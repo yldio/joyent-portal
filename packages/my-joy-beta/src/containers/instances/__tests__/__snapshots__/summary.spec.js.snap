@@ -1959,9 +1959,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -1969,6 +1966,14 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+}
+
+.c34:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -2020,11 +2025,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c34:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
-}
-
-.c34:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c33 {
@@ -4124,9 +4124,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
   color: rgba(73,73,73,1);
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -4134,6 +4131,14 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+}
+
+.c34:focus {
+  border-color: rgb(59,70,204);
   outline: 0;
 }
 
@@ -4185,11 +4190,6 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c34:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,1);
-}
-
-.c34:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
 }
 
 .c33 {
