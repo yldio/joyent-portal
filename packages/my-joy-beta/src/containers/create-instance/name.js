@@ -66,7 +66,7 @@ const NameContainer = ({
           />
         ) : name ? (
           <Margin top={3}>
-            <H3 bold>{name}</H3>
+            <H3>{name}</H3>
           </Margin>
         ) : null
       }

@@ -11,6 +11,10 @@ const StyledLabel = Label.extend`
   white-space: pre;
   font-size: ${remcalc(13)};
 
+  ${is('actionable')`
+   cursor: pointer;
+  `};
+
   ${is('disabled')`
     color:  ${props => props.theme.grey};
   `};

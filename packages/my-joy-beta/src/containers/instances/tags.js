@@ -10,6 +10,7 @@ import find from 'lodash.find';
 import get from 'lodash.get';
 import intercept from 'apr-intercept';
 import remcalc from 'remcalc';
+import Fuse from 'fuse.js';
 
 import {
   ViewContainer,
@@ -29,7 +30,6 @@ import ToolbarForm from '@components/instances/toolbar';
 import GetTags from '@graphql/list-tags.gql';
 import UpdateTags from '@graphql/update-tags.gql';
 import DeleteTag from '@graphql/delete-tag.gql';
-import Index from '@state/gen-index';
 import parseError from '@state/parse-error';
 import Confirm from '@state/confirm';
 
@@ -161,10 +161,14 @@ export default compose(
         ({ name = '' }) => !/^triton\.cns\./i.test(name)
       );
 
+      const index = new Fuse(tags, {
+        keys: tags.length ? Object.keys(tags[0]) : ['name']
+      });
+
       return {
         tags,
         instance,
-        index: Index(tags),
+        index,
         loading,
         error,
         refetch
@@ -176,9 +180,8 @@ export default compose(
       // get search value
       const filter = get(form, `${MENU_FORM_NAME}.values.filter`, false);
       // if user is searching something, get items that match that query
-      const filtered = filter
-        ? index.search(filter).map(({ ref }) => find(tags, ['id', ref]))
-        : tags;
+      // if user is searching something, get items that match that query
+      const filtered = filter ? index.search(filter) : tags;
 
       const addOpen = get(values, 'add-tags-open', false);
       const editingTagName = get(values, 'editing-tag', null);

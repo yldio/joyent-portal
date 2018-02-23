@@ -6,7 +6,6 @@ import { Margin } from 'styled-components-spacing';
 import Flex from 'styled-flex-component';
 import pascalCase from 'pascal-case';
 import titleCase from 'title-case';
-import includes from 'lodash.includes';
 import remcalc from 'remcalc';
 
 import {
@@ -37,7 +36,7 @@ const Version = styled(Select)`
 export const Preview = ({ name, version, isVm }) => (
   <Fragment>
     <Margin bottom={2} top={3}>
-      <H3 bold>
+      <H3>
         {name} - {version}
       </H3>
       <P>{isVm ? 'Hardware Virtual Machine' : 'Infrastructure Container'} </P>

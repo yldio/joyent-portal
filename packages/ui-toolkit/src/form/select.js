@@ -34,6 +34,7 @@ const SelectWrapper = styled.div`
     top: 50%;
     transform: translateY(-50%);
     right: ${remcalc(12)};
+    pointer-events: none;
   }
 
   ${is('embedded')`

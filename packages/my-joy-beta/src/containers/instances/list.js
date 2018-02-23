@@ -12,6 +12,7 @@ import find from 'lodash.find';
 import reverse from 'lodash.reverse';
 import sort from 'lodash.sortby';
 import remcalc from 'remcalc';
+import Fuse from 'fuse.js';
 
 import {
   ViewContainer,
@@ -28,7 +29,7 @@ import StartInstance from '@graphql/start-instance.gql';
 import RebootInstance from '@graphql/reboot-instance.gql';
 import RemoveInstance from '@graphql/remove-instance.gql';
 import ToolbarForm from '@components/instances/toolbar';
-import Index from '@state/gen-index';
+import Empty from '@components/empty';
 import parseError from '@state/parse-error';
 import Confirm from '@state/confirm';
 
@@ -37,7 +38,6 @@ import {
   Item as InstanceListItem
 } from '@components/instances/list';
 
-import Empty from '@components/empty';
 import InstanceListActions from '@components/instances/footer';
 
 const TABLE_FORM_NAME = 'instance-list-table';
@@ -58,7 +58,8 @@ export const List = ({
   toggleSelectAll,
   handleCreateImage,
   handleSortBy,
-  history
+  history,
+  filter
 }) => {
   const _instances = forceArray(instances);
 
@@ -106,11 +107,13 @@ export const List = ({
           sortOrder={sortOrder}
           toggleSelectAll={toggleSelectAll}
           onSortBy={handleSortBy}
+          noInstances={!_instances.length}
         >
-          {_instances.map(({ id, ...rest }) => (
+          {_instances.map(({ name, id, ...rest }) => (
             <InstanceListItem
               key={id}
               id={id}
+              name={name}
               {...rest}
               onCreateImage={() => handleCreateImage(rest)}
               onStart={() => handleStart([{ id }])}
@@ -127,9 +130,10 @@ export const List = ({
   const _empty =
     !loading && !_instances.length ? (
       <Empty>
-        You haven't created any instances yet, but they're really easy to set
-        up.<br />
-        Click above to get going.
+        {filter
+          ? 'You have no Images that match your query'
+          : `You haven't created any instances yet, but they're really easy to set up.
+        Click above to get going.`}
       </Empty>
     ) : null;
 
@@ -191,11 +195,15 @@ export default compose(
         }
       }));
 
+      const index = new Fuse(instances, {
+        keys: instances.length ? Object.keys(instances[0]) : ['name']
+      });
+
       return {
         instances,
         loading,
         error,
-        index: Index(instances),
+        index,
         refetch
       };
     }
@@ -215,9 +223,7 @@ export default compose(
       const sortOrder = get(values, 'instance-list-sort-order', 'asc');
 
       // if user is searching something, get items that match that query
-      const filtered = filter
-        ? index.search(filter).map(({ ref }) => find(instances, ['id', ref]))
-        : instances;
+      const filtered = filter ? index.search(filter) : instances;
 
       // from filtered instances, sort asc
       // set's mutating flag
@@ -259,7 +265,8 @@ export default compose(
         mutationError,
         index,
         sortOrder,
-        sortBy
+        sortBy,
+        filter
       };
     },
     (dispatch, { refetch, ...ownProps }) => ({

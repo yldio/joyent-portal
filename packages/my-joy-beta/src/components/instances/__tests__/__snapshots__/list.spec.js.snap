@@ -3308,6 +3308,34 @@ exports[`renders <Item /> without throwing 1`] = `
   padding: 0rem;
 }
 
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c14 {
   width: 0.75rem;
   height: 0.75rem;
@@ -3538,6 +3566,12 @@ exports[`renders <Item /> without throwing 1`] = `
   font-weight: 600;
 }
 
+.c20 {
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+}
+
 @media only screen and (min-width:47.9375rem) {
   .c15 {
     width: 10rem;
@@ -3665,24 +3699,28 @@ exports[`renders <Item /> without throwing 1`] = `
           onMouseLeave={undefined}
           tag="div"
         >
-          <svg
-            className=""
-            height="16"
-            innerRef={undefined}
-            style={
-              Object {
-                "transform": "rotate(0deg)",
-              }
-            }
-            viewBox="0 0 4 16"
-            width="4"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="c20 c21"
           >
-            <path
-              d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
-              fill="rgba(73, 73, 73, 1)"
-            />
-          </svg>
+            <svg
+              className=""
+              height="16"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(0deg)",
+                }
+              }
+              viewBox="0 0 4 16"
+              width="4"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
+                fill="rgba(73, 73, 73, 1)"
+              />
+            </svg>
+          </div>
         </div>
       </td>
     </tr>
@@ -3782,6 +3820,34 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
 
 .c17 {
   padding: 0rem;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c14 {
@@ -4014,6 +4080,12 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   font-weight: 600;
 }
 
+.c20 {
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+}
+
 @media only screen and (min-width:47.9375rem) {
   .c15 {
     width: 10rem;
@@ -4143,24 +4215,28 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
           onMouseLeave={undefined}
           tag="div"
         >
-          <svg
-            className=""
-            height="16"
-            innerRef={undefined}
-            style={
-              Object {
-                "transform": "rotate(0deg)",
-              }
-            }
-            viewBox="0 0 4 16"
-            width="4"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="c20 c21"
           >
-            <path
-              d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
-              fill="rgba(73, 73, 73, 1)"
-            />
-          </svg>
+            <svg
+              className=""
+              height="16"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(0deg)",
+                }
+              }
+              viewBox="0 0 4 16"
+              width="4"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
+                fill="rgba(73, 73, 73, 1)"
+              />
+            </svg>
+          </div>
         </div>
       </td>
     </tr>
@@ -4260,6 +4336,34 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
 
 .c17 {
   padding: 0rem;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c14 {
@@ -4492,6 +4596,12 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   font-weight: 600;
 }
 
+.c20 {
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+}
+
 @media only screen and (min-width:47.9375rem) {
   .c15 {
     width: 10rem;
@@ -4619,24 +4729,28 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
           onMouseLeave={undefined}
           tag="div"
         >
-          <svg
-            className=""
-            height="16"
-            innerRef={undefined}
-            style={
-              Object {
-                "transform": "rotate(0deg)",
-              }
-            }
-            viewBox="0 0 4 16"
-            width="4"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="c20 c21"
           >
-            <path
-              d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
-              fill="rgba(73, 73, 73, 1)"
-            />
-          </svg>
+            <svg
+              className=""
+              height="16"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(0deg)",
+                }
+              }
+              viewBox="0 0 4 16"
+              width="4"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
+                fill="rgba(73, 73, 73, 1)"
+              />
+            </svg>
+          </div>
         </div>
       </td>
     </tr>

@@ -43,7 +43,8 @@ const PackageContainer = ({
   handleResetFilters,
   handleSortBy,
   sortBy,
-  step
+  step,
+  selectPackage
 }) => (
   <Fragment>
     <Title
@@ -99,6 +100,7 @@ const PackageContainer = ({
             >
               {packages.map(({ id, ...pkg }) => (
                 <Package
+                  selectPackage={selectPackage}
                   key={id}
                   id={id}
                   selected={selected.id === id}
@@ -187,7 +189,7 @@ export default compose(
       );
 
       const vmSelected = get(form, 'create-instance-vms.values.vms', false);
-      const pkgSelected = get(form, `${FORM_NAME}.values.package`, null);
+      const pkgSelected = get(values, `package-selectected`, null);
       const selected = find(packages, ['id', pkgSelected]);
 
       const sorted = sortBy(packages, [_sortBy]);
@@ -217,7 +219,7 @@ export default compose(
         sortOrder: _sortOrder,
         packages: _sortOrder === 'asc' ? filtered : reverse(filtered),
         hasVms: vmSelected,
-        selected: find(packages, ['id', pkgSelected]),
+        selected,
         proceeded: proceeded || selected
       };
     },
@@ -228,6 +230,9 @@ export default compose(
         );
 
         return history.push(`/~create/tags${history.location.search}`);
+      },
+      selectPackage: id => {
+        dispatch(set({ name: 'package-selectected', value: id }));
       },
       handleEdit: () =>
         history.push(`/~create/package${history.location.search}`),

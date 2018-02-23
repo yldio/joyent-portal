@@ -590,6 +590,7 @@ exports[`Form Select 1`] = `
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   right: 0.75rem;
+  pointer-events: none;
 }
 
 .c2 {
@@ -835,6 +836,15 @@ exports[`Form Toggle 1`] = `
 
 .c2:checked + label:active {
   box-shadow: none;
+}
+
+.c2:checked + label {
+  background: rgb(250,250,250);
+  border: 0.0625rem solid rgb(216,216,216);
+}
+
+.c2:checked + label:after {
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
 .c3 {

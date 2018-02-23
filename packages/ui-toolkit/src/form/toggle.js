@@ -32,6 +32,17 @@ const Input = styled.input`
       }
     }
   }
+
+  ${is('disabled')`
+    &:checked + label {
+      background: ${props => props.theme.background};
+      border: ${remcalc(1)} solid ${props => props.theme.grey};
+
+      &:after {
+        box-shadow: 0 0 0 ${remcalc(1)} ${props => props.theme.grey};
+      }
+    }
+  `}
 `;
 
 const InputLabel = styled.label`
@@ -100,6 +111,7 @@ const InputLabel = styled.label`
           padding-right: 0;
         }
       }
+
       &:before {
         cursor: not-allowed;
       }

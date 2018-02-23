@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import titleCase from 'title-case';
 import { Link } from 'react-router-dom';
 import { Field } from 'redux-form';
+import Flex from 'styled-flex-component';
 
 import {
   Anchor,
@@ -47,6 +48,12 @@ const ItemAnchor = styled(Anchor)`
   text-decoration: none;
 `;
 
+const Actions = styled(Flex)`
+  width: ${remcalc(48)};
+  height: ${remcalc(48)};
+  min-width: ${remcalc(48)};
+`;
+
 export const Item = ({
   id = '',
   name,
@@ -58,7 +65,8 @@ export const Item = ({
   onStart,
   onStop,
   onReboot,
-  onRemove
+  onRemove,
+  onClick
 }) => (
   <TableTr>
     <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
@@ -91,7 +99,9 @@ export const Item = ({
       <PopoverContainer clickable>
         <TableTd padding="0" hasBorder="left">
           <PopoverTarget box>
-            <ActionsIcon />
+            <Actions alignCenter justifyCenter>
+              <ActionsIcon />
+            </Actions>
           </PopoverTarget>
           <Popover placement="bottom">
             <PopoverItem disabled={!allowedActions.start} onClick={onStart}>
@@ -135,7 +145,8 @@ export default ({
   allSelected = false,
   toggleSelectAll = () => null,
   onSortBy = () => null,
-  children
+  children,
+  noInstances
 }) => (
   <form>
     <Table>
@@ -145,7 +156,7 @@ export default ({
             <FormGroup paddingTop={remcalc(4)}>
               <Checkbox
                 checked={allSelected}
-                disabled={submitting}
+                disabled={submitting || noInstances}
                 onChange={toggleSelectAll}
                 noMargin
               />

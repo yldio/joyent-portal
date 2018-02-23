@@ -5675,6 +5675,15 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
   box-shadow: none;
 }
 
+.c4:checked + label {
+  background: rgb(250,250,250);
+  border: 0.0625rem solid rgb(216,216,216);
+}
+
+.c4:checked + label:after {
+  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+}
+
 .c5 {
   outline: 0;
   display: block;
