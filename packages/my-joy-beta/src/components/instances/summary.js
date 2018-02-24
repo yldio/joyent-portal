@@ -1,10 +1,11 @@
 import React from 'react';
+import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import styled, { withTheme } from 'styled-components';
 import { Margin, Padding } from 'styled-components-spacing';
-import remcalc from 'remcalc';
 import titleCase from 'title-case';
-import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
+import get from 'lodash.get';
+import remcalc from 'remcalc';
 
 import {
   Card,
@@ -293,12 +294,19 @@ export default withTheme(
                 text={`ssh root@${instance.primary_ip}`}
                 label="Login"
               />
-              {(instance.ips || []).map((ip, i) => (
+              {get(instance, 'ips.public', []).map((ip, i, ips) => (
                 <CopiableField
-                  key={i}
-                  noMargin={i === instance.ips.length - 1}
+                  key={`public-${i}`}
+                  label={`Public IP address ${ips.length > 1 ? i + 1 : ''}`}
                   text={ip}
-                  label={`IP address ${i + 1}`}
+                />
+              ))}
+              {get(instance, 'ips.private', []).map((ip, i, ips) => (
+                <CopiableField
+                  key={`private-${i}`}
+                  noMargin={i === ips.length - 1}
+                  label={`Private IP address ${ips.length > 1 ? i + 1 : ''}`}
+                  text={ip}
                 />
               ))}
             </Padding>

@@ -3,9 +3,12 @@ import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import { set } from 'react-redux-values';
 import { Margin } from 'styled-components-spacing';
-import find from 'lodash.find';
-import get from 'lodash.get';
 import intercept from 'apr-intercept';
+import find from 'lodash.find';
+import isArray from 'lodash.isarray';
+import some from 'lodash.some';
+import isInteger from 'lodash.isinteger';
+import get from 'lodash.get';
 
 import {
   ViewContainer,
@@ -77,6 +80,57 @@ export const Summary = ({
   );
 };
 
+// from https://github.com/natesilva/is-in-subnet
+const ipv4ToLong = ip => {
+  const octets = ip.split('.');
+
+  return (
+    ((parseInt(octets[0], 10) << 24) +
+      (parseInt(octets[1], 10) << 16) +
+      (parseInt(octets[2], 10) << 8) +
+      parseInt(octets[3], 10)) >>>
+    0
+  );
+};
+
+// from https://github.com/natesilva/is-in-subnet
+const isInSubnet = (address, subnetOrSubnets) => {
+  if (isArray(subnetOrSubnets)) {
+    return some(subnetOrSubnets, subnet => isInSubnet(address, subnet));
+  }
+
+  const subnet = subnetOrSubnets;
+
+  const [subnetAddress, prefixLengthString] = subnet.split('/');
+  const prefixLength = parseInt(prefixLengthString, 10);
+
+  if (!subnetAddress || !isInteger(prefixLength)) {
+    return;
+  }
+
+  if (prefixLength < 0 || prefixLength > 32) {
+    return;
+  }
+
+  // the next two lines throw if the addresses are not valid IPv4 addresses
+  const subnetLong = ipv4ToLong(subnetAddress);
+  const addressLong = ipv4ToLong(address);
+
+  if (prefixLength === 0) {
+    return true;
+  }
+
+  const subnetPrefix = subnetLong >> (32 - prefixLength);
+  const addressPrefix = addressLong >> (32 - prefixLength);
+
+  return subnetPrefix === addressPrefix;
+};
+
+// from https://github.com/natesilva/is-in-subnet
+const isPrivate = address => {
+  return isInSubnet(address, ['10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16']);
+};
+
 export default compose(
   graphql(StopInstance, { name: 'stop' }),
   graphql(StartInstance, { name: 'start' }),
@@ -90,11 +144,31 @@ export default compose(
         name: get(match, 'params.instance')
       }
     }),
-    props: ({ data: { loading, error, variables, ...rest } }) => ({
-      instance: find(get(rest, 'machines', []), ['name', variables.name]),
-      loading,
-      loadingError: error
-    })
+    props: ({ data: { loading, error, variables, ...rest } }) => {
+      let instance = find(get(rest, 'machines', []), ['name', variables.name]);
+
+      if (instance) {
+        const { ips } = instance;
+
+        const grupedIps = ips
+          .map(ip => ({ ip, openness: isPrivate(ip) ? 'private' : 'public' }))
+          .reduce(
+            (sum, { ip, openness }) =>
+              Object.assign(sum, {
+                [openness]: (sum[openness] || []).concat([ip])
+              }),
+            {}
+          );
+
+        instance = Object.assign({}, instance, { ips: grupedIps });
+      }
+
+      return {
+        instance,
+        loading,
+        loadingError: error
+      };
+    }
   }),
   connect(
     (state, ownProps) => {

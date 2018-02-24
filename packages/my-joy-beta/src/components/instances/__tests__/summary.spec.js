@@ -72,7 +72,10 @@ it('renders <Summary instance /> without throwing', () => {
     },
     // eslint-disable-next-line camelcase
     primary_ip: '72.2.119.146',
-    ips: ['72.2.119.146', '10.112.5.63'],
+    ips: {
+      public: ['72.2.119.146', '72.2.119.146'],
+      private: ['10.112.5.63', '10.112.5.63']
+    },
     package: {
       name: 'g4-highcpu-128M'
     },
@@ -99,7 +102,10 @@ it('renders <Summary instance /> without throwing', () => {
     },
     // eslint-disable-next-line camelcase
     primary_ip: '72.2.119.146',
-    ips: ['72.2.119.146', '10.112.5.63'],
+    ips: {
+      public: ['72.2.119.146', '72.2.119.146'],
+      private: ['10.112.5.63', '10.112.5.63']
+    },
     package: {
       name: 'g4-highcpu-128M'
     },
