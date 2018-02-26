@@ -57,9 +57,6 @@ export const Item = ({
         <TableTd xs="0" sm="160" middle left>
           {distanceInWordsToNow(created)}
         </TableTd>
-        <TableTd xs="0" sm="160" middle left>
-          {distanceInWordsToNow(updated)}
-        </TableTd>
         <PopoverContainer clickable>
           <TableTd padding="0" hasBorder="left">
             <PopoverTarget box>
@@ -73,8 +70,8 @@ export const Item = ({
         </PopoverContainer>
       </Fragment>
     ) : (
-      <TableTd colSpan="6">
-        <StatusLoader />
+      <TableTd colSpan="5">
+        <StatusLoader msg="Deleting" />
       </TableTd>
     )}
   </TableTr>
@@ -155,18 +152,6 @@ export default ({
             actionable
           >
             <span>Created </span>
-          </TableTh>
-          <TableTh
-            xs="0"
-            sm="160"
-            onClick={() => onSortBy('updated', sortOrder)}
-            sortOrder={sortOrder}
-            showSort={sortBy === 'updated'}
-            left
-            middle
-            actionable
-          >
-            <span>Updated </span>
           </TableTh>
           <TableTh xs="60" padding="0" />
         </TableTr>
