@@ -140,10 +140,8 @@ export default compose(
     }
   }),
   graphql(GetTags, {
-    options: () => ({
-      ssr: false
-    }),
     options: ({ match }) => ({
+      ssr: false,
       variables: {
         fetchPolicy: 'network-only',
         name: get(match, 'params.instance')

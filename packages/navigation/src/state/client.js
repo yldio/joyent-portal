@@ -8,7 +8,7 @@ import defaultState from './local';
 
 const {
   REACT_APP_GQL_PORT = window.location.port,
-  REACT_APP_GQL_PROTOCOL = window.location.protocol.replace(/\:$/, ''),
+  REACT_APP_GQL_PROTOCOL = window.location.protocol.replace(/:$/, ''),
   REACT_APP_GQL_HOSTNAME = window.location.hostname
 } = process.env;
 
