@@ -177,7 +177,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   margin: 0;
 }
 
-.c13 {
+.c12 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -224,16 +224,6 @@ exports[`renders <Networks error /> without throwing 1`] = `
   display: block;
 }
 
-.c8 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
 .c6 {
   color: rgba(73,73,73,1);
   font-weight: normal;
@@ -255,7 +245,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   margin-top: 1.5rem;
 }
 
-.c12 {
+.c11 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -263,7 +253,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   margin: 0;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -276,30 +266,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   width: 100%;
 }
 
-.c9:before,
-.c9:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.c9:before {
-  top: -0.4375rem;
-  right: 1.0625rem;
-  border-width: 0 0.34375rem 0.4375rem 0.34375rem;
-  border-color: transparent transparent rgb(216,216,216) transparent;
-}
-
-.c9:after {
-  top: -0.375rem;
-  right: 1.125rem;
-  border-width: 0 0.28125rem 0.375rem 0.28125rem;
-  border-color: transparent transparent rgb(255,255,255) transparent;
-}
-
-.c10 {
+.c9 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
@@ -308,7 +275,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   background-color: rgb(210,67,58);
 }
 
-.c11 {
+.c10 {
   padding: 1.125rem 1.125rem;
 }
 
@@ -355,24 +322,6 @@ exports[`renders <Networks error /> without throwing 1`] = `
   }
 }
 
-@media only screen and (min-width:48em) {
-  .c8 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c8 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-  }
-}
-
 <div
   className="c0"
 >
@@ -413,32 +362,24 @@ exports[`renders <Networks error /> without throwing 1`] = `
     className="c7"
   >
     <div
-      className="c2"
+      className="c8"
     >
       <div
-        className="c8"
+        className="c9"
+      />
+      <div
+        className="c10"
       >
-        <div
-          className="c9"
+        <h4
+          className="c11"
         >
-          <div
-            className="c10"
-          />
-          <div
-            className="c11"
-          >
-            <h4
-              className="c12"
-            >
-              Ooops!
-            </h4>
-            <p
-              className="c13"
-            >
-              An error occurred while loading your networks
-            </p>
-          </div>
-        </div>
+          Ooops!
+        </h4>
+        <p
+          className="c12"
+        >
+          An error occurred while loading your networks
+        </p>
       </div>
     </div>
   </div>
