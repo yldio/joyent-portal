@@ -373,7 +373,7 @@ export default compose(
           // sets the individual item mutation flags so that we can show a
           // spinner in the row
           const setMutatingTrue = selected.map(({ id }) =>
-            set({ name: `${id}-mutating`, value: true })
+            set({ name: `${id}-mutating`, value: name })
           );
 
           // wait for everything to finish and catch the error
