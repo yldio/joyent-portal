@@ -21,7 +21,6 @@ import {
   Card
 } from 'joyent-ui-toolkit';
 
-
 const Version = styled(Select)`
   min-width: 100%;
   width: ${remcalc(144)};

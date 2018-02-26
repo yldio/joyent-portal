@@ -10,7 +10,7 @@ const { default: createStore } = require('./state/redux-store');
 const indexFile = path.join(__dirname, '../../build/index.html');
 
 const getState = request => {
-  const { req, res } = request.raw;
+  const { req } = request.raw;
 
   const _font = get(theme, 'font.href', () => '');
   const _mono = get(theme, 'monoFont.href', () => '');

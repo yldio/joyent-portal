@@ -142,7 +142,9 @@ export default withTheme(
                     small
                     icon
                   >
-                    <Padding top={0.5}><InstanceTypeIcon /></Padding>
+                    <Padding top={0.5}>
+                      <InstanceTypeIcon />
+                    </Padding>
                   </Button>
                   <SmallOnly>
                     <Button
