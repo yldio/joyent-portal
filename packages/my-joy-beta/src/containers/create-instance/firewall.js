@@ -95,7 +95,9 @@ const Firewall = ({
     !defaultRules.length &&
     !tagRules.length ? (
       <Margin top={4}>
-        <Empty>Sorry, but we weren’t able to find any firewall rules.</Empty>
+        <Empty borderTop>
+          Sorry, but we weren’t able to find any firewall rules.
+        </Empty>
       </Margin>
     ) : null}
     {!loading && expanded && enabled && defaultRules.length ? (

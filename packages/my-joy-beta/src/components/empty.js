@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Margin, Padding } from 'styled-components-spacing';
 import Flex from 'styled-flex-component';
+import { isNot } from 'styled-is';
+import remcalc from 'remcalc';
 
 import { H3, Card } from 'joyent-ui-toolkit';
 import { NoPackages } from 'joyent-logo-assets';
@@ -12,12 +14,15 @@ const NoPackagesTitle = styled(H3)`
 `;
 
 const FullWidthCard = styled(Card)`
-  width: calc(100% - 2px);
-  border-top: none;
+  width: calc(100% - ${remcalc(2)});
+
+  ${isNot('borderTop')`
+    border-top: none;
+  `};
 `;
 
-export default ({ children }) => (
-  <FullWidthCard>
+export default ({ children, ...rest }) => (
+  <FullWidthCard {...rest}>
     <Padding all={6}>
       <Flex alignCenter justifyCenter column>
         <Margin bottom={2}>
