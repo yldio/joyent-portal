@@ -4,7 +4,6 @@ import get from 'lodash.get';
 
 import {
   PageContainer,
-  RootContainer,
   ViewContainer,
   Message,
   MessageDescription,

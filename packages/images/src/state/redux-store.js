@@ -2,7 +2,6 @@ import { reduxBatch } from '@manaflair/redux-batch';
 import { createStore, combineReducers, compose } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 import { reducer as valuesReducer } from 'react-redux-values';
-import paramCase from 'param-case';
 import global from './global';
 
 const initialState = {};
