@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import styled from 'styled-components';
 import { Margin } from 'styled-components-spacing';
 import Flex from 'styled-flex-component';
 import { Field } from 'redux-form';
@@ -11,6 +12,10 @@ const style = {
   lineHeight: '48px',
   fontSize: '18px'
 };
+
+const Bold = styled.span`
+  font-weight: ${props => props.theme.font.weight.semibold};
+`;
 
 const Values = touched => (
   <Margin right={1}>
@@ -127,7 +132,7 @@ export const Rule = rule => (
 
 export const Header = rule => (
   <Fragment>
-    <b>{titleCase(rule['rule-instance-conditional'])}:</b> be on a{' '}
+    <Bold>{titleCase(rule['rule-instance-conditional'])}:</Bold> be on a{' '}
     {rule['rule-instance-placement']} node as the instance(s) identified by the
     instance {rule['rule-type']}
     {rule['rule-type'] === 'name' ? (
