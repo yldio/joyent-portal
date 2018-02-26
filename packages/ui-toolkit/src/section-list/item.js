@@ -30,7 +30,7 @@ export const Anchor = Baseline(styled(BaseAnchor)`
   color: ${props => props.theme.secondary};
   text-decoration: none;
   cursor: pointer;
-  padding: 0 ${remcalc(6)};
+  padding: 0 ${remcalc(12)};
   padding-bottom: ${remcalc(16)};
   position: relative;
 

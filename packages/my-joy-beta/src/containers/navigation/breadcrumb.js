@@ -4,6 +4,7 @@ import get from 'lodash.get';
 import { Link } from 'react-router-dom';
 
 import { Breadcrumb, BreadcrumbItem } from 'joyent-ui-toolkit';
+import { Row } from 'joyent-react-styled-flexboxgrid';
 
 export default ({ match }) => {
   const instance = get(match, 'params.instance');

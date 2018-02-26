@@ -119,7 +119,7 @@ export default compose(
   connect(
     ({ form, values }, ownProps) => {
       const proceeded = get(values, 'create-instance-image-proceeded', false);
-      const vms = get(values, 'vms', true);
+      const vms = get(values, 'vms', false);
       const image = get(form, 'create-instance-image.values.image', null);
 
       return {

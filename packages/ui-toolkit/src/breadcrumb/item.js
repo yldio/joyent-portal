@@ -18,6 +18,13 @@ const Container = styled.div`
   display: inline-flex;
   align-items: center;
 
+  &:first-child {
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
   &:last-child {
     svg {
       display: none;
@@ -28,13 +35,9 @@ const Container = styled.div`
 const BaseLink = styled(({ component, children, ...rest }) =>
   React.createElement(component, rest, children)
 )`
-  text-decoration: none;
   cursor: pointer;
   font-weight: ${props => props.theme.font.weight.normal};
-
-  &:visited {
-    color: inherit;
-  }
+  color: ${props => props.theme.primary};
 `;
 
 export default withTheme(({ children, component, theme, ...rest }) => {
