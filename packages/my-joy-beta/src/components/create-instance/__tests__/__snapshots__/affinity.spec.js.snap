@@ -2,10 +2,16 @@
 
 exports[`renders <Header /> without throwing 1`] = `
 Array [
-  <b>
+  .c0 {
+  font-weight: 600;
+}
+
+<span
+    className="c0"
+>
     
     :
-</b>,
+</span>,
   " be on a",
   " ",
   " node as the instance(s) identified by the instance ",
@@ -21,10 +27,16 @@ Array [
 
 exports[`renders <Header tag/> without throwing 1`] = `
 Array [
-  <b>
+  .c0 {
+  font-weight: 600;
+}
+
+<span
+    className="c0"
+>
     
     :
-</b>,
+</span>,
   " be on a",
   " ",
   " node as the instance(s) identified by the instance ",

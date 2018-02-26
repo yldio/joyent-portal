@@ -1,86 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer Footer 1`] = `
-.c1 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
+exports[`renders <Footer/> without throwing 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  background-color: rgba(241,241,241,1);
+  list-style: none;
+  padding: 0.75rem 1.125rem;
   border-top: 0.0625rem solid rgb(216,216,216);
-  max-height: 3.3125rem;
-  min-height: 3.3125rem;
-  line-height: 1.5625rem;
-  height: 4.375rem;
-  max-height: 4.375rem;
-  z-index: 1;
+  width: 100%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  bottom: 0;
 }
 
-@media only screen and (min-width:48em) {
-  .c1 {
-    width: 46rem;
-  }
+.c1 {
+  color: rgb(151,151,151);
 }
 
-@media only screen and (min-width:64em) {
-  .c1 {
-    width: 56rem;
-  }
+.c1:not(:last-child) {
+  padding-right: 1.5rem;
 }
 
-@media only screen and (min-width:75em) {
-  .c1 {
-    width: 59rem;
-  }
+.c2 {
+  color: rgb(151,151,151);
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
-@media only screen and (max-width:47.9375rem) {
-  .c1 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
+.c3 {
+  font-weight: 600;
 }
 
-<div
+<ul
   className="c0"
 >
-  <div
+  <li
     className="c1"
-  />
-</div>
+  >
+    <a
+      className="c2"
+      href="https://www.joyent.com/about/policies"
+      rel="noopener noreferrer"
+      target="__blank"
+    >
+      Policies
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="https://www.joyent.com/networking-and-security/security-compliance"
+      rel="noopener noreferrer"
+      target="__blank"
+    >
+      Compliance
+    </a>
+  </li>
+  <li
+    className="c1"
+  >
+    <span
+      className="c3"
+    >
+      © 
+      2018
+       Joyent, Inc.
+    </span>
+  </li>
+</ul>
 `;
