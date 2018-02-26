@@ -138,9 +138,11 @@ export default withTheme(
                     target="__blank"
                     rel="noopener noreferrer"
                     secondary
+                    bold
                     small
+                    icon
                   >
-                    <InstanceTypeIcon />
+                    <Padding top={0.5}><InstanceTypeIcon /></Padding>
                   </Button>
                   <SmallOnly>
                     <Button
