@@ -177,7 +177,7 @@ const BaseTh = styled.th`
 
   ${isOr('selected', 'showSort')`
     color: ${props => props.theme.text};
-    font-weight: bold;
+    font-weight: ${props => props.theme.font.weight.semibold};
   `};
 
   &:not(:first-child) {
@@ -205,7 +205,7 @@ const BaseTd = styled.td`
   }
 
   ${is('bold')`
-    font-weight: bold
+    font-weight: ${props => props.theme.font.weight.semibold};
   `};
 
   ${is('selected')`

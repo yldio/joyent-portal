@@ -1,47 +1,62 @@
 import React from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
-import is from 'styled-is';
 
-import Baseline from '../baseline';
-import { ViewContainer } from '../layout';
+import StickyFooter from './StickyFooter';
 
-const Container = ViewContainer.extend`
+const List = styled.ul`
   display: flex;
-  flex-wrap: nowrap;
-  align-content: stretch;
-  align-items: stretch;
-`;
-
-const Footer = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: stretch;
-  align-items: stretch;
-  background-color: rgba(241, 241, 241, 1);
+  list-style: none;
+  padding: ${remcalc(12)} ${remcalc(18)};
   border-top: ${remcalc(1)} solid ${props => props.theme.grey};
-  max-height: ${remcalc(53)};
-  min-height: ${remcalc(53)};
-  line-height: ${remcalc(25)};
-
-  height: ${remcalc(70)};
-  max-height: ${remcalc(70)};
-  z-index: 1;
-
-  ${is('fixed')`
-    position: fixed;
-    left: 0;
-    right: 0;
-  `};
-
-  ${is('bottom', 'fixed')`
-    bottom: 0;
-  `};
+  width: 100%;
+  justify-content: flex-end;
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  bottom: 0;
 `;
 
-export default Baseline(({ children, fluid, ...rest }) => (
-  <Footer {...rest}>
-    <Container fluid={fluid}>{children}</Container>
-  </Footer>
-));
+const ListItem = styled.li`
+  color: ${props => props.theme.greyDark};
+  &:not(:last-child) {
+    padding-right: ${remcalc(24)};
+  }
+`;
+
+const Link = styled.a`
+  color: ${props => props.theme.greyDark};
+  text-decoration: none;
+`;
+
+const Brand = styled.span`
+  font-weight: ${props => props.theme.font.weight.semibold};
+`;
+
+export default () => (
+  <List>
+    <ListItem>
+      <Link
+        href="https://www.joyent.com/about/policies"
+        target="__blank"
+        rel="noopener noreferrer"
+      >
+        Policies
+      </Link>
+    </ListItem>
+    <ListItem>
+      <Link
+        href="https://www.joyent.com/networking-and-security/security-compliance"
+        target="__blank"
+        rel="noopener noreferrer"
+      >
+        Compliance
+      </Link>
+    </ListItem>
+    <ListItem>
+      <Brand>© {new Date().getFullYear()} Joyent, Inc.</Brand>
+    </ListItem>
+  </List>
+);
+
+export { default as StickyFooter } from './StickyFooter';

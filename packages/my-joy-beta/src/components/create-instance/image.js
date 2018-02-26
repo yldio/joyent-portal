@@ -3,11 +3,9 @@ import styled from 'styled-components';
 import { Field } from 'redux-form';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Margin } from 'styled-components-spacing';
-import Flex from 'styled-flex-component';
 import pascalCase from 'pascal-case';
 import titleCase from 'title-case';
 import remcalc from 'remcalc';
-import format from 'date-fns/format';
 
 import * as Assets from 'joyent-logo-assets';
 
@@ -15,11 +13,9 @@ import {
   H3,
   P,
   FormGroup,
-  FormLabel,
   SectionList,
   SectionListItem,
   SectionListAnchor,
-  Anchor,
   H4,
   Select,
   Card

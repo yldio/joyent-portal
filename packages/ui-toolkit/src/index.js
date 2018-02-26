@@ -11,7 +11,7 @@ export { default as Strong } from './text/strong';
 export { default as Sup } from './text/sup';
 export { default as theme } from './theme';
 export { default as Divider } from './divider';
-export { default as Footer } from './footer';
+export { default as Footer, StickyFooter } from './footer';
 export { default as KeyValue } from './key-value';
 export { default as StatusLoader } from './status-loader';
 

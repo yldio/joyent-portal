@@ -47,6 +47,10 @@ const Meta = styled(CardHeaderMeta)`
   max-width: 98%;
 `;
 
+const Bold = styled.span`
+   font-weight: ${props => props.theme.font.weight.semibold};
+`;
+
 class ValueTextareaField extends PureComponent {
   render() {
     const { input = {}, submitting, editor } = this.props;
@@ -58,8 +62,7 @@ class ValueTextareaField extends PureComponent {
           React.createElement(editor, {
             ...props,
             mode: 'sh'
-          })
-        }
+          })}
       />
     ) : (
       <Textarea monospace resize="vertical" disabled={submitting} fluid />
@@ -209,13 +212,13 @@ export const KeyValue = ({
                   {initialValues.name ? (
                     <Fragment>
                       {expanded ? (
-                        <span>{`${initialValues.name}${
-                          type === 'metadata' ? '—' : ':'
-                        }`}</span>
+                        <span>{`${initialValues.name}${type === 'metadata'
+                          ? '—'
+                          : ':'}`}</span>
                       ) : (
-                        <b>{`${initialValues.name}${
-                          type === 'metadata' ? '—' : ':'
-                        }`}</b>
+                        <Bold>{`${initialValues.name}${type === 'metadata'
+                          ? '—'
+                          : ':'}`}</Bold>
                       )}
                       <span>{initialValues.value}</span>
                     </Fragment>

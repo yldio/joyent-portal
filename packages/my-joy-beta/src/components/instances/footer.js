@@ -4,7 +4,7 @@ import { withTheme } from 'styled-components';
 
 import {
   Button,
-  Footer,
+  StickyFooter,
   QueryBreakpoints,
   StartIcon,
   StopIcon,
@@ -25,7 +25,7 @@ export default withTheme(
     onRemove,
     theme = {}
   }) => (
-    <Footer fixed bottom>
+    <StickyFooter fixed bottom>
       <Row between="xs" middle="xs">
         <Col xs={7}>
           {onStart && [
@@ -162,6 +162,6 @@ export default withTheme(
           </Col>
         )}
       </Row>
-    </Footer>
+    </StickyFooter>
   )
 );

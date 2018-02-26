@@ -7,7 +7,8 @@ import {
   ViewContainer,
   Message,
   MessageDescription,
-  MessageTitle
+  MessageTitle,
+  Footer
 } from 'joyent-ui-toolkit';
 
 import Breadcrumb from '@containers/breadcrumb';
@@ -16,7 +17,6 @@ import List from '@containers/list';
 import Summary from '@containers/summary';
 import Create from '@containers/create';
 import Tags from '@containers/tags';
-import Footer from '@components/footer';
 import { Route as ServerError } from '@root/server-error';
 
 export default () => (
