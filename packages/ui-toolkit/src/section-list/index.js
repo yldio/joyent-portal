@@ -7,13 +7,12 @@ import Baseline from '../baseline';
 const UnorderedList = styled.ul`
   background: ${props => props.theme.disabled};
   list-style-type: none;
-  padding: ${remcalc(13)} ${remcalc(12)};
+  padding: ${remcalc(13)} ${remcalc(0)};
   margin: ${remcalc(18)} 0 0 0;
-  min-width: 100%;
   max-height: 50px;
   overflow-x: scroll;
   box-sizing: border-box;
-  display: flex;
+  display: inline-flex;
   position: relative;
 
   &:after {

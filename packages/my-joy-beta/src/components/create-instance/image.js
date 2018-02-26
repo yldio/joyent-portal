@@ -7,19 +7,24 @@ import Flex from 'styled-flex-component';
 import pascalCase from 'pascal-case';
 import titleCase from 'title-case';
 import remcalc from 'remcalc';
+import format from 'date-fns/format';
+
+import * as Assets from 'joyent-logo-assets';
 
 import {
   H3,
   P,
   FormGroup,
   FormLabel,
-  Toggle,
+  SectionList,
+  SectionListItem,
+  SectionListAnchor,
+  Anchor,
   H4,
   Select,
   Card
 } from 'joyent-ui-toolkit';
 
-import * as Assets from 'joyent-logo-assets';
 
 const Version = styled(Select)`
   min-width: 100%;
@@ -82,17 +87,21 @@ const Image = ({ onClick, active, ...image }) => {
   );
 };
 
-export const ImageType = () => (
-  <form>
-    <Margin bottom={4}>
-      <FormGroup name="vms" field={Field}>
-        <Flex alignCenter>
-          <FormLabel>Infrastructure Container </FormLabel>
-          <Toggle onBlur={null}>Hardware Virtual Machine</Toggle>
-        </Flex>
-      </FormGroup>
-    </Margin>
-  </form>
+export const ImageType = ({ setImageType, vms }) => (
+  <Margin bottom={4}>
+    <SectionList>
+      <SectionListItem>
+        <SectionListAnchor active={!vms} onClick={() => setImageType(false)}>
+          Hardware virtual machine
+        </SectionListAnchor>
+      </SectionListItem>
+      <SectionListItem>
+        <SectionListAnchor active={vms} onClick={() => setImageType(true)}>
+          Infrastructure container
+        </SectionListAnchor>
+      </SectionListItem>
+    </SectionList>
+  </Margin>
 );
 
 export default ({ images = [], onSelectLatest }) => (

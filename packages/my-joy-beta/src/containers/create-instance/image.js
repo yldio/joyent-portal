@@ -42,7 +42,8 @@ const ImageContainer = ({
   loading,
   images,
   vms,
-  step
+  step,
+  setImageType
 }) =>
   queryImage ? (
     <Fragment>
@@ -73,14 +74,6 @@ const ImageContainer = ({
         </Description>
       ) : null}
       <ReduxForm
-        form="create-instance-vms"
-        destroyOnUnmount={false}
-        forceUnregisterOnUnmount={true}
-        initialValues={{ vms: true }}
-      >
-        {props => (loading || !expanded ? null : <ImageType {...props} />)}
-      </ReduxForm>
-      <ReduxForm
         form="create-instance-image"
         destroyOnUnmount={false}
         forceUnregisterOnUnmount={true}
@@ -90,15 +83,17 @@ const ImageContainer = ({
           loading && expanded ? (
             <StatusLoader />
           ) : expanded ? (
-            <Image
-              {...props}
-              images={images.filter(i => i.isVm === vms)}
-              onSelectLatest={handleSelectLatest}
-            />
+            <Fragment>
+              <ImageType setImageType={setImageType} vms={vms} />
+              <Image
+                {...props}
+                images={images.filter(i => i.isVm === vms)}
+                onSelectLatest={handleSelectLatest}
+              />
+            </Fragment>
           ) : image.id ? (
             <Preview {...image} />
-          ) : null
-        }
+          ) : null}
       </ReduxForm>
       {expanded ? (
         <Margin top={1} bottom={7}>
@@ -124,8 +119,8 @@ export default compose(
   connect(
     ({ form, values }, ownProps) => {
       const proceeded = get(values, 'create-instance-image-proceeded', false);
-      const vms = get(form, 'create-instance-vms.values.vms', false);
       const image = get(form, 'create-instance-image.values.image', null);
+      const vms = get(values, 'vms', false);
 
       return {
         ...ownProps,
@@ -145,6 +140,9 @@ export default compose(
       handleSelectLatest: ({ versions }) => {
         const id = versions[0].id;
         return dispatch(change('create-instance-image', 'image', id));
+      },
+      setImageType: value => {
+        return dispatch(set({ name: 'vms', value }));
       }
     })
   ),

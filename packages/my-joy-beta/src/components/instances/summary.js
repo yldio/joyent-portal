@@ -139,7 +139,6 @@ export default withTheme(
                     rel="noopener noreferrer"
                     secondary
                     small
-                    icon
                   >
                     <InstanceTypeIcon />
                   </Button>
