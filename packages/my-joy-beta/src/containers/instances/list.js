@@ -152,7 +152,7 @@ export const List = ({
 
   return (
     <ViewContainer main>
-      <Divider height={remcalc(30)} transparent />
+      <Divider height={remcalc(24)} transparent />
       <ReduxForm form={MENU_FORM_NAME}>
         {props => (
           <ToolbarForm

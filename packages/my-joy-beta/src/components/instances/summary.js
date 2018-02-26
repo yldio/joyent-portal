@@ -139,9 +139,8 @@ export default withTheme(
                     rel="noopener noreferrer"
                     secondary
                     small
-                    icon
                   >
-                    <InstanceTypeIcon />
+                    <Padding top={0.5}><InstanceTypeIcon /></Padding>
                   </Button>
                   <SmallOnly>
                     <Button

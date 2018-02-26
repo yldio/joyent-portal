@@ -228,7 +228,7 @@ const Button = styled(BaseButton)`
   `};
 
   ${is('small')`
-    padding: ${remcalc(9)} ${remcalc(18)};
+    padding: ${remcalc(10)} ${remcalc(18)};
     font-size: ${remcalc(13)};
     min-width: ${remcalc(0)};
     min-height: ${remcalc(0)};
