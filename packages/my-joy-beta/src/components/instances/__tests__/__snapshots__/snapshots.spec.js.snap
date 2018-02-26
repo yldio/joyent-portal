@@ -468,17 +468,6 @@ Array [
                 </span>
             </th>
             <th
-                className="c14"
-                disabled={undefined}
-                name="th"
-                onClick={[Function]}
-                selected={undefined}
-            >
-                <span>
-                    Updated 
-                </span>
-            </th>
-            <th
                 className="c15 c16"
                 disabled={undefined}
                 name="th"
@@ -1176,14 +1165,6 @@ exports[`renders <Item /> without throwing 1`] = `
     almost NaN years
   </td>
   <td
-    className="c10"
-    disabled={undefined}
-    name="td"
-    selected={undefined}
-  >
-    almost NaN years
-  </td>
-  <td
     className="c11 c12"
     disabled={undefined}
     name="td"
@@ -1565,14 +1546,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
     3 months
   </td>
   <td
-    className="c10"
-    disabled={undefined}
-    name="td"
-    selected={undefined}
-  >
-    3 months
-  </td>
-  <td
     className="c11 c12"
     disabled={undefined}
     name="td"
@@ -1745,7 +1718,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
     >
       <td
         className="c3"
-        colSpan="6"
+        colSpan="5"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -1782,7 +1755,57 @@ exports[`renders <Item mutating /> without throwing 1`] = `
           <p
             className="c8"
           >
-            Loading...
+            Starting...
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="c2"
+      disabled={undefined}
+      name="tr"
+      selected={undefined}
+    >
+      <td
+        className="c3"
+        colSpan="5"
+        disabled={undefined}
+        name="td"
+        selected={undefined}
+      >
+        <div
+          className="c4"
+        >
+          <svg
+            height="10"
+            width="28"
+          >
+            <rect
+              className="c5"
+              height="6"
+              width="6"
+              x="2"
+              y="2"
+            />
+            <rect
+              className="c6"
+              height="6"
+              width="6"
+              x="11"
+              y="2"
+            />
+            <rect
+              className="c7"
+              height="6"
+              width="6"
+              x="20"
+              y="2"
+            />
+          </svg>
+          <p
+            className="c8"
+          >
+            Removing...
           </p>
         </div>
       </td>
@@ -2256,17 +2279,6 @@ Array [
             >
                 <span>
                     Created 
-                </span>
-            </th>
-            <th
-                className="c14"
-                disabled={undefined}
-                name="th"
-                onClick={[Function]}
-                selected={undefined}
-            >
-                <span>
-                    Updated 
                 </span>
             </th>
             <th
@@ -3092,17 +3104,6 @@ Array [
                 </span>
             </th>
             <th
-                className="c14"
-                disabled={undefined}
-                name="th"
-                onClick={[Function]}
-                selected={undefined}
-            >
-                <span>
-                    Updated 
-                </span>
-            </th>
-            <th
                 className="c15 c16"
                 disabled={undefined}
                 name="th"
@@ -3922,17 +3923,6 @@ Array [
             >
                 <span>
                     Created 
-                </span>
-            </th>
-            <th
-                className="c14"
-                disabled={undefined}
-                name="th"
-                onClick={[Function]}
-                selected={undefined}
-            >
-                <span>
-                    Updated 
                 </span>
             </th>
             <th
@@ -4758,17 +4748,6 @@ Array [
                 </span>
             </th>
             <th
-                className="c14"
-                disabled={undefined}
-                name="th"
-                onClick={[Function]}
-                selected={undefined}
-            >
-                <span>
-                    Updated 
-                </span>
-            </th>
-            <th
                 className="c15 c16"
                 disabled={undefined}
                 name="th"
@@ -5588,17 +5567,6 @@ Array [
             >
                 <span>
                     Created 
-                </span>
-            </th>
-            <th
-                className="c14"
-                disabled={undefined}
-                name="th"
-                onClick={[Function]}
-                selected={undefined}
-            >
-                <span>
-                    Updated 
                 </span>
             </th>
             <th

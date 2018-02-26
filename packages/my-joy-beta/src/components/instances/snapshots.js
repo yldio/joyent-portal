@@ -30,6 +30,11 @@ const stateColor = {
   CREATED: 'green'
 };
 
+const loadingState = {
+  start: 'Starting...',
+  remove: 'Removing...'
+};
+
 export const Item = ({
   name,
   state,
@@ -73,8 +78,8 @@ export const Item = ({
         </PopoverContainer>
       </Fragment>
     ) : (
-      <TableTd colSpan="6">
-        <StatusLoader />
+      <TableTd colSpan="5">
+        <StatusLoader msg={loadingState[mutating]} />
       </TableTd>
     )}
   </TableTr>

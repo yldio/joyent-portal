@@ -25,7 +25,8 @@ it('renders <Item mutating /> without throwing', () => {
         <Theme>
           <Table>
             <TableTbody>
-              <Item mutating />
+              <Item mutating='start' />
+              <Item mutating='remove' />
             </TableTbody>
           </Table>
         </Theme>

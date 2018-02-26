@@ -26,7 +26,8 @@ it('<Item mutating />', async () => {
       <Theme ss>
         <Table>
           <TableTbody>
-            <Item mutating />
+            <Item mutating='start' />
+            <Item mutating='remove' />
           </TableTbody>
         </Table>
       </Theme>
