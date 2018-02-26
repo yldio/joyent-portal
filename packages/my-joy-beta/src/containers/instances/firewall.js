@@ -112,7 +112,9 @@ export const Firewall = ({
     </ReduxForm>
     {!loading && !defaultRules.length && !tagRules.length ? (
       <Margin top={5}>
-        <Empty>Sorry, but we weren’t able to find any firewall rules.</Empty>
+        <Empty borderTop>
+          Sorry, but we weren’t able to find any firewall rules.
+        </Empty>
       </Margin>
     ) : null}
     {!loading && enabled && defaultRules.length ? (

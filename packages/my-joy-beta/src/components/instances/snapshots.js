@@ -184,6 +184,6 @@ export default ({
           : null}
       </TableTbody>
     </Table>
-    {!snapshots.length ? <Empty>You have no Snapshots</Empty> : null}
+    {!snapshots.length ? <Empty borderTop>You have no Snapshots</Empty> : null}
   </Fragment>
 );

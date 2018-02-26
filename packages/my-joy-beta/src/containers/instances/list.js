@@ -131,7 +131,7 @@ export const List = ({
     !loading && !_instances.length ? (
       <Empty>
         {filter
-          ? 'You have no Images that match your query'
+          ? 'You have no Instances that match your query'
           : `You haven't created any instances yet, but they're really easy to set up.
         Click above to get going.`}
       </Empty>

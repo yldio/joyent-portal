@@ -39,7 +39,7 @@ export const UserScript = ({ metadata, loading = false, error = null }) => (
       <Editor defaultValue={metadata.value} readOnly />
     ) : null}
     {!loading && !error && !metadata ? (
-      <Empty>No User Script defined</Empty>
+      <Empty borderTop>No User Script defined</Empty>
     ) : null}
   </ViewContainer>
 );
