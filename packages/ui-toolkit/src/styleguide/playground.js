@@ -63,6 +63,8 @@ const Tab = styled.div`
   ${is('active')`
     height: auto;
     opacity: 1;
+    transition-delay: 150ms;
+    transition: opacity 150ms ease-in;
   `};
 
   .CodeMirror-wrap {
@@ -72,9 +74,60 @@ const Tab = styled.div`
 `;
 
 class Playground extends Component {
-  state = {
-    tab: 'component'
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      tab: 'component',
+      states: []
+    };
+  }
+
+  componentDidMount() {
+    const code = this.props.preview.props.code;
+    const regex = /\/\/ Tab: \w+/g;
+    let m;
+    while ((m = regex.exec(code)) !== null) {
+      // This is necessary to avoid infinite loops with zero-width matches
+      if (m.index === regex.lastIndex) {
+        regex.lastIndex++;
+      }
+
+      m.forEach((match, groupIndex) => {
+        // MAKE THIS SYNCRONOUS
+        window.setTimeout(() =>
+          this.setState({
+            states: [...this.state.states, match.split(':')[1].trim()]
+          })
+        );
+      });
+    }
+  }
+
+  // async componentDidMount() {
+  //   const code = this.props.preview.props.code;
+
+  //   const matches = (/Tab:\s*?(.*)/gi).exec(code)
+
+  //   if (!matches) {
+  //     return;
+  //   }
+
+  //   matches.unshift();
+
+  //   await ForEach(
+  //     matches,
+  //     match =>
+  //       new Promise(resolve =>
+  //         this.setState(
+  //           {
+  //             states: [...this.state.states, match.trim()]
+  //           },
+  //           resolve
+  //         )
+  //       )
+  //   );
+  // }
 
   changeTab = tab => {
     this.setState({
@@ -82,33 +135,64 @@ class Playground extends Component {
     });
   };
 
+  showPreview = (preview, code) => ({
+    ...preview,
+    props: {
+      ...preview.props,
+      code
+    }
+  });
+
   render() {
     const { name, preview, tabBody } = this.props;
+    const { tab, states } = this.state;
+    const propCode = this.props.preview.props.code;
+    const regex = /\/\/ Tab: \w+/g;
+    const nameRegex = /\/\/ Name: /g;
+
     return (
       <Wrapper>
         <Tabs>
-          <TabHeader active={this.state.tab === 'component'}>
+          <TabHeader active={tab === 'component'}>
             <Button
-              active={this.state.tab === 'component'}
+              active={tab === 'component'}
               onClick={() => this.changeTab('component')}
             >
-              Example
+              {(propCode.split(nameRegex)[1] || 'Component').split(/\s/g)[0]}
             </Button>
           </TabHeader>
-          <TabHeader active={this.state.tab === 'code'}>
+          {states.length
+            ? states.map(state => (
+                <TabHeader active={tab === state}>
+                  <Button
+                    active={tab === state}
+                    onClick={() => this.changeTab(state)}
+                  >
+                    {state}
+                  </Button>
+                </TabHeader>
+              ))
+            : null}
+          <TabHeader active={tab === 'code'}>
             <Button
-              active={this.state.tab === 'code'}
+              active={tab === 'code'}
               onClick={() => this.changeTab('code')}
             >
               Code
             </Button>
           </TabHeader>
         </Tabs>
-
-        <Tab active={this.state.tab === 'component'} data-preview={name}>
-          {preview}
+        <Tab active={tab === 'component'} data-preview={name}>
+          {this.showPreview(preview, propCode.split(regex)[0])}
         </Tab>
-        <Tab active={this.state.tab === 'code'}>{tabBody}</Tab>
+        {states.length
+          ? states.map((state, i) => (
+              <Tab active={tab === state} data-preview={name}>
+                {this.showPreview(preview, propCode.split(regex)[i + 1])}
+              </Tab>
+            ))
+          : null}
+        <Tab active={tab === 'code'}>{tabBody}</Tab>
       </Wrapper>
     );
   }

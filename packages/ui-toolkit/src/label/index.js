@@ -10,6 +10,7 @@ const Label = styled.label`
   display: block;
   color: ${props => props.theme.secondary};
   text-align: left;
+  margin-bottom: ${remcalc(3)};
 `;
 
 export default Baseline(Label);

@@ -28,7 +28,7 @@ const style = css`
   height: ${height};
   min-height: ${height};
 
-  padding: ${paddingTop} ${remcalc(18)};
+  padding: ${paddingTop} ${remcalc(12)};
 
   border-radius: ${props => props.theme.borderRadius};
   background-color: ${props => props.theme.white};

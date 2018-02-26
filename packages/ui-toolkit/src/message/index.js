@@ -3,7 +3,7 @@ import is from 'styled-is';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
-
+import { Col, Row } from 'joyent-react-styled-flexboxgrid';
 import { H4 } from '../text/headings';
 import P from '../text/p';
 import { Close } from '../icons';
@@ -16,6 +16,32 @@ const Container = styled.div`
   border: ${remcalc(1)} solid ${props => props.theme.grey};
   border-radius: ${remcalc(3)};
   width: 100%;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  &:before {
+    top: -${remcalc(7)};
+    right: ${remcalc(17)};
+
+    border-width: 0 ${remcalc(5.5)} ${remcalc(7)} ${remcalc(5.5)};
+    border-color: transparent transparent ${props => props.theme.grey}
+      transparent;
+  }
+
+  &:after {
+    top: -${remcalc(6)};
+    right: ${remcalc(18)};
+    border-width: 0 ${remcalc(4.5)} ${remcalc(6)} ${remcalc(4.5)};
+    border-color: transparent transparent ${props => props.theme.white}
+      transparent;
+  }
 `;
 
 const Color = styled.div`
@@ -56,11 +82,15 @@ const CloseIcons = Close.extend`
 `;
 
 export const Message = ({ onCloseClick, children, ...type }) => (
-  <Container>
-    <Color {...type} />
-    <Outlet>{children}</Outlet>
-    {onCloseClick ? <CloseIcons onClick={onCloseClick} /> : null}
-  </Container>
+  <Row>
+    <Col md={7} sm={12}>
+      <Container>
+        <Color {...type} />
+        <Outlet>{children}</Outlet>
+        {onCloseClick ? <CloseIcons onClick={onCloseClick} /> : null}
+      </Container>
+    </Col>
+  </Row>
 );
 
 export const Title = ({ children }) => <H4 noMargin>{children}</H4>;

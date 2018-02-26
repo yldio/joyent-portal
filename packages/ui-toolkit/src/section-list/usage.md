@@ -1,26 +1,36 @@
 ```jsx
+// Name: Example
 const React = require('react');
 const { default: SectionListItem, Anchor } = require('./item');
 const { default: SectionList } = require('./');
 
 <SectionList>
   <SectionListItem>
-    <Anchor active>Overview</Anchor>
+    <Anchor active>Summary</Anchor>
   </SectionListItem>
   <SectionListItem>
-    <Anchor>Services</Anchor>
+    <Anchor>Package</Anchor>
   </SectionListItem>
   <SectionListItem>
-    <Anchor>Instances</Anchor>
+    <Anchor>Tags</Anchor>
   </SectionListItem>
   <SectionListItem>
-    <Anchor>Versions</Anchor>
+    <Anchor>Metadata</Anchor>
   </SectionListItem>
   <SectionListItem>
-    <Anchor>Manifest</Anchor>
+    <Anchor>User Scripts</Anchor>
   </SectionListItem>
   <SectionListItem>
-    <Anchor>Settings</Anchor>
+    <Anchor>Networks</Anchor>
+  </SectionListItem>
+  <SectionListItem>
+    <Anchor>Firewall</Anchor>
+  </SectionListItem>
+  <SectionListItem>
+    <Anchor>Affinity</Anchor>
+  </SectionListItem>
+  <SectionListItem>
+    <Anchor>Snapshots</Anchor>
   </SectionListItem>
 </SectionList>;
 ```

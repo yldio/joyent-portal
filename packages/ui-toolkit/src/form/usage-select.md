@@ -1,9 +1,16 @@
+#### Select
+
+This is the standard dropdown menu to be used in forms and for multiple choice selections.
+
 ```jsx
+// Name: Active
 const React = require('react');
 const { default: Select } = require('./select');
+const { default: Label } = require('./label');
 const { default: FormGroup } = require('./group');
 
 <FormGroup>
+  <Label>Your location</Label>
   <Select>
     <option selected disabled>
       Select a datacenter
@@ -14,11 +21,8 @@ const { default: FormGroup } = require('./group');
     <option>Tokyo, Japan</option>
   </Select>
 </FormGroup>;
-```
 
-#### Select > Disabled
-
-```jsx
+// Tab: Disabled
 const React = require('react');
 const { default: FormGroup } = require('./group');
 const { default: Label } = require('./label');
@@ -36,67 +40,27 @@ const { default: Select } = require('./select');
     <option>Tokyo, Japan</option>
   </Select>
 </FormGroup>;
-```
 
-#### Select > Warning
-
-```jsx
+// Tab: Error
 const React = require('react');
 const { default: FormMeta } = require('./meta');
 const { default: FormGroup } = require('./group');
 const { default: Label } = require('./label');
+const { default: Flex } = require('styled-flex-component');
 const { default: Select } = require('./select');
 
 <FormGroup>
-  <Label>Your location</Label>
+  <Flex alignCenter justifyBetween>
+    <Label>Your location</Label>
+    <FormMeta top error>
+      Unexpected children error!
+    </FormMeta>
+  </Flex>
   <Select>
     <option>Amsterdam, EU</option>
     <option>San Francisco, USA</option>
     <option>Seoul, South Korea</option>
     <option>Tokyo, Japan</option>
   </Select>
-  <FormMeta warning>Unexpected children warning!</FormMeta>
-</FormGroup>;
-```
-
-#### Select > Error
-
-```jsx
-const React = require('react');
-const { default: FormMeta } = require('./meta');
-const { default: FormGroup } = require('./group');
-const { default: Label } = require('./label');
-const { default: Select } = require('./select');
-
-<FormGroup>
-  <Label>Your location</Label>
-  <Select>
-    <option>Amsterdam, EU</option>
-    <option>San Francisco, USA</option>
-    <option>Seoul, South Korea</option>
-    <option>Tokyo, Japan</option>
-  </Select>
-  <FormMeta error>Unexpected children error!</FormMeta>
-</FormGroup>;
-```
-
-#### Select > Success
-
-```jsx
-const React = require('react');
-const { default: FormMeta } = require('./meta');
-const { default: FormGroup } = require('./group');
-const { default: Label } = require('./label');
-const { default: Select } = require('./select');
-
-<FormGroup>
-  <Label>Your location</Label>
-  <Select>
-    <option>Amsterdam, EU</option>
-    <option>San Francisco, USA</option>
-    <option>Seoul, South Korea</option>
-    <option>Tokyo, Japan</option>
-  </Select>
-  <FormMeta success>Unexpected children success!</FormMeta>
 </FormGroup>;
 ```

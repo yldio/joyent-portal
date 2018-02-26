@@ -41,6 +41,7 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -739,6 +740,7 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -1482,6 +1484,7 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -2180,6 +2183,7 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -3362,15 +3366,15 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c12 {
+.c13 {
   margin-bottom: 2.625rem;
 }
 
-.c20 {
+.c21 {
   margin-top: 1.875rem;
 }
 
-.c25 {
+.c26 {
   margin-bottom: 0.75rem;
 }
 
@@ -3378,7 +3382,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c23 {
+.c24 {
   padding: 2.25rem;
 }
 
@@ -3389,7 +3393,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c11 {
+.c12 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -3398,7 +3402,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -3406,6 +3410,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -3450,7 +3455,17 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   display: block;
 }
 
-.c27 {
+.c7 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c28 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -3458,20 +3473,20 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c27 + p,
-.c27 + small,
-.c27 + h1,
-.c27 + h2,
-.c27 + label,
-.c27 + h3,
-.c27 + h4,
-.c27 + h5,
-.c27 + div,
-.c27 + span {
+.c28 + p,
+.c28 + small,
+.c28 + h1,
+.c28 + h2,
+.c28 + label,
+.c28 + h3,
+.c28 + h4,
+.c28 + h5,
+.c28 + div,
+.c28 + span {
   margin-top: 1.5rem;
 }
 
-.c10 {
+.c11 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -3479,13 +3494,13 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c19 {
+.c20 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3509,7 +3524,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c24 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3540,7 +3555,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3553,7 +3568,30 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c8:before,
+.c8:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.c8:before {
+  top: -0.4375rem;
+  right: 1.0625rem;
+  border-width: 0 0.34375rem 0.4375rem 0.34375rem;
+  border-color: transparent transparent rgb(216,216,216) transparent;
+}
+
+.c8:after {
+  top: -0.375rem;
+  right: 1.125rem;
+  border-width: 0 0.28125rem 0.375rem 0.28125rem;
+  border-color: transparent transparent rgb(255,255,255) transparent;
+}
+
+.c9 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
@@ -3562,11 +3600,11 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   background-color: rgb(210,67,58);
 }
 
-.c9 {
+.c10 {
   padding: 1.125rem 1.125rem;
 }
 
-.c22 {
+.c23 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3588,7 +3626,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c13 {
+.c14 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -3603,7 +3641,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c16 {
+.c17 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -3616,27 +3654,27 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c17 {
+.c18 {
   display: none;
 }
 
-.c17:checked + label {
+.c18:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c17:checked + label:after {
+.c18:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c17:checked + label:active {
+.c18:checked + label:active {
   box-shadow: none;
 }
 
-.c18 {
+.c19 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -3656,24 +3694,24 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   margin-right: 0.375rem;
 }
 
-.c18::selection {
+.c19::selection {
   background: none;
 }
 
-.c18:active {
+.c19:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c18:hover {
+.c19:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c18:hover:after {
+.c19:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c18:after,
-.c18:before {
+.c19:after,
+.c19:before {
   position: relative;
   display: block;
   content: '';
@@ -3681,7 +3719,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   height: 100%;
 }
 
-.c18:after {
+.c19:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -3693,20 +3731,20 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c18:active {
+.c19:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c18:before {
+.c19:before {
   display: none;
 }
 
-.c26 {
+.c27 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c21 {
+.c22 {
   width: calc(100% - 2px);
   border-top: none;
 }
@@ -3754,6 +3792,24 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   }
 }
 
+@media only screen and (min-width:48em) {
+  .c7 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c7 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
 <div
   className="c0"
 >
@@ -3790,69 +3846,77 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
     className="c6"
   >
     <div
-      className="c7"
+      className="c2"
     >
       <div
-        className="c8"
-      />
-      <div
-        className="c9"
+        className="c7"
       >
-        <h4
-          className="c10"
+        <div
+          className="c8"
         >
-          Ooops!
-        </h4>
-        <p
-          className="c11"
-        >
-          An error occurred while loading your firewall rules
-        </p>
+          <div
+            className="c9"
+          />
+          <div
+            className="c10"
+          >
+            <h4
+              className="c11"
+            >
+              Ooops!
+            </h4>
+            <p
+              className="c12"
+            >
+              An error occurred while loading your firewall rules
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div
-    className="c12"
+    className="c13"
   >
     <form
       onChange={[Function]}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c13"
+        className="baseline-jVaZNU kXgQxt c14"
         name="enabled"
         role="group"
         style={undefined}
         type="checkbox"
       >
         <div
-          className="c14"
+          className="c15"
         >
           <label
-            className="c15"
+            className="c16"
             htmlFor="q"
           >
             Enable Firewall
           </label>
           <div
-            className="c16"
+            className="c17"
           >
             <input
               checked={undefined}
-              className="c17"
+              className="c18"
               disabled={false}
               id="q"
               onBlur={undefined}
               type="checkbox"
             />
             <label
-              className="c18"
+              className="c19"
               disabled={false}
               htmlFor="q"
               id="q"
               onBlur={undefined}
             />
             <label
-              className="c15"
+              className="c16"
               disabled={false}
               htmlFor="q"
               id="q"
@@ -3866,25 +3930,25 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
     </form>
   </div>
   <div
-    className="c19 c2"
+    className="c20 c2"
     height="0.0625rem"
   />
   <div
-    className="c20"
+    className="c21"
   >
     <div
-      className="c21 c22"
+      className="c22 c23"
       disabled={false}
       name="card"
     >
       <div
-        className="c23"
+        className="c24"
       >
         <div
-          className="c24"
+          className="c25"
         >
           <div
-            className="c25"
+            className="c26"
           >
             <svg
               height={60}
@@ -4111,7 +4175,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
             </svg>
           </div>
           <h3
-            className="c26 c27"
+            className="c27 c28"
           >
             Sorry, but we weren’t able to find any firewall rules.
           </h3>
@@ -4131,15 +4195,15 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c12 {
+.c13 {
   margin-bottom: 2.625rem;
 }
 
-.c20 {
+.c21 {
   margin-top: 1.875rem;
 }
 
-.c25 {
+.c26 {
   margin-bottom: 0.75rem;
 }
 
@@ -4147,7 +4211,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   margin-bottom: 1.5rem;
 }
 
-.c23 {
+.c24 {
   padding: 2.25rem;
 }
 
@@ -4158,7 +4222,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c11 {
+.c12 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -4167,7 +4231,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c15 {
+.c16 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -4175,6 +4239,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -4219,7 +4284,17 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   display: block;
 }
 
-.c27 {
+.c7 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c28 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -4227,20 +4302,20 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c27 + p,
-.c27 + small,
-.c27 + h1,
-.c27 + h2,
-.c27 + label,
-.c27 + h3,
-.c27 + h4,
-.c27 + h5,
-.c27 + div,
-.c27 + span {
+.c28 + p,
+.c28 + small,
+.c28 + h1,
+.c28 + h2,
+.c28 + label,
+.c28 + h3,
+.c28 + h4,
+.c28 + h5,
+.c28 + div,
+.c28 + span {
   margin-top: 1.5rem;
 }
 
-.c10 {
+.c11 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -4248,13 +4323,13 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c19 {
+.c20 {
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4278,7 +4353,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c24 {
+.c25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4309,7 +4384,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4322,7 +4397,30 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c8:before,
+.c8:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.c8:before {
+  top: -0.4375rem;
+  right: 1.0625rem;
+  border-width: 0 0.34375rem 0.4375rem 0.34375rem;
+  border-color: transparent transparent rgb(216,216,216) transparent;
+}
+
+.c8:after {
+  top: -0.375rem;
+  right: 1.125rem;
+  border-width: 0 0.28125rem 0.375rem 0.28125rem;
+  border-color: transparent transparent rgb(255,255,255) transparent;
+}
+
+.c9 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
@@ -4331,11 +4429,11 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   background-color: rgb(210,67,58);
 }
 
-.c9 {
+.c10 {
   padding: 1.125rem 1.125rem;
 }
 
-.c22 {
+.c23 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4357,7 +4455,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c13 {
+.c14 {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -4372,7 +4470,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c16 {
+.c17 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -4385,27 +4483,27 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c17 {
+.c18 {
   display: none;
 }
 
-.c17:checked + label {
+.c18:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c17:checked + label:after {
+.c18:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c17:checked + label:active {
+.c18:checked + label:active {
   box-shadow: none;
 }
 
-.c18 {
+.c19 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -4425,24 +4523,24 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   margin-right: 0.375rem;
 }
 
-.c18::selection {
+.c19::selection {
   background: none;
 }
 
-.c18:active {
+.c19:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c18:hover {
+.c19:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c18:hover:after {
+.c19:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c18:after,
-.c18:before {
+.c19:after,
+.c19:before {
   position: relative;
   display: block;
   content: '';
@@ -4450,7 +4548,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   height: 100%;
 }
 
-.c18:after {
+.c19:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -4462,20 +4560,20 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c18:active {
+.c19:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c18:before {
+.c19:before {
   display: none;
 }
 
-.c26 {
+.c27 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c21 {
+.c22 {
   width: calc(100% - 2px);
   border-top: none;
 }
@@ -4523,6 +4621,24 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   }
 }
 
+@media only screen and (min-width:48em) {
+  .c7 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c7 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
 <div
   className="c0"
 >
@@ -4559,69 +4675,77 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
     className="c6"
   >
     <div
-      className="c7"
+      className="c2"
     >
       <div
-        className="c8"
-      />
-      <div
-        className="c9"
+        className="c7"
       >
-        <h4
-          className="c10"
+        <div
+          className="c8"
         >
-          Ooops!
-        </h4>
-        <p
-          className="c11"
-        >
-          error
-        </p>
+          <div
+            className="c9"
+          />
+          <div
+            className="c10"
+          >
+            <h4
+              className="c11"
+            >
+              Ooops!
+            </h4>
+            <p
+              className="c12"
+            >
+              error
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div
-    className="c12"
+    className="c13"
   >
     <form
       onChange={[Function]}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c13"
+        className="baseline-jVaZNU kXgQxt c14"
         name="enabled"
         role="group"
         style={undefined}
         type="checkbox"
       >
         <div
-          className="c14"
+          className="c15"
         >
           <label
-            className="c15"
+            className="c16"
             htmlFor="r"
           >
             Enable Firewall
           </label>
           <div
-            className="c16"
+            className="c17"
           >
             <input
               checked={undefined}
-              className="c17"
+              className="c18"
               disabled={false}
               id="r"
               onBlur={undefined}
               type="checkbox"
             />
             <label
-              className="c18"
+              className="c19"
               disabled={false}
               htmlFor="r"
               id="r"
               onBlur={undefined}
             />
             <label
-              className="c15"
+              className="c16"
               disabled={false}
               htmlFor="r"
               id="r"
@@ -4635,25 +4759,25 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
     </form>
   </div>
   <div
-    className="c19 c2"
+    className="c20 c2"
     height="0.0625rem"
   />
   <div
-    className="c20"
+    className="c21"
   >
     <div
-      className="c21 c22"
+      className="c22 c23"
       disabled={false}
       name="card"
     >
       <div
-        className="c23"
+        className="c24"
       >
         <div
-          className="c24"
+          className="c25"
         >
           <div
-            className="c25"
+            className="c26"
           >
             <svg
               height={60}
@@ -4880,7 +5004,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
             </svg>
           </div>
           <h3
-            className="c26 c27"
+            className="c27 c28"
           >
             Sorry, but we weren’t able to find any firewall rules.
           </h3>
@@ -4920,6 +5044,7 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -5268,6 +5393,7 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -5657,6 +5783,7 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -6508,6 +6635,7 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -6856,6 +6984,7 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -7245,6 +7374,7 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;

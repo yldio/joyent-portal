@@ -5,15 +5,33 @@ import remcalc from 'remcalc';
 import Baseline from '../baseline';
 
 const UnorderedList = styled.ul`
+  background: ${props => props.theme.disabled};
   list-style-type: none;
-  padding: 0;
+  padding: ${remcalc(13)} ${remcalc(12)};
   margin: ${remcalc(18)} 0 0 0;
+  min-width: 100%;
+  max-height: 50px;
+  overflow-x: scroll;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+
+  &:after {
+    width: 100%;
+    height: ${remcalc(1)};
+    background: ${props => props.theme.grey};
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
 `;
 
 /**
  * @example ./usage.md
  */
-const SectionList = ({ children, ...rest }) => (
+const SectionList = ({ children, mode, ...rest }) => (
   <UnorderedList {...rest}>{children}</UnorderedList>
 );
 

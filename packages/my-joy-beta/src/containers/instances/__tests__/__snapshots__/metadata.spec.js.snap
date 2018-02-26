@@ -144,6 +144,7 @@ exports[`renders <Metadata /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -293,7 +294,7 @@ exports[`renders <Metadata /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -938,6 +939,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -952,8 +954,10 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   float: right;
   font-size: 0.8125rem;
+  margin-top: 0.375rem;
   float: none;
   width: 18.75rem;
 }
@@ -1392,7 +1396,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -1453,7 +1457,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   width: 18.75rem;
   height: 6rem;
   min-height: 6rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -1940,7 +1944,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   margin-left: 0.375rem;
 }
 
-.c21 {
+.c22 {
   color: rgba(73,73,73,1);
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -2051,6 +2055,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -2085,7 +2090,17 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c22 {
+.c17 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c23 {
   color: rgba(73,73,73,1);
   font-weight: normal;
   line-height: 1.625rem;
@@ -2093,20 +2108,20 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   margin: 0;
 }
 
-.c22 + p,
-.c22 + small,
-.c22 + h1,
-.c22 + h2,
-.c22 + label,
-.c22 + h3,
-.c22 + h4,
-.c22 + h5,
-.c22 + div,
-.c22 + span {
+.c23 + p,
+.c23 + small,
+.c23 + h1,
+.c23 + h2,
+.c23 + label,
+.c23 + h3,
+.c23 + h4,
+.c23 + h5,
+.c23 + div,
+.c23 + span {
   margin-top: 1.5rem;
 }
 
-.c20 {
+.c21 {
   color: rgba(73,73,73,1);
   font-weight: 600;
   line-height: 1.5rem;
@@ -2172,7 +2187,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   justify-content: space-between;
 }
 
-.c17 {
+.c18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2185,7 +2200,30 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   width: 100%;
 }
 
-.c18 {
+.c18:before,
+.c18:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.c18:before {
+  top: -0.4375rem;
+  right: 1.0625rem;
+  border-width: 0 0.34375rem 0.4375rem 0.34375rem;
+  border-color: transparent transparent rgb(216,216,216) transparent;
+}
+
+.c18:after {
+  top: -0.375rem;
+  right: 1.125rem;
+  border-width: 0 0.28125rem 0.375rem 0.28125rem;
+  border-color: transparent transparent rgb(255,255,255) transparent;
+}
+
+.c19 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
@@ -2194,7 +2232,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   background-color: rgb(210,67,58);
 }
 
-.c19 {
+.c20 {
   padding: 1.125rem 1.125rem;
 }
 
@@ -2234,7 +2272,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -2315,6 +2353,24 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   }
 }
 
+@media only screen and (min-width:48em) {
+  .c17 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c17 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
 <div
   className="c0"
 >
@@ -2390,24 +2446,32 @@ exports[`renders <Metadata error /> without throwing 1`] = `
     className="c16"
   >
     <div
-      className="c17"
+      className="c8"
     >
       <div
-        className="c18"
-      />
-      <div
-        className="c19"
+        className="c17"
       >
-        <h4
-          className="c20"
+        <div
+          className="c18"
         >
-          Ooops!
-        </h4>
-        <p
-          className="c21"
-        >
-          An error occurred while loading your metadata
-        </p>
+          <div
+            className="c19"
+          />
+          <div
+            className="c20"
+          >
+            <h4
+              className="c21"
+            >
+              Ooops!
+            </h4>
+            <p
+              className="c22"
+            >
+              An error occurred while loading your metadata
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2415,7 +2479,7 @@ exports[`renders <Metadata error /> without throwing 1`] = `
     className="c16"
   >
     <h3
-      className="c22"
+      className="c23"
     >
       0
        key:value pair
@@ -2656,6 +2720,7 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -2771,7 +2836,7 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -3654,6 +3719,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   margin-right: 0.75rem;
   font-weight: 600;
   white-space: pre;
@@ -3668,8 +3734,10 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
+  margin-bottom: 0.1875rem;
   float: right;
   font-size: 0.8125rem;
+  margin-top: 0.375rem;
   float: none;
   width: 18.75rem;
 }
@@ -4099,7 +4167,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   width: 18.75rem;
   height: 3rem;
   min-height: 3rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
@@ -4160,7 +4228,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   width: 18.75rem;
   height: 6rem;
   min-height: 6rem;
-  padding: 0.8125rem 1.125rem;
+  padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);

@@ -4,11 +4,19 @@ Primary button to be used once per page. Only use to indicate main action per pa
 Min. width: 120px
 
 ```jsx
+// Name: Active
 const React = require('react');
 const { default: Button } = require('./');
 
 <span>
   <Button>Inspire the lazy</Button>
+</span>;
+
+// Tab: Disabled
+const React = require('react');
+const { default: Button } = require('./');
+<span>
+  <Button disabled>Inspire the brave</Button>
 </span>;
 ```
 
@@ -18,40 +26,19 @@ Secondary buttons can be used freely to indicate other actions on patterns.
 Min. width: 120px
 
 ```jsx
+// Name: Active
 const React = require('react');
 const { default: Button } = require('./');
 
 <span>
   <Button secondary>Inspire the brave</Button>
 </span>;
-```
 
-#### Disabled Button
-
-Disabled buttons can be used freely to indicate that no action is permitted in this button.
-Min. width: 120px
-
-```jsx
+// Tab: Disabled
 const React = require('react');
 const { default: Button } = require('./');
-
 <span>
   <Button secondary disabled>
-    Inspire the brave
-  </Button>
-</span>;
-```
-
-#### Small Button
-
-Small buttons are supporters of the secondary button. They can be used within cluttered or complex patterns to free up space.
-
-```jsx
-const React = require('react');
-const { default: Button } = require('./');
-
-<span>
-  <Button secondary small>
     Inspire the brave
   </Button>
 </span>;
@@ -75,14 +62,22 @@ const { default: Button } = require('./');
 Quick action buttons can be embedded in components to give additional functionality. They can be used in either primary or secondary color palettes, depending on importance.
 
 ```jsx
+// Name: Active
 const React = require('react');
 const { default: Button } = require('./');
 const { Actions } = require('../icons');
 <span>
-  <Button secondary icon rect>
+  <Button secondary icon actions>
     <Actions />
   </Button>
-  <Button secondary icon rect disabled>
+</span>;
+
+// Tab: Disabled
+const React = require('react');
+const { default: Button } = require('./');
+const { Actions } = require('../icons');
+<span>
+  <Button secondary icon actions disabled>
     <Actions />
   </Button>
 </span>;
@@ -97,47 +92,6 @@ const React = require('react');
 const Anchor = require('../text').Anchor;
 
 <Anchor href="https://joyent.com">Inspire the lazy</Anchor>;
-```
-
-#### Reversed
-
-Reversed anchors is used on dark backgrounds, where a default anchor would not
-provide enough contrast.
-
-```jsx
-const React = require('react');
-const Anchor = require('../text').Anchor;
-
-<span
-  style={{
-    'background-color': '#3B46CC',
-    height: 80,
-    width: 250,
-    display: 'flex',
-    'align-items': 'center',
-    'justify-content': 'center'
-  }}
->
-  <Anchor href="https://joyent.com" reversed>
-    Inspire the lazy secondary
-  </Anchor>
-</span>;
-```
-
-#### In-paragraph anchor
-
-In-paragraph anchor is a link that sits inside a text components. The default
-state does not have an underline. The underline appears on hover and click.
-
-```jsx
-const React = require('react');
-const Anchor = require('../text').Anchor;
-
-<p>
-  Body text. Crack that whip. Give the past a slip. Step on a crack. Break your
-  momma's back. When a problem comes along.You must whip it.
-  <Anchor href="#">Learn More</Anchor>
-</p>;
 ```
 
 #### Disabled

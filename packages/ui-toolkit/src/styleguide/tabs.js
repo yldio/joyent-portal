@@ -55,7 +55,6 @@ export function TabButtonRenderer({
   return (
     <button type="button" name={name} className={classNames} onClick={onClick}>
       {children}
-      sup
     </button>
   );
 }

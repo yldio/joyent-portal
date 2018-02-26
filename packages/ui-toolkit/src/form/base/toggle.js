@@ -46,7 +46,6 @@ const Label = styled.label`
   box-sizing: border-box;
   top: 0;
   right: 0;
-
   cursor: pointer;
 
   background-color: rgb(255, 255, 255);
@@ -126,6 +125,11 @@ const InnerContainer = styled.div`
 
 const Container = styled.div`
   margin-left: ${remcalc(12)};
+
+  label {
+    font-weight: normal;
+    font-size: ${remcalc(15)};
+  }
 
   ${isNot('noMargin')`
     margin-bottom: ${remcalc(12)};

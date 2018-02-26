@@ -219,10 +219,20 @@ const Button = styled(BaseButton)`
     border-radius: 0;
   `};
 
+  ${is('actions')`
+    border-radius: 0;
+    width: ${remcalc(48)};
+    min-width: ${remcalc(0)};
+    min-height: ${remcalc(0)};
+    height: ${remcalc(48)};
+  `};
+
   ${is('small')`
     padding: ${remcalc(9)} ${remcalc(18)};
     font-size: ${remcalc(13)};
     min-width: ${remcalc(0)};
+    min-height: ${remcalc(0)};
+    height: auto;
   `};
 
   ${is('icon')`

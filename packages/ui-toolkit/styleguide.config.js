@@ -9,7 +9,9 @@ const dnHandler = require('react-docgen-displayname-handler');
 const path = require('path');
 
 module.exports = {
-  highlightTheme: 'base16-light',
+  editorConfig: {
+    theme: 'base16-light'
+  },
   webpackConfig: Object.assign(webpackConfig, {
     resolve: Object.assign(webpackConfig.resolve, {
       alias: Object.assign(webpackConfig.resolve.alias, {
