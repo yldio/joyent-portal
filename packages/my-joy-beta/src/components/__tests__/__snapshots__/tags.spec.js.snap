@@ -5,7 +5,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c19 {
+.c20 {
   margin-top: 0.375rem;
 }
 
@@ -18,7 +18,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   padding: 1.125rem;
 }
 
-.c24 {
+.c25 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -31,19 +31,28 @@ exports[`renders <AddForm /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c24::-moz-focus-inner,
-.c24[type='button']::-moz-focus-inner,
-.c24[type='reset']::-moz-focus-inner,
-.c24[type='submit']::-moz-focus-inner {
+.c25::-moz-focus-inner,
+.c25[type='button']::-moz-focus-inner,
+.c25[type='reset']::-moz-focus-inner,
+.c25[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c24:-moz-focusring,
-.c24[type='button']:-moz-focusring,
-.c24[type='reset']:-moz-focusring,
-.c24[type='submit']:-moz-focusring {
+.c25:-moz-focusring,
+.c25[type='button']:-moz-focusring,
+.c25[type='reset']:-moz-focusring,
+.c25[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
+}
+
+.c25 + button,
+.c25 + a {
+  margin-left: 0.375rem;
+}
+
+.c24 {
+  display: inline-block;
 }
 
 .c24 + button,
@@ -52,15 +61,6 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 .c23 {
-  display: inline-block;
-}
-
-.c23 + button,
-.c23 + a {
-  margin-left: 0.375rem;
-}
-
-.c22 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -105,7 +105,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -113,43 +113,43 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -195,7 +195,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   margin: 0;
 }
 
-.c25:focus {
+.c26:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -203,43 +203,43 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c25[disabled] {
+.c26[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c25:focus {
+.c26:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c27 {
+.c28 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -297,7 +297,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   float: right;
 }
 
-.c27:focus {
+.c28:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -305,66 +305,66 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c28:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c28:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:hover {
+.c28:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c27 svg + span {
+.c28 svg + span {
   margin-left: 0.75rem;
 }
 
-.c27 svg {
+.c28 svg {
   max-height: 1.125rem;
 }
 
@@ -381,6 +381,22 @@ exports[`renders <AddForm /> without throwing 1`] = `
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
+}
+
+.c18 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-bottom: 0.1875rem;
+  float: right;
+  font-size: 0.8125rem;
+  margin-top: 0.375rem;
+  float: none;
+  width: 18.75rem;
 }
 
 .c16 {
@@ -402,7 +418,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -431,7 +447,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   display: block;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -441,7 +457,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   display: block;
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -555,7 +571,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c18 {
+.c19 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -830,7 +846,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -839,7 +855,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -857,7 +873,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c22 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -866,7 +882,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c27 {
     display: none;
   }
 }
@@ -947,13 +963,17 @@ exports[`renders <AddForm /> without throwing 1`] = `
                 >
                   <div
                     className="c17"
-                  />
+                  >
+                    <label
+                      className="c18"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="c18"
+            className="c19"
           />
           <div
             className="c11"
@@ -985,23 +1005,27 @@ exports[`renders <AddForm /> without throwing 1`] = `
                 >
                   <div
                     className="c17"
-                  />
+                  >
+                    <label
+                      className="c18"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="c19"
+          className="c20"
         >
           <div
-            className="c20"
+            className="c21"
           >
             <div
-              className="c21"
+              className="c22"
             >
               <button
-                className="c22 c23 c24"
+                className="c23 c24 c25"
                 disabled={false}
                 href=""
                 onClick={[Function]}
@@ -1012,7 +1036,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c25 c23 c24"
+                className="c26 c24 c25"
                 disabled={true}
                 href=""
                 type="submit"
@@ -1023,10 +1047,10 @@ exports[`renders <AddForm /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c26"
+              className="c27"
             >
               <button
-                className="c27 c23 c24"
+                className="c28 c24 c25"
                 disabled={false}
                 href=""
                 icon={true}
@@ -1069,7 +1093,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c19 {
+.c20 {
   margin-top: 0.375rem;
 }
 
@@ -1082,7 +1106,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   padding: 1.125rem;
 }
 
-.c24 {
+.c25 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1095,19 +1119,28 @@ exports[`renders <EditForm /> without throwing 1`] = `
   min-width: 7.5rem;
 }
 
-.c24::-moz-focus-inner,
-.c24[type='button']::-moz-focus-inner,
-.c24[type='reset']::-moz-focus-inner,
-.c24[type='submit']::-moz-focus-inner {
+.c25::-moz-focus-inner,
+.c25[type='button']::-moz-focus-inner,
+.c25[type='reset']::-moz-focus-inner,
+.c25[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c24:-moz-focusring,
-.c24[type='button']:-moz-focusring,
-.c24[type='reset']:-moz-focusring,
-.c24[type='submit']:-moz-focusring {
+.c25:-moz-focusring,
+.c25[type='button']:-moz-focusring,
+.c25[type='reset']:-moz-focusring,
+.c25[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
+}
+
+.c25 + button,
+.c25 + a {
+  margin-left: 0.375rem;
+}
+
+.c24 {
+  display: inline-block;
 }
 
 .c24 + button,
@@ -1116,15 +1149,6 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 .c23 {
-  display: inline-block;
-}
-
-.c23 + button,
-.c23 + a {
-  margin-left: 0.375rem;
-}
-
-.c22 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1169,7 +1193,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   margin: 0;
 }
 
-.c22:focus {
+.c23:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1177,43 +1201,43 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c23[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c23:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c23:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c23:active,
+.c23:active:hover,
+.c23:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1259,7 +1283,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   margin: 0;
 }
 
-.c25:focus {
+.c26:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1267,43 +1291,43 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c25[disabled] {
+.c26[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c25:focus {
+.c26:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c25:hover {
+.c26:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c27 {
+.c28 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1361,7 +1385,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   float: right;
 }
 
-.c27:focus {
+.c28:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1369,66 +1393,66 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c28:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c28:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c28:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:hover {
+.c28:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c27 svg + span {
+.c28 svg + span {
   margin-left: 0.75rem;
 }
 
-.c27 svg {
+.c28 svg {
   max-height: 1.125rem;
 }
 
@@ -1445,6 +1469,22 @@ exports[`renders <EditForm /> without throwing 1`] = `
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
+}
+
+.c18 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+  margin-bottom: 0.1875rem;
+  float: right;
+  font-size: 0.8125rem;
+  margin-top: 0.375rem;
+  float: none;
+  width: 18.75rem;
 }
 
 .c16 {
@@ -1466,7 +1506,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c20 {
+.c21 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1495,7 +1535,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   display: block;
 }
 
-.c21 {
+.c22 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1505,7 +1545,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   display: block;
 }
 
-.c26 {
+.c27 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1598,7 +1638,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c18 {
+.c19 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1884,7 +1924,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1893,7 +1933,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c20 {
+  .c21 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1911,7 +1951,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c22 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -1920,7 +1960,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c27 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -2021,13 +2061,17 @@ exports[`renders <EditForm /> without throwing 1`] = `
                 >
                   <div
                     className="c17"
-                  />
+                  >
+                    <label
+                      className="c18"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="c18"
+            className="c19"
           />
           <div
             className="c11"
@@ -2059,23 +2103,27 @@ exports[`renders <EditForm /> without throwing 1`] = `
                 >
                   <div
                     className="c17"
-                  />
+                  >
+                    <label
+                      className="c18"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="c19"
+          className="c20"
         >
           <div
-            className="c20"
+            className="c21"
           >
             <div
-              className="c21"
+              className="c22"
             >
               <button
-                className="c22 c23 c24"
+                className="c23 c24 c25"
                 disabled={false}
                 href=""
                 onClick={[Function]}
@@ -2086,7 +2134,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c25 c23 c24"
+                className="c26 c24 c25"
                 disabled={true}
                 href=""
                 type="submit"
@@ -2097,10 +2145,10 @@ exports[`renders <EditForm /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c26"
+              className="c27"
             >
               <button
-                className="c27 c23 c24"
+                className="c28 c24 c25"
                 disabled={false}
                 href=""
                 icon={true}

@@ -932,6 +932,11 @@ exports[`renders <Package /> without throwing 1`] = `
   margin-left: 0.375rem;
 }
 
+.c12 {
+  display: inline-block;
+  margin-right: 0.375rem;
+}
+
 .c9 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1243,7 +1248,11 @@ exports[`renders <Package /> without throwing 1`] = `
     name="td"
     selected={false}
   >
-    1
+    <div
+      className="c12"
+    >
+      1
+    </div>
   </td>
   <td
     className="c2"
