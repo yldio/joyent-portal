@@ -104,7 +104,9 @@ export const Filters = ({ onResetFilters }) => (
       </FormGroup>
       <FormGroup type="checkbox" name="ssd" field={Field}>
         <Checkbox>
-          <FormLabel noMargin actionable>SSD</FormLabel>
+          <FormLabel noMargin actionable>
+            SSD
+          </FormLabel>
         </Checkbox>
       </FormGroup>
     </Flex>

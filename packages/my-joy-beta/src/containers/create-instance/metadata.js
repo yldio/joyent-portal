@@ -170,6 +170,10 @@ export default compose(
       return history.push(`/~create/user-script${history.location.search}`);
     },
     handleEdit: () => {
+      dispatch(
+        set({ name: 'create-instance-metadata-proceeded', value: true })
+      );
+
       return history.push(`/~create/metadata${history.location.search}`);
     },
     shouldAsyncValidate: ({ trigger }) => {

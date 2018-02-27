@@ -145,10 +145,10 @@ export default compose(
   connect(null, (dispatch, { tags = [], history }) => ({
     handleNext: () => {
       dispatch(set({ name: 'create-instance-tags-proceeded', value: true }));
-
       return history.push(`/~create/metadata${history.location.search}`);
     },
     handleEdit: () => {
+      dispatch(set({ name: 'create-instance-tags-proceeded', value: true }));
       return history.push(`/~create/tags${history.location.search}`);
     },
     shouldAsyncValidate: ({ trigger }) => trigger === 'submit',

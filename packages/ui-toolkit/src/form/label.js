@@ -27,7 +27,7 @@ const StyledLabel = Label.extend`
       font-weight: ${props => props.theme.font.weight.normal};
   `};
 
-    ${is('noMargin')`
+  ${is('noMargin')`
       margin: 0;
   `};
 `;

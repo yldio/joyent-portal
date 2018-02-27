@@ -171,6 +171,10 @@ export default compose(
       dispatch(set({ name: `${CNS_FORM}-proceeded`, value: true }));
       return history.push(`/~create/affinity${history.location.search}`);
     },
+    handleEdit: () => {
+      dispatch(set({ name: `${CNS_FORM}-proceeded`, value: true }));
+      history.push(`/~create/cns${history.location.search}`);
+    },
     shouldAsyncValidate: ({ trigger }) => trigger === 'change',
     handleAsyncValidate: async ({ name = '', value = '' }) => {
       const isNameValid = /^[a-zA-Z_.-]{1,16}$/.test(name);
@@ -185,7 +189,6 @@ export default compose(
         value: isValueValid ? null : fieldError
       };
     },
-    handleEdit: () => history.push(`/~create/cns${history.location.search}`),
     handleToggleCnsEnabled: ({ target }) =>
       dispatch(set({ name: `${CNS_FORM}-enabled`, value: !cnsEnabled })),
     handleAddService: ({ name }) => {

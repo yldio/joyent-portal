@@ -116,6 +116,17 @@ export default compose(
       };
     },
     (dispatch, { history, query }) => ({
+      handleNext: () => {
+        dispatch(set({ name: 'create-instance-name-proceeded', value: true }));
+        return history.push(
+          `/~create/${query.image ? 'package' : 'image'}${
+            history.location.search
+          }`
+        );
+      },
+      handleEdit: () => {
+        history.push(`/~create/name${history.location.search}`);
+      },
       shouldAsyncValidate: ({ trigger }) => trigger === 'change',
       handleAsyncValidation: async ({ name }) => {
         const sanitized = punycode.encode(name).replace(/-$/, '');
@@ -159,15 +170,6 @@ export default compose(
           };
         }
       },
-      handleNext: () => {
-        dispatch(set({ name: 'create-instance-name-proceeded', value: true }));
-        return history.push(
-          `/~create/${query.image ? 'package' : 'image'}${
-            history.location.search
-          }`
-        );
-      },
-      handleEdit: () => history.push(`/~create/name${history.location.search}`),
       handleRandomize: async () => {
         dispatch(
           set({ name: 'create-instance-name-randomizing', value: true })

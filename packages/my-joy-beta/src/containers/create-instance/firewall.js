@@ -168,6 +168,10 @@ export default compose(
         return history.push(`/~create/cns${history.location.search}`);
       },
       handleEdit: () => {
+        dispatch(
+          set({ name: 'create-instance-firewall-proceeded', value: true })
+        );
+
         return history.push(`/~create/firewall${history.location.search}`);
       }
     })

@@ -63,8 +63,8 @@ const Meta = props => {
     const hasSuccess = Boolean(props.success || meta.success || value.success);
     const isRight = !props.left;
 
-    return (
-      msg ? <StyledLabel
+    return msg ? (
+      <StyledLabel
         {...meta}
         {...props}
         error={hasError}
@@ -73,8 +73,8 @@ const Meta = props => {
         right={isRight}
       >
         {msg}
-      </StyledLabel> : null
-    );
+      </StyledLabel>
+    ) : null;
   };
 
   return <Subscriber channel="input-group">{render}</Subscriber>;

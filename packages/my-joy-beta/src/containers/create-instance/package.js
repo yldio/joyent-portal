@@ -234,8 +234,9 @@ export default compose(
 
         return history.push(`/~create/tags${history.location.search}`);
       },
-      handleEdit: () =>
-        history.push(`/~create/package${history.location.search}`),
+      handleEdit: () => {
+        return history.push(`/~create/package${history.location.search}`);
+      },
       handleResetFilters: () => {
         dispatch(destroy(`${FORM_NAME}-filters`));
       },

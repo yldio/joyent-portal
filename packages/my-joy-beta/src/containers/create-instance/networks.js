@@ -186,6 +186,10 @@ export default compose(
         return history.push(`/~create/firewall${history.location.search}`);
       },
       handleEdit: () => {
+        dispatch(
+          set({ name: 'create-instance-networks-proceeded', value: true })
+        );
+
         return history.push(`/~create/networks${history.location.search}`);
       },
       setInfoExpanded: (id, expanded) => {
