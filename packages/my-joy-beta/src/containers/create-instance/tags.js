@@ -151,7 +151,7 @@ export default compose(
     handleEdit: () => {
       return history.push(`/~create/tags${history.location.search}`);
     },
-    shouldAsyncValidate: ({ trigger }) => trigger === 'change',
+    shouldAsyncValidate: ({ trigger }) => trigger === 'submit',
     handleAsyncValidate: async ({ name = '', value = '' }) => {
       const isNameValid = /^[a-zA-Z_.-]{1,16}$/.test(name);
       const isValueValid = /^[a-zA-Z_.-]{1,16}$/.test(value);
