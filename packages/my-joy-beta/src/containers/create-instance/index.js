@@ -160,7 +160,7 @@ export default compose(
     const error = get(form, `${CREATE_FORM}.error`, null);
     const name = get(form, `${FORM_NAME}.values.name`, '');
     const image = get(form, 'create-instance-image.values.image', '');
-    const pkg = get(values, 'selected-package', '');
+    const pkg = get(form, 'create-instance-package.values.package', '');
     const networks = get(form, 'CREATE-INSTANCE-NETWORKS.values', {});
 
     const enabled =
