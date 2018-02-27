@@ -418,7 +418,7 @@ exports[`renders <Filters /> without throwing 1`] = `
           checked={false}
           className="c5"
           disabled={false}
-          id="m"
+          id="l"
           onBlur={undefined}
           type="checkbox"
         >
@@ -426,25 +426,25 @@ exports[`renders <Filters /> without throwing 1`] = `
             checked={false}
             className="c6"
             disabled={false}
-            id="n"
+            id="m"
             onBlur={undefined}
             type="checkbox"
           />
           <label
             className="c7"
-            htmlFor="n"
+            htmlFor="m"
           />
         </div>
         <div
           checked={false}
           className="c8"
           disabled={false}
-          id="m"
+          id="l"
           onBlur={undefined}
         >
           <label
             className="c9"
-            htmlFor="n"
+            htmlFor="m"
           >
             <div
               className="c10"
@@ -484,7 +484,7 @@ exports[`renders <Filters /> without throwing 1`] = `
           checked={false}
           className="c5"
           disabled={false}
-          id="o"
+          id="n"
           onBlur={undefined}
           type="checkbox"
         >
@@ -492,25 +492,25 @@ exports[`renders <Filters /> without throwing 1`] = `
             checked={false}
             className="c6"
             disabled={false}
-            id="p"
+            id="o"
             onBlur={undefined}
             type="checkbox"
           />
           <label
             className="c7"
-            htmlFor="p"
+            htmlFor="o"
           />
         </div>
         <div
           checked={false}
           className="c8"
           disabled={false}
-          id="o"
+          id="n"
           onBlur={undefined}
         >
           <label
             className="c9"
-            htmlFor="p"
+            htmlFor="o"
           >
             <div
               className="c10"
@@ -550,7 +550,7 @@ exports[`renders <Filters /> without throwing 1`] = `
           checked={false}
           className="c5"
           disabled={false}
-          id="q"
+          id="p"
           onBlur={undefined}
           type="checkbox"
         >
@@ -558,25 +558,25 @@ exports[`renders <Filters /> without throwing 1`] = `
             checked={false}
             className="c6"
             disabled={false}
-            id="r"
+            id="q"
             onBlur={undefined}
             type="checkbox"
           />
           <label
             className="c7"
-            htmlFor="r"
+            htmlFor="q"
           />
         </div>
         <div
           checked={false}
           className="c8"
           disabled={false}
-          id="q"
+          id="p"
           onBlur={undefined}
         >
           <label
             className="c9"
-            htmlFor="r"
+            htmlFor="q"
           >
             <div
               className="c10"
@@ -616,7 +616,7 @@ exports[`renders <Filters /> without throwing 1`] = `
           checked={false}
           className="c5"
           disabled={false}
-          id="s"
+          id="r"
           onBlur={undefined}
           type="checkbox"
         >
@@ -624,25 +624,25 @@ exports[`renders <Filters /> without throwing 1`] = `
             checked={false}
             className="c6"
             disabled={false}
-            id="t"
+            id="s"
             onBlur={undefined}
             type="checkbox"
           />
           <label
             className="c7"
-            htmlFor="t"
+            htmlFor="s"
           />
         </div>
         <div
           checked={false}
           className="c8"
           disabled={false}
-          id="s"
+          id="r"
           onBlur={undefined}
         >
           <label
             className="c9"
-            htmlFor="t"
+            htmlFor="s"
           >
             <div
               className="c10"
@@ -689,7 +689,7 @@ exports[`renders <Filters /> without throwing 1`] = `
           checked={false}
           className="c5"
           disabled={false}
-          id="u"
+          id="t"
           onBlur={undefined}
           type="checkbox"
         >
@@ -697,25 +697,25 @@ exports[`renders <Filters /> without throwing 1`] = `
             checked={false}
             className="c6"
             disabled={false}
-            id="v"
+            id="u"
             onBlur={undefined}
             type="checkbox"
           />
           <label
             className="c7"
-            htmlFor="v"
+            htmlFor="u"
           />
         </div>
         <div
           checked={false}
           className="c8"
           disabled={false}
-          id="u"
+          id="t"
           onBlur={undefined}
         >
           <label
             className="c9"
-            htmlFor="v"
+            htmlFor="u"
           >
             SSD
           </label>
@@ -927,12 +927,12 @@ Array [
 `;
 
 exports[`renders <Package /> without throwing 1`] = `
-.c10 {
+.c9 {
   margin-right: 0.75rem;
   margin-left: 0.375rem;
 }
 
-.c9 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -956,7 +956,7 @@ exports[`renders <Package /> without throwing 1`] = `
   align-items: center;
 }
 
-.c6 {
+.c5 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -966,60 +966,60 @@ exports[`renders <Package /> without throwing 1`] = `
   display: none;
 }
 
-.c6[type='checkbox'],
-.c6[type='radio'] {
+.c5[type='checkbox'],
+.c5[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c6[type='number']::-webkit-inner-spin-button,
-.c6[type='number']::-webkit-outer-spin-button {
+.c5[type='number']::-webkit-inner-spin-button,
+.c5[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c6[type='search'] {
+.c5[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c6[type='search']::-webkit-search-cancel-button,
-.c6[type='search']::-webkit-search-decoration {
+.c5[type='search']::-webkit-search-cancel-button,
+.c5[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c6::-webkit-file-upload-button {
+.c5::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c6:checked + label::after {
+.c5:checked + label::after {
   opacity: 1;
 }
 
-.c6:selected + label::after {
+.c5:selected + label::after {
   opacity: 1;
 }
 
-.c6:checked + label {
+.c5:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c6:selected + label {
+.c5:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c6:disabled + label {
+.c5:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c11 {
+.c10 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1034,7 +1034,7 @@ exports[`renders <Package /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c7 {
+.c6 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -1052,7 +1052,7 @@ exports[`renders <Package /> without throwing 1`] = `
   border-radius: 50%;
 }
 
-.c7::after {
+.c6::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -1067,7 +1067,7 @@ exports[`renders <Package /> without throwing 1`] = `
   transform: translateX(-50%) translateY(-50%);
 }
 
-.c5 {
+.c4 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -1076,32 +1076,16 @@ exports[`renders <Package /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c7 {
   margin-left: 0.75rem;
 }
 
-.c8 label {
+.c7 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
 .c3 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  width: 100%;
-}
-
-.c4 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1167,67 +1151,61 @@ exports[`renders <Package /> without throwing 1`] = `
     name="td"
     selected={false}
   >
-    <div
-      className="baseline-jVaZNU kXgQxt c3"
-      name="package"
-      role="group"
-      style={undefined}
-      type="radio"
-      value={undefined}
+    <li
+      checked={false}
+      className="c3"
+      disabled={false}
+      onBlur={null}
     >
-      <li
+      <div
+        checked={false}
         className="c4"
         disabled={false}
+        id=""
         onBlur={null}
+        type="radio"
       >
-        <div
+        <input
+          checked={false}
           className="c5"
           disabled={false}
           id="k"
           onBlur={null}
           type="radio"
-        >
-          <input
-            checked={undefined}
-            className="c6"
-            disabled={false}
-            id="l"
-            onBlur={null}
-            type="radio"
-          />
-          <label
-            className="c7"
-            htmlFor="l"
-          />
-        </div>
+        />
+        <label
+          className="c6"
+          htmlFor="k"
+        />
+      </div>
+      <div
+        checked={false}
+        className="c7"
+        disabled={false}
+        id=""
+        onBlur={null}
+      >
         <div
           className="c8"
-          disabled={false}
-          id="k"
-          onBlur={null}
         >
           <div
             className="c9"
           >
-            <div
+            <label
               className="c10"
-            >
-              <label
-                className="c11"
-                htmlFor="l"
-                style={
-                  Object {
-                    "fontWeight": "normal",
-                  }
+              htmlFor="k"
+              style={
+                Object {
+                  "fontWeight": "normal",
                 }
-              >
-                test
-              </label>
-            </div>
+              }
+            >
+              test
+            </label>
           </div>
         </div>
-      </li>
-    </div>
+      </div>
+    </li>
   </td>
   <td
     className="c2"

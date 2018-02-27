@@ -76,8 +76,7 @@ const PackageContainer = ({
       {props =>
         !loading && expanded ? (
           <Filters {...props} onResetFilters={handleResetFilters} />
-        ) : null
-      }
+        ) : null}
     </ReduxForm>
     <ReduxForm
       form={FORM_NAME}
@@ -113,8 +112,7 @@ const PackageContainer = ({
           )
         ) : selected.id ? (
           <Overview {...selected} hasVms={hasVms} onCancel={handleEdit} />
-        ) : null
-      }
+        ) : null}
     </ReduxForm>
     {expanded ? (
       !loading ? (
@@ -192,8 +190,10 @@ export default compose(
       );
 
       const vmSelected = get(form, 'create-instance-vms.values.vms', false);
-      const pkgSelected = get(form, `${FORM_NAME}.values.package`, null);
+      const pkgSelected = get(values, `selected-package`, null);
       const selected = find(packages, ['id', pkgSelected]);
+
+      console.log(pkgSelected);
 
       const sorted = sortBy(packages, [_sortBy]);
 
@@ -239,8 +239,11 @@ export default compose(
       handleResetFilters: () => {
         dispatch(destroy(`${FORM_NAME}-filters`));
       },
-      handleRowClick: ({ id, selected }) => {
-        dispatch(change(FORM_NAME, id, !selected));
+      handleRowClick: ({ id }) => {
+        dispatch(set({
+          name: 'selected-package',
+          value: id
+        }));
       },
       handleSortBy: (newSortBy, sortOrder) => {
         dispatch([

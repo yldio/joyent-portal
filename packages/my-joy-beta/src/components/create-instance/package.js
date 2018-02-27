@@ -132,8 +132,7 @@ export const Package = ({
 }) => (
   <TableTrActionable onClick={() => onRowClick({ id, selected })}>
     <TableTd right selected={selected}>
-      <FormGroup name="package" value={id} type="radio" field={Field} fluid>
-        <Radio onBlur={null} noMargin>
+        <Radio onBlur={null} noMargin checked={selected}>
           <Flex alignCenter>
             {GroupIcons[group]}
             <Margin left={1} right={2}>
@@ -145,7 +144,6 @@ export const Package = ({
             </Margin>
           </Flex>
         </Radio>
-      </FormGroup>
     </TableTd>
     <TableTd right selected={selected} bold={sortBy === 'memory'}>
       {bytes(memory, { decimalPlaces: 0, unitSeparator: ' ' })}
