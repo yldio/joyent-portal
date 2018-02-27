@@ -13,7 +13,6 @@ import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { NameIcon, H3, Button, H4, P } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-image/title';
-import Animated from '@containers/create-image/animated';
 import Details from '@components/create-image/details';
 import Description from '@components/description';
 import GetRandomName from '@graphql/get-random-name.gql';
@@ -109,7 +108,6 @@ const NameContainer = ({
 );
 
 export default compose(
-  Animated,
   graphql(GetRandomName, {
     options: () => ({
       fetchPolicy: 'network-only',

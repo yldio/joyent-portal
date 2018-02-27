@@ -4,29 +4,29 @@
   "license": "MPL-2.0",
   "main": "lib/index.js",
   "scripts": {
-    "dev": "PREACT=1 REACT_APP_GQL_PORT=4000 PORT=3000 REACT_APP_GQL_PROTOCOL=http joyent-react-scripts start",
-    "build": "PREACT=1 NODE_ENV=production joyent-react-scripts build",
-    "lint-ci": "eslint . --ext .js --ext .md",
-    "lint": "eslint . --fix --ext .js --ext .md",
-    "test-ci": "echo 0",
+    "dev": "NODE_ENV=development PREACT=1 REACT_APP_GQL_PORT=4000 PORT=3000 joyent-react-scripts start",
+    "build:test": "echo 0",
+    "build:lib": "echo 0",
+    "build:bundle": "NODE_ENV=production redrun build",
+    "prepublish": "NODE_ENV=production redrun build",
+    "lint": "redrun lint:ci -- -- --fix",
+    "lint:ci": "NODE_ENV=test eslint . --ext .js --ext .md",
     "test": "echo 0",
-    "postinstall": "npm run build",
-    "prepublish": "echo 0"
+    "test:ci": "redrun test",
+    "build": "PREACT=1 joyent-react-scripts build"
   },
   "dependencies": {
     "apollo-cache-inmemory": "^1.1.9",
     "apollo-client": "^2.2.5",
     "apollo-link": "^1.2.1",
-    "apollo-link-http": "^1.5.1",
+    "apollo-link-http": "^1.5.2",
     "apollo-link-state": "^0.4.0",
-    "babel-preset-joyent-portal": "^7.0.1",
     "emotion": "^8.0.12",
     "emotion-theming": "^8.0.12",
     "graphql-tag": "^2.8.0",
     "inert": "^5.1.0",
     "joyent-icons": "^5.0.0",
     "joyent-ui-toolkit": "^5.0.0",
-    "joyent-react-scripts": "^7.3.0",
     "lodash.chunk": "^4.2.0",
     "lodash.keys": "^4.2.0",
     "outy": "^0.1.2",
@@ -41,7 +41,10 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
+    "babel-preset-joyent-portal": "^7.0.1",
     "eslint": "^4.18.1",
-    "eslint-config-joyent-portal": "^3.3.1"
+    "eslint-config-joyent-portal": "^3.3.1",
+    "joyent-react-scripts": "^7.3.0",
+    "redrun": "^5.10.5"
   }
 }

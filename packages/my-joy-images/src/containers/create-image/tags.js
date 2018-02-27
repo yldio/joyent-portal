@@ -19,7 +19,6 @@ import {
 } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-image/title';
-import Animated from '@containers/create-image/animated';
 import Description from '@components/description';
 import Tag from '@components/tags';
 import { Forms } from '@root/constants';
@@ -128,7 +127,6 @@ export const Tags = ({
 );
 
 export default compose(
-  Animated,
   connect(({ values }, ownProps) => ({
     proceeded: get(values, `${Forms.CREATE_TAGS}-proceeded`, false),
     addOpen: get(values, `${Forms.CREATE_TAGS}-add-open`, false),

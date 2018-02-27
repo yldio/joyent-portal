@@ -1,5 +1,5 @@
 import { Subscriber } from 'joy-react-broadcast';
-import is, { isNot } from 'styled-is';
+import is from 'styled-is';
 import PropTypes from 'prop-types';
 import React from 'react';
 import remcalc from 'remcalc';

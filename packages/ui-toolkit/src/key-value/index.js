@@ -48,7 +48,7 @@ const Meta = styled(CardHeaderMeta)`
 `;
 
 const Bold = styled.span`
-   font-weight: ${props => props.theme.font.weight.semibold};
+  font-weight: ${props => props.theme.font.weight.semibold};
 `;
 
 class ValueTextareaField extends PureComponent {

@@ -5,22 +5,26 @@
   "license": "MPL-2.0",
   "scripts": {
     "start": "UMD=1 NODE_ENV=development PORT=3069 REACT_APP_GQL_PORT=3069 REACT_APP_GQL_HOSTNAME=localhost REACT_APP_GQL_PROTOCOL=http node src/index.js",
-    "lint-ci": "echo 0",
+    "dev": "echo 0",
+    "build:test": "echo 0",
+    "build:lib": "echo 0",
+    "build:bundle": "echo 0",
+    "prepublish": "echo 0",
     "lint": "echo 0",
-    "test-ci": "echo 0",
+    "lint:ci": "echo 0",
     "test": "echo 0",
-    "prepublish": "echo 0"
+    "test:ci": "echo 0"
   },
   "dependencies": {
     "brok": "^2.0.0",
     "brule": "^3.1.0",
     "cloudapi-gql": "^6.1.1",
     "hapi": "^17.2.0",
-    "hapi-triton-auth": "^1.0.0",
+    "hapi-triton-auth": "^2.0.0",
     "inert": "^5.1.0",
     "joyent-navigation": "*",
-    "my-images-console": "*",
-    "my-joy-beta": "*",
+    "my-joy-images": "*",
+    "my-joy-instances": "*",
     "rollover": "^1.0.0"
   }
 }

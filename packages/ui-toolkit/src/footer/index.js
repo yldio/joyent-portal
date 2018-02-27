@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 
-import StickyFooter from './StickyFooter';
-
 const List = styled.ul`
   display: flex;
   list-style: none;
@@ -59,4 +57,4 @@ export default () => (
   </List>
 );
 
-export { default as StickyFooter } from './StickyFooter';
+export { default as StickyFooter } from './sticky-footer';

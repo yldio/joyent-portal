@@ -58,4 +58,5 @@ const Animated = WrappedComponent =>
       );
     }
   };
+
 export default Animated;

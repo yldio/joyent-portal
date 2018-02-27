@@ -118,9 +118,9 @@ class CnsClass extends PureComponent {
     const { reset = () => null } = this.props;
     reset();
   }
+
   render() {
     const { reset, children, ...rest } = this.props;
-
     return <CnsContainer {...rest}>{children}</CnsContainer>;
   }
 }

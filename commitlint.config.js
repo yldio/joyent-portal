@@ -4,7 +4,7 @@ module.exports = {
     'scope-enum': [
       2,
       'always',
-      ['ui-toolkit', 'icons', 'my-joy-beta', 'navigation', 'bundle', 'images']
+      ['ui-toolkit', 'icons', 'instances', 'navigation', 'bundle', 'images']
     ]
   }
 };
