@@ -151,11 +151,9 @@ export const Package = ({
       {bytes(memory, { decimalPlaces: 0, unitSeparator: ' ' })}
     </TableTd>
     <TableTd right selected={selected} bold={sortBy === 'disk'}>
-      {bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })}
+      <Margin inline right={1}>{bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })}</Margin>
       {ssd && (
-        <Margin inline left={1}>
           <Sup badge>SSD</Sup>
-        </Margin>
       )}
     </TableTd>
     {hasVms && (

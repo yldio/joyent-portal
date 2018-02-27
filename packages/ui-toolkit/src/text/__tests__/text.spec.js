@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 import remcalc from 'remcalc';
 
-import { P, H1, H2, H3, H4, H5, H6, Small } from '../';
+import { P, H1, H2, H3, H4, H5, H6, Small, Sup } from '../';
 import { Theme } from '../../mocks';
 import theme from '../../theme';
 
@@ -122,5 +122,33 @@ describe('Button', () => {
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.text.replace(/ /g, ''));
     expect(tree).toHaveStyleRule('font-size', remcalc(13));
+  });
+
+  test('Sup', () => {
+    const tree = renderer
+      .create(
+        <Theme>
+          <Sup>Inspire the lazy</Sup>
+        </Theme>
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+    expect(tree).toHaveStyleRule('color', theme.primary.replace(/ /g, ''));
+    expect(tree).toHaveStyleRule('font-size', remcalc(8));
+  });
+
+  test('Sup badge', () => {
+    const tree = renderer
+      .create(
+        <Theme>
+          <Sup badge>Inspire the lazy</Sup>
+        </Theme>
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+    expect(tree).toHaveStyleRule('color', theme.white.replace(/ /g, ''));
+    expect(tree).toHaveStyleRule('font-size', remcalc(8));
   });
 });
