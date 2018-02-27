@@ -132,7 +132,7 @@ export default compose(
     ({ form, values }, ownProps) => {
       const proceeded = get(values, 'create-instance-image-proceeded', false);
       const image = get(form, 'create-instance-image.values.image', null);
-      const vms = get(values, 'vms', false);
+      const vms = get(values, 'vms', true);
 
       return {
         ...ownProps,
@@ -154,8 +154,8 @@ export default compose(
         const id = versions[0].id;
         return dispatch(change('create-instance-image', 'image', id));
       },
-      setImageType: value => {
-        return dispatch(set({ name: 'vms', value }));
+      setImageType: isVm => {
+        return dispatch(set({ name: 'vms', value: isVm }));
       }
     })
   ),
