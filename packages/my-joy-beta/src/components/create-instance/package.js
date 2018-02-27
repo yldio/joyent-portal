@@ -56,7 +56,7 @@ export const Filters = ({ onResetFilters }) => (
     <Flex wrap alignCenter justifyBetween>
       <FormGroup type="checkbox" name="compute-optimized" field={Field}>
         <Checkbox>
-          <FormLabel actionable>
+          <FormLabel noMargin actionable>
             <Flex alignCenter>
               {GroupIcons.COMPUTE}
               <Margin right={1} left={1}>
@@ -68,7 +68,7 @@ export const Filters = ({ onResetFilters }) => (
       </FormGroup>
       <FormGroup type="checkbox" name="memory-optimized" field={Field}>
         <Checkbox>
-          <FormLabel actionable>
+          <FormLabel noMargin actionable>
             <Flex alignCenter>
               {GroupIcons.MEMORY}
               <Margin left={1} right={2}>
@@ -80,7 +80,7 @@ export const Filters = ({ onResetFilters }) => (
       </FormGroup>
       <FormGroup type="checkbox" name="general-purpose" field={Field}>
         <Checkbox>
-          <FormLabel actionable>
+          <FormLabel noMargin actionable>
             <Flex alignCenter>
               {GroupIcons.GENERAL}
               <Margin left={1} right={2}>
@@ -92,7 +92,7 @@ export const Filters = ({ onResetFilters }) => (
       </FormGroup>
       <FormGroup type="checkbox" name="storage-optimized" field={Field}>
         <Checkbox>
-          <FormLabel actionable>
+          <FormLabel noMargin actionable>
             <Flex alignCenter>
               {GroupIcons.STORAGE}
               <Margin left={1} right={2}>
@@ -104,7 +104,7 @@ export const Filters = ({ onResetFilters }) => (
       </FormGroup>
       <FormGroup type="checkbox" name="ssd" field={Field}>
         <Checkbox>
-          <FormLabel actionable>SSD</FormLabel>
+          <FormLabel noMargin actionable>SSD</FormLabel>
         </Checkbox>
       </FormGroup>
     </Flex>
@@ -138,6 +138,7 @@ export const Package = ({
             {GroupIcons[group]}
             <Margin left={1} right={2}>
               <FormLabel
+                noMargin
                 style={{ fontWeight: sortBy === 'name' ? 'bold' : 'normal' }}
               >
                 {name}

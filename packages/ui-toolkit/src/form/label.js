@@ -26,6 +26,10 @@ const StyledLabel = Label.extend`
   ${is('normal')`
       font-weight: ${props => props.theme.font.weight.normal};
   `};
+
+    ${is('noMargin')`
+      margin: 0;
+  `};
 `;
 
 export default props => {
