@@ -19,7 +19,7 @@ export default ({ placeholderName, randomizing, onRandomize }) => (
     <Flex wrap>
       <FlexItem flex>
         <FormGroup name="name" fluid field={Field}>
-          <FormLabel>Instance Name</FormLabel>
+          <FormLabel>Instance name</FormLabel>
           <Margin top={0.5}>
             <Input placeholder={placeholderName} onBlur={null} />
           </Margin>

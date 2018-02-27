@@ -84,8 +84,8 @@ export const Meta = ({
       <VerticalDivider />
       <Label>
         {brand === 'LX'
-          ? 'Infrastructure Container'
-          : 'Hardware Virtual Machine'}
+          ? 'Infrastructure container'
+          : 'Hardware virtual machine'}
       </Label>
       <VerticalDivider />
       <Label>{(instance.package || {}).name}</Label>

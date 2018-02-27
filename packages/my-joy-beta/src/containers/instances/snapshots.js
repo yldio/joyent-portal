@@ -145,7 +145,7 @@ const Snapshots = ({
         {props => (
           <ToolbarForm
             {...props}
-            searchLabel="Filter Snapshots"
+            searchLabel="Filter snapshots"
             searchPlaceholder="Search for name, created...."
             searchable={!_loading}
             actionLabel="Create Snapshot"
