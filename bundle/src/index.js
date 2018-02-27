@@ -61,21 +61,19 @@ async function main() {
     {
       plugin: Sso,
       options: {
+        ssoUrl: 'https://sso.joyent.com',
+        baseUrl: BASE_URL,
+        apiBaseUrl: SDC_URL,
+        keyId: '/' + SDC_ACCOUNT + '/keys/' + SDC_KEY_ID,
+        keyPath: SDC_KEY_PATH || join(homedir(), '.ssh/id_rsa'),
+        permissions: { cloudapi: ['/my/*'] },
+        isDev: NODE_ENV === 'development',
         cookie: {
-          password: COOKIE_PASSWORD,
-          domain: COOKIE_DOMAIN,
-          isSecure: false,
           isHttpOnly: true,
-          ttl: 1000 * 60 * 60 // 1 hour
-        },
-        sso: {
-          keyPath: SDC_KEY_PATH || join(homedir(), '.ssh/id_rsa'),
-          keyId: '/' + SDC_ACCOUNT + '/keys/' + SDC_KEY_ID,
-          apiBaseUrl: SDC_URL,
-          url: 'https://sso.joyent.com/login',
-          permissions: { cloudapi: ['/my/*'] },
-          baseUrl: BASE_URL,
-          isDev: NODE_ENV === 'development'
+          isSecure: false,
+          password: COOKIE_PASSWORD,
+          ttl: 1000 * 60 * 60, // 1 hour
+          domain: COOKIE_DOMAIN
         }
       }
     },

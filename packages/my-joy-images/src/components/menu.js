@@ -1,7 +1,6 @@
 import React from 'react';
 import { Margin } from 'styled-components-spacing';
 import { NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import forceArray from 'force-array';
 
 import {
@@ -34,15 +33,6 @@ const Menu = ({ links = [] }) => {
       </Margin>
     </ViewContainer>
   );
-};
-
-Menu.propTypes = {
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      pathname: PropTypes.string
-    })
-  )
 };
 
 export default Menu;

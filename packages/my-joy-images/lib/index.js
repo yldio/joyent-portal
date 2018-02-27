@@ -85,10 +85,12 @@ exports.register = async server => {
           const res = await Wreck.request('GET', location);
           const body = await Wreck.read(res);
 
-          const _body = body.toString().replace(
-            /https:\/\/fonts\.gstatic\.com/g,
-            `http://${url.host}/font`
-          );
+          const _body = body
+            .toString()
+            .replace(
+              /https:\/\/fonts\.gstatic\.com/g,
+              `http://${url.host}/font`
+            );
 
           return h
             .response(_body)

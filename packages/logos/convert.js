@@ -20,13 +20,16 @@ main(async () => {
   await forEach(files, async file => {
     const svg = await readFile(file, 'utf-8');
     const jsx = converter.convert(svg);
-    const header = jsx.match(/(^<svg)([^>]*)/ig)[0];
+    const header = jsx.match(/(^<svg)([^>]*)/gi)[0];
 
     await writeFile(
       file.replace(/logos\/assets\//, '/logos/src/').replace(/\.svg$/, '.js'),
       `
       import React from 'react';\n
-      export default (props) => (${jsx.replace(header, `${header} {...props}`)});
+      export default (props) => (${jsx.replace(
+        header,
+        `${header} {...props}`
+      )});
     `
     );
   });

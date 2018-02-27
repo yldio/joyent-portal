@@ -6,14 +6,19 @@
   "main": "dist/umd/index.js",
   "jsnext:main": "dist/es/index.js",
   "module": "dist/es/index.js",
+  "files": ["dist"],
   "scripts": {
-    "test-ci": "redrun -s test",
-    "test": "NODE_ENV=test joyent-react-scripts test --env=jsdom",
-    "compile:es": "babel src --out-dir dist/es",
-    "compile:umd": "UMD=1 babel src --out-dir dist/umd",
-    "compile": "redrun -p compile:*",
-    "dev": "NODE_ENV=development npm run compile -- -- --watch --source-maps inline",
-    "prepublish": "NODE_ENV=production npm run compile"
+    "dev": "NODE_ENV=development redrun -p build:es build:umd -- --watch --source-maps inline",
+    "build:test": "NODE_ENV=production redrun build:lib",
+    "build:lib": "NODE_ENV=production redrun -p build:es build:umd",
+    "build:bundle": "echo 0",
+    "prepublish": "NODE_ENV=production redrun build:lib",
+    "lint": "redrun lint:ci -- -- --fix",
+    "lint:ci": "NODE_ENV=test eslint . --ext .js --ext .md",
+    "test": "echo 0",
+    "test:ci": "redrun test",
+    "build:es": "babel src --out-dir dist/es",
+    "build:umd": "UMD=1 babel src --out-dir dist/umd"
   },
   "devDependencies": {
     "apr-for-each": "^3.0.3",
@@ -27,7 +32,7 @@
     "htmltojsx": "^0.3.0",
     "joyent-react-scripts": "^7.3.0",
     "mz": "^2.7.0",
-    "prettier": "^1.10.2",
+    "prettier": "^1.11.0",
     "react": "^16.2.0",
     "redrun": "^5.10.5"
   },

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
-import { Margin, Padding } from 'styled-components-spacing';
+import { Padding } from 'styled-components-spacing';
 
 import Container from '../layout/view-container';
 
