@@ -7,9 +7,6 @@ const Brok = require('brok');
 const { homedir } = require('os');
 const { join } = require('path');
 
-process.env.SDC_KEY_PATH =
-  process.env.SDC_KEY_PATH || join(homedir(), '.ssh/id_rsa');
-
 const Sso = require('hapi-triton-auth');
 const Nav = require('joyent-navigation');
 const Api = require('cloudapi-gql');
@@ -72,7 +69,7 @@ async function main() {
           ttl: 1000 * 60 * 60 // 1 hour
         },
         sso: {
-          keyPath: SDC_KEY_PATH,
+          keyPath: SDC_KEY_PATH || join(homedir(), '.ssh/id_rsa'),
           keyId: '/' + SDC_ACCOUNT + '/keys/' + SDC_KEY_ID,
           apiBaseUrl: SDC_URL,
           url: 'https://sso.joyent.com/login',
@@ -89,7 +86,12 @@ async function main() {
       plugin: Ui
     },
     {
-      plugin: Api
+      plugin: Api,
+      options: {
+        keyId: '/' + SDC_ACCOUNT + '/keys/' + SDC_KEY_ID,
+        keyPath: SDC_KEY_PATH || join(homedir(), '.ssh/id_rsa'),
+        apiBaseUrl: SDC_URL
+      }
     }
   ]);
 
