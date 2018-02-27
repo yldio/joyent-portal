@@ -151,10 +151,10 @@ export const Package = ({
       {bytes(memory, { decimalPlaces: 0, unitSeparator: ' ' })}
     </TableTd>
     <TableTd right selected={selected} bold={sortBy === 'disk'}>
-      <Margin inline right={1}>{bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })}</Margin>
-      {ssd && (
-          <Sup badge>SSD</Sup>
-      )}
+      <Margin inline right={1}>
+        {bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })}
+      </Margin>
+      {ssd && <Sup badge>SSD</Sup>}
     </TableTd>
     {hasVms && (
       <TableTd right bold={sortBy === 'vcpus'} selected={selected}>
