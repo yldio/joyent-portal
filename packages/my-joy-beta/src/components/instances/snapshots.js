@@ -35,14 +35,7 @@ const loadingState = {
   remove: 'Removing...'
 };
 
-export const Item = ({
-  name,
-  state,
-  created,
-  onStart,
-  onRemove,
-  mutating
-}) => (
+export const Item = ({ name, state, created, onStart, onRemove, mutating }) => (
   <TableTr>
     {!mutating ? (
       <Fragment>

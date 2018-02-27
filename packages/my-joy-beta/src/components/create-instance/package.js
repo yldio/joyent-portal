@@ -130,7 +130,7 @@ export const Package = ({
   sortBy,
   onRowClick
 }) => (
-  <TableTrActionable onClick={() => onRowClick({ id, selected })}>
+  <TableTrActionable onClick={() => onRowClick(id)}>
     <TableTd right selected={selected}>
       <FormGroup name="package" value={id} type="radio" field={Field} fluid>
         <Radio onBlur={null} noMargin>

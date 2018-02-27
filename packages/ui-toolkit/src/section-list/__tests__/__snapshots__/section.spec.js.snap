@@ -276,7 +276,8 @@ exports[`SectionList SectionList 1`] = `
   padding: 0.8125rem 0rem;
   margin: 1.125rem 0 0 0;
   max-height: 50px;
-  overflow-x: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;

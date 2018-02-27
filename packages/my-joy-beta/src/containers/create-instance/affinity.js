@@ -20,7 +20,7 @@ const FORM_NAME_EDIT = i => `CREATE-INSTANCE-AFFINITY-EDIT-${i}`;
 
 const RULE_DEFAULTS = {
   'rule-instance-name': '',
-  'rule-instance-conditional': 'must',
+  'rule-instance-conditional': 'should',
   'rule-instance-placement': 'same',
   'rule-instance-tag-key-pattern': 'equalling',
   'rule-instance-tag-value-pattern': 'equalling',

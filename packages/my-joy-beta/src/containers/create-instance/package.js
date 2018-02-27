@@ -239,8 +239,8 @@ export default compose(
       handleResetFilters: () => {
         dispatch(destroy(`${FORM_NAME}-filters`));
       },
-      handleRowClick: ({ id, selected }) => {
-        dispatch(change(FORM_NAME, id, !selected));
+      handleRowClick: id => {
+        dispatch(change(FORM_NAME, 'package', id));
       },
       handleSortBy: (newSortBy, sortOrder) => {
         dispatch([

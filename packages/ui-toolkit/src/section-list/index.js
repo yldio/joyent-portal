@@ -10,7 +10,8 @@ const UnorderedList = styled.ul`
   padding: ${remcalc(13)} ${remcalc(0)};
   margin: ${remcalc(18)} 0 0 0;
   max-height: 50px;
-  overflow-x: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
   box-sizing: border-box;
   display: inline-flex;
   position: relative;
