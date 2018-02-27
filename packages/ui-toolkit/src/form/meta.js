@@ -1,5 +1,5 @@
 import { Subscriber } from 'joy-react-broadcast';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
 import React from 'react';
 import remcalc from 'remcalc';
@@ -64,7 +64,7 @@ const Meta = props => {
     const isRight = !props.left;
 
     return (
-      <StyledLabel
+      msg ? <StyledLabel
         {...meta}
         {...props}
         error={hasError}
@@ -73,7 +73,7 @@ const Meta = props => {
         right={isRight}
       >
         {msg}
-      </StyledLabel>
+      </StyledLabel> : null
     );
   };
 
