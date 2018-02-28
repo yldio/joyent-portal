@@ -164,7 +164,7 @@ export default compose(
       );
 
       const index = new Fuse(tags, {
-        keys: tags.length ? Object.keys(tags[0]) : ['name']
+        keys: ['name', 'value']
       });
 
       return {
