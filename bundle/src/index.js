@@ -8,7 +8,7 @@ const { homedir } = require('os');
 const { join } = require('path');
 
 const Sso = require('hapi-triton-auth');
-const Nav = require('joyent-navigation');
+const Nav = require('my-joy-navigation');
 const Api = require('cloudapi-gql');
 
 const {
