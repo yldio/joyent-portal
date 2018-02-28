@@ -6,10 +6,9 @@ import remcalc from 'remcalc';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
-import find from 'lodash.find';
-import Index from '@state/gen-index';
 import intercept from 'apr-intercept';
 import { set } from 'react-redux-values';
+import Fuse from 'fuse.js';
 
 import {
   ViewContainer,
@@ -105,6 +104,9 @@ export default compose(
     }),
     props: ({ data: { images, loading, error, refetch } }) => ({
       images,
+      index: new Fuse(images, {
+        keys: ['name', 'os', 'version', 'state', 'type']
+      }),
       loading,
       error
     })
@@ -129,9 +131,7 @@ export default compose(
       );
 
       const filtered = filter
-        ? Index(images)
-            .search(filter)
-            .map(({ ref }) => find(images, ['id', ref]))
+        ? index.search(filter)
         : images;
 
       return {
