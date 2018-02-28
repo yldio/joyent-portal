@@ -9,6 +9,7 @@ import intercept from 'apr-intercept';
 import find from 'lodash.find';
 import get from 'lodash.get';
 import remcalc from 'remcalc';
+import Fuse from 'fuse.js';
 
 import {
   H3,
@@ -131,10 +132,15 @@ export default compose(
         refetch,
         ...rest
       } = data;
+
       const image = find(get(rest, 'images', []), ['name', variables.name]);
       const tags = get(image || {}, 'tags', []);
+      const index = new Fuse(tags, {
+        keys: ['name', 'value']
+      });
 
       return {
+        index,
         image: image || {},
         tags,
         loading,
@@ -144,11 +150,17 @@ export default compose(
     }
   }),
   connect(
-    ({ values }, { image }) => ({
-      addOpen: get(values, `${image.id}-add-open`, false),
-      mutationError: get(values, `${image.id}-mutation-error`, false),
-      mutating: get(values, `${image.id}-mutating`, false)
-    }),
+    ({ values, form }, { index, tags, image }) => {
+      const filter = get(form, `${TAGS_TOOLBAR_FORM}.values.filter`, false);
+      const filtered = filter ? index.search(filter) : tags;
+
+      return {
+        tags: filtered,
+        addOpen: get(values, `${image.id}-add-open`, false),
+        mutationError: get(values, `${image.id}-mutation-error`, false),
+        mutating: get(values, `${image.id}-mutating`, false)
+      };
+    },
     (dispatch, { image, tags = [], updateTags, refetch }) => ({
       handleToggleAddOpen: addOpen => {
         dispatch(set({ name: `${image.id}-add-open`, value: addOpen }));
