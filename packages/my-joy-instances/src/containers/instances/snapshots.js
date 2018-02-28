@@ -182,7 +182,7 @@ export default compose(
       const snapshots = get(instance, 'snapshots', []);
 
       const index = new Fuse(snapshots, {
-        keys: snapshots.length ? Object.keys(snapshots[0]) : ['name']
+        keys: ['name', 'status', 'created']
       });
 
       return {

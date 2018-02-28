@@ -197,7 +197,7 @@ export default compose(
       }));
 
       const index = new Fuse(instances, {
-        keys: instances.length ? Object.keys(instances[0]) : ['name']
+        keys: ['id', 'name', 'status', 'created']
       });
 
       return {

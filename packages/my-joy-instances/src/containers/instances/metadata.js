@@ -10,6 +10,7 @@ import find from 'lodash.find';
 import get from 'lodash.get';
 import intercept from 'apr-intercept';
 import remcalc from 'remcalc';
+import Fuse from 'fuse.js';
 
 import {
   ViewContainer,
@@ -170,7 +171,8 @@ export default compose(
         ({ name = '' }) => name !== 'user-script'
       );
 
-      const metadata = values.map(({ name, value }) => ({
+      const metadata = values.map(({ id, name, value }) => ({
+        id,
         form: METADATA_FORM_KEY(name),
         initialValues: {
           name,
@@ -178,7 +180,12 @@ export default compose(
         }
       }));
 
+      const index = new Fuse(values, {
+        keys: ['name', 'value']
+      });
+
       return {
+        index,
         metadata,
         instance,
         loading,
@@ -188,16 +195,25 @@ export default compose(
     }
   }),
   connect(
-    ({ values }, { metadata, ownProps }) => ({
-      ...ownProps,
-      addOpen: get(values, 'add-metadata-open', false),
-      metadata: metadata.map(({ form, ...metadata }) => ({
-        ...metadata,
-        form,
-        expanded: get(values, `${form}-expanded`, false),
-        removing: get(values, `${form}-removing`, false)
-      }))
-    }),
+    ({ values, form }, { metadata, index, ownProps }) => {
+      // get search value
+      const filter = get(form, `${MENU_FORM_NAME}.values.filter`, false);
+      // if user is searching something, get items that match that query
+      const filtered = filter
+        ? index.search(filter).map(({ id }) => find(metadata, ['id', id]))
+        : metadata;
+
+      return {
+        ...ownProps,
+        addOpen: get(values, 'add-metadata-open', false),
+        metadata: filtered.map(({ form, ...metadata }) => ({
+          ...metadata,
+          form,
+          expanded: get(values, `${form}-expanded`, false),
+          removing: get(values, `${form}-removing`, false)
+        }))
+      };
+    },
     (dispatch, ownProps) => {
       const {
         instance,
