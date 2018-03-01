@@ -26,9 +26,16 @@ import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import getPackages from '@graphql/get-packages.gql';
 import priceData from '@data/prices.json';
+import { Forms, Values } from '@root/constants';
 
-const FORM_NAME = 'create-instance-package';
-const FILTERS = 'create-instance-package-filters';
+const { IC_PKG_F_SELECT, IC_PKG_F_FILTER } = Forms;
+
+const {
+  IC_PKG_V_PROCEEDED,
+  IC_PKG_V_SORT_BY,
+  IC_PKG_V_SORT_ORDER,
+  IC_IMG_V_VMS
+} = Values;
 
 const PackageContainer = ({
   expanded,
@@ -69,7 +76,7 @@ const PackageContainer = ({
       </Description>
     ) : null}
     <ReduxForm
-      form={`${FORM_NAME}-filters`}
+      form={IC_PKG_F_FILTER}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
     >
@@ -80,7 +87,7 @@ const PackageContainer = ({
       }
     </ReduxForm>
     <ReduxForm
-      form={FORM_NAME}
+      form={IC_PKG_F_SELECT}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
       onSubmit={handleNext}
@@ -162,37 +169,37 @@ export default compose(
   }),
   connect(
     ({ form, values }, { packages, ...ownProps }) => {
-      const proceeded = get(values, 'create-instance-package-proceeded', false);
-      const _sortBy = get(values, 'packages-list-sort-by', 'price');
-      const _sortOrder = get(values, 'packages-list-sort-order', 'asc');
-      const ssdOnly = get(form, `${FILTERS}.values.ssd`, false);
+      const proceeded = get(values, IC_PKG_V_PROCEEDED, false);
+      const _sortBy = get(values, IC_PKG_V_SORT_BY, 'price');
+      const _sortOrder = get(values, IC_PKG_V_SORT_ORDER, 'asc');
+      const ssdOnly = get(form, `${IC_PKG_F_FILTER}.values.ssd`, false);
 
       const computeOptimized = get(
         form,
-        `${FILTERS}.values.compute-optimized`,
+        `${IC_PKG_F_FILTER}.values.compute-optimized`,
         false
       );
 
       const generalPurpose = get(
         form,
-        `${FILTERS}.values.general-purpose`,
+        `${IC_PKG_F_FILTER}.values.general-purpose`,
         false
       );
 
       const storageOptimized = get(
         form,
-        `${FILTERS}.values.storage-optimized`,
+        `${IC_PKG_F_FILTER}.values.storage-optimized`,
         false
       );
 
       const memoryOptimized = get(
         form,
-        `${FILTERS}.values.memory-optimized`,
+        `${IC_PKG_F_FILTER}.values.memory-optimized`,
         false
       );
 
-      const vmSelected = get(form, 'create-instance-vms.values.vms', false);
-      const pkgSelected = get(form, `${FORM_NAME}.values.package`, null);
+      const vmSelected = get(values, IC_IMG_V_VMS, true);
+      const pkgSelected = get(form, `${IC_PKG_F_SELECT}.values.package`, null);
       const selected = find(packages, ['id', pkgSelected]);
 
       const sorted = sortBy(packages, [_sortBy]);
@@ -228,31 +235,25 @@ export default compose(
     },
     (dispatch, { history }) => ({
       handleNext: () => {
-        dispatch(
-          set({ name: 'create-instance-package-proceeded', value: true })
-        );
-
+        dispatch(set({ name: IC_PKG_V_PROCEEDED, value: true }));
         return history.push(`/~create/tags${history.location.search}`);
       },
       handleEdit: () => {
         return history.push(`/~create/package${history.location.search}`);
       },
       handleResetFilters: () => {
-        dispatch(destroy(`${FORM_NAME}-filters`));
+        dispatch(destroy(IC_PKG_F_FILTER));
       },
       handleRowClick: id => {
-        dispatch(change(FORM_NAME, 'package', id));
+        dispatch(change(IC_PKG_F_SELECT, 'package', id));
       },
       handleSortBy: (newSortBy, sortOrder) => {
         dispatch([
           set({
-            name: `packages-list-sort-order`,
+            name: IC_PKG_V_SORT_BY,
             value: sortOrder === 'desc' ? 'asc' : 'desc'
           }),
-          set({
-            name: `packages-list-sort-by`,
-            value: newSortBy
-          })
+          set({ name: IC_PKG_V_SORT_ORDER, value: newSortBy })
         ]);
       }
     })

@@ -19,6 +19,10 @@ import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import imageData from '@data/images-map.json';
 import GetImages from '@graphql/get-images.gql';
+import { Forms, Values } from '@root/constants';
+
+const { IC_IMG_F } = Forms;
+const { IC_IMG_V_PROCEEDED, IC_IMG_V_VMS } = Values;
 
 const HarcodedImage = (image = {}) => (
   <Fragment>
@@ -27,7 +31,7 @@ const HarcodedImage = (image = {}) => (
     </Title>
     {image.id ? (
       <ReduxForm
-        form="create-instance-image"
+        form={IC_IMG_F}
         destroyOnUnmount={false}
         forceUnregisterOnUnmount={true}
         initialValues={{ image: image.id }}
@@ -85,7 +89,7 @@ const ImageContainer = ({
         </Description>
       ) : null}
       <ReduxForm
-        form="create-instance-image"
+        form={IC_IMG_F}
         destroyOnUnmount={false}
         forceUnregisterOnUnmount={true}
         initialValues={{ vms: true }}
@@ -130,9 +134,9 @@ const ImageContainer = ({
 export default compose(
   connect(
     ({ form, values }, ownProps) => {
-      const proceeded = get(values, 'create-instance-image-proceeded', false);
-      const image = get(form, 'create-instance-image.values.image', null);
-      const vms = get(values, 'vms', true);
+      const proceeded = get(values, IC_IMG_V_PROCEEDED, false);
+      const image = get(form, `${IC_IMG_F}.values.image`, null);
+      const vms = get(values, IC_IMG_V_VMS, true);
 
       return {
         ...ownProps,
@@ -143,19 +147,17 @@ export default compose(
     },
     (dispatch, { history }) => ({
       handleNext: () => {
-        dispatch(set({ name: 'create-instance-image-proceeded', value: true }));
-
+        dispatch(set({ name: IC_IMG_V_PROCEEDED, value: true }));
         return history.push(`/~create/package${history.location.search}`);
       },
       handleEdit: () => {
         return history.push(`/~create/image${history.location.search}`);
       },
       handleSelectLatest: ({ versions }) => {
-        const id = versions[0].id;
-        return dispatch(change('create-instance-image', 'image', id));
+        return dispatch(change(IC_IMG_F, 'image', versions[0].id));
       },
       setImageType: isVm => {
-        return dispatch(set({ name: 'vms', value: isVm }));
+        return dispatch(set({ name: IC_IMG_V_VMS, value: isVm }));
       }
     })
   ),

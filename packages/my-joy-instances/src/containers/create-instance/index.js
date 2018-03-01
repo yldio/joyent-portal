@@ -11,7 +11,7 @@ import intercept from 'apr-intercept';
 import constantCase from 'constant-case';
 import queryString from 'query-string';
 import get from 'lodash.get';
-import Values from 'lodash.values';
+import lvalues from 'lodash.values';
 import omit from 'lodash.omit';
 import uniqBy from 'lodash.uniqby';
 
@@ -36,8 +36,18 @@ import CNS from '@containers/create-instance/cns';
 import Affinity from '@containers/create-instance/affinity';
 import CreateInstanceMutation from '@graphql/create-instance.gql';
 import parseError from '@state/parse-error';
+import { Forms, Values } from '@root/constants';
 
-const CREATE_FORM = 'CREATE-INSTANCE';
+const { IC_F, IC_NAME_F, IC_IMG_F, IC_PKG_F_SELECT, IC_NW_F, IC_US_F } = Forms;
+
+const {
+  IC_MD_V_MD,
+  IC_TAG_V_TAGS,
+  IC_AFF_V_AFF,
+  IC_CNS_V_ENABLED,
+  IC_CNS_V_SERVICES,
+  IC_FW_F_ENABLED
+} = Values;
 
 const CreateInstance = ({
   step,
@@ -137,7 +147,7 @@ const CreateInstance = ({
           </Message>
         </Margin>
       ) : null}
-      <ReduxForm form={CREATE_FORM} onSubmit={handleSubmit}>
+      <ReduxForm form={IC_F} onSubmit={handleSubmit}>
         {({ handleSubmit, submitting }) => (
           <form onSubmit={handleSubmit}>
             <Button disabled={disabled} loading={submitting}>
@@ -154,20 +164,19 @@ export default compose(
   graphql(CreateInstanceMutation, { name: 'createInstance' }),
   connect(({ form, values }, { match, location }) => {
     const query = queryString.parse(location.search);
-    const FORM_NAME = 'create-instance-name';
     const step = get(match, 'params.step', 'name');
 
-    const error = get(form, `${CREATE_FORM}.error`, null);
-    const name = get(form, `${FORM_NAME}.values.name`, '');
-    const image = get(form, 'create-instance-image.values.image', '');
-    const pkg = get(form, 'create-instance-package.values.package', '');
-    const networks = get(form, 'CREATE-INSTANCE-NETWORKS.values', {});
+    const error = get(form, `${IC_F}.error`, null);
+    const name = get(form, `${IC_NAME_F}.values.name`, '');
+    const image = get(form, `${IC_IMG_F}.values.image`, '');
+    const pkg = get(form, `${IC_PKG_F_SELECT}.values.package`, '');
+    const networks = get(form, `${IC_NW_F}.values`, {});
 
     const enabled =
       name.length &&
       image.length &&
       pkg.length &&
-      Values(networks).filter(Boolean).length;
+      lvalues(networks).filter(Boolean).length;
 
     if (!enabled) {
       return {
@@ -178,17 +187,16 @@ export default compose(
       };
     }
 
-    const metadata = get(values, 'create-instance-metadata', []);
-    const receivedTags = get(values, 'create-instance-tags', []);
-    const affinity = get(values, 'create-instance-affinity', []);
-    const cns = get(values, 'create-instance-cns-enabled', true);
-    const cnsServices = get(values, 'create-instance-cns-services', null);
-    const userScript = get(values, 'create-instance-user-script', {});
-    const tags = receivedTags.map(a => omit(a, 'expanded'));
+    const metadata = get(values, IC_MD_V_MD, []);
+    const tags = get(values, IC_TAG_V_TAGS, []).map(tag => tag); // clone
+    const affinity = get(values, IC_AFF_V_AFF, null);
+    const cns = get(values, IC_CNS_V_ENABLED, true);
+    const cnsServices = get(values, IC_CNS_V_SERVICES, null);
+    const userScript = get(form, `${IC_US_F}.values.value`, '');
 
     const firewall_enabled = get(
       form,
-      'CREATE-INSTANCE-FIREWALL.values.enabled',
+      `${IC_FW_F_ENABLED}.values.enabled`,
       false
     );
 
@@ -236,39 +244,46 @@ export default compose(
       history
     } = ownProps;
 
+    const parseAffRule = ({
+      conditional,
+      placement,
+      identity,
+      key,
+      pattern,
+      value
+    }) => {
+      const type = constantCase(
+        `${conditional}_${placement === 'same' ? 'equal' : 'not_equal'}`
+      );
+
+      const patterns = {
+        equalling: value => value,
+        'not-equalling': value => `/^!${value}$/`,
+        containing: value => `/${value}/`,
+        starting: value => `/^${value}/`,
+        ending: value => `/${value}$/`
+      };
+
+      const _key = identity === 'name' ? 'instance' : key;
+      const _value = patterns[pattern](type === 'name' ? name : value);
+
+      return {
+        type,
+        key: _key,
+        value: _value
+      };
+    };
+
     return {
       handleSubmit: async () => {
-        const _affinity = affinity
-          .map(aff => ({
-            ...aff,
-            value: aff.type === 'name' ? aff.name : aff.value
-          }))
-          .map(({ conditional, placement, identity, key, pattern, value }) => {
-            const type = constantCase(
-              `${conditional}_${placement === 'same' ? 'equal' : 'not_equal'}`
-            );
-
-            const patterns = {
-              equalling: value => value,
-              'not-equalling': value => `/^!${value}$/`,
-              containing: value => `/${value}/`,
-              starting: value => `/^${value}/`,
-              ending: value => `/${value}$/`
-            };
-
-            const _key = identity === 'name' ? 'instance' : key;
-            const _value = patterns[pattern](value);
-
-            return {
-              type,
-              key: _key,
-              value: _value
-            };
-          });
-
+        const _affinity = affinity ? parseAffRule(affinity) : null;
         const _name = name.toLowerCase();
         const _metadata = metadata.map(a => omit(a, 'open'));
-        const _tags = uniqBy(tags, 'name').map(a => omit(a, 'expanded'));
+
+        const _tags = uniqBy(tags.map(a => omit(a, 'expanded')), 'name').map(
+          a => omit(a, 'expanded')
+        );
+
         const _networks = Object.keys(networks).filter(
           network => networks[network]
         );
@@ -283,7 +298,7 @@ export default compose(
               name: _name,
               package: pkg,
               image,
-              affinity: _affinity.length ? _affinity : undefined,
+              affinity: _affinity,
               metadata: _metadata,
               tags: _tags,
               firewall_enabled,
@@ -299,7 +314,6 @@ export default compose(
         }
 
         dispatch([destroyAll(), forms.map(name => destroy(name))]);
-
         history.push(`/${res.data.createMachine.name}`);
       }
     };

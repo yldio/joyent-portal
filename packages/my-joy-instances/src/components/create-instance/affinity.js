@@ -39,7 +39,7 @@ export const Rule = ({ valid, ...rule }) => (
         <Select
           style={style}
           touched={rule.conditional}
-          width={remcalc(66)}
+          width={remcalc(72)}
           embedded
         >
           <option value="should">should</option>
@@ -129,7 +129,7 @@ export const Rule = ({ valid, ...rule }) => (
   </Margin>
 );
 
-export const Header = rule => (
+export const Header = ({ rule }) => (
   <Fragment>
     <Bold>{titleCase(rule.conditional)}:</Bold> be on a {rule.placement} node as
     the instance(s) identified by the instance {rule.type}

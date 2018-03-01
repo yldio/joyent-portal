@@ -9,16 +9,17 @@ Array [
 <span
     className="c0"
 >
-    
+    Must
     :
 </span>,
   " be on a ",
+  "same",
   " node as the instance(s) identified by the instance ",
+  "name",
   " ",
-  "key “",
-  "\\" and the instance tag value",
-  " ",
-  " \\"",
+  "equalling",
+  " “",
+  "test",
   "”",
 ]
 `;
@@ -32,16 +33,21 @@ Array [
 <span
     className="c0"
 >
-    
+    Must
     :
 </span>,
   " be on a ",
+  "same",
   " node as the instance(s) identified by the instance ",
+  "tag",
   " ",
   "key “",
+  "two",
   "\\" and the instance tag value",
   " ",
+  "equalling",
   " \\"",
+  "one",
   "”",
 ]
 `;
@@ -83,7 +89,7 @@ exports[`renders <Rule/> without throwing 1`] = `
 }
 
 .c5 {
-  width: 4.125rem;
+  width: 4.5rem;
   position: relative;
   padding: 0.75rem;
   padding-right: 1.5625rem;
@@ -383,8 +389,8 @@ exports[`renders <Rule/> without throwing 1`] = `
   appearance: none;
   min-height: 0;
   max-width: 22.1875rem;
-  width: 4.125rem;
-  max-width: 4.125rem;
+  width: 4.5rem;
+  max-width: 4.5rem;
   text-overflow: ellipsis;
 }
 
@@ -685,7 +691,7 @@ exports[`renders <Rule/> without throwing 1`] = `
             "lineHeight": "3rem",
           }
         }
-        width="4.125rem"
+        width="4.5rem"
       >
         <select
           className="c5 c6"
@@ -698,7 +704,7 @@ exports[`renders <Rule/> without throwing 1`] = `
               "lineHeight": "3rem",
             }
           }
-          width="4.125rem"
+          width="4.5rem"
         >
           <option
             value="should"
@@ -945,7 +951,7 @@ exports[`renders <Rule/> without throwing 2`] = `
 }
 
 .c5 {
-  width: 4.125rem;
+  width: 4.5rem;
   position: relative;
   padding: 0.75rem;
   padding-right: 1.5625rem;
@@ -1245,8 +1251,8 @@ exports[`renders <Rule/> without throwing 2`] = `
   appearance: none;
   min-height: 0;
   max-width: 22.1875rem;
-  width: 4.125rem;
-  max-width: 4.125rem;
+  width: 4.5rem;
+  max-width: 4.5rem;
   text-overflow: ellipsis;
 }
 
@@ -1547,7 +1553,7 @@ exports[`renders <Rule/> without throwing 2`] = `
             "lineHeight": "3rem",
           }
         }
-        width="4.125rem"
+        width="4.5rem"
       >
         <select
           className="c5 c6"
@@ -1560,7 +1566,7 @@ exports[`renders <Rule/> without throwing 2`] = `
               "lineHeight": "3rem",
             }
           }
-          width="4.125rem"
+          width="4.5rem"
         >
           <option
             value="should"

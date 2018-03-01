@@ -104,7 +104,7 @@ export const AddServiceForm = ({
         <Margin top={3.5} left={2}>
           <Button
             type="submit"
-            disabled={submitting || invalid}
+            disabled={submitting}
             loading={submitting}
             inline
           >

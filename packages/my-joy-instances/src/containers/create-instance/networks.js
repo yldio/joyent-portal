@@ -15,8 +15,14 @@ import Title from '@components/create-instance/title';
 import Network from '@components/create-instance/network';
 import Description from '@components/description';
 import ListNetworks from '@graphql/list-networks.gql';
+import { Forms, Values } from '@root/constants';
 
-const FORM_NAME = 'CREATE-INSTANCE-NETWORKS';
+const { IC_NW_F } = Forms;
+const {
+  IC_NW_V_PROCEEDED,
+  IC_NW_V_INFO_EXPANDED,
+  IC_NW_V_MACHINES_EXPANDED
+} = Values;
 
 export const Networks = ({
   networks = [],
@@ -62,7 +68,7 @@ export const Networks = ({
     ) : null}
     {loading && expanded ? <StatusLoader /> : null}
     <ReduxForm
-      form={FORM_NAME}
+      form={IC_NW_F}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
       initialValues={initialValues}
@@ -128,15 +134,10 @@ export default compose(
   }),
   connect(
     ({ values, form }, { networks }) => {
-      const selected = get(form, `${FORM_NAME}.values`, {});
+      const proceeded = get(values, IC_NW_V_PROCEEDED, false);
+      const selected = get(form, `${IC_NW_F}.values`, {});
       const empty = id => !includes(Object.keys(selected), id);
       const _public = find(networks, ['name', 'Joyent-SDC-Public']);
-
-      const proceeded = get(
-        values,
-        'create-instance-networks-proceeded',
-        false
-      );
 
       const initialValues = _public
         ? {
@@ -151,22 +152,14 @@ export default compose(
 
         return {
           ...network,
+          id,
           name,
           selected:
             empty(id) && name === 'Joyent-SDC-Public'
               ? true
               : Boolean(selected[id]),
-          infoExpanded: get(
-            values,
-            `create-instance-networks-${id}-info-expanded`,
-            false
-          ),
-          machinesExpanded: get(
-            values,
-            `create-instance-networks-${id}-machines-expanded`,
-            false
-          ),
-          id
+          machinesExpanded: get(values, IC_NW_V_MACHINES_EXPANDED(id), false),
+          infoExpanded: get(values, IC_NW_V_INFO_EXPANDED(id), false)
         };
       });
 
@@ -179,33 +172,21 @@ export default compose(
     },
     (dispatch, { history }) => ({
       handleNext: () => {
-        dispatch(
-          set({ name: 'create-instance-networks-proceeded', value: true })
-        );
-
+        dispatch(set({ name: IC_NW_V_PROCEEDED, value: true }));
         return history.push(`/~create/firewall${history.location.search}`);
       },
       handleEdit: () => {
-        dispatch(
-          set({ name: 'create-instance-networks-proceeded', value: true })
-        );
-
+        dispatch(set({ name: IC_NW_V_PROCEEDED, value: true }));
         return history.push(`/~create/networks${history.location.search}`);
       },
       setInfoExpanded: (id, expanded) => {
         return dispatch(
-          set({
-            name: `create-instance-networks-${id}-info-expanded`,
-            value: expanded
-          })
+          set({ name: IC_NW_V_INFO_EXPANDED(id), value: expanded })
         );
       },
       setMachinesExpanded: (id, expanded) => {
         return dispatch(
-          set({
-            name: `create-instance-networks-${id}-machines-expanded`,
-            value: expanded
-          })
+          set({ name: IC_NW_V_MACHINES_EXPANDED(id), value: expanded })
         );
       }
     })

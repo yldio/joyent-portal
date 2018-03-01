@@ -11,9 +11,13 @@ import { ScriptIcon, Button } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
-import UserScriptForm, { Overview } from '@components/create-instance/user-script';
+import UserScriptForm, {
+  Overview
+} from '@components/create-instance/user-script';
+import { Forms, Values } from '@root/constants';
 
-const FORM_NAME = 'create-instance-user-script';
+const { IC_US_F } = Forms;
+const { IC_US_V_PROCEEDED, IC_US_V_OPEN } = Values;
 
 export const UserScript = ({
   expanded,
@@ -44,7 +48,7 @@ export const UserScript = ({
         </Description>
         {formOpen ? (
           <ReduxForm
-            form={FORM_NAME}
+            form={IC_US_F}
             destroyOnUnmount={false}
             forceUnregisterOnUnmount={true}
             onSubmit={handleSubmit}
@@ -87,15 +91,11 @@ export const UserScript = ({
 export default compose(
   connect(
     ({ values, form }, ownProps) => {
-      const formOpen = get(values, 'create-instance-user-script-open', false);
-      const script = get(form, `${FORM_NAME}.values.value`, '');
+      const formOpen = get(values, IC_US_V_OPEN, false);
+      const script = get(form, `${IC_US_F}.values.value`, '');
       const lines = script.split('\n').length;
 
-      const proceeded = get(
-        values,
-        'create-instance-user-script-proceeded',
-        false
-      );
+      const proceeded = get(values, IC_US_V_PROCEEDED, false);
 
       return {
         script,
@@ -109,21 +109,19 @@ export default compose(
     (dispatch, { history }) => ({
       handleEdit: () => {
         dispatch([
-          set({ name: 'create-instance-user-script-proceeded', value: true }),
-          set({ name: `create-instance-user-script-open`, value: true })
+          set({ name: IC_US_V_PROCEEDED, value: true }),
+          set({ name: IC_US_V_OPEN, value: true })
         ]);
 
         return history.push(`/~create/user-script${history.location.search}`);
       },
       handleChangeOpenForm: value => {
-        return dispatch([
-          set({ name: `create-instance-user-script-open`, value })
-        ]);
+        return dispatch([set({ name: IC_US_V_OPEN, value })]);
       },
       handleSubmit: value => {
         dispatch([
-          set({ name: `create-instance-user-script-open`, value: false }),
-          set({ name: 'create-instance-user-script-proceeded', value: true })
+          set({ name: IC_US_V_OPEN, value: false }),
+          set({ name: IC_US_V_PROCEEDED, value: true })
         ]);
 
         return history.push(`/~create/networks${history.location.search}`);

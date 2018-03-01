@@ -14,9 +14,10 @@ import Title from '@components/create-instance/title';
 import { Rule, Header } from '@components/create-instance/affinity';
 import Description from '@components/description';
 import { addAffinityRule as validateRule } from '@state/validators';
+import { Forms, Values } from '@root/constants';
 
-const FORM_NAME_CREATE = 'CREATE-INSTANCE-AFFINITY-ADD';
-const FORM_NAME_EDIT = 'CREATE-INSTANCE-AFFINITY-EDIT';
+const { IC_AFF_F_ADD, IC_AFF_F_EDIT } = Forms;
+const { IC_AFF_V_ADD_OPEN, IC_AFF_V_EDIT_OPEN, IC_AFF_V_AFF } = Values;
 
 const RULE_DEFAULTS = {
   conditional: 'should',
@@ -69,7 +70,7 @@ export const Affinity = ({
       </Description>
     ) : null}
     <ReduxForm
-      form={FORM_NAME_EDIT}
+      form={IC_AFF_F_EDIT}
       initialValues={exitingRule}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={false}
@@ -83,7 +84,7 @@ export const Affinity = ({
             <KeyValue
               {...formProps}
               expanded={editOpen}
-              customHeader={<Header {...exitingRule} />}
+              customHeader={<Header rule={exitingRule} />}
               method="edit"
               input={inputProps => (
                 <Rule
@@ -105,7 +106,7 @@ export const Affinity = ({
       }
     </ReduxForm>
     <ReduxForm
-      form={FORM_NAME_CREATE}
+      form={IC_AFF_F_ADD}
       initialValues={RULE_DEFAULTS}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={false}
@@ -163,12 +164,12 @@ export const Affinity = ({
 
 export default compose(
   connect(({ values, form }, ownProps) => {
-    const editingRule = get(form, `${FORM_NAME_EDIT}.values`, null);
-    const creatingRule = get(form, `${FORM_NAME_CREATE}.values`, null);
-    const exitingRule = get(values, 'create-instance-affinity', null);
+    const editingRule = get(form, `${IC_AFF_F_EDIT}.values`, null);
+    const creatingRule = get(form, `${IC_AFF_F_ADD}.values`, null);
+    const exitingRule = get(values, IC_AFF_V_AFF, null);
 
-    const addOpen = get(values, 'create-instance-affinity-add-open', false);
-    const editOpen = get(values, 'create-instance-affinity-edit-open', false);
+    const addOpen = get(values, IC_AFF_V_ADD_OPEN, false);
+    const editOpen = get(values, IC_AFF_V_EDIT_OPEN, false);
 
     return {
       addOpen,
@@ -182,53 +183,44 @@ export default compose(
     shouldAsyncValidate: ({ trigger }) => {
       return trigger === 'submit';
     },
-    handleAsyncValidate: validateRule,
+    handleAsyncValidate: ({ type, ...aff }) => {
+      return type === 'name'
+        ? validateRule({ ...aff, key: 'default', type })
+        : validateRule({ ...aff, type });
+    },
     handleEdit: () => {
       return history.push(`/~create/affinity${history.location.search}`);
     },
     handleCreateAffinityRules: value => {
-      const toggleToClosed = set({
-        name: 'create-instance-affinity-add-open',
-        value: false
-      });
-
-      const appendAffinityRule = set({
-        name: 'create-instance-affinity',
-        value
-      });
-
       return dispatch([
-        destroy(FORM_NAME_CREATE),
-        toggleToClosed,
-        appendAffinityRule
+        destroy(IC_AFF_F_ADD),
+        set({ name: IC_AFF_V_ADD_OPEN, value: false }),
+        set({ name: IC_AFF_V_AFF, value })
       ]);
     },
     handleUpdateAffinityRule: value => {
       return dispatch([
-        destroy(FORM_NAME_EDIT),
-        set({ name: 'create-instance-affinity', value })
+        destroy(IC_AFF_F_EDIT),
+        set({ name: IC_AFF_V_EDIT_OPEN, value: false }),
+        set({ name: IC_AFF_V_AFF, value })
       ]);
     },
     handleChangeAddOpen: value => {
       return dispatch([
-        reset(FORM_NAME_CREATE),
-        set({ name: 'create-instance-affinity-add-open', value })
+        reset(IC_AFF_F_ADD),
+        set({ name: IC_AFF_V_ADD_OPEN, value })
       ]);
     },
     handleToggleExpanded: value => {
-      return dispatch(
-        set({ name: 'create-instance-affinity-edit-open', value })
-      );
+      return dispatch(set({ name: IC_AFF_V_EDIT_OPEN, value }));
     },
     handleCancelEdit: () => {
-      return dispatch([
-        set({ name: 'create-instance-affinity-edit-open', value: false })
-      ]);
+      return dispatch([set({ name: IC_AFF_V_EDIT_OPEN, value: false })]);
     },
     handleRemoveAffinityRule: () => {
       return dispatch([
-        destroy(FORM_NAME_EDIT),
-        set({ name: 'create-instance-affinity', value: null })
+        destroy(IC_AFF_F_EDIT),
+        set({ name: IC_AFF_V_AFF, value: null })
       ]);
     }
   }))
