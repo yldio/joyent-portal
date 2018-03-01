@@ -40,6 +40,10 @@ const StyledLabel = Label.extend`
   ${is('small')`
     width: ${remcalc(120)};
   `};
+
+  ${is('absolute')`
+    position: absolute;
+  `};
 `;
 
 const Meta = props => {

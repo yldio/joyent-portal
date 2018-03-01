@@ -20,7 +20,7 @@ import {
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import Tag from '@components/tags';
-import { fieldError } from '@root/constants';
+import { addTag as validateTag } from '@state/validators';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-TAGS-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-TAGS-EDIT-${i}`;
@@ -87,9 +87,9 @@ export const Tags = ({
       form={FORM_NAME_CREATE}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
-      onSubmit={handleAddTag}
       shouldAsyncValidate={shouldAsyncValidate}
       asyncValidate={handleAsyncValidate}
+      onSubmit={handleAddTag}
     >
       {props =>
         expanded && addOpen ? (
@@ -151,20 +151,10 @@ export default compose(
       dispatch(set({ name: 'create-instance-tags-proceeded', value: true }));
       return history.push(`/~create/tags${history.location.search}`);
     },
-    shouldAsyncValidate: ({ trigger }) => trigger === 'submit',
-    handleAsyncValidate: async ({ name = '', value = '' }) => {
-      const isNameValid = /^[a-zA-Z_.-]{1,16}$/.test(name);
-      const isValueValid = /^[a-zA-Z_.-]{1,16}$/.test(value);
-
-      if (isNameValid && isValueValid) {
-        return;
-      }
-
-      throw {
-        name: isNameValid ? null : fieldError,
-        value: isValueValid ? null : fieldError
-      };
+    shouldAsyncValidate: ({ trigger }) => {
+      return trigger === 'submit';
     },
+    handleAsyncValidate: validateTag,
     handleAddTag: value => {
       const toggleToClosed = set({
         name: `create-instance-tags-add-open`,

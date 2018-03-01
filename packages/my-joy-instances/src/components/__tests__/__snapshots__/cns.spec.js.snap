@@ -466,11 +466,6 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
 }
 
 .c7:focus {
@@ -498,23 +493,6 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
 .c7[disabled] {
   cursor: not-allowed;
   pointer-events: none;
-}
-
-.c7:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c7:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c7:active,
-.c7:active:hover,
-.c7:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
 }
 
 .c3 {
@@ -678,7 +656,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
       >
         <button
           className="c7 c8 c9"
-          disabled={true}
+          disabled={undefined}
           href=""
           type="submit"
         >

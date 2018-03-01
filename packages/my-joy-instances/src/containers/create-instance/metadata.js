@@ -13,6 +13,7 @@ import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
+import { addMetadata as validateMetadata } from '@state/validators';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-METADATA-ADD';
 const FORM_NAME_EDIT = i => `CREATE-INSTANCE-METADATA-EDIT-${i}`;
@@ -179,19 +180,7 @@ export default compose(
     shouldAsyncValidate: ({ trigger }) => {
       return trigger === 'submit';
     },
-    asyncValidate: async ({ name = '', value = '' }) => {
-      const isNameInvalid = name.length === 0;
-      const isValueInvalid = value.length === 0;
-
-      if (!isNameInvalid && !isValueInvalid) {
-        return;
-      }
-
-      throw {
-        name: isNameInvalid,
-        value: isValueInvalid
-      };
-    },
+    handleAsyncValidate: validateMetadata,
     handleAddMetadata: value => {
       const toggleToClosed = set({
         name: `create-instance-metadata-add-open`,

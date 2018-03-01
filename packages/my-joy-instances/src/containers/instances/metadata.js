@@ -28,6 +28,7 @@ import DeleteMetadata from '@graphql/delete-metadata.gql';
 import parseError from '@state/parse-error';
 import ToolbarForm from '@components/instances/toolbar';
 import Confirm from '@state/confirm';
+import { addMetadata as validateMetadata } from '@state/validators';
 
 import {
   AddForm as MetadataAddForm,
@@ -43,14 +44,14 @@ export const Metadata = ({
   addOpen,
   loading,
   error,
+  shouldAsyncValidate,
+  handleAsyncValidate,
   handleToggleAddOpen,
   handleUpdateExpanded,
   handleCancel,
   handleCreate,
   handleUpdate,
-  handleRemove,
-  shouldAsyncValidate,
-  asyncValidate
+  handleRemove
 }) => {
   const _loading = !(loading && !metadata.length) ? null : <StatusLoader />;
 
@@ -59,7 +60,7 @@ export const Metadata = ({
       form={ADD_FORM_NAME}
       onSubmit={handleCreate}
       shouldAsyncValidate={shouldAsyncValidate}
-      asyncValidate={asyncValidate}
+      asyncValidate={handleAsyncValidate}
     >
       {props => (
         <MetadataAddForm
@@ -94,9 +95,9 @@ export const Metadata = ({
           key={form}
           initialValues={initialValues}
           destroyOnUnmount={false}
-          onSubmit={handleUpdate}
           shouldAsyncValidate={shouldAsyncValidate}
-          asyncValidate={asyncValidate}
+          asyncValidate={handleAsyncValidate}
+          onSubmit={handleUpdate}
         >
           {props => (
             <MetadataEditForm
@@ -239,19 +240,7 @@ export default compose(
         shouldAsyncValidate: ({ trigger }) => {
           return trigger === 'submit';
         },
-        asyncValidate: async ({ name = '', value = '' }) => {
-          const isNameInvalid = name.length === 0;
-          const isValueInvalid = value.length === 0;
-
-          if (!isNameInvalid && !isValueInvalid) {
-            return;
-          }
-
-          throw {
-            name: isNameInvalid,
-            value: isValueInvalid
-          };
-        },
+        handleAsyncValidate: validateMetadata,
         handleCreate: async ({ name, value }) => {
           // call mutation
           const [err] = await intercept(

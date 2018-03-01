@@ -8,50 +8,48 @@ import { connect } from 'react-redux';
 import get from 'lodash.get';
 import remcalc from 'remcalc';
 
-import { AffinityIcon, Button, H3, Divider, KeyValue } from 'joyent-ui-toolkit';
+import { AffinityIcon, Button, Divider, KeyValue } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import { Rule, Header } from '@components/create-instance/affinity';
 import Description from '@components/description';
-import { fieldError } from '@root/constants';
+import { addAffinityRule as validateRule } from '@state/validators';
 
 const FORM_NAME_CREATE = 'CREATE-INSTANCE-AFFINITY-ADD';
-const FORM_NAME_EDIT = i => `CREATE-INSTANCE-AFFINITY-EDIT-${i}`;
+const FORM_NAME_EDIT = 'CREATE-INSTANCE-AFFINITY-EDIT';
 
 const RULE_DEFAULTS = {
-  'rule-instance-name': '',
-  'rule-instance-conditional': 'should',
-  'rule-instance-placement': 'same',
-  'rule-instance-tag-key-pattern': 'equalling',
-  'rule-instance-tag-value-pattern': 'equalling',
-  'rule-instance-name-pattern': 'equalling',
-  'rule-instance-tag-value': '',
-  'rule-instance-tag-key': '',
-  'rule-type': 'name'
+  conditional: 'should',
+  placement: 'same',
+  type: 'name',
+  pattern: 'equalling',
+  key: '',
+  value: ''
 };
 
 export const Affinity = ({
-  affinityRules = [],
+  step,
   expanded,
-  proceeded,
   addOpen,
-  handleAddAffinityRules,
+  editOpen,
+  editingRule,
+  creatingRule,
+  exitingRule,
+  shouldAsyncValidate,
+  handleAsyncValidate,
+  handleCreateAffinityRules,
   handleRemoveAffinityRule,
   handleUpdateAffinityRule,
-  shouldAsyncValidate,
-  handleAsyncValidation,
   handleToggleExpanded,
   handleCancelEdit,
   handleChangeAddOpen,
-  handleEdit,
-  rule,
-  step
+  handleEdit
 }) => (
   <Fragment>
     <Title
       id={step}
-      onClick={!expanded && !proceeded && handleEdit}
-      collapsed={!expanded && !proceeded}
+      onClick={!expanded && !exitingRule && handleEdit}
+      collapsed={!expanded && !exitingRule}
       icon={<AffinityIcon />}
     >
       Affinity
@@ -70,55 +68,64 @@ export const Affinity = ({
         </a>
       </Description>
     ) : null}
-    {proceeded ? (
-      <Margin bottom={4}>
-        <H3>{affinityRules.length} Affinity Rule</H3>
-      </Margin>
-    ) : null}
-    {affinityRules.map((rule, index) => (
-      <ReduxForm
-        form={FORM_NAME_EDIT(index)}
-        key={index}
-        initialValues={rule}
-        destroyOnUnmount={false}
-        forceUnregisterOnUnmount={true}
-        shouldAsyncValidate={shouldAsyncValidate}
-        asyncValidation={handleAsyncValidation}
-        onSubmit={newValue => handleUpdateAffinityRule(index, newValue)}
-      >
-        {props => (
+    <ReduxForm
+      form={FORM_NAME_EDIT}
+      initialValues={exitingRule}
+      destroyOnUnmount={false}
+      forceUnregisterOnUnmount={false}
+      shouldAsyncValidate={shouldAsyncValidate}
+      asyncValidation={handleAsyncValidate}
+      onSubmit={handleUpdateAffinityRule}
+    >
+      {formProps =>
+        exitingRule ? (
           <Fragment>
             <KeyValue
-              {...props}
-              expanded={rule.expanded}
-              customHeader={<Header {...rule} />}
+              {...formProps}
+              expanded={editOpen}
+              customHeader={<Header {...exitingRule} />}
               method="edit"
-              input={props => <Rule {...rule} {...props} />}
+              input={inputProps => (
+                <Rule
+                  {...editingRule}
+                  {...inputProps}
+                  valid={formProps.valid}
+                />
+              )}
               type="an affinity rule"
-              onToggleExpanded={() => handleToggleExpanded(index)}
-              onCancel={() => handleCancelEdit(index)}
-              onRemove={() => handleRemoveAffinityRule(index)}
+              onToggleExpanded={() =>
+                handleToggleExpanded(!exitingRule.expanded)
+              }
+              onCancel={handleCancelEdit}
+              onRemove={handleRemoveAffinityRule}
             />
             <Divider height={remcalc(12)} transparent />
           </Fragment>
-        )}
-      </ReduxForm>
-    ))}
+        ) : null
+      }
+    </ReduxForm>
     <ReduxForm
       form={FORM_NAME_CREATE}
+      initialValues={RULE_DEFAULTS}
       destroyOnUnmount={false}
-      forceUnregisterOnUnmount={true}
+      forceUnregisterOnUnmount={false}
       shouldAsyncValidate={shouldAsyncValidate}
-      asyncValidate={handleAsyncValidation}
-      onSubmit={handleAddAffinityRules}
+      asyncValidate={handleAsyncValidate}
+      onSubmit={handleCreateAffinityRules}
     >
-      {props =>
+      {formProps =>
         expanded && addOpen ? (
           <Fragment>
             <KeyValue
-              {...props}
+              {...formProps}
               method="create"
-              input={props => <Rule {...rule} {...props} />}
+              input={inputProps => (
+                <Rule
+                  {...creatingRule}
+                  {...inputProps}
+                  valid={formProps.valid}
+                />
+              )}
               type="an affinity rule"
               expanded
               noRemove
@@ -131,7 +138,7 @@ export const Affinity = ({
     </ReduxForm>
     {expanded ? (
       <Margin top={2} bottom={4}>
-        {!addOpen && affinityRules.length === 0 ? (
+        {!addOpen && !exitingRule ? (
           <Button
             type="button"
             onClick={() => handleChangeAddOpen(true)}
@@ -141,7 +148,7 @@ export const Affinity = ({
           </Button>
         ) : null}
       </Margin>
-    ) : proceeded ? (
+    ) : exitingRule ? (
       <Margin top={2} bottom={4}>
         <Button type="button" onClick={handleEdit} secondary>
           Edit
@@ -149,61 +156,45 @@ export const Affinity = ({
       </Margin>
     ) : null}
     <Margin bottom={7}>
-      {expanded || proceeded ? <Divider height={remcalc(1)} /> : null}
+      {expanded ? <Divider height={remcalc(1)} /> : null}
     </Margin>
   </Fragment>
 );
 
 export default compose(
   connect(({ values, form }, ownProps) => {
-    const proceeded = get(values, 'create-instance-affinity-proceeded', false);
+    const editingRule = get(form, `${FORM_NAME_EDIT}.values`, null);
+    const creatingRule = get(form, `${FORM_NAME_CREATE}.values`, null);
+    const exitingRule = get(values, 'create-instance-affinity', null);
+
     const addOpen = get(values, 'create-instance-affinity-add-open', false);
-    const affinityRules = get(values, 'create-instance-affinity', []);
-    const rule = get(form, `${FORM_NAME_CREATE}.values`, {});
+    const editOpen = get(values, 'create-instance-affinity-edit-open', false);
 
     return {
-      proceeded: proceeded || affinityRules.length,
       addOpen,
-      affinityRules,
-      rule
+      editOpen,
+      creatingRule,
+      editingRule,
+      exitingRule
     };
   }),
-  connect(null, (dispatch, { affinityRules = [], rule, history }) => ({
-    shouldAsyncValidate: ({ trigger }) => trigger === 'change',
-    handleAsyncValidation: async rule => {
-      const validName = /^[a-zA-Z_.-]{1,16}$/.test(rule['rule-instance-name']);
-      const validKey = /^[a-zA-Z_.-]{1,16}$/.test(
-        rule['rule-instance-tag-key']
-      );
-      const validValue = /^[a-zA-Z_.-]{1,16}$/.test(
-        rule['rule-instance-tag-value']
-      );
-
-      if (validName && validKey && validValue) {
-        return;
-      }
-
-      // eslint-disable-next-line no-throw-literal
-      throw {
-        'rule-instance-name': fieldError,
-        'rule-instance-tag-key': fieldError,
-        'rule-instance-tag-value': fieldError
-      };
+  connect(null, (dispatch, { history }) => ({
+    shouldAsyncValidate: ({ trigger }) => {
+      return trigger === 'submit';
     },
+    handleAsyncValidate: validateRule,
     handleEdit: () => {
       return history.push(`/~create/affinity${history.location.search}`);
     },
-    handleAddAffinityRules: ({ ...rule }) => {
+    handleCreateAffinityRules: value => {
       const toggleToClosed = set({
-        name: `create-instance-affinity-add-open`,
+        name: 'create-instance-affinity-add-open',
         value: false
       });
 
       const appendAffinityRule = set({
-        name: `create-instance-affinity`,
-        value: affinityRules.concat([
-          { ...RULE_DEFAULTS, ...rule, expanded: false }
-        ])
+        name: 'create-instance-affinity',
+        value
       });
 
       return dispatch([
@@ -212,53 +203,32 @@ export default compose(
         appendAffinityRule
       ]);
     },
-    handleUpdateAffinityRule: (index, newAffinityRule) => {
-      affinityRules[index] = {
-        ...newAffinityRule,
-        expanded: false
-      };
-
+    handleUpdateAffinityRule: value => {
       return dispatch([
-        destroy(FORM_NAME_EDIT(index)),
-        set({ name: `create-instance-affinity`, value: affinityRules.slice() })
+        destroy(FORM_NAME_EDIT),
+        set({ name: 'create-instance-affinity', value })
       ]);
     },
     handleChangeAddOpen: value => {
       return dispatch([
         reset(FORM_NAME_CREATE),
-        set({ name: `create-instance-affinity-add-open`, value })
+        set({ name: 'create-instance-affinity-add-open', value })
       ]);
     },
-    handleToggleExpanded: index => {
-      affinityRules[index] = {
-        ...affinityRules[index],
-        expanded: !affinityRules[index].expanded
-      };
-
+    handleToggleExpanded: value => {
       return dispatch(
-        set({
-          name: `create-instance-affinity`,
-          value: affinityRules.slice()
-        })
+        set({ name: 'create-instance-affinity-edit-open', value })
       );
     },
-    handleCancelEdit: index => {
-      affinityRules[index] = {
-        ...affinityRules[index],
-        expanded: false
-      };
-
+    handleCancelEdit: () => {
       return dispatch([
-        reset(FORM_NAME_EDIT(index)),
-        set({ name: `create-instance-affinity`, value: affinityRules.slice() })
+        set({ name: 'create-instance-affinity-edit-open', value: false })
       ]);
     },
-    handleRemoveAffinityRule: index => {
-      affinityRules.splice(index, 1);
-
+    handleRemoveAffinityRule: () => {
       return dispatch([
-        destroy(FORM_NAME_EDIT(index)),
-        set({ name: `create-instance-affinity`, value: affinityRules.slice() })
+        destroy(FORM_NAME_EDIT),
+        set({ name: 'create-instance-affinity', value: null })
       ]);
     }
   }))

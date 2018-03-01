@@ -32,9 +32,9 @@ import RemoveSnapshot from '@graphql/remove-snapshot.gql';
 import CreateSnapshotMutation from '@graphql/create-snapshot.gql';
 import ToolbarForm from '@components/instances/toolbar';
 import SnapshotsListActions from '@components/instances/footer';
+import { addSnapshot as validateSnapshot } from '@state/validators';
 import parseError from '@state/parse-error';
 import Confirm from '@state/confirm';
-import { fieldError } from '@root/constants';
 
 const MENU_FORM_NAME = 'snapshot-list-menu';
 const TABLE_FORM_NAME = 'snapshot-list-table';
@@ -89,14 +89,12 @@ const Snapshots = ({
           asyncValidate={handleAsyncValidate}
           onSubmit={handleCreateSnapshot}
         >
-          {props => {
-            return (
-              <SnapshotAddForm
-                {...props}
-                onCancel={() => toggleCreateSnapshotOpen(false)}
-              />
-            );
-          }}
+          {props => (
+            <SnapshotAddForm
+              {...props}
+              onCancel={() => toggleCreateSnapshotOpen(false)}
+            />
+          )}
         </ReduxForm>
       </Margin>
     ) : null;
@@ -252,11 +250,29 @@ export default compose(
       };
     },
     (dispatch, ownProps) => {
-      const { instance, createSnapshot, refetch } = ownProps;
+      const { instance, snapshots, createSnapshot, refetch } = ownProps;
 
       return {
+        shouldAsyncValidate: ({ trigger }) => {
+          return trigger === 'submit';
+        },
+        handleAsyncValidate: async ({ name }) => {
+          const [err] = await intercept(validateSnapshot({ name }));
+
+          if (err) {
+            throw err;
+          }
+
+          const snapshot = find(snapshots, ['name', name]);
+          if (snapshot) {
+            // eslint-disable-next-line no-throw-literal
+            throw {
+              name: `${name} already exists`
+            };
+          }
+        },
         handleSortBy: (newSortBy, sortOrder) => {
-          dispatch([
+          return dispatch([
             set({
               name: `snapshots-list-sort-order`,
               value: sortOrder === 'desc' ? 'asc' : 'desc'
@@ -267,25 +283,14 @@ export default compose(
             })
           ]);
         },
-        shouldAsyncValidate: ({ trigger }) => trigger === 'change',
-        handleAsyncValidate: async ({ name }) => {
-          const isNameValid = /^[a-zA-Z_.-]{1,16}$/.test(name);
-
-          if (isNameValid) {
-            return;
-          }
-
-          throw {
-            name: fieldError
-          };
-        },
-        toggleCreateSnapshotOpen: value =>
-          dispatch(
+        toggleCreateSnapshotOpen: value => {
+          return dispatch(
             set({
               name: `snapshots-create-open`,
               value
             })
-          ),
+          );
+        },
         toggleSelectAll: ({ selected = [], snapshots = [] }) => () => {
           const same = selected.length === snapshots.length;
           const hasSelected = selected.length > 0;
@@ -311,7 +316,6 @@ export default compose(
             );
           }
         },
-
         handleCreateSnapshot: async ({ name }) => {
           const [err] = await intercept(
             createSnapshot({
@@ -342,7 +346,6 @@ export default compose(
             })
           );
         },
-
         handleAction: async ({ name, selected = [] }) => {
           // eslint-disable-next-line no-alert
           if (

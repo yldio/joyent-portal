@@ -13,7 +13,7 @@
     "build:lib": "NODE_ENV=production redrun -p build:es build:umd",
     "build:bundle": "echo 0",
     "prepublish": "NODE_ENV=production redrun build:lib",
-    "lint": "redrun lint:ci -- -- --fix",
+    "lint": "redrun lint:ci -- --fix",
     "lint:ci": "NODE_ENV=test eslint . --ext .js --ext .md",
     "test": "echo 0",
     "test:ci": "redrun test",

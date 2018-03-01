@@ -27,6 +27,7 @@ import Tag, { AddForm } from '@components/tags';
 import ToolbarForm from '@components/toolbar';
 import UpdateImageTags from '@graphql/update-image-tags.gql';
 import GetTags from '@graphql/get-tags.gql';
+import { addTag as validateTag } from '@state/validators';
 import parseError from '@state/parse-error';
 
 const { TAGS_TOOLBAR_FORM, TAGS_ADD_FORM } = Forms;
@@ -38,6 +39,8 @@ export const Tags = ({
   error = null,
   mutationError = null,
   mutating = false,
+  handleAsyncValidate,
+  shouldAsyncValidate,
   handleToggleAddOpen,
   handleRemoveTag,
   handleAddTag
@@ -76,7 +79,12 @@ export const Tags = ({
         </Message>
       </Margin>
     ) : null}
-    <ReduxForm form={TAGS_ADD_FORM} onSubmit={handleAddTag}>
+    <ReduxForm
+      form={TAGS_ADD_FORM}
+      asyncValidate={handleAsyncValidate}
+      shouldAsyncValidate={shouldAsyncValidate}
+      onSubmit={handleAddTag}
+    >
       {props =>
         addOpen ? (
           <Margin bottom={4}>
@@ -162,6 +170,10 @@ export default compose(
       };
     },
     (dispatch, { image, tags = [], updateTags, refetch }) => ({
+      shouldAsyncValidate: ({ trigger }) => {
+        return trigger === 'submit';
+      },
+      handleAsyncValidate: validateTag,
       handleToggleAddOpen: addOpen => {
         dispatch(set({ name: `${image.id}-add-open`, value: addOpen }));
       },

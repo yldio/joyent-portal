@@ -25,14 +25,12 @@ it('<Rule/>', async () => {
       <Theme ss>
         <Rule
           rule={{
-            'rule-instance-name': 'test',
-            'rule-instance-conditional': 'must',
-            'rule-instance-placement': 'same',
-            'rule-instance-tag-value-pattern': 'equalling',
-            'rule-instance-name-pattern': 'equalling',
-            'rule-instance-tag-value': '',
-            'rule-instance-tag-key': '',
-            'rule-type': 'name'
+            conditional: 'must',
+            placement: 'same',
+            pattern: 'equalling',
+            value: 'test',
+            key: '',
+            type: 'name'
           }}
         />
       </Theme>
@@ -46,14 +44,12 @@ it('<Header />', async () => {
       <Theme ss>
         <Header
           rule={{
-            'rule-instance-name': 'test',
-            'rule-instance-conditional': 'must',
-            'rule-instance-placement': 'same',
-            'rule-instance-tag-value-pattern': 'equalling',
-            'rule-instance-name-pattern': 'equalling',
-            'rule-instance-tag-value': '',
-            'rule-instance-tag-key': '',
-            'rule-type': 'name'
+            conditional: 'must',
+            placement: 'same',
+            pattern: 'equalling',
+            value: 'test',
+            key: '',
+            type: 'name'
           }}
         />
       </Theme>
@@ -67,14 +63,12 @@ it('<Header tag/>', async () => {
       <Theme ss>
         <Header
           rule={{
-            'rule-instance-name': 'test',
-            'rule-instance-conditional': 'must',
-            'rule-instance-placement': 'same',
-            'rule-instance-tag-value-pattern': 'equalling',
-            'rule-instance-name-pattern': 'equalling',
-            'rule-instance-tag-value': 'one',
-            'rule-instance-tag-key': 'two',
-            'rule-type': 'tag'
+            conditional: 'must',
+            placement: 'same',
+            pattern: 'equalling',
+            value: 'one',
+            key: 'two',
+            type: 'tag'
           }}
         />
       </Theme>
