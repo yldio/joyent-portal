@@ -2,16 +2,16 @@ import React, { Fragment } from 'react';
 import { compose } from 'react-apollo';
 import { set } from 'react-redux-values';
 import ReduxForm from 'declarative-redux-form';
-import { destroy } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
+import Flex from 'styled-flex-component';
 
-import { ScriptIcon, Button, KeyValue } from 'joyent-ui-toolkit';
-import Editor from 'joyent-ui-toolkit/dist/es/editor';
+import { ScriptIcon, Button } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
+import UserScriptForm, { Overview } from '@components/create-instance/user-script';
 
 const FORM_NAME = 'create-instance-user-script';
 
@@ -22,10 +22,9 @@ export const UserScript = ({
   edit,
   formOpen,
   script = {},
+  lines,
   handleChangeOpenForm,
   handleSubmit,
-  handleRemove,
-  handleNext,
   handleEdit,
   step
 }) => (
@@ -39,67 +38,58 @@ export const UserScript = ({
       User Script
     </Title>
     {expanded ? (
-      <Description>
-        User script can be used to inject a custom boot script.
-      </Description>
+      <Fragment>
+        <Description>
+          User script can be used to inject a custom boot script.
+        </Description>
+        {formOpen ? (
+          <ReduxForm
+            form={FORM_NAME}
+            destroyOnUnmount={false}
+            forceUnregisterOnUnmount={true}
+            onSubmit={handleSubmit}
+          >
+            {props => <UserScriptForm {...props} />}
+          </ReduxForm>
+        ) : null}
+      </Fragment>
     ) : null}
-    <ReduxForm
-      form={FORM_NAME}
-      destroyOnUnmount={false}
-      forceUnregisterOnUnmount={true}
-      initialValues={script}
-      onSubmit={handleSubmit}
-    >
-      {props =>
-        !formOpen && create ? null : (
-          <KeyValue
-            {...props}
-            expanded={formOpen}
-            method={edit ? 'edit' : 'add'}
-            input="textarea"
-            type="user script"
-            onToggleExpanded={() => handleChangeOpenForm(!formOpen)}
-            onCancel={() => handleChangeOpenForm(false)}
-            onRemove={handleRemove}
-            editor={Editor}
-            onlyValue
-          />
-        )
-      }
-    </ReduxForm>
     {expanded ? (
       <Margin top={formOpen || script.value ? 4 : 2} bottom={7}>
         {script.value || formOpen ? null : (
-          <Button
-            type="button"
-            onClick={() => handleChangeOpenForm(true)}
-            secondary
-          >
-            Add User Script
-          </Button>
+          <Flex alignCenter>
+            <Button
+              type="button"
+              onClick={() => handleChangeOpenForm(true)}
+              secondary
+            >
+              Add User Script
+            </Button>
+            <Button type="submit" onClick={handleSubmit}>
+              Next
+            </Button>
+          </Flex>
         )}
-        <Button type="submit" onClick={handleNext}>
-          Next
-        </Button>
       </Margin>
     ) : proceeded ? (
-      <Margin top={4} bottom={7}>
-        <Button type="button" onClick={handleEdit} secondary>
-          Edit
-        </Button>
-      </Margin>
+      <Fragment>
+        <Overview script={script} lines={lines} />
+        <Margin top={4} bottom={7}>
+          <Button type="button" onClick={handleEdit} secondary>
+            Edit
+          </Button>
+        </Margin>
+      </Fragment>
     ) : null}
   </Fragment>
 );
 
 export default compose(
   connect(
-    ({ values }, ownProps) => {
+    ({ values, form }, ownProps) => {
       const formOpen = get(values, 'create-instance-user-script-open', false);
-
-      const script = get(values, 'create-instance-user-script', {
-        name: 'user-script'
-      });
+      const script = get(form, `${FORM_NAME}.values.value`, '');
+      const lines = script.split('\n').length;
 
       const proceeded = get(
         values,
@@ -109,6 +99,7 @@ export default compose(
 
       return {
         script,
+        lines,
         proceeded: proceeded || script.value,
         create: !script.value,
         edit: script.value,
@@ -116,17 +107,11 @@ export default compose(
       };
     },
     (dispatch, { history }) => ({
-      handleNext: () => {
-        dispatch(
-          set({ name: 'create-instance-user-script-proceeded', value: true })
-        );
-
-        return history.push(`/~create/networks${history.location.search}`);
-      },
       handleEdit: () => {
-        dispatch(
-          set({ name: 'create-instance-user-script-proceeded', value: true })
-        );
+        dispatch([
+          set({ name: 'create-instance-user-script-proceeded', value: true }),
+          set({ name: `create-instance-user-script-open`, value: true })
+        ]);
 
         return history.push(`/~create/user-script${history.location.search}`);
       },
@@ -136,20 +121,12 @@ export default compose(
         ]);
       },
       handleSubmit: value => {
-        return dispatch([
-          set({ name: `create-instance-user-script`, value: { ...value } }),
-          set({ name: `create-instance-user-script-open`, value: false })
+        dispatch([
+          set({ name: `create-instance-user-script-open`, value: false }),
+          set({ name: 'create-instance-user-script-proceeded', value: true })
         ]);
-      },
-      handleRemove: () => {
-        return dispatch([
-          destroy(FORM_NAME),
-          set({
-            name: `create-instance-user-script`,
-            value: { name: 'user-script' }
-          }),
-          set({ name: `create-instance-user-script-open`, value: false })
-        ]);
+
+        return history.push(`/~create/networks${history.location.search}`);
       }
     })
   )

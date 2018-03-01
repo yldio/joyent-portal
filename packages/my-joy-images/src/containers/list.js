@@ -130,9 +130,7 @@ export default compose(
         i => ImageType[i] === 'Infrastructure Container'
       );
 
-      const filtered = filter
-        ? index.search(filter)
-        : images;
+      const filtered = filter ? index.search(filter) : images;
 
       return {
         images: filtered

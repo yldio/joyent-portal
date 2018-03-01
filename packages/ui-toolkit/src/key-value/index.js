@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { Margin, Padding } from 'styled-components-spacing';
 import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
@@ -51,26 +51,6 @@ const Bold = styled.span`
   font-weight: ${props => props.theme.font.weight.semibold};
 `;
 
-class ValueTextareaField extends PureComponent {
-  render() {
-    const { input = {}, submitting, editor } = this.props;
-
-    return input.value === 'user-script' ? (
-      <Field
-        name="value"
-        component={props =>
-          React.createElement(editor, {
-            ...props,
-            mode: 'sh'
-          })
-        }
-      />
-    ) : (
-      <Textarea monospace resize="vertical" disabled={submitting} fluid />
-    );
-  }
-}
-
 const TextareaKeyValue = ({
   type,
   submitting,
@@ -103,11 +83,12 @@ const TextareaKeyValue = ({
           <FormGroup name="value" field={Field} fluid>
             <FormLabel>{titleCase(type)} value</FormLabel>
             <Margin top={0.5}>
-              <Field
+              <Textarea
+                monospace
                 name="name"
+                resize="vertical"
+                disabled={submitting}
                 fluid
-                component={ValueTextareaField}
-                props={{ submitting, editor }}
               />
             </Margin>
             <Row>
@@ -182,7 +163,6 @@ export const KeyValue = ({
   pristine = true,
   invalid = false,
   removing = false,
-  handleSubmit,
   onToggleExpanded = () => null,
   onCancel = () => null,
   onRemove = () => null,
