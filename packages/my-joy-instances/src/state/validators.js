@@ -56,12 +56,12 @@ const Schemas = {
   cns: {
     name: yup
       .string()
-      .required(msgs.required('Service name'))
-      .matches(matches.nameStart, msgs.nameStart('Service name'))
-      .matches(matches.nameBody, msgs.nameBody('Service name'))
+      .required(msgs.required('Service names'))
+      .matches(matches.nameStart, msgs.nameStart('Service names'))
+      .matches(matches.nameBody, msgs.nameBody('Service names'))
   },
   affinityRule: {
-    key: yup
+    name: yup
       .string()
       .required(msgs.required('Key'))
       .matches(matches.nameStart, msgs.nameStart('Key'))
@@ -91,8 +91,8 @@ const Schemas = {
     name: yup
       .string()
       .required()
-      .matches(matches.nameStart, msgs.nameStart('Snapshot name'))
-      .matches(matches.nameBody, msgs.nameBody('Snapshot Name'))
+      .matches(matches.nameStart, msgs.nameStart('Snapshot names'))
+      .matches(matches.nameBody, msgs.nameBody('Snapshot names'))
   }
 };
 

@@ -586,7 +586,7 @@ exports[`renders <Cns /> without throwing 1`] = `
           <p
             className="c5"
           >
-            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+            Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
              
             <a
               href="https://docs.joyent.com/private-cloud/install/cns"
@@ -684,7 +684,6 @@ exports[`renders <Cns /> without throwing 1`] = `
                       id="k"
                       onBlur={null}
                       placeholder="Example: mySQLdb"
-                      required={true}
                     />
                   </div>
                 </div>
@@ -784,7 +783,7 @@ exports[`renders <Cns /> without throwing 1`] = `
     <p
       className="c5"
     >
-      *All hostnames listed here will be confirmed after deployment.
+      Please note: All hostnames listed here will be confirmed after deployment.
     </p>
   </div>
 </div>
@@ -1061,7 +1060,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
           <p
             className="c5"
           >
-            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+            Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
              
             <a
               href="https://docs.joyent.com/private-cloud/install/cns"
@@ -1918,7 +1917,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
           <p
             className="c5"
           >
-            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+            Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
              
             <a
               href="https://docs.joyent.com/private-cloud/install/cns"
@@ -2218,7 +2217,6 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                       id="u"
                       onBlur={null}
                       placeholder="Example: mySQLdb"
-                      required={true}
                     />
                   </div>
                 </div>
@@ -2720,7 +2718,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
     <p
       className="c5"
     >
-      *All hostnames listed here will be confirmed after deployment.
+      Please note: All hostnames listed here will be confirmed after deployment.
     </p>
   </div>
 </div>
@@ -2910,7 +2908,7 @@ exports[`renders <Cns loading /> without throwing 1`] = `
           <p
             className="c5"
           >
-            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+            Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
              
             <a
               href="https://docs.joyent.com/private-cloud/install/cns"
@@ -3469,7 +3467,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
           <p
             className="c5"
           >
-            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+            Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
              
             <a
               href="https://docs.joyent.com/private-cloud/install/cns"
@@ -3592,7 +3590,6 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
                       id="m"
                       onBlur={null}
                       placeholder="Example: mySQLdb"
-                      required={true}
                     />
                   </div>
                 </div>
@@ -4543,7 +4540,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
           <p
             className="c5"
           >
-            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+            Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
              
             <a
               href="https://docs.joyent.com/private-cloud/install/cns"
@@ -4903,7 +4900,6 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       id="p"
                       onBlur={null}
                       placeholder="Example: mySQLdb"
-                      required={true}
                     />
                   </div>
                 </div>
@@ -5405,7 +5401,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
     <p
       className="c5"
     >
-      *All hostnames listed here will be confirmed after deployment.
+      Please note: All hostnames listed here will be confirmed after deployment.
     </p>
   </div>
 </div>
@@ -6040,7 +6036,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
           <p
             className="c5"
           >
-            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+            Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
              
             <a
               href="https://docs.joyent.com/private-cloud/install/cns"
@@ -6163,7 +6159,6 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                       id="n"
                       onBlur={null}
                       placeholder="Example: mySQLdb"
-                      required={true}
                     />
                   </div>
                 </div>
@@ -6263,7 +6258,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
     <p
       className="c5"
     >
-      *All hostnames listed here will be confirmed after deployment.
+      Please note: All hostnames listed here will be confirmed after deployment.
     </p>
   </div>
 </div>
@@ -6920,7 +6915,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
           <p
             className="c5"
           >
-            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+            Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
              
             <a
               href="https://docs.joyent.com/private-cloud/install/cns"
@@ -7135,7 +7130,6 @@ exports[`renders <Cns services /> without throwing 1`] = `
                       id="s"
                       onBlur={null}
                       placeholder="Example: mySQLdb"
-                      required={true}
                     />
                   </div>
                 </div>
@@ -7235,7 +7229,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
     <p
       className="c5"
     >
-      *All hostnames listed here will be confirmed after deployment.
+      Please note: All hostnames listed here will be confirmed after deployment.
     </p>
   </div>
 </div>
@@ -7512,7 +7506,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
           <p
             className="c5"
           >
-            Triton CNS is used to automatically update hostnames for your instances*. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
+            Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
              
             <a
               href="https://docs.joyent.com/private-cloud/install/cns"

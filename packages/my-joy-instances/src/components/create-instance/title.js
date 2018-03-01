@@ -13,7 +13,7 @@ const Container = styled.div`
   `};
 `;
 
-export default ({ icon, children, collapsed = true, ...rest }) => (
+export default ({ icon, children, invalid, collapsed = true, ...rest }) => (
   <Container {...rest}>
     <Flex>
       <Margin right={1}>
@@ -24,7 +24,7 @@ export default ({ icon, children, collapsed = true, ...rest }) => (
       <Small noMargin>{children}</Small>
     </Flex>
     <Margin top={1} bottom={collapsed ? 7 : 3}>
-      <Divider height={remcalc(1)} />
+      <Divider height={remcalc(1)} error={invalid} />
     </Margin>
   </Container>
 );

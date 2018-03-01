@@ -15,6 +15,10 @@ const Divider = styled(Row)`
   ${is('vertical')`
     transform: rotate(90deg);
   `};
+
+  ${is('error')`
+    background-color: ${props => props.theme.red};
+  `};
 `;
 
 export default Baseline(Divider);

@@ -140,8 +140,9 @@ export const Package = ({
             {GroupIcons[group]}
             <Margin left={1} right={2}>
               <FormLabel
-                noMargin
                 style={{ fontWeight: sortBy === 'name' ? 'bold' : 'normal' }}
+                noMargin
+                actionable
               >
                 {name}
               </FormLabel>

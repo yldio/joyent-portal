@@ -59,7 +59,7 @@ export const List = ({
   handleCreateImage,
   handleSortBy,
   history,
-  filter
+  filter = ''
 }) => {
   const _instances = forceArray(instances);
 
@@ -72,7 +72,7 @@ export const List = ({
       : null;
 
   const _error =
-    error && !_instances.length && !_loading ? (
+    error && !_instances.length && !_loading && !filter.length ? (
       <Margin bottom={4}>
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>

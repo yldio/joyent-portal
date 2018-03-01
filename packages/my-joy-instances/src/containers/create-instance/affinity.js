@@ -24,7 +24,7 @@ const RULE_DEFAULTS = {
   placement: 'same',
   type: 'name',
   pattern: 'equalling',
-  key: '',
+  name: '',
   value: ''
 };
 
@@ -75,7 +75,7 @@ export const Affinity = ({
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={false}
       shouldAsyncValidate={shouldAsyncValidate}
-      asyncValidation={handleAsyncValidate}
+      asyncValidate={handleAsyncValidate}
       onSubmit={handleUpdateAffinityRule}
     >
       {formProps =>
@@ -185,7 +185,7 @@ export default compose(
     },
     handleAsyncValidate: ({ type, ...aff }) => {
       return type === 'name'
-        ? validateRule({ ...aff, key: 'default', type })
+        ? validateRule({ ...aff, type, name: 'default' })
         : validateRule({ ...aff, type });
     },
     handleEdit: () => {

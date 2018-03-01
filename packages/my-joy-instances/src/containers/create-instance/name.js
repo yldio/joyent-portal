@@ -13,15 +13,17 @@ import { NameIcon, H3, Button } from 'joyent-ui-toolkit';
 import Title from '@components/create-instance/title';
 import Name from '@components/create-instance/name';
 import Description from '@components/description';
+import GetRandomName from '@graphql/get-random-name.gql';
 import { instanceName as validateName } from '@state/validators';
 import createClient from '@state/apollo-client';
-import GetRandomName from '@graphql/get-random-name.gql';
+import parseError from '@state/parse-error';
 import { Forms, Values } from '@root/constants';
 
 const { IC_NAME_F } = Forms;
 const { IC_NAME_V_PROCEEDED, IC_NAME_V_RANDOMIZING } = Values;
 
 const NameContainer = ({
+  invalid,
   expanded,
   proceeded,
   name,
@@ -40,6 +42,7 @@ const NameContainer = ({
       onClick={!expanded && !proceeded && handleEdit}
       collapsed={!expanded && !proceeded}
       icon={<NameIcon />}
+      invalid={!expanded && invalid}
     >
       Instance name
     </Title>
@@ -99,11 +102,12 @@ export default compose(
   connect(
     ({ form, values }, ownProps) => {
       const name = get(form, `${IC_NAME_F}.values.name`, '');
+      const invalid = get(form, `${IC_NAME_F}.asyncErrors.name`, null);
       const randomizing = get(values, IC_NAME_V_RANDOMIZING, false);
       const proceeded = get(values, IC_NAME_V_PROCEEDED, false);
 
       return {
-        ...ownProps,
+        invalid,
         proceeded: proceeded || name.length,
         randomizing,
         name

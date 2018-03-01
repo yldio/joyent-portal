@@ -77,12 +77,12 @@ export const Rule = ({ valid, ...rule }) => (
       </FormGroup>
       {rule.type === 'tag' ? (
         <Fragment>
-          <FormGroup name="key" field={Field}>
+          <FormGroup name="name" field={Field}>
             <Input
               style={style}
               onBlur={null}
               type="text"
-              placeholder="key"
+              placeholder="name"
               small
               embedded
               required
@@ -141,7 +141,7 @@ export const Header = ({ rule }) => (
     ) : (
       <Fragment>
         {' '}
-        key “{rule.key}" and the instance tag value{' '}
+        key “{rule.name}" and the instance tag value{' '}
         {rule.pattern && rule.pattern.split('-').join(' ')} "{rule.value}”
       </Fragment>
     )}
