@@ -17,7 +17,7 @@ Array [
   .c0 {
   padding: 0.75rem 1.125rem;
   font-weight: normal;
-  background: rgba(73,73,73,1);
+  background: rgb(73,73,73);
   color: rgb(255,255,255);
   -webkit-text-fill-color: currentcolor;
   z-index: 999;
@@ -34,7 +34,7 @@ Array [
 
 .c0[data-placement^='top'] .b {
   border-width: 0.375rem 0.375rem 0 0.375rem;
-  border-color: rgba(73,73,73,1) transparent transparent transparent;
+  border-color: rgb(73,73,73) transparent transparent transparent;
   bottom: -0.375rem;
   margin-top: 0;
   margin-bottom: 0;
@@ -54,7 +54,7 @@ Array [
 
 .c0[data-placement^='bottom'] .b {
   border-width: 0 0.375rem 0.375rem 0.375rem;
-  border-color: transparent transparent rgba(73,73,73,1) transparent;
+  border-color: transparent transparent rgb(73,73,73) transparent;
   top: -0.375rem;
   margin-top: 0;
   margin-bottom: 0;
@@ -100,7 +100,7 @@ Array [
 
 .c0[data-placement^='left'] .b {
   border-width: 0.375rem 0 0.375rem 0.375rem;
-  border-color: transparent transparent transparent rgba(73,73,73,1);
+  border-color: transparent transparent transparent rgb(73,73,73);
   right: -0.75rem;
   margin-top: 0;
   margin-bottom: 0;
@@ -126,7 +126,7 @@ Array [
 
 .c0[data-placement^='right'] .b {
   border-width: 0.375rem 0.375rem 0.375rem 0;
-  border-color: transparent rgba(73,73,73,1) transparent transparent;
+  border-color: transparent rgb(73,73,73) transparent transparent;
   left: -0.75rem;
   margin-top: 0;
   margin-bottom: 0;

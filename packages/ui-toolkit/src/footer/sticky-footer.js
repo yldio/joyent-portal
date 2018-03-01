@@ -11,6 +11,7 @@ const Container = ViewContainer.extend`
   flex-wrap: nowrap;
   align-content: stretch;
   align-items: stretch;
+  background: ${props => props.theme.background};
 `;
 
 const Footer = styled.div`

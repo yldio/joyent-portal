@@ -24,6 +24,11 @@ const Header = styled(H3)`
   margin-top: ${remcalc(12)};
 `;
 
+const Link = styled.a`
+  color: #979797;
+  text-decoration: none;
+`
+
 export default ({ children: { props } }) => {
   const items = props.items.filter(item => item.name);
 
@@ -35,7 +40,7 @@ export default ({ children: { props } }) => {
     <List>
       {items.map(({ heading, name, slug, content }) => (
         <li key={name}>
-          <Header>{name}</Header>
+          <Header><Link href={`/#${slug}`}>{name}</Link></Header>
           {content}
         </li>
       ))}
