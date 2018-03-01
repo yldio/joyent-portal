@@ -3,7 +3,7 @@
 exports[`renders <DefaultRules /> without throwing 1`] = `
 Array [
   .c0 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
@@ -28,7 +28,7 @@ Array [
 exports[`renders <DefaultRules rules /> without throwing 1`] = `
 Array [
   .c0 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
@@ -190,14 +190,14 @@ Array [
 }
 
 .c12 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
 .c9 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: 700;
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -234,7 +234,7 @@ Array [
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
@@ -256,12 +256,12 @@ Array [
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   border-color: rgb(216,216,216);
   background-color: rgb(250,250,250);
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   cursor: default;
 }
 
@@ -283,7 +283,7 @@ Array [
 .c19 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
-  border-radius: 0.1875rem;
+  border-radius: 0.125rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   padding: 0.3125rem 0.75rem;
@@ -291,14 +291,14 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c16 {
@@ -1676,14 +1676,14 @@ Array [
 }
 
 .c11 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
 .c8 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: 700;
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -1720,7 +1720,7 @@ Array [
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
@@ -2118,14 +2118,14 @@ Array [
 }
 
 .c11 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
 .c8 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: 700;
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -2162,7 +2162,7 @@ Array [
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
@@ -2560,14 +2560,14 @@ Array [
 }
 
 .c11 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
 .c8 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: 700;
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -2604,12 +2604,12 @@ Array [
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   border-color: rgb(216,216,216);
   background-color: rgb(250,250,250);
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   cursor: default;
 }
 
@@ -3006,14 +3006,14 @@ Array [
 }
 
 .c11 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
 .c8 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: 700;
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -3050,12 +3050,12 @@ Array [
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   border-color: rgb(216,216,216);
   background-color: rgb(250,250,250);
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   cursor: default;
 }
 
@@ -3461,14 +3461,14 @@ Array [
 }
 
 .c11 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
 .c8 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: 700;
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -3505,12 +3505,12 @@ Array [
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   border-color: rgb(216,216,216);
   background-color: rgb(250,250,250);
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   cursor: default;
 }
 
@@ -3532,7 +3532,7 @@ Array [
 .c16 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
-  border-radius: 0.1875rem;
+  border-radius: 0.125rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   padding: 0.3125rem 0.75rem;
@@ -3540,14 +3540,14 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c13 {
@@ -3835,7 +3835,7 @@ exports[`renders <Rules/> without throwing 1`] = `null`;
 exports[`renders <TagRules /> without throwing 1`] = `
 Array [
   .c0 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
@@ -3860,7 +3860,7 @@ Array [
 exports[`renders <TagRules rules /> without throwing 1`] = `
 Array [
   .c0 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
@@ -4022,14 +4022,14 @@ Array [
 }
 
 .c12 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
 }
 
 .c9 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: 700;
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -4066,7 +4066,7 @@ Array [
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
@@ -4088,12 +4088,12 @@ Array [
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   border-color: rgb(216,216,216);
   background-color: rgb(250,250,250);
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   cursor: default;
 }
 
@@ -4115,7 +4115,7 @@ Array [
 .c19 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
-  border-radius: 0.1875rem;
+  border-radius: 0.125rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   padding: 0.3125rem 0.75rem;
@@ -4123,14 +4123,14 @@ Array [
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 .c16 {

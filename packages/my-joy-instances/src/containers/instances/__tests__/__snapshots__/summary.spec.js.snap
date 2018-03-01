@@ -27,7 +27,7 @@ exports[`renders <Summary /> without throwing 1`] = `
 }
 
 .c5 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
@@ -193,7 +193,7 @@ exports[`renders <Summary loading /> without throwing 1`] = `
 }
 
 .c5 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
@@ -359,7 +359,7 @@ exports[`renders <Summary loadingError /> without throwing 1`] = `
 }
 
 .c5 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
@@ -525,7 +525,7 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
 }
 
 .c5 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
@@ -541,7 +541,7 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
 }
 
 .c10 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
@@ -608,7 +608,7 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
 }
 
 .c9 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -755,7 +755,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 .c5 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
@@ -1979,7 +1979,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 .c8 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.875rem;
   font-size: 1.5rem;
@@ -2022,7 +2022,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
@@ -2044,7 +2044,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-sizing: border-box;
@@ -2080,7 +2080,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -2134,19 +2134,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 .c37:disabled {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
 }
 
 .c37:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
 }
 
 .c37:disabled::-moz-placeholder {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
 }
 
 .c37:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
 }
 
 .c36 {
@@ -2508,7 +2508,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M12.83,8v6h-9V8h9m0-1h-9a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h9a1,1,0,0,0,1-1V8a1,1,0,0,0-1-1Zm-7,5.5v-3a.5.5,0,0,0-.5-.5h0a.5.5,0,0,0-.5.5v3a.5.5,0,0,0,.5.5h0A.5.5,0,0,0,5.83,12.5Zm2,0v-3a.5.5,0,0,0-.5-.5h0a.5.5,0,0,0-.5.5v3a.5.5,0,0,0,.5.5h0A.5.5,0,0,0,7.83,12.5Zm2,0v-3a.5.5,0,0,0-.5-.5h0a.5.5,0,0,0-.5.5v3a.5.5,0,0,0,.5.5h0A.5.5,0,0,0,9.83,12.5Zm2,0v-3a.5.5,0,0,0-.5-.5h0a.5.5,0,0,0-.5.5v3a.5.5,0,0,0,.5.5h0A.5.5,0,0,0,11.83,12.5Zm3.73-8.06L12.22,1.11,11.11,0h-10A1.11,1.11,0,0,0,0,1.11V18.89A1.11,1.11,0,0,0,1.11,20H15.56a1.11,1.11,0,0,0,1.11-1.11V5.56ZM14.83,5h-3V2Zm-13,13V2h9V6h4V18Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -2610,7 +2610,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M10.75,1.75a1.5,1.5,0,0,1,1.5,1.5v7.5a1.5,1.5,0,0,1-1.5,1.5H3.25a1.5,1.5,0,0,1-1.5-1.5V3.25a1.5,1.5,0,0,1,1.5-1.5h7.5m0-1.75H3.25A3.26,3.26,0,0,0,0,3.25v7.5A3.26,3.26,0,0,0,3.25,14h7.5A3.26,3.26,0,0,0,14,10.75V3.25A3.26,3.26,0,0,0,10.75,0Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </button>
@@ -2643,7 +2643,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M10.75,1.75a1.5,1.5,0,0,1,1.5,1.5v7.5a1.5,1.5,0,0,1-1.5,1.5H3.25a1.5,1.5,0,0,1-1.5-1.5V3.25a1.5,1.5,0,0,1,1.5-1.5h7.5m0-1.75H3.25A3.26,3.26,0,0,0,0,3.25v7.5A3.26,3.26,0,0,0,3.25,14h7.5A3.26,3.26,0,0,0,14,10.75V3.25A3.26,3.26,0,0,0,10.75,0Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                     <span>
@@ -2684,7 +2684,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                       >
                         <g>
                           <use
-                            fill="rgba(73, 73, 73, 1)"
+                            fill="rgb(73, 73, 73)"
                             transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
                             xlinkHref="#f"
                           />
@@ -2733,7 +2733,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                       >
                         <g>
                           <use
-                            fill="rgba(73, 73, 73, 1)"
+                            fill="rgb(73, 73, 73)"
                             transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
                             xlinkHref="#f"
                           />
@@ -2883,7 +2883,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -2938,7 +2938,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -2993,7 +2993,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -3048,7 +3048,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -3103,7 +3103,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -3158,7 +3158,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -3213,7 +3213,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -3268,7 +3268,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -3323,7 +3323,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -4423,7 +4423,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 .c8 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.875rem;
   font-size: 1.5rem;
@@ -4466,7 +4466,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
@@ -4488,7 +4488,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-sizing: border-box;
@@ -4524,7 +4524,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -4578,19 +4578,19 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 }
 
 .c37:disabled {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
 }
 
 .c37:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
 }
 
 .c37:disabled::-moz-placeholder {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
 }
 
 .c37:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
 }
 
 .c36 {
@@ -4952,7 +4952,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M12.83,8v6h-9V8h9m0-1h-9a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h9a1,1,0,0,0,1-1V8a1,1,0,0,0-1-1Zm-7,5.5v-3a.5.5,0,0,0-.5-.5h0a.5.5,0,0,0-.5.5v3a.5.5,0,0,0,.5.5h0A.5.5,0,0,0,5.83,12.5Zm2,0v-3a.5.5,0,0,0-.5-.5h0a.5.5,0,0,0-.5.5v3a.5.5,0,0,0,.5.5h0A.5.5,0,0,0,7.83,12.5Zm2,0v-3a.5.5,0,0,0-.5-.5h0a.5.5,0,0,0-.5.5v3a.5.5,0,0,0,.5.5h0A.5.5,0,0,0,9.83,12.5Zm2,0v-3a.5.5,0,0,0-.5-.5h0a.5.5,0,0,0-.5.5v3a.5.5,0,0,0,.5.5h0A.5.5,0,0,0,11.83,12.5Zm3.73-8.06L12.22,1.11,11.11,0h-10A1.11,1.11,0,0,0,0,1.11V18.89A1.11,1.11,0,0,0,1.11,20H15.56a1.11,1.11,0,0,0,1.11-1.11V5.56ZM14.83,5h-3V2Zm-13,13V2h9V6h4V18Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -5054,7 +5054,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M10.75,1.75a1.5,1.5,0,0,1,1.5,1.5v7.5a1.5,1.5,0,0,1-1.5,1.5H3.25a1.5,1.5,0,0,1-1.5-1.5V3.25a1.5,1.5,0,0,1,1.5-1.5h7.5m0-1.75H3.25A3.26,3.26,0,0,0,0,3.25v7.5A3.26,3.26,0,0,0,3.25,14h7.5A3.26,3.26,0,0,0,14,10.75V3.25A3.26,3.26,0,0,0,10.75,0Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </button>
@@ -5087,7 +5087,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M10.75,1.75a1.5,1.5,0,0,1,1.5,1.5v7.5a1.5,1.5,0,0,1-1.5,1.5H3.25a1.5,1.5,0,0,1-1.5-1.5V3.25a1.5,1.5,0,0,1,1.5-1.5h7.5m0-1.75H3.25A3.26,3.26,0,0,0,0,3.25v7.5A3.26,3.26,0,0,0,3.25,14h7.5A3.26,3.26,0,0,0,14,10.75V3.25A3.26,3.26,0,0,0,10.75,0Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                     <span>
@@ -5128,7 +5128,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                       >
                         <g>
                           <use
-                            fill="rgba(73, 73, 73, 1)"
+                            fill="rgb(73, 73, 73)"
                             transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
                             xlinkHref="#f"
                           />
@@ -5177,7 +5177,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                       >
                         <g>
                           <use
-                            fill="rgba(73, 73, 73, 1)"
+                            fill="rgb(73, 73, 73)"
                             transform="matrix(0.866025 0.5 -0.5 0.866025 -17988.7 18577.9)"
                             xlinkHref="#f"
                           />
@@ -5327,7 +5327,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -5382,7 +5382,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -5437,7 +5437,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -5492,7 +5492,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -5547,7 +5547,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -5602,7 +5602,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -5657,7 +5657,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -5712,7 +5712,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>
@@ -5767,7 +5767,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
                     >
                       <path
                         d="M5,12l2-2v9H8V10l2,2,1-1L7.5,8,4,11ZM11,1h2a2.15,2.15,0,0,1,2,2V16a2.15,2.15,0,0,1-2,2H10V16h3V3H11V5H4V3H2V16H5v2H2a2.15,2.15,0,0,1-2-2V3A2.15,2.15,0,0,1,2,1H4V0h7ZM9,2H6V3H9V2Z"
-                        fill="rgba(73, 73, 73, 1)"
+                        fill="rgb(73, 73, 73)"
                       />
                     </svg>
                   </div>

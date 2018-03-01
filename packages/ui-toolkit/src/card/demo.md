@@ -1,4 +1,4 @@
-#### Container
+#### Basic Card
 
 ```jsx
 const React = require('react');
@@ -10,7 +10,7 @@ const { default: Card } = require('.');
 </Card>;
 ```
 
-#### Card Header
+#### Simple Card Header
 
 ```jsx
 const React = require('react');
@@ -34,7 +34,7 @@ const { Actions } = require('../icons');
 </Card>;
 ```
 
-### Inactive/Disabled Card Header
+#### Inactive Card
 
 ```jsx
 const React = require('react');
@@ -58,7 +58,7 @@ const { Actions } = require('../icons');
 </Card>;
 ```
 
-### Listed Cards
+#### Display-Only Listed Card
 
 ```jsx
 const React = require('react');
@@ -306,7 +306,7 @@ const { Fragment } = React;
 </Fragment>;
 ```
 
-### Select Cards
+#### Select Card
 
 ```jsx
 const React = require('react');

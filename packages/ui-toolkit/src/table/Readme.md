@@ -1,6 +1,7 @@
 #### Table Header
 
 ```jsx
+// Name: Active
 const React = require('react');
 const { FormGroup, Checkbox } = require('../form');
 const { default: Table, Thead, Tr, Th, Tbody } = require('./');
@@ -32,6 +33,7 @@ const { default: Table, Thead, Tr, Th, Tbody } = require('./');
 #### Table Footer
 
 ```jsx
+// Name: Active
 const React = require('react');
 const { FormGroup, Checkbox } = require('../form');
 const { default: Table, Tfoot, Tr, Th } = require('./');
@@ -91,9 +93,91 @@ const { default: Table, Tfoot, Tr, Th } = require('./');
 </Table>;
 ```
 
+
+#### Empty Table
+```jsx
+// Name: Active
+const React = require('react');
+const { FormGroup, Checkbox } = require('../form');
+const { default: Table, Thead, Tr, Th } = require('./');
+const { Card, H3, Button, P } = require('../');
+const { Padding, Margin } = require('styled-components-spacing');
+const { default: Flex } = require('styled-flex-component');
+
+
+
+<div>
+  <Table>
+    <Thead>
+      <Tr>
+        <Th
+          style={{ borderTop: '1px solid rgb(216,216,216)' }}
+          xs="32"
+          padding="0"
+          paddingLeft="12"
+          middle
+          left
+        >
+          <FormGroup style={{ display: 'flex', alignItems: 'center' }}>
+            <Checkbox noMargin />
+          </FormGroup>
+        </Th>
+        <Th
+          style={{ borderTop: '1px solid rgb(216,216,216)' }}
+          sortOrder="asc"
+          showSort
+          left
+          middle
+          selected
+          actionable
+        >
+          <span>Name </span>
+        </Th>
+        <Th
+          style={{ borderTop: '1px solid rgb(216,216,216)' }}
+          xs="150"
+          left
+          middle
+          actionable
+        >
+          <span>Status </span>
+        </Th>
+        <Th
+          style={{ borderTop: '1px solid rgb(216,216,216)' }}
+          xs="0"
+          sm="160"
+          left
+          middle
+          actionable
+        >
+          <span>Created </span>
+        </Th>
+        <Th
+          style={{ borderTop: '1px solid rgb(216,216,216)' }}
+          xs="60"
+          padding="0"
+        />
+      </Tr>
+    </Thead>
+  </Table>
+    <Card>
+    <Padding all={5}>
+      <Flex alignCenter justifyCenter column>
+        <H3>No instances yet?</H3>
+        <P center>You haven’t commissioned any instances yet, but they’re really easy to set up. Click below to get going.</P>
+        <Margin top={2}>
+          <Button>Create Instance</Button>
+        </Margin>
+      </Flex>
+    </Padding>
+  </Card>
+</div>
+```
+
 #### Multiple Selection List
 
 ```jsx
+// Name: Active
 const React = require('react');
 const { FormGroup, Checkbox } = require('../form');
 const { default: Table, Thead, Tr, Th, Tbody, Td } = require('./');
@@ -169,6 +253,7 @@ const { Dot, Actions } = require('../icons');
 #### Single Selection List
 
 ```jsx
+// Name: Active
 const React = require('react');
 const { FormGroup, Radio } = require('../form');
 const { default: Table, Thead, Tr, Th, Tbody, Td } = require('./');

@@ -22,17 +22,24 @@ const Container = styled.div`
 const Tag = styled.li`
   border: ${remcalc(1)} solid ${props => props.theme.grey};
   box-sizing: border-box;
-  border-radius: ${remcalc(3)};
+  border-radius: ${remcalc(2)};
   font-size: ${remcalc(13)};
   line-height: ${remcalc(18)};
   padding: ${remcalc(5)} ${remcalc(12)};
   display: flex;
+  flex-grow: 0;
   align-items: center;
-  flex-grow: 1;
+
+  ${is('disabled') `
+      background: ${props => props.theme.disabled};
+  `};
+
+  ${is('error') `
+      border: ${remcalc(1)} solid ${props => props.theme.red};
+  `};
 
   ${is('active')`
       border: ${remcalc(1)} solid ${props => props.theme.primaryActive};
-      background: rgba(59, 70, 204, .1)
   `};
 
   ${is('onClick')`

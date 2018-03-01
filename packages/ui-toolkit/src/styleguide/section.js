@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import { Card, H2, P } from '../';
+import { Card, H2, P, H4 } from '../';
 import remcalc from 'remcalc';
 
-const CardStyled = styled(Card)`
+const CardStyled = styled(Card) `
   margin-bottom: ${remcalc(36)};
 `;
 
@@ -30,22 +30,33 @@ const Main = styled.div`
 export default allProps => {
   const { name, content, components, sections, depth, description } = allProps;
 
-  const Tag = depth === 2 ? CardStyled : 'div';
-  const TagMain = depth === 2 ? Main : 'div';
+  if (depth === 1) {
+    return (
+      <CardStyled id={name.replace(/\s+/g, '-').toLowerCase()}>
+        <Header>
+          <H2 white>{name}</H2>
+          {description ? <P white>{description}</P> : null }
+        </Header>
+        <Main>
+          {content}
+          {components}
+          {sections}
+        </Main>
+      </CardStyled>
+    )
+  }
+
   return (
-    <Tag id={name.replace(/\s+/g, '-').toLowerCase()}>
-      {name &&
-        depth !== 1 && (
-          <Header>
-            <H2 white>{name}</H2>
-            {description && <P white>{description}</P>}
-          </Header>
-        )}
-      <TagMain>
+    <Fragment>
+      <header>
+        <H4 white>{name}</H4>
+        {description ? <P white>{description}</P> : null}
+      </header>
+      <div>
         {content}
         {components}
         {sections}
-      </TagMain>
-    </Tag>
-  );
+      </div>
+    </Fragment>
+  )
 };

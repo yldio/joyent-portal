@@ -452,7 +452,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 .c7 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -592,7 +592,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
@@ -615,7 +615,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   min-height: auto;
@@ -655,7 +655,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   min-height: auto;
@@ -713,7 +713,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-sizing: border-box;
@@ -765,7 +765,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -1638,7 +1638,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
@@ -1661,7 +1661,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   box-sizing: border-box;
@@ -1705,7 +1705,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   cursor: pointer;
@@ -1746,7 +1746,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-style: solid;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
   cursor: pointer;
@@ -1813,7 +1813,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -1976,7 +1976,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
           >
             <path
               d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-              fill="rgba(73, 73, 73, 1)"
+              fill="rgb(73, 73, 73)"
             />
           </svg>
         </div>
@@ -2168,7 +2168,7 @@ exports[`renders <Tag /> without throwing 1`] = `
 .c2 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
-  border-radius: 0.1875rem;
+  border-radius: 0.125rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   padding: 0.3125rem 0.75rem;
@@ -2176,14 +2176,14 @@ exports[`renders <Tag /> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 <div
@@ -2224,7 +2224,7 @@ exports[`renders <Tag name value/> without throwing 1`] = `
 .c2 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
-  border-radius: 0.1875rem;
+  border-radius: 0.125rem;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   padding: 0.3125rem 0.75rem;
@@ -2232,14 +2232,14 @@ exports[`renders <Tag name value/> without throwing 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
 }
 
 <div

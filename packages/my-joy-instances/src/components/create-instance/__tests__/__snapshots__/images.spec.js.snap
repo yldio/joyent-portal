@@ -81,9 +81,7 @@ exports[`renders <Images expanded /> without throwing 1`] = `
 </form>
 `;
 
-exports[
-  `renders <Images images=[{name: stuff, imageName: stuff}] /> without throwing 1`
-] = `
+exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without throwing 1`] = `
 .c0 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -128,7 +126,7 @@ exports[
 }
 
 .c4 {
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
@@ -226,7 +224,7 @@ exports[
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
-  color: rgba(73,73,73,1);
+  color: rgb(73,73,73);
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;

@@ -35,42 +35,96 @@ module.exports = {
   showCode: true,
   sections: [
     {
-      name: 'Base Language',
-      sections: [
-        {
-          name: 'Color Palette',
-          description:
-            'Triton’s color palette aim to accessible and clear, whilst making distinctions between elements that are alive and elements that are static. We’ve split our palette into two sections; Action colors and Greys. ',
-          content: 'src/theme/colors.md'
-        },
-        {
-          name: 'Typography',
-          content: 'src/text/Readme.md'
-        }
-      ]
+      name: 'Color Palette',
+      description:
+        'Triton’s color palette aim to accessible and clear, whilst making distinctions between elements that are alive and elements that are static. We’ve split our palette into two sections; Action colors and Greys. ',
+      content: 'src/theme/colors.md'
+    },
+    {
+      name: 'Typographic Scale',
+      content: 'src/text/Readme.md',
+      description:
+        'Triton uses two typographic scales, a large and a small. The large is to be used on breakpoints above 600px, whilst the small is to be used on anything under that. ',
+    },
+    {
+      name: 'Grids',
+      content: 'src/grids/Readme.md',
+      description:
+        'Triton’s grid aims to have maximum coverage over a wide range of devices. With a maximum container width of 964px, we are able to display the main desktop experience all the way down to a tradional landscape tablet device.',
+    },
+    {
+      name: 'Baseline Grids',
+      content: 'src/grids/Baseline.md',
+      description:
+        'All of the size and spacing values are derived on the baseline grid. The baseline grid is composed of horizontal lines positioned 6 px apart, making the base measurement unit 6 px.',
+    },
+    {
+      name: 'Superscript',
+      content: 'src/text/Superscript.md',
+      description:
+        'Superscript is a way of formatting text so they appear above the baseline, drawing more attention to a smaller, less important element of information.',
+    },
+    {
+      name: 'Buttons',
+      description: 'Buttons are the core of any UI kit, and we are no exception. Here we have documented to most basic variations of the button states, which include but are limited to; Default, Hover, Clicked, and Disabled. ',
+      content: 'src/button/Readme.md',
+    },
+    {
+      name: 'Special Buttons',
+      description: 'Icon buttons are to be used to illustrate important actions and for when we are redirecting users to seperate services such as Github. ',
+      content: 'src/button/Special.md',
     },
     {
       name: 'Basic Components',
       components: () => [
-        'src/button/index.js',
         'src/form/input.js',
         'src/form/radio.js',
         'src/form/select.js',
         'src/form/checkbox.js',
-        'src/form/toggle.js',
-        'src/card/card.js',
         'src/tooltip/index.js',
         'src/popover/index.js'
       ]
     },
     {
+      name: 'Tags',
+      content: 'src/tags/Readme.md',
+      description: 'Tags are used to identify instances and services provided by Triton. Our tag style is derived from our small button style, but it’s inlaid text is written to represent the key:value function of the tagging system.'
+    },
+    {
+      name: 'Cards',
+      content: 'src/card/demo.md',
+      description:
+        'Cards are the most widely used component within the current Triton designs. They are used to divide, compartmentalize, and sort information and components that are related. Our card style uses a white background with a Grey 3 border. In some cases we attach a header to cards with either a white background, a coloured background to denote an active status, or a grey background for inactive status.',
+    },
+    {
+      name: 'Tables',
+      content: 'src/table/Readme.md',
+      description:
+        'Tritons uses tables throughout the service in a number of different ways. Tables can be used to list multiple variations of simgle information types, such as instqance lists, snapshots, and package types. Tables can either be multiple select (checkbox) or single select (radio button) and both variations are shown below.',
+    },
+    {
       name: 'Compound Components',
       components: () => [
-        'src/table/index.js',
         'src/message/index.js',
-        'src/section-list/index.js',
-        'src/breadcrumb/index.js'
       ]
+    },
+    {
+      name: 'Toasts',
+      content: 'src/footer/sticky.md',
+      description:
+        'Toast’s are pop-up that stick to the bottom of the page. Within Triton they are primarily used to contain contextual actions, such as ‘Deploy Instance’ and ‘Delete Instance’. They can also be used to contain universally relevant information like cookies.'
+    },
+    {
+      name: 'Navigation',
+      content: 'src/navigation.md',
+      description:
+        'These elements of navigation across are unoversal across the entire Tiron ecosystem. The primary nav allows users to switch service consoles and data centers, the breadcrumb orientates users within the specific console they’re in, and the footer provides universally important reference information like T’s & C’s.'
+    },
+    {
+      name: 'Sub-section Navigation',
+      content: 'src/section-list/usage.md',
+      description:
+        'We provide users with a number of ways to navigate around sections and consoles. Apart from the breadcrumb which is detailed above, we also provide a tabs components that can be embedded throughout the service..'
     },
     {
       name: 'Assets',
