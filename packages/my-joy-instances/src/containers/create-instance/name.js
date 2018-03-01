@@ -7,18 +7,15 @@ import { change } from 'redux-form';
 import { connect } from 'react-redux';
 import intercept from 'apr-intercept';
 import get from 'lodash.get';
-import punycode from 'punycode';
 
 import { NameIcon, H3, Button } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
 import Name from '@components/create-instance/name';
 import Description from '@components/description';
-import GetInstance from '@graphql/get-instance-small.gql';
-import GetRandomName from '@graphql/get-random-name.gql';
+import { instanceName as validateName } from '@state/validators';
 import createClient from '@state/apollo-client';
-import parseError from '@state/parse-error';
-import { fieldError } from '@root/constants';
+import GetRandomName from '@graphql/get-random-name.gql';
 
 const FORM_NAME = 'create-instance-name';
 
@@ -28,7 +25,7 @@ const NameContainer = ({
   name,
   placeholderName,
   randomizing,
-  handleAsyncValidation,
+  handleAsyncValidate,
   shouldAsyncValidate,
   handleNext,
   handleRandomize,
@@ -54,7 +51,7 @@ const NameContainer = ({
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
       onSubmit={handleNext}
-      asyncValidate={handleAsyncValidation}
+      asyncValidate={handleAsyncValidate}
       shouldAsyncValidate={shouldAsyncValidate}
     >
       {props =>
@@ -127,49 +124,10 @@ export default compose(
       handleEdit: () => {
         history.push(`/~create/name${history.location.search}`);
       },
-      shouldAsyncValidate: ({ trigger }) => trigger === 'change',
-      handleAsyncValidation: async ({ name }) => {
-        const sanitized = punycode.encode(name).replace(/-$/, '');
-
-        if (sanitized !== name) {
-          // eslint-disable-next-line no-throw-literal
-          throw {
-            name: fieldError
-          };
-        }
-
-        if (!/^[a-zA-Z0-9][a-zA-Z0-9\\_\\.\\-]*$/.test(name)) {
-          // eslint-disable-next-line no-throw-literal
-          throw {
-            name: fieldError
-          };
-        }
-
-        const [err, res] = await intercept(
-          createClient().query({
-            fetchPolicy: 'network-only',
-            query: GetInstance,
-            variables: { name }
-          })
-        );
-
-        if (err) {
-          // eslint-disable-next-line no-throw-literal
-          throw {
-            name: parseError(err)
-          };
-        }
-
-        const { data } = res;
-        const { machines = [] } = data;
-
-        if (machines.length) {
-          // eslint-disable-next-line no-throw-literal
-          throw {
-            name: `${name} already exists`
-          };
-        }
+      shouldAsyncValidate: ({ trigger }) => {
+        return trigger === 'change';
       },
+      handleAsyncValidate: validateName,
       handleRandomize: async () => {
         dispatch(
           set({ name: 'create-instance-name-randomizing', value: true })

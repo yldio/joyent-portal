@@ -9,7 +9,7 @@
     "build:lib": "echo 0",
     "build:bundle": "NODE_ENV=production redrun build",
     "prepublish": "NODE_ENV=production redrun build",
-    "lint": "redrun lint:ci -- -- --fix",
+    "lint": "redrun lint:ci -- --fix",
     "lint:ci": "NODE_ENV=test eslint . --ext .js --ext .md",
     "test": "echo 0",
     "test:ci": "redrun test",

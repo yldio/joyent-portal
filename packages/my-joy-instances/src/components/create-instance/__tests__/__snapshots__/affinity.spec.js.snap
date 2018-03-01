@@ -12,15 +12,13 @@ Array [
     
     :
 </span>,
-  " be on a",
-  " ",
+  " be on a ",
   " node as the instance(s) identified by the instance ",
   " ",
   "key “",
   "\\" and the instance tag value",
   " ",
-  " ",
-  "\\"",
+  " \\"",
   "”",
 ]
 `;
@@ -37,22 +35,20 @@ Array [
     
     :
 </span>,
-  " be on a",
-  " ",
+  " be on a ",
   " node as the instance(s) identified by the instance ",
   " ",
   "key “",
   "\\" and the instance tag value",
   " ",
-  " ",
-  "\\"",
+  " \\"",
   "”",
 ]
 `;
 
 exports[`renders <Rule/> without throwing 1`] = `
 .c0 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .c12 {
@@ -667,8 +663,8 @@ exports[`renders <Rule/> without throwing 1`] = `
       className="c2"
       style={
         Object {
-          "fontSize": "18px",
-          "lineHeight": "48px",
+          "fontSize": "1.125rem",
+          "lineHeight": "3rem",
         }
       }
     >
@@ -676,7 +672,7 @@ exports[`renders <Rule/> without throwing 1`] = `
     </h4>
     <div
       className="baseline-jVaZNU kXgQxt c3"
-      name="rule-instance-conditional"
+      name="conditional"
       role="group"
       style={undefined}
     >
@@ -685,8 +681,8 @@ exports[`renders <Rule/> without throwing 1`] = `
         disabled={false}
         style={
           Object {
-            "fontSize": "18px",
-            "lineHeight": "48px",
+            "fontSize": "1.125rem",
+            "lineHeight": "3rem",
           }
         }
         width="4.125rem"
@@ -698,8 +694,8 @@ exports[`renders <Rule/> without throwing 1`] = `
           onBlur={undefined}
           style={
             Object {
-              "fontSize": "18px",
-              "lineHeight": "48px",
+              "fontSize": "1.125rem",
+              "lineHeight": "3rem",
             }
           }
           width="4.125rem"
@@ -721,8 +717,8 @@ exports[`renders <Rule/> without throwing 1`] = `
       className="c2"
       style={
         Object {
-          "fontSize": "18px",
-          "lineHeight": "48px",
+          "fontSize": "1.125rem",
+          "lineHeight": "3rem",
         }
       }
     >
@@ -730,7 +726,7 @@ exports[`renders <Rule/> without throwing 1`] = `
     </h4>
     <div
       className="baseline-jVaZNU kXgQxt c3"
-      name="rule-instance-placement"
+      name="placement"
       role="group"
       style={undefined}
     >
@@ -739,8 +735,8 @@ exports[`renders <Rule/> without throwing 1`] = `
         disabled={false}
         style={
           Object {
-            "fontSize": "18px",
-            "lineHeight": "48px",
+            "fontSize": "1.125rem",
+            "lineHeight": "3rem",
           }
         }
         width="6.25rem"
@@ -752,8 +748,8 @@ exports[`renders <Rule/> without throwing 1`] = `
           onBlur={undefined}
           style={
             Object {
-              "fontSize": "18px",
-              "lineHeight": "48px",
+              "fontSize": "1.125rem",
+              "lineHeight": "3rem",
             }
           }
           width="6.25rem"
@@ -775,8 +771,8 @@ exports[`renders <Rule/> without throwing 1`] = `
       className="c2"
       style={
         Object {
-          "fontSize": "18px",
-          "lineHeight": "48px",
+          "fontSize": "1.125rem",
+          "lineHeight": "3rem",
         }
       }
     >
@@ -784,7 +780,7 @@ exports[`renders <Rule/> without throwing 1`] = `
     </h4>
     <div
       className="baseline-jVaZNU kXgQxt c3"
-      name="rule-type"
+      name="type"
       role="group"
       style={undefined}
     >
@@ -793,8 +789,8 @@ exports[`renders <Rule/> without throwing 1`] = `
         disabled={false}
         style={
           Object {
-            "fontSize": "18px",
-            "lineHeight": "48px",
+            "fontSize": "1.125rem",
+            "lineHeight": "3rem",
           }
         }
         width="8.4375rem"
@@ -806,8 +802,8 @@ exports[`renders <Rule/> without throwing 1`] = `
           onBlur={undefined}
           style={
             Object {
-              "fontSize": "18px",
-              "lineHeight": "48px",
+              "fontSize": "1.125rem",
+              "lineHeight": "3rem",
             }
           }
           width="8.4375rem"
@@ -827,7 +823,7 @@ exports[`renders <Rule/> without throwing 1`] = `
     </div>
     <div
       className="baseline-jVaZNU kXgQxt c3"
-      name="rule-instance-name-pattern"
+      name="pattern"
       role="group"
       style={undefined}
     >
@@ -839,8 +835,8 @@ exports[`renders <Rule/> without throwing 1`] = `
           disabled={false}
           style={
             Object {
-              "fontSize": "18px",
-              "lineHeight": "48px",
+              "fontSize": "1.125rem",
+              "lineHeight": "3rem",
             }
           }
           width="8.125rem"
@@ -852,8 +848,8 @@ exports[`renders <Rule/> without throwing 1`] = `
             onBlur={undefined}
             style={
               Object {
-                "fontSize": "18px",
-                "lineHeight": "48px",
+                "fontSize": "1.125rem",
+                "lineHeight": "3rem",
               }
             }
             width="8.125rem"
@@ -889,7 +885,7 @@ exports[`renders <Rule/> without throwing 1`] = `
     </div>
     <div
       className="baseline-jVaZNU kXgQxt c3"
-      name="rule-instance-name"
+      name="value"
       role="group"
       style={undefined}
     >
@@ -902,8 +898,8 @@ exports[`renders <Rule/> without throwing 1`] = `
         required={true}
         style={
           Object {
-            "fontSize": "18px",
-            "lineHeight": "48px",
+            "fontSize": "1.125rem",
+            "lineHeight": "3rem",
           }
         }
       />
@@ -914,7 +910,7 @@ exports[`renders <Rule/> without throwing 1`] = `
 
 exports[`renders <Rule/> without throwing 2`] = `
 .c0 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .c12 {
@@ -1529,8 +1525,8 @@ exports[`renders <Rule/> without throwing 2`] = `
       className="c2"
       style={
         Object {
-          "fontSize": "18px",
-          "lineHeight": "48px",
+          "fontSize": "1.125rem",
+          "lineHeight": "3rem",
         }
       }
     >
@@ -1538,7 +1534,7 @@ exports[`renders <Rule/> without throwing 2`] = `
     </h4>
     <div
       className="baseline-jVaZNU kXgQxt c3"
-      name="rule-instance-conditional"
+      name="conditional"
       role="group"
       style={undefined}
     >
@@ -1547,8 +1543,8 @@ exports[`renders <Rule/> without throwing 2`] = `
         disabled={false}
         style={
           Object {
-            "fontSize": "18px",
-            "lineHeight": "48px",
+            "fontSize": "1.125rem",
+            "lineHeight": "3rem",
           }
         }
         width="4.125rem"
@@ -1560,8 +1556,8 @@ exports[`renders <Rule/> without throwing 2`] = `
           onBlur={undefined}
           style={
             Object {
-              "fontSize": "18px",
-              "lineHeight": "48px",
+              "fontSize": "1.125rem",
+              "lineHeight": "3rem",
             }
           }
           width="4.125rem"
@@ -1583,8 +1579,8 @@ exports[`renders <Rule/> without throwing 2`] = `
       className="c2"
       style={
         Object {
-          "fontSize": "18px",
-          "lineHeight": "48px",
+          "fontSize": "1.125rem",
+          "lineHeight": "3rem",
         }
       }
     >
@@ -1592,7 +1588,7 @@ exports[`renders <Rule/> without throwing 2`] = `
     </h4>
     <div
       className="baseline-jVaZNU kXgQxt c3"
-      name="rule-instance-placement"
+      name="placement"
       role="group"
       style={undefined}
     >
@@ -1601,8 +1597,8 @@ exports[`renders <Rule/> without throwing 2`] = `
         disabled={false}
         style={
           Object {
-            "fontSize": "18px",
-            "lineHeight": "48px",
+            "fontSize": "1.125rem",
+            "lineHeight": "3rem",
           }
         }
         width="6.25rem"
@@ -1614,8 +1610,8 @@ exports[`renders <Rule/> without throwing 2`] = `
           onBlur={undefined}
           style={
             Object {
-              "fontSize": "18px",
-              "lineHeight": "48px",
+              "fontSize": "1.125rem",
+              "lineHeight": "3rem",
             }
           }
           width="6.25rem"
@@ -1637,8 +1633,8 @@ exports[`renders <Rule/> without throwing 2`] = `
       className="c2"
       style={
         Object {
-          "fontSize": "18px",
-          "lineHeight": "48px",
+          "fontSize": "1.125rem",
+          "lineHeight": "3rem",
         }
       }
     >
@@ -1646,7 +1642,7 @@ exports[`renders <Rule/> without throwing 2`] = `
     </h4>
     <div
       className="baseline-jVaZNU kXgQxt c3"
-      name="rule-type"
+      name="type"
       role="group"
       style={undefined}
     >
@@ -1655,8 +1651,8 @@ exports[`renders <Rule/> without throwing 2`] = `
         disabled={false}
         style={
           Object {
-            "fontSize": "18px",
-            "lineHeight": "48px",
+            "fontSize": "1.125rem",
+            "lineHeight": "3rem",
           }
         }
         width="8.4375rem"
@@ -1668,8 +1664,8 @@ exports[`renders <Rule/> without throwing 2`] = `
           onBlur={undefined}
           style={
             Object {
-              "fontSize": "18px",
-              "lineHeight": "48px",
+              "fontSize": "1.125rem",
+              "lineHeight": "3rem",
             }
           }
           width="8.4375rem"
@@ -1689,7 +1685,7 @@ exports[`renders <Rule/> without throwing 2`] = `
     </div>
     <div
       className="baseline-jVaZNU kXgQxt c3"
-      name="rule-instance-name-pattern"
+      name="pattern"
       role="group"
       style={undefined}
     >
@@ -1701,8 +1697,8 @@ exports[`renders <Rule/> without throwing 2`] = `
           disabled={false}
           style={
             Object {
-              "fontSize": "18px",
-              "lineHeight": "48px",
+              "fontSize": "1.125rem",
+              "lineHeight": "3rem",
             }
           }
           width="8.125rem"
@@ -1714,8 +1710,8 @@ exports[`renders <Rule/> without throwing 2`] = `
             onBlur={undefined}
             style={
               Object {
-                "fontSize": "18px",
-                "lineHeight": "48px",
+                "fontSize": "1.125rem",
+                "lineHeight": "3rem",
               }
             }
             width="8.125rem"
@@ -1751,7 +1747,7 @@ exports[`renders <Rule/> without throwing 2`] = `
     </div>
     <div
       className="baseline-jVaZNU kXgQxt c3"
-      name="rule-instance-name"
+      name="value"
       role="group"
       style={undefined}
     >
@@ -1764,8 +1760,8 @@ exports[`renders <Rule/> without throwing 2`] = `
         required={true}
         style={
           Object {
-            "fontSize": "18px",
-            "lineHeight": "48px",
+            "fontSize": "1.125rem",
+            "lineHeight": "3rem",
           }
         }
       />

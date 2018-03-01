@@ -21,6 +21,7 @@ import {
 import Title from '@components/create-image/title';
 import Description from '@components/description';
 import Tag from '@components/tags';
+import { addTag as validateTag } from '@state/validators';
 import { Forms } from '@root/constants';
 
 export const Tags = ({
@@ -34,6 +35,8 @@ export const Tags = ({
   handleToggleExpanded,
   handleCancelEdit,
   handleChangeAddOpen,
+  handleAsyncValidate,
+  shouldAsyncValidate,
   handleNext,
   step,
   handleEdit,
@@ -84,6 +87,8 @@ export const Tags = ({
       form={Forms.FORM_TAGS_CREATE}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
+      asyncValidate={handleAsyncValidate}
+      shouldAsyncValidate={shouldAsyncValidate}
       onSubmit={handleAddTag}
     >
       {props =>
@@ -141,6 +146,10 @@ export default compose(
     handleEdit: () => {
       return history.push(`/~create/${match.params.instance}/tag`);
     },
+    shouldAsyncValidate: ({ trigger }) => {
+      return trigger === 'submit';
+    },
+    handleAsyncValidate: validateTag,
     handleAddTag: value => {
       const toggleToClosed = set({
         name: `${Forms.CREATE_TAGS}-add-open`,

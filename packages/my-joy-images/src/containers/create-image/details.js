@@ -2,13 +2,12 @@ import React, { Fragment } from 'react';
 import { compose, graphql } from 'react-apollo';
 import { set } from 'react-redux-values';
 import ReduxForm from 'declarative-redux-form';
+import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Margin } from 'styled-components-spacing';
 import { change } from 'redux-form';
 import { connect } from 'react-redux';
 import intercept from 'apr-intercept';
 import get from 'lodash.get';
-import punycode from 'punycode';
-import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 
 import { NameIcon, H3, Button, H4, P } from 'joyent-ui-toolkit';
 
@@ -16,7 +15,8 @@ import Title from '@components/create-image/title';
 import Details from '@components/create-image/details';
 import Description from '@components/description';
 import GetRandomName from '@graphql/get-random-name.gql';
-import createStore from '@state/apollo-client';
+import createClient from '@state/apollo-client';
+import { instanceName as validateName } from '@state/validators';
 import { Forms } from '@root/constants';
 
 const NameContainer = ({
@@ -27,7 +27,7 @@ const NameContainer = ({
   description,
   placeholderName,
   randomizing,
-  handleAsyncValidation,
+  handleAsyncValidate,
   shouldAsyncValidate,
   handleNext,
   handleRandomize,
@@ -54,9 +54,9 @@ const NameContainer = ({
       form={Forms.FORM_DETAILS}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
-      onSubmit={handleNext}
-      asyncValidate={handleAsyncValidation}
+      asyncValidate={handleAsyncValidate}
       shouldAsyncValidate={shouldAsyncValidate}
+      onSubmit={handleNext}
     >
       {props =>
         expanded ? (
@@ -121,6 +121,7 @@ export default compose(
     ({ form, values }, ownProps) => {
       const name = get(form, `${Forms.FORM_DETAILS}.values.name`, '');
       const version = get(form, `${Forms.FORM_DETAILS}.values.version`, '');
+
       const description = get(
         form,
         `${Forms.FORM_DETAILS}.values.description`,
@@ -128,7 +129,6 @@ export default compose(
       );
 
       const proceeded = get(values, `${Forms.FORM_DETAILS}-proceeded`, false);
-
       const randomizing = get(values, 'create-image-name-randomizing', false);
 
       return {
@@ -141,35 +141,23 @@ export default compose(
       };
     },
     (dispatch, { history, match }) => ({
-      shouldAsyncValidate: ({ trigger }) => trigger === 'submit',
-      handleAsyncValidation: async ({ name }) => {
-        const sanitized = punycode.encode(name).replace(/-$/, '');
-
-        if (sanitized !== name) {
-          // eslint-disable-next-line no-throw-literal
-          throw {
-            name: 'Special characters are not accepted'
-          };
-        }
-
-        if (!/^[a-zA-Z0-9][a-zA-Z0-9\\_\\.\\-]*$/.test(name)) {
-          // eslint-disable-next-line no-throw-literal
-          throw {
-            name: 'Invalid name'
-          };
-        }
-      },
       handleNext: () => {
         dispatch(set({ name: `${Forms.FORM_DETAILS}-proceeded`, value: true }));
-
         return history.push(`/~create/${match.params.instance}/tag`);
       },
-      handleEdit: () => history.push(`/~create/${match.params.instance}/name`),
+      handleEdit: () => {
+        dispatch(set({ name: `${Forms.FORM_DETAILS}-proceeded`, value: true }));
+        return history.push(`/~create/${match.params.instance}/name`);
+      },
+      shouldAsyncValidate: ({ trigger }) => {
+        return trigger === 'change';
+      },
+      handleAsyncValidate: validateName,
       handleRandomize: async () => {
         dispatch(set({ name: 'create-image-name-randomizing', value: true }));
 
         const [err, res] = await intercept(
-          createStore().query({
+          createClient().query({
             fetchPolicy: 'network-only',
             query: GetRandomName
           })

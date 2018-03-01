@@ -31,8 +31,8 @@ import GetTags from '@graphql/list-tags.gql';
 import UpdateTags from '@graphql/update-tags.gql';
 import DeleteTag from '@graphql/delete-tag.gql';
 import parseError from '@state/parse-error';
+import { addTag as validateTag } from '@state/validators';
 import Confirm from '@state/confirm';
-import { fieldError } from '@root/constants';
 
 const MENU_FORM_NAME = 'instance-tags-list-menu';
 const ADD_FORM_NAME = 'instance-tags-add-new';
@@ -58,10 +58,10 @@ export const Tags = ({
   const _add = addOpen ? (
     <ReduxForm
       form={ADD_FORM_NAME}
-      onSubmit={handleCreate}
-      onCancel={() => handleToggleAddOpen(false)}
       shouldAsyncValidate={shouldAsyncValidate}
       asyncValidate={handleAsyncValidate}
+      onSubmit={handleCreate}
+      onCancel={() => handleToggleAddOpen(false)}
     >
       {TagsAddForm}
     </ReduxForm>
@@ -208,25 +208,15 @@ export default compose(
     },
     (dispatch, ownProps) => {
       return {
+        shouldAsyncValidate: ({ trigger }) => {
+          return trigger === 'submit';
+        },
+        handleAsyncValidate: validateTag,
         handleToggleAddOpen: value => {
           return dispatch(set({ name: `add-tags-open`, value }));
         },
         handleToggleEditing: value => {
           return dispatch(set({ name: `editing-tag`, value }));
-        },
-        shouldAsyncValidate: ({ trigger }) => trigger === 'submit',
-        handleAsyncValidate: async ({ name = '', value = '' }) => {
-          const isNameValid = /^[a-zA-Z_.-]{1,16}$/.test(name);
-          const isValueValid = /^[a-zA-Z_.-]{1,16}$/.test(value);
-
-          if (isNameValid && isValueValid) {
-            return;
-          }
-
-          throw {
-            name: isNameValid ? null : fieldError,
-            value: isValueValid ? null : fieldError
-          };
         },
         handleEdit: async ({ name, value }, _, { form, initialValues }) => {
           const { instance, deleteTag, updateTags, refetch } = ownProps;

@@ -240,15 +240,8 @@ export default compose(
       handleSubmit: async () => {
         const _affinity = affinity
           .map(aff => ({
-            conditional: aff['rule-instance-conditional'],
-            placement: aff['rule-instance-placement'],
-            identity: aff['rule-type'],
-            key: aff['rule-instance-tag-key'],
-            pattern: aff['rule-instance-tag-value-pattern'],
-            value:
-              aff['rule-type'] === 'name'
-                ? aff['rule-instance-name']
-                : aff['rule-instance-tag-value']
+            ...aff,
+            value: aff.type === 'name' ? aff.name : aff.value
           }))
           .map(({ conditional, placement, identity, key, pattern, value }) => {
             const type = constantCase(

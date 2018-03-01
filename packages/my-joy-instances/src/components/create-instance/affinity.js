@@ -9,8 +9,8 @@ import remcalc from 'remcalc';
 import { H5, Select, Input, FormGroup, FormMeta } from 'joyent-ui-toolkit';
 
 const style = {
-  lineHeight: '48px',
-  fontSize: '18px'
+  lineHeight: remcalc(48),
+  fontSize: remcalc(18)
 };
 
 const Bold = styled.span`
@@ -19,7 +19,7 @@ const Bold = styled.span`
 
 const Values = touched => (
   <Margin right={1}>
-    <Select style={style} touched={touched} embedded width={remcalc(130)}>
+    <Select style={style} touched={touched} width={remcalc(130)} embedded>
       <option value="equalling">equalling</option>
       <option value="not-equalling">not equalling</option>
       <option value="containing">containing</option>
@@ -29,16 +29,16 @@ const Values = touched => (
   </Margin>
 );
 
-export const Rule = rule => (
-  <Margin bottom={4}>
+export const Rule = ({ valid, ...rule }) => (
+  <Margin bottom={valid ? 4 : 8}>
     <Flex alignCenter wrap>
       <H5 style={style} inline noMargin>
         The instance
       </H5>
-      <FormGroup name="rule-instance-conditional" field={Field}>
+      <FormGroup name="conditional" field={Field}>
         <Select
           style={style}
-          touched={rule['rule-instance-conditional']}
+          touched={rule.conditional}
           width={remcalc(66)}
           embedded
         >
@@ -49,10 +49,10 @@ export const Rule = rule => (
       <H5 style={style} inline noMargin>
         be on
       </H5>
-      <FormGroup name="rule-instance-placement" field={Field}>
+      <FormGroup name="placement" field={Field}>
         <Select
           style={style}
-          touched={rule['rule-instance-placement']}
+          touched={rule.placement}
           width={remcalc(100)}
           embedded
         >
@@ -63,10 +63,10 @@ export const Rule = rule => (
       <H5 style={style} inline noMargin>
         node as the instance(s) identified by the
       </H5>
-      <FormGroup name="rule-type" field={Field}>
+      <FormGroup name="type" field={Field}>
         <Select
           style={style}
-          touched={rule['rule-type']}
+          touched={rule.type}
           width={remcalc(135)}
           embedded
           left
@@ -75,54 +75,53 @@ export const Rule = rule => (
           <option value="tag">tag</option>
         </Select>
       </FormGroup>
-      {rule['rule-type'] === 'tag' ? (
+      {rule.type === 'tag' ? (
         <Fragment>
-          <FormGroup name="rule-instance-tag-key" field={Field}>
+          <FormGroup name="key" field={Field}>
             <Input
               style={style}
               onBlur={null}
+              type="text"
+              placeholder="key"
               small
               embedded
-              type="text"
               required
-              placeholder="key"
             />
-            <FormMeta small />
+            <FormMeta small absolute />
           </FormGroup>
           <H5 style={style} inline noMargin>
             and value{' '}
           </H5>
-          <FormGroup name="rule-instance-tag-value-pattern" field={Field}>
-            {Values(rule['rule-instance-tag-value-pattern'])}
+          <FormGroup name="pattern" field={Field}>
+            {Values(rule.pattern)}
           </FormGroup>
-          <FormGroup name="rule-instance-tag-value" field={Field}>
+          <FormGroup name="value" field={Field}>
             <Input
               style={style}
               onBlur={null}
-              small
-              embedded
               type="text"
-              required
               placeholder="value"
+              embedded
+              required
             />
-            <FormMeta small />
+            <FormMeta small absolute />
           </FormGroup>
         </Fragment>
       ) : (
         <Fragment>
-          <FormGroup name="rule-instance-name-pattern" field={Field}>
-            {Values(rule['rule-instance-name-pattern'])}
+          <FormGroup name="pattern" field={Field}>
+            {Values(rule.pattern)}
           </FormGroup>
-          <FormGroup name="rule-instance-name" field={Field}>
+          <FormGroup name="value" field={Field}>
             <Input
               onBlur={null}
-              embedded
               style={style}
               type="text"
-              required
               placeholder="Example instance name: nginx"
+              embedded
+              required
             />
-            <FormMeta />
+            <FormMeta absolute />
           </FormGroup>
         </Fragment>
       )}
@@ -132,21 +131,18 @@ export const Rule = rule => (
 
 export const Header = rule => (
   <Fragment>
-    <Bold>{titleCase(rule['rule-instance-conditional'])}:</Bold> be on a{' '}
-    {rule['rule-instance-placement']} node as the instance(s) identified by the
-    instance {rule['rule-type']}
-    {rule['rule-type'] === 'name' ? (
+    <Bold>{titleCase(rule.conditional)}:</Bold> be on a {rule.placement} node as
+    the instance(s) identified by the instance {rule.type}
+    {rule.type === 'name' ? (
       <Fragment>
         {' '}
-        {rule['rule-instance-name-pattern']} “{rule['rule-instance-name']}”
+        {rule.pattern} “{rule.value}”
       </Fragment>
     ) : (
       <Fragment>
         {' '}
-        key “{rule['rule-instance-tag-key']}" and the instance tag value{' '}
-        {rule['rule-instance-tag-value-pattern'] &&
-          rule['rule-instance-tag-value-pattern'].split('-').join(' ')}{' '}
-        "{rule['rule-instance-tag-value']}”
+        key “{rule.key}" and the instance tag value{' '}
+        {rule.pattern && rule.pattern.split('-').join(' ')} "{rule.value}”
       </Fragment>
     )}
   </Fragment>

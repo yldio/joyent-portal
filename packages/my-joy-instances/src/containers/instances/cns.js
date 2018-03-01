@@ -26,7 +26,7 @@ import DeleteTag from '@graphql/delete-tag.gql';
 import UpdateTags from '@graphql/update-tags.gql';
 import GetTags from '@graphql/list-tags.gql';
 import parseError from '@state/parse-error';
-import { fieldError } from '@root/constants';
+import { addCnsService as validateServiceName } from '@state/validators';
 
 const FORM_NAME = 'cns-new-service';
 
@@ -258,18 +258,10 @@ export default compose(
 
         return refetch();
       },
-      shouldAsyncValidate: ({ trigger }) => trigger === 'change',
-      handleAsyncValidate: async ({ name }) => {
-        const isNameValid = /^[a-zA-Z_.-]{1,16}$/.test(name);
-
-        if (isNameValid) {
-          return;
-        }
-
-        throw {
-          name: fieldError
-        };
+      shouldAsyncValidate: ({ trigger }) => {
+        return trigger === 'change';
       },
+      handleAsyncValidate: validateServiceName,
       handleRemoveService: async (name, services) => {
         const value = services.filter(svc => name !== svc);
 

@@ -1,0 +1,6 @@
+query snapshot($machine: ID!, $name: String!) {
+  snapshot(machine: $machine, name: $name) {
+    id
+    name
+  }
+}

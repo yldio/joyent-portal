@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 import get from 'lodash.get';
 import { Margin } from 'styled-components-spacing';
 import { set } from 'react-redux-values';
-import punycode from 'punycode';
 
 import { CnsIcon, H3, Button } from 'joyent-ui-toolkit';
 
@@ -14,7 +13,7 @@ import Title from '@components/create-instance/title';
 import Cns, { Footer, AddServiceForm } from '@components/cns';
 import Description from '@components/description';
 import GetAccount from '@graphql/get-account.gql';
-import { fieldError } from '@root/constants';
+import { addCnsService as validateServiceName } from '@state/validators';
 
 const CNS_FORM = 'create-instance-cns';
 
@@ -175,32 +174,18 @@ export default compose(
       dispatch(set({ name: `${CNS_FORM}-proceeded`, value: true }));
       history.push(`/~create/cns${history.location.search}`);
     },
-    shouldAsyncValidate: ({ trigger }) => trigger === 'change',
-    handleAsyncValidate: async ({ name = '', value = '' }) => {
-      const isNameValid = /^[a-zA-Z_.-]{1,16}$/.test(name);
-      const isValueValid = /^[a-zA-Z_.-]{1,16}$/.test(value);
-
-      if (isNameValid && isValueValid) {
-        return;
-      }
-
-      throw {
-        name: isNameValid ? null : fieldError,
-        value: isValueValid ? null : fieldError
-      };
+    shouldAsyncValidate: ({ trigger }) => {
+      return trigger === 'submit';
     },
+    handleAsyncValidate: validateServiceName,
     handleToggleCnsEnabled: ({ target }) =>
       dispatch(set({ name: `${CNS_FORM}-enabled`, value: !cnsEnabled })),
     handleAddService: ({ name }) => {
-      const serviceName = punycode
-        .encode(name.toLowerCase().replace(/\s/g, '-'))
-        .replace(/-$/, '');
-
       dispatch([
         destroy(`${CNS_FORM}-new-service`),
         set({
           name: `${CNS_FORM}-services`,
-          value: serviceNames.concat(serviceName)
+          value: serviceNames.concat(name)
         })
       ]);
     },
