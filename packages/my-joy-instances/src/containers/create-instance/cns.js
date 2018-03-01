@@ -3,9 +3,9 @@ import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { destroy } from 'redux-form';
 import { connect } from 'react-redux';
-import get from 'lodash.get';
 import { Margin } from 'styled-components-spacing';
 import { set } from 'react-redux-values';
+import get from 'lodash.get';
 
 import { CnsIcon, H3, Button } from 'joyent-ui-toolkit';
 
@@ -47,9 +47,9 @@ const CNSContainer = ({
     </Title>
     {expanded ? (
       <Description>
-        Triton CNS is used to automatically update hostnames for your
-        instances. You can serve multiple instances (with multiple IP
-        addresses) under the same hostname by matching the CNS service names.{' '}
+        Triton CNS is used to automatically update hostnames for your instances.
+        You can serve multiple instances (with multiple IP addresses) under the
+        same hostname by matching the CNS service names.{' '}
         <a
           href="https://docs.joyent.com/private-cloud/install/cns"
           target="_blank"
@@ -111,25 +111,28 @@ export default compose(
     options: () => ({
       ssr: false
     }),
-    props: ({ data: { account: { id = '<account-id>' } = [] } }) => ({
-      id
-    })
+    props: ({ data }) => {
+      const id = get(data, 'account.id', '<account-id>');
+      const datacenter = get(data, 'datacenter.name', '<dc>');
+
+      return {
+        id,
+        datacenter
+      };
+    }
   }),
-  connect(({ form, values }, { id }) => {
+  connect(({ form, values }, { id, datacenter }) => {
     const proceeded = get(values, IC_CNS_V_PROCEEDED, false);
     const instanceName = get(form, `${IC_NAME_F}.values.name`, '<inst-name>');
     const serviceNames = get(values, IC_CNS_V_SERVICES, []);
 
-    // REPLACE WITH  DATA CENTER
-    const dataCenter = 'us-east-1';
-
     const hostnames = [
       {
-        values: [`${instanceName}.inst.${id}.${dataCenter}.triton.zone`],
+        values: [`${instanceName}.inst.${id}.${datacenter}.triton.zone`],
         public: true
       },
       {
-        values: [`${instanceName}.inst.${id}.${dataCenter}.cns.joyent.com`]
+        values: [`${instanceName}.inst.${id}.${datacenter}.cns.joyent.com`]
       },
       {
         values: [],
@@ -149,7 +152,7 @@ export default compose(
 
       serviceNames.forEach(name => {
         const postfix = hostname.public ? '.triton.zone' : '.cns.joyent.com';
-        const value = `${name}.svc.${id}.${dataCenter}${postfix}`;
+        const value = `${name}.svc.${id}.${datacenter}${postfix}`;
         hostname.values.push(value);
       });
     });

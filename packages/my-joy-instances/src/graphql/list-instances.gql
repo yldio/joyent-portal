@@ -1,20 +1,22 @@
 query instances {
   machines {
-    id
-    name
-    state
-    primary_ip
-    firewall_enabled
-    created
-    updated
-    brand
-    memory
-    disk
-    package {
+    results {
+      id
       name
-    }
-    snapshots {
-      name
+      state
+      primary_ip
+      firewall_enabled
+      created
+      updated
+      brand
+      memory
+      disk
+      package {
+        name
+      }
+      snapshots {
+        name
+      }
     }
   }
 }

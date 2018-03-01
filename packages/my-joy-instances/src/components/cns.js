@@ -57,7 +57,10 @@ export const Footer = ({ enabled, submitting, onToggle }) => (
     </Margin>
     {enabled ? (
       <Margin bottom={4}>
-        <P>Please note: All hostnames listed here will be confirmed after deployment.</P>
+        <P>
+          Please note: All hostnames listed here will be confirmed after
+          deployment.
+        </P>
       </Margin>
     ) : null}
   </Fragment>

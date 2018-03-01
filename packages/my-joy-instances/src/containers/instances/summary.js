@@ -145,7 +145,10 @@ export default compose(
       }
     }),
     props: ({ data: { loading, error, variables, ...rest } }) => {
-      let instance = find(get(rest, 'machines', []), ['name', variables.name]);
+      let instance = find(get(rest, 'machines.results', []), [
+        'name',
+        variables.name
+      ]);
 
       if (instance) {
         const { ips } = instance;

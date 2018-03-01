@@ -1,7 +1,0 @@
-query instance($name: String!) {
-  machines(name: $name) {
-    id
-    name
-    dns_names
-  }
-}

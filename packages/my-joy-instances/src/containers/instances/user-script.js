@@ -57,7 +57,7 @@ export default compose(
       const { loading, error, variables, refetch, ...rest } = data;
       const { name } = variables;
 
-      const instance = find(get(rest, 'machines', []), ['name', name]);
+      const instance = find(get(rest, 'machines.results', []), ['name', name]);
       const metadata = get(instance, 'metadata', [])
         .filter(({ name = '' }) => name === 'user-script')
         .shift();

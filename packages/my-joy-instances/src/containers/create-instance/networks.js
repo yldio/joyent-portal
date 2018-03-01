@@ -12,7 +12,7 @@ import get from 'lodash.get';
 import { NetworkIcon, Button, H3, StatusLoader } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-instance/title';
-import Network from '@components/create-instance/network';
+import Network from '@components/network';
 import Description from '@components/description';
 import ListNetworks from '@graphql/list-networks.gql';
 import { Forms, Values } from '@root/constants';

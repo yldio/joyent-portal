@@ -35,13 +35,22 @@ const GetHeader = gql`
 
 const GetAccount = gql`
   {
+    datacenter {
+      name
+    }
     account {
       login
     }
   }
 `;
 
-const Navigation = ({ login, toggleSectionOpen, isOpen, activePanel }) => (
+const Navigation = ({
+  login,
+  datacenter,
+  toggleSectionOpen,
+  isOpen,
+  activePanel
+}) => (
   <Header onOutsideClick={() => toggleSectionOpen()}>
     <HeaderRow>
       <HeaderItem>
@@ -60,20 +69,22 @@ const Navigation = ({ login, toggleSectionOpen, isOpen, activePanel }) => (
       <HeaderDividerItem />
       <HeaderFlexibleSpaceItem />
       <HeaderDividerItem />
-      <HeaderItem
-        onClick={() => toggleSectionOpen('datacenter')}
-        active={isOpen && activePanel === 'datacenter'}
-      >
-        <HeaderItemContent>
-          <HeaderItemSubContent>Data Center:</HeaderItemSubContent>
-          <HeaderSpace />
-          <span>us-east-1</span>
-        </HeaderItemContent>
-        <HeaderItemIcon>
-          <DataCenterIcon light />
-        </HeaderItemIcon>
-      </HeaderItem>
-      <HeaderDividerItem />
+      {datacenter ? (
+        <HeaderItem
+          onClick={() => toggleSectionOpen('datacenter')}
+          active={isOpen && activePanel === 'datacenter'}
+        >
+          <HeaderItemContent>
+            <HeaderItemSubContent>Data Center:</HeaderItemSubContent>
+            <HeaderSpace />
+            <span>{datacenter}</span>
+          </HeaderItemContent>
+          <HeaderItemIcon>
+            <DataCenterIcon light />
+          </HeaderItemIcon>
+        </HeaderItem>
+      ) : null}
+      {datacenter ? (<HeaderDividerItem />) : null}
       {login ? (
         <HeaderItem>
           <HeaderItemContent>
@@ -101,10 +112,16 @@ export default compose(
       ssr: false
     }),
     props: ({ data }) => {
-      const { account = {}, loading = false, error = null } = data;
+      const {
+        account = {},
+        datacenter = {},
+        loading = false,
+        error = null
+      } = data;
       const { login } = account;
+      const { name } = datacenter;
 
-      return { login, loading, error };
+      return { login, datacenter: name, loading, error };
     }
   }),
   graphql(GetHeader, {

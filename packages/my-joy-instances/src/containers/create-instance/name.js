@@ -16,7 +16,6 @@ import Description from '@components/description';
 import GetRandomName from '@graphql/get-random-name.gql';
 import { instanceName as validateName } from '@state/validators';
 import createClient from '@state/apollo-client';
-import parseError from '@state/parse-error';
 import { Forms, Values } from '@root/constants';
 
 const { IC_NAME_F } = Forms;

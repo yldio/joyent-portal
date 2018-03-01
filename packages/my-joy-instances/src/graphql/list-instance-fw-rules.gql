@@ -1,15 +1,17 @@
 query instance($name: String!) {
   machines(name: $name) {
-    id
-    name
-    firewall_enabled
-    firewall_rules {
+    results {
       id
-      enabled
-      rule_str
-      rule_obj
-      global
-      description
+      name
+      firewall_enabled
+      firewall_rules {
+        id
+        enabled
+        rule_str
+        rule_obj
+        global
+        description
+      }
     }
   }
 }

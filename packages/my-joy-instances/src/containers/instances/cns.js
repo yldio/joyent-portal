@@ -47,9 +47,9 @@ const CnsContainer = ({
   <ViewContainer main>
     <Margin bottom={1}>
       <Description>
-        Triton CNS is used to automatically update hostnames for your
-        instances. You can serve multiple instances (with multiple IP
-        addresses) under the same hostname by matching the CNS service names.{' '}
+        Triton CNS is used to automatically update hostnames for your instances.
+        You can serve multiple instances (with multiple IP addresses) under the
+        same hostname by matching the CNS service names.{' '}
         <a
           href="https://docs.joyent.com/private-cloud/install/cns"
           target="_blank"
@@ -133,10 +133,13 @@ export default compose(
       ssr: false
     }),
     props: ({ data }) => {
-      const { account = {} } = data;
-      const { id = '<account-id>' } = account;
+      const id = get(data, 'account.id', '<account-id>');
+      const datacenter = get(data, 'datacenter.name', '<dc>');
 
-      return { id };
+      return {
+        id,
+        datacenter
+      };
     }
   }),
   graphql(GetTags, {
@@ -151,7 +154,7 @@ export default compose(
       const { loading, error, variables, refetch, ...rest } = data;
       const { name } = variables;
 
-      const instance = find(get(rest, 'machines', []), ['name', name]);
+      const instance = find(get(rest, 'machines.results', []), ['name', name]);
       const tags = get(instance, 'tags', []);
 
       return {
@@ -164,7 +167,7 @@ export default compose(
     }
   }),
   connect(
-    ({ values, form }, { id, instance = {}, tags = [] }) => {
+    ({ values, form }, { id, datacenter, instance = {}, tags = [] }) => {
       const { name = '<instance-name>' } = instance;
 
       const cnsDisable = find(tags, ['name', 'triton.cns.disable']) || {};
@@ -199,16 +202,13 @@ export default compose(
         services = svcs;
       }
 
-      // REPLACE WITH  DATA CENTER
-      const dataCenter = 'us-east-1';
-
       const defaultHostnames = [
         {
-          values: [`${name}.inst.${id}.${dataCenter}.triton.zone`],
+          values: [`${name}.inst.${id}.${datacenter}.triton.zone`],
           public: true
         },
         {
-          values: [`${name}.inst.${id}.${dataCenter}.cns.joyent.com`]
+          values: [`${name}.inst.${id}.${datacenter}.cns.joyent.com`]
         },
         {
           values: [],
@@ -232,7 +232,7 @@ export default compose(
             const postfix = hostname.public
               ? '.triton.zone'
               : '.cns.joyent.com';
-            return `${name}.svc.${id}.${dataCenter}${postfix}`;
+            return `${name}.svc.${id}.${datacenter}${postfix}`;
           })
         };
       });

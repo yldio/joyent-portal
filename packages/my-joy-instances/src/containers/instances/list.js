@@ -184,7 +184,8 @@ export default compose(
       ssr: false,
       pollInterval: 1000
     }),
-    props: ({ data: { machines, loading, error, refetch } }) => {
+    props: ({ data: { loading, error, refetch, ...rest } }) => {
+      const machines = get(rest, 'machines.results', []);
       const instances = forceArray(machines).map(({ state, ...machine }) => ({
         ...machine,
         state,

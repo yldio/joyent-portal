@@ -145,7 +145,7 @@ export default compose(
       const { loading, error, variables, refetch, ...rest } = data;
       const { name } = variables;
 
-      const instance = find(get(rest, 'machines', []), ['name', name]);
+      const instance = find(get(rest, 'machines.results', []), ['name', name]);
       const enabled = get(instance, 'firewall_enabled');
       const rules = get(instance, 'firewall_rules', []);
 

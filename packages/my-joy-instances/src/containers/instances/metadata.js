@@ -167,7 +167,7 @@ export default compose(
     props: ({ data: { loading, error, variables, refetch, ...rest } }) => {
       const { name } = variables;
 
-      const instance = find(get(rest, 'machines', []), ['name', name]);
+      const instance = find(get(rest, 'machines.results', []), ['name', name]);
       const values = get(instance, 'metadata', []).filter(
         ({ name = '' }) => name !== 'user-script'
       );

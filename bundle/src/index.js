@@ -22,7 +22,7 @@ const {
   BASE_URL = `http://0.0.0.0:${PORT}`,
   ROLLBAR_SERVER_TOKEN,
   NODE_ENV = 'development',
-  CONSOLE = 'my-joy-beta'
+  CONSOLE = 'my-joy-instances'
 } = process.env;
 
 const Ui = require(CONSOLE);

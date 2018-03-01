@@ -1,3 +1,0 @@
-mutation addMachineTags($id: ID!, $tags: DynamicObjectType!) {
-  addMachineTags(id: $id, tags: $tags)
-}

@@ -1,23 +1,25 @@
 query instance($name: String) {
   machines(name: $name) {
-    id
-    state
-    brand
-    name
-    created
-    updated
-    primary_ip
-    ips
-    docker
-    dns_names
-    compute_node
-    image {
+    results {
       id
+      state
+      brand
       name
-    }
-    package {
-      id
-      name
+      created
+      updated
+      primary_ip
+      ips
+      docker
+      dns_names
+      compute_node
+      image {
+        id
+        name
+      }
+      package {
+        id
+        name
+      }
     }
   }
 }
