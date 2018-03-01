@@ -21,9 +21,10 @@ import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import Tag from '@components/tags';
 import { addTag as validateTag } from '@state/validators';
+import { Forms, Values } from '@root/constants';
 
-const FORM_NAME_CREATE = 'CREATE-INSTANCE-TAGS-ADD';
-const FORM_NAME_EDIT = i => `CREATE-INSTANCE-TAGS-EDIT-${i}`;
+const { IC_TAG_F_ADD, IC_TAG_F_EDIT } = Forms;
+const { IC_TAG_V_PROCEEDED, IC_TAG_V_ADD_OPEN, IC_TAG_V_TAGS } = Values;
 
 export const Tags = ({
   step,
@@ -84,7 +85,7 @@ export const Tags = ({
       </Fragment>
     ) : null}
     <ReduxForm
-      form={FORM_NAME_CREATE}
+      form={IC_TAG_F_ADD}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
       shouldAsyncValidate={shouldAsyncValidate}
@@ -132,9 +133,9 @@ export const Tags = ({
 
 export default compose(
   connect(({ values }, ownProps) => {
-    const proceeded = get(values, 'create-instance-tags-proceeded', false);
-    const addOpen = get(values, 'create-instance-tags-add-open', false);
-    const tags = get(values, 'create-instance-tags', []);
+    const proceeded = get(values, IC_TAG_V_PROCEEDED, false);
+    const addOpen = get(values, IC_TAG_V_ADD_OPEN, false);
+    const tags = get(values, IC_TAG_V_TAGS, []);
 
     return {
       proceeded: proceeded || tags.length,
@@ -144,11 +145,11 @@ export default compose(
   }),
   connect(null, (dispatch, { tags = [], history }) => ({
     handleNext: () => {
-      dispatch(set({ name: 'create-instance-tags-proceeded', value: true }));
+      dispatch(set({ name: IC_TAG_V_PROCEEDED, value: true }));
       return history.push(`/~create/metadata${history.location.search}`);
     },
     handleEdit: () => {
-      dispatch(set({ name: 'create-instance-tags-proceeded', value: true }));
+      dispatch(set({ name: IC_TAG_V_PROCEEDED, value: true }));
       return history.push(`/~create/tags${history.location.search}`);
     },
     shouldAsyncValidate: ({ trigger }) => {
@@ -156,17 +157,14 @@ export default compose(
     },
     handleAsyncValidate: validateTag,
     handleAddTag: value => {
-      const toggleToClosed = set({
-        name: `create-instance-tags-add-open`,
-        value: false
-      });
+      const toggleToClosed = set({ name: IC_TAG_V_ADD_OPEN, value: false });
 
       const appendTag = set({
-        name: `create-instance-tags`,
+        name: IC_TAG_V_TAGS,
         value: tags.concat([{ ...value, expanded: false }])
       });
 
-      return dispatch([destroy(FORM_NAME_CREATE), toggleToClosed, appendTag]);
+      return dispatch([destroy(IC_TAG_F_ADD), toggleToClosed, appendTag]);
     },
     handleUpdateTag: (index, newTag) => {
       tags[index] = {
@@ -175,14 +173,14 @@ export default compose(
       };
 
       return dispatch([
-        destroy(FORM_NAME_EDIT(index)),
-        set({ name: `create-instance-tags`, value: tags.slice() })
+        destroy(IC_TAG_F_EDIT(index)),
+        set({ name: IC_TAG_V_TAGS, value: tags.slice() })
       ]);
     },
     handleChangeAddOpen: value => {
       return dispatch([
-        reset(FORM_NAME_CREATE),
-        set({ name: `create-instance-tags-add-open`, value })
+        reset(IC_TAG_F_ADD),
+        set({ name: IC_TAG_V_ADD_OPEN, value })
       ]);
     },
     handleToggleExpanded: index => {
@@ -191,12 +189,7 @@ export default compose(
         expanded: !tags[index].expanded
       };
 
-      return dispatch(
-        set({
-          name: `create-instance-tags`,
-          value: tags.slice()
-        })
-      );
+      return dispatch(set({ name: IC_TAG_V_TAGS, value: tags.slice() }));
     },
     handleCancelEdit: index => {
       tags[index] = {
@@ -205,16 +198,16 @@ export default compose(
       };
 
       return dispatch([
-        reset(FORM_NAME_EDIT(index)),
-        set({ name: `create-instance-tags`, value: tags.slice() })
+        reset(IC_TAG_F_EDIT(index)),
+        set({ name: IC_TAG_V_TAGS, value: tags.slice() })
       ]);
     },
     handleRemoveTag: index => {
       tags.splice(index, 1);
 
       return dispatch([
-        destroy(FORM_NAME_EDIT(index)),
-        set({ name: `create-instance-tags`, value: tags.slice() })
+        destroy(IC_TAG_F_EDIT(index)),
+        set({ name: IC_TAG_V_TAGS, value: tags.slice() })
       ]);
     }
   }))

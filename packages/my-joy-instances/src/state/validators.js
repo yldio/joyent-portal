@@ -14,14 +14,16 @@ const validateField = async (field, value) => {
 const validateSchema = async (schema, value) => {
   const errors = await reduce(
     keys(schema),
-    async (errors, name) =>
-      assign(errors, {
-        [name]: await validateField(schema[name], value[name])
-      }),
+    async (errors, name) => {
+      const msg = await validateField(schema[name], value[name]);
+      return !msg ? errors : assign(errors, { [name]: msg });
+    },
     {}
   );
 
-  throw errors;
+  if (keys(errors).length) {
+    throw errors;
+  }
 };
 
 /*****************************************************************************/

@@ -14,9 +14,10 @@ import Editor from 'joyent-ui-toolkit/dist/es/editor';
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import { addMetadata as validateMetadata } from '@state/validators';
+import { Forms, Values } from '@root/constants';
 
-const FORM_NAME_CREATE = 'CREATE-INSTANCE-METADATA-ADD';
-const FORM_NAME_EDIT = i => `CREATE-INSTANCE-METADATA-EDIT-${i}`;
+const { IC_MD_F_ADD, IC_MD_F_EDIT } = Forms;
+const { IC_MD_V_PROCEEDED, IC_MD_V_ADD_OPEN, IC_MD_V_MD } = Values;
 
 export const Metadata = ({
   id,
@@ -68,7 +69,7 @@ export const Metadata = ({
     ) : null}
     {metadata.map(({ name, value, open }, index) => (
       <ReduxForm
-        form={FORM_NAME_EDIT(index)}
+        form={IC_MD_F_EDIT(index)}
         key={index}
         initialValues={{ name, value }}
         destroyOnUnmount={false}
@@ -103,7 +104,7 @@ export const Metadata = ({
       </ReduxForm>
     ))}
     <ReduxForm
-      form={FORM_NAME_CREATE}
+      form={IC_MD_F_ADD}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
       onSubmit={handleAddMetadata}
@@ -152,9 +153,9 @@ export const Metadata = ({
 
 export default compose(
   connect(({ values }, ownProps) => {
-    const proceeded = get(values, 'create-instance-metadata-proceeded', false);
-    const addOpen = get(values, 'create-instance-metadata-add-open', false);
-    const metadata = get(values, 'create-instance-metadata', []);
+    const proceeded = get(values, IC_MD_V_PROCEEDED, false);
+    const addOpen = get(values, IC_MD_V_ADD_OPEN, false);
+    const metadata = get(values, IC_MD_V_MD, []);
 
     return {
       proceeded: proceeded || metadata.length,
@@ -164,17 +165,11 @@ export default compose(
   }),
   connect(null, (dispatch, { metadata = [], history }) => ({
     handleNext: () => {
-      dispatch(
-        set({ name: 'create-instance-metadata-proceeded', value: true })
-      );
-
+      dispatch(set({ name: IC_MD_V_PROCEEDED, value: true }));
       return history.push(`/~create/user-script${history.location.search}`);
     },
     handleEdit: () => {
-      dispatch(
-        set({ name: 'create-instance-metadata-proceeded', value: true })
-      );
-
+      dispatch(set({ name: IC_MD_V_PROCEEDED, value: true }));
       return history.push(`/~create/metadata${history.location.search}`);
     },
     shouldAsyncValidate: ({ trigger }) => {
@@ -182,21 +177,14 @@ export default compose(
     },
     handleAsyncValidate: validateMetadata,
     handleAddMetadata: value => {
-      const toggleToClosed = set({
-        name: `create-instance-metadata-add-open`,
-        value: false
-      });
+      const toggleToClosed = set({ name: IC_MD_V_ADD_OPEN, value: false });
 
       const appendMetadata = set({
-        name: `create-instance-metadata`,
+        name: IC_MD_V_MD,
         value: metadata.concat([{ ...value, open: false }])
       });
 
-      return dispatch([
-        destroy(FORM_NAME_CREATE),
-        toggleToClosed,
-        appendMetadata
-      ]);
+      return dispatch([destroy(IC_MD_F_ADD), toggleToClosed, appendMetadata]);
     },
     handleUpdateMetadata: (index, newMetadata) => {
       metadata[index] = {
@@ -205,14 +193,14 @@ export default compose(
       };
 
       return dispatch([
-        destroy(FORM_NAME_EDIT(index)),
-        set({ name: `create-instance-metadata`, value: metadata.slice() })
+        destroy(IC_MD_F_EDIT(index)),
+        set({ name: IC_MD_V_MD, value: metadata.slice() })
       ]);
     },
     handleChangeAddOpen: value => {
       return dispatch([
-        reset(FORM_NAME_CREATE),
-        set({ name: `create-instance-metadata-add-open`, value })
+        reset(IC_MD_F_ADD),
+        set({ name: IC_MD_V_ADD_OPEN, value })
       ]);
     },
     handleToggleExpanded: index => {
@@ -221,12 +209,7 @@ export default compose(
         open: !metadata[index].open
       };
 
-      return dispatch(
-        set({
-          name: `create-instance-metadata`,
-          value: metadata.slice()
-        })
-      );
+      return dispatch(set({ name: IC_MD_V_MD, value: metadata.slice() }));
     },
     handleCancelEdit: index => {
       metadata[index] = {
@@ -235,16 +218,16 @@ export default compose(
       };
 
       return dispatch([
-        reset(FORM_NAME_EDIT(index)),
-        set({ name: `create-instance-metadata`, value: metadata.slice() })
+        reset(IC_MD_F_EDIT(index)),
+        set({ name: IC_MD_V_MD, value: metadata.slice() })
       ]);
     },
     handleRemoveMetadata: index => {
       metadata.splice(index, 1);
 
       return dispatch([
-        destroy(FORM_NAME_EDIT(index)),
-        set({ name: `create-instance-metadata`, value: metadata.slice() })
+        destroy(IC_MD_F_EDIT(index)),
+        set({ name: IC_MD_V_MD, value: metadata.slice() })
       ]);
     }
   }))

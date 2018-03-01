@@ -22,8 +22,10 @@ import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import Empty from '@components/empty';
 import ListFwRules from '@graphql/list-fw-rules.gql';
+import { Forms, Values } from '@root/constants';
 
-const FORM_NAME = 'CREATE-INSTANCE-FIREWALL';
+const { IC_FW_F_ENABLED, IC_FW_F_INACTIVE } = Forms;
+const { IC_FW_V_PROCEEDED, IC_TAG_V_TAGS } = Values;
 
 const Firewall = ({
   defaultRules = [],
@@ -62,7 +64,7 @@ const Firewall = ({
     <Flex>
       <FlexItem>
         <ReduxForm
-          form={`${FORM_NAME}-enabled`}
+          form={IC_FW_F_ENABLED}
           destroyOnUnmount={false}
           forceUnregisterOnUnmount={true}
         >
@@ -77,7 +79,7 @@ const Firewall = ({
       </FlexItem>
       <FlexItem>
         <ReduxForm
-          form={`${FORM_NAME}-inactive`}
+          form={IC_FW_F_INACTIVE}
           destroyOnUnmount={false}
           forceUnregisterOnUnmount={true}
         >
@@ -154,24 +156,18 @@ export default compose(
   connect(
     ({ form, values }, ownProps) => ({
       ...ownProps,
-      proceeded: get(values, 'create-instance-firewall-proceeded', false),
-      enabled: get(form, `${FORM_NAME}-enabled.values.enabled`, false),
-      showInactive: get(form, `${FORM_NAME}-inactive.values.inactive`, false),
-      tags: get(values, 'create-instance-tags', [])
+      proceeded: get(values, IC_FW_V_PROCEEDED, false),
+      enabled: get(form, `${IC_FW_F_ENABLED}.values.enabled`, false),
+      showInactive: get(form, `${IC_FW_F_INACTIVE}.values.inactive`, false),
+      tags: get(values, IC_TAG_V_TAGS, [])
     }),
     (dispatch, { history }) => ({
       handleNext: () => {
-        dispatch(
-          set({ name: 'create-instance-firewall-proceeded', value: true })
-        );
-
+        dispatch(set({ name: IC_FW_V_PROCEEDED, value: true }));
         return history.push(`/~create/cns${history.location.search}`);
       },
       handleEdit: () => {
-        dispatch(
-          set({ name: 'create-instance-firewall-proceeded', value: true })
-        );
-
+        dispatch(set({ name: IC_FW_V_PROCEEDED, value: true }));
         return history.push(`/~create/firewall${history.location.search}`);
       }
     })

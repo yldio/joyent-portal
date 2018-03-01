@@ -16,8 +16,10 @@ import Description from '@components/description';
 import { instanceName as validateName } from '@state/validators';
 import createClient from '@state/apollo-client';
 import GetRandomName from '@graphql/get-random-name.gql';
+import { Forms, Values } from '@root/constants';
 
-const FORM_NAME = 'create-instance-name';
+const { IC_NAME_F } = Forms;
+const { IC_NAME_V_PROCEEDED, IC_NAME_V_RANDOMIZING } = Values;
 
 const NameContainer = ({
   expanded,
@@ -47,7 +49,7 @@ const NameContainer = ({
       </Description>
     ) : null}
     <ReduxForm
-      form={FORM_NAME}
+      form={IC_NAME_F}
       destroyOnUnmount={false}
       forceUnregisterOnUnmount={true}
       onSubmit={handleNext}
@@ -96,14 +98,9 @@ export default compose(
   }),
   connect(
     ({ form, values }, ownProps) => {
-      const name = get(form, `${FORM_NAME}.values.name`, '');
-      const proceeded = get(values, 'create-instance-name-proceeded', false);
-
-      const randomizing = get(
-        values,
-        'create-instance-name-randomizing',
-        false
-      );
+      const name = get(form, `${IC_NAME_F}.values.name`, '');
+      const randomizing = get(values, IC_NAME_V_RANDOMIZING, false);
+      const proceeded = get(values, IC_NAME_V_PROCEEDED, false);
 
       return {
         ...ownProps,
@@ -114,7 +111,7 @@ export default compose(
     },
     (dispatch, { history, query }) => ({
       handleNext: () => {
-        dispatch(set({ name: 'create-instance-name-proceeded', value: true }));
+        dispatch(set({ name: IC_NAME_V_PROCEEDED, value: true }));
         return history.push(
           `/~create/${query.image ? 'package' : 'image'}${
             history.location.search
@@ -129,9 +126,7 @@ export default compose(
       },
       handleAsyncValidate: validateName,
       handleRandomize: async () => {
-        dispatch(
-          set({ name: 'create-instance-name-randomizing', value: true })
-        );
+        dispatch(set({ name: IC_NAME_V_RANDOMIZING, value: true }));
 
         const [err, res] = await intercept(
           createClient().query({
@@ -140,9 +135,7 @@ export default compose(
           })
         );
 
-        dispatch(
-          set({ name: 'create-instance-name-randomizing', value: false })
-        );
+        dispatch(set({ name: IC_NAME_V_RANDOMIZING, value: false }));
 
         if (err) {
           console.error(err);
@@ -152,7 +145,7 @@ export default compose(
         const { data } = res;
         const { rndName } = data;
 
-        return dispatch(change(FORM_NAME, 'name', rndName));
+        return dispatch(change(IC_NAME_F, 'name', rndName));
       }
     })
   )

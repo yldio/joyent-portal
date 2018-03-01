@@ -14,8 +14,10 @@ import Cns, { Footer, AddServiceForm } from '@components/cns';
 import Description from '@components/description';
 import GetAccount from '@graphql/get-account.gql';
 import { addCnsService as validateServiceName } from '@state/validators';
+import { Forms, Values } from '@root/constants';
 
-const CNS_FORM = 'create-instance-cns';
+const { IC_CNS_F, IC_NAME_F } = Forms;
+const { IC_CNS_V_ENABLED, IC_CNS_V_PROCEEDED, IC_CNS_V_SERVICES } = Values;
 
 const CNSContainer = ({
   submitted,
@@ -66,7 +68,7 @@ const CNSContainer = ({
             onRemoveService={handleRemoveService}
           >
             <ReduxForm
-              form={`${CNS_FORM}-new-service`}
+              form={IC_CNS_F}
               destroyOnUnmount={false}
               forceUnregisterOnUnmount={true}
               onSubmit={handleAddService}
@@ -114,14 +116,9 @@ export default compose(
     })
   }),
   connect(({ form, values }, { id }) => {
-    const proceeded = get(values, `${CNS_FORM}-proceeded`, false);
-    const instanceName = get(
-      form,
-      'create-instance-name.values.name',
-      '<instance-name>'
-    );
-
-    const serviceNames = get(values, `${CNS_FORM}-services`, []);
+    const proceeded = get(values, IC_CNS_V_PROCEEDED, false);
+    const instanceName = get(form, `${IC_NAME_F}.values.name`, '<inst-name>');
+    const serviceNames = get(values, IC_CNS_V_SERVICES, []);
 
     // REPLACE WITH  DATA CENTER
     const dataCenter = 'us-east-1';
@@ -158,7 +155,7 @@ export default compose(
     });
 
     return {
-      cnsEnabled: get(values, `${CNS_FORM}-enabled`, true),
+      cnsEnabled: get(values, IC_CNS_V_ENABLED, true),
       instanceName,
       proceeded: proceeded || serviceNames.length,
       hostnames,
@@ -167,32 +164,30 @@ export default compose(
   }),
   connect(null, (dispatch, { history, cnsEnabled, serviceNames = [] }) => ({
     handleNext: () => {
-      dispatch(set({ name: `${CNS_FORM}-proceeded`, value: true }));
+      dispatch(set({ name: IC_CNS_V_PROCEEDED, value: true }));
       return history.push(`/~create/affinity${history.location.search}`);
     },
     handleEdit: () => {
-      dispatch(set({ name: `${CNS_FORM}-proceeded`, value: true }));
+      dispatch(set({ name: IC_CNS_V_PROCEEDED, value: true }));
       history.push(`/~create/cns${history.location.search}`);
     },
     shouldAsyncValidate: ({ trigger }) => {
       return trigger === 'submit';
     },
     handleAsyncValidate: validateServiceName,
-    handleToggleCnsEnabled: ({ target }) =>
-      dispatch(set({ name: `${CNS_FORM}-enabled`, value: !cnsEnabled })),
+    handleToggleCnsEnabled: ({ target }) => {
+      return dispatch(set({ name: IC_CNS_V_ENABLED, value: !cnsEnabled }));
+    },
     handleAddService: ({ name }) => {
-      dispatch([
-        destroy(`${CNS_FORM}-new-service`),
-        set({
-          name: `${CNS_FORM}-services`,
-          value: serviceNames.concat(name)
-        })
+      return dispatch([
+        destroy(IC_CNS_F),
+        set({ name: IC_CNS_V_SERVICES, value: serviceNames.concat(name) })
       ]);
     },
     handleRemoveService: value => {
       return dispatch(
         set({
-          name: `${CNS_FORM}-services`,
+          name: IC_CNS_V_SERVICES,
           value: serviceNames.filter(name => name !== value)
         })
       );

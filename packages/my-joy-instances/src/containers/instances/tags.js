@@ -101,7 +101,7 @@ export const Tags = ({
       form={editing.form}
       initialValues={{ name: editing.name, value: editing.value }}
       shouldAsyncValidate={shouldAsyncValidate}
-      handleAsyncValidate={handleAsyncValidate}
+      asyncValidate={handleAsyncValidate}
       onSubmit={handleEdit}
     >
       {props => (
