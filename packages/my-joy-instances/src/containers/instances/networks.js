@@ -80,9 +80,10 @@ export default compose(
       }
     }),
     props: ({ data }) => {
-      const { machines, loading, error, variables } = data;
+      const { loading, error, variables } = data;
       const { name } = variables;
 
+      const machines = get(data, 'machines.results', []);
       const instance = find(forceArray(machines), ['name', name]);
       const values = get(instance, 'networks', []);
       const networks = reverse(sortBy(values, 'public'));
