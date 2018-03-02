@@ -64,7 +64,7 @@ const Image = ({ onClick, active, ...image }) => {
       <Margin bottom={3}>
         <Card id={id} onClick={handleCardClick} active={active} preview>
           <Logo onClick={handleLogoClick} width="42" height="42" />
-          <H4>{titleCase(imageName)}</H4>
+          <H4 onClick={handleLogoClick}>{titleCase(imageName)}</H4>
           <FormGroup name="image" field={Field}>
             <Version onBlur={null}>
               <option selected>Version</option>
