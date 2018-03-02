@@ -285,7 +285,7 @@ export default compose(
 
       return {
         type,
-        name: _name,
+        key: _name,
         value: _value
       };
     };
