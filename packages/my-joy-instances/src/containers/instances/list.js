@@ -328,7 +328,7 @@ export default compose(
             `Do you want to ${name} ${
               selected.length === 1
                 ? `"${selected[0].name}"`
-                : `${selected.length} snapshots`
+                : `${selected.length} instances`
             }`
           )
         ) {
