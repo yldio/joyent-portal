@@ -40,6 +40,12 @@ const GreyLabel = styled(Label)`
   padding-right: ${remcalc(3)};
 `;
 
+const TrimedLabel = styled(Label)`
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+`
+
 const Flex = styled.div`
   align-items: center;
   display: flex;
@@ -78,17 +84,17 @@ export const Meta = ({
   </Row>,
   <Margin top={2} bottom={3}>
     <Flex>
-      <Label>
+      <TrimedLabel>
         {image && image.name ? titleCase(image.name) : 'Custom Image'}
-      </Label>
+      </TrimedLabel>
       <VerticalDivider />
-      <Label>
+      <TrimedLabel>
         {brand === 'LX'
           ? 'Infrastructure container'
           : 'Hardware virtual machine'}
-      </Label>
+      </TrimedLabel>
       <VerticalDivider />
-      <Label>{(instance.package || {}).name}</Label>
+      <TrimedLabel>{(instance.package || {}).name}</TrimedLabel>
       <VerticalDivider />
       <Flex>
         <DotIcon
