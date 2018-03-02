@@ -41,10 +41,10 @@ const GreyLabel = styled(Label)`
 `;
 
 const TrimedLabel = styled(Label)`
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-`
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+`;
 
 const Flex = styled.div`
   align-items: center;

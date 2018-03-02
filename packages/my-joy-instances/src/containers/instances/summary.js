@@ -25,6 +25,7 @@ import RebootInstance from '@graphql/reboot-instance.gql';
 import RemoveInstance from '@graphql/remove-instance.gql';
 import SummaryScreen from '@components/instances/summary';
 import parseError from '@state/parse-error';
+import Confirm from '@state/confirm';
 
 export const Summary = ({
   instance,
@@ -195,6 +196,10 @@ export default compose(
       handleAction: async action => {
         const { instance } = ownProps;
         const { id } = instance;
+
+        if (!await Confirm(`Do you want to ${action} "${instance.name}"?`)) {
+          return;
+        }
 
         const gerund = `${action}ing`;
         const name = `${id}-summary-${gerund}`;
