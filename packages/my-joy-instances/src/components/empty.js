@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Margin, Padding } from 'styled-components-spacing';
 import Flex from 'styled-flex-component';
-import { isNot } from 'styled-is';
+import is, { isNot } from 'styled-is';
 import remcalc from 'remcalc';
 
 import { H3, Card } from 'joyent-ui-toolkit';
@@ -15,6 +15,10 @@ const NoPackagesTitle = styled(H3)`
 
 const FullWidthCard = styled(Card)`
   width: calc(100% - ${remcalc(2)});
+
+  ${is('transparent')`
+    background: transparent;
+  `};
 
   ${isNot('borderTop')`
     border-top: none;
