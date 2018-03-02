@@ -40,7 +40,15 @@ import createClient from '@state/apollo-client';
 import parseError from '@state/parse-error';
 import { Forms, Values } from '@root/constants';
 
-const { IC_F, IC_NAME_F, IC_IMG_F, IC_PKG_F_SELECT, IC_NW_F, IC_US_F, IC_FW_F_ENABLED } = Forms;
+const {
+  IC_F,
+  IC_NAME_F,
+  IC_IMG_F,
+  IC_PKG_F_SELECT,
+  IC_NW_F,
+  IC_US_F,
+  IC_FW_F_ENABLED
+} = Forms;
 
 const {
   IC_MD_V_MD,
