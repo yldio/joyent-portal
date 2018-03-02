@@ -47,10 +47,10 @@ const PackageContainer = ({
   packages,
   selected = {},
   sortOrder,
+  sortBy,
   handleRowClick,
   handleResetFilters,
   handleSortBy,
-  sortBy,
   step
 }) => (
   <Fragment>
@@ -250,10 +250,10 @@ export default compose(
       handleSortBy: (newSortBy, sortOrder) => {
         dispatch([
           set({
-            name: IC_PKG_V_SORT_BY,
+            name: IC_PKG_V_SORT_ORDER,
             value: sortOrder === 'desc' ? 'asc' : 'desc'
           }),
-          set({ name: IC_PKG_V_SORT_ORDER, value: newSortBy })
+          set({ name: IC_PKG_V_SORT_BY, value: newSortBy })
         ]);
       }
     })
