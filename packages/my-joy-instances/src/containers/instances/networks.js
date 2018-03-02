@@ -21,6 +21,7 @@ import {
 import Network from '@components/network';
 import Description from '@components/description';
 import GetNetworks from '@graphql/list-instance-networks.gql';
+import Empty from '@components/empty';
 
 export const Networks = ({
   networks = [],
@@ -69,6 +70,11 @@ export const Networks = ({
           readOnly
         />
       ))}
+      {
+        !loading && !networks.length ? (
+          <Empty transparent borderTop>You have no networks attached to this instance</Empty>
+        ) : null
+      }
   </ViewContainer>
 );
 
