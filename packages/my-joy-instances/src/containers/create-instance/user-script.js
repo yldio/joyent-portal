@@ -44,7 +44,14 @@ export const UserScript = ({
     {expanded ? (
       <Fragment>
         <Description>
-          User script can be used to inject a custom boot script.
+          User script can be used to inject a custom boot script.{' '}
+          <a
+            href="https://docs.joyent.com/private-cloud/instances/using-mdata#UsingtheMetadataAPI-ListofMetadataKeys"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read the docs
+          </a>
         </Description>
         {formOpen ? (
           <ReduxForm
