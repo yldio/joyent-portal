@@ -44,6 +44,18 @@ const GetAccount = gql`
   }
 `;
 
+// <HeaderDividerItem />
+// <HeaderItem
+//   onClick={() => toggleSectionOpen('services')}
+//   active={isOpen && activePanel === 'services'}
+// >
+//   <HeaderItemContent>Products & Services</HeaderItemContent>
+//   <HeaderItemIcon>
+//     <ServicesIcon light />
+//   </HeaderItemIcon>
+// </HeaderItem>
+// <HeaderDividerItem />
+
 const Navigation = ({
   login,
   datacenter,
@@ -56,17 +68,6 @@ const Navigation = ({
       <HeaderItem>
         <TritonIcon light />
       </HeaderItem>
-      <HeaderDividerItem />
-      <HeaderItem
-        onClick={() => toggleSectionOpen('services')}
-        active={isOpen && activePanel === 'services'}
-      >
-        <HeaderItemContent>Products & Services</HeaderItemContent>
-        <HeaderItemIcon>
-          <ServicesIcon light />
-        </HeaderItemIcon>
-      </HeaderItem>
-      <HeaderDividerItem />
       <HeaderFlexibleSpaceItem />
       <HeaderDividerItem />
       {datacenter ? (
