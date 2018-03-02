@@ -10,6 +10,10 @@ export default ({ match }) => {
 
   const links = [
     {
+      name: 'Compute',
+      pathname: '/'
+    },
+    {
       name: 'Instances',
       pathname: '/'
     }
