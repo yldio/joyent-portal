@@ -12,9 +12,11 @@ query instances {
       memory
       disk
       package {
+        id
         name
       }
       snapshots {
+        id
         name
       }
     }
