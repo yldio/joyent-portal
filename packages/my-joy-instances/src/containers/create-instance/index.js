@@ -344,8 +344,8 @@ export default compose(
           network => networks[network]
         );
 
-        if (userScript && userScript.value) {
-          _metadata.push({ name: 'user-script', value: userScript.value });
+        if (userScript && userScript.length) {
+          _metadata.push({ name: 'user-script', value: userScript });
         }
 
         const [err, res] = await intercept(
