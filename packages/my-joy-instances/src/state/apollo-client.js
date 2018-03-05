@@ -26,7 +26,10 @@ export default (opts = {}) => {
     link: new HttpLink({
       uri: URI,
       credentials: 'same-origin',
-      fetch
+      fetch,
+      headers: {
+        'X-CSRF-Token': document.cookie.replace(/(?:(?:^|.*;\s*)crumb\s*=\s*([^;]*).*$)|^.*$/, '$1')
+      }
     }),
     ...opts
   });
