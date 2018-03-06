@@ -27,11 +27,13 @@ const Footer = styled.div`
   height: ${remcalc(70)};
   max-height: ${remcalc(70)};
   z-index: 1;
+
   ${is('fixed')`
     position: fixed;
     left: 0;
     right: 0;
   `};
+
   ${is('bottom', 'fixed')`
     bottom: 0;
   `};

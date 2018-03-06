@@ -104,7 +104,9 @@ export default () => (
       <Route
         path="/instances/~create/"
         exact
-        component={({ match, location }) => (<Redirect to={`/instances/~create/name${location.search}`} />)}
+        component={({ match, location }) => (
+          <Redirect to={`/instances/~create/name${location.search}`} />
+        )}
       />
       <Route path="/instances/~create/:step" component={CreateInstance} />
     </Switch>

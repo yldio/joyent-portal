@@ -160,7 +160,10 @@ export default compose(
     (dispatch, { removeImage, history }) => ({
       handleCreateInstance: image => {
         return window
-          .open(`${GLOBAL.origin}/instances/~create/?image=${image.name}`, '_blank')
+          .open(
+            `${GLOBAL.origin}/instances/~create/?image=${image.name}`,
+            '_blank'
+          )
           .focus();
       },
       handleRemove: async id => {

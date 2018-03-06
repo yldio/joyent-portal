@@ -125,7 +125,9 @@ export const Image = ({
                   <Popover placement="bottom">
                     <PopoverItem disabled={false} onClick={onCreateInstance}>
                       <ItemAnchor
-                        href={`${GLOBAL.origin}/instances/~create/?image=${name}`}
+                        href={`${
+                          GLOBAL.origin
+                        }/instances/~create/?image=${name}`}
                         target="__blank"
                         rel="noopener noreferrer"
                       >

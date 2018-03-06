@@ -31,7 +31,11 @@ export default ({ theme }) => css`
   html,
   body,
   #root {
-    min-height: 100vh;
+    min-height: calc(100vh - ${remcalc(48)});
+  }
+
+  #header {
+    z-index: 9999;
   }
 
   body > #root {
