@@ -1,26 +1,31 @@
 const Inert = require('inert');
+const resolvePkg = require('resolve-pkg');
 const Path = require('path');
 const RenderReact = require('hapi-render-react');
 const Wreck = require('wreck');
 const Url = require('url');
 
+const ImagesRoot = resolvePkg('my-joy-images', {
+  cwd: __dirname
+});
+
 exports.register = async server => {
+  const InstancesRelativeTo = Path.join(__dirname, 'app');
+  const ImagesRelativeTo = Path.join(ImagesRoot, 'lib/app');
+
   await server.register([
     {
       plugin: Inert
     },
     {
-      plugin: RenderReact,
-      options: {
-        relativeTo: Path.join(__dirname, 'app')
-      }
+      plugin: RenderReact
     }
   ]);
 
   server.route([
     {
       method: 'GET',
-      path: '/service-worker.js',
+      path: '/instances/service-worker.js',
       config: {
         auth: false,
         handler: {
@@ -32,12 +37,36 @@ exports.register = async server => {
     },
     {
       method: 'GET',
-      path: '/favicon.ico',
+      path: '/images/service-worker.js',
+      config: {
+        auth: false,
+        handler: {
+          file: {
+            path: Path.join(ImagesRoot, 'build/service-worker.js')
+          }
+        }
+      }
+    },
+    {
+      method: 'GET',
+      path: '/instances/favicon.ico',
       config: {
         auth: false,
         handler: {
           file: {
             path: Path.join(__dirname, '../build/favicon.ico')
+          }
+        }
+      }
+    },
+    {
+      method: 'GET',
+      path: '/images/favicon.ico',
+      config: {
+        auth: false,
+        handler: {
+          file: {
+            path: Path.join(ImagesRoot, 'build/favicon.ico')
           }
         }
       }
@@ -103,7 +132,7 @@ exports.register = async server => {
     },
     {
       method: 'GET',
-      path: '/static/{path*}',
+      path: '/instances/static/{path*}',
       config: {
         auth: false,
         handler: {
@@ -116,11 +145,46 @@ exports.register = async server => {
       }
     },
     {
+      method: 'GET',
+      path: '/images/static/{path*}',
+      config: {
+        auth: false,
+        handler: {
+          directory: {
+            path: Path.join(ImagesRoot, 'build/static/'),
+            redirectToSlash: true,
+            index: false
+          }
+        }
+      }
+    },
+    {
       method: '*',
-      path: '/~server-error',
+      path: '/instances/~server-error',
       handler: {
         view: {
-          name: 'server-error'
+          name: 'server-error',
+          relativeTo: InstancesRelativeTo
+        }
+      }
+    },
+    {
+      method: '*',
+      path: '/images/~server-error',
+      handler: {
+        view: {
+          name: 'server-error',
+          relativeTo: ImagesRelativeTo
+        }
+      }
+    },
+    {
+      method: '*',
+      path: '/images/{path*}',
+      handler: {
+        view: {
+          name: 'app',
+          relativeTo: ImagesRelativeTo
         }
       }
     },
@@ -129,7 +193,8 @@ exports.register = async server => {
       path: '/{path*}',
       handler: {
         view: {
-          name: 'app'
+          name: 'app',
+          relativeTo: InstancesRelativeTo
         }
       }
     }

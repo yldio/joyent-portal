@@ -141,10 +141,10 @@ export default compose(
     handleNext: () => {
       dispatch(set({ name: `${Forms.CREATE_TAGS}-proceeded`, value: true }));
 
-      return history.push(`/~create/${match.params.instance}/create`);
+      return history.push(`/images/~create/${match.params.instance}/create`);
     },
     handleEdit: () => {
-      return history.push(`/~create/${match.params.instance}/tag`);
+      return history.push(`/images/~create/${match.params.instance}/tag`);
     },
     shouldAsyncValidate: ({ trigger }) => {
       return trigger === 'submit';

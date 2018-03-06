@@ -15,14 +15,14 @@ export default ({ match }) => {
     },
     {
       name: 'Instances',
-      pathname: '/'
+      pathname: '/instances'
     }
   ]
     .concat(
       instance && [
         {
           name: paramCase(instance),
-          pathname: `/${instance}`
+          pathname: `/instances/${instance}`
         }
       ]
     )

@@ -23,6 +23,7 @@ import {
   Divider
 } from 'joyent-ui-toolkit';
 
+import GLOBAL from '@state/global';
 import ListInstances from '@graphql/list-instances.gql';
 import StopInstance from '@graphql/stop-instance.gql';
 import StartInstance from '@graphql/start-instance.gql';
@@ -160,7 +161,7 @@ export const List = ({
             searchLabel="Filter instances"
             searchable={!_loading}
             actionLabel="Create Instance"
-            onActionClick={() => history.push(`/~create`)}
+            onActionClick={() => history.push('/instances/~create')}
           />
         )}
       </ReduxForm>
@@ -272,8 +273,11 @@ export default compose(
       };
     },
     (dispatch, { refetch, ...ownProps }) => ({
-      handleCreateImage: ({ name }) =>
-        window.open(`http://localhost:3070/~create/${name}`, '_blank').focus(),
+      handleCreateImage: ({ name }) => {
+        return window
+          .open(`${GLOBAL.origin}/images/~create/${name}`, '_blank')
+          .focus();
+      },
       handleSortBy: ({ sortBy: currentSortBy, sortOrder }) => newSortBy => {
         // sort prop is the same, toggle
         if (currentSortBy === newSortBy) {

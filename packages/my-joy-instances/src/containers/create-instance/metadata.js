@@ -166,11 +166,15 @@ export default compose(
   connect(null, (dispatch, { metadata = [], history }) => ({
     handleNext: () => {
       dispatch(set({ name: IC_MD_V_PROCEEDED, value: true }));
-      return history.push(`/~create/user-script${history.location.search}`);
+      return history.push(
+        `/instances/~create/user-script${history.location.search}`
+      );
     },
     handleEdit: () => {
       dispatch(set({ name: IC_MD_V_PROCEEDED, value: true }));
-      return history.push(`/~create/metadata${history.location.search}`);
+      return history.push(
+        `/instances/~create/metadata${history.location.search}`
+      );
     },
     shouldAsyncValidate: ({ trigger }) => {
       return trigger === 'submit';

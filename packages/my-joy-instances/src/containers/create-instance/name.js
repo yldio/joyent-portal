@@ -116,13 +116,13 @@ export default compose(
       handleNext: () => {
         dispatch(set({ name: IC_NAME_V_PROCEEDED, value: true }));
         return history.push(
-          `/~create/${query.image ? 'package' : 'image'}${
+          `/instances/~create/${query.image ? 'package' : 'image'}${
             history.location.search
           }`
         );
       },
       handleEdit: () => {
-        history.push(`/~create/name${history.location.search}`);
+        history.push(`/instances/~create/name${history.location.search}`);
       },
       shouldAsyncValidate: ({ trigger }) => {
         return trigger === 'change';

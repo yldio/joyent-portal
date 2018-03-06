@@ -30,14 +30,14 @@ const validateSchema = async (schema, value) => {
 
 const matches = {
   nameStart: /^[a-zA-Z]|\d/,
-  nameBody: /^([a-zA-Z]|\d|\.|_|-)+$/
+  nameBody: /^([a-zA-Z]|\d|_|-)+$/
 };
 
 const msgs = {
   required: prefix => `${prefix} must be defined.`,
   nameStart: prefix => `${prefix} can only start with letters and numbers.`,
   nameBody: prefix =>
-    `${prefix} cannot contain spaces and can only contain letters, numbers, periods (.), underscores (_), and hyphens (-).`
+    `${prefix} cannot contain spaces and can only contain letters, numbers, underscores (_), and hyphens (-).`
 };
 
 const Schemas = {

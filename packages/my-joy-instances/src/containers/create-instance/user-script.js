@@ -120,7 +120,9 @@ export default compose(
           set({ name: IC_US_V_OPEN, value: true })
         ]);
 
-        return history.push(`/~create/user-script${history.location.search}`);
+        return history.push(
+          `/instances/~create/user-script${history.location.search}`
+        );
       },
       handleChangeOpenForm: value => {
         return dispatch([set({ name: IC_US_V_OPEN, value })]);
@@ -131,7 +133,9 @@ export default compose(
           set({ name: IC_US_V_PROCEEDED, value: true })
         ]);
 
-        return history.push(`/~create/networks${history.location.search}`);
+        return history.push(
+          `/instances/~create/networks${history.location.search}`
+        );
       }
     })
   )

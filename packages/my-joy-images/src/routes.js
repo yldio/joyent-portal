@@ -21,48 +21,52 @@ import { Route as ServerError } from '@root/server-error';
 
 export default () => (
   <PageContainer>
-    {/* Breadcrumb */}
+    {/* Breadcrumb  */}
     <Switch>
-      <Route path="/~server-error" component={Breadcrumb} />
-      <Route path="/~create/:instance/:step?" exact component={Breadcrumb} />
-      <Route path="/:image?" component={Breadcrumb} />
-    </Switch>
-
-    {/* Menu */}
-    <Switch>
-      <Route path="/~server-error" component={() => null} />
-      <Route path="/:image/:section?" component={Menu} />
-      <Route path="/~create/:instance/:step?" component={() => {}} />
-    </Switch>
-
-    {/* Images */}
-    <Switch>
-      <Route path="/~server-error" component={() => null} />
-      <Route path="/" exact component={List} />
-      <Route path="/:image/summary" exact component={Summary} />
-      <Route path="/:image/tags" exact component={Tags} />
+      <Route path="/images/~server-error" component={Breadcrumb} />
       <Route
-        path="/:image"
+        path="/images/~create/:instance/:step?"
+        exact
+        component={Breadcrumb}
+      />
+      <Route path="/images/:image?" component={Breadcrumb} />
+    </Switch>
+
+    {/* Menu  */}
+    <Switch>
+      <Route path="/images/~server-error" component={() => null} />
+      <Route path="/images/:image/:section?" component={Menu} />
+      <Route path="/images/~create/:instance/:step?" component={() => {}} />
+    </Switch>
+
+    {/* Images  */}
+    <Switch>
+      {/* <Route path="/images/~server-error" component={() => null} /> */}
+      <Route path="/images/" exact component={List} />
+      <Route path="/images/:image/summary" exact component={Summary} />
+      <Route path="/images/:image/tags" exact component={Tags} />
+      <Route
+        path="/images/:image"
         exact
         component={({ match }) => (
-          <Redirect to={`/${get(match, 'params.image')}/summary`} />
+          <Redirect to={`/images/${get(match, 'params.image')}/summary`} />
         )}
       />
     </Switch>
 
-    {/* Create Image */}
+    {/* Create Image  */}
     <Switch>
       <Route
-        path="/~create/:instance?"
+        path="/images/~create/:instance?"
         exact
         component={({ match }) => (
-          <Redirect to={`/~create/${match.params.instance}/name`} />
+          <Redirect to={`/images/~create/${match.params.instance}/name`} />
         )}
       />
-      <Route path="/~create/:instance/:step" component={Create} />
+      <Route path="/images/~create/:instance/:step" component={Create} />
     </Switch>
 
-    <Route path="/~server-error" component={ServerError} />
+    <Route path="/images/~server-error" component={ServerError} />
 
     <noscript>
       <ViewContainer main>

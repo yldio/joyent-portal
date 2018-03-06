@@ -168,11 +168,13 @@ export default compose(
   connect(null, (dispatch, { history, cnsEnabled, serviceNames = [] }) => ({
     handleNext: () => {
       dispatch(set({ name: IC_CNS_V_PROCEEDED, value: true }));
-      return history.push(`/~create/affinity${history.location.search}`);
+      return history.push(
+        `/instances/~create/affinity${history.location.search}`
+      );
     },
     handleEdit: () => {
       dispatch(set({ name: IC_CNS_V_PROCEEDED, value: true }));
-      history.push(`/~create/cns${history.location.search}`);
+      history.push(`/instances/~create/cns${history.location.search}`);
     },
     shouldAsyncValidate: ({ trigger }) => {
       return trigger === 'submit';

@@ -102,7 +102,11 @@ export default compose(
     }),
     props: ({ data: { loading, error, variables, ...rest } }) => {
       const notFoundMsg = `Instance "${variables.name}" not found!`;
-      const inst = find(get(rest, 'machines.results', []), ['name', variables.name]);
+      const inst = find(get(rest, 'machines.results', []), [
+        'name',
+        variables.name
+      ]);
+
       const notFound = !loading && !inst ? notFoundMsg : false;
 
       return {
@@ -186,7 +190,7 @@ export default compose(
         const { data } = res;
         const { createImageFromMachine } = data;
 
-        history.push(`/${createImageFromMachine.name}`);
+        history.push(`/images/${createImageFromMachine.name}`);
       }
     };
   })

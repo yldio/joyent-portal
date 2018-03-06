@@ -24,6 +24,8 @@ import {
   InstanceTypeIcon
 } from 'joyent-ui-toolkit';
 
+import GLOBAL from '@state/global';
+
 const { SmallOnly, Medium } = QueryBreakpoints;
 
 const stateColor = {
@@ -140,7 +142,7 @@ export default withTheme(
               <Row between="xs">
                 <Col xs={9}>
                   <Button
-                    href={`http://localhost:3070/~create/${instance.name}`}
+                    href={`${GLOBAL.origin}/images/~create/${instance.name}`}
                     target="__blank"
                     rel="noopener noreferrer"
                     secondary

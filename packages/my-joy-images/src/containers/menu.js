@@ -14,7 +14,7 @@ export default ({ match }) => {
 
   const links = sections.map(({ name, pathname }) => ({
     name,
-    pathname: `/${imageSlug}/${pathname}`
+    pathname: `/images/${imageSlug}/${pathname}`
   }));
 
   return <Menu links={links} />;

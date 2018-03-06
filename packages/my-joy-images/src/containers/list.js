@@ -19,6 +19,7 @@ import {
   MessageDescription
 } from 'joyent-ui-toolkit';
 
+import GLOBAL from '@state/global';
 import ToolbarForm from '@components/toolbar';
 import Empty from '@components/empty';
 import { ImageType, Forms } from '@root/constants';
@@ -157,10 +158,11 @@ export default compose(
       };
     },
     (dispatch, { removeImage, history }) => ({
-      handleCreateInstance: image =>
-        window
-          .open(`http://localhost:3069/~create/?image=${image.name}`, '_blank')
-          .focus(),
+      handleCreateInstance: image => {
+        return window
+          .open(`${GLOBAL.origin}/instances/~create/?image=${image.name}`, '_blank')
+          .focus();
+      },
       handleRemove: async id => {
         dispatch([set({ name: `remove-mutation-${id}-loading`, value: true })]);
 
@@ -184,7 +186,7 @@ export default compose(
             set({ name: `remove-mutation-${id}-loading`, value: false })
           );
 
-          history.push(`/`);
+          history.push('/images');
         }
       }
     })

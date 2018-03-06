@@ -27,6 +27,8 @@ import {
   ActionsIcon
 } from 'joyent-ui-toolkit';
 
+import GLOBAL from '@state/global';
+
 const stateColor = {
   PROVISIONING: 'primary',
   RUNNING: 'green',
@@ -75,7 +77,7 @@ export const Item = ({
       </FormGroup>
     </TableTd>
     <TableTd middle left>
-      <A to={`/${name}`} component={Link}>
+      <A to={`/instances/${name}`} component={Link}>
         {name}
       </A>
     </TableTd>
@@ -116,7 +118,7 @@ export const Item = ({
             <PopoverDivider />
             <PopoverItem disabled={false} onClick={onCreateImage}>
               <ItemAnchor
-                href={`http://localhost:3070/~create/${name}`}
+                href={`${GLOBAL.origin}/images/~create/${name}`}
                 target="__blank"
                 rel="noopener noreferrer"
               >

@@ -26,7 +26,7 @@ const { IC_IMG_V_PROCEEDED, IC_IMG_V_VMS } = Values;
 
 const HarcodedImage = (image = {}) => (
   <Fragment>
-    <Title icon={<InstanceTypeIcon />} collapsed={false}>
+    <Title icon={<InstanceTypeIcon />} collapsed={true}>
       Instance type and image
     </Title>
     {image.id ? (
@@ -148,10 +148,14 @@ export default compose(
     (dispatch, { history }) => ({
       handleNext: () => {
         dispatch(set({ name: IC_IMG_V_PROCEEDED, value: true }));
-        return history.push(`/~create/package${history.location.search}`);
+        return history.push(
+          `/instances/~create/package${history.location.search}`
+        );
       },
       handleEdit: () => {
-        return history.push(`/~create/image${history.location.search}`);
+        return history.push(
+          `/instances/~create/image${history.location.search}`
+        );
       },
       handleSelectLatest: ({ versions }) => {
         return dispatch(change(IC_IMG_F, 'image', versions[0].id));

@@ -8,6 +8,7 @@ const { default: createClient } = require('./state/apollo-client');
 const { default: createStore } = require('./state/redux-store');
 
 const indexFile = path.join(__dirname, '../../build/index.html');
+const assets = require('../../build/asset-manifest.json');
 
 const getState = request => {
   const { req } = request.raw;
@@ -31,4 +32,9 @@ const getState = request => {
   };
 };
 
-module.exports = Document({ indexFile, getState });
+module.exports = Document({
+  namespace: 'instances/',
+  assets,
+  indexFile,
+  getState
+});
