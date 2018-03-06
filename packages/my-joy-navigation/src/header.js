@@ -5,6 +5,7 @@ import pascalCase from 'pascal-case';
 import keys from 'lodash.keys';
 
 import { DataCenterIcon, TritonIcon, ServicesIcon } from './components';
+// import { ServicesIcon } from './components';
 import * as Overlays from './containers';
 
 import {
