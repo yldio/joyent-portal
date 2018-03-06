@@ -12,19 +12,23 @@ export default ({ match }) => {
 
   const links = [
     {
-      name: 'Images',
+      name: 'Compute',
       pathname: '/'
+    },
+    {
+      name: 'Images',
+      pathname: '/images'
     }
   ]
     .concat(
       create && [
         {
           name: 'Create Image',
-          pathname: `/~create`
+          pathname: `/images/~create`
         },
         {
           name: instance,
-          pathname: `/~create/${instance}`
+          pathname: `/images/~create/${instance}`
         }
       ]
     )
@@ -32,7 +36,7 @@ export default ({ match }) => {
       image && [
         {
           name: paramCase(image),
-          pathname: `/${image}`
+          pathname: `/images/${image}`
         }
       ]
     )

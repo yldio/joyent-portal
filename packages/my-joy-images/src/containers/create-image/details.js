@@ -143,11 +143,11 @@ export default compose(
     (dispatch, { history, match }) => ({
       handleNext: () => {
         dispatch(set({ name: `${Forms.FORM_DETAILS}-proceeded`, value: true }));
-        return history.push(`/~create/${match.params.instance}/tag`);
+        return history.push(`/images/~create/${match.params.instance}/tag`);
       },
       handleEdit: () => {
         dispatch(set({ name: `${Forms.FORM_DETAILS}-proceeded`, value: true }));
-        return history.push(`/~create/${match.params.instance}/name`);
+        return history.push(`/images/~create/${match.params.instance}/name`);
       },
       shouldAsyncValidate: ({ trigger }) => {
         return trigger === 'change';

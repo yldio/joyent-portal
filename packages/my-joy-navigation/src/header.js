@@ -85,7 +85,7 @@ const Navigation = ({
           </HeaderItemIcon>
         </HeaderItem>
       ) : null}
-      {datacenter ? (<HeaderDividerItem />) : null}
+      {datacenter ? <HeaderDividerItem /> : null}
       {login ? (
         <HeaderItem>
           <HeaderItemContent>

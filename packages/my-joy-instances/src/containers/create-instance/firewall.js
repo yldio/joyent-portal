@@ -164,11 +164,13 @@ export default compose(
     (dispatch, { history }) => ({
       handleNext: () => {
         dispatch(set({ name: IC_FW_V_PROCEEDED, value: true }));
-        return history.push(`/~create/cns${history.location.search}`);
+        return history.push(`/instances/~create/cns${history.location.search}`);
       },
       handleEdit: () => {
         dispatch(set({ name: IC_FW_V_PROCEEDED, value: true }));
-        return history.push(`/~create/firewall${history.location.search}`);
+        return history.push(
+          `/instances/~create/firewall${history.location.search}`
+        );
       }
     })
   ),

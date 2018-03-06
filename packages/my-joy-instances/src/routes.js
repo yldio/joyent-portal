@@ -31,43 +31,69 @@ export default () => (
   <PageContainer>
     {/* Breadcrumb */}
     <Switch>
-      <Route path="/~create/:section?" exact component={Breadcrumb} />
-      <Route path="/~:action/:instance?" exact component={Breadcrumb} />
-      <Route path="/:instance?" component={Breadcrumb} />
+      <Route path="/instances/~create/:section?" exact component={Breadcrumb} />
+      <Route
+        path="/instances/~:action/:instance?"
+        exact
+        component={Breadcrumb}
+      />
+      <Route path="/instances/:instance?" component={Breadcrumb} />
     </Switch>
 
     {/* Menu */}
     <Switch>
       <Route path="/~server-error" component={() => null} />
-      <Route path="/~:action/:id?" exact component={Menu} />
-      <Route path="/:instance?/:section?" component={Menu} />
+      <Route path="/instances/~:action/:id?" exact component={Menu} />
+      <Route path="/instances/:instance?/:section?" component={Menu} />
     </Switch>
 
     {/* Instances List */}
     <Switch>
-      <Route path="/" exact component={Instances} />
+      <Route path="/instances" exact component={Instances} />
     </Switch>
 
     {/* Instance Sections */}
     <Switch>
-      <Route path="/~:action" component={() => null} />
-      <Route path="/:instance/summary" exact component={InstanceSummary} />
-      <Route path="/:instance/tags" exact component={InstanceTags} />
-      <Route path="/:instance/metadata" exact component={InstanceMetadata} />
-      <Route path="/:instance/networks" exact component={InstanceNetworks} />
-      <Route path="/:instance/firewall" exact component={InstanceFirewall} />
-      <Route path="/:instance/snapshots" exact component={InstanceSnapshots} />
-      <Route path="/:instance/cns" exact component={InstanceCns} />
+      <Route path="/instances/~:action" component={() => null} />
       <Route
-        path="/:instance/user-script"
+        path="/instances/:instance/summary"
+        exact
+        component={InstanceSummary}
+      />
+      <Route path="/instances/:instance/tags" exact component={InstanceTags} />
+      <Route
+        path="/instances/:instance/metadata"
+        exact
+        component={InstanceMetadata}
+      />
+      <Route
+        path="/instances/:instance/networks"
+        exact
+        component={InstanceNetworks}
+      />
+      <Route
+        path="/instances/:instance/firewall"
+        exact
+        component={InstanceFirewall}
+      />
+      <Route
+        path="/instances/:instance/snapshots"
+        exact
+        component={InstanceSnapshots}
+      />
+      <Route path="/instances/:instance/cns" exact component={InstanceCns} />
+      <Route
+        path="/instances/:instance/user-script"
         exact
         component={InstanceUserScript}
       />
       <Route
-        path="/:instance"
+        path="/instances/:instance"
         exact
         component={({ match }) => (
-          <Redirect to={`/${get(match, 'params.instance')}/summary`} />
+          <Redirect
+            to={`/instances/${get(match, 'params.instance')}/summary`}
+          />
         )}
       />
     </Switch>
@@ -76,16 +102,16 @@ export default () => (
     <Switch>
       {/* Create Instance */}
       <Route
-        path="/~create/"
+        path="/instances/~create/"
         exact
-        component={({ match, location }) => (
-          <Redirect to={`/~create/name${location.search}`} />
-        )}
+        component={({ match, location }) => (<Redirect to={`/instances/~create/name${location.search}`} />)}
       />
-      <Route path="/~create/:step" component={CreateInstance} />
+      <Route path="/instances/~create/:step" component={CreateInstance} />
     </Switch>
 
     <Route path="/~server-error" exact component={ServerError} />
+
+    <Route path="/" exact component={() => <Redirect to="/instances" />} />
 
     <noscript>
       <ViewContainer main>

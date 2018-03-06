@@ -236,10 +236,14 @@ export default compose(
     (dispatch, { history }) => ({
       handleNext: () => {
         dispatch(set({ name: IC_PKG_V_PROCEEDED, value: true }));
-        return history.push(`/~create/tags${history.location.search}`);
+        return history.push(
+          `/instances/~create/tags${history.location.search}`
+        );
       },
       handleEdit: () => {
-        return history.push(`/~create/package${history.location.search}`);
+        return history.push(
+          `/instances/~create/package${history.location.search}`
+        );
       },
       handleResetFilters: () => {
         dispatch(destroy(IC_PKG_F_FILTER));

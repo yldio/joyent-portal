@@ -173,11 +173,15 @@ export default compose(
     (dispatch, { history }) => ({
       handleNext: () => {
         dispatch(set({ name: IC_NW_V_PROCEEDED, value: true }));
-        return history.push(`/~create/firewall${history.location.search}`);
+        return history.push(
+          `/instances/~create/firewall${history.location.search}`
+        );
       },
       handleEdit: () => {
         dispatch(set({ name: IC_NW_V_PROCEEDED, value: true }));
-        return history.push(`/~create/networks${history.location.search}`);
+        return history.push(
+          `/instances/~create/networks${history.location.search}`
+        );
       },
       setInfoExpanded: (id, expanded) => {
         return dispatch(

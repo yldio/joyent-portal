@@ -146,11 +146,13 @@ export default compose(
   connect(null, (dispatch, { tags = [], history }) => ({
     handleNext: () => {
       dispatch(set({ name: IC_TAG_V_PROCEEDED, value: true }));
-      return history.push(`/~create/metadata${history.location.search}`);
+      return history.push(
+        `/instances/~create/metadata${history.location.search}`
+      );
     },
     handleEdit: () => {
       dispatch(set({ name: IC_TAG_V_PROCEEDED, value: true }));
-      return history.push(`/~create/tags${history.location.search}`);
+      return history.push(`/instances/~create/tags${history.location.search}`);
     },
     shouldAsyncValidate: ({ trigger }) => {
       return trigger === 'submit';

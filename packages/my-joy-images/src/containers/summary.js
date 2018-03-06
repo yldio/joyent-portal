@@ -112,7 +112,7 @@ export default compose(
 
         if (res) {
           dispatch(set({ name: 'remove-mutation-loading', value: false }));
-          history.push(`/`);
+          history.push('/images');
         }
       }
     })

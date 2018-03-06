@@ -189,7 +189,9 @@ export default compose(
         : validateRule({ ...aff, type });
     },
     handleEdit: () => {
-      return history.push(`/~create/affinity${history.location.search}`);
+      return history.push(
+        `/instances/~create/affinity${history.location.search}`
+      );
     },
     handleCreateAffinityRules: value => {
       return dispatch([

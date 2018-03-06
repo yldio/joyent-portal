@@ -23,6 +23,7 @@ import {
   StatusLoader
 } from 'joyent-ui-toolkit';
 
+import GLOBAL from '@state/global';
 import { ImageType, OS } from '@root/constants';
 
 const A = styled(Anchor)`
@@ -78,7 +79,7 @@ export const Image = ({
   onCreateInstance
 }) => (
   <Margin bottom={3}>
-    <CardAnchor to={`/${name}`} component={Link}>
+    <CardAnchor to={`/images/${name}`} component={Link}>
       <Card radius>
         {removing ? (
           <Padding all={2}>
@@ -95,7 +96,7 @@ export const Image = ({
                       height: '24'
                     })}
                   </Margin>
-                  <A to={`/${name}/summary`} component={Link}>
+                  <A to={`/images/${name}/summary`} component={Link}>
                     {name}
                   </A>
                 </Flex>
@@ -124,7 +125,7 @@ export const Image = ({
                   <Popover placement="bottom">
                     <PopoverItem disabled={false} onClick={onCreateInstance}>
                       <ItemAnchor
-                        href={`http://localhost:3069/~create/?image=${name}`}
+                        href={`${GLOBAL.origin}/instances/~create/?image=${name}`}
                         target="__blank"
                         rel="noopener noreferrer"
                       >

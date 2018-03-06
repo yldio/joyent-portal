@@ -22,10 +22,12 @@ const {
   BASE_URL = `http://0.0.0.0:${PORT}`,
   ROLLBAR_SERVER_TOKEN,
   NODE_ENV = 'development',
-  CONSOLE = 'my-joy-instances'
+  // CONSOLE = 'my-joy-instances'
 } = process.env;
 
-const Ui = require(CONSOLE);
+const Ui = require('my-joy-instances');
+// const Instances = require('my-joy-instances');
+// const Images = require('my-joy-images');
 
 const server = Hapi.server({
   compression: {

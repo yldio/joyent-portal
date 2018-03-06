@@ -370,7 +370,7 @@ export default compose(
         }
 
         dispatch([destroyAll(), forms.map(name => destroy(name))]);
-        history.push(`/${res.data.createMachine.name}`);
+        history.push(`/instances/${res.data.createMachine.name}`);
       }
     };
   })

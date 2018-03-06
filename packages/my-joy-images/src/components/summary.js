@@ -24,6 +24,7 @@ import {
   Input
 } from 'joyent-ui-toolkit';
 
+import GLOBAL from '@state/global';
 import { ImageType, OS } from '@root/constants';
 
 const { SmallOnly, Medium } = QueryBreakpoints;
@@ -115,7 +116,7 @@ export default withTheme(({ theme = {}, onRemove, removing, ...image }) => (
                 <Medium>
                   <Button
                     type="button"
-                    href={`http://localhost:3069/~create/?image=${image.name}`}
+                    href={`${GLOBAL.origin}/instances/~create/?image=${image.name}`}
                     target="__blank"
                     rel="noopener noreferrer"
                     bold
