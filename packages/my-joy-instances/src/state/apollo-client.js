@@ -28,7 +28,7 @@ export default (opts = {}) => {
       credentials: 'same-origin',
       fetch,
       headers: {
-        'X-CSRF-Token': document.cookie.replace(/(?:(?:^|.*;\s*)crumb\s*=\s*([^;]*).*$)|^.*$/, '$1')
+        'X-CSRF-Token': global.cookie.replace(/(?:(?:^|.*;\s*)crumb\s*=\s*([^;]*).*$)|^.*$/, '$1')
       }
     }),
     ...opts
