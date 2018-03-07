@@ -137,7 +137,7 @@ exports.register = async server => {
         auth: false,
         handler: {
           directory: {
-            path: Path.join(__dirname, '../build/static/'),
+            path: Path.join(__dirname, '../build/instances/static/'),
             redirectToSlash: true,
             index: false
           }
@@ -151,7 +151,7 @@ exports.register = async server => {
         auth: false,
         handler: {
           directory: {
-            path: Path.join(ImagesRoot, 'build/static/'),
+            path: Path.join(ImagesRoot, 'build/images/static/'),
             redirectToSlash: true,
             index: false
           }
