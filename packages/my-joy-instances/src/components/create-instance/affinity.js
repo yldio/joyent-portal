@@ -21,13 +21,44 @@ const Values = touched => (
   <Margin right={1}>
     <Select style={style} touched={touched} width={remcalc(130)} embedded>
       <option value="equalling">equalling</option>
-      <option value="not-equalling">not equalling</option>
-      <option value="containing">containing</option>
       <option value="starting">starting with</option>
-      <option value="ending">ending with</option>
     </Select>
   </Margin>
 );
+
+      // {rule.type === 'tag' ? (
+      //   <Fragment>
+      //     <FormGroup name="name" field={Field}>
+      //       <Input
+      //         style={style}
+      //         onBlur={null}
+      //         type="text"
+      //         placeholder="name"
+      //         small
+      //         embedded
+      //         required
+      //       />
+      //       <FormMeta small absolute />
+      //     </FormGroup>
+      //     <H5 style={style} inline noMargin>
+      //       and value{' '}
+      //     </H5>
+      //     <FormGroup name="pattern" field={Field}>
+      //       {Values(rule.pattern)}
+      //     </FormGroup>
+      //     <FormGroup name="value" field={Field}>
+      //       <Input
+      //         style={style}
+      //         onBlur={null}
+      //         type="text"
+      //         placeholder="value"
+      //         embedded
+      //         required
+      //       />
+      //       <FormMeta small absolute />
+      //     </FormGroup>
+      //   </Fragment>
+      // ) : (
 
 export const Rule = ({ valid, ...rule }) => (
   <Margin bottom={valid ? 4 : 8}>
@@ -75,56 +106,20 @@ export const Rule = ({ valid, ...rule }) => (
           <option value="tag">tag</option>
         </Select>
       </FormGroup>
-      {rule.type === 'tag' ? (
-        <Fragment>
-          <FormGroup name="name" field={Field}>
-            <Input
-              style={style}
-              onBlur={null}
-              type="text"
-              placeholder="name"
-              small
-              embedded
-              required
-            />
-            <FormMeta small absolute />
-          </FormGroup>
-          <H5 style={style} inline noMargin>
-            and value{' '}
-          </H5>
-          <FormGroup name="pattern" field={Field}>
-            {Values(rule.pattern)}
-          </FormGroup>
-          <FormGroup name="value" field={Field}>
-            <Input
-              style={style}
-              onBlur={null}
-              type="text"
-              placeholder="value"
-              embedded
-              required
-            />
-            <FormMeta small absolute />
-          </FormGroup>
-        </Fragment>
-      ) : (
-        <Fragment>
-          <FormGroup name="pattern" field={Field}>
-            {Values(rule.pattern)}
-          </FormGroup>
-          <FormGroup name="value" field={Field}>
-            <Input
-              onBlur={null}
-              style={style}
-              type="text"
-              placeholder="Example instance name: nginx"
-              embedded
-              required
-            />
-            <FormMeta absolute />
-          </FormGroup>
-        </Fragment>
-      )}
+      <FormGroup name="pattern" field={Field}>
+        {Values(rule.pattern)}
+      </FormGroup>
+      <FormGroup name="value" field={Field}>
+        <Input
+          onBlur={null}
+          style={style}
+          type="text"
+          placeholder="Example instance name: nginx"
+          embedded
+          required
+        />
+        <FormMeta absolute />
+      </FormGroup>
     </Flex>
   </Margin>
 );
