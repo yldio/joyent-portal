@@ -9,10 +9,8 @@
     "dev": "NODE_ENV=development joyent-react-scripts start",
     "build": "NODE_ENV=production joyent-react-scripts build",
     "fmt": "prettier --write --single-quote *.js src/*.js src/**/*.js",
-    "lint-ci":
-      "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
-    "lint":
-      "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "lint-ci": "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
+    "lint": "eslint . --fix --ext .js --ext .md && echo 0 `# stylelint './src/**/*.js'`",
     "prepublish": "echo 0"
   },
   "dependencies": {

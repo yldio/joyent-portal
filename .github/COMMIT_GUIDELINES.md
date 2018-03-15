@@ -17,9 +17,9 @@ perf
 refactor
 revert
 style
-test 
+test
 ```
 
 And where scope is one of ui-toolkit, my-joy-beta, cloudapi-gql, boilerplate, and create-instance.
 
-*The recommended method to commit should be by running npm run commit.*
+_The recommended method to commit should be by running npm run commit._

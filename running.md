@@ -1,14 +1,14 @@
 # How to run the Joyent Portal
 
-#### Requisites 
+#### Requisites
 
- - [ ] [Install node.js](https://nodejs.org/en/download/current/)
- - [ ] [Install Yarn](https://yarnpkg.com/en/docs/install)
- - [ ] [Setup node-triton](https://github.com/joyent/node-triton#setup)
- 
+* [ ] [Install node.js](https://nodejs.org/en/download/current/)
+* [ ] [Install Yarn](https://yarnpkg.com/en/docs/install)
+* [ ] [Setup node-triton](https://github.com/joyent/node-triton#setup)
+
 ## via [webconsole-instances](https://github.com/joyent/webconsole-instances)
 
-[webconsole-instances](https://github.com/joyent/webconsole-instances) is the stable version of the portal. It gets updated with stable releases from [joyent-portal](http://github.com/yldio/joyent-portal). 
+[webconsole-instances](https://github.com/joyent/webconsole-instances) is the stable version of the portal. It gets updated with stable releases from [joyent-portal](http://github.com/yldio/joyent-portal).
 
 ```
 ➜ git clone https://github.com/joyent/webconsole-instances
