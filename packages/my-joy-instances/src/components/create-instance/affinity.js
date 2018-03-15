@@ -26,39 +26,39 @@ const Values = touched => (
   </Margin>
 );
 
-      // {rule.type === 'tag' ? (
-      //   <Fragment>
-      //     <FormGroup name="name" field={Field}>
-      //       <Input
-      //         style={style}
-      //         onBlur={null}
-      //         type="text"
-      //         placeholder="name"
-      //         small
-      //         embedded
-      //         required
-      //       />
-      //       <FormMeta small absolute />
-      //     </FormGroup>
-      //     <H5 style={style} inline noMargin>
-      //       and value{' '}
-      //     </H5>
-      //     <FormGroup name="pattern" field={Field}>
-      //       {Values(rule.pattern)}
-      //     </FormGroup>
-      //     <FormGroup name="value" field={Field}>
-      //       <Input
-      //         style={style}
-      //         onBlur={null}
-      //         type="text"
-      //         placeholder="value"
-      //         embedded
-      //         required
-      //       />
-      //       <FormMeta small absolute />
-      //     </FormGroup>
-      //   </Fragment>
-      // ) : (
+// {rule.type === 'tag' ? (
+//   <Fragment>
+//     <FormGroup name="name" field={Field}>
+//       <Input
+//         style={style}
+//         onBlur={null}
+//         type="text"
+//         placeholder="name"
+//         small
+//         embedded
+//         required
+//       />
+//       <FormMeta small absolute />
+//     </FormGroup>
+//     <H5 style={style} inline noMargin>
+//       and value{' '}
+//     </H5>
+//     <FormGroup name="pattern" field={Field}>
+//       {Values(rule.pattern)}
+//     </FormGroup>
+//     <FormGroup name="value" field={Field}>
+//       <Input
+//         style={style}
+//         onBlur={null}
+//         type="text"
+//         placeholder="value"
+//         embedded
+//         required
+//       />
+//       <FormMeta small absolute />
+//     </FormGroup>
+//   </Fragment>
+// ) : (
 
 export const Rule = ({ valid, ...rule }) => (
   <Margin bottom={valid ? 4 : 8}>

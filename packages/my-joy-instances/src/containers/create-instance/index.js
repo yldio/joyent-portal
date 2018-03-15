@@ -281,7 +281,7 @@ export default compose(
 
       const patterns = {
         equalling: value => value,
-        starting: value => `/^${value}/`,
+        starting: value => `/^${value}/`
       };
 
       const _name = identity === 'name' ? 'instance' : name;

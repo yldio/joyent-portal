@@ -21,7 +21,7 @@ const {
   SDC_URL,
   BASE_URL = `http://0.0.0.0:${PORT}`,
   ROLLBAR_SERVER_TOKEN,
-  NODE_ENV = 'development',
+  NODE_ENV = 'development'
   // CONSOLE = 'my-joy-instances'
 } = process.env;
 
