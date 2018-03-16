@@ -3,7 +3,6 @@
 const Brule = require('brule');
 const Hapi = require('hapi');
 const Rollover = require('rollover');
-const Brok = require('brok');
 const { homedir } = require('os');
 const { join } = require('path');
 
@@ -30,9 +29,6 @@ const Ui = require('my-joy-instances');
 // const Images = require('my-joy-images');
 
 const server = Hapi.server({
-  compression: {
-    minBytes: 1
-  },
   debug: {
     request: ['error']
   },
@@ -42,9 +38,6 @@ const server = Hapi.server({
 
 async function main() {
   await server.register([
-    {
-      plugin: Brok
-    },
     {
       plugin: Rollover,
       options: {
