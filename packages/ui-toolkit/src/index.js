@@ -55,6 +55,11 @@ export {
 } from './message';
 
 export {
+  TableFoot as PaginationTableFoot,
+  Item as PaginationItem
+} from './pagination';
+
+export {
   default as SectionList,
   Item as SectionListItem,
   Anchor as SectionListAnchor
