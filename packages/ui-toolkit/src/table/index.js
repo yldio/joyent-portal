@@ -349,13 +349,3 @@ export const Td = Baseline(({ children, ...rest }) => (
     )}
   </Propagate>
 ));
-
-export const Pagination = ({ children, colSpan, ...rest }) => (
-  <Tfoot>
-    <Tr {...rest}>
-      <Th colSpan={colSpan} hasBorder="bottom" middle center>
-        {children}
-      </Th>
-    </Tr>
-  </Tfoot>
-);
