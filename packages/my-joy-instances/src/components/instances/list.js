@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import remcalc from 'remcalc';
 import styled from 'styled-components';
@@ -6,6 +6,7 @@ import titleCase from 'title-case';
 import { Link } from 'react-router-dom';
 import { Field } from 'redux-form';
 import Flex from 'styled-flex-component';
+import queryString from 'query-string';
 
 import {
   Anchor,
@@ -17,6 +18,8 @@ import {
   TableTh,
   TableTd,
   TableTbody,
+  PaginationTableFoot,
+  PaginationItem,
   StatusLoader,
   Popover,
   PopoverContainer,
@@ -27,7 +30,7 @@ import {
   ActionsIcon
 } from 'joyent-ui-toolkit';
 
-import GLOBAL from '@state/global';
+import GLOBAL, { Global } from '@state/global';
 
 const stateColor = {
   PROVISIONING: 'primary',
@@ -55,6 +58,14 @@ const Actions = styled(Flex)`
   height: ${remcalc(48)};
   min-width: ${remcalc(48)};
 `;
+
+export const FetchingItem = () => (
+  <TableTr colSpan="6">
+    <TableTd colSpan="6" middle center>
+      <StatusLoader />
+    </TableTd>
+  </TableTr>
+);
 
 export const Item = ({
   id = '',
@@ -148,71 +159,168 @@ export default ({
   toggleSelectAll = () => null,
   onSortBy = () => null,
   children,
-  noInstances
-}) => (
-  <form>
-    <Table>
-      <TableThead>
-        <TableTr>
-          <TableTh xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
-            <FormGroup paddingTop={remcalc(4)}>
-              <Checkbox
-                checked={allSelected}
-                disabled={submitting || noInstances}
-                onChange={toggleSelectAll}
-                noMargin
-              />
-            </FormGroup>
-          </TableTh>
-          <TableTh
-            onClick={() => onSortBy('name')}
-            sortOrder={sortOrder}
-            showSort={sortBy === 'name'}
-            left
-            middle
-            actionable
-          >
-            <span>Name </span>
-          </TableTh>
-          <TableTh
-            xs="150"
-            onClick={() => onSortBy('state')}
-            sortOrder={sortOrder}
-            showSort={sortBy === 'state'}
-            left
-            middle
-            actionable
-          >
-            <span>Status </span>
-          </TableTh>
-          <TableTh
-            xs="0"
-            sm="160"
-            onClick={() => onSortBy('created')}
-            sortOrder={sortOrder}
-            showSort={sortBy === 'created'}
-            left
-            middle
-            actionable
-          >
-            <span>Created </span>
-          </TableTh>
-          <TableTh
-            xs="0"
-            sm="130"
-            onClick={() => onSortBy('id')}
-            sortOrder={sortOrder}
-            showSort={sortBy === 'id'}
-            left
-            middle
-            actionable
-          >
-            <span>Short ID </span>
-          </TableTh>
-          <TableTh xs="60" padding="0" />
-        </TableTr>
-      </TableThead>
-      <TableTbody>{children}</TableTbody>
-    </Table>
-  </form>
-);
+  noInstances,
+  limit = 0,
+  offset = 0,
+  total = 0
+}) => {
+  const numPages = Math.ceil(total / limit);
+  const currPage = Math.ceil((offset + limit) / limit);
+  const isLast = currPage === numPages;
+  const isFirst = currPage === 1;
+
+  return (
+    <form>
+      <Table>
+        <TableThead>
+          <TableTr>
+            <TableTh xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
+              <FormGroup paddingTop={remcalc(4)}>
+                <Checkbox
+                  checked={allSelected}
+                  disabled={submitting || noInstances}
+                  onChange={toggleSelectAll}
+                  noMargin
+                />
+              </FormGroup>
+            </TableTh>
+            <TableTh
+              onClick={() => onSortBy('name')}
+              sortOrder={sortOrder}
+              showSort={sortBy === 'name'}
+              left
+              middle
+              actionable
+            >
+              <span>Name </span>
+            </TableTh>
+            <TableTh
+              xs="150"
+              onClick={() => onSortBy('state')}
+              sortOrder={sortOrder}
+              showSort={sortBy === 'state'}
+              left
+              middle
+              actionable
+            >
+              <span>Status </span>
+            </TableTh>
+            <TableTh
+              xs="0"
+              sm="160"
+              onClick={() => onSortBy('created')}
+              sortOrder={sortOrder}
+              showSort={sortBy === 'created'}
+              left
+              middle
+              actionable
+            >
+              <span>Created </span>
+            </TableTh>
+            <TableTh
+              xs="0"
+              sm="130"
+              onClick={() => onSortBy('id')}
+              sortOrder={sortOrder}
+              showSort={sortBy === 'id'}
+              left
+              middle
+              actionable
+            >
+              <span>Short ID </span>
+            </TableTh>
+            <TableTh xs="60" padding="0" />
+          </TableTr>
+        </TableThead>
+        <TableTbody>{children}</TableTbody>
+        {!noInstances ? (
+          <PaginationTableFoot colSpan="6">
+            <PaginationItem
+              to={`${Global().pathname}?${queryString.stringify({
+                ...Global().query,
+                limit,
+                offset: offset - limit
+              })}`}
+              component={Link}
+              disabled={isFirst}
+              prev
+            >
+              Prev
+            </PaginationItem>
+            {currPage - 2 > 0 ? (
+              <Fragment>
+                {currPage - 2 > 1 ? (
+                  <PaginationItem
+                    to={`${Global().pathname}?${queryString.stringify({
+                      ...Global().query,
+                      limit,
+                      offset: 0
+                    })}`}
+                    component={Link}
+                  >
+                    1
+                  </PaginationItem>
+                ) : null}
+                <PaginationItem disabled>...</PaginationItem>
+              </Fragment>
+            ) : null}
+            {currPage > 1 ? (
+              <PaginationItem
+                to={`${Global().pathname}?${queryString.stringify({
+                  ...Global().query,
+                  limit,
+                  offset: offset - limit
+                })}`}
+                component={Link}
+              >
+                {currPage - 1}
+              </PaginationItem>
+            ) : null}
+            <PaginationItem active>{currPage}</PaginationItem>
+            {numPages > currPage ? (
+              <PaginationItem
+                to={`${Global().pathname}?${queryString.stringify({
+                  ...Global().query,
+                  limit,
+                  offset: offset + limit
+                })}`}
+                component={Link}
+              >
+                {currPage + 1}
+              </PaginationItem>
+            ) : null}
+            {currPage + 2 <= numPages ? (
+              <Fragment>
+                <PaginationItem disabled>...</PaginationItem>
+                {numPages - currPage > 2 ? (
+                  <PaginationItem
+                    to={`${Global().pathname}?${queryString.stringify({
+                      ...Global().query,
+                      limit,
+                      offset: total - limit
+                    })}`}
+                    component={Link}
+                  >
+                    {numPages}
+                  </PaginationItem>
+                ) : null}
+              </Fragment>
+            ) : null}
+            <PaginationItem
+              to={`${Global().pathname}?${queryString.stringify({
+                ...Global().query,
+                limit,
+                offset: offset + limit
+              })}`}
+              component={Link}
+              disabled={isLast}
+              next
+            >
+              Next
+            </PaginationItem>
+          </PaginationTableFoot>
+        ) : null}
+      </Table>
+    </form>
+  );
+};

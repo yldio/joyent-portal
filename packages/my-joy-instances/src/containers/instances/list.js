@@ -6,9 +6,11 @@ import { set } from 'react-redux-values';
 import ReduxForm from 'declarative-redux-form';
 import { Margin } from 'styled-components-spacing';
 import forceArray from 'force-array';
-import get from 'lodash.get';
+import queryString from 'query-string';
 import intercept from 'apr-intercept';
+import get from 'lodash.get';
 import find from 'lodash.find';
+import isNaN from 'lodash.isnan';
 import reverse from 'lodash.reverse';
 import sort from 'lodash.sortby';
 import remcalc from 'remcalc';
@@ -36,6 +38,7 @@ import Confirm from '@state/confirm';
 
 import {
   default as InstanceList,
+  FetchingItem as InstanceListFetchingItem,
   Item as InstanceListItem
 } from '@components/instances/list';
 
@@ -45,6 +48,10 @@ const TABLE_FORM_NAME = 'instance-list-table';
 const MENU_FORM_NAME = 'instance-list-menu';
 
 export const List = ({
+  limit,
+  offset,
+  total,
+  fetching,
   instances = [],
   selected = [],
   allowedActions,
@@ -98,7 +105,7 @@ export const List = ({
   const handleReboot = selected => handleAction({ name: 'reboot', selected });
   const handleRemove = selected => handleAction({ name: 'remove', selected });
 
-  const _table = !loading ? (
+  const _table = !_loading ? (
     <ReduxForm form={TABLE_FORM_NAME}>
       {props => (
         <InstanceList
@@ -109,8 +116,12 @@ export const List = ({
           toggleSelectAll={toggleSelectAll}
           onSortBy={handleSortBy}
           noInstances={!_instances.length}
+          limit={limit}
+          offset={offset}
+          total={total}
         >
-          {_instances.map(({ name, id, ...rest }) => (
+          {fetching ? <InstanceListFetchingItem /> : null}
+          {(!fetching ? _instances : []).map(({ name, id, ...rest }) => (
             <InstanceListItem
               key={id}
               id={id}
@@ -129,7 +140,7 @@ export const List = ({
   ) : null;
 
   const _empty =
-    !loading && !_instances.length ? (
+    !_loading && !_instances.length ? (
       <Empty>
         {filter
           ? 'You have no Instances that match your query'
@@ -139,7 +150,7 @@ export const List = ({
     ) : null;
 
   const _footer =
-    !loading && selected.length ? (
+    !_loading && selected.length ? (
       <InstanceListActions
         allowedActions={allowedActions}
         statuses={statuses}
@@ -161,7 +172,7 @@ export const List = ({
             searchLabel="Filter instances"
             searchable={!_loading}
             actionLabel="Create Instance"
-            onActionClick={() => history.push('/instances/~create')}
+            actionTo="/instances/~create"
           />
         )}
       </ReduxForm>
@@ -181,12 +192,23 @@ export default compose(
   graphql(RebootInstance, { name: 'reboot' }),
   graphql(RemoveInstance, { name: 'remove' }),
   graphql(ListInstances, {
-    options: () => ({
+    options: ({ location }) => ({
       ssr: false,
-      pollInterval: 1000
+      pollInterval: 1000,
+      variables: {
+        limit: 25,
+        offset: 0,
+        ...queryString.parse(location.search)
+      }
     }),
-    props: ({ data: { loading, error, refetch, ...rest } }) => {
-      const machines = get(rest, 'machines.results', []);
+    props: ({ data: { loading, error, refetch, variables, ...rest } }) => {
+      const result = get(rest, 'machines', {});
+      const machines = get(result, 'results', []);
+      const offset = Number(variables.offset);
+      const limit = Number(variables.limit);
+
+      const fetching = !(limit === result.limit && offset === result.offset);
+
       const instances = forceArray(machines).map(({ state, ...machine }) => ({
         ...machine,
         state,
@@ -203,6 +225,10 @@ export default compose(
       });
 
       return {
+        limit: isNaN(limit) ? result.limit : limit,
+        offset: isNaN(offset) ? result.offset : offset,
+        total: result.total,
+        fetching,
         instances,
         loading,
         error,

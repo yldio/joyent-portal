@@ -2,6 +2,7 @@ import React from 'react';
 import { Field } from 'redux-form';
 import Flex from 'styled-flex-component';
 import { Margin } from 'styled-components-spacing';
+import { Link } from 'react-router-dom';
 import remcalc from 'remcalc';
 
 import {
@@ -18,7 +19,8 @@ export const Toolbar = ({
   searchable = true,
   actionLabel = 'Create',
   actionable = true,
-  onActionClick
+  onActionClick,
+  actionTo
 }) => (
   <Flex justifyBetween>
     <FormGroup name="filter" field={Field}>
@@ -30,8 +32,10 @@ export const Toolbar = ({
     <FormGroup right>
       <Divider height={remcalc(21)} transparent />
       <Button
-        type={onActionClick ? 'button' : 'submit'}
+        type={actionTo || onActionClick ? 'button' : 'submit'}
         disabled={!actionable}
+        component={actionTo ? Link : undefined}
+        to={actionTo}
         onClick={onActionClick}
         icon
         fluid

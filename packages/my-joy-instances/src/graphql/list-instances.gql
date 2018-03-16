@@ -1,5 +1,8 @@
-query instances {
-  machines {
+query instances($offset: Int, $limit: Int) {
+  machines(offset: $offset, limit: $limit) {
+    total
+    offset
+    limit
     results {
       id
       name
