@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <InstanceList /> without throwing 1`] = `
+.c23 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
 .c9 {
   font-family: sans-serif;
   font-size: 100%;
@@ -64,6 +71,16 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
+.c22 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c22:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c3 {
   padding: 0rem;
   padding-left: 0.75rem;
@@ -80,6 +97,31 @@ exports[`renders <InstanceList /> without throwing 1`] = `
 .c12 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
+}
+
+.c21 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24 {
+  margin: 0.125rem 0.375rem;
+}
+
+.c25 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.375rem;
+  background-color: rgb(59,70,204);
+  border: 0.0625rem solid rgb(45,56,132);
+  border-radius: 0.25rem;
+  color: rgb(255,255,255);
 }
 
 .c10 {
@@ -164,6 +206,23 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   table-layout: fixed;
   width: 100%;
   max-width: 100%;
+}
+
+.c19 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c19 th:first-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c19 th:last-child {
+  border-bottom-right-radius: 0.25rem;
+}
+
+.c19 th {
+  border-top-width: 0;
 }
 
 .c1 {
@@ -360,6 +419,32 @@ exports[`renders <InstanceList /> without throwing 1`] = `
 }
 
 .c17:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c20 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  vertical-align: middle;
+  text-align: center;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+  border-bottom-width: 0.0625rem !important;
+}
+
+.c20:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c20:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -531,11 +616,97 @@ exports[`renders <InstanceList /> without throwing 1`] = `
       name="tbody"
       selected={undefined}
     />
+    <tfoot
+      className="c19"
+      disabled={undefined}
+      name="tfoot"
+      selected={undefined}
+    >
+      <tr
+        className="c2"
+        disabled={undefined}
+        name="tr"
+        selected={undefined}
+      >
+        <th
+          className="c20"
+          colSpan="6"
+          disabled={undefined}
+          name="th"
+          selected={undefined}
+        >
+          <a
+            className="c21 c22 c23"
+            disabled={false}
+            to="/?limit=0&offset=0"
+          >
+            <svg
+              className="c24"
+              height="6"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(90deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(59, 70, 204)"
+              />
+            </svg>
+            Prev
+          </a>
+          <a
+            className="c25 c22 c23"
+            disabled={undefined}
+            to={null}
+          >
+            NaN
+          </a>
+          <a
+            className="c21 c22 c23"
+            disabled={false}
+            to="/?limit=0&offset=0"
+          >
+            Next
+            <svg
+              className="c24"
+              height="6"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(-90deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(59, 70, 204)"
+              />
+            </svg>
+          </a>
+        </th>
+      </tr>
+    </tfoot>
   </table>
 </form>
 `;
 
 exports[`renders <InstanceList allSelected /> without throwing 1`] = `
+.c23 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
 .c9 {
   font-family: sans-serif;
   font-size: 100%;
@@ -599,6 +770,16 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
+.c22 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c22:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c3 {
   padding: 0rem;
   padding-left: 0.75rem;
@@ -615,6 +796,31 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
 .c12 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
+}
+
+.c21 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24 {
+  margin: 0.125rem 0.375rem;
+}
+
+.c25 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.375rem;
+  background-color: rgb(59,70,204);
+  border: 0.0625rem solid rgb(45,56,132);
+  border-radius: 0.25rem;
+  color: rgb(255,255,255);
 }
 
 .c10 {
@@ -699,6 +905,23 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   table-layout: fixed;
   width: 100%;
   max-width: 100%;
+}
+
+.c19 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c19 th:first-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c19 th:last-child {
+  border-bottom-right-radius: 0.25rem;
+}
+
+.c19 th {
+  border-top-width: 0;
 }
 
 .c1 {
@@ -898,6 +1121,32 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-right-width: 0;
 }
 
+.c20 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  vertical-align: middle;
+  text-align: center;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+  border-bottom-width: 0.0625rem !important;
+}
+
+.c20:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c20:not(:last-child) {
+  border-right-width: 0;
+}
+
 .c2 {
   display: table-row;
   color: rgba(73,73,73,1);
@@ -1066,11 +1315,97 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
       name="tbody"
       selected={undefined}
     />
+    <tfoot
+      className="c19"
+      disabled={undefined}
+      name="tfoot"
+      selected={undefined}
+    >
+      <tr
+        className="c2"
+        disabled={undefined}
+        name="tr"
+        selected={undefined}
+      >
+        <th
+          className="c20"
+          colSpan="6"
+          disabled={undefined}
+          name="th"
+          selected={undefined}
+        >
+          <a
+            className="c21 c22 c23"
+            disabled={false}
+            to="/?limit=0&offset=0"
+          >
+            <svg
+              className="c24"
+              height="6"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(90deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(59, 70, 204)"
+              />
+            </svg>
+            Prev
+          </a>
+          <a
+            className="c25 c22 c23"
+            disabled={undefined}
+            to={null}
+          >
+            NaN
+          </a>
+          <a
+            className="c21 c22 c23"
+            disabled={false}
+            to="/?limit=0&offset=0"
+          >
+            Next
+            <svg
+              className="c24"
+              height="6"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(-90deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(59, 70, 204)"
+              />
+            </svg>
+          </a>
+        </th>
+      </tr>
+    </tfoot>
   </table>
 </form>
 `;
 
 exports[`renders <InstanceList sortBy /> without throwing 1`] = `
+.c23 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
 .c9 {
   font-family: sans-serif;
   font-size: 100%;
@@ -1134,6 +1469,16 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
+.c22 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c22:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c3 {
   padding: 0rem;
   padding-left: 0.75rem;
@@ -1150,6 +1495,31 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
 .c13 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
+}
+
+.c21 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24 {
+  margin: 0.125rem 0.375rem;
+}
+
+.c25 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.375rem;
+  background-color: rgb(59,70,204);
+  border: 0.0625rem solid rgb(45,56,132);
+  border-radius: 0.25rem;
+  color: rgb(255,255,255);
 }
 
 .c10 {
@@ -1234,6 +1604,23 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   table-layout: fixed;
   width: 100%;
   max-width: 100%;
+}
+
+.c19 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c19 th:first-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c19 th:last-child {
+  border-bottom-right-radius: 0.25rem;
+}
+
+.c19 th {
+  border-top-width: 0;
 }
 
 .c1 {
@@ -1366,6 +1753,32 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
 }
 
 .c17:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c20 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  vertical-align: middle;
+  text-align: center;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+  border-bottom-width: 0.0625rem !important;
+}
+
+.c20:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c20:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1601,11 +2014,97 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
       name="tbody"
       selected={undefined}
     />
+    <tfoot
+      className="c19"
+      disabled={undefined}
+      name="tfoot"
+      selected={undefined}
+    >
+      <tr
+        className="c2"
+        disabled={undefined}
+        name="tr"
+        selected={undefined}
+      >
+        <th
+          className="c20"
+          colSpan="6"
+          disabled={undefined}
+          name="th"
+          selected={undefined}
+        >
+          <a
+            className="c21 c22 c23"
+            disabled={false}
+            to="/?limit=0&offset=0"
+          >
+            <svg
+              className="c24"
+              height="6"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(90deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(59, 70, 204)"
+              />
+            </svg>
+            Prev
+          </a>
+          <a
+            className="c25 c22 c23"
+            disabled={undefined}
+            to={null}
+          >
+            NaN
+          </a>
+          <a
+            className="c21 c22 c23"
+            disabled={false}
+            to="/?limit=0&offset=0"
+          >
+            Next
+            <svg
+              className="c24"
+              height="6"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(-90deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(59, 70, 204)"
+              />
+            </svg>
+          </a>
+        </th>
+      </tr>
+    </tfoot>
   </table>
 </form>
 `;
 
 exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
+.c23 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
 .c9 {
   font-family: sans-serif;
   font-size: 100%;
@@ -1669,6 +2168,16 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
+.c22 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c22:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c3 {
   padding: 0rem;
   padding-left: 0.75rem;
@@ -1685,6 +2194,31 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
 .c13 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
+}
+
+.c21 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24 {
+  margin: 0.125rem 0.375rem;
+}
+
+.c25 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.375rem;
+  background-color: rgb(59,70,204);
+  border: 0.0625rem solid rgb(45,56,132);
+  border-radius: 0.25rem;
+  color: rgb(255,255,255);
 }
 
 .c10 {
@@ -1769,6 +2303,23 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   table-layout: fixed;
   width: 100%;
   max-width: 100%;
+}
+
+.c19 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c19 th:first-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c19 th:last-child {
+  border-bottom-right-radius: 0.25rem;
+}
+
+.c19 th {
+  border-top-width: 0;
 }
 
 .c1 {
@@ -1901,6 +2452,32 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
 }
 
 .c17:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c20 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  vertical-align: middle;
+  text-align: center;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+  border-bottom-width: 0.0625rem !important;
+}
+
+.c20:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c20:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2136,11 +2713,97 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
       name="tbody"
       selected={undefined}
     />
+    <tfoot
+      className="c19"
+      disabled={undefined}
+      name="tfoot"
+      selected={undefined}
+    >
+      <tr
+        className="c2"
+        disabled={undefined}
+        name="tr"
+        selected={undefined}
+      >
+        <th
+          className="c20"
+          colSpan="6"
+          disabled={undefined}
+          name="th"
+          selected={undefined}
+        >
+          <a
+            className="c21 c22 c23"
+            disabled={false}
+            to="/?limit=0&offset=0"
+          >
+            <svg
+              className="c24"
+              height="6"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(90deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(59, 70, 204)"
+              />
+            </svg>
+            Prev
+          </a>
+          <a
+            className="c25 c22 c23"
+            disabled={undefined}
+            to={null}
+          >
+            NaN
+          </a>
+          <a
+            className="c21 c22 c23"
+            disabled={false}
+            to="/?limit=0&offset=0"
+          >
+            Next
+            <svg
+              className="c24"
+              height="6"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(-90deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(59, 70, 204)"
+              />
+            </svg>
+          </a>
+        </th>
+      </tr>
+    </tfoot>
   </table>
 </form>
 `;
 
 exports[`renders <InstanceList submitting /> without throwing 1`] = `
+.c23 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
 .c9 {
   font-family: sans-serif;
   font-size: 100%;
@@ -2204,6 +2867,16 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
+.c22 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c22:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c3 {
   padding: 0rem;
   padding-left: 0.75rem;
@@ -2220,6 +2893,31 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
 .c12 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
+}
+
+.c21 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24 {
+  margin: 0.125rem 0.375rem;
+}
+
+.c25 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.375rem;
+  background-color: rgb(59,70,204);
+  border: 0.0625rem solid rgb(45,56,132);
+  border-radius: 0.25rem;
+  color: rgb(255,255,255);
 }
 
 .c10 {
@@ -2304,6 +3002,23 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   table-layout: fixed;
   width: 100%;
   max-width: 100%;
+}
+
+.c19 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c19 th:first-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c19 th:last-child {
+  border-bottom-right-radius: 0.25rem;
+}
+
+.c19 th {
+  border-top-width: 0;
 }
 
 .c1 {
@@ -2500,6 +3215,32 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
 }
 
 .c17:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c20 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  vertical-align: middle;
+  text-align: center;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+  border-bottom-width: 0.0625rem !important;
+}
+
+.c20:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c20:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2671,11 +3412,97 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
       name="tbody"
       selected={undefined}
     />
+    <tfoot
+      className="c19"
+      disabled={undefined}
+      name="tfoot"
+      selected={undefined}
+    >
+      <tr
+        className="c2"
+        disabled={undefined}
+        name="tr"
+        selected={undefined}
+      >
+        <th
+          className="c20"
+          colSpan="6"
+          disabled={undefined}
+          name="th"
+          selected={undefined}
+        >
+          <a
+            className="c21 c22 c23"
+            disabled={false}
+            to="/?limit=0&offset=0"
+          >
+            <svg
+              className="c24"
+              height="6"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(90deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(59, 70, 204)"
+              />
+            </svg>
+            Prev
+          </a>
+          <a
+            className="c25 c22 c23"
+            disabled={undefined}
+            to={null}
+          >
+            NaN
+          </a>
+          <a
+            className="c21 c22 c23"
+            disabled={false}
+            to="/?limit=0&offset=0"
+          >
+            Next
+            <svg
+              className="c24"
+              height="6"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(-90deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(59, 70, 204)"
+              />
+            </svg>
+          </a>
+        </th>
+      </tr>
+    </tfoot>
   </table>
 </form>
 `;
 
 exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = `
+.c23 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
 .c9 {
   font-family: sans-serif;
   font-size: 100%;
@@ -2739,6 +3566,16 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   cursor: not-allowed;
 }
 
+.c22 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c22:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c3 {
   padding: 0rem;
   padding-left: 0.75rem;
@@ -2755,6 +3592,31 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
 .c12 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;
+}
+
+.c21 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24 {
+  margin: 0.125rem 0.375rem;
+}
+
+.c25 {
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.375rem;
+  background-color: rgb(59,70,204);
+  border: 0.0625rem solid rgb(45,56,132);
+  border-radius: 0.25rem;
+  color: rgb(255,255,255);
 }
 
 .c10 {
@@ -2839,6 +3701,23 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   table-layout: fixed;
   width: 100%;
   max-width: 100%;
+}
+
+.c19 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c19 th:first-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
+.c19 th:last-child {
+  border-bottom-right-radius: 0.25rem;
+}
+
+.c19 th {
+  border-top-width: 0;
 }
 
 .c1 {
@@ -3035,6 +3914,32 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
 }
 
 .c17:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c20 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  vertical-align: middle;
+  text-align: center;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+  border-bottom-width: 0.0625rem !important;
+}
+
+.c20:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c20:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3210,6 +4115,85 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
         children
       </span>
     </tbody>
+    <tfoot
+      className="c19"
+      disabled={undefined}
+      name="tfoot"
+      selected={undefined}
+    >
+      <tr
+        className="c2"
+        disabled={undefined}
+        name="tr"
+        selected={undefined}
+      >
+        <th
+          className="c20"
+          colSpan="6"
+          disabled={undefined}
+          name="th"
+          selected={undefined}
+        >
+          <a
+            className="c21 c22 c23"
+            disabled={false}
+            to="/?limit=0&offset=0"
+          >
+            <svg
+              className="c24"
+              height="6"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(90deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(59, 70, 204)"
+              />
+            </svg>
+            Prev
+          </a>
+          <a
+            className="c25 c22 c23"
+            disabled={undefined}
+            to={null}
+          >
+            NaN
+          </a>
+          <a
+            className="c21 c22 c23"
+            disabled={false}
+            to="/?limit=0&offset=0"
+          >
+            Next
+            <svg
+              className="c24"
+              height="6"
+              innerRef={undefined}
+              style={
+                Object {
+                  "transform": "rotate(-90deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(59, 70, 204)"
+              />
+            </svg>
+          </a>
+        </th>
+      </tr>
+    </tfoot>
   </table>
 </form>
 `;
@@ -3421,24 +4405,6 @@ exports[`renders <Item /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c19 {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c0 {
   overflow: hidden;
   border-spacing: 0;
@@ -3557,6 +4523,24 @@ exports[`renders <Item /> without throwing 1`] = `
 
 .c2:last-child td {
   border-bottom-width: 0.0625rem;
+}
+
+.c19 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c11 {
@@ -3935,24 +4919,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c19 {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c0 {
   overflow: hidden;
   border-spacing: 0;
@@ -4071,6 +5037,24 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
 
 .c2:last-child td {
   border-bottom-width: 0.0625rem;
+}
+
+.c19 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c11 {
@@ -4451,24 +5435,6 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c19 {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c0 {
   overflow: hidden;
   border-spacing: 0;
@@ -4587,6 +5553,24 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
 
 .c2:last-child td {
   border-bottom-width: 0.0625rem;
+}
+
+.c19 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c11 {
