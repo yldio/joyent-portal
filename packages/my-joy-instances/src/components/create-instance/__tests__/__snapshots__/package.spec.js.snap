@@ -729,6 +729,7 @@ exports[`renders <Filters /> without throwing 1`] = `
   >
     <button
       className="c14 c15 c16"
+      data-ui-button="true"
       href=""
       onClick={undefined}
       type="button"
@@ -2912,9 +2913,7 @@ exports[`renders <Packages loading /> without throwing 1`] = `
 </form>
 `;
 
-exports[
-  `renders <Packages packages=[{name: stuff, imageName: stuff}] /> without throwing 1`
-] = `
+exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without throwing 1`] = `
 .c4 {
   margin-bottom: 0.125rem;
   margin-left: 0.5625rem;

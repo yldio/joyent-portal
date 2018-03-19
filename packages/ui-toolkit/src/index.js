@@ -2,6 +2,8 @@ export { default as Anchor } from './anchor';
 export { default as Base, global } from './base';
 export { default as Baseline } from './baseline';
 export { default as Button } from './button';
+export { default as PopoverButton } from './button/popover';
+export { default as ButtonGroup } from './button/group';
 export { default as Label } from './label';
 export { PageContainer, RootContainer, ViewContainer } from './layout';
 export { H1, H2, H3, H4, H5, H6 } from './text/headings';

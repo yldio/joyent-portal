@@ -908,6 +908,24 @@ exports[`renders <Item /> without throwing 1`] = `
   margin-left: 0rem;
 }
 
+.c13 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c8 {
   color: rgb(100,100,100);
   position: absolute;
@@ -1066,24 +1084,6 @@ exports[`renders <Item /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c13 {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 @media only screen and (min-width:47.9375rem) {
   .c10 {
     width: 10rem;
@@ -1176,6 +1176,11 @@ exports[`renders <Item /> without throwing 1`] = `
       onClick={[Function]}
       onMouseEnter={undefined}
       onMouseLeave={undefined}
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
       tag="div"
     >
       <svg
@@ -1287,6 +1292,24 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   margin-left: 0rem;
 }
 
+.c13 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c8 {
   color: rgb(100,100,100);
   position: absolute;
@@ -1445,24 +1468,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c13 {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 @media only screen and (min-width:47.9375rem) {
   .c10 {
     width: 10rem;
@@ -1557,6 +1562,11 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
       onClick={[Function]}
       onMouseEnter={undefined}
       onMouseLeave={undefined}
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
       tag="div"
     >
       <svg
