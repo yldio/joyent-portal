@@ -858,6 +858,7 @@ exports[`renders <List /> without throwing 1`] = `
         />
         <button
           className="c10 c11 c12"
+          data-ui-button="true"
           disabled={false}
           href=""
           icon={true}
@@ -2165,6 +2166,7 @@ exports[`renders <List error /> without throwing 1`] = `
         />
         <button
           className="c10 c11 c12"
+          data-ui-button="true"
           disabled={false}
           href=""
           icon={true}
@@ -2847,6 +2849,34 @@ exports[`renders <List instances /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c37 {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c41 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c5 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -2961,16 +2991,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c37 {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background-color: rgb(0,152,88);
-  display: inline-block;
-  margin-right: 0rem;
-  margin-left: 0rem;
 }
 
 .c23 {
@@ -3501,24 +3521,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c41 {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c34 {
   color: rgba(73,73,73,1);
   -webkit-text-decoration: none;
@@ -3633,6 +3635,7 @@ exports[`renders <List instances /> without throwing 1`] = `
         />
         <button
           className="c10 c11 c12"
+          data-ui-button="true"
           disabled={false}
           href=""
           icon={true}
@@ -3887,6 +3890,11 @@ exports[`renders <List instances /> without throwing 1`] = `
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
               tag="div"
             >
               <div
@@ -4018,6 +4026,11 @@ exports[`renders <List instances /> without throwing 1`] = `
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
               tag="div"
             >
               <div
@@ -4947,6 +4960,34 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c37 {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c41 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c5 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -5154,16 +5195,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c37 {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background-color: rgb(0,152,88);
-  display: inline-block;
-  margin-right: 0rem;
-  margin-left: 0rem;
 }
 
 .c23 {
@@ -5694,24 +5725,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c41 {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c34 {
   color: rgba(73,73,73,1);
   -webkit-text-decoration: none;
@@ -5887,6 +5900,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
         />
         <button
           className="c10 c11 c12"
+          data-ui-button="true"
           disabled={false}
           href=""
           icon={true}
@@ -6141,6 +6155,11 @@ exports[`renders <List instances selected /> without throwing 1`] = `
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
               tag="div"
             >
               <div
@@ -6272,6 +6291,11 @@ exports[`renders <List instances selected /> without throwing 1`] = `
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
               tag="div"
             >
               <div
@@ -6399,6 +6423,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <button
               className="c53 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -6431,6 +6456,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <button
               className="c54 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -6466,6 +6492,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <button
               className="c53 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -6498,6 +6525,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <button
               className="c54 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -6533,6 +6561,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <button
               className="c53 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -6581,6 +6610,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <button
               className="c54 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -6636,6 +6666,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <button
               className="c56 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -6668,6 +6699,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <button
               className="c57 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -7521,6 +7553,34 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c37 {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c41 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c5 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -7728,16 +7788,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c37 {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background-color: rgb(0,152,88);
-  display: inline-block;
-  margin-right: 0rem;
-  margin-left: 0rem;
 }
 
 .c23 {
@@ -8268,24 +8318,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c41 {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c34 {
   color: rgba(73,73,73,1);
   -webkit-text-decoration: none;
@@ -8461,6 +8493,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
         />
         <button
           className="c10 c11 c12"
+          data-ui-button="true"
           disabled={false}
           href=""
           icon={true}
@@ -8715,6 +8748,11 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
               tag="div"
             >
               <div
@@ -8846,6 +8884,11 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
               tag="div"
             >
               <div
@@ -8973,6 +9016,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <button
               className="c53 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -9005,6 +9049,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <button
               className="c54 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -9040,6 +9085,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <button
               className="c53 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -9072,6 +9118,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <button
               className="c54 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -9107,6 +9154,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <button
               className="c53 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -9155,6 +9203,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <button
               className="c54 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -9210,6 +9259,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <button
               className="c56 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -9242,6 +9292,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <button
               className="c57 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -10308,6 +10359,34 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   max-height: 1.125rem;
 }
 
+.c37 {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c41 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c5 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -10515,16 +10594,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c37 {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background-color: rgb(0,152,88);
-  display: inline-block;
-  margin-right: 0rem;
-  margin-left: 0rem;
 }
 
 .c23 {
@@ -11055,24 +11124,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   border-bottom-width: 0.0625rem;
 }
 
-.c41 {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c34 {
   color: rgba(73,73,73,1);
   -webkit-text-decoration: none;
@@ -11248,6 +11299,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
         />
         <button
           className="c10 c11 c12"
+          data-ui-button="true"
           disabled={false}
           href=""
           icon={true}
@@ -11502,6 +11554,11 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
               tag="div"
             >
               <div
@@ -11633,6 +11690,11 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
               onClick={[Function]}
               onMouseEnter={undefined}
               onMouseLeave={undefined}
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
               tag="div"
             >
               <div
@@ -11760,6 +11822,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <button
               className="c53 c11 c12"
+              data-ui-button="true"
               disabled={false}
               href=""
               icon={true}
@@ -11792,6 +11855,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <button
               className="c54 c11 c12"
+              data-ui-button="true"
               disabled={false}
               href=""
               icon={true}
@@ -11827,6 +11891,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <button
               className="c55 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -11859,6 +11924,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <button
               className="c56 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -11894,6 +11960,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <button
               className="c55 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -11942,6 +12009,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <button
               className="c56 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -11997,6 +12065,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <button
               className="c58 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -12029,6 +12098,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <button
               className="c59 c11 c12"
+              data-ui-button="true"
               disabled={true}
               href=""
               icon={true}
@@ -12541,6 +12611,7 @@ exports[`renders <List loading /> without throwing 1`] = `
         />
         <button
           className="c10 c11 c12"
+          data-ui-button="true"
           disabled={false}
           href=""
           icon={true}

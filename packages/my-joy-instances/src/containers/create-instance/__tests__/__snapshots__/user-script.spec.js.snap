@@ -602,6 +602,7 @@ Array [
     >
         <button
             className="c2 c3 c4"
+            data-ui-button="true"
             href=""
             onClick={[Function]}
             type="button"
@@ -610,6 +611,7 @@ Array [
         </button>
         <button
             className="c5 c3 c4"
+            data-ui-button="true"
             href=""
             onClick={undefined}
             type="submit"
@@ -1080,6 +1082,7 @@ Array [
     >
         <button
             className="c2 c3 c4"
+            data-ui-button="true"
             href=""
             onClick={[Function]}
             type="button"
@@ -1088,6 +1091,7 @@ Array [
         </button>
         <button
             className="c5 c3 c4"
+            data-ui-button="true"
             href=""
             onClick={undefined}
             type="submit"
@@ -1099,9 +1103,7 @@ Array [
 ]
 `;
 
-exports[
-  `renders <UserScript expanded create formOpen /> without throwing 1`
-] = `
+exports[`renders <UserScript expanded create formOpen /> without throwing 1`] = `
 Array [
   .c3 {
   font-size: 80%;
@@ -1473,6 +1475,7 @@ Array [
         >
             <button
                 className="c2 c3 c4"
+                data-ui-button="true"
                 href=""
                 type="submit"
             >
@@ -1864,6 +1867,7 @@ Array [
         >
             <button
                 className="c2 c3 c4"
+                data-ui-button="true"
                 href=""
                 type="submit"
             >
@@ -1883,9 +1887,7 @@ Array [
 ]
 `;
 
-exports[
-  `renders <UserScript expanded edit formOpen script /> without throwing 1`
-] = `
+exports[`renders <UserScript expanded edit formOpen script /> without throwing 1`] = `
 Array [
   .c3 {
   font-size: 80%;
@@ -2257,6 +2259,7 @@ Array [
         >
             <button
                 className="c2 c3 c4"
+                data-ui-button="true"
                 href=""
                 type="submit"
             >
@@ -2601,6 +2604,7 @@ Array [
 >
     <button
         className="c1 c2 c3"
+        data-ui-button="true"
         href=""
         onClick={undefined}
         type="button"

@@ -4292,6 +4292,34 @@ exports[`renders <Item /> without throwing 1`] = `
   padding: 0rem;
 }
 
+.c14 {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c19 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c21 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4318,16 +4346,6 @@ exports[`renders <Item /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c14 {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background-color: rgb(0,152,88);
-  display: inline-block;
-  margin-right: 0rem;
-  margin-left: 0rem;
 }
 
 .c10 {
@@ -4523,24 +4541,6 @@ exports[`renders <Item /> without throwing 1`] = `
 
 .c2:last-child td {
   border-bottom-width: 0.0625rem;
-}
-
-.c19 {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .c11 {
@@ -4681,6 +4681,11 @@ exports[`renders <Item /> without throwing 1`] = `
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
+          style={
+            Object {
+              "display": "inline-block",
+            }
+          }
           tag="div"
         >
           <div
@@ -4806,6 +4811,34 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   padding: 0rem;
 }
 
+.c14 {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: rgb(59,70,204);
+  display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c19 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c21 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4832,16 +4865,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c14 {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background-color: rgb(59,70,204);
-  display: inline-block;
-  margin-right: 0rem;
-  margin-left: 0rem;
 }
 
 .c10 {
@@ -5037,24 +5060,6 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
 
 .c2:last-child td {
   border-bottom-width: 0.0625rem;
-}
-
-.c19 {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .c11 {
@@ -5197,6 +5202,11 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
+          style={
+            Object {
+              "display": "inline-block",
+            }
+          }
           tag="div"
         >
           <div
@@ -5322,6 +5332,34 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   padding: 0rem;
 }
 
+.c14 {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c19 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .c21 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5348,16 +5386,6 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c14 {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background-color: rgb(0,152,88);
-  display: inline-block;
-  margin-right: 0rem;
-  margin-left: 0rem;
 }
 
 .c10 {
@@ -5555,24 +5583,6 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c19 {
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .c11 {
   color: rgba(73,73,73,1);
   -webkit-text-decoration: none;
@@ -5711,6 +5721,11 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
+          style={
+            Object {
+              "display": "inline-block",
+            }
+          }
           tag="div"
         >
           <div

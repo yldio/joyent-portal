@@ -728,9 +728,7 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
 </div>
 `;
 
-exports[
-  `renders <Summary starting stopping rebooting removing /> without throwing 1`
-] = `
+exports[`renders <Summary starting stopping rebooting removing /> without throwing 1`] = `
 .c2 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
@@ -896,9 +894,7 @@ exports[
 </div>
 `;
 
-exports[
-  `renders <Summary starting stopping rebooting removing /> without throwing 2`
-] = `
+exports[`renders <Summary starting stopping rebooting removing /> without throwing 2`] = `
 .c9 {
   margin-top: 0.75rem;
   margin-bottom: 1.125rem;
@@ -1830,6 +1826,16 @@ exports[
   max-height: 1.125rem;
 }
 
+.c14 {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 0rem;
+}
+
 .c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -1997,16 +2003,6 @@ exports[
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
-}
-
-.c14 {
-  width: 0.9375rem;
-  height: 0.9375rem;
-  border-radius: 50%;
-  background-color: rgb(0,152,88);
-  display: inline-block;
-  margin-right: 0.375rem;
-  margin-left: 0rem;
 }
 
 .c3 {
@@ -2488,6 +2484,7 @@ exports[
               >
                 <a
                   className="c19 c20 c21 c22"
+                  data-ui-button="true"
                   href="http://localhost/images/~create/undefined"
                   icon={true}
                   rel="noopener noreferrer"
@@ -2522,6 +2519,7 @@ exports[
                 >
                   <button
                     className="c24 c20 c25"
+                    data-ui-button="true"
                     disabled={true}
                     href=""
                     icon={true}
@@ -2554,6 +2552,7 @@ exports[
                 >
                   <button
                     className="c26 c20 c25"
+                    data-ui-button="true"
                     disabled={true}
                     href=""
                     icon={true}
@@ -2589,6 +2588,7 @@ exports[
                 >
                   <button
                     className="c27 c20 c25"
+                    data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2621,6 +2621,7 @@ exports[
                 >
                   <button
                     className="c28 c20 c25"
+                    data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2656,6 +2657,7 @@ exports[
                 >
                   <button
                     className="c27 c20 c25"
+                    data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2704,6 +2706,7 @@ exports[
                 >
                   <button
                     className="c28 c20 c25"
+                    data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2759,6 +2762,7 @@ exports[
                 >
                   <button
                     className="c30 c20 c25"
+                    data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2791,6 +2795,7 @@ exports[
                 >
                   <button
                     className="c31 c20 c25"
+                    data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
@@ -2856,7 +2861,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -2907,7 +2916,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -2958,7 +2971,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -3009,7 +3026,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -3060,7 +3081,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -3111,7 +3136,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -3162,7 +3191,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -3213,7 +3246,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -3264,7 +3301,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -3297,9 +3338,7 @@ exports[
 </div>
 `;
 
-exports[
-  `renders <Summary starting stopping rebooting removing /> without throwing 3`
-] = `
+exports[`renders <Summary starting stopping rebooting removing /> without throwing 3`] = `
 .c9 {
   margin-top: 0.75rem;
   margin-bottom: 1.125rem;
@@ -4231,6 +4270,16 @@ exports[
   max-height: 1.125rem;
 }
 
+.c14 {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 0rem;
+}
+
 .c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -4398,16 +4447,6 @@ exports[
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
-}
-
-.c14 {
-  width: 0.9375rem;
-  height: 0.9375rem;
-  border-radius: 50%;
-  background-color: rgb(0,152,88);
-  display: inline-block;
-  margin-right: 0.375rem;
-  margin-left: 0rem;
 }
 
 .c3 {
@@ -4889,6 +4928,7 @@ exports[
               >
                 <a
                   className="c19 c20 c21 c22"
+                  data-ui-button="true"
                   href="http://localhost/images/~create/undefined"
                   icon={true}
                   rel="noopener noreferrer"
@@ -4923,6 +4963,7 @@ exports[
                 >
                   <button
                     className="c24 c20 c25"
+                    data-ui-button="true"
                     disabled={true}
                     href=""
                     icon={true}
@@ -4955,6 +4996,7 @@ exports[
                 >
                   <button
                     className="c26 c20 c25"
+                    data-ui-button="true"
                     disabled={true}
                     href=""
                     icon={true}
@@ -4990,6 +5032,7 @@ exports[
                 >
                   <button
                     className="c27 c20 c25"
+                    data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
@@ -5022,6 +5065,7 @@ exports[
                 >
                   <button
                     className="c28 c20 c25"
+                    data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
@@ -5057,6 +5101,7 @@ exports[
                 >
                   <button
                     className="c27 c20 c25"
+                    data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
@@ -5105,6 +5150,7 @@ exports[
                 >
                   <button
                     className="c28 c20 c25"
+                    data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
@@ -5160,6 +5206,7 @@ exports[
                 >
                   <button
                     className="c30 c20 c25"
+                    data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
@@ -5192,6 +5239,7 @@ exports[
                 >
                   <button
                     className="c31 c20 c25"
+                    data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
@@ -5257,7 +5305,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -5308,7 +5360,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -5359,7 +5415,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -5410,7 +5470,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -5461,7 +5525,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -5512,7 +5580,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -5563,7 +5635,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -5614,7 +5690,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"
@@ -5665,7 +5745,11 @@ exports[
                     onClick={undefined}
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
-                    tag={false}
+                    style={
+                      Object {
+                        "display": "inline-block",
+                      }
+                    }
                   >
                     <svg
                       className="c38"

@@ -72,7 +72,7 @@ const BaseButton = props => {
   );
 
   return (
-    <View {...props} href={href}>
+    <View {...props} data-ui-button="true" href={href}>
       {children}
     </View>
   );

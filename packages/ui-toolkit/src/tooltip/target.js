@@ -8,7 +8,7 @@ export default class Target extends Component {
   };
 
   render = () => {
-    const { children, tag = false, ...rest } = this.props;
+    const { children, ...rest } = this.props;
 
     const {
       setRef,
@@ -34,12 +34,12 @@ export default class Target extends Component {
 
     return (
       <BaseTarget
+        {...rest}
         innerRef={setRef('target')}
         onClick={onClick}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        tag={tag}
-        {...rest}
+        style={{ display: 'inline-block' }}
       >
         {children}
       </BaseTarget>
