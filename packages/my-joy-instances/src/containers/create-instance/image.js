@@ -216,18 +216,41 @@ export default compose(
             isVm
           });
 
+          const versions = acc[index].versions.concat([version]);
+
           acc[index] = {
             ...acc[index],
-            versions: acc[index].versions.concat([version])
+            versions
           };
 
           return acc;
         }, [])
-        .map(({ versions, ...img }) => ({
-          ...img,
-          active: Boolean(find(versions, ['id', image])),
-          versions: reverse(sortBy(versions, ['name']))
-        }));
+        .map(({ versions, ...img }) => {
+          const v = reverse(sortBy(versions, ['name']));
+
+          const onlyHighestVersion = v.reduce((acc, version) => {
+            let sameName = {};
+
+            // if the image with the same name exists check if the version of this one is bigger
+            // if so use this one instead
+            if (find(acc, ['name', version.name])) {
+              if (parseFloat(version.version) > parseFloat(sameName.version)) {
+                acc.push(version);
+                sameName = version;
+              }
+            } else {
+              acc.push(version);
+            }
+
+            return acc;
+          }, []);
+
+          return {
+            ...img,
+            active: Boolean(find(versions, ['id', image])),
+            versions: onlyHighestVersion
+          };
+        });
 
       const selected = find(images, ['id', image]) || {};
 
