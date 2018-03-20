@@ -36,6 +36,8 @@ const GroupIcons = {
   COMPUTE: <CpuIcon fill="#8043DC" />
 };
 
+const fourDecimals = n => parseFloat(Math.round(n * 10000) / 10000).toFixed(4);
+
 const VerticalDivider = styled.div`
   width: ${remcalc(1)};
   background: ${props => props.theme.grey};
@@ -166,7 +168,7 @@ export const Package = ({
       </TableTd>
     )}
     <TableTd right bold={sortBy === 'price'} selected={selected}>
-      {price}
+      {fourDecimals(price)}
     </TableTd>
   </TableTrActionable>
 );
