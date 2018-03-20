@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import remcalc from 'remcalc';
 
 const List = styled.ul`
+  background: ${props => props.theme.background};
   display: flex;
   list-style: none;
   padding: ${remcalc(12)} ${remcalc(18)};

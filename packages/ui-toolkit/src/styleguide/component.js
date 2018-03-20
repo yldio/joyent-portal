@@ -1,24 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled, { keyframes } from 'styled-components';
 import remcalc from 'remcalc';
-import { Card, H2, P } from '../';
+import { P, H4 } from '../';
 
 const chevron =
   'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJ0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTsiIGNsYXNzPSJiYXNlbGluZS1idFRncEsgaGltUHhaIj48cGF0aCBmaWxsPSJyZ2JhKDczLCA3MywgNzMsIDEpIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik05IDEuMzg2TDcuNjQ4IDAgNC41IDMuMjI4IDEuMzUyIDAgMCAxLjM4NiA0LjUgNnoiPjwvcGF0aD48L3N2Zz4=';
 
-const CardStyled = styled(Card)`
-  margin-bottom: ${remcalc(36)};
-`;
-
-const Header = styled.header`
-  background: ${props => props.theme.primary};
-  padding: ${remcalc(48)} ${remcalc(60)};
-  position: relative;
-`;
 
 const Main = styled.div`
-  padding: ${remcalc(48)} ${remcalc(60)};
-
   h4[class*='rsg--heading'] {
     margin: 0;
     line-height: ${remcalc(26)};
@@ -102,17 +91,17 @@ export default ({
   tabBody
 }) => {
   return (
-    <CardStyled id={name.toLowerCase()}>
-      <Header>
-        <H2 white>{heading.props.children}</H2>
+    <Fragment>
+      <header>
+        <H4 white>{heading.props.children}</H4>
         {description &&
           description.props && <P white>{description.props.text}</P>}
-      </Header>
+      </header>
       <Main>
         <Props>{tabButtons}</Props>
         <Wrapper>{tabBody}</Wrapper>
         <Content>{examples}</Content>
       </Main>
-    </CardStyled>
+    </Fragment>
   );
 };

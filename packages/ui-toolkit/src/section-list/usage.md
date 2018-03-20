@@ -21,16 +21,7 @@ const { default: SectionList } = require('./');
     <Anchor>User Scripts</Anchor>
   </SectionListItem>
   <SectionListItem>
-    <Anchor>Networks</Anchor>
-  </SectionListItem>
-  <SectionListItem>
-    <Anchor>Firewall</Anchor>
-  </SectionListItem>
-  <SectionListItem>
     <Anchor>Affinity</Anchor>
-  </SectionListItem>
-  <SectionListItem>
-    <Anchor>Snapshots</Anchor>
   </SectionListItem>
 </SectionList>;
 ```
