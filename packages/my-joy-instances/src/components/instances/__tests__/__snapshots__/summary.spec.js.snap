@@ -869,6 +869,15 @@ exports[`renders <Summary /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c13 {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 0rem;
+}
+
 .c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -920,15 +929,6 @@ exports[`renders <Summary /> without throwing 1`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
-}
-
-.c13 {
-  width: 0.9375rem;
-  height: 0.9375rem;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 0.375rem;
-  margin-left: 0rem;
 }
 
 .c2 {
@@ -1437,6 +1437,7 @@ exports[`renders <Summary /> without throwing 1`] = `
             >
               <a
                 className="c18 c19 c20 c21"
+                data-ui-button="true"
                 href="http://localhost/images/~create/undefined"
                 icon={true}
                 rel="noopener noreferrer"
@@ -1471,6 +1472,7 @@ exports[`renders <Summary /> without throwing 1`] = `
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -1503,6 +1505,7 @@ exports[`renders <Summary /> without throwing 1`] = `
               >
                 <button
                   className="c25 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -1538,6 +1541,7 @@ exports[`renders <Summary /> without throwing 1`] = `
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -1570,6 +1574,7 @@ exports[`renders <Summary /> without throwing 1`] = `
               >
                 <button
                   className="c25 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -1605,6 +1610,7 @@ exports[`renders <Summary /> without throwing 1`] = `
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -1653,6 +1659,7 @@ exports[`renders <Summary /> without throwing 1`] = `
               >
                 <button
                   className="c25 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -1708,6 +1715,7 @@ exports[`renders <Summary /> without throwing 1`] = `
               >
                 <button
                   className="c27 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -1740,6 +1748,7 @@ exports[`renders <Summary /> without throwing 1`] = `
               >
                 <button
                   className="c28 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -1805,7 +1814,11 @@ exports[`renders <Summary /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c35"
@@ -1856,7 +1869,11 @@ exports[`renders <Summary /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c35"
@@ -1907,7 +1924,11 @@ exports[`renders <Summary /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c35"
@@ -1958,7 +1979,11 @@ exports[`renders <Summary /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c35"
@@ -3029,6 +3054,16 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c13 {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 0rem;
+}
+
 .c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -3080,16 +3115,6 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
-}
-
-.c13 {
-  width: 0.9375rem;
-  height: 0.9375rem;
-  border-radius: 50%;
-  background-color: rgb(0,152,88);
-  display: inline-block;
-  margin-right: 0.375rem;
-  margin-left: 0rem;
 }
 
 .c2 {
@@ -3543,6 +3568,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
             >
               <a
                 className="c18 c19 c20 c21"
+                data-ui-button="true"
                 href="http://localhost/images/~create/undefined"
                 icon={true}
                 rel="noopener noreferrer"
@@ -3577,6 +3603,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -3609,6 +3636,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
               >
                 <button
                   className="c25 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -3644,6 +3672,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
               >
                 <button
                   className="c26 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -3676,6 +3705,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
               >
                 <button
                   className="c27 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -3711,6 +3741,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
               >
                 <button
                   className="c26 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -3759,6 +3790,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
               >
                 <button
                   className="c27 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -3814,6 +3846,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
               >
                 <button
                   className="c29 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -3846,6 +3879,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
               >
                 <button
                   className="c30 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -3911,7 +3945,11 @@ exports[`renders <Summary instance /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -3962,7 +4000,11 @@ exports[`renders <Summary instance /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -4013,7 +4055,11 @@ exports[`renders <Summary instance /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -4064,7 +4110,11 @@ exports[`renders <Summary instance /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -4115,7 +4165,11 @@ exports[`renders <Summary instance /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -4166,7 +4220,11 @@ exports[`renders <Summary instance /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -4217,7 +4275,11 @@ exports[`renders <Summary instance /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -4268,7 +4330,11 @@ exports[`renders <Summary instance /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -4319,7 +4385,11 @@ exports[`renders <Summary instance /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -5390,6 +5460,16 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   max-height: 1.125rem;
 }
 
+.c13 {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 0rem;
+}
+
 .c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -5441,16 +5521,6 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
-}
-
-.c13 {
-  width: 0.9375rem;
-  height: 0.9375rem;
-  border-radius: 50%;
-  background-color: rgb(0,152,88);
-  display: inline-block;
-  margin-right: 0.375rem;
-  margin-left: 0rem;
 }
 
 .c2 {
@@ -5904,6 +5974,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
             >
               <a
                 className="c18 c19 c20 c21"
+                data-ui-button="true"
                 href="http://localhost/images/~create/undefined"
                 icon={true}
                 rel="noopener noreferrer"
@@ -5938,6 +6009,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -5970,6 +6042,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
               >
                 <button
                   className="c25 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -6005,6 +6078,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
               >
                 <button
                   className="c26 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -6037,6 +6111,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
               >
                 <button
                   className="c27 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -6072,6 +6147,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
               >
                 <button
                   className="c26 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -6120,6 +6196,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
               >
                 <button
                   className="c27 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -6175,6 +6252,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
               >
                 <button
                   className="c29 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -6207,6 +6285,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
               >
                 <button
                   className="c30 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -6272,7 +6351,11 @@ exports[`renders <Summary instance /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -6323,7 +6406,11 @@ exports[`renders <Summary instance /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -6374,7 +6461,11 @@ exports[`renders <Summary instance /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -6425,7 +6516,11 @@ exports[`renders <Summary instance /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -6476,7 +6571,11 @@ exports[`renders <Summary instance /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -6527,7 +6626,11 @@ exports[`renders <Summary instance /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -6578,7 +6681,11 @@ exports[`renders <Summary instance /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -6629,7 +6736,11 @@ exports[`renders <Summary instance /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -6680,7 +6791,11 @@ exports[`renders <Summary instance /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -6712,9 +6827,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 </div>
 `;
 
-exports[
-  `renders <Summary starting stopping rebooting removing /> without throwing 1`
-] = `
+exports[`renders <Summary starting stopping rebooting removing /> without throwing 1`] = `
 .c0 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -7636,6 +7749,15 @@ exports[
   max-height: 1.125rem;
 }
 
+.c13 {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 0rem;
+}
+
 .c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -7687,15 +7809,6 @@ exports[
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
-}
-
-.c13 {
-  width: 0.9375rem;
-  height: 0.9375rem;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 0.375rem;
-  margin-left: 0rem;
 }
 
 .c2 {
@@ -8204,6 +8317,7 @@ exports[
             >
               <a
                 className="c18 c19 c20 c21"
+                data-ui-button="true"
                 href="http://localhost/images/~create/undefined"
                 icon={true}
                 rel="noopener noreferrer"
@@ -8238,6 +8352,7 @@ exports[
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -8282,6 +8397,7 @@ exports[
               >
                 <button
                   className="c29 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -8326,6 +8442,7 @@ exports[
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -8370,6 +8487,7 @@ exports[
               >
                 <button
                   className="c29 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -8414,6 +8532,7 @@ exports[
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -8458,6 +8577,7 @@ exports[
               >
                 <button
                   className="c29 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -8506,6 +8626,7 @@ exports[
               >
                 <button
                   className="c31 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -8550,6 +8671,7 @@ exports[
               >
                 <button
                   className="c32 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -8624,7 +8746,11 @@ exports[
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c39"
@@ -8675,7 +8801,11 @@ exports[
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c39"
@@ -8726,7 +8856,11 @@ exports[
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c39"
@@ -8777,7 +8911,11 @@ exports[
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c39"
@@ -9848,6 +9986,16 @@ exports[`renders <Summary state /> without throwing 1`] = `
   max-height: 1.125rem;
 }
 
+.c13 {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  background-color: rgb(0,152,88);
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 0rem;
+}
+
 .c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -9899,16 +10047,6 @@ exports[`renders <Summary state /> without throwing 1`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
-}
-
-.c13 {
-  width: 0.9375rem;
-  height: 0.9375rem;
-  border-radius: 50%;
-  background-color: rgb(0,152,88);
-  display: inline-block;
-  margin-right: 0.375rem;
-  margin-left: 0rem;
 }
 
 .c2 {
@@ -10417,6 +10555,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
             >
               <a
                 className="c18 c19 c20 c21"
+                data-ui-button="true"
                 href="http://localhost/images/~create/undefined"
                 icon={true}
                 rel="noopener noreferrer"
@@ -10451,6 +10590,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -10483,6 +10623,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
               >
                 <button
                   className="c25 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -10518,6 +10659,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
               >
                 <button
                   className="c26 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -10550,6 +10692,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
               >
                 <button
                   className="c27 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -10585,6 +10728,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
               >
                 <button
                   className="c26 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -10633,6 +10777,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
               >
                 <button
                   className="c27 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -10688,6 +10833,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
               >
                 <button
                   className="c29 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -10720,6 +10866,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
               >
                 <button
                   className="c30 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -10785,7 +10932,11 @@ exports[`renders <Summary state /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -10836,7 +10987,11 @@ exports[`renders <Summary state /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -10887,7 +11042,11 @@ exports[`renders <Summary state /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -10938,7 +11097,11 @@ exports[`renders <Summary state /> without throwing 1`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -12009,6 +12172,16 @@ exports[`renders <Summary state /> without throwing 2`] = `
   max-height: 1.125rem;
 }
 
+.c13 {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  background-color: rgb(216,216,216);
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 0rem;
+}
+
 .c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -12060,16 +12233,6 @@ exports[`renders <Summary state /> without throwing 2`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
-}
-
-.c13 {
-  width: 0.9375rem;
-  height: 0.9375rem;
-  border-radius: 50%;
-  background-color: rgb(216,216,216);
-  display: inline-block;
-  margin-right: 0.375rem;
-  margin-left: 0rem;
 }
 
 .c2 {
@@ -12578,6 +12741,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
             >
               <a
                 className="c18 c19 c20 c21"
+                data-ui-button="true"
                 href="http://localhost/images/~create/undefined"
                 icon={true}
                 rel="noopener noreferrer"
@@ -12612,6 +12776,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -12644,6 +12809,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
               >
                 <button
                   className="c25 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -12679,6 +12845,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
               >
                 <button
                   className="c26 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -12711,6 +12878,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
               >
                 <button
                   className="c27 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -12746,6 +12914,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
               >
                 <button
                   className="c26 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -12794,6 +12963,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
               >
                 <button
                   className="c27 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -12849,6 +13019,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
               >
                 <button
                   className="c29 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -12881,6 +13052,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
               >
                 <button
                   className="c30 c19 c24"
+                  data-ui-button="true"
                   disabled={false}
                   href=""
                   icon={true}
@@ -12946,7 +13118,11 @@ exports[`renders <Summary state /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -12997,7 +13173,11 @@ exports[`renders <Summary state /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -13048,7 +13228,11 @@ exports[`renders <Summary state /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -13099,7 +13283,11 @@ exports[`renders <Summary state /> without throwing 2`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c37"
@@ -14000,6 +14188,16 @@ exports[`renders <Summary state /> without throwing 3`] = `
   max-height: 1.125rem;
 }
 
+.c13 {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 50%;
+  background-color: rgb(59,70,204);
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 0rem;
+}
+
 .c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -14051,16 +14249,6 @@ exports[`renders <Summary state /> without throwing 3`] = `
   background-color: rgb(216,216,216);
   margin: 0;
   height: 0.0625rem;
-}
-
-.c13 {
-  width: 0.9375rem;
-  height: 0.9375rem;
-  border-radius: 50%;
-  background-color: rgb(59,70,204);
-  display: inline-block;
-  margin-right: 0.375rem;
-  margin-left: 0rem;
 }
 
 .c2 {
@@ -14569,6 +14757,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
             >
               <a
                 className="c18 c19 c20 c21"
+                data-ui-button="true"
                 href="http://localhost/images/~create/undefined"
                 icon={true}
                 rel="noopener noreferrer"
@@ -14603,6 +14792,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -14635,6 +14825,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
               >
                 <button
                   className="c25 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -14670,6 +14861,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -14702,6 +14894,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
               >
                 <button
                   className="c25 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -14737,6 +14930,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
               >
                 <button
                   className="c23 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -14785,6 +14979,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
               >
                 <button
                   className="c25 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -14840,6 +15035,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
               >
                 <button
                   className="c27 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -14872,6 +15068,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
               >
                 <button
                   className="c28 c19 c24"
+                  data-ui-button="true"
                   disabled={true}
                   href=""
                   icon={true}
@@ -14937,7 +15134,11 @@ exports[`renders <Summary state /> without throwing 3`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c35"
@@ -14988,7 +15189,11 @@ exports[`renders <Summary state /> without throwing 3`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c35"
@@ -15039,7 +15244,11 @@ exports[`renders <Summary state /> without throwing 3`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c35"
@@ -15090,7 +15299,11 @@ exports[`renders <Summary state /> without throwing 3`] = `
                   onClick={undefined}
                   onMouseEnter={[Function]}
                   onMouseLeave={[Function]}
-                  tag={false}
+                  style={
+                    Object {
+                      "display": "inline-block",
+                    }
+                  }
                 >
                   <svg
                     className="c35"
