@@ -86,13 +86,9 @@ const StyledSelect = select.extend`
     height: ${remcalc(24)};
     appearance: none;
     min-height: 0;
-    color:  ${props => props.theme.grey};
     margin: 0 ${remcalc(6)};
-  `};
-
-  ${is('embedded', 'touched')`
     color: ${props => props.theme.text};
-  `}
+  `};
 
   ${is('wrapped')`
     margin: 0;
