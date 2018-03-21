@@ -45,6 +45,11 @@ const A = styled(Anchor)`
   color: ${props => props.theme.text};
   text-decoration: none;
   font-weight: ${props => props.theme.font.weight.semibold};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
 `;
 
 const ItemAnchor = styled(Anchor)`
@@ -54,9 +59,7 @@ const ItemAnchor = styled(Anchor)`
 `;
 
 const Actions = styled(Flex)`
-  width: ${remcalc(48)};
   height: ${remcalc(48)};
-  min-width: ${remcalc(48)};
 `;
 
 export const FetchingItem = () => (
@@ -88,7 +91,7 @@ export const Item = ({
       </FormGroup>
     </TableTd>
     <TableTd middle left>
-      <A to={`/instances/${name}`} component={Link}>
+      <A to={`/instances/${id}`} component={Link}>
         {name}
       </A>
     </TableTd>
@@ -129,7 +132,7 @@ export const Item = ({
             <PopoverDivider />
             <PopoverItem disabled={false} onClick={onCreateImage}>
               <ItemAnchor
-                href={`${GLOBAL.origin}/images/~create/${name}`}
+                href={`${GLOBAL.origin}/images/~create/${id}`}
                 target="__blank"
                 rel="noopener noreferrer"
               >

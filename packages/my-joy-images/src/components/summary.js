@@ -117,7 +117,7 @@ export default withTheme(({ theme = {}, onRemove, removing, ...image }) => (
                   <Button
                     type="button"
                     href={`${GLOBAL.origin}/instances/~create/?image=${
-                      image.name
+                      image.id
                     }`}
                     target="__blank"
                     rel="noopener noreferrer"

@@ -169,9 +169,9 @@ export default compose(
     })
   ),
   graphql(GetImages, {
-    options: () => ({
+    options: ({ query }) => ({
       ssr: false,
-      variables: { public: true }
+      variables: { public: !query.image }
     }),
     props: ({ ownProps, data }) => {
       const { image = '', query } = ownProps;
@@ -180,7 +180,7 @@ export default compose(
       if (query.image) {
         return {
           loading,
-          image: find(images, ['name', query.image], {}),
+          image: find(images, ['id', query.image], {}),
           hardcoded: true
         };
       }

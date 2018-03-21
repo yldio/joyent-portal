@@ -3526,12 +3526,15 @@ exports[`renders <List instances /> without throwing 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
 }
 
 .c42 {
-  width: 3rem;
   height: 3rem;
-  min-width: 3rem;
 }
 
 @media only screen and (min-width:48em) {
@@ -3800,7 +3803,7 @@ exports[`renders <List instances /> without throwing 1`] = `
           >
             <div
               className="c19 baseline-jVaZNU c19 c4"
-              name=""
+              name="2252839a"
               role="group"
               style={undefined}
             >
@@ -3840,9 +3843,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             <a
               className="c34 c35 c36"
               to="/instances/2252839a"
-            >
-              2252839a
-            </a>
+            />
           </td>
           <td
             className="c33"
@@ -3875,7 +3876,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             selected={undefined}
           >
             <code>
-              
+              2252839
             </code>
           </td>
           <td
@@ -3936,7 +3937,7 @@ exports[`renders <List instances /> without throwing 1`] = `
           >
             <div
               className="c19 baseline-jVaZNU c19 c4"
-              name=""
+              name="f1bd1730"
               role="group"
               style={undefined}
             >
@@ -3976,9 +3977,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             <a
               className="c34 c35 c36"
               to="/instances/f1bd1730"
-            >
-              f1bd1730
-            </a>
+            />
           </td>
           <td
             className="c33"
@@ -4011,7 +4010,7 @@ exports[`renders <List instances /> without throwing 1`] = `
             selected={undefined}
           >
             <code>
-              
+              f1bd173
             </code>
           </td>
           <td
@@ -5731,12 +5730,15 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
 }
 
 .c42 {
-  width: 3rem;
   height: 3rem;
-  min-width: 3rem;
 }
 
 @media only screen and (min-width:48em) {
@@ -6105,7 +6107,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <a
               className="c34 c35 c36"
-              to="/instances/2252839a"
+              to="/instances/2252839a-e698-ceec-afac-9549ad0c6624"
             >
               2252839a
             </a>
@@ -6241,7 +6243,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <a
               className="c34 c35 c36"
-              to="/instances/f1bd1730"
+              to="/instances/f1bd1730-e8a6-4956-e738-d8e85cc6aa04"
             >
               f1bd1730
             </a>
@@ -8325,12 +8327,15 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
 }
 
 .c42 {
-  width: 3rem;
   height: 3rem;
-  min-width: 3rem;
 }
 
 @media only screen and (min-width:48em) {
@@ -8699,7 +8704,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <a
               className="c34 c35 c36"
-              to="/instances/2252839a"
+              to="/instances/2252839a-e698-ceec-afac-9549ad0c6624"
             >
               2252839a
             </a>
@@ -8835,7 +8840,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <a
               className="c34 c35 c36"
-              to="/instances/f1bd1730"
+              to="/instances/f1bd1730-e8a6-4956-e738-d8e85cc6aa04"
             >
               f1bd1730
             </a>
@@ -11132,12 +11137,15 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
 }
 
 .c42 {
-  width: 3rem;
   height: 3rem;
-  min-width: 3rem;
 }
 
 @media only screen and (min-width:48em) {
@@ -11506,7 +11514,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <a
               className="c34 c35 c36"
-              to="/instances/2252839a"
+              to="/instances/2252839a-e698-ceec-afac-9549ad0c6624"
             >
               2252839a
             </a>
@@ -11642,7 +11650,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <a
               className="c34 c35 c36"
-              to="/instances/f1bd1730"
+              to="/instances/f1bd1730-e8a6-4956-e738-d8e85cc6aa04"
             >
               f1bd1730
             </a>

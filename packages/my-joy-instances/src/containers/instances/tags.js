@@ -152,14 +152,11 @@ export default compose(
       ssr: false,
       pollInterval: 1000,
       variables: {
-        name: get(match, 'params.instance')
+        id: get(match, 'params.instance')
       }
     }),
-    props: ({ data: { loading, error, variables, refetch, ...rest } }) => {
-      const { name } = variables;
-
-      const instance = find(get(rest, 'machines.results', []), ['name', name]);
-      const tags = get(instance, 'tags', []).filter(
+    props: ({ data: { loading, error, machine, refetch, ...rest } }) => {
+      const tags = get(machine, 'tags', []).filter(
         ({ name = '' }) => !/^triton\.cns\./i.test(name)
       );
 
@@ -169,7 +166,7 @@ export default compose(
 
       return {
         tags,
-        instance,
+        instance: machine,
         index,
         loading,
         error,

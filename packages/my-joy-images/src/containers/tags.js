@@ -129,19 +129,12 @@ export default compose(
       fetchPolicy: 'network-only',
       pollInterval: 1000,
       variables: {
-        name: get(match, 'params.image')
+        id: get(match, 'params.image')
       }
     }),
     props: ({ data }) => {
-      const {
-        loading = false,
-        error = null,
-        variables,
-        refetch,
-        ...rest
-      } = data;
+      const { loading = false, error = null, image, refetch, ...rest } = data;
 
-      const image = find(get(rest, 'images', []), ['name', variables.name]);
       const tags = get(image || {}, 'tags', []);
       const index = new Fuse(tags, {
         keys: ['name', 'value']

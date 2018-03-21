@@ -1,25 +1,23 @@
-query instance($name: String) {
-  machines(name: $name) {
-    results {
+query instance($id: ID) {
+  machine(id: $id) {
+    id
+    state
+    brand
+    name
+    created
+    updated
+    primary_ip
+    ips
+    docker
+    dns_names
+    compute_node
+    image {
       id
-      state
-      brand
       name
-      created
-      updated
-      primary_ip
-      ips
-      docker
-      dns_names
-      compute_node
-      image {
-        id
-        name
-      }
-      package {
-        id
-        name
-      }
+    }
+    package {
+      id
+      name
     }
   }
 }

@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Padding } from 'styled-components-spacing';
+import remcalc from 'remcalc';
 
 import Container from '../layout/view-container';
 
 const BreadcrumContianer = styled(Container)`
-  border-bottom: 1px solid ${props => props.theme.grey};
+  border-bottom: ${remcalc(1)} solid ${props => props.theme.grey};
 `;
 
 /**

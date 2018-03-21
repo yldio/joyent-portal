@@ -44,11 +44,11 @@ it('renders <List error /> without throwing', () => {
 it('renders <List instances /> without throwing', () => {
   const instances = [
     {
-      name: '2252839a',
+      id: '2252839a',
       status: 'RUNNING'
     },
     {
-      name: 'f1bd1730',
+      id: 'f1bd1730',
       status: 'STOPPED'
     }
   ];

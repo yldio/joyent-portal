@@ -1,8 +1,6 @@
-query instance($name: String) {
-  machines(name: $name) {
-    results {
-      id
-      name
-    }
+query instance($id: ID) {
+  machine(id: $id) {
+    id
+    name
   }
 }

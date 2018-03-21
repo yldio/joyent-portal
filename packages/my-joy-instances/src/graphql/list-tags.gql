@@ -1,13 +1,11 @@
-query instance($name: String!) {
-  machines(name: $name) {
-    results {
+query instance($id: ID!) {
+  machine(id: $id) {
+    id
+    name
+    tags {
       id
       name
-      tags {
-        id
-        name
-        value
-      }
+      value
     }
   }
 }

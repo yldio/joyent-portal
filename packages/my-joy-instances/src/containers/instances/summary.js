@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { set } from 'react-redux-values';
 import { Margin } from 'styled-components-spacing';
 import intercept from 'apr-intercept';
-import find from 'lodash.find';
 import isArray from 'lodash.isarray';
 import some from 'lodash.some';
 import isInteger from 'lodash.isinteger';
@@ -142,17 +141,12 @@ export default compose(
       ssr: false,
       pollInterval: 1000,
       variables: {
-        name: get(match, 'params.instance')
+        id: get(match, 'params.instance')
       }
     }),
-    props: ({ data: { loading, error, variables, ...rest } }) => {
-      let instance = find(get(rest, 'machines.results', []), [
-        'name',
-        variables.name
-      ]);
-
-      if (instance) {
-        const { ips } = instance;
+    props: ({ data: { loading, error, machine, ...rest } }) => {
+      if (machine) {
+        const { ips } = machine;
 
         const grupedIps = ips
           .map(ip => ({ ip, openness: isPrivate(ip) ? 'private' : 'public' }))
@@ -164,11 +158,11 @@ export default compose(
             {}
           );
 
-        instance = Object.assign({}, instance, { ips: grupedIps });
+        machine = Object.assign({}, machine, { ips: grupedIps });
       }
 
       return {
-        instance,
+        instance: machine,
         loading,
         loadingError: error
       };

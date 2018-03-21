@@ -8,7 +8,6 @@ import { SubmissionError } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
 import remcalc from 'remcalc';
 import isBoolean from 'lodash.isboolean';
-import find from 'lodash.find';
 import get from 'lodash.get';
 
 import {
@@ -138,22 +137,20 @@ export default compose(
       ssr: false,
       variables: {
         fetchPolicy: 'network-only',
-        name: get(match, 'params.instance')
+        id: get(match, 'params.instance')
       }
     }),
     props: ({ data }) => {
-      const { loading, error, variables, refetch, ...rest } = data;
-      const { name } = variables;
+      const { loading, error, machine } = data;
 
-      const instance = find(get(rest, 'machines.results', []), ['name', name]);
-      const enabled = get(instance, 'firewall_enabled');
-      const rules = get(instance, 'firewall_rules', []);
+      const enabled = get(machine, 'firewall_enabled');
+      const rules = get(machine, 'firewall_rules', []);
 
       return {
         enabled,
         defaultRules: rules.filter(({ rule_obj = {} }) => rule_obj.isWildcard),
         tagRules: rules.filter(({ rule_obj = {} }) => rule_obj.tags.length),
-        instance,
+        instance: machine,
         loading,
         loadingError: error
       };
