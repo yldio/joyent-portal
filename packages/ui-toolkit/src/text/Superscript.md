@@ -7,7 +7,7 @@ The default superscript was intially designed to offer supporting information on
 const React = require('react');
 const Sup = require('/').Sup;
 const P = require('/').P;
-const Small = require('/').Small
+const Small = require('/').Small;
 
 const styles = {
   color: '#979797',
@@ -18,12 +18,12 @@ const styles = {
 };
 
 <div>
-    <P>
-        Superscript Example
-        <Sup>Superscript</Sup>
-    </P>
-    <Small style={styles}>Libre Franklin Semi Bold - 8px with 12px leading</Small>
-</div>
+  <P>
+    Superscript Example
+    <Sup>Superscript</Sup>
+  </P>
+  <Small style={styles}>Libre Franklin Semi Bold - 8px with 12px leading</Small>
+</div>;
 ```
 
 #### Alert Superscript
@@ -35,7 +35,7 @@ The Alert variation of superscript is to be used as an excliamation, to announce
 const React = require('react');
 const Sup = require('/').Sup;
 const P = require('/').P;
-const Small = require('/').Small
+const Small = require('/').Small;
 
 const styles = {
   color: '#979797',
@@ -46,12 +46,12 @@ const styles = {
 };
 
 <div>
-    <P>
-        Superscript Example
-        <Sup alert>Alert Superscript</Sup>
-    </P>
-    <Small style={styles}>Libre Franklin Semi Bold - 8px with 12px leading</Small>
-</div>
+  <P>
+    Superscript Example
+    <Sup alert>Alert Superscript</Sup>
+  </P>
+  <Small style={styles}>Libre Franklin Semi Bold - 8px with 12px leading</Small>
+</div>;
 ```
 
 #### Badge Superscript
@@ -63,7 +63,7 @@ The badge variation of superscript is for when a specific element of information
 const React = require('react');
 const Sup = require('/').Sup;
 const P = require('/').P;
-const Small = require('/').Small
+const Small = require('/').Small;
 
 const styles = {
   color: '#979797',
@@ -74,10 +74,10 @@ const styles = {
 };
 
 <div>
-    <P>
-        Superscript Example
-        <Sup badge>SSD</Sup>
-    </P>
-    <Small style={styles}>Libre Franklin Semi Bold - 8px with 12px leading</Small>
-</div>
+  <P>
+    Superscript Example
+    <Sup badge>SSD</Sup>
+  </P>
+  <Small style={styles}>Libre Franklin Semi Bold - 8px with 12px leading</Small>
+</div>;
 ```

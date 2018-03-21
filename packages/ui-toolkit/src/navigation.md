@@ -26,7 +26,7 @@ const { Breadcrumb, BreadcrumbItem, Anchor } = require('./index.js');
 const React = require('react');
 const { Footer } = require('./');
 
-<div style={{position: 'relative', height: 100}}>
+<div style={{ position: 'relative', height: 100 }}>
   <Footer />
-</div>
+</div>;
 ```

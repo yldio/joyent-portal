@@ -30,11 +30,11 @@ const Tag = styled.li`
   flex-grow: 0;
   align-items: center;
 
-  ${is('disabled') `
+  ${is('disabled')`
       background: ${props => props.theme.disabled};
   `};
 
-  ${is('error') `
+  ${is('error')`
       border: ${remcalc(1)} solid ${props => props.theme.red};
   `};
 

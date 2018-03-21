@@ -8,8 +8,11 @@ import { Margin } from 'styled-components-spacing';
 import includes from 'lodash.includes';
 import sortBy from 'lodash.sortby';
 import findIndex from 'lodash.findindex';
-import find from 'lodash.find';
+import groupBy from 'lodash.groupby';
+import values from 'lodash.values';
 import reverse from 'lodash.reverse';
+import flatten from 'lodash.flatten';
+import find from 'lodash.find';
 import get from 'lodash.get';
 
 import { InstanceTypeIcon, StatusLoader, Button } from 'joyent-ui-toolkit';
@@ -167,7 +170,8 @@ export default compose(
   ),
   graphql(GetImages, {
     options: () => ({
-      ssr: false
+      ssr: false,
+      variables: { public: true }
     }),
     props: ({ ownProps, data }) => {
       const { image = '', query } = ownProps;
@@ -181,7 +185,7 @@ export default compose(
         };
       }
 
-      const values = images
+      const _images = images
         .reduce((acc, img) => {
           const isVm = !includes(img.type, 'DATASET');
 
@@ -198,6 +202,7 @@ export default compose(
           const version = {
             name: img.name,
             version: img.version,
+            published: new Date(img.published_at).getTime(),
             id: img.id
           };
 
@@ -216,24 +221,34 @@ export default compose(
             isVm
           });
 
+          const versions = acc[index].versions.concat([version]);
+
           acc[index] = {
             ...acc[index],
-            versions: acc[index].versions.concat([version])
+            versions
           };
 
           return acc;
         }, [])
-        .map(({ versions, ...img }) => ({
-          ...img,
-          active: Boolean(find(versions, ['id', image])),
-          versions: reverse(sortBy(versions, ['name']))
-        }));
+        .map(({ versions, ...img }) => {
+          return {
+            ...img,
+            active: Boolean(find(versions, ['id', image])),
+            versions: reverse(
+              flatten(
+                values(groupBy(versions, 'name')).map(groupedVersion =>
+                  sortBy(groupedVersion, 'published').pop()
+                )
+              )
+            )
+          };
+        });
 
       const selected = find(images, ['id', image]) || {};
 
       return {
         loading,
-        images: values,
+        images: _images,
         image: {
           ...selected,
           isVm: !includes(selected.type || '', 'DATASET')

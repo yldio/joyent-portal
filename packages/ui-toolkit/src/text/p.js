@@ -15,7 +15,7 @@ export default styled.p`
     color: ${props => props.theme.white}
   `};
 
-  ${is('center') `
+  ${is('center')`
     text-align: center;
   `};
 
