@@ -69,6 +69,11 @@ const Actions = styled(Flex)`
   min-width: 48px;
 `;
 
+const ActionsWrapper = styled(Flex)`
+  height: 100%;
+  border-left: 1px solid ${props => props.theme.grey};
+`;
+
 export const Image = ({
   name,
   id,
@@ -117,11 +122,10 @@ export const Image = ({
               </Content>
               <PopoverContainer clickable>
                 <Actions>
-                  <PopoverTarget
-                    box
-                    style={{ borderLeft: '1px solid #D8D8D8' }}
-                  >
-                    <ActionsIcon />
+                  <PopoverTarget box>
+                    <ActionsWrapper alignCenter justifyCenter>
+                      <ActionsIcon />
+                    </ActionsWrapper>
                   </PopoverTarget>
                   <Popover placement="bottom">
                     <PopoverItem disabled={false} onClick={onCreateInstance}>
