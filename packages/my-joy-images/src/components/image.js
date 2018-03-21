@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import remcalc from 'remcalc';
 import { Field } from 'redux-form';
 import Flex from 'styled-flex-component';
 import { Padding, Margin } from 'styled-components-spacing';
+import remcalc from 'remcalc';
 
 import {
   Card,
@@ -50,7 +50,7 @@ const Type = styled(Margin)`
 `;
 
 const Content = styled(Padding)`
-  max-width: calc(100% - 48px);
+  max-width: calc(100% - ${remcalc(48)});
   overflow: hidden;
 `;
 
@@ -64,14 +64,14 @@ const DividerContainer = styled(Margin)`
 `;
 
 const Actions = styled(Flex)`
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
+  width: ${remcalc(48)};
+  height: ${remcalc(48)};
+  min-width: ${remcalc(48)};
 `;
 
 const ActionsWrapper = styled(Flex)`
   height: 100%;
-  border-left: 1px solid ${props => props.theme.grey};
+  border-left: ${remcalc(1)} solid ${props => props.theme.grey};
 `;
 
 export const Image = ({
@@ -85,7 +85,7 @@ export const Image = ({
   onCreateInstance
 }) => (
   <Margin bottom={3}>
-    <CardAnchor to={`/images/${name}`} component={Link}>
+    <CardAnchor to={`/images/${id}`} component={Link}>
       <Card radius>
         {removing ? (
           <Padding all={2}>

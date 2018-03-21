@@ -1,8 +1,6 @@
 query instance($id: ID) {
-  machines(id: $id) {
-    results {
-      id
-      name
-    }
+  machine(id: $id) {
+    id
+    name
   }
 }

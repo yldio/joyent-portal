@@ -9,7 +9,7 @@ const UnorderedList = styled.ul`
   list-style-type: none;
   padding: ${remcalc(13)} ${remcalc(0)};
   margin: ${remcalc(18)} 0 0 0;
-  max-height: 50px;
+  max-height: ${remcalc(50)};
   overflow-x: auto;
   overflow-y: hidden;
   box-sizing: border-box;

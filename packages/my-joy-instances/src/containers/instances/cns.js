@@ -151,15 +151,12 @@ export default compose(
       }
     }),
     props: ({ data }) => {
-      const { loading, error, variables, refetch, ...rest } = data;
-      const { id } = variables;
-
-      const instance = find(get(rest, 'machines.results', []), ['id', id]);
-      const tags = get(instance, 'tags', []);
+      const { loading, error, machine, refetch } = data;
+      const tags = get(machine, 'tags', []);
 
       return {
         tags,
-        instance,
+        instance: machine,
         loading,
         loadingError: error,
         refetch

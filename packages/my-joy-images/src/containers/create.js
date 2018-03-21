@@ -97,20 +97,15 @@ export default compose(
     options: ({ match }) => ({
       ssr: false,
       variables: {
-        name: get(match, 'params.instance')
+        id: get(match, 'params.instance')
       }
     }),
-    props: ({ data: { loading, error, variables, ...rest } }) => {
+    props: ({ data: { loading, error, machine, variables, ...rest } }) => {
       const notFoundMsg = `Instance "${variables.name}" not found!`;
-      const inst = find(get(rest, 'machines.results', []), [
-        'name',
-        variables.name
-      ]);
-
-      const notFound = !loading && !inst ? notFoundMsg : false;
+      const notFound = !loading && !machine ? notFoundMsg : false;
 
       return {
-        instance: inst,
+        instance: machine,
         loadingError: error ? parseError(error) : notFound,
         loading
       };
@@ -190,7 +185,7 @@ export default compose(
         const { data } = res;
         const { createImageFromMachine } = data;
 
-        history.push(`/images/${createImageFromMachine.name}`);
+        history.push(`/images/${createImageFromMachine.id}`);
       }
     };
   })

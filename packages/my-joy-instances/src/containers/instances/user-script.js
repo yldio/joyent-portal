@@ -1,7 +1,6 @@
 import React from 'react';
 import { compose, graphql } from 'react-apollo';
 import { Margin } from 'styled-components-spacing';
-import find from 'lodash.find';
 import get from 'lodash.get';
 
 import {
@@ -61,17 +60,15 @@ export default compose(
       }
     }),
     props: ({ data }) => {
-      const { loading, error, variables, refetch, ...rest } = data;
-      const { id } = variables;
+      const { loading, error, machine } = data;
 
-      const instance = find(get(rest, 'machines.results', []), ['id', id]);
-      const metadata = get(instance, 'metadata', [])
+      const metadata = get(machine, 'metadata', [])
         .filter(({ name = '' }) => name === 'user-script')
         .shift();
 
       return {
         metadata,
-        instance,
+        instance: machine,
         loading,
         error
       };

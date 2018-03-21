@@ -133,15 +133,8 @@ export default compose(
       }
     }),
     props: ({ data }) => {
-      const {
-        loading = false,
-        error = null,
-        variables,
-        refetch,
-        ...rest
-      } = data;
+      const { loading = false, error = null, image, refetch, ...rest } = data;
 
-      const image = find(get(rest, 'images', []), ['id', variables.id]);
       const tags = get(image || {}, 'tags', []);
       const index = new Fuse(tags, {
         keys: ['name', 'value']
@@ -203,34 +196,33 @@ export default compose(
         dispatch(set({ name: `${image.id}-mutating`, value: false }));
       },
       handleAddTag: async ({ name, value }) => {
-        console.log(name, value);
         dispatch(set({ name: `${image.id}-mutating`, value: true }));
 
-        //   const [err] = await intercept(
-        //     updateTags({
-        //       variables: {
-        //         id: image.id,
-        //         tags: tags
-        //           .map(({ name, value }) => ({ name, value }))
-        //           .concat([{ name, value }])
-        //       }
-        //     })
-        //   );
+        const [err] = await intercept(
+          updateTags({
+            variables: {
+              id: image.id,
+              tags: tags
+                .map(({ name, value }) => ({ name, value }))
+                .concat([{ name, value }])
+            }
+          })
+        );
 
-        //   if (err) {
-        //     dispatch([
-        //       set({ name: `${image.id}-mutation-error`, value: parseError(err) }),
-        //       set({ name: `${image.id}-mutating`, value: false })
-        //     ]);
-        //   }
+        if (err) {
+          dispatch([
+            set({ name: `${image.id}-mutation-error`, value: parseError(err) }),
+            set({ name: `${image.id}-mutating`, value: false })
+          ]);
+        }
 
-        //   await refetch();
+        await refetch();
 
-        //   dispatch([
-        //     set({ name: `${image.id}-mutating`, value: false }),
-        //     dispatch(set({ name: `${image.id}-add-open`, value: false })),
-        //     destroy(TAGS_ADD_FORM)
-        //   ]);
+        dispatch([
+          set({ name: `${image.id}-mutating`, value: false }),
+          dispatch(set({ name: `${image.id}-add-open`, value: false })),
+          destroy(TAGS_ADD_FORM)
+        ]);
       }
     })
   )

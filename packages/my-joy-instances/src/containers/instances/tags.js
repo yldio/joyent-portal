@@ -155,11 +155,8 @@ export default compose(
         id: get(match, 'params.instance')
       }
     }),
-    props: ({ data: { loading, error, variables, refetch, ...rest } }) => {
-      const { id } = variables;
-
-      const instance = find(get(rest, 'machines.results', []), ['id', id]);
-      const tags = get(instance, 'tags', []).filter(
+    props: ({ data: { loading, error, machine, refetch, ...rest } }) => {
+      const tags = get(machine, 'tags', []).filter(
         ({ name = '' }) => !/^triton\.cns\./i.test(name)
       );
 
@@ -169,7 +166,7 @@ export default compose(
 
       return {
         tags,
-        instance,
+        instance: machine,
         index,
         loading,
         error,

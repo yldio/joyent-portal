@@ -121,17 +121,15 @@ export const List = ({
           total={total}
         >
           {fetching ? <InstanceListFetchingItem /> : null}
-          {(!fetching ? _instances : []).map(({ name, id, ...rest }) => (
+          {(!fetching ? _instances : []).map(instance => (
             <InstanceListItem
-              key={id}
-              id={id}
-              name={name}
-              {...rest}
-              onCreateImage={() => handleCreateImage(rest)}
-              onStart={() => handleStart([{ id }])}
-              onStop={() => handleStop([{ id }])}
-              onReboot={() => handleReboot([{ id }])}
-              onRemove={() => handleRemove([{ id }])}
+              key={instance.id}
+              {...instance}
+              onCreateImage={() => handleCreateImage(instance)}
+              onStart={() => handleStart([instance])}
+              onStop={() => handleStop([instance])}
+              onReboot={() => handleReboot([instance])}
+              onRemove={() => handleRemove([instance])}
             />
           ))}
         </InstanceList>
@@ -299,9 +297,9 @@ export default compose(
       };
     },
     (dispatch, { refetch, ...ownProps }) => ({
-      handleCreateImage: ({ name }) => {
+      handleCreateImage: ({ id }) => {
         return window
-          .open(`${GLOBAL.origin}/images/~create/${name}`, '_blank')
+          .open(`${GLOBAL.origin}/images/~create/${id}`, '_blank')
           .focus();
       },
       handleSortBy: ({ sortBy: currentSortBy, sortOrder }) => newSortBy => {

@@ -132,7 +132,7 @@ export const Item = ({
             <PopoverDivider />
             <PopoverItem disabled={false} onClick={onCreateImage}>
               <ItemAnchor
-                href={`${GLOBAL.origin}/images/~create/${name}`}
+                href={`${GLOBAL.origin}/images/~create/${id}`}
                 target="__blank"
                 rel="noopener noreferrer"
               >

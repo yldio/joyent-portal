@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { set } from 'react-redux-values';
 import { Margin } from 'styled-components-spacing';
 import intercept from 'apr-intercept';
-import find from 'lodash.find';
 import isArray from 'lodash.isarray';
 import some from 'lodash.some';
 import isInteger from 'lodash.isinteger';
@@ -38,7 +37,6 @@ export const Summary = ({
   rebooting,
   removing
 }) => {
-  console.log(instance);
   const _loading = loading || !instance ? <StatusLoader /> : null;
   const _summary = !_loading &&
     instance && (
@@ -146,14 +144,9 @@ export default compose(
         id: get(match, 'params.instance')
       }
     }),
-    props: ({ data: { loading, error, variables, ...rest } }) => {
-      let instance = find(get(rest, 'machines.results', []), [
-        'id',
-        variables.id
-      ]);
-
-      if (instance) {
-        const { ips } = instance;
+    props: ({ data: { loading, error, machine, ...rest } }) => {
+      if (machine) {
+        const { ips } = machine;
 
         const grupedIps = ips
           .map(ip => ({ ip, openness: isPrivate(ip) ? 'private' : 'public' }))
@@ -165,11 +158,11 @@ export default compose(
             {}
           );
 
-        instance = Object.assign({}, instance, { ips: grupedIps });
+        machine = Object.assign({}, machine, { ips: grupedIps });
       }
 
       return {
-        instance,
+        instance: machine,
         loading,
         loadingError: error
       };

@@ -1,15 +1,13 @@
 query instance($id: ID!) {
-  machines(id: $id) {
-    results {
+  machine(id: $id) {
+    id
+    name
+    snapshots {
       id
       name
-      snapshots {
-        id
-        name
-        state
-        created
-        updated
-      }
+      state
+      created
+      updated
     }
   }
 }

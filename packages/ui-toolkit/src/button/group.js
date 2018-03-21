@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import remcalc from 'remcalc';
 
 export default styled.span`
   display: inline-block;
@@ -15,6 +16,6 @@ export default styled.span`
   & [data-ui-button='true']:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    margin-right: -1px;
+    margin-right: ${remcalc(-1)};
   }
 `;

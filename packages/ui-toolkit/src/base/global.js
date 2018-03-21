@@ -49,7 +49,7 @@ export default ({ theme }) => css`
   }
 
   .CodeMirror {
-    border: solid 1px ${theme.grey};
+    border: solid ${remcalc(1)} ${theme.grey};
     margin: ${remcalc(8)} 0 ${remcalc(8)} 0;
     font-family: "Roboto Mono", monospace !important;
   }

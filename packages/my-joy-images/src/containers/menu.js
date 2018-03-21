@@ -9,12 +9,12 @@ const SECTIONS = [
 ];
 
 export default ({ match }) => {
-  const imageSlug = get(match, 'params.image');
-  const sections = imageSlug !== '~create' ? SECTIONS : [];
+  const imageId = get(match, 'params.image');
+  const sections = imageId !== '~create' ? SECTIONS : [];
 
   const links = sections.map(({ name, pathname }) => ({
     name,
-    pathname: `/images/${imageSlug}/${pathname}`
+    pathname: `/images/${imageId}/${pathname}`
   }));
 
   return <Menu links={links} />;

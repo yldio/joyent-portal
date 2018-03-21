@@ -142,7 +142,7 @@ export default withTheme(
               <Row between="xs">
                 <Col xs={9}>
                   <Button
-                    href={`${GLOBAL.origin}/images/~create/${instance.name}`}
+                    href={`${GLOBAL.origin}/images/~create/${instance.id}`}
                     target="__blank"
                     rel="noopener noreferrer"
                     secondary

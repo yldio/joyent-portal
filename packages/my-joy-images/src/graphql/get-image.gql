@@ -1,5 +1,5 @@
 query image($id: ID) {
-  images(id: $id) {
+  image(id: $id) {
     id
     name
     os
