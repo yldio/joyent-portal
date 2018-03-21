@@ -82,15 +82,15 @@ export default compose(
   graphql(GetNetworks, {
     options: ({ match }) => ({
       variables: {
-        name: get(match, 'params.instance')
+        id: get(match, 'params.instance')
       }
     }),
     props: ({ data }) => {
       const { loading, error, variables } = data;
-      const { name } = variables;
+      const { id } = variables;
 
       const machines = get(data, 'machines.results', []);
-      const instance = find(forceArray(machines), ['name', name]);
+      const instance = find(forceArray(machines), ['id', id]);
       const values = get(instance, 'networks', []);
       const networks = reverse(sortBy(values, 'public'));
 

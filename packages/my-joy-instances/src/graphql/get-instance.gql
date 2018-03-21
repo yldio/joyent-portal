@@ -1,5 +1,5 @@
-query instance($name: String) {
-  machines(name: $name) {
+query instance($id: ID) {
+  machines(id: $id) {
     results {
       id
       state

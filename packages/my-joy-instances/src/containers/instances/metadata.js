@@ -161,13 +161,13 @@ export default compose(
       ssr: false,
       pollInterval: 1000,
       variables: {
-        name: get(match, 'params.instance')
+        id: get(match, 'params.instance')
       }
     }),
     props: ({ data: { loading, error, variables, refetch, ...rest } }) => {
-      const { name } = variables;
+      const { id } = variables;
 
-      const instance = find(get(rest, 'machines.results', []), ['name', name]);
+      const instance = find(get(rest, 'machines.results', []), ['id', id]);
       const values = get(instance, 'metadata', []).filter(
         ({ name = '' }) => name !== 'user-script'
       );

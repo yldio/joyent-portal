@@ -4548,12 +4548,15 @@ exports[`renders <Item /> without throwing 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
 }
 
 .c20 {
-  width: 3rem;
   height: 3rem;
-  min-width: 3rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
@@ -4632,7 +4635,7 @@ exports[`renders <Item /> without throwing 1`] = `
       >
         <a
           className="c11 c12 c13"
-          to="/instances/undefined"
+          to="/instances/"
         />
       </td>
       <td
@@ -5067,12 +5070,15 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
 }
 
 .c20 {
-  width: 3rem;
   height: 3rem;
-  min-width: 3rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
@@ -5151,7 +5157,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
       >
         <a
           className="c11 c12 c13"
-          to="/instances/name"
+          to="/instances/id"
         >
           name
         </a>
@@ -5588,12 +5594,15 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
 }
 
 .c20 {
-  width: 3rem;
   height: 3rem;
-  min-width: 3rem;
 }
 
 @media only screen and (min-width:47.9375rem) {
@@ -5672,7 +5681,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
       >
         <a
           className="c11 c12 c13"
-          to="/instances/undefined"
+          to="/instances/"
         />
       </td>
       <td
@@ -6106,6 +6115,11 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
 }
 
 @media only screen and (min-width:47.9375rem) {
@@ -6184,7 +6198,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
       >
         <a
           className="c11 c12 c13"
-          to="/instances/undefined"
+          to="/instances/"
         />
       </td>
       <td

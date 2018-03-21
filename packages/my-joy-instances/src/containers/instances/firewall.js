@@ -138,14 +138,14 @@ export default compose(
       ssr: false,
       variables: {
         fetchPolicy: 'network-only',
-        name: get(match, 'params.instance')
+        id: get(match, 'params.instance')
       }
     }),
     props: ({ data }) => {
       const { loading, error, variables, refetch, ...rest } = data;
-      const { name } = variables;
+      const { id } = variables;
 
-      const instance = find(get(rest, 'machines.results', []), ['name', name]);
+      const instance = find(get(rest, 'machines.results', []), ['id', id]);
       const enabled = get(instance, 'firewall_enabled');
       const rules = get(instance, 'firewall_rules', []);
 

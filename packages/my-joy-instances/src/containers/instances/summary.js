@@ -38,6 +38,7 @@ export const Summary = ({
   rebooting,
   removing
 }) => {
+  console.log(instance);
   const _loading = loading || !instance ? <StatusLoader /> : null;
   const _summary = !_loading &&
     instance && (
@@ -142,13 +143,13 @@ export default compose(
       ssr: false,
       pollInterval: 1000,
       variables: {
-        name: get(match, 'params.instance')
+        id: get(match, 'params.instance')
       }
     }),
     props: ({ data: { loading, error, variables, ...rest } }) => {
       let instance = find(get(rest, 'machines.results', []), [
-        'name',
-        variables.name
+        'id',
+        variables.id
       ]);
 
       if (instance) {

@@ -171,12 +171,12 @@ export default compose(
       ssr: false,
       pollInterval: 1000,
       variables: {
-        name: get(match, 'params.instance')
+        id: get(match, 'params.instance')
       }
     }),
     props: ({ data: { loading, error, variables, refetch, ...rest } }) => {
-      const { name } = variables;
-      const instance = find(get(rest, 'machines.results', []), ['name', name]);
+      const { id } = variables;
+      const instance = find(get(rest, 'machines.results', []), ['id', id]);
       const snapshots = get(instance, 'snapshots', []);
 
       const index = new Fuse(snapshots, {
