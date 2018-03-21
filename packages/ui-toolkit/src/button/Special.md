@@ -8,15 +8,10 @@ const React = require('react');
 const { default: Button } = require('./');
 const { StartIcon } = require('../');
 
-  <Button
-    type="button"
-    secondary
-    bold
-    icon
-  >
-    <StartIcon />
-    <span>Start</span>
-  </Button>
+<Button type="button" secondary bold icon>
+  <StartIcon />
+  <span>Start</span>
+</Button>;
 ```
 
 #### Delete Button
@@ -29,38 +24,24 @@ const React = require('react');
 const { default: Button } = require('./');
 const { DeleteIcon } = require('../');
 
-
-<Button
-  type="button"
-  secondary
-  bold
-  icon
-  error
->
-  <DeleteIcon fill="rgb(210, 67, 58)"/>
+<Button type="button" secondary bold icon error>
+  <DeleteIcon fill="rgb(210, 67, 58)" />
   <span>Remove</span>
-</Button>
+</Button>;
 
 // Tab: Disabled
 const React = require('react');
 const { default: Button } = require('./');
 const { DeleteIcon } = require('../');
 
-
-<Button
-  type="button"
-  secondary
-  disabled
-  bold
-  icon
-  error
->
+<Button type="button" secondary disabled bold icon error>
   <DeleteIcon />
   <span>Remove</span>
-</Button>
+</Button>;
 ```
 
 #### Toggle Switch
+
 Toggle switch is to be used when users have the choice to turn a service or feature on or off.
 
 ```jsx
@@ -71,7 +52,7 @@ const { default: Toggle } = require('../form/toggle');
 
 <FormGroup name="who-killed-1">
   <Toggle value="video">Activate</Toggle>
-</FormGroup>
+</FormGroup>;
 
 // Tab: Disabled
 const React = require('react');
@@ -82,5 +63,5 @@ const { default: Toggle } = require('../form/toggle');
   <Toggle value="video" disabled>
     Activate
   </Toggle>
-</FormGroup>
+</FormGroup>;
 ```

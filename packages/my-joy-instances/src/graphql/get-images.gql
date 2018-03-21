@@ -1,9 +1,10 @@
-query Images {
-  images {
+query Images($public: Boolean) {
+  images(public: $public) {
     id
     name
     os
     version
     type
+    published_at
   }
 }

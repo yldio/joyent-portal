@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Card, H2, P, H4 } from '../';
 import remcalc from 'remcalc';
 
-const CardStyled = styled(Card) `
+const CardStyled = styled(Card)`
   margin-bottom: ${remcalc(36)};
 `;
 
@@ -35,7 +35,7 @@ export default allProps => {
       <CardStyled id={name.replace(/\s+/g, '-').toLowerCase()}>
         <Header>
           <H2 white>{name}</H2>
-          {description ? <P white>{description}</P> : null }
+          {description ? <P white>{description}</P> : null}
         </Header>
         <Main>
           {content}
@@ -43,7 +43,7 @@ export default allProps => {
           {sections}
         </Main>
       </CardStyled>
-    )
+    );
   }
 
   return (
@@ -58,5 +58,5 @@ export default allProps => {
         {sections}
       </div>
     </Fragment>
-  )
+  );
 };

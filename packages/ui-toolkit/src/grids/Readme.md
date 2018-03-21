@@ -22,7 +22,6 @@ const medium = require('./medium.svg');
 }} src={medium} />
 ```
 
-
 #### Small Grid
 
 ```jsx noeditor

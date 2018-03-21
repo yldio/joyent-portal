@@ -36,9 +36,7 @@ const Version = styled(Select)`
 export const Preview = ({ name, version, isVm }) => (
   <Fragment>
     <Margin bottom={2} top={3}>
-      <H3>
-        {name} - {version}
-      </H3>
+      <H3>{name}</H3>
       <P>{isVm ? 'Hardware Virtual Machine' : 'Infrastructure Container'} </P>
     </Margin>
   </Fragment>
@@ -64,15 +62,16 @@ const Image = ({ onClick, active, ...image }) => {
       <Margin bottom={3}>
         <Card id={id} onClick={handleCardClick} active={active} preview>
           <Logo onClick={handleLogoClick} width="42" height="42" />
-          <H4 onClick={handleLogoClick}>{titleCase(imageName)}</H4>
+          <H4 onClick={handleLogoClick}>
+            {titleCase(imageName) || 'Custom Images'}
+          </H4>
           <FormGroup name="image" field={Field}>
             <Version onBlur={null}>
               <option selected>Version</option>
-              {versions.map(({ name, version, id }) => (
-                <option
-                  key={`${name} - ${version}`}
-                  value={id}
-                >{`${name} - ${version}`}</option>
+              {versions.map(({ name, id }) => (
+                <option key={id} value={id}>
+                  {name}
+                </option>
               ))}
             </Version>
           </FormGroup>

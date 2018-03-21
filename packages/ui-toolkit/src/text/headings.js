@@ -14,24 +14,24 @@ export const H1 = NH1.extend`
   font-weight: normal;
   margin: 0;
 
-  ${is('inline') `
+  ${is('inline')`
     display: inline-block;
   `};
 
-  ${is('small') `
+  ${is('small')`
     font-size: ${remcalc(32)};
   `};
 
-  ${is('bold') `
+  ${is('bold')`
     font-weight: ${props => props.theme.font.weight.semibold};
   `};
 
-  ${is('white') `
+  ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
 
-  ${isNot('noMargin') `
+  ${isNot('noMargin')`
     & + p,
     & + small,
     & + h1,
@@ -54,25 +54,24 @@ export const H2 = styled.h2`
   font-size: ${remcalc(24)};
   margin: 0;
 
-  ${is('inline') `
+  ${is('inline')`
     display: inline-block;
   `};
 
-
-  ${is('small') `
+  ${is('small')`
     font-size: ${remcalc(24)};
   `};
 
-  ${is('bold') `
+  ${is('bold')`
     font-weight: ${props => props.theme.font.weight.semibold};
   `};
 
-  ${is('white') `
+  ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
 
-  ${isNot('noMargin') `
+  ${isNot('noMargin')`
     & + p,
     & + small,
     & + h1,
@@ -95,25 +94,24 @@ export const H3 = styled.h3`
   font-size: ${remcalc(21)};
   margin: 0;
 
-  ${is('inline') `
+  ${is('inline')`
     display: inline-block;
   `};
 
-
-  ${is('small') `
+  ${is('small')`
     font-size: ${remcalc(18)};
   `};
 
-  ${is('bold') `
+  ${is('bold')`
     font-weight: ${props => props.theme.font.weight.semibold};
   `};
 
-  ${is('white') `
+  ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
 
-  ${isNot('noMargin') `
+  ${isNot('noMargin')`
     & + p,
     & + small,
     & + h1,
@@ -136,16 +134,16 @@ export const H4 = styled.h4`
   font-size: ${remcalc(15)};
   margin: 0;
 
-  ${is('inline') `
+  ${is('inline')`
     display: inline-block;
   `};
 
-  ${is('white') `
+  ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
 
-  ${isNot('noMargin') `
+  ${isNot('noMargin')`
     & + p,
     & + small,
     & + h1,
@@ -168,20 +166,20 @@ export const H5 = styled.h4`
   font-size: ${remcalc(15)};
   margin: 0;
 
-  ${is('inline') `
+  ${is('inline')`
     display: inline-block;
   `};
 
-  ${is('bold') `
+  ${is('bold')`
     font-weight: ${props => props.theme.font.weight.semibold};
   `};
 
-  ${is('white') `
+  ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
 
-  ${isNot('noMargin') `
+  ${isNot('noMargin')`
     & + p,
     & + small,
     & + h1,
@@ -204,20 +202,20 @@ export const H6 = styled.h6`
   font-size: ${remcalc(13)};
   margin: 0;
 
-  ${is('inline') `
+  ${is('inline')`
     display: inline-block;
   `};
 
-  ${is('bold') `
+  ${is('bold')`
     font-weight: ${props => props.theme.font.weight.semibold};
   `};
 
-  ${is('white') `
+  ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
 
-  ${isNot('noMargin') `
+  ${isNot('noMargin')`
     & + p,
     & + small,
     & + h1,

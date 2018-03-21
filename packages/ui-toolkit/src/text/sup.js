@@ -2,10 +2,9 @@ import styled from 'styled-components';
 import remcalc from 'remcalc';
 import is from 'styled-is';
 
-
 export default styled.sup`
   position: absolute;
-  margin-left: ${remcalc(6)};;
+  margin-left: ${remcalc(6)};
   font-weight: ${props => props.theme.font.weight.semibold};
   line-height: normal;
   font-size: ${remcalc(8)};
@@ -23,5 +22,5 @@ export default styled.sup`
 
   ${is('alert')`
     color: ${props => props.theme.orangeDark}
-  `}
+  `};
 `;
