@@ -71,6 +71,7 @@ const Actions = styled(Flex)`
 
 export const Image = ({
   name,
+  id,
   os,
   version,
   type,
@@ -96,7 +97,7 @@ export const Image = ({
                       height: '24'
                     })}
                   </Margin>
-                  <A to={`/images/${name}/summary`} component={Link}>
+                  <A to={`/images/${id}/summary`} component={Link}>
                     {name}
                   </A>
                 </Flex>

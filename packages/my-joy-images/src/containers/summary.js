@@ -69,13 +69,13 @@ export default compose(
     options: ({ match }) => ({
       ssr: false,
       variables: {
-        name: get(match, 'params.image')
+        id: get(match, 'params.image')
       }
     }),
     props: ({
       data: { loading = false, error = null, variables, ...rest }
     }) => ({
-      image: find(get(rest, 'images', []), ['name', variables.name]),
+      image: find(get(rest, 'images', []), ['id', variables.id]),
       loading,
       error
     })
