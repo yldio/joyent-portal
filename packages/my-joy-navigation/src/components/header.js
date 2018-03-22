@@ -30,7 +30,7 @@ export const Item = emotion('div')`
   ${props =>
     props.active &&
     `
-    height: ${remcalc(27)};
+    margin-top: ${remcalc(3)};
     border-bottom: ${remcalc(3)} solid #E38200;
     background-color: rgba(0, 0, 0, 0.25);
   `};

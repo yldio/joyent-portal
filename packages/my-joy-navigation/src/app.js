@@ -7,8 +7,12 @@ import theme from 'joyent-ui-toolkit/dist/es/theme';
 import { client } from './state';
 import Header from './header';
 
+console.log(theme);
+
 const fullTheme = {
   ...theme,
+  headerbg: '#1e313b',
+  overlay: 'rgba(0, 0, 0, 0.25)',
   flexboxgrid: {
     gridSize: 12, // rem
     gutterWidth: 1.25, // rem

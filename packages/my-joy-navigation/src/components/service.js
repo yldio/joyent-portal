@@ -31,5 +31,8 @@ export const Description = emotion('h6')`
 
 export default emotion('a')`
   display: block;
+
+  &:not(:last-child) {
   margin-bottom: ${remcalc(22)};
+  }
 `;
