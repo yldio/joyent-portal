@@ -3,14 +3,22 @@ import emotion from 'preact-emotion';
 import { graphql, compose } from 'react-apollo';
 import gql from 'graphql-tag';
 import remcalc from 'remcalc';
+import groupBy from 'lodash.groupby';
 
 import { Grid, Row, Col } from 'preact-emotion-flexboxgrid';
 import {
   DatacenterPlace,
   DatacenterRegion,
   Datacenter,
-  Overlay
+  Overlay,
+  Anchor
 } from '../components';
+
+const fixContinentName = name =>
+  name
+    .toLowerCase()
+    .split('_')
+    .join(' ');
 
 const Container = emotion('div')`
   background-color: #ffffff;
@@ -18,6 +26,7 @@ const Container = emotion('div')`
 
 const TitleContainer = emotion('div')`
   background-color: ${props => props.theme.background};
+  text-transform:capitalize;
 `;
 
 const RegionContainer = emotion('div')`
@@ -27,19 +36,13 @@ const RegionContainer = emotion('div')`
 
 const GetDatacenters = gql`
   {
-    regions @client {
+    regions {
       name
-      slug
-    }
-    places @client {
-      name
-      slug
-      region
-    }
-    datacenters @client {
-      name
-      slug
-      place
+      continent
+      datacenters {
+        name
+        url
+      }
     }
   }
 `;
@@ -47,13 +50,15 @@ const GetDatacenters = gql`
 const Datacenters = ({ expanded, regions = [] }) =>
   expanded ? (
     <Overlay>
-      {regions.map(({ name, slug, places }) => (
-        <div key={slug}>
+      {Object.keys(regions).map(region => (
+        <div key={region}>
           <TitleContainer>
             <Grid>
               <Row>
                 <Col>
-                  <DatacenterRegion>{name}</DatacenterRegion>
+                  <DatacenterRegion>
+                    {fixContinentName(region)}
+                  </DatacenterRegion>
                 </Col>
               </Row>
             </Grid>
@@ -62,11 +67,13 @@ const Datacenters = ({ expanded, regions = [] }) =>
             <Grid>
               <RegionContainer>
                 <Row>
-                  {places.map(({ name, slug, datacenters }) => (
-                    <Col key={slug} xs={12} md={6} lg={3}>
+                  {regions[region].map(({ name, datacenters }) => (
+                    <Col key={name} xs={12} md={6} lg={3}>
                       <DatacenterPlace>{name}</DatacenterPlace>
-                      {datacenters.map(({ name, slug }) => (
-                        <Datacenter key={slug}>{name}</Datacenter>
+                      {datacenters.map(({ name, url }) => (
+                        <Datacenter key={name}>
+                          <Anchor href={url}>{name}</Anchor>
+                        </Datacenter>
                       ))}
                     </Col>
                   ))}
@@ -84,28 +91,10 @@ export default compose(
     options: () => ({
       ssr: false
     }),
-    props: ({ data }) => {
-      const {
-        regions = [],
-        places = [],
-        datacenters = [],
-        loading = false,
-        error = null
-      } = data;
-
-      const _regions = regions.map(({ slug, ...region }) => ({
-        ...region,
-        places: places
-          .filter(({ region }) => region === slug)
-          .map(({ slug, ...place }) => ({
-            ...place,
-            datacenters: datacenters.filter(({ place }) => place === slug),
-            slug
-          })),
-        slug
-      }));
-
-      return { regions: _regions, loading, error };
-    }
+    props: ({ data: { regions = [], loading = false, error = null } }) => ({
+      regions: groupBy(regions, 'continent'),
+      loading,
+      error
+    })
   })
 )(Datacenters);

@@ -5,7 +5,6 @@ import pascalCase from 'pascal-case';
 import keys from 'lodash.keys';
 
 import { DataCenterIcon, TritonIcon, ServicesIcon } from './components';
-// import { ServicesIcon } from './components';
 import * as Overlays from './containers';
 
 import {
@@ -34,32 +33,21 @@ const GetHeader = gql`
   }
 `;
 
-const GetAccount = gql`
-  {
-    datacenter {
-      name
-    }
-    account {
-      login
-    }
-  }
-`;
-
-// <HeaderDividerItem />
-// <HeaderItem
-//   onClick={() => toggleSectionOpen('services')}
-//   active={isOpen && activePanel === 'services'}
-// >
-//   <HeaderItemContent>Products & Services</HeaderItemContent>
-//   <HeaderItemIcon>
-//     <ServicesIcon light />
-//   </HeaderItemIcon>
-// </HeaderItem>
-// <HeaderDividerItem />
+// Needs to be revised
+// const GetAccount = gql`
+//   {
+//     datacenter {
+//       name
+//     }
+//     account {
+//       login
+//     }
+//   }
+// `;
 
 const Navigation = ({
   login,
-  datacenter,
+  datacenter = true,
   toggleSectionOpen,
   isOpen,
   activePanel
@@ -69,6 +57,17 @@ const Navigation = ({
       <HeaderItem>
         <TritonIcon light />
       </HeaderItem>
+      <HeaderDividerItem />
+      <HeaderItem
+        onClick={() => toggleSectionOpen('services')}
+        active={isOpen && activePanel === 'services'}
+      >
+        <HeaderItemContent>Products & Services</HeaderItemContent>
+        <HeaderItemIcon>
+          <ServicesIcon light />
+        </HeaderItemIcon>
+      </HeaderItem>
+      <HeaderDividerItem />
       <HeaderFlexibleSpaceItem />
       <HeaderDividerItem />
       {datacenter ? (
@@ -79,7 +78,7 @@ const Navigation = ({
           <HeaderItemContent>
             <HeaderItemSubContent>Data Center:</HeaderItemSubContent>
             <HeaderSpace />
-            <span>{datacenter}</span>
+            <span>us-east-1</span>
           </HeaderItemContent>
           <HeaderItemIcon>
             <DataCenterIcon light />
@@ -87,18 +86,17 @@ const Navigation = ({
         </HeaderItem>
       ) : null}
       {datacenter ? <HeaderDividerItem /> : null}
-      {login ? (
-        <HeaderItem>
-          <HeaderItemContent>
-            <HeaderItemSubContent>Account:</HeaderItemSubContent>
-            <HeaderSpace />
-            {login}
-          </HeaderItemContent>
-          <HeaderItemIcon>
-            <Avatar />
-          </HeaderItemIcon>
-        </HeaderItem>
-      ) : null}
+      <HeaderItem>
+        <HeaderItemContent>
+          <HeaderItemSubContent>Account:</HeaderItemSubContent>
+          <HeaderSpace />
+          Raul Millais
+        </HeaderItemContent>
+        <HeaderItemIcon>
+          <Avatar />
+        </HeaderItemIcon>
+      </HeaderItem>
+      )
     </HeaderRow>
     {keys(Overlays).map(panelName =>
       React.createElement(Overlays[panelName], {
@@ -109,23 +107,23 @@ const Navigation = ({
 );
 
 export default compose(
-  graphql(GetAccount, {
-    options: () => ({
-      ssr: false
-    }),
-    props: ({ data }) => {
-      const {
-        account = {},
-        datacenter = {},
-        loading = false,
-        error = null
-      } = data;
-      const { login } = account;
-      const { name } = datacenter;
+  // graphql(GetAccount, {
+  //   options: () => ({
+  //     ssr: false
+  //   }),
+  //   props: ({ data }) => {
+  //     const {
+  //       account = {},
+  //       datacenter = {},
+  //       loading = false,
+  //       error = null
+  //     } = data;
+  //     const { login } = account;
+  //     const { name } = datacenter;
 
-      return { login, datacenter: name, loading, error };
-    }
-  }),
+  //     return { login, datacenter: name, loading, error };
+  //   }
+  // }),
   graphql(GetHeader, {
     options: () => ({
       ssr: false
