@@ -7,8 +7,6 @@ import theme from 'joyent-ui-toolkit/dist/es/theme';
 import { client } from './state';
 import Header from './header';
 
-console.log(theme);
-
 const fullTheme = {
   ...theme,
   headerbg: '#1e313b',
