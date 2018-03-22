@@ -12,7 +12,7 @@ const {
 } = process.env;
 
 const PORT = REACT_APP_GQL_PORT ? `:${REACT_APP_GQL_PORT}` : '';
-const URI = `${REACT_APP_GQL_PROTOCOL}://${REACT_APP_GQL_HOSTNAME}${PORT}/graphql`;
+const URI = `${REACT_APP_GQL_PROTOCOL}://${REACT_APP_GQL_HOSTNAME}${PORT}/instances/graphql`;
 
 export default (opts = {}) => {
   let cache = new InMemoryCache();
