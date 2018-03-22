@@ -1,0 +1,6 @@
+mutation renameMachine($id: ID!, $name: String!) {
+  renameMachine(id: $id, name: $name) {
+    id
+    name
+  }
+}

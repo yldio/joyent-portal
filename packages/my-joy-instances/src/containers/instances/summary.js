@@ -2,12 +2,14 @@ import React from 'react';
 import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
 import { set } from 'react-redux-values';
+import { stopSubmit } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
 import intercept from 'apr-intercept';
 import isArray from 'lodash.isarray';
 import some from 'lodash.some';
 import isInteger from 'lodash.isinteger';
 import get from 'lodash.get';
+import ReduxForm from 'declarative-redux-form';
 
 import {
   ViewContainer,
@@ -22,9 +24,13 @@ import StartInstance from '@graphql/start-instance.gql';
 import StopInstance from '@graphql/stop-instance.gql';
 import RebootInstance from '@graphql/reboot-instance.gql';
 import RemoveInstance from '@graphql/remove-instance.gql';
+import RenameMachine from '@graphql/rename-machine.gql';
 import SummaryScreen from '@components/instances/summary';
 import parseError from '@state/parse-error';
 import Confirm from '@state/confirm';
+import { instanceName as validateName } from '@state/validators';
+
+const FORM = 'change-name';
 
 export const Summary = ({
   instance,
@@ -35,21 +41,39 @@ export const Summary = ({
   starting,
   stopping,
   rebooting,
-  removing
+  removing,
+  editName,
+  editingName,
+  handleChangeName,
+  handleAsyncValidate,
+  shouldAsyncValidate
 }) => {
   const _loading =
     loading || (!instance && !loadingError) ? <StatusLoader /> : null;
 
   const _summary = !_loading &&
     instance && (
-      <SummaryScreen
-        instance={instance}
-        starting={starting}
-        stopping={stopping}
-        rebooting={rebooting}
-        removing={removing}
-        onAction={handleAction}
-      />
+      <ReduxForm
+        form={FORM}
+        onSubmit={handleChangeName}
+        initialValues={{ name: instance.name }}
+        asyncValidate={handleAsyncValidate}
+        shouldAsyncValidate={shouldAsyncValidate}
+      >
+        {props => (
+          <SummaryScreen
+            {...props}
+            instance={instance}
+            starting={starting}
+            stopping={stopping}
+            rebooting={rebooting}
+            removing={removing}
+            onAction={handleAction}
+            editName={editName}
+            editingName={editingName}
+          />
+        )}
+      </ReduxForm>
     );
 
   const _error = loadingError &&
@@ -135,6 +159,7 @@ const isPrivate = address => {
 
 export default compose(
   graphql(StopInstance, { name: 'stop' }),
+  graphql(RenameMachine, { name: 'rename' }),
   graphql(StartInstance, { name: 'start' }),
   graphql(RebootInstance, { name: 'reboot' }),
   graphql(RemoveInstance, { name: 'remove' }),
@@ -171,7 +196,7 @@ export default compose(
     }
   }),
   connect(
-    (state, ownProps) => {
+    ({ values }, ownProps) => {
       const { instance = {} } = ownProps;
       const { id } = instance;
 
@@ -181,14 +206,61 @@ export default compose(
 
       return {
         ...ownProps,
-        starting: state.values[`${id}-summary-starting`],
-        stopping: state.values[`${id}-summary-stoping`],
-        rebooting: state.values[`${id}-summary-rebooting`],
-        removing: state.values[`${id}-summary-removeing`],
-        mutationError: state.values[`${id}-summary-mutation-error`]
+        editingName: get(values, 'editing-name', false),
+        starting: values[`${id}-summary-starting`],
+        stopping: values[`${id}-summary-stoping`],
+        rebooting: values[`${id}-summary-rebooting`],
+        removing: values[`${id}-summary-removeing`],
+        mutationError: values[`${id}-summary-mutation-error`]
       };
     },
-    (disptach, ownProps) => ({
+    (dispatch, ownProps) => ({
+      shouldAsyncValidate: ({ trigger }) => {
+        return trigger === 'change';
+      },
+      handleAsyncValidate: validateName,
+      editName: () =>
+        dispatch(
+          set({
+            name: `editing-name`,
+            value: true
+          })
+        ),
+      handleChangeName: async ({ name, id }) => {
+        const { instance } = ownProps;
+
+        if (name === instance.name) {
+          return dispatch(
+            set({
+              name: `editing-name`,
+              value: false
+            })
+          );
+        }
+        const [err] = await intercept(
+          ownProps.rename({
+            variables: {
+              name,
+              id: get(ownProps, 'match.params.instance')
+            }
+          })
+        );
+
+        if (err) {
+          return dispatch(
+            stopSubmit(FORM, {
+              _error: parseError(err)
+            })
+          );
+        }
+
+        dispatch(
+          set({
+            name: `editing-name`,
+            value: false
+          })
+        );
+      },
       handleAction: async action => {
         const { instance } = ownProps;
         const { id } = instance;
@@ -201,7 +273,7 @@ export default compose(
         const name = `${id}-summary-${gerund}`;
 
         // sets loading to true
-        disptach(
+        dispatch(
           set({
             name,
             value: true
@@ -234,7 +306,7 @@ export default compose(
             value: parseError(err)
           });
 
-        return disptach([mutationError, setLoadingFalse].filter(Boolean));
+        return dispatch([mutationError, setLoadingFalse].filter(Boolean));
       }
     })
   )
