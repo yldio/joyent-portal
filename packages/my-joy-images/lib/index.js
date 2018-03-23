@@ -1,26 +1,30 @@
 const Inert = require('inert');
 const Path = require('path');
 const RenderReact = require('hapi-render-react');
-const Wreck = require('wreck');
 const Url = require('url');
+const Intercept = require('apr-intercept');
+const Fs = require('mz/fs');
+
+const { NAMESPACE = 'images' } = process.env;
 
 exports.register = async server => {
+  const relativeTo = Path.join(__dirname, 'app');
+  const buildRoot = Path.join(__dirname, `../build/${NAMESPACE}/static/`);
+  const publicRoot = Path.join(__dirname, `../public/static/`);
+
   await server.register([
     {
       plugin: Inert
     },
     {
-      plugin: RenderReact,
-      options: {
-        relativeTo: Path.join(__dirname, 'app')
-      }
+      plugin: RenderReact
     }
   ]);
 
   server.route([
     {
       method: 'GET',
-      path: '/service-worker.js',
+      path: `/${NAMESPACE}/service-worker.js`,
       config: {
         auth: false,
         handler: {
@@ -32,7 +36,7 @@ exports.register = async server => {
     },
     {
       method: 'GET',
-      path: '/favicon.ico',
+      path: `/${NAMESPACE}/favicon.ico`,
       config: {
         auth: false,
         handler: {
@@ -44,92 +48,42 @@ exports.register = async server => {
     },
     {
       method: 'GET',
-      path: '/font/{pathname*}',
+      path: `/${NAMESPACE}/static/{rest*}`,
       config: {
-        auth: false,
-        handler: async (request, h) => {
-          const { params } = request;
-          const { pathname } = params;
+        auth: false
+      },
+      handler: async (request, h) => {
+        const { params } = request;
+        const { rest } = params;
 
-          const location = Url.format({
-            protocol: 'https:',
-            slashes: true,
-            host: 'fonts.gstatic.com',
-            pathname
-          });
+        const publicPathname = Path.join(publicRoot, rest);
+        const buildPathname = Path.join(buildRoot, rest);
 
-          const res = await Wreck.request('GET', location);
-          return h.response(res);
-        }
+        const [err] = await Intercept(
+          Fs.access(publicPathname, Fs.constants.R_OK)
+        );
+
+        const file = err ? buildPathname : publicPathname;
+        return h.file(file, { confine: false });
       }
     },
     {
-      method: 'GET',
-      path: '/fonts/css',
-      config: {
-        auth: false,
-        handler: async (request, h) => {
-          const { query, headers } = request;
-          const { family } = query;
-          const { host } = headers;
-          const url = Url.parse(`http://${host}`);
-
-          const location = Url.format({
-            protocol: 'https:',
-            slashes: true,
-            host: 'fonts.googleapis.com',
-            pathname: '/css',
-            query: { family }
-          });
-
-          const res = await Wreck.request('GET', location);
-          const body = await Wreck.read(res);
-
-          const _body = body
-            .toString()
-            .replace(
-              /https:\/\/fonts\.gstatic\.com/g,
-              `http://${url.host}/font`
-            );
-
-          return h
-            .response(_body)
-            .header('content-type', res.headers['content-type'])
-            .header('expires', res.headers.expires)
-            .header('date', res.headers.date)
-            .header('cache-control', res.headers['cache-control']);
-        }
-      }
-    },
-    {
-      method: 'GET',
-      path: '/static/{path*}',
-      config: {
-        auth: false,
-        handler: {
-          directory: {
-            path: Path.join(__dirname, '../build/static/'),
-            redirectToSlash: true,
-            index: false
-          }
+      method: '*',
+      path: `/${NAMESPACE}/~server-error`,
+      handler: {
+        view: {
+          name: 'server-error',
+          relativeTo
         }
       }
     },
     {
       method: '*',
-      path: '/~server-error',
+      path: `/${NAMESPACE}/{path*}`,
       handler: {
         view: {
-          name: 'server-error'
-        }
-      }
-    },
-    {
-      method: '*',
-      path: '/{path*}',
-      handler: {
-        view: {
-          name: 'app'
+          name: 'app',
+          relativeTo
         }
       }
     }

@@ -1,17 +1,17 @@
 const Inert = require('inert');
-const resolvePkg = require('resolve-pkg');
 const Path = require('path');
 const RenderReact = require('hapi-render-react');
 const Wreck = require('wreck');
 const Url = require('url');
+const Intercept = require('apr-intercept');
+const Fs = require('mz/fs');
 
-const ImagesRoot = resolvePkg('my-joy-images', {
-  cwd: __dirname
-});
+const { NAMESPACE = 'instances' } = process.env;
 
 exports.register = async server => {
-  const InstancesRelativeTo = Path.join(__dirname, 'app');
-  const ImagesRelativeTo = Path.join(ImagesRoot, 'lib/app');
+  const relativeTo = Path.join(__dirname, 'app');
+  const buildRoot = Path.join(__dirname, `../build/${NAMESPACE}/static/`);
+  const publicRoot = Path.join(__dirname, `../public/static/`);
 
   await server.register([
     {
@@ -25,7 +25,7 @@ exports.register = async server => {
   server.route([
     {
       method: 'GET',
-      path: '/instances/service-worker.js',
+      path: `/${NAMESPACE}/service-worker.js`,
       config: {
         auth: false,
         handler: {
@@ -37,19 +37,7 @@ exports.register = async server => {
     },
     {
       method: 'GET',
-      path: '/images/service-worker.js',
-      config: {
-        auth: false,
-        handler: {
-          file: {
-            path: Path.join(ImagesRoot, 'build/service-worker.js')
-          }
-        }
-      }
-    },
-    {
-      method: 'GET',
-      path: '/instances/favicon.ico',
+      path: `/${NAMESPACE}/favicon.ico`,
       config: {
         auth: false,
         handler: {
@@ -61,140 +49,42 @@ exports.register = async server => {
     },
     {
       method: 'GET',
-      path: '/images/favicon.ico',
+      path: `/${NAMESPACE}/static/{rest*}`,
       config: {
-        auth: false,
-        handler: {
-          file: {
-            path: Path.join(ImagesRoot, 'build/favicon.ico')
-          }
-        }
-      }
-    },
-    {
-      method: 'GET',
-      path: '/font/{pathname*}',
-      config: {
-        auth: false,
-        handler: async (request, h) => {
-          const { params } = request;
-          const { pathname } = params;
+        auth: false
+      },
+      handler: async (request, h) => {
+        const { params } = request;
+        const { rest } = params;
 
-          const location = Url.format({
-            protocol: 'https:',
-            slashes: true,
-            host: 'fonts.gstatic.com',
-            pathname
-          });
+        const publicPathname = Path.join(publicRoot, rest);
+        const buildPathname = Path.join(buildRoot, rest);
 
-          const res = await Wreck.request('GET', location);
-          return h.response(res);
-        }
-      }
-    },
-    {
-      method: 'GET',
-      path: '/fonts/css',
-      config: {
-        auth: false,
-        handler: async (request, h) => {
-          const { query, headers } = request;
-          const { family } = query;
-          const { host } = headers;
-          const url = Url.parse(`http://${host}`);
+        const [err] = await Intercept(
+          Fs.access(publicPathname, Fs.constants.R_OK)
+        );
 
-          const location = Url.format({
-            protocol: 'https:',
-            slashes: true,
-            host: 'fonts.googleapis.com',
-            pathname: '/css',
-            query: { family }
-          });
-
-          const res = await Wreck.request('GET', location);
-          const body = await Wreck.read(res);
-
-          const _body = body
-            .toString()
-            .replace(
-              /https:\/\/fonts\.gstatic\.com/g,
-              `http://${url.host}/font`
-            );
-
-          return h
-            .response(_body)
-            .header('content-type', res.headers['content-type'])
-            .header('expires', res.headers.expires)
-            .header('date', res.headers.date)
-            .header('cache-control', res.headers['cache-control']);
-        }
-      }
-    },
-    {
-      method: 'GET',
-      path: '/instances/static/{path*}',
-      config: {
-        auth: false,
-        handler: {
-          directory: {
-            path: Path.join(__dirname, '../build/instances/static/'),
-            redirectToSlash: true,
-            index: false
-          }
-        }
-      }
-    },
-    {
-      method: 'GET',
-      path: '/images/static/{path*}',
-      config: {
-        auth: false,
-        handler: {
-          directory: {
-            path: Path.join(ImagesRoot, 'build/images/static/'),
-            redirectToSlash: true,
-            index: false
-          }
-        }
+        const file = err ? buildPathname : publicPathname;
+        return h.file(file, { confine: false });
       }
     },
     {
       method: '*',
-      path: '/instances/~server-error',
+      path: `/${NAMESPACE}/~server-error`,
       handler: {
         view: {
           name: 'server-error',
-          relativeTo: InstancesRelativeTo
+          relativeTo
         }
       }
     },
     {
       method: '*',
-      path: '/images/~server-error',
-      handler: {
-        view: {
-          name: 'server-error',
-          relativeTo: ImagesRelativeTo
-        }
-      }
-    },
-    {
-      method: '*',
-      path: '/images/{path*}',
+      path: `/${NAMESPACE}/{path*}`,
       handler: {
         view: {
           name: 'app',
-          relativeTo: ImagesRelativeTo
-        }
-      }
-    },
-    {
-      method: '*',
-      path: '/{path*}',
-      handler: {
-        view: {
-          name: 'app',
-          relativeTo: InstancesRelativeTo
+          relativeTo
         }
       }
     }

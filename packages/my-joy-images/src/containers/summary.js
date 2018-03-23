@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react';
 import { compose, graphql } from 'react-apollo';
 import { Margin } from 'styled-components-spacing';
-import find from 'lodash.find';
-import get from 'lodash.get';
-import remcalc from 'remcalc';
 import { connect } from 'react-redux';
 import intercept from 'apr-intercept';
 import { set } from 'react-redux-values';
+import get from 'lodash.get';
+import remcalc from 'remcalc';
 
 import {
   ViewContainer,

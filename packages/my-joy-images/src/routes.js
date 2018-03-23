@@ -68,6 +68,8 @@ export default () => (
 
     <Route path="/images/~server-error" component={ServerError} />
 
+    <Route path="/" exact component={() => <Redirect to="/images" />} />
+
     <noscript>
       <ViewContainer main>
         <Message warning>

@@ -150,11 +150,11 @@ export const font = {
   family: '"Libre Franklin"',
   families:
     '"Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica, sans-serif',
-  href: ({ protocol, host } = {}) => {
+  href: ({ protocol, host, namespace } = {}) => {
     const _protocol = protocol || globals.protocol;
     const _host = host || globals.host;
 
-    return `${_protocol}//${_host}/fonts/css?family=Libre+Franklin:400,500,600,700`;
+    return `${_protocol}//${_host}/${namespace}/static/css/libre-franklin.css`;
   },
   weight: {
     bold: 700,
@@ -171,11 +171,11 @@ export const monoFont = {
   textMuted: base.secondary,
   family: '"Roboto Mono"',
   families: '"Roboto Mono", monospace',
-  href: ({ protocol, host } = {}) => {
+  href: ({ protocol, host, namespace } = {}) => {
     const _protocol = protocol || globals.protocol;
     const _host = host || globals.host;
 
-    return `${_protocol}//${_host}/fonts/css?family=Roboto+Mono:700,400`;
+    return `${_protocol}//${_host}/${namespace}/static/css/roboto-mono.css`;
   },
   weight: {
     bold: 700,

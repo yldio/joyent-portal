@@ -11,7 +11,6 @@ import intercept from 'apr-intercept';
 import get from 'lodash.get';
 import uniqBy from 'lodash.uniqby';
 import omit from 'lodash.omit';
-import find from 'lodash.find';
 
 import {
   ViewContainer,

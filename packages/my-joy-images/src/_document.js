@@ -16,12 +16,23 @@ const getState = request => {
   const _font = get(theme, 'font.href', () => '');
   const _mono = get(theme, 'monoFont.href', () => '');
   const _addr = url.parse(`http://${req.headers.host}`);
+
   const _theme = Object.assign({}, theme, {
     font: Object.assign({}, theme.font, {
-      href: () => _font(_addr)
+      href: () =>
+        _font(
+          Object.assign(_addr, {
+            namespace: 'images'
+          })
+        )
     }),
     monoFont: Object.assign({}, theme.monoFont, {
-      href: () => _mono(_addr)
+      href: () =>
+        _mono(
+          Object.assign(_addr, {
+            namespace: 'images'
+          })
+        )
     })
   });
 

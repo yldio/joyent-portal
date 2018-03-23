@@ -7,8 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import isFunction from 'lodash.isfunction';
 import isFinite from 'lodash.isfinite';
 
-import { theme } from 'joyent-ui-toolkit';
-
+import theme from '@state/theme';
 import createStore from '@state/redux-store';
 import createClient from '@state/apollo-client';
 import App from './app';

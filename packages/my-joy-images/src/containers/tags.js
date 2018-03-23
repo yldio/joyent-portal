@@ -6,7 +6,6 @@ import ReduxForm from 'declarative-redux-form';
 import { destroy } from 'redux-form';
 import { set } from 'react-redux-values';
 import intercept from 'apr-intercept';
-import find from 'lodash.find';
 import get from 'lodash.get';
 import remcalc from 'remcalc';
 import Fuse from 'fuse.js';
@@ -133,7 +132,7 @@ export default compose(
       }
     }),
     props: ({ data }) => {
-      const { loading = false, error = null, image, refetch, ...rest } = data;
+      const { loading = false, error = null, image, refetch } = data;
 
       const tags = get(image || {}, 'tags', []);
       const index = new Fuse(tags, {

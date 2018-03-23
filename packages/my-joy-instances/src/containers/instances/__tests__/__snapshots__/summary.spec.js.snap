@@ -333,73 +333,17 @@ exports[`renders <Summary loading /> without throwing 1`] = `
 `;
 
 exports[`renders <Summary loadingError /> without throwing 1`] = `
-.c2 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
+.c1 {
+  margin-bottom: 1.5rem;
 }
 
-.c3 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-}
-
-.c4 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-}
-
-.c5 {
+.c6 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
   margin: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  text-align: center;
-  margin-bottom: 0;
-  margin-left: 0.375rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 1.25rem;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  line-height: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .c0 {
@@ -409,27 +353,40 @@ exports[`renders <Summary loadingError /> without throwing 1`] = `
   width: 100%;
   max-width: 62.5rem;
   padding-bottom: 1.125rem;
+}
+
+.c5 {
+  color: rgb(73,73,73);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+  margin: 0;
+}
+
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  position: relative;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  border-radius: 0.1875rem;
+  width: 100%;
+}
+
+.c3 {
+  border-radius: 0.1875rem 0 0 0.1875rem;
+  margin: -0.0625rem 0 -0.0625rem -0.0625rem;
+  min-width: 0.75rem;
+  min-height: 100%;
+  background-color: rgb(0,152,88);
+  background-color: rgb(210,67,58);
+}
+
+.c4 {
+  padding: 1.125rem 1.125rem;
 }
 
 @media only screen and (min-width:48em) {
@@ -463,37 +420,27 @@ exports[`renders <Summary loadingError /> without throwing 1`] = `
   <div
     className="c1"
   >
-    <svg
-      height="10"
-      width="28"
+    <div
+      className="c2"
     >
-      <rect
-        className="c2"
-        height="6"
-        width="6"
-        x="2"
-        y="2"
-      />
-      <rect
+      <div
         className="c3"
-        height="6"
-        width="6"
-        x="11"
-        y="2"
       />
-      <rect
+      <div
         className="c4"
-        height="6"
-        width="6"
-        x="20"
-        y="2"
-      />
-    </svg>
-    <p
-      className="c5"
-    >
-      Loading...
-    </p>
+      >
+        <h4
+          className="c5"
+        >
+          Ooops!
+        </h4>
+        <p
+          className="c6"
+        >
+          An error occurred while loading your instance summary
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 `;

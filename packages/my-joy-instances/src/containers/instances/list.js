@@ -10,6 +10,7 @@ import queryString from 'query-string';
 import intercept from 'apr-intercept';
 import get from 'lodash.get';
 import find from 'lodash.find';
+import isInteger from 'lodash.isinteger';
 import isNaN from 'lodash.isnan';
 import reverse from 'lodash.reverse';
 import sort from 'lodash.sortby';
@@ -200,12 +201,16 @@ export default compose(
       }
     }),
     props: ({ data: { loading, error, refetch, variables, ...rest } }) => {
-      const result = get(rest, 'machines', {});
+      const result = get(rest, 'machines', {}) || {};
       const machines = get(result, 'results', []);
       const offset = Number(variables.offset);
       const limit = Number(variables.limit);
 
-      const fetching = !(limit === result.limit && offset === result.offset);
+      const fetching =
+        !error &&
+        isInteger(result.limit) &&
+        isInteger(result.offset) &&
+        !(limit === result.limit && offset === result.offset);
 
       const instances = forceArray(machines).map(({ state, ...machine }) => ({
         ...machine,

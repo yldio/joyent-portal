@@ -103,9 +103,9 @@ export default compose(
       ssr: false,
       pollInterval: 1000
     }),
-    props: ({ data: { images, loading, error, refetch } }) => ({
-      images,
-      index: new Fuse(images, {
+    props: ({ data: { images = [], loading, error, refetch } }) => ({
+      images: images || [],
+      index: new Fuse(images || [], {
         keys: ['name', 'os', 'version', 'state', 'type']
       }),
       loading,
