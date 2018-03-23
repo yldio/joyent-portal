@@ -57,29 +57,6 @@ const { default: Button } = require('./');
 </span>;
 ```
 
-#### Dropdown Button
-
-```jsx
-// Name: Example
-const React = require('react');
-const { default: ButtonGroup } = require('./group');
-const { default: PopoverButton } = require('./popover');
-const { Item } = require('../popover');
-const { default: Button } = require('./');
-const { StartIcon } = require('../');
-
-<ButtonGroup>
-  <Button secondary>
-    <StartIcon />
-    <span>Start</span>
-  </Button>
-  <PopoverButton secondary>
-    <Item>Hello</Item>
-    <Item>World</Item>
-  </PopoverButton>
-</ButtonGroup>;
-```
-
 #### Quick Action
 
 Quick action buttons can be embedded in components to give additional functionality. They can be used in either primary or secondary color palettes, depending on importance.

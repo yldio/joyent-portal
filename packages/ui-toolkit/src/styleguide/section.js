@@ -32,7 +32,7 @@ export default allProps => {
 
   if (depth === 1) {
     return (
-      <CardStyled id={name.replace(/\s+/g, '-').toLowerCase()}>
+      <CardStyled>
         <Header>
           <H2 white>{name}</H2>
           {description ? <P white>{description}</P> : null}
