@@ -9,6 +9,8 @@ import Header from './header';
 
 const fullTheme = {
   ...theme,
+  headerbg: '#1e313b',
+  overlay: 'rgba(0, 0, 0, 0.25)',
   flexboxgrid: {
     gridSize: 12, // rem
     gutterWidth: 1.25, // rem

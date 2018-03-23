@@ -2,7 +2,6 @@ import React from 'react';
 import emotion from 'preact-emotion';
 import { graphql, compose } from 'react-apollo';
 import gql from 'graphql-tag';
-import chunk from 'lodash.chunk';
 import remcalc from 'remcalc';
 
 import { Grid, Row, Col } from 'preact-emotion-flexboxgrid';
@@ -12,7 +11,9 @@ import {
   ServiceName,
   ServiceDescription,
   Service,
-  Overlay
+  Overlay,
+  Anchor,
+  Sup
 } from '../components';
 
 const Container = emotion('div')`
@@ -20,75 +21,81 @@ const Container = emotion('div')`
   background-color: #ffffff;
 `;
 
-const GetCategories = gql`
-  {
-    categories @client {
-      name
-      slug
-    }
-  }
+const CategoryWrapper = emotion(Col)`
+  margin-bottom: ${remcalc(48)};
 `;
+
+const sliptTag = tag => tag.split('=').map(n => n.replace(/'/g, ''));
+
+const isNew = tag => sliptTag(tag)[0] === 'is-new';
+
+const formatTag = tag => {
+  if (sliptTag(tag)[0] === 'note') {
+    return sliptTag(tag)[1];
+  }
+
+  if (sliptTag(tag)[0] === 'is-new') {
+    return 'New!';
+  }
+
+  return tag;
+};
 
 const GetProducts = gql`
   {
-    products {
+    categories {
       name
-      description
-      category
-      url
+      services {
+        name
+        slug
+        url
+        tags
+        description
+      }
     }
   }
 `;
 
-const Services = ({ expanded = false, categories = [], products = [] }) =>
+const Services = ({ expanded = false, categories = [], loading }) =>
   expanded ? (
     <Overlay>
       <Container>
         <Grid>
-          {chunk(
-            categories.map(({ slug, ...category }) => ({
-              ...category,
-              services: products.filter(({ category }) => category === slug),
-              slug
-            })),
-            4
-          ).map(chunk => (
-            <Row>
-              {chunk.map(({ name, services }) => (
-                <Col xs={12} sm={6} md={4} lg={3}>
+          <Row>
+            {!loading &&
+              categories.map(({ name, services }) => (
+                <CategoryWrapper xs={12} sm={6} md={4}>
                   <ServiceCategory>{name}</ServiceCategory>
-                  {services.map(({ name, description }) => (
+                  {services.map(({ name, description, url, tags }) => (
                     <Service>
-                      <ServiceName>{name}</ServiceName>
+                      <ServiceName>
+                        <Anchor href={url}>{name}</Anchor>
+                        {tags
+                          ? tags.map(tag => (
+                              <Sup new={isNew(tag)}>{formatTag(tag)}</Sup>
+                            ))
+                          : null}
+                      </ServiceName>
                       <ServiceDescription>{description}</ServiceDescription>
                     </Service>
                   ))}
-                </Col>
+                </CategoryWrapper>
               ))}
-            </Row>
-          ))}
+          </Row>
         </Grid>
       </Container>
     </Overlay>
   ) : null;
 
 export default compose(
-  graphql(GetCategories, {
-    options: () => ({
-      ssr: false
-    }),
-    props: ({ data }) => {
-      const { categories = [] } = data;
-      return { categories };
-    }
-  }),
   graphql(GetProducts, {
     options: () => ({
       ssr: false
     }),
-    props: ({ data }) => {
-      const { products = [] } = data;
-      return { products };
-    }
+    props: ({ data: { categories = [], loading = false, error = null } }) => ({
+      categories,
+      loading,
+      error
+    })
   })
 )(Services);
