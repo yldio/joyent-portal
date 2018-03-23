@@ -41,7 +41,7 @@ export default ({ children: { props } }) => {
       {items.map(({ heading, name, slug, content }) => (
         <li key={name}>
           <Header>
-            <Link href={`/#${slug}`}>{name}</Link>
+            <Link href={`/#!/${name}`}>{name}</Link>
           </Header>
           {content}
         </li>

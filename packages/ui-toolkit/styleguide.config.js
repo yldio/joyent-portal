@@ -12,6 +12,7 @@ module.exports = {
   editorConfig: {
     theme: 'base16-light'
   },
+  pagePerSection: true,
   webpackConfig: Object.assign(webpackConfig, {
     resolve: Object.assign(webpackConfig.resolve, {
       alias: Object.assign(webpackConfig.resolve.alias, {

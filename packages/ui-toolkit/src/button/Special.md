@@ -40,6 +40,31 @@ const { DeleteIcon } = require('../');
 </Button>;
 ```
 
+#### Dropdown Button
+
+Dropdown Button is to be used when users have choices that are secondary to the one shown as the main action
+
+```jsx
+// Name: Example
+const React = require('react');
+const { default: ButtonGroup } = require('./group');
+const { default: PopoverButton } = require('./popover');
+const { Item } = require('../popover');
+const { default: Button } = require('./');
+const { StartIcon } = require('../');
+
+<ButtonGroup>
+  <Button secondary bold icon>
+    <StartIcon />
+    <span>Start</span>
+  </Button>
+  <PopoverButton secondary>
+    <Item>Hello</Item>
+    <Item>World</Item>
+  </PopoverButton>
+</ButtonGroup>;
+```
+
 #### Toggle Switch
 
 Toggle switch is to be used when users have the choice to turn a service or feature on or off.
