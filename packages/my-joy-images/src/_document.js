@@ -10,12 +10,17 @@ const { default: createStore } = require('./state/redux-store');
 const indexFile = path.join(__dirname, '../../build/index.html');
 const assets = require('../../build/asset-manifest.json');
 
+const { NODE_ENV = 'development' } = process.env;
+
 const getState = request => {
   const { req } = request.raw;
+  const { headers } = req;
+  const { host } = headers;
 
+  const protocol = NODE_ENV === 'development' ? 'http:' : 'https:';
   const _font = get(theme, 'font.href', () => '');
   const _mono = get(theme, 'monoFont.href', () => '');
-  const _addr = url.parse(`http://${req.headers.host}`);
+  const _addr = url.parse(`${protocol}//${host}`);
 
   const _theme = Object.assign({}, theme, {
     font: Object.assign({}, theme.font, {

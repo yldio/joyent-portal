@@ -58,8 +58,6 @@ exports.register = async server => {
           Fs.access(publicPathname, Fs.constants.R_OK)
         );
 
-        console.log({ publicPathname });
-
         if (!err1) {
           return h.file(publicPathname, {
             confine: publicRoot
@@ -70,8 +68,6 @@ exports.register = async server => {
         const [err2] = await Intercept(
           Fs.access(buildMapPathname, Fs.constants.R_OK)
         );
-
-        console.log({ buildMapPathname });
 
         if (!err2) {
           return h.file(buildMapPathname, {
