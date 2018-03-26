@@ -16,7 +16,7 @@ const PORT = REACT_APP_GQL_PORT ? `:${REACT_APP_GQL_PORT}` : '';
 const URI = `${REACT_APP_GQL_PROTOCOL}://${REACT_APP_GQL_HOSTNAME}${PORT}/navigation/graphql`;
 
 const cache = new InMemoryCache();
-const remote = new HttpLink({ uri: URI });
+const remote = new HttpLink({ uri: URI, credentials: 'same-origin' });
 
 const local = withClientState({
   cache,
