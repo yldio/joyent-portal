@@ -90,7 +90,7 @@ const Navigation = ({
         <HeaderItemContent>
           <HeaderItemSubContent>Account:</HeaderItemSubContent>
           <HeaderSpace />
-          Raul Millais
+          Unknown
         </HeaderItemContent>
         <HeaderItemIcon>
           <Avatar />
