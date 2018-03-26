@@ -33,20 +33,19 @@ const GetHeader = gql`
   }
 `;
 
-// Needs to be revised
-// const GetAccount = gql`
-//   {
-//     datacenter {
-//       name
-//     }
-//     account {
-//       login
-//     }
-//   }
-// `;
+const GetAccount = gql`
+  {
+    datacenter {
+      name
+    }
+    account {
+      login
+    }
+  }
+`;
 
 const Navigation = ({
-  login,
+  account = {},
   datacenter = true,
   toggleSectionOpen,
   isOpen,
@@ -86,17 +85,18 @@ const Navigation = ({
         </HeaderItem>
       ) : null}
       {datacenter ? <HeaderDividerItem /> : null}
-      <HeaderItem>
-        <HeaderItemContent>
-          <HeaderItemSubContent>Account:</HeaderItemSubContent>
-          <HeaderSpace />
-          Raul Millais
-        </HeaderItemContent>
-        <HeaderItemIcon>
-          <Avatar />
-        </HeaderItemIcon>
-      </HeaderItem>
-      )
+      {account.login ? (
+        <HeaderItem>
+          <HeaderItemContent>
+            <HeaderItemSubContent>Account:</HeaderItemSubContent>
+            <HeaderSpace />
+            {`${account.login}`}
+          </HeaderItemContent>
+          <HeaderItemIcon>
+            <Avatar />
+          </HeaderItemIcon>
+        </HeaderItem>
+      ) : null}
     </HeaderRow>
     {keys(Overlays).map(panelName =>
       React.createElement(Overlays[panelName], {
@@ -107,23 +107,23 @@ const Navigation = ({
 );
 
 export default compose(
-  // graphql(GetAccount, {
-  //   options: () => ({
-  //     ssr: false
-  //   }),
-  //   props: ({ data }) => {
-  //     const {
-  //       account = {},
-  //       datacenter = {},
-  //       loading = false,
-  //       error = null
-  //     } = data;
-  //     const { login } = account;
-  //     const { name } = datacenter;
+  graphql(GetAccount, {
+    options: () => ({
+      ssr: false
+    }),
+    props: ({ data }) => {
+      const {
+        account = {},
+        datacenter = {},
+        loading = false,
+        error = null
+      } = data;
 
-  //     return { login, datacenter: name, loading, error };
-  //   }
-  // }),
+      const { name } = datacenter;
+
+      return { account, datacenter: name, loading, error };
+    }
+  }),
   graphql(GetHeader, {
     options: () => ({
       ssr: false
