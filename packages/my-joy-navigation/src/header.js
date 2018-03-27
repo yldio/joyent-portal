@@ -77,7 +77,7 @@ const Navigation = ({
           <HeaderItemContent>
             <HeaderItemSubContent>Data Center:</HeaderItemSubContent>
             <HeaderSpace />
-            <span>us-east-1</span>
+            <span>{datacenter}</span>
           </HeaderItemContent>
           <HeaderItemIcon>
             <DataCenterIcon light />
