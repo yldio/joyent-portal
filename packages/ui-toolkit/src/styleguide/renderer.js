@@ -2,27 +2,30 @@ import React, { Fragment } from 'react';
 import { Grid, Row, Col } from 'joyent-react-styled-flexboxgrid';
 import styled, { ThemeProvider } from 'styled-components';
 import remcalc from 'remcalc';
-import is from 'styled-is';
 
 import theme from '../theme';
 import Logo from './logo';
 import GHLogo from './ghlogo';
 
 const Main = styled(Row)`
-  padding-top: ${remcalc(40)};
+  padding-top: ${remcalc(24)};
 `;
 
-const Sticky = styled.div`
+const Sidebar = styled.div`
   position: sticky;
   top: 0;
   z-index: 9;
-
-  ${is('sidebar')`
-    top: ${remcalc(100)};
-    margin-left: ${remcalc(10)};
-    max-height: 85vh;
-    overflow: auto;
-  `};
+  top: ${remcalc(0)};
+  margin-top: ${remcalc(-24)};
+  padding: ${remcalc(24)};
+  margin-left: ${remcalc(10)};
+  max-height: 100vh;
+  overflow: auto;
+  background: white;
+  width: ${remcalc(234)};
+  border-right: ${remcalc(1)} solid ${props => props.theme.grey};
+  box-sizing: border-box;
+  padding-right: 0;
 `;
 
 const Header = styled.header`
@@ -46,7 +49,7 @@ const List = styled.ul`
     }
 
     &:not(:last-child) {
-      border-right: 1px solid ${props => props.theme.text};
+      border-right: ${remcalc(1)} solid ${props => props.theme.text};
       padding-right: ${remcalc(24)};
       margin-right: ${remcalc(24)};
     }
@@ -99,11 +102,11 @@ const StyleGuideRenderer = ({
           <GHLogo />
         </a>
       </Header>
-      <Grid>
+      <Grid style={{ marginLeft: 0 }}>
         <Main>
           {hasSidebar && (
             <Col xs={3}>
-              <Sticky sidebar>{toc}</Sticky>
+              <Sidebar>{toc}</Sidebar>
             </Col>
           )}
           <Col xs={hasSidebar ? 9 : 12} lg={hasSidebar ? 8 : 12}>
