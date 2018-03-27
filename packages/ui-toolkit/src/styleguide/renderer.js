@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Grid, Row, Col } from 'joyent-react-styled-flexboxgrid';
 import styled, { ThemeProvider } from 'styled-components';
 import remcalc from 'remcalc';
 import is from 'styled-is';
 
 import theme from '../theme';
+import Logo from './logo';
+import GHLogo from './ghlogo';
 
 const Main = styled(Row)`
   padding-top: ${remcalc(40)};
@@ -21,6 +23,34 @@ const Sticky = styled.div`
     max-height: 85vh;
     overflow: auto;
   `};
+`;
+
+const Header = styled.header`
+  background: ${props => props.theme.greyDarker};
+  color: ${props => props.theme.white};
+  height: ${remcalc(48)};
+  padding: 0 ${remcalc(24)};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const List = styled.ul`
+  list-style: none;
+  display: flex;
+
+  li {
+    a {
+      color: ${props => props.theme.white};
+      text-decoration: none;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid ${props => props.theme.text};
+      padding-right: ${remcalc(24)};
+      margin-right: ${remcalc(24)};
+    }
+  }
 `;
 
 const fullTheme = {
@@ -49,18 +79,39 @@ const StyleGuideRenderer = ({
   hasSidebar
 }) => (
   <ThemeProvider theme={fullTheme}>
-    <Grid>
-      <Main>
-        {hasSidebar && (
-          <Col xs={3}>
-            <Sticky sidebar>{toc}</Sticky>
+    <Fragment>
+      <Header>
+        <List>
+          <li>
+            <a href="/">Visuals</a>
+          </li>
+          <li>Copy Guide</li>
+          <li>
+            <a href="#!/Download">Downloads</a>
+          </li>
+        </List>
+        <Logo />
+        <a
+          href="https://github.com/yldio/joyent-portal/tree/master/packages/ui-toolkit"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <GHLogo />
+        </a>
+      </Header>
+      <Grid>
+        <Main>
+          {hasSidebar && (
+            <Col xs={3}>
+              <Sticky sidebar>{toc}</Sticky>
+            </Col>
+          )}
+          <Col xs={hasSidebar ? 9 : 12} lg={hasSidebar ? 8 : 12}>
+            {children}
           </Col>
-        )}
-        <Col xs={hasSidebar ? 9 : 12} lg={hasSidebar ? 8 : 12}>
-          {children}
-        </Col>
-      </Main>
-    </Grid>
+        </Main>
+      </Grid>
+    </Fragment>
   </ThemeProvider>
 );
 
