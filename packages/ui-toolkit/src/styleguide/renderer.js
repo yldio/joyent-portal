@@ -17,7 +17,7 @@ const Sidebar = styled.div`
   z-index: 9;
   top: ${remcalc(0)};
   margin-top: ${remcalc(-24)};
-  padding: ${remcalc(24)};
+  padding: ${remcalc(24)} 0;
   margin-left: ${remcalc(10)};
   max-height: 100vh;
   overflow: auto;
@@ -25,7 +25,6 @@ const Sidebar = styled.div`
   width: ${remcalc(234)};
   border-right: ${remcalc(1)} solid ${props => props.theme.grey};
   box-sizing: border-box;
-  padding-right: 0;
 `;
 
 const Header = styled.header`

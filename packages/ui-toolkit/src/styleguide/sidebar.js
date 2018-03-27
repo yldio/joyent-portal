@@ -23,6 +23,7 @@ const Header = styled.p`
   font-size: ${remcalc(15)};
   padding-bottom: ${remcalc(12)};
   padding-top: ${remcalc(12)};
+  padding-left: ${remcalc(24)};
   margin: ${remcalc(0)};
 
   ${is('active')`
