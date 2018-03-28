@@ -40,13 +40,14 @@ const GetAccount = gql`
     }
     account {
       login
+      emailHash
     }
   }
 `;
 
 const Navigation = ({
-  account = {},
-  datacenter = true,
+  user = {},
+  datacenter,
   toggleSectionOpen,
   isOpen,
   activePanel
@@ -85,15 +86,18 @@ const Navigation = ({
         </HeaderItem>
       ) : null}
       {datacenter ? <HeaderDividerItem /> : null}
-      {account.login ? (
-        <HeaderItem>
+      {user.login ? (
+        <HeaderItem
+          onClick={() => toggleSectionOpen('account')}
+          active={isOpen && activePanel === 'account'}
+        >
           <HeaderItemContent>
             <HeaderItemSubContent>Account:</HeaderItemSubContent>
             <HeaderSpace />
-            {`${account.login}`}
+            {`${user.login}`}
           </HeaderItemContent>
           <HeaderItemIcon>
-            <Avatar />
+            <Avatar src={user.image} />
           </HeaderItemIcon>
         </HeaderItem>
       ) : null}
@@ -121,7 +125,12 @@ export default compose(
 
       const { name } = datacenter;
 
-      return { account, datacenter: name, loading, error };
+      const user = {
+        ...account,
+        image: `https://www.gravatar.com/avatar/${account.emailHash}`
+      };
+
+      return { user, datacenter: name, loading, error };
     }
   }),
   graphql(GetHeader, {
