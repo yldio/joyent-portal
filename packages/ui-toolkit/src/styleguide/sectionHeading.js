@@ -6,8 +6,6 @@ import remcalc from 'remcalc';
 
 const styles = ({ color, fontFamily, fontSize }) => ({
   heading: {
-    margin: remcalc(24),
-    marginLeft: 0,
     color: color.base,
     fontFamily: fontFamily.base,
     fontWeight: 'normal'

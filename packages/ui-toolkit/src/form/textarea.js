@@ -1,13 +1,13 @@
 import React from 'react';
 import is from 'styled-is';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import Baseline from '../baseline';
 import BaseInput, { Stylable } from './base/input';
 
-const TextareaInput = Baseline(BaseInput(Stylable('textarea')));
+const TextareaInput = BaseInput(Stylable('textarea'));
 
-const BaseTextarea = TextareaInput.extend`
+const BaseTextarea = styled(TextareaInput)`
   position: relative;
   display: inline-flex;
 

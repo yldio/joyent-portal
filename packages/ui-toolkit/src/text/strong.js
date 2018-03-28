@@ -8,7 +8,6 @@ export default styled.strong`
   font-weight: ${props => props.theme.font.weight.bold};
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
-  margin: 0;
 
   ${is('inline')`
     display: inline-block;
@@ -17,20 +16,5 @@ export default styled.strong`
   ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
-  `};
-
-  ${isNot('noMargin')`
-    & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
-      padding-bottom: ${remcalc(36)};
-    }
   `};
 `;

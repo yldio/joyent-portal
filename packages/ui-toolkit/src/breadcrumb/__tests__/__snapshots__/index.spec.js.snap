@@ -1,34 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Breadcrumb Default Breadcrumb 1`] = `
-.c7 {
+.c10 {
   color: rgb(73,73,73);
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
-  font-weight: normal;
-  margin: 0.75rem 0;
 }
 
-.c7 + p,
-.c7 + small,
-.c7 + h1,
-.c7 + h2,
-.c7 + label,
-.c7 + h3,
-.c7 + h4,
-.c7 + h5,
-.c7 + div,
-.c7 + span {
-  margin-top: 0.75rem;
+.c9 {
+  font-weight: normal;
+  margin: 0;
 }
 
 .c8 {
-  margin: 0.1875rem 0.625rem;
-}
-
-.c6 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -39,36 +24,29 @@ exports[`Breadcrumb Default Breadcrumb 1`] = `
   align-items: center;
 }
 
-.c6:first-child a {
+.c8:first-child a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c6:last-child svg {
+.c8:last-child svg {
   display: none;
 }
 
-.c1 {
+.c2 {
   margin-right: auto;
   margin-left: auto;
   padding-right: 1.875rem;
   padding-left: 1.875rem;
-  box-sizing: border-box;
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
 }
 
-.c3 {
+.c5 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
 }
 
-.c4 {
+.c6 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -87,7 +65,7 @@ exports[`Breadcrumb Default Breadcrumb 1`] = `
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c7 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -97,9 +75,22 @@ exports[`Breadcrumb Default Breadcrumb 1`] = `
   display: block;
 }
 
-.c2 {
+.c3 {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
+}
+
+.c1 {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.c4 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
 }
 
 .c0 {
@@ -107,32 +98,25 @@ exports[`Breadcrumb Default Breadcrumb 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c3 {
+  .c5 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c3 {
+  .c5 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c3 {
+  .c5 {
     width: 59rem;
   }
 }
 
-@media only screen and (max-width:47.9375rem) {
-  .c3 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-}
-
 @media only screen and (min-width:0em) {
-  .c5 {
+  .c7 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -140,35 +124,40 @@ exports[`Breadcrumb Default Breadcrumb 1`] = `
   }
 }
 
+@media only screen and (max-width:47.9375rem) {
+  .c4 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
 <div
-  className="c0 c1"
+  className="c0 c1 c2"
 >
   <div
-    className="c2"
+    className="c3"
   >
     <div
-      className="c3"
+      className="c4 c5"
     >
       <div
-        className="c4"
+        className="c6"
         name="breadcrum"
       >
         <div
-          className="c5"
+          className="c7"
         >
           <div
-            className="c6"
+            className="c8"
           >
             <h4
-              className="c7"
+              className="c9 c10"
               name="breadcrum-item"
             >
               Home
             </h4>
             <svg
-              className="c8 "
               height="6"
-              innerRef={undefined}
               style={
                 Object {
                   "transform": "rotate(-90deg)",
@@ -185,18 +174,16 @@ exports[`Breadcrumb Default Breadcrumb 1`] = `
             </svg>
           </div>
           <div
-            className="c6"
+            className="c8"
           >
             <h4
-              className="c7"
+              className="c9 c10"
               name="breadcrum-item"
             >
               Warp Records Blog
             </h4>
             <svg
-              className="c8 "
               height="6"
-              innerRef={undefined}
               style={
                 Object {
                   "transform": "rotate(-90deg)",
@@ -213,18 +200,16 @@ exports[`Breadcrumb Default Breadcrumb 1`] = `
             </svg>
           </div>
           <div
-            className="c6"
+            className="c8"
           >
             <h4
-              className="c7"
+              className="c9 c10"
               name="breadcrum-item"
             >
               Services
             </h4>
             <svg
-              className="c8 "
               height="6"
-              innerRef={undefined}
               style={
                 Object {
                   "transform": "rotate(-90deg)",
@@ -241,18 +226,16 @@ exports[`Breadcrumb Default Breadcrumb 1`] = `
             </svg>
           </div>
           <div
-            className="c6"
+            className="c8"
           >
             <h4
-              className="c7"
+              className="c9 c10"
               name="breadcrum-item"
             >
               Nginx
             </h4>
             <svg
-              className="c8 "
               height="6"
-              innerRef={undefined}
               style={
                 Object {
                   "transform": "rotate(-90deg)",
@@ -276,31 +259,16 @@ exports[`Breadcrumb Default Breadcrumb 1`] = `
 `;
 
 exports[`Breadcrumb Default Item 1`] = `
-.c1 {
+.c2 {
   color: rgb(73,73,73);
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
+}
+
+.c1 {
   font-weight: normal;
-  margin: 0.75rem 0;
-}
-
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
-  margin-top: 0.75rem;
-}
-
-.c2 {
-  margin: 0.1875rem 0.625rem;
+  margin: 0;
 }
 
 .c0 {
@@ -328,15 +296,13 @@ exports[`Breadcrumb Default Item 1`] = `
   className="c0"
 >
   <h4
-    className="c1"
+    className="c1 c2"
     name="breadcrum-item"
   >
     Home
   </h4>
   <svg
-    className="c2 "
     height="6"
-    innerRef={undefined}
     style={
       Object {
         "transform": "rotate(-90deg)",

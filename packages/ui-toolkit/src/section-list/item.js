@@ -3,7 +3,6 @@ import remcalc from 'remcalc';
 import is from 'styled-is';
 
 import BaseAnchor from '../anchor';
-import Baseline from '../baseline';
 
 const border = css`
   width: 100%;
@@ -16,17 +15,13 @@ const border = css`
   z-index: 2;
 `;
 
-export default Baseline(styled.li`
+export default styled.li`
   font-size: ${remcalc(15)};
   line-height: 1.6;
   flex-shrink: 0;
+`;
 
-  &:not(:last-child) {
-    margin-right: ${remcalc(30)};
-  }
-`);
-
-export const Anchor = Baseline(styled(BaseAnchor)`
+export const Anchor = styled(BaseAnchor)`
   color: ${props => props.theme.secondary};
   text-decoration: none;
   cursor: pointer;
@@ -49,4 +44,4 @@ export const Anchor = Baseline(styled(BaseAnchor)`
       ${border}
     }
   `};
-`);
+`;

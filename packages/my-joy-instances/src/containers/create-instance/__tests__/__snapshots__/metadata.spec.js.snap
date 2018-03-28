@@ -1,15 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Metadata /> without throwing 1`] = `
-.c3 {
+.c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -28,19 +24,24 @@ exports[`renders <Metadata /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 .c0 {
@@ -107,9 +108,7 @@ exports[`renders <Metadata /> without throwing 1`] = `
         className="c2"
       >
         <svg
-          className=""
           height="11"
-          innerRef={undefined}
           style={
             Object {
               "transform": "rotate(0deg)",
@@ -134,16 +133,16 @@ exports[`renders <Metadata /> without throwing 1`] = `
       </div>
     </div>
     <small
-      className="c3"
+      className="c3 c4"
     >
       Metadata
     </small>
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <div
-      className="c5 c6"
+      className="c6 c7"
       height="0.0625rem"
     />
   </div>
@@ -152,15 +151,11 @@ exports[`renders <Metadata /> without throwing 1`] = `
 
 exports[`renders <Metadata addOpen expanded /> without throwing 1`] = `
 Array [
-  .c3 {
+  .c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -179,17 +174,22 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
   margin-bottom: 1.125rem;
 }
@@ -258,9 +258,7 @@ Array [
                 className="c2"
             >
                 <svg
-                    className=""
                     height="11"
-                    innerRef={undefined}
                     style={
                         Object {
                             "transform": "rotate(0deg)",
@@ -285,25 +283,24 @@ Array [
             </div>
         </div>
         <small
-            className="c3"
+            className="c3 c4"
         >
             Metadata
         </small>
     </div>
     <div
-        className="c4"
+        className="c5"
     >
         <div
-            className="c5 c6"
+            className="c6 c7"
             height="0.0625rem"
         />
     </div>
 </div>,
-  .c3 {
+  .c4 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
 .c0 {
@@ -339,6 +336,10 @@ Array [
   margin-bottom: 1.125rem;
 }
 
+.c3 {
+  margin: 0;
+}
+
 @media only screen and (min-width:0em) {
   .c1 {
     -webkit-flex-basis: 100%;
@@ -367,7 +368,7 @@ Array [
             className="c2"
         >
             <p
-                className="c3"
+                className="c3 c4"
             >
                 Metadata can be used to pass data to the instance. It can also be used to inject a custom boot script. Unlike tags, metadata is only viewable inside the instance.
                  
@@ -387,20 +388,6 @@ Array [
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
-  margin-top: 0.75rem;
 }
 
 .c0 {
@@ -418,7 +405,7 @@ Array [
         s
     </h3>
 </div>,
-  .c24 {
+  .c30 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -428,52 +415,32 @@ Array [
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c24::-moz-focus-inner,
-.c24[type='button']::-moz-focus-inner,
-.c24[type='reset']::-moz-focus-inner,
-.c24[type='submit']::-moz-focus-inner {
+.c30::-moz-focus-inner,
+.c30[type='button']::-moz-focus-inner,
+.c30[type='reset']::-moz-focus-inner,
+.c30[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c24:-moz-focusring,
-.c24[type='button']:-moz-focusring,
-.c24[type='reset']:-moz-focusring,
-.c24[type='submit']:-moz-focusring {
+.c30:-moz-focusring,
+.c30[type='button']:-moz-focusring,
+.c30[type='reset']:-moz-focusring,
+.c30[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c24 + button,
-.c24 + a {
-  margin-left: 0.375rem;
+.c29 {
+  min-width: 7.5rem;
 }
 
-.c18 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c23 {
+.c28 {
   display: inline-block;
 }
 
-.c23 + button,
-.c23 + a {
-  margin-left: 0.375rem;
-}
-
-.c22 {
+.c27 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -515,10 +482,9 @@ Array [
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c22:focus {
+.c27:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -526,43 +492,43 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c22:hover {
+.c27:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c22[disabled] {
+.c27[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22:focus {
+.c27:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c22:hover {
+.c27:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c22:active,
-.c22:active:hover,
-.c22:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c25 {
+.c31 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -605,10 +571,9 @@ Array [
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c25:focus {
+.c31:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -616,43 +581,43 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c25:hover {
+.c31:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c31:active,
+.c31:active:hover,
+.c31:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c25[disabled] {
+.c31[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c25:focus {
+.c31:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c25:hover {
+.c31:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c25:active,
-.c25:active:hover,
-.c25:active:focus {
+.c31:active,
+.c31:active:hover,
+.c31:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c27 {
+.c33 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -706,11 +671,10 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   float: right;
 }
 
-.c27:focus {
+.c33:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -718,70 +682,62 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c33:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c33[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c33:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c33:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c33:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:hover {
+.c33:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c27 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c27 svg {
-  max-height: 1.125rem;
-}
-
-.c13 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -789,14 +745,9 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c10 {
+.c13 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -815,7 +766,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c21 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -834,7 +785,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c11 {
+.c14 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -844,7 +795,7 @@ Array [
   display: block;
 }
 
-.c16 {
+.c20 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -854,7 +805,7 @@ Array [
   display: block;
 }
 
-.c26 {
+.c32 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -864,52 +815,40 @@ Array [
   display: block;
 }
 
-.c7 {
+.c9 {
   color: rgb(73,73,73);
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c7 + p,
-.c7 + small,
-.c7 + h1,
-.c7 + h2,
-.c7 + label,
-.c7 + h3,
-.c7 + h4,
-.c7 + h5,
-.c7 + div,
-.c7 + span {
-  margin-top: 0.75rem;
-}
-
-.c17 {
+.c21 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 0.75rem;
 }
 
-.c14 {
+.c18 {
   margin-top: 0.1875rem;
 }
 
-.c20 {
+.c24 {
   margin-top: 0.375rem;
 }
 
-.c3 {
+.c34 {
+  margin-right: 0.75rem;
+}
+
+.c5 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c9 {
+.c12 {
   padding: 1.125rem;
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -965,7 +904,7 @@ Array [
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c8 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -985,6 +924,36 @@ Array [
   color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
+}
+
+.c3 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+}
+
+.c10 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -997,43 +966,10 @@ Array [
   -ms-flex-direction: column;
   flex-direction: column;
   border-width: 0;
-  margin-bottom: 0;
   background-color: transparent;
 }
 
-.c8 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c8 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c1 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
+.c2 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1041,39 +977,9 @@ Array [
   line-height: 1.5rem;
   height: auto;
   max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
-.c1 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c6 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
+.c8 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -1107,15 +1013,12 @@ Array [
   color: inherit;
 }
 
-.c12 {
+.c15 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -1123,7 +1026,7 @@ Array [
   width: 100%;
 }
 
-.c15 {
+.c19 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1143,70 +1046,6 @@ Array [
   outline: 0;
   max-width: 22.1875rem;
   text-overflow: ellipsis;
-}
-
-.c15:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c15::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:invalid {
-  box-shadow: none;
-}
-
-.c15:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c15:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c19 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 6rem;
-  min-height: 6rem;
-  padding: 0.8125rem 0.75rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(73,73,73);
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
-  text-overflow: ellipsis;
-  resize: vertical;
 }
 
 .c19:focus {
@@ -1248,36 +1087,129 @@ Array [
   color: rgba(73,73,73,0.5);
 }
 
-.c19:disabled {
+.c23 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 6rem;
+  min-height: 6rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+  resize: vertical;
+}
+
+.c23:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c23::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:invalid {
+  box-shadow: none;
+}
+
+.c23:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c23:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled {
   color: rgb(73,73,73);
 }
 
-.c19:disabled::-webkit-input-placeholder {
+.c23:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c19:disabled::-moz-placeholder {
+.c23:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c19:disabled:-ms-input-placeholder {
+.c23:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c2 {
+.c22 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c16 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c1 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.c26 {
+  margin-right: 0.375rem;
+}
+
+.c4 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c5 {
+.c7 {
   height: 2.9375rem;
   max-width: 98%;
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1286,7 +1218,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1295,7 +1227,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c11 {
+  .c14 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1304,7 +1236,7 @@ Array [
 }
 
 @media only screen and (min-width:48em) {
-  .c16 {
+  .c20 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -1313,7 +1245,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c32 {
     display: none;
   }
 }
@@ -1327,24 +1259,24 @@ Array [
         name="card"
     >
         <div
-            className="c1"
+            className="c1 c2 c3"
             disabled={false}
             name="card-header"
             onClick={false}
         >
             <div
-                className="c2 c3"
+                className="c4 c5"
             >
                 <div
-                    className="c4"
+                    className="c6"
                 >
                     <div
-                        className="c5 c6"
+                        className="c7 c8 c3"
                         disabled={false}
                         name="card-header-meta"
                     >
                         <h4
-                            className="c7"
+                            className="c9"
                         >
                             Add metadata
                         </h4>
@@ -1353,79 +1285,80 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c10 c11"
+            disabled={false}
             name="card-outlet"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <div
-                    className="c10"
+                    className="c13"
                 >
                     <div
-                        className="c11"
+                        className="c14"
                     >
                         <div
-                            className="baseline-jVaZNU kXgQxt c12"
+                            className="c15"
                             name="name"
                             role="group"
                             style={undefined}
                         >
                             <label
-                                className="c13"
+                                className="c16 c17"
                                 htmlFor="s"
                             >
                                 Metadata
                                  key
                             </label>
                             <div
-                                className="c14"
+                                className="c18"
                             >
                                 <input
-                                    className="c15"
+                                    className="c19"
                                     disabled={false}
                                     id="s"
                                     onBlur={null}
                                 />
                                 <div
-                                    className="c10"
+                                    className="c13"
                                 >
                                     <div
-                                        className="c16"
+                                        className="c20"
                                     />
                                 </div>
                             </div>
                         </div>
                         <div
-                            className="c17 c10"
+                            className="c21 c13"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c10"
+                    className="c13"
                 >
                     <div
-                        className="c11"
+                        className="c14"
                     >
                         <div
-                            className="baseline-jVaZNU kXgQxt c12"
+                            className="c15"
                             name="value"
                             role="group"
                             style={undefined}
                         >
                             <label
-                                className="c13"
+                                className="c16 c17"
                                 htmlFor="t"
                             >
                                 Metadata
                                  value
                             </label>
                             <div
-                                className="c14"
+                                className="c18"
                             >
                                 <textarea
-                                    className="c18 c19"
+                                    className="c22 c23"
                                     disabled={false}
                                     id="t"
                                     name="name"
@@ -1433,30 +1366,30 @@ Array [
                                 />
                             </div>
                             <div
-                                className="c10"
+                                className="c13"
                             >
                                 <div
-                                    className="c16"
+                                    className="c20"
                                 />
                             </div>
                         </div>
                         <div
-                            className="c17 c10"
+                            className="c21 c13"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c20"
+                    className="c24"
                 >
                     <div
-                        className="c21"
+                        className="c25"
                     >
                         <div
-                            className="c11"
+                            className="c14"
                         >
                             <button
-                                className="c22 c23 c24"
+                                className="c26 c27 c28 c29 c30"
                                 data-ui-button="true"
                                 disabled={false}
                                 href=""
@@ -1468,7 +1401,7 @@ Array [
                                 </span>
                             </button>
                             <button
-                                className="c25 c23 c24"
+                                className="c31 c28 c29 c30"
                                 data-ui-button="true"
                                 disabled={true}
                                 href=""
@@ -1480,10 +1413,10 @@ Array [
                             </button>
                         </div>
                         <div
-                            className="c26"
+                            className="c32"
                         >
                             <button
-                                className="c27 c23 c24"
+                                className="c33 c28 c29 c30"
                                 data-ui-button="true"
                                 disabled={false}
                                 href=""
@@ -1491,24 +1424,26 @@ Array [
                                 onClick={[Function]}
                                 type="button"
                             >
-                                <svg
-                                    className=""
-                                    height="16"
-                                    innerRef={undefined}
-                                    style={
-                                        Object {
-                                            "transform": "rotate(0deg)",
-                                          }
-                                    }
-                                    viewBox="0 0 12 16"
-                                    width="12"
-                                    xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                    className="c34"
                                 >
-                                    <path
-                                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                                        fill="rgb(210, 67, 58)"
-                                    />
-                                </svg>
+                                    <svg
+                                        height="16"
+                                        style={
+                                            Object {
+                                                "transform": "rotate(0deg)",
+                                              }
+                                        }
+                                        viewBox="0 0 12 16"
+                                        width="12"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                                            fill="rgb(210, 67, 58)"
+                                        />
+                                    </svg>
+                                </div>
                                 <span>
                                     Remove
                                 </span>
@@ -1541,16 +1476,14 @@ Array [
 
 .c0 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.125rem;
 }
 
 <div
     className="c0 c1"
     height="1.125rem"
 />,
-  .c3 {
+  .c4 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1560,36 +1493,29 @@ Array [
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c3::-moz-focus-inner,
-.c3[type='button']::-moz-focus-inner,
-.c3[type='reset']::-moz-focus-inner,
-.c3[type='submit']::-moz-focus-inner {
+.c4::-moz-focus-inner,
+.c4[type='button']::-moz-focus-inner,
+.c4[type='reset']::-moz-focus-inner,
+.c4[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c3:-moz-focusring,
-.c3[type='button']:-moz-focusring,
-.c3[type='reset']:-moz-focusring,
-.c3[type='submit']:-moz-focusring {
+.c4:-moz-focusring,
+.c4[type='button']:-moz-focusring,
+.c4[type='reset']:-moz-focusring,
+.c4[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c3 + button,
-.c3 + a {
-  margin-left: 0.375rem;
+.c3 {
+  min-width: 7.5rem;
 }
 
 .c2 {
   display: inline-block;
-}
-
-.c2 + button,
-.c2 + a {
-  margin-left: 0.375rem;
 }
 
 .c1 {
@@ -1680,7 +1606,7 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1720,7 +1646,7 @@ Array [
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c4:focus {
+.c5:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1728,35 +1654,35 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c4:hover {
+.c5:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c4:active,
-.c4:active:hover,
-.c4:active:focus {
+.c5:active,
+.c5:active:hover,
+.c5:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c4[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
 .c0 {
   margin-top: 0.375rem;
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 <div
     className="c0"
 >
     <button
-        className="c1 c2 c3"
+        className="c1 c2 c3 c4"
         data-ui-button="true"
         href=""
         onClick={[Function]}
@@ -1765,7 +1691,7 @@ Array [
         Add Metadata
     </button>
     <button
-        className="c4 c2 c3"
+        className="c5 c2 c3 c4"
         data-ui-button="true"
         href=""
         onClick={undefined}
@@ -1779,15 +1705,11 @@ Array [
 
 exports[`renders <Metadata expanded /> without throwing 1`] = `
 Array [
-  .c3 {
+  .c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1806,17 +1728,22 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
   margin-bottom: 1.125rem;
 }
@@ -1885,9 +1812,7 @@ Array [
                 className="c2"
             >
                 <svg
-                    className=""
                     height="11"
-                    innerRef={undefined}
                     style={
                         Object {
                             "transform": "rotate(0deg)",
@@ -1912,25 +1837,24 @@ Array [
             </div>
         </div>
         <small
-            className="c3"
+            className="c3 c4"
         >
             Metadata
         </small>
     </div>
     <div
-        className="c4"
+        className="c5"
     >
         <div
-            className="c5 c6"
+            className="c6 c7"
             height="0.0625rem"
         />
     </div>
 </div>,
-  .c3 {
+  .c4 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
 .c0 {
@@ -1966,6 +1890,10 @@ Array [
   margin-bottom: 1.125rem;
 }
 
+.c3 {
+  margin: 0;
+}
+
 @media only screen and (min-width:0em) {
   .c1 {
     -webkit-flex-basis: 100%;
@@ -1994,7 +1922,7 @@ Array [
             className="c2"
         >
             <p
-                className="c3"
+                className="c3 c4"
             >
                 Metadata can be used to pass data to the instance. It can also be used to inject a custom boot script. Unlike tags, metadata is only viewable inside the instance.
                  
@@ -2014,20 +1942,6 @@ Array [
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
-  margin-top: 0.75rem;
 }
 
 .c0 {
@@ -2045,7 +1959,7 @@ Array [
         s
     </h3>
 </div>,
-  .c3 {
+  .c4 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2055,36 +1969,29 @@ Array [
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c3::-moz-focus-inner,
-.c3[type='button']::-moz-focus-inner,
-.c3[type='reset']::-moz-focus-inner,
-.c3[type='submit']::-moz-focus-inner {
+.c4::-moz-focus-inner,
+.c4[type='button']::-moz-focus-inner,
+.c4[type='reset']::-moz-focus-inner,
+.c4[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c3:-moz-focusring,
-.c3[type='button']:-moz-focusring,
-.c3[type='reset']:-moz-focusring,
-.c3[type='submit']:-moz-focusring {
+.c4:-moz-focusring,
+.c4[type='button']:-moz-focusring,
+.c4[type='reset']:-moz-focusring,
+.c4[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c3 + button,
-.c3 + a {
-  margin-left: 0.375rem;
+.c3 {
+  min-width: 7.5rem;
 }
 
 .c2 {
   display: inline-block;
-}
-
-.c2 + button,
-.c2 + a {
-  margin-left: 0.375rem;
 }
 
 .c1 {
@@ -2175,7 +2082,7 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2215,7 +2122,7 @@ Array [
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c4:focus {
+.c5:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2223,35 +2130,35 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c4:hover {
+.c5:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c4:active,
-.c4:active:hover,
-.c4:active:focus {
+.c5:active,
+.c5:active:hover,
+.c5:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c4[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
 .c0 {
   margin-top: 0.375rem;
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 <div
     className="c0"
 >
     <button
-        className="c1 c2 c3"
+        className="c1 c2 c3 c4"
         data-ui-button="true"
         href=""
         onClick={[Function]}
@@ -2260,7 +2167,7 @@ Array [
         Add Metadata
     </button>
     <button
-        className="c4 c2 c3"
+        className="c5 c2 c3 c4"
         data-ui-button="true"
         href=""
         onClick={undefined}
@@ -2274,15 +2181,11 @@ Array [
 
 exports[`renders <Metadata metadata=[] /> without throwing 1`] = `
 Array [
-  .c3 {
+  .c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2301,19 +2204,24 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 .c0 {
@@ -2380,9 +2288,7 @@ Array [
                 className="c2"
             >
                 <svg
-                    className=""
                     height="11"
-                    innerRef={undefined}
                     style={
                         Object {
                             "transform": "rotate(0deg)",
@@ -2407,21 +2313,21 @@ Array [
             </div>
         </div>
         <small
-            className="c3"
+            className="c3 c4"
         >
             Metadata
         </small>
     </div>
     <div
-        className="c4"
+        className="c5"
     >
         <div
-            className="c5 c6"
+            className="c6 c7"
             height="0.0625rem"
         />
     </div>
 </div>,
-  .c25 {
+  .c31 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2431,52 +2337,32 @@ Array [
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c25::-moz-focus-inner,
-.c25[type='button']::-moz-focus-inner,
-.c25[type='reset']::-moz-focus-inner,
-.c25[type='submit']::-moz-focus-inner {
+.c31::-moz-focus-inner,
+.c31[type='button']::-moz-focus-inner,
+.c31[type='reset']::-moz-focus-inner,
+.c31[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c25:-moz-focusring,
-.c25[type='button']:-moz-focusring,
-.c25[type='reset']:-moz-focusring,
-.c25[type='submit']:-moz-focusring {
+.c31:-moz-focusring,
+.c31[type='button']:-moz-focusring,
+.c31[type='reset']:-moz-focusring,
+.c31[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c25 + button,
-.c25 + a {
-  margin-left: 0.375rem;
+.c30 {
+  min-width: 7.5rem;
 }
 
-.c18 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c24 {
+.c29 {
   display: inline-block;
 }
 
-.c24 + button,
-.c24 + a {
-  margin-left: 0.375rem;
-}
-
-.c23 {
+.c28 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2518,10 +2404,9 @@ Array [
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c23:focus {
+.c28:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2529,43 +2414,43 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c23:hover {
+.c28:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c23[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c23:focus {
+.c28:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c23:hover {
+.c28:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c26 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2608,10 +2493,9 @@ Array [
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c26:focus {
+.c32:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2619,43 +2503,43 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c26:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c26[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c26:focus {
+.c32:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c26:hover {
+.c32:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c28 {
+.c34 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2709,11 +2593,10 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   float: right;
 }
 
-.c28:focus {
+.c34:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2721,70 +2604,62 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c28:hover {
+.c34:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c28[disabled] {
+.c34[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c28:focus {
+.c34:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c28:hover {
+.c34:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c28:focus {
+.c34:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c28:hover {
+.c34:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c28 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c28 svg {
-  max-height: 1.125rem;
-}
-
-.c13 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -2792,14 +2667,9 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c10 {
+.c13 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2818,7 +2688,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c21 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2835,73 +2705,75 @@ Array [
   flex-wrap: wrap;
   margin-right: -0.625rem;
   margin-left: -0.625rem;
-}
-
-.c11 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c16 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c22 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c27 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c17 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
 }
 
 .c14 {
-  margin-top: 0.1875rem;
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
 }
 
 .c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c26 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c33 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c21 {
+  background-color: rgb(216,216,216);
+  background-color: transparent;
+}
+
+.c18 {
+  margin-top: 0.1875rem;
+}
+
+.c24 {
   margin-top: 0.375rem;
 }
 
-.c3 {
+.c35 {
+  margin-right: 0.75rem;
+}
+
+.c5 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c9 {
+.c12 {
   padding: 1.125rem;
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2957,7 +2829,7 @@ Array [
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c1 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2983,6 +2855,47 @@ Array [
   -webkit-flex: 0 0 2.875rem;
   -ms-flex: 0 0 2.875rem;
   flex: 0 0 2.875rem;
+}
+
+.c11 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c10 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.c2 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2990,40 +2903,9 @@ Array [
   line-height: 1.5rem;
   height: auto;
   max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
-.c1 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c6 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
+.c8 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -3057,59 +2939,12 @@ Array [
   color: inherit;
 }
 
-.c8 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c8 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c8 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c12 {
+.c15 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -3117,7 +2952,7 @@ Array [
   width: 100%;
 }
 
-.c15 {
+.c19 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -3137,70 +2972,6 @@ Array [
   outline: 0;
   max-width: 22.1875rem;
   text-overflow: ellipsis;
-}
-
-.c15:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c15::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:invalid {
-  box-shadow: none;
-}
-
-.c15:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c15:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c19 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 6rem;
-  min-height: 6rem;
-  padding: 0.8125rem 0.75rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(73,73,73);
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
-  text-overflow: ellipsis;
-  resize: vertical;
 }
 
 .c19:focus {
@@ -3242,23 +3013,106 @@ Array [
   color: rgba(73,73,73,0.5);
 }
 
-.c19:disabled {
+.c23 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 6rem;
+  min-height: 6rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+  resize: vertical;
+}
+
+.c23:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c23::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:invalid {
+  box-shadow: none;
+}
+
+.c23:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c23:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled {
   color: rgb(73,73,73);
 }
 
-.c19:disabled::-webkit-input-placeholder {
+.c23:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c19:disabled::-moz-placeholder {
+.c23:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c19:disabled:-ms-input-placeholder {
+.c23:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c7 {
+.c22 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c16 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c9 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -3267,20 +3121,30 @@ Array [
   display: block;
 }
 
-.c2 {
+.c1 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.c27 {
+  margin-right: 0.375rem;
+}
+
+.c4 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c5 {
+.c7 {
   height: 2.9375rem;
   max-width: 98%;
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -3289,7 +3153,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -3298,7 +3162,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c11 {
+  .c14 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -3307,7 +3171,7 @@ Array [
 }
 
 @media only screen and (min-width:48em) {
-  .c16 {
+  .c20 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -3316,7 +3180,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c22 {
+  .c26 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -3325,7 +3189,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c33 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -3342,24 +3206,24 @@ Array [
         name="card"
     >
         <div
-            className="c1"
+            className="c1 c2 c3"
             disabled={false}
             name="card-header"
             onClick={[Function]}
         >
             <div
-                className="c2 c3"
+                className="c4 c5"
             >
                 <div
-                    className="c4"
+                    className="c6"
                 >
                     <div
-                        className="c5 c6"
+                        className="c7 c8 c3"
                         disabled={false}
                         name="card-header-meta"
                     >
                         <div
-                            className="c7"
+                            className="c9"
                         >
                             <span>
                                 hello: 
@@ -3373,79 +3237,80 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c10 c11"
+            disabled={false}
             name="card-outlet"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <div
-                    className="c10"
+                    className="c13"
                 >
                     <div
-                        className="c11"
+                        className="c14"
                     >
                         <div
-                            className="baseline-jVaZNU kXgQxt c12"
+                            className="c15"
                             name="name"
                             role="group"
                             style={undefined}
                         >
                             <label
-                                className="c13"
+                                className="c16 c17"
                                 htmlFor="k"
                             >
                                 Metadata
                                  key
                             </label>
                             <div
-                                className="c14"
+                                className="c18"
                             >
                                 <input
-                                    className="c15"
+                                    className="c19"
                                     disabled={false}
                                     id="k"
                                     onBlur={null}
                                 />
                                 <div
-                                    className="c10"
+                                    className="c13"
                                 >
                                     <div
-                                        className="c16"
+                                        className="c20"
                                     />
                                 </div>
                             </div>
                         </div>
                         <div
-                            className="c17 c10"
+                            className="c21 c13"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c10"
+                    className="c13"
                 >
                     <div
-                        className="c11"
+                        className="c14"
                     >
                         <div
-                            className="baseline-jVaZNU kXgQxt c12"
+                            className="c15"
                             name="value"
                             role="group"
                             style={undefined}
                         >
                             <label
-                                className="c13"
+                                className="c16 c17"
                                 htmlFor="l"
                             >
                                 Metadata
                                  value
                             </label>
                             <div
-                                className="c14"
+                                className="c18"
                             >
                                 <textarea
-                                    className="c18 c19"
+                                    className="c22 c23"
                                     disabled={false}
                                     id="l"
                                     name="name"
@@ -3453,30 +3318,30 @@ Array [
                                 />
                             </div>
                             <div
-                                className="c10"
+                                className="c13"
                             >
                                 <div
-                                    className="c16"
+                                    className="c20"
                                 />
                             </div>
                         </div>
                         <div
-                            className="c17 c10"
+                            className="c21 c13"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c20"
+                    className="c24"
                 >
                     <div
-                        className="c21"
+                        className="c25"
                     >
                         <div
-                            className="c22"
+                            className="c26"
                         >
                             <button
-                                className="c23 c24 c25"
+                                className="c27 c28 c29 c30 c31"
                                 data-ui-button="true"
                                 disabled={false}
                                 href=""
@@ -3488,7 +3353,7 @@ Array [
                                 </span>
                             </button>
                             <button
-                                className="c26 c24 c25"
+                                className="c32 c29 c30 c31"
                                 data-ui-button="true"
                                 disabled={true}
                                 href=""
@@ -3500,10 +3365,10 @@ Array [
                             </button>
                         </div>
                         <div
-                            className="c27"
+                            className="c33"
                         >
                             <button
-                                className="c28 c24 c25"
+                                className="c34 c29 c30 c31"
                                 data-ui-button="true"
                                 disabled={false}
                                 href=""
@@ -3511,24 +3376,26 @@ Array [
                                 onClick={[Function]}
                                 type="button"
                             >
-                                <svg
-                                    className=""
-                                    height="16"
-                                    innerRef={undefined}
-                                    style={
-                                        Object {
-                                            "transform": "rotate(0deg)",
-                                          }
-                                    }
-                                    viewBox="0 0 12 16"
-                                    width="12"
-                                    xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                    className="c35"
                                 >
-                                    <path
-                                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                                        fill="rgb(210, 67, 58)"
-                                    />
-                                </svg>
+                                    <svg
+                                        height="16"
+                                        style={
+                                            Object {
+                                                "transform": "rotate(0deg)",
+                                              }
+                                        }
+                                        viewBox="0 0 12 16"
+                                        width="12"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                                            fill="rgb(210, 67, 58)"
+                                        />
+                                    </svg>
+                                </div>
                                 <span>
                                     Remove
                                 </span>
@@ -3561,16 +3428,14 @@ Array [
 
 .c0 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 0.75rem;
 }
 
 <div
     className="c0 c1"
     height="0.75rem"
 />,
-  .c25 {
+  .c31 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3580,52 +3445,32 @@ Array [
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c25::-moz-focus-inner,
-.c25[type='button']::-moz-focus-inner,
-.c25[type='reset']::-moz-focus-inner,
-.c25[type='submit']::-moz-focus-inner {
+.c31::-moz-focus-inner,
+.c31[type='button']::-moz-focus-inner,
+.c31[type='reset']::-moz-focus-inner,
+.c31[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c25:-moz-focusring,
-.c25[type='button']:-moz-focusring,
-.c25[type='reset']:-moz-focusring,
-.c25[type='submit']:-moz-focusring {
+.c31:-moz-focusring,
+.c31[type='button']:-moz-focusring,
+.c31[type='reset']:-moz-focusring,
+.c31[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c25 + button,
-.c25 + a {
-  margin-left: 0.375rem;
+.c30 {
+  min-width: 7.5rem;
 }
 
-.c18 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c24 {
+.c29 {
   display: inline-block;
 }
 
-.c24 + button,
-.c24 + a {
-  margin-left: 0.375rem;
-}
-
-.c23 {
+.c28 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3667,10 +3512,9 @@ Array [
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c23:focus {
+.c28:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3678,43 +3522,43 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c23:hover {
+.c28:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c23[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c23:focus {
+.c28:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c23:hover {
+.c28:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c26 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3757,10 +3601,9 @@ Array [
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c26:focus {
+.c32:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3768,43 +3611,43 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c26:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c26[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c26:focus {
+.c32:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c26:hover {
+.c32:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c28 {
+.c34 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3858,11 +3701,10 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   float: right;
 }
 
-.c28:focus {
+.c34:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3870,70 +3712,62 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c28:hover {
+.c34:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c28[disabled] {
+.c34[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c28:focus {
+.c34:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c28:hover {
+.c34:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c28:focus {
+.c34:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c28:hover {
+.c34:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c28 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c28 svg {
-  max-height: 1.125rem;
-}
-
-.c13 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -3941,14 +3775,9 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c10 {
+.c13 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3967,7 +3796,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c21 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3984,73 +3813,75 @@ Array [
   flex-wrap: wrap;
   margin-right: -0.625rem;
   margin-left: -0.625rem;
-}
-
-.c11 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c16 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c22 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c27 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c17 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
 }
 
 .c14 {
-  margin-top: 0.1875rem;
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
 }
 
 .c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c26 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c33 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c21 {
+  background-color: rgb(216,216,216);
+  background-color: transparent;
+}
+
+.c18 {
+  margin-top: 0.1875rem;
+}
+
+.c24 {
   margin-top: 0.375rem;
 }
 
-.c3 {
+.c35 {
+  margin-right: 0.75rem;
+}
+
+.c5 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c9 {
+.c12 {
   padding: 1.125rem;
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4106,7 +3937,7 @@ Array [
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c1 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4132,6 +3963,47 @@ Array [
   -webkit-flex: 0 0 2.875rem;
   -ms-flex: 0 0 2.875rem;
   flex: 0 0 2.875rem;
+}
+
+.c11 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c10 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.c2 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4139,40 +4011,9 @@ Array [
   line-height: 1.5rem;
   height: auto;
   max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
-.c1 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c6 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
+.c8 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -4206,59 +4047,12 @@ Array [
   color: inherit;
 }
 
-.c8 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c8 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c8 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c12 {
+.c15 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -4266,7 +4060,7 @@ Array [
   width: 100%;
 }
 
-.c15 {
+.c19 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -4286,70 +4080,6 @@ Array [
   outline: 0;
   max-width: 22.1875rem;
   text-overflow: ellipsis;
-}
-
-.c15:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c15::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:invalid {
-  box-shadow: none;
-}
-
-.c15:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c15:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c19 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 6rem;
-  min-height: 6rem;
-  padding: 0.8125rem 0.75rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(73,73,73);
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
-  text-overflow: ellipsis;
-  resize: vertical;
 }
 
 .c19:focus {
@@ -4391,23 +4121,106 @@ Array [
   color: rgba(73,73,73,0.5);
 }
 
-.c19:disabled {
+.c23 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 6rem;
+  min-height: 6rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+  resize: vertical;
+}
+
+.c23:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c23::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:invalid {
+  box-shadow: none;
+}
+
+.c23:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c23:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled {
   color: rgb(73,73,73);
 }
 
-.c19:disabled::-webkit-input-placeholder {
+.c23:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c19:disabled::-moz-placeholder {
+.c23:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c19:disabled:-ms-input-placeholder {
+.c23:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c7 {
+.c22 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c16 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c9 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -4416,20 +4229,30 @@ Array [
   display: block;
 }
 
-.c2 {
+.c1 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.c27 {
+  margin-right: 0.375rem;
+}
+
+.c4 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c5 {
+.c7 {
   height: 2.9375rem;
   max-width: 98%;
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4438,7 +4261,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4447,7 +4270,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c11 {
+  .c14 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -4456,7 +4279,7 @@ Array [
 }
 
 @media only screen and (min-width:48em) {
-  .c16 {
+  .c20 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4465,7 +4288,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c22 {
+  .c26 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4474,7 +4297,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c33 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -4491,24 +4314,24 @@ Array [
         name="card"
     >
         <div
-            className="c1"
+            className="c1 c2 c3"
             disabled={false}
             name="card-header"
             onClick={[Function]}
         >
             <div
-                className="c2 c3"
+                className="c4 c5"
             >
                 <div
-                    className="c4"
+                    className="c6"
                 >
                     <div
-                        className="c5 c6"
+                        className="c7 c8 c3"
                         disabled={false}
                         name="card-header-meta"
                     >
                         <div
-                            className="c7"
+                            className="c9"
                         >
                             <span>
                                 hello2: 
@@ -4522,79 +4345,80 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c10 c11"
+            disabled={false}
             name="card-outlet"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <div
-                    className="c10"
+                    className="c13"
                 >
                     <div
-                        className="c11"
+                        className="c14"
                     >
                         <div
-                            className="baseline-jVaZNU kXgQxt c12"
+                            className="c15"
                             name="name"
                             role="group"
                             style={undefined}
                         >
                             <label
-                                className="c13"
+                                className="c16 c17"
                                 htmlFor="m"
                             >
                                 Metadata
                                  key
                             </label>
                             <div
-                                className="c14"
+                                className="c18"
                             >
                                 <input
-                                    className="c15"
+                                    className="c19"
                                     disabled={false}
                                     id="m"
                                     onBlur={null}
                                 />
                                 <div
-                                    className="c10"
+                                    className="c13"
                                 >
                                     <div
-                                        className="c16"
+                                        className="c20"
                                     />
                                 </div>
                             </div>
                         </div>
                         <div
-                            className="c17 c10"
+                            className="c21 c13"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c10"
+                    className="c13"
                 >
                     <div
-                        className="c11"
+                        className="c14"
                     >
                         <div
-                            className="baseline-jVaZNU kXgQxt c12"
+                            className="c15"
                             name="value"
                             role="group"
                             style={undefined}
                         >
                             <label
-                                className="c13"
+                                className="c16 c17"
                                 htmlFor="n"
                             >
                                 Metadata
                                  value
                             </label>
                             <div
-                                className="c14"
+                                className="c18"
                             >
                                 <textarea
-                                    className="c18 c19"
+                                    className="c22 c23"
                                     disabled={false}
                                     id="n"
                                     name="name"
@@ -4602,30 +4426,30 @@ Array [
                                 />
                             </div>
                             <div
-                                className="c10"
+                                className="c13"
                             >
                                 <div
-                                    className="c16"
+                                    className="c20"
                                 />
                             </div>
                         </div>
                         <div
-                            className="c17 c10"
+                            className="c21 c13"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c20"
+                    className="c24"
                 >
                     <div
-                        className="c21"
+                        className="c25"
                     >
                         <div
-                            className="c22"
+                            className="c26"
                         >
                             <button
-                                className="c23 c24 c25"
+                                className="c27 c28 c29 c30 c31"
                                 data-ui-button="true"
                                 disabled={false}
                                 href=""
@@ -4637,7 +4461,7 @@ Array [
                                 </span>
                             </button>
                             <button
-                                className="c26 c24 c25"
+                                className="c32 c29 c30 c31"
                                 data-ui-button="true"
                                 disabled={true}
                                 href=""
@@ -4649,10 +4473,10 @@ Array [
                             </button>
                         </div>
                         <div
-                            className="c27"
+                            className="c33"
                         >
                             <button
-                                className="c28 c24 c25"
+                                className="c34 c29 c30 c31"
                                 data-ui-button="true"
                                 disabled={false}
                                 href=""
@@ -4660,24 +4484,26 @@ Array [
                                 onClick={[Function]}
                                 type="button"
                             >
-                                <svg
-                                    className=""
-                                    height="16"
-                                    innerRef={undefined}
-                                    style={
-                                        Object {
-                                            "transform": "rotate(0deg)",
-                                          }
-                                    }
-                                    viewBox="0 0 12 16"
-                                    width="12"
-                                    xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                    className="c35"
                                 >
-                                    <path
-                                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                                        fill="rgb(210, 67, 58)"
-                                    />
-                                </svg>
+                                    <svg
+                                        height="16"
+                                        style={
+                                            Object {
+                                                "transform": "rotate(0deg)",
+                                              }
+                                        }
+                                        viewBox="0 0 12 16"
+                                        width="12"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                                            fill="rgb(210, 67, 58)"
+                                        />
+                                    </svg>
+                                </div>
                                 <span>
                                     Remove
                                 </span>
@@ -4710,9 +4536,7 @@ Array [
 
 .c0 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.125rem;
 }
 
 <div
@@ -4724,15 +4548,11 @@ Array [
 
 exports[`renders <Metadata metadata=[] expanded /> without throwing 1`] = `
 Array [
-  .c3 {
+  .c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4751,17 +4571,22 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
   margin-bottom: 1.125rem;
 }
@@ -4830,9 +4655,7 @@ Array [
                 className="c2"
             >
                 <svg
-                    className=""
                     height="11"
-                    innerRef={undefined}
                     style={
                         Object {
                             "transform": "rotate(0deg)",
@@ -4857,25 +4680,24 @@ Array [
             </div>
         </div>
         <small
-            className="c3"
+            className="c3 c4"
         >
             Metadata
         </small>
     </div>
     <div
-        className="c4"
+        className="c5"
     >
         <div
-            className="c5 c6"
+            className="c6 c7"
             height="0.0625rem"
         />
     </div>
 </div>,
-  .c3 {
+  .c4 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
 .c0 {
@@ -4909,6 +4731,10 @@ Array [
 
 .c2 {
   margin-bottom: 1.125rem;
+}
+
+.c3 {
+  margin: 0;
 }
 
 @media only screen and (min-width:0em) {
@@ -4939,7 +4765,7 @@ Array [
             className="c2"
         >
             <p
-                className="c3"
+                className="c3 c4"
             >
                 Metadata can be used to pass data to the instance. It can also be used to inject a custom boot script. Unlike tags, metadata is only viewable inside the instance.
                  
@@ -4959,20 +4785,6 @@ Array [
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
-  margin-top: 0.75rem;
 }
 
 .c0 {
@@ -4990,7 +4802,7 @@ Array [
         s
     </h3>
 </div>,
-  .c25 {
+  .c31 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -5000,52 +4812,32 @@ Array [
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c25::-moz-focus-inner,
-.c25[type='button']::-moz-focus-inner,
-.c25[type='reset']::-moz-focus-inner,
-.c25[type='submit']::-moz-focus-inner {
+.c31::-moz-focus-inner,
+.c31[type='button']::-moz-focus-inner,
+.c31[type='reset']::-moz-focus-inner,
+.c31[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c25:-moz-focusring,
-.c25[type='button']:-moz-focusring,
-.c25[type='reset']:-moz-focusring,
-.c25[type='submit']:-moz-focusring {
+.c31:-moz-focusring,
+.c31[type='button']:-moz-focusring,
+.c31[type='reset']:-moz-focusring,
+.c31[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c25 + button,
-.c25 + a {
-  margin-left: 0.375rem;
+.c30 {
+  min-width: 7.5rem;
 }
 
-.c18 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c24 {
+.c29 {
   display: inline-block;
 }
 
-.c24 + button,
-.c24 + a {
-  margin-left: 0.375rem;
-}
-
-.c23 {
+.c28 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5087,10 +4879,9 @@ Array [
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c23:focus {
+.c28:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5098,43 +4889,43 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c23:hover {
+.c28:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c23[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c23:focus {
+.c28:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c23:hover {
+.c28:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c26 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5177,10 +4968,9 @@ Array [
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c26:focus {
+.c32:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5188,43 +4978,43 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c26:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c26[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c26:focus {
+.c32:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c26:hover {
+.c32:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c28 {
+.c34 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5278,11 +5068,10 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   float: right;
 }
 
-.c28:focus {
+.c34:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5290,70 +5079,62 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c28:hover {
+.c34:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c28[disabled] {
+.c34[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c28:focus {
+.c34:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c28:hover {
+.c34:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c28:focus {
+.c34:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c28:hover {
+.c34:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c28 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c28 svg {
-  max-height: 1.125rem;
-}
-
-.c13 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -5361,14 +5142,9 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c10 {
+.c13 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5387,7 +5163,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c21 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5404,73 +5180,75 @@ Array [
   flex-wrap: wrap;
   margin-right: -0.625rem;
   margin-left: -0.625rem;
-}
-
-.c11 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c16 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c22 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c27 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c17 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
 }
 
 .c14 {
-  margin-top: 0.1875rem;
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
 }
 
 .c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c26 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c33 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c21 {
+  background-color: rgb(216,216,216);
+  background-color: transparent;
+}
+
+.c18 {
+  margin-top: 0.1875rem;
+}
+
+.c24 {
   margin-top: 0.375rem;
 }
 
-.c3 {
+.c35 {
+  margin-right: 0.75rem;
+}
+
+.c5 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c9 {
+.c12 {
   padding: 1.125rem;
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5526,7 +5304,7 @@ Array [
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c1 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5552,6 +5330,47 @@ Array [
   -webkit-flex: 0 0 2.875rem;
   -ms-flex: 0 0 2.875rem;
   flex: 0 0 2.875rem;
+}
+
+.c11 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c10 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.c2 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5559,40 +5378,9 @@ Array [
   line-height: 1.5rem;
   height: auto;
   max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
-.c1 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c6 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
+.c8 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -5626,59 +5414,12 @@ Array [
   color: inherit;
 }
 
-.c8 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c8 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c8 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c12 {
+.c15 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -5686,7 +5427,7 @@ Array [
   width: 100%;
 }
 
-.c15 {
+.c19 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -5706,70 +5447,6 @@ Array [
   outline: 0;
   max-width: 22.1875rem;
   text-overflow: ellipsis;
-}
-
-.c15:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c15::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:invalid {
-  box-shadow: none;
-}
-
-.c15:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c15:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c19 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 6rem;
-  min-height: 6rem;
-  padding: 0.8125rem 0.75rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(73,73,73);
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
-  text-overflow: ellipsis;
-  resize: vertical;
 }
 
 .c19:focus {
@@ -5811,23 +5488,106 @@ Array [
   color: rgba(73,73,73,0.5);
 }
 
-.c19:disabled {
+.c23 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 6rem;
+  min-height: 6rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+  resize: vertical;
+}
+
+.c23:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c23::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:invalid {
+  box-shadow: none;
+}
+
+.c23:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c23:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled {
   color: rgb(73,73,73);
 }
 
-.c19:disabled::-webkit-input-placeholder {
+.c23:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c19:disabled::-moz-placeholder {
+.c23:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c19:disabled:-ms-input-placeholder {
+.c23:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c7 {
+.c22 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c16 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c9 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -5836,20 +5596,30 @@ Array [
   display: block;
 }
 
-.c2 {
+.c1 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.c27 {
+  margin-right: 0.375rem;
+}
+
+.c4 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c5 {
+.c7 {
   height: 2.9375rem;
   max-width: 98%;
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -5858,7 +5628,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -5867,7 +5637,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c11 {
+  .c14 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -5876,7 +5646,7 @@ Array [
 }
 
 @media only screen and (min-width:48em) {
-  .c16 {
+  .c20 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -5885,7 +5655,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c22 {
+  .c26 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -5894,7 +5664,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c33 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -5911,24 +5681,24 @@ Array [
         name="card"
     >
         <div
-            className="c1"
+            className="c1 c2 c3"
             disabled={false}
             name="card-header"
             onClick={[Function]}
         >
             <div
-                className="c2 c3"
+                className="c4 c5"
             >
                 <div
-                    className="c4"
+                    className="c6"
                 >
                     <div
-                        className="c5 c6"
+                        className="c7 c8 c3"
                         disabled={false}
                         name="card-header-meta"
                     >
                         <div
-                            className="c7"
+                            className="c9"
                         >
                             <span>
                                 hello: 
@@ -5939,9 +5709,7 @@ Array [
                         </div>
                     </div>
                     <svg
-                        className=""
                         height="6"
-                        innerRef={undefined}
                         onClick={[Function]}
                         style={
                             Object {
@@ -5961,79 +5729,80 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c10 c11"
+            disabled={false}
             name="card-outlet"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <div
-                    className="c10"
+                    className="c13"
                 >
                     <div
-                        className="c11"
+                        className="c14"
                     >
                         <div
-                            className="baseline-jVaZNU kXgQxt c12"
+                            className="c15"
                             name="name"
                             role="group"
                             style={undefined}
                         >
                             <label
-                                className="c13"
+                                className="c16 c17"
                                 htmlFor="o"
                             >
                                 Metadata
                                  key
                             </label>
                             <div
-                                className="c14"
+                                className="c18"
                             >
                                 <input
-                                    className="c15"
+                                    className="c19"
                                     disabled={false}
                                     id="o"
                                     onBlur={null}
                                 />
                                 <div
-                                    className="c10"
+                                    className="c13"
                                 >
                                     <div
-                                        className="c16"
+                                        className="c20"
                                     />
                                 </div>
                             </div>
                         </div>
                         <div
-                            className="c17 c10"
+                            className="c21 c13"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c10"
+                    className="c13"
                 >
                     <div
-                        className="c11"
+                        className="c14"
                     >
                         <div
-                            className="baseline-jVaZNU kXgQxt c12"
+                            className="c15"
                             name="value"
                             role="group"
                             style={undefined}
                         >
                             <label
-                                className="c13"
+                                className="c16 c17"
                                 htmlFor="p"
                             >
                                 Metadata
                                  value
                             </label>
                             <div
-                                className="c14"
+                                className="c18"
                             >
                                 <textarea
-                                    className="c18 c19"
+                                    className="c22 c23"
                                     disabled={false}
                                     id="p"
                                     name="name"
@@ -6041,30 +5810,30 @@ Array [
                                 />
                             </div>
                             <div
-                                className="c10"
+                                className="c13"
                             >
                                 <div
-                                    className="c16"
+                                    className="c20"
                                 />
                             </div>
                         </div>
                         <div
-                            className="c17 c10"
+                            className="c21 c13"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c20"
+                    className="c24"
                 >
                     <div
-                        className="c21"
+                        className="c25"
                     >
                         <div
-                            className="c22"
+                            className="c26"
                         >
                             <button
-                                className="c23 c24 c25"
+                                className="c27 c28 c29 c30 c31"
                                 data-ui-button="true"
                                 disabled={false}
                                 href=""
@@ -6076,7 +5845,7 @@ Array [
                                 </span>
                             </button>
                             <button
-                                className="c26 c24 c25"
+                                className="c32 c29 c30 c31"
                                 data-ui-button="true"
                                 disabled={true}
                                 href=""
@@ -6088,10 +5857,10 @@ Array [
                             </button>
                         </div>
                         <div
-                            className="c27"
+                            className="c33"
                         >
                             <button
-                                className="c28 c24 c25"
+                                className="c34 c29 c30 c31"
                                 data-ui-button="true"
                                 disabled={false}
                                 href=""
@@ -6099,24 +5868,26 @@ Array [
                                 onClick={[Function]}
                                 type="button"
                             >
-                                <svg
-                                    className=""
-                                    height="16"
-                                    innerRef={undefined}
-                                    style={
-                                        Object {
-                                            "transform": "rotate(0deg)",
-                                          }
-                                    }
-                                    viewBox="0 0 12 16"
-                                    width="12"
-                                    xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                    className="c35"
                                 >
-                                    <path
-                                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                                        fill="rgb(210, 67, 58)"
-                                    />
-                                </svg>
+                                    <svg
+                                        height="16"
+                                        style={
+                                            Object {
+                                                "transform": "rotate(0deg)",
+                                              }
+                                        }
+                                        viewBox="0 0 12 16"
+                                        width="12"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                                            fill="rgb(210, 67, 58)"
+                                        />
+                                    </svg>
+                                </div>
                                 <span>
                                     Remove
                                 </span>
@@ -6149,16 +5920,14 @@ Array [
 
 .c0 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 0.75rem;
 }
 
 <div
     className="c0 c1"
     height="0.75rem"
 />,
-  .c25 {
+  .c31 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -6168,52 +5937,32 @@ Array [
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c25::-moz-focus-inner,
-.c25[type='button']::-moz-focus-inner,
-.c25[type='reset']::-moz-focus-inner,
-.c25[type='submit']::-moz-focus-inner {
+.c31::-moz-focus-inner,
+.c31[type='button']::-moz-focus-inner,
+.c31[type='reset']::-moz-focus-inner,
+.c31[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c25:-moz-focusring,
-.c25[type='button']:-moz-focusring,
-.c25[type='reset']:-moz-focusring,
-.c25[type='submit']:-moz-focusring {
+.c31:-moz-focusring,
+.c31[type='button']:-moz-focusring,
+.c31[type='reset']:-moz-focusring,
+.c31[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c25 + button,
-.c25 + a {
-  margin-left: 0.375rem;
+.c30 {
+  min-width: 7.5rem;
 }
 
-.c18 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c24 {
+.c29 {
   display: inline-block;
 }
 
-.c24 + button,
-.c24 + a {
-  margin-left: 0.375rem;
-}
-
-.c23 {
+.c28 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6255,10 +6004,9 @@ Array [
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c23:focus {
+.c28:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6266,43 +6014,43 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c23:hover {
+.c28:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c23[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c23:focus {
+.c28:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c23:hover {
+.c28:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c23:active,
-.c23:active:hover,
-.c23:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c26 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6345,10 +6093,9 @@ Array [
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c26:focus {
+.c32:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6356,43 +6103,43 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c26:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c26[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c26:focus {
+.c32:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c26:hover {
+.c32:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c28 {
+.c34 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6446,11 +6193,10 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   float: right;
 }
 
-.c28:focus {
+.c34:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6458,70 +6204,62 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c28:hover {
+.c34:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c28[disabled] {
+.c34[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c28:focus {
+.c34:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c28:hover {
+.c34:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c28:focus {
+.c34:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c28:hover {
+.c34:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c28 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c28 svg {
-  max-height: 1.125rem;
-}
-
-.c13 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -6529,14 +6267,9 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c10 {
+.c13 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6555,7 +6288,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c21 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6572,73 +6305,75 @@ Array [
   flex-wrap: wrap;
   margin-right: -0.625rem;
   margin-left: -0.625rem;
-}
-
-.c11 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c16 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c22 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c27 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c17 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
 }
 
 .c14 {
-  margin-top: 0.1875rem;
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
 }
 
 .c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c26 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c33 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c21 {
+  background-color: rgb(216,216,216);
+  background-color: transparent;
+}
+
+.c18 {
+  margin-top: 0.1875rem;
+}
+
+.c24 {
   margin-top: 0.375rem;
 }
 
-.c3 {
+.c35 {
+  margin-right: 0.75rem;
+}
+
+.c5 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c9 {
+.c12 {
   padding: 1.125rem;
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6694,7 +6429,7 @@ Array [
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c1 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6720,6 +6455,47 @@ Array [
   -webkit-flex: 0 0 2.875rem;
   -ms-flex: 0 0 2.875rem;
   flex: 0 0 2.875rem;
+}
+
+.c11 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c10 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.c2 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6727,40 +6503,9 @@ Array [
   line-height: 1.5rem;
   height: auto;
   max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
-.c1 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c6 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
+.c8 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -6794,59 +6539,12 @@ Array [
   color: inherit;
 }
 
-.c8 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c8 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c8 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c12 {
+.c15 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -6854,7 +6552,7 @@ Array [
   width: 100%;
 }
 
-.c15 {
+.c19 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -6874,70 +6572,6 @@ Array [
   outline: 0;
   max-width: 22.1875rem;
   text-overflow: ellipsis;
-}
-
-.c15:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c15::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:invalid {
-  box-shadow: none;
-}
-
-.c15:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c15:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c15:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c19 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 6rem;
-  min-height: 6rem;
-  padding: 0.8125rem 0.75rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(73,73,73);
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
-  text-overflow: ellipsis;
-  resize: vertical;
 }
 
 .c19:focus {
@@ -6979,23 +6613,106 @@ Array [
   color: rgba(73,73,73,0.5);
 }
 
-.c19:disabled {
+.c23 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 6rem;
+  min-height: 6rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+  resize: vertical;
+}
+
+.c23:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c23::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:invalid {
+  box-shadow: none;
+}
+
+.c23:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c23:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c23:disabled {
   color: rgb(73,73,73);
 }
 
-.c19:disabled::-webkit-input-placeholder {
+.c23:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c19:disabled::-moz-placeholder {
+.c23:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c19:disabled:-ms-input-placeholder {
+.c23:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c7 {
+.c22 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c16 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c9 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -7004,20 +6721,30 @@ Array [
   display: block;
 }
 
-.c2 {
+.c1 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.c27 {
+  margin-right: 0.375rem;
+}
+
+.c4 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c5 {
+.c7 {
   height: 2.9375rem;
   max-width: 98%;
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -7026,7 +6753,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c21 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -7035,7 +6762,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c11 {
+  .c14 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -7044,7 +6771,7 @@ Array [
 }
 
 @media only screen and (min-width:48em) {
-  .c16 {
+  .c20 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -7053,7 +6780,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c22 {
+  .c26 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -7062,7 +6789,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c33 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -7079,24 +6806,24 @@ Array [
         name="card"
     >
         <div
-            className="c1"
+            className="c1 c2 c3"
             disabled={false}
             name="card-header"
             onClick={[Function]}
         >
             <div
-                className="c2 c3"
+                className="c4 c5"
             >
                 <div
-                    className="c4"
+                    className="c6"
                 >
                     <div
-                        className="c5 c6"
+                        className="c7 c8 c3"
                         disabled={false}
                         name="card-header-meta"
                     >
                         <div
-                            className="c7"
+                            className="c9"
                         >
                             <span>
                                 hello2: 
@@ -7107,9 +6834,7 @@ Array [
                         </div>
                     </div>
                     <svg
-                        className=""
                         height="6"
-                        innerRef={undefined}
                         onClick={[Function]}
                         style={
                             Object {
@@ -7129,79 +6854,80 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c10 c11"
+            disabled={false}
             name="card-outlet"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <div
-                    className="c10"
+                    className="c13"
                 >
                     <div
-                        className="c11"
+                        className="c14"
                     >
                         <div
-                            className="baseline-jVaZNU kXgQxt c12"
+                            className="c15"
                             name="name"
                             role="group"
                             style={undefined}
                         >
                             <label
-                                className="c13"
+                                className="c16 c17"
                                 htmlFor="q"
                             >
                                 Metadata
                                  key
                             </label>
                             <div
-                                className="c14"
+                                className="c18"
                             >
                                 <input
-                                    className="c15"
+                                    className="c19"
                                     disabled={false}
                                     id="q"
                                     onBlur={null}
                                 />
                                 <div
-                                    className="c10"
+                                    className="c13"
                                 >
                                     <div
-                                        className="c16"
+                                        className="c20"
                                     />
                                 </div>
                             </div>
                         </div>
                         <div
-                            className="c17 c10"
+                            className="c21 c13"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c10"
+                    className="c13"
                 >
                     <div
-                        className="c11"
+                        className="c14"
                     >
                         <div
-                            className="baseline-jVaZNU kXgQxt c12"
+                            className="c15"
                             name="value"
                             role="group"
                             style={undefined}
                         >
                             <label
-                                className="c13"
+                                className="c16 c17"
                                 htmlFor="r"
                             >
                                 Metadata
                                  value
                             </label>
                             <div
-                                className="c14"
+                                className="c18"
                             >
                                 <textarea
-                                    className="c18 c19"
+                                    className="c22 c23"
                                     disabled={false}
                                     id="r"
                                     name="name"
@@ -7209,30 +6935,30 @@ Array [
                                 />
                             </div>
                             <div
-                                className="c10"
+                                className="c13"
                             >
                                 <div
-                                    className="c16"
+                                    className="c20"
                                 />
                             </div>
                         </div>
                         <div
-                            className="c17 c10"
+                            className="c21 c13"
                             height="0.75rem"
                         />
                     </div>
                 </div>
                 <div
-                    className="c20"
+                    className="c24"
                 >
                     <div
-                        className="c21"
+                        className="c25"
                     >
                         <div
-                            className="c22"
+                            className="c26"
                         >
                             <button
-                                className="c23 c24 c25"
+                                className="c27 c28 c29 c30 c31"
                                 data-ui-button="true"
                                 disabled={false}
                                 href=""
@@ -7244,7 +6970,7 @@ Array [
                                 </span>
                             </button>
                             <button
-                                className="c26 c24 c25"
+                                className="c32 c29 c30 c31"
                                 data-ui-button="true"
                                 disabled={true}
                                 href=""
@@ -7256,10 +6982,10 @@ Array [
                             </button>
                         </div>
                         <div
-                            className="c27"
+                            className="c33"
                         >
                             <button
-                                className="c28 c24 c25"
+                                className="c34 c29 c30 c31"
                                 data-ui-button="true"
                                 disabled={false}
                                 href=""
@@ -7267,24 +6993,26 @@ Array [
                                 onClick={[Function]}
                                 type="button"
                             >
-                                <svg
-                                    className=""
-                                    height="16"
-                                    innerRef={undefined}
-                                    style={
-                                        Object {
-                                            "transform": "rotate(0deg)",
-                                          }
-                                    }
-                                    viewBox="0 0 12 16"
-                                    width="12"
-                                    xmlns="http://www.w3.org/2000/svg"
+                                <div
+                                    className="c35"
                                 >
-                                    <path
-                                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                                        fill="rgb(210, 67, 58)"
-                                    />
-                                </svg>
+                                    <svg
+                                        height="16"
+                                        style={
+                                            Object {
+                                                "transform": "rotate(0deg)",
+                                              }
+                                        }
+                                        viewBox="0 0 12 16"
+                                        width="12"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                                            fill="rgb(210, 67, 58)"
+                                        />
+                                    </svg>
+                                </div>
                                 <span>
                                     Remove
                                 </span>
@@ -7317,16 +7045,14 @@ Array [
 
 .c0 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.125rem;
 }
 
 <div
     className="c0 c1"
     height="1.125rem"
 />,
-  .c3 {
+  .c4 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -7336,36 +7062,29 @@ Array [
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c3::-moz-focus-inner,
-.c3[type='button']::-moz-focus-inner,
-.c3[type='reset']::-moz-focus-inner,
-.c3[type='submit']::-moz-focus-inner {
+.c4::-moz-focus-inner,
+.c4[type='button']::-moz-focus-inner,
+.c4[type='reset']::-moz-focus-inner,
+.c4[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c3:-moz-focusring,
-.c3[type='button']:-moz-focusring,
-.c3[type='reset']:-moz-focusring,
-.c3[type='submit']:-moz-focusring {
+.c4:-moz-focusring,
+.c4[type='button']:-moz-focusring,
+.c4[type='reset']:-moz-focusring,
+.c4[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c3 + button,
-.c3 + a {
-  margin-left: 0.375rem;
+.c3 {
+  min-width: 7.5rem;
 }
 
 .c2 {
   display: inline-block;
-}
-
-.c2 + button,
-.c2 + a {
-  margin-left: 0.375rem;
 }
 
 .c1 {
@@ -7456,7 +7175,7 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -7496,7 +7215,7 @@ Array [
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c4:focus {
+.c5:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7504,35 +7223,35 @@ Array [
   border-color: rgb(45,56,132);
 }
 
-.c4:hover {
+.c5:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c4:active,
-.c4:active:hover,
-.c4:active:focus {
+.c5:active,
+.c5:active:hover,
+.c5:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c4[disabled] {
+.c5[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
 .c0 {
   margin-top: 0.375rem;
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 <div
     className="c0"
 >
     <button
-        className="c1 c2 c3"
+        className="c1 c2 c3 c4"
         data-ui-button="true"
         href=""
         onClick={[Function]}
@@ -7541,7 +7260,7 @@ Array [
         Add Metadata
     </button>
     <button
-        className="c4 c2 c3"
+        className="c5 c2 c3 c4"
         data-ui-button="true"
         href=""
         onClick={undefined}

@@ -23,7 +23,7 @@ exports[`Card Card With Header 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c1 {
+.c2 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -51,6 +51,9 @@ exports[`Card Card With Header 1`] = `
   -webkit-flex: 0 0 2.875rem;
   -ms-flex: 0 0 2.875rem;
   flex: 0 0 2.875rem;
+}
+
+.c1 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -58,12 +61,6 @@ exports[`Card Card With Header 1`] = `
   line-height: 1.5rem;
   height: auto;
   max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-}
-
-.c1 button {
-  margin-bottom: 0;
-  margin-top: 0;
 }
 
 <div
@@ -72,7 +69,7 @@ exports[`Card Card With Header 1`] = `
   name="card"
 >
   <div
-    className="c1"
+    className="c1 c2"
     disabled={false}
     name="card-header"
   >

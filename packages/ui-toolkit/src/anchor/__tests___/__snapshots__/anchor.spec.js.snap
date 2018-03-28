@@ -1,10 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Anchor Default Anchor 1`] = `
-.c1 {
+.c2 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
+}
+
+.c1 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
@@ -19,7 +22,7 @@ exports[`Anchor Default Anchor 1`] = `
 }
 
 <a
-  className="c0 c1"
+  className="c0 c1 c2"
   href="https://joyent.com"
 >
   Inspire the lazy
@@ -27,10 +30,13 @@ exports[`Anchor Default Anchor 1`] = `
 `;
 
 exports[`Anchor Disabled Anchor 1`] = `
-.c1 {
+.c2 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
+}
+
+.c1 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
@@ -53,7 +59,7 @@ exports[`Anchor Disabled Anchor 1`] = `
 }
 
 <a
-  className="c0 c1"
+  className="c0 c1 c2"
   disabled={true}
   href="https://joyent.com"
 >
@@ -62,10 +68,13 @@ exports[`Anchor Disabled Anchor 1`] = `
 `;
 
 exports[`Anchor Reversed Anchor 1`] = `
-.c1 {
+.c2 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
+}
+
+.c1 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
@@ -82,7 +91,7 @@ exports[`Anchor Reversed Anchor 1`] = `
 }
 
 <a
-  className="c0 c1"
+  className="c0 c1 c2"
   href="https://joyent.com"
   reversed={true}
 >

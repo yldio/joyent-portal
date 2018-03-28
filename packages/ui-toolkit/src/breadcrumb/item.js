@@ -3,15 +3,11 @@ import styled, { withTheme } from 'styled-components';
 import remcalc from 'remcalc';
 
 import { H4 } from '../text/headings';
-import { Arrow as BaseArrow } from '../icons';
+import { Arrow } from '../icons';
 
-const Name = H4.extend`
+const Name = styled(H4)`
   font-weight: normal;
-  margin: ${remcalc(12)} 0;
-`;
-
-const Arrow = styled(BaseArrow)`
-  margin: ${remcalc(3)} ${remcalc(10)};
+  margin: 0;
 `;
 
 const Container = styled.div`

@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Metadata /> without throwing 1`] = `
-.c4 {
+.c2 {
+  margin-bottom: 1.875rem;
+}
+
+.c7 {
   margin-top: 0.1875rem;
 }
 
-.c16 {
-  margin-bottom: 1.5rem;
-}
-
-.c11 {
+.c15 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -19,39 +19,32 @@ exports[`renders <Metadata /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
+.c14 {
+  min-width: 7.5rem;
 }
 
-.c10 {
+.c13 {
   display: inline-block;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -101,7 +94,7 @@ exports[`renders <Metadata /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c9:focus {
+.c12:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -109,34 +102,26 @@ exports[`renders <Metadata /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c9:hover {
+.c12:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c9[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -144,23 +129,14 @@ exports[`renders <Metadata /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -179,62 +155,30 @@ exports[`renders <Metadata /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
 .c17 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c17 + p,
-.c17 + small,
-.c17 + h1,
-.c17 + h2,
-.c17 + label,
-.c17 + h3,
-.c17 + h4,
-.c17 + h5,
-.c17 + div,
-.c17 + span {
-  margin-top: 0.75rem;
-}
-
-.c7 {
+.c10 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
-.c12 {
+.c16 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.25rem;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c14 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.5rem;
-}
-
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -256,32 +200,30 @@ exports[`renders <Metadata /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c2 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c6 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -289,7 +231,7 @@ exports[`renders <Metadata /> without throwing 1`] = `
   float: right;
 }
 
-.c5 {
+.c8 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -311,59 +253,65 @@ exports[`renders <Metadata /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c8:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c8::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c8:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c8:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c8:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c8:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c8:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
   }
 }
@@ -376,80 +324,84 @@ exports[`renders <Metadata /> without throwing 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
-  <form
-    onSubmit={undefined}
+  <div
+    className="c2"
   >
-    <div
-      className="c1"
+    <form
+      onSubmit={undefined}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
+        className="c3"
       >
-        <label
-          className="c3"
-          htmlFor="k"
-        >
-          Filter metadata
-        </label>
         <div
           className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
         >
-          <input
-            className="c5"
-            disabled={false}
-            id="k"
-            onBlur={undefined}
-            placeholder="Search by name or value"
+          <label
+            className="c5 c6"
+            htmlFor="k"
+          >
+            Filter metadata
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={false}
+              id="k"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
           />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Metadata
+          </button>
         </div>
       </div>
       <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Metadata
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
   <div
-    className="c13 c8"
+    className="c10 c11"
     height="0.6875rem"
   />
   <div
-    className="c14 c8"
+    className="c16 c11"
     height="0.0625rem"
   />
   <div
-    className="c15 c8"
+    className="c10 c11"
     height="1.5rem"
   />
   <div
-    className="c16"
+    className="c2"
   >
     <h3
       className="c17"
@@ -463,2640 +415,72 @@ exports[`renders <Metadata /> without throwing 1`] = `
 `;
 
 exports[`renders <Metadata addOpen /> without throwing 1`] = `
-.c4 {
-  margin-top: 0.1875rem;
-}
-
-.c32 {
-  margin-top: 0.375rem;
-}
-
-.c38 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.c19 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c25 {
-  padding: 1.125rem;
-}
-
-.c11 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
-}
-
-.c30 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c10 {
-  display: inline-block;
-}
-
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c9 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c9:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c9:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c9[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
-}
-
-.c34 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c34:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c34:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c34[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c34:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c34:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c35 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  margin: 0;
-}
-
-.c35:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c35:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c35[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c35:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c35:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c37 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  float: right;
-}
-
-.c37:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c37:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c37[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c37:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c37:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c37:focus {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c37:hover {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
-  background-color: rgba(210,67,58,0.1);
-  border-color: rgb(205,37,27);
-}
-
-.c37 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c37 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
-}
-
-.c8 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c33 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c26 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c28 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c36 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c39 {
-  color: rgb(73,73,73);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c39 + p,
-.c39 + small,
-.c39 + h1,
-.c39 + h2,
-.c39 + label,
-.c39 + h3,
-.c39 + h4,
-.c39 + h5,
-.c39 + div,
-.c39 + span {
-  margin-top: 0.75rem;
-}
-
-.c23 {
-  color: rgb(73,73,73);
-  font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c23 + p,
-.c23 + small,
-.c23 + h1,
-.c23 + h2,
-.c23 + label,
-.c23 + h3,
-.c23 + h4,
-.c23 + h5,
-.c23 + div,
-.c23 + span {
-  margin-top: 0.75rem;
+.c2 {
+  margin-bottom: 1.875rem;
 }
 
 .c7 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.3125rem;
-}
-
-.c12 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.25rem;
-}
-
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c14 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.5rem;
-}
-
-.c29 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-}
-
-.c16 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c17 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-}
-
-.c17 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c22 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  box-sizing: border-box;
-  min-height: 2.9375rem;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  overflow: hidden;
-  background-color: transparent;
-  border-width: 0;
-  box-shadow: none;
-  color: inherit;
-}
-
-.c24 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c24 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c24 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c2 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c6 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  float: right;
-}
-
-.c27 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  width: 100%;
-}
-
-.c5 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 3rem;
-  min-height: 3rem;
-  padding: 0.8125rem 0.75rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(73,73,73);
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
-}
-
-.c5:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c5::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5:invalid {
-  box-shadow: none;
-}
-
-.c5:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c5:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c31 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 6rem;
-  min-height: 6rem;
-  padding: 0.8125rem 0.75rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(73,73,73);
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-  font-family: "Roboto Mono",monospace;
-  width: 100%;
-  min-width: 100%;
-  text-overflow: ellipsis;
-  resize: vertical;
-}
-
-.c31:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c31::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c31::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c31:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c31:invalid {
-  box-shadow: none;
-}
-
-.c31:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c31:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c31:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c31:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c31:disabled {
-  color: rgb(73,73,73);
-}
-
-.c31:disabled::-webkit-input-placeholder {
-  color: rgb(73,73,73);
-}
-
-.c31:disabled::-moz-placeholder {
-  color: rgb(73,73,73);
-}
-
-.c31:disabled:-ms-input-placeholder {
-  color: rgb(73,73,73);
-}
-
-.c18 {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.c21 {
-  height: 2.9375rem;
-  max-width: 98%;
-}
-
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 56rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 59rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c33 {
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c33 {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c26 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c28 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c36 {
-    display: none;
-  }
-}
-
-<div
-  className="c0"
->
-  <form
-    onSubmit={undefined}
-  >
-    <div
-      className="c1"
-    >
-      <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
-      >
-        <label
-          className="c3"
-          htmlFor="t"
-        >
-          Filter metadata
-        </label>
-        <div
-          className="c4"
-        >
-          <input
-            className="c5"
-            disabled={false}
-            id="t"
-            onBlur={undefined}
-            placeholder="Search by name or value"
-          />
-        </div>
-      </div>
-      <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Metadata
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
-  <div
-    className="c13 c8"
-    height="0.6875rem"
-  />
-  <div
-    className="c14 c8"
-    height="0.0625rem"
-  />
-  <div
-    className="c15 c8"
-    height="1.5rem"
-  />
-  <form
-    onSubmit={undefined}
-  >
-    <div
-      className="c16"
-      disabled={false}
-      name="card"
-    >
-      <div
-        className="c17"
-        disabled={false}
-        name="card-header"
-        onClick={false}
-      >
-        <div
-          className="c18 c19"
-        >
-          <div
-            className="c20"
-          >
-            <div
-              className="c21 c22"
-              disabled={false}
-              name="card-header-meta"
-            >
-              <h4
-                className="c23"
-              >
-                Add metadata
-              </h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="c24"
-        name="card-outlet"
-      >
-        <div
-          className="c25"
-        >
-          <div
-            className="c8"
-          >
-            <div
-              className="c26"
-            >
-              <div
-                className="baseline-jVaZNU kXgQxt c27"
-                name="name"
-                role="group"
-                style={undefined}
-              >
-                <label
-                  className="c3"
-                  htmlFor="w"
-                >
-                  Metadata
-                   key
-                </label>
-                <div
-                  className="c4"
-                >
-                  <input
-                    className="c5"
-                    disabled={false}
-                    id="w"
-                    onBlur={null}
-                  />
-                  <div
-                    className="c8"
-                  >
-                    <div
-                      className="c28"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="c29 c8"
-                height="0.75rem"
-              />
-            </div>
-          </div>
-          <div
-            className="c8"
-          >
-            <div
-              className="c26"
-            >
-              <div
-                className="baseline-jVaZNU kXgQxt c27"
-                name="value"
-                role="group"
-                style={undefined}
-              >
-                <label
-                  className="c3"
-                  htmlFor="x"
-                >
-                  Metadata
-                   value
-                </label>
-                <div
-                  className="c4"
-                >
-                  <textarea
-                    className="c30 c31"
-                    disabled={false}
-                    id="x"
-                    name="name"
-                    onBlur={undefined}
-                  />
-                </div>
-                <div
-                  className="c8"
-                >
-                  <div
-                    className="c28"
-                  />
-                </div>
-              </div>
-              <div
-                className="c29 c8"
-                height="0.75rem"
-              />
-            </div>
-          </div>
-          <div
-            className="c32"
-          >
-            <div
-              className="c33"
-            >
-              <div
-                className="c26"
-              >
-                <button
-                  className="c34 c10 c11"
-                  data-ui-button="true"
-                  disabled={false}
-                  href=""
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <span>
-                    Cancel
-                  </span>
-                </button>
-                <button
-                  className="c35 c10 c11"
-                  data-ui-button="true"
-                  disabled={true}
-                  href=""
-                  type="submit"
-                >
-                  <span>
-                    Create
-                  </span>
-                </button>
-              </div>
-              <div
-                className="c36"
-              >
-                <button
-                  className="c37 c10 c11"
-                  data-ui-button="true"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <svg
-                    className=""
-                    height="16"
-                    innerRef={undefined}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    viewBox="0 0 12 16"
-                    width="12"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                      fill="rgb(210, 67, 58)"
-                    />
-                  </svg>
-                  <span>
-                    Remove
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>
-  <div
-    className="c38"
-  >
-    <h3
-      className="c39"
-    >
-      0
-       key-value pair
-      s
-    </h3>
-  </div>
-</div>
-`;
-
-exports[`renders <Metadata error /> without throwing 1`] = `
-.c4 {
   margin-top: 0.1875rem;
-}
-
-.c16 {
-  margin-bottom: 1.5rem;
-}
-
-.c11 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
-}
-
-.c21 {
-  color: rgb(73,73,73);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-  line-height: 0.875rem;
-  font-size: 0.8125rem;
-}
-
-.c10 {
-  display: inline-block;
-}
-
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c9 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c9:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c9:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c9[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
-}
-
-.c8 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c22 {
-  color: rgb(73,73,73);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c22 + p,
-.c22 + small,
-.c22 + h1,
-.c22 + h2,
-.c22 + label,
-.c22 + h3,
-.c22 + h4,
-.c22 + h5,
-.c22 + div,
-.c22 + span {
-  margin-top: 0.75rem;
-}
-
-.c20 {
-  color: rgb(73,73,73);
-  font-weight: 600;
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c7 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.3125rem;
-}
-
-.c12 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.25rem;
-}
-
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c14 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.5rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  background-color: rgb(255,255,255);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-  border: 0.0625rem solid rgb(216,216,216);
-  border-radius: 0.1875rem;
-  width: 100%;
-}
-
-.c18 {
-  border-radius: 0.1875rem 0 0 0.1875rem;
-  margin: -0.0625rem 0 -0.0625rem -0.0625rem;
-  min-width: 0.75rem;
-  min-height: 100%;
-  background-color: rgb(0,152,88);
-  background-color: rgb(210,67,58);
-}
-
-.c19 {
-  padding: 1.125rem 1.125rem;
-}
-
-.c2 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c6 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  float: right;
-}
-
-.c5 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 3rem;
-  min-height: 3rem;
-  padding: 0.8125rem 0.75rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(73,73,73);
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
-}
-
-.c5:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c5::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5:invalid {
-  box-shadow: none;
-}
-
-.c5:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c5:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 56rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 59rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-}
-
-<div
-  className="c0"
->
-  <form
-    onSubmit={undefined}
-  >
-    <div
-      className="c1"
-    >
-      <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
-      >
-        <label
-          className="c3"
-          htmlFor="q"
-        >
-          Filter metadata
-        </label>
-        <div
-          className="c4"
-        >
-          <input
-            className="c5"
-            disabled={false}
-            id="q"
-            onBlur={undefined}
-            placeholder="Search by name or value"
-          />
-        </div>
-      </div>
-      <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Metadata
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
-  <div
-    className="c13 c8"
-    height="0.6875rem"
-  />
-  <div
-    className="c14 c8"
-    height="0.0625rem"
-  />
-  <div
-    className="c15 c8"
-    height="1.5rem"
-  />
-  <div
-    className="c16"
-  >
-    <div
-      className="c17"
-    >
-      <div
-        className="c18"
-      />
-      <div
-        className="c19"
-      >
-        <h4
-          className="c20"
-        >
-          Ooops!
-        </h4>
-        <p
-          className="c21"
-        >
-          An error occurred while loading your metadata
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    className="c16"
-  >
-    <h3
-      className="c22"
-    >
-      0
-       key-value pair
-      s
-    </h3>
-  </div>
-</div>
-`;
-
-exports[`renders <Metadata loading /> without throwing 1`] = `
-.c4 {
-  margin-top: 0.1875rem;
-}
-
-.c11 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
-}
-
-.c15 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-}
-
-.c16 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-}
-
-.c17 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-}
-
-.c18 {
-  color: rgb(73,73,73);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  text-align: center;
-  margin-bottom: 0;
-  margin-left: 0.375rem;
-}
-
-.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 1.25rem;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.c10 {
-  display: inline-block;
-}
-
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c9 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c9:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c9:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c9[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c9:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c9:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
-}
-
-.c8 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c7 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.3125rem;
-}
-
-.c12 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.25rem;
-}
-
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c2 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c6 {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  float: right;
-}
-
-.c5 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 3rem;
-  min-height: 3rem;
-  padding: 0.8125rem 0.75rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(250,250,250);
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
-}
-
-.c5:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c5::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5:invalid {
-  box-shadow: none;
-}
-
-.c5::-webkit-input-placeholder {
-  color: rgb(216,216,216);
-}
-
-.c5::-moz-placeholder {
-  color: rgb(216,216,216);
-}
-
-.c5:-ms-input-placeholder {
-  color: rgb(216,216,216);
-}
-
-.c5:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c5:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-@media only screen and (min-width:48em) {
-  .c0 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c0 {
-    width: 56rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c0 {
-    width: 59rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
-  }
-}
-
-<div
-  className="c0"
->
-  <form
-    onSubmit={undefined}
-  >
-    <div
-      className="c1"
-    >
-      <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
-      >
-        <label
-          className="c3"
-          htmlFor="n"
-        >
-          Filter metadata
-        </label>
-        <div
-          className="c4"
-        >
-          <input
-            className="c5"
-            disabled={true}
-            id="n"
-            onBlur={undefined}
-            placeholder="Search by name or value"
-          />
-        </div>
-      </div>
-      <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={true}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Metadata
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
-  <div
-    className="c13 c8"
-    height="0.6875rem"
-  />
-  <div
-    className="c14"
-  >
-    <svg
-      height="10"
-      width="28"
-    >
-      <rect
-        className="c15"
-        height="6"
-        width="6"
-        x="2"
-        y="2"
-      />
-      <rect
-        className="c16"
-        height="6"
-        width="6"
-        x="11"
-        y="2"
-      />
-      <rect
-        className="c17"
-        height="6"
-        width="6"
-        x="20"
-        y="2"
-      />
-    </svg>
-    <p
-      className="c18"
-    >
-      Loading...
-    </p>
-  </div>
-</div>
-`;
-
-exports[`renders <Metadata metadata /> without throwing 1`] = `
-.c4 {
-  margin-top: 0.1875rem;
-}
-
-.c16 {
-  margin-bottom: 1.5rem;
 }
 
 .c35 {
   margin-top: 0.375rem;
 }
 
-.c18 {
-  margin-bottom: 0.75rem;
-}
-
-.c22 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c28 {
-  padding: 1.125rem;
-}
-
-.c11 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  min-width: 7.5rem;
-}
-
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
-}
-
-.c33 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c44 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-}
-
-.c45 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-}
-
-.c46 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+.c42 {
+  margin-right: 0.75rem;
 }
 
 .c43 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 1.25rem;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
 }
 
-.c10 {
+.c22 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c29 {
+  padding: 1.125rem;
+}
+
+.c15 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c14 {
+  min-width: 7.5rem;
+}
+
+.c13 {
   display: inline-block;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3146,7 +530,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c9:focus {
+.c12:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3154,31 +538,23 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c9:hover {
+.c12:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c9[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   pointer-events: none;
-}
-
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
 }
 
 .c38 {
@@ -3223,7 +599,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
 .c38:focus {
@@ -3313,7 +688,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
 .c39:focus {
@@ -3414,7 +788,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   float: right;
 }
 
@@ -3481,166 +854,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   border-color: rgb(205,37,27);
 }
 
-.c41 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c41 svg {
-  max-height: 1.125rem;
-}
-
-.c42 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-  float: right;
-}
-
-.c42:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c42:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c42:active,
-.c42:active:hover,
-.c42:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c42[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c42:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c42:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c42:active,
-.c42:active:hover,
-.c42:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c42:focus {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c42:hover {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c42:active,
-.c42:active:hover,
-.c42:active:focus {
-  background-color: rgba(210,67,58,0.1);
-  border-color: rgb(205,37,27);
-}
-
-.c42:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c42:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c42:active,
-.c42:active:hover,
-.c42:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c42 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c42 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -3648,23 +862,14 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3702,7 +907,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c29 {
+.c30 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3712,17 +917,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   display: block;
 }
 
-.c31 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c37 {
+.c32 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3742,69 +937,37 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   display: block;
 }
 
-.c17 {
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c44 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c17 + p,
-.c17 + small,
-.c17 + h1,
-.c17 + h2,
-.c17 + label,
-.c17 + h3,
-.c17 + h4,
-.c17 + h5,
-.c17 + div,
-.c17 + span {
-  margin-top: 0.75rem;
+.c26 {
+  color: rgb(73,73,73);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
 }
 
-.c7 {
+.c10 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
-.c12 {
+.c16 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.25rem;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c14 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.5rem;
-}
-
-.c32 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.75rem;
-}
-
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3826,6 +989,10 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 .c23 {
@@ -3861,7 +1028,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   flex-basis: 100%;
 }
 
-.c19 {
+.c17 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3884,50 +1051,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c27 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c27 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c27 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
 .c20 {
   box-sizing: content-box;
   display: -webkit-box;
@@ -3948,28 +1071,14 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  cursor: pointer;
   min-height: auto;
   height: 2.875rem;
   -webkit-flex: 0 0 2.875rem;
   -ms-flex: 0 0 2.875rem;
   flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
 }
 
-.c20 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c25 {
+.c28 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3989,12 +1098,35 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
+}
+
+.c27 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.c19 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  max-width: 100%;
+}
+
+.c25 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -4028,30 +1160,24 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   color: inherit;
 }
 
-.c2 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c6 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -4059,15 +1185,12 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   float: right;
 }
 
-.c30 {
+.c31 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -4075,7 +1198,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c8 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -4097,42 +1220,42 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c8:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c8::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c8:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c8:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c8:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c8:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c8:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
@@ -4216,13 +1339,33 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   color: rgb(73,73,73);
 }
 
-.c26 {
-  word-break: break-all;
-  line-height: 1.5;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
+.c33 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c18 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.c37 {
+  margin-right: 0.375rem;
 }
 
 .c21 {
@@ -4238,27 +1381,20 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
-  }
-}
-
-@media only screen and (max-width:47.9375rem) {
-  .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
   }
 }
 
@@ -4281,7 +1417,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c29 {
+  .c30 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -4290,16 +1426,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c31 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c37 {
+  .c32 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4309,6 +1436,2542 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 
 @media only screen and (min-width:0em) {
   .c40 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  >
+    <form
+      onSubmit={undefined}
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
+        >
+          <label
+            className="c5 c6"
+            htmlFor="t"
+          >
+            Filter metadata
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={false}
+              id="t"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
+          />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Metadata
+          </button>
+        </div>
+      </div>
+      <div
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
+  <div
+    className="c10 c11"
+    height="0.6875rem"
+  />
+  <div
+    className="c16 c11"
+    height="0.0625rem"
+  />
+  <div
+    className="c10 c11"
+    height="1.5rem"
+  />
+  <form
+    onSubmit={undefined}
+  >
+    <div
+      className="c17"
+      disabled={false}
+      name="card"
+    >
+      <div
+        className="c18 c19 c20"
+        disabled={false}
+        name="card-header"
+        onClick={false}
+      >
+        <div
+          className="c21 c22"
+        >
+          <div
+            className="c23"
+          >
+            <div
+              className="c24 c25 c20"
+              disabled={false}
+              name="card-header-meta"
+            >
+              <h4
+                className="c26"
+              >
+                Add metadata
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c27 c28"
+        disabled={false}
+        name="card-outlet"
+      >
+        <div
+          className="c29"
+        >
+          <div
+            className="c11"
+          >
+            <div
+              className="c30"
+            >
+              <div
+                className="c31"
+                name="name"
+                role="group"
+                style={undefined}
+              >
+                <label
+                  className="c5 c6"
+                  htmlFor="w"
+                >
+                  Metadata
+                   key
+                </label>
+                <div
+                  className="c7"
+                >
+                  <input
+                    className="c8"
+                    disabled={false}
+                    id="w"
+                    onBlur={null}
+                  />
+                  <div
+                    className="c11"
+                  >
+                    <div
+                      className="c32"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                className="c10 c11"
+                height="0.75rem"
+              />
+            </div>
+          </div>
+          <div
+            className="c11"
+          >
+            <div
+              className="c30"
+            >
+              <div
+                className="c31"
+                name="value"
+                role="group"
+                style={undefined}
+              >
+                <label
+                  className="c5 c6"
+                  htmlFor="x"
+                >
+                  Metadata
+                   value
+                </label>
+                <div
+                  className="c7"
+                >
+                  <textarea
+                    className="c33 c34"
+                    disabled={false}
+                    id="x"
+                    name="name"
+                    onBlur={undefined}
+                  />
+                </div>
+                <div
+                  className="c11"
+                >
+                  <div
+                    className="c32"
+                  />
+                </div>
+              </div>
+              <div
+                className="c10 c11"
+                height="0.75rem"
+              />
+            </div>
+          </div>
+          <div
+            className="c35"
+          >
+            <div
+              className="c36"
+            >
+              <div
+                className="c30"
+              >
+                <button
+                  className="c37 c38 c13 c14 c15"
+                  data-ui-button="true"
+                  disabled={false}
+                  href=""
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Cancel
+                  </span>
+                </button>
+                <button
+                  className="c39 c13 c14 c15"
+                  data-ui-button="true"
+                  disabled={true}
+                  href=""
+                  type="submit"
+                >
+                  <span>
+                    Create
+                  </span>
+                </button>
+              </div>
+              <div
+                className="c40"
+              >
+                <button
+                  className="c41 c13 c14 c15"
+                  data-ui-button="true"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <div
+                    className="c42"
+                  >
+                    <svg
+                      height="16"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 12 16"
+                      width="12"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                        fill="rgb(210, 67, 58)"
+                      />
+                    </svg>
+                  </div>
+                  <span>
+                    Remove
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div
+    className="c43"
+  >
+    <h3
+      className="c44"
+    >
+      0
+       key-value pair
+      s
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`renders <Metadata error /> without throwing 1`] = `
+.c2 {
+  margin-bottom: 1.875rem;
+}
+
+.c7 {
+  margin-top: 0.1875rem;
+}
+
+.c15 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c22 {
+  color: rgb(73,73,73);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.c14 {
+  min-width: 7.5rem;
+}
+
+.c13 {
+  display: inline-block;
+}
+
+.c12 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c12:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c12:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c12[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c6 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+}
+
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.c11 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c23 {
+  color: rgb(73,73,73);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+}
+
+.c20 {
+  color: rgb(73,73,73);
+  font-weight: 600;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.c10 {
+  background-color: rgb(216,216,216);
+  background-color: transparent;
+}
+
+.c16 {
+  background-color: rgb(216,216,216);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  border-radius: 0.1875rem;
+  width: 100%;
+}
+
+.c18 {
+  border-radius: 0.1875rem 0 0 0.1875rem;
+  min-width: 0.75rem;
+  min-height: 100%;
+  background-color: rgb(0,152,88);
+  background-color: rgb(210,67,58);
+}
+
+.c19 {
+  padding: 1.125rem 1.125rem;
+}
+
+.c21 {
+  line-height: 0.875rem;
+  font-size: 0.8125rem;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c9 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  float: right;
+}
+
+.c8 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c8:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c8::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:invalid {
+  box-shadow: none;
+}
+
+.c8:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c8:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c1 {
+    width: 56rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c1 {
+    width: 59rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  >
+    <form
+      onSubmit={undefined}
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
+        >
+          <label
+            className="c5 c6"
+            htmlFor="q"
+          >
+            Filter metadata
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={false}
+              id="q"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
+          />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Metadata
+          </button>
+        </div>
+      </div>
+      <div
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
+  <div
+    className="c10 c11"
+    height="0.6875rem"
+  />
+  <div
+    className="c16 c11"
+    height="0.0625rem"
+  />
+  <div
+    className="c10 c11"
+    height="1.5rem"
+  />
+  <div
+    className="c2"
+  >
+    <div
+      className="c17"
+    >
+      <div
+        className="c18"
+      />
+      <div
+        className="c19"
+      >
+        <h4
+          className="c20"
+        >
+          Ooops!
+        </h4>
+        <p
+          className="c21 c22"
+        >
+          An error occurred while loading your metadata
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    className="c2"
+  >
+    <h3
+      className="c23"
+    >
+      0
+       key-value pair
+      s
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`renders <Metadata loading /> without throwing 1`] = `
+.c2 {
+  margin-bottom: 1.875rem;
+}
+
+.c7 {
+  margin-top: 0.1875rem;
+}
+
+.c15 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c17 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c18 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c19 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c21 {
+  color: rgb(73,73,73);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c20 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+}
+
+.c14 {
+  min-width: 7.5rem;
+}
+
+.c13 {
+  display: inline-block;
+}
+
+.c12 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c12:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c12:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c12[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c12:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c12:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c6 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+}
+
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.c11 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c10 {
+  background-color: rgb(216,216,216);
+  background-color: transparent;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c9 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  float: right;
+}
+
+.c8 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(250,250,250);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c8:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c8::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:invalid {
+  box-shadow: none;
+}
+
+.c8::-webkit-input-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c8::-moz-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c8:-ms-input-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c8:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c8:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c1 {
+    width: 56rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c1 {
+    width: 59rem;
+  }
+}
+
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  >
+    <form
+      onSubmit={undefined}
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
+        >
+          <label
+            className="c5 c6"
+            htmlFor="n"
+          >
+            Filter metadata
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={true}
+              id="n"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
+          />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={true}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Metadata
+          </button>
+        </div>
+      </div>
+      <div
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
+  <div
+    className="c10 c11"
+    height="0.6875rem"
+  />
+  <div
+    className="c16"
+  >
+    <svg
+      height="10"
+      width="28"
+    >
+      <rect
+        className="c17"
+        height="6"
+        width="6"
+        x="2"
+        y="2"
+      />
+      <rect
+        className="c18 c17"
+        height="6"
+        width="6"
+        x="11"
+        y="2"
+      />
+      <rect
+        className="c19 c17"
+        height="6"
+        width="6"
+        x="20"
+        y="2"
+      />
+    </svg>
+    <p
+      className="c20 c21"
+    >
+      Loading...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders <Metadata metadata /> without throwing 1`] = `
+.c2 {
+  margin-bottom: 1.875rem;
+}
+
+.c7 {
+  margin-top: 0.1875rem;
+}
+
+.c37 {
+  margin-top: 0.375rem;
+}
+
+.c45 {
+  margin-right: 0.75rem;
+}
+
+.c18 {
+  margin-bottom: 0.75rem;
+}
+
+.c24 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c31 {
+  padding: 1.125rem;
+}
+
+.c15 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c48 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c49 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c50 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c47 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c14 {
+  min-width: 7.5rem;
+}
+
+.c13 {
+  display: inline-block;
+}
+
+.c12 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c12:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c12:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c12[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c41 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c41:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c41:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c41:active,
+.c41:active:hover,
+.c41:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c41[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c41:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c41:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c41:active,
+.c41:active:hover,
+.c41:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c42 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c42:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c42:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c42[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c42:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c42:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c44 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: right;
+}
+
+.c44:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c44:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c44:active,
+.c44:active:hover,
+.c44:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c44[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c44:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c44:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c44:active,
+.c44:active:hover,
+.c44:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c44:focus {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c44:hover {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c44:active,
+.c44:active:hover,
+.c44:active:focus {
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
+}
+
+.c46 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: right;
+}
+
+.c46:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c46:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c46[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c46:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c46:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c46:focus {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c46:hover {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
+}
+
+.c46:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c46:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c6 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+}
+
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.c11 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c38 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c32 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c34 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c39 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c43 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c17 {
+  color: rgb(73,73,73);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+}
+
+.c10 {
+  background-color: rgb(216,216,216);
+  background-color: transparent;
+}
+
+.c16 {
+  background-color: rgb(216,216,216);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.c19 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+}
+
+.c30 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c22 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+}
+
+.c29 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.c21 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  max-width: 100%;
+}
+
+.c27 {
+  box-sizing: border-box;
+  min-height: 2.9375rem;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c9 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  float: right;
+}
+
+.c33 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  width: 100%;
+}
+
+.c8 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c8:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c8::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:invalid {
+  box-shadow: none;
+}
+
+.c8:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c8:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c36 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 6rem;
+  min-height: 6rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+  resize: vertical;
+}
+
+.c36:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c36::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c36::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c36:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c36:invalid {
+  box-shadow: none;
+}
+
+.c36:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c36:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c36:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c36:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c36:disabled {
+  color: rgb(73,73,73);
+}
+
+.c36:disabled::-webkit-input-placeholder {
+  color: rgb(73,73,73);
+}
+
+.c36:disabled::-moz-placeholder {
+  color: rgb(73,73,73);
+}
+
+.c36:disabled:-ms-input-placeholder {
+  color: rgb(73,73,73);
+}
+
+.c35 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c28 {
+  word-break: break-all;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.c20 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.c40 {
+  margin-right: 0.375rem;
+}
+
+.c23 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c26 {
+  height: 2.9375rem;
+  max-width: 98%;
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c1 {
+    width: 56rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c1 {
+    width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c38 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c38 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c32 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c34 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c39 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c43 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -4316,81 +3979,92 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   }
 }
 
+@media only screen and (max-width:47.9375rem) {
+  .c0 {
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+  }
+}
+
 <div
-  className="c0"
+  className="c0 c1"
 >
-  <form
-    onSubmit={undefined}
+  <div
+    className="c2"
   >
-    <div
-      className="c1"
+    <form
+      onSubmit={undefined}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
+        className="c3"
       >
-        <label
-          className="c3"
-          htmlFor="y"
-        >
-          Filter metadata
-        </label>
         <div
           className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
         >
-          <input
-            className="c5"
-            disabled={false}
-            id="y"
-            onBlur={undefined}
-            placeholder="Search by name or value"
+          <label
+            className="c5 c6"
+            htmlFor="y"
+          >
+            Filter metadata
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={false}
+              id="y"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
           />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Metadata
+          </button>
         </div>
       </div>
       <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Metadata
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
   <div
-    className="c13 c8"
+    className="c10 c11"
     height="0.6875rem"
   />
   <div
-    className="c14 c8"
+    className="c16 c11"
     height="0.0625rem"
   />
   <div
-    className="c15 c8"
+    className="c10 c11"
     height="1.5rem"
   />
   <div
-    className="c16"
+    className="c2"
   >
     <h3
       className="c17"
@@ -4412,30 +4086,28 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
         name="card"
       >
         <div
-          className="c20"
+          className="c20 c21 c22"
           disabled={false}
           name="card-header"
           onClick={[Function]}
         >
           <div
-            className="c21 c22"
+            className="c23 c24"
           >
             <div
-              className="c23"
+              className="c25"
             >
               <div
-                className="c24 c25"
+                className="c26 c27 c22"
                 disabled={false}
                 name="card-header-meta"
               >
                 <div
-                  className="c26"
+                  className="c28"
                 />
               </div>
               <svg
-                className=""
                 height="6"
-                innerRef={undefined}
                 onClick={[Function]}
                 style={
                   Object {
@@ -4455,79 +4127,80 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c27"
+          className="c29 c30"
+          disabled={false}
           name="card-outlet"
         >
           <div
-            className="c28"
+            className="c31"
           >
             <div
-              className="c8"
+              className="c11"
             >
               <div
-                className="c29"
+                className="c32"
               >
                 <div
-                  className="baseline-jVaZNU kXgQxt c30"
+                  className="c33"
                   name="name"
                   role="group"
                   style={undefined}
                 >
                   <label
-                    className="c3"
+                    className="c5 c6"
                     htmlFor="B"
                   >
                     Metadata
                      key
                   </label>
                   <div
-                    className="c4"
+                    className="c7"
                   >
                     <input
-                      className="c5"
+                      className="c8"
                       disabled={false}
                       id="B"
                       onBlur={null}
                     />
                     <div
-                      className="c8"
+                      className="c11"
                     >
                       <div
-                        className="c31"
+                        className="c34"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  className="c32 c8"
+                  className="c10 c11"
                   height="0.75rem"
                 />
               </div>
             </div>
             <div
-              className="c8"
+              className="c11"
             >
               <div
-                className="c29"
+                className="c32"
               >
                 <div
-                  className="baseline-jVaZNU kXgQxt c30"
+                  className="c33"
                   name="value"
                   role="group"
                   style={undefined}
                 >
                   <label
-                    className="c3"
+                    className="c5 c6"
                     htmlFor="C"
                   >
                     Metadata
                      value
                   </label>
                   <div
-                    className="c4"
+                    className="c7"
                   >
                     <textarea
-                      className="c33 c34"
+                      className="c35 c36"
                       disabled={false}
                       id="C"
                       name="name"
@@ -4535,30 +4208,30 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     />
                   </div>
                   <div
-                    className="c8"
+                    className="c11"
                   >
                     <div
-                      className="c31"
+                      className="c34"
                     />
                   </div>
                 </div>
                 <div
-                  className="c32 c8"
+                  className="c10 c11"
                   height="0.75rem"
                 />
               </div>
             </div>
             <div
-              className="c35"
+              className="c37"
             >
               <div
-                className="c36"
+                className="c38"
               >
                 <div
-                  className="c37"
+                  className="c39"
                 >
                   <button
-                    className="c38 c10 c11"
+                    className="c40 c41 c13 c14 c15"
                     data-ui-button="true"
                     disabled={false}
                     href=""
@@ -4570,7 +4243,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     </span>
                   </button>
                   <button
-                    className="c39 c10 c11"
+                    className="c42 c13 c14 c15"
                     data-ui-button="true"
                     disabled={true}
                     href=""
@@ -4582,10 +4255,10 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                   </button>
                 </div>
                 <div
-                  className="c40"
+                  className="c43"
                 >
                   <button
-                    className="c41 c10 c11"
+                    className="c44 c13 c14 c15"
                     data-ui-button="true"
                     disabled={false}
                     href=""
@@ -4593,24 +4266,26 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    <svg
-                      className=""
-                      height="16"
-                      innerRef={undefined}
-                      style={
-                        Object {
-                          "transform": "rotate(0deg)",
-                        }
-                      }
-                      viewBox="0 0 12 16"
-                      width="12"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      className="c45"
                     >
-                      <path
-                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                        fill="rgb(210, 67, 58)"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        style={
+                          Object {
+                            "transform": "rotate(0deg)",
+                          }
+                        }
+                        viewBox="0 0 12 16"
+                        width="12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                          fill="rgb(210, 67, 58)"
+                        />
+                      </svg>
+                    </div>
                     <span>
                       Remove
                     </span>
@@ -4635,30 +4310,28 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
         name="card"
       >
         <div
-          className="c20"
+          className="c20 c21 c22"
           disabled={false}
           name="card-header"
           onClick={[Function]}
         >
           <div
-            className="c21 c22"
+            className="c23 c24"
           >
             <div
-              className="c23"
+              className="c25"
             >
               <div
-                className="c24 c25"
+                className="c26 c27 c22"
                 disabled={false}
                 name="card-header-meta"
               >
                 <div
-                  className="c26"
+                  className="c28"
                 />
               </div>
               <svg
-                className=""
                 height="6"
-                innerRef={undefined}
                 onClick={[Function]}
                 style={
                   Object {
@@ -4678,79 +4351,80 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c27"
+          className="c29 c30"
+          disabled={false}
           name="card-outlet"
         >
           <div
-            className="c28"
+            className="c31"
           >
             <div
-              className="c8"
+              className="c11"
             >
               <div
-                className="c29"
+                className="c32"
               >
                 <div
-                  className="baseline-jVaZNU kXgQxt c30"
+                  className="c33"
                   name="name"
                   role="group"
                   style={undefined}
                 >
                   <label
-                    className="c3"
+                    className="c5 c6"
                     htmlFor="D"
                   >
                     Metadata
                      key
                   </label>
                   <div
-                    className="c4"
+                    className="c7"
                   >
                     <input
-                      className="c5"
+                      className="c8"
                       disabled={false}
                       id="D"
                       onBlur={null}
                     />
                     <div
-                      className="c8"
+                      className="c11"
                     >
                       <div
-                        className="c31"
+                        className="c34"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  className="c32 c8"
+                  className="c10 c11"
                   height="0.75rem"
                 />
               </div>
             </div>
             <div
-              className="c8"
+              className="c11"
             >
               <div
-                className="c29"
+                className="c32"
               >
                 <div
-                  className="baseline-jVaZNU kXgQxt c30"
+                  className="c33"
                   name="value"
                   role="group"
                   style={undefined}
                 >
                   <label
-                    className="c3"
+                    className="c5 c6"
                     htmlFor="E"
                   >
                     Metadata
                      value
                   </label>
                   <div
-                    className="c4"
+                    className="c7"
                   >
                     <textarea
-                      className="c33 c34"
+                      className="c35 c36"
                       disabled={false}
                       id="E"
                       name="name"
@@ -4758,30 +4432,30 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     />
                   </div>
                   <div
-                    className="c8"
+                    className="c11"
                   >
                     <div
-                      className="c31"
+                      className="c34"
                     />
                   </div>
                 </div>
                 <div
-                  className="c32 c8"
+                  className="c10 c11"
                   height="0.75rem"
                 />
               </div>
             </div>
             <div
-              className="c35"
+              className="c37"
             >
               <div
-                className="c36"
+                className="c38"
               >
                 <div
-                  className="c37"
+                  className="c39"
                 >
                   <button
-                    className="c38 c10 c11"
+                    className="c40 c41 c13 c14 c15"
                     data-ui-button="true"
                     disabled={false}
                     href=""
@@ -4793,7 +4467,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     </span>
                   </button>
                   <button
-                    className="c39 c10 c11"
+                    className="c42 c13 c14 c15"
                     data-ui-button="true"
                     disabled={true}
                     href=""
@@ -4805,10 +4479,10 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                   </button>
                 </div>
                 <div
-                  className="c40"
+                  className="c43"
                 >
                   <button
-                    className="c41 c10 c11"
+                    className="c44 c13 c14 c15"
                     data-ui-button="true"
                     disabled={false}
                     href=""
@@ -4816,24 +4490,26 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    <svg
-                      className=""
-                      height="16"
-                      innerRef={undefined}
-                      style={
-                        Object {
-                          "transform": "rotate(0deg)",
-                        }
-                      }
-                      viewBox="0 0 12 16"
-                      width="12"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div
+                      className="c45"
                     >
-                      <path
-                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                        fill="rgb(210, 67, 58)"
-                      />
-                    </svg>
+                      <svg
+                        height="16"
+                        style={
+                          Object {
+                            "transform": "rotate(0deg)",
+                          }
+                        }
+                        viewBox="0 0 12 16"
+                        width="12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                          fill="rgb(210, 67, 58)"
+                        />
+                      </svg>
+                    </div>
                     <span>
                       Remove
                     </span>
@@ -4858,30 +4534,28 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
         name="card"
       >
         <div
-          className="c20"
+          className="c20 c21 c22"
           disabled={false}
           name="card-header"
           onClick={[Function]}
         >
           <div
-            className="c21 c22"
+            className="c23 c24"
           >
             <div
-              className="c23"
+              className="c25"
             >
               <div
-                className="c24 c25"
+                className="c26 c27 c22"
                 disabled={false}
                 name="card-header-meta"
               >
                 <div
-                  className="c26"
+                  className="c28"
                 />
               </div>
               <svg
-                className=""
                 height="6"
-                innerRef={undefined}
                 onClick={[Function]}
                 style={
                   Object {
@@ -4901,79 +4575,80 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c27"
+          className="c29 c30"
+          disabled={false}
           name="card-outlet"
         >
           <div
-            className="c28"
+            className="c31"
           >
             <div
-              className="c8"
+              className="c11"
             >
               <div
-                className="c29"
+                className="c32"
               >
                 <div
-                  className="baseline-jVaZNU kXgQxt c30"
+                  className="c33"
                   name="name"
                   role="group"
                   style={undefined}
                 >
                   <label
-                    className="c3"
+                    className="c5 c6"
                     htmlFor="F"
                   >
                     Metadata
                      key
                   </label>
                   <div
-                    className="c4"
+                    className="c7"
                   >
                     <input
-                      className="c5"
+                      className="c8"
                       disabled={false}
                       id="F"
                       onBlur={null}
                     />
                     <div
-                      className="c8"
+                      className="c11"
                     >
                       <div
-                        className="c31"
+                        className="c34"
                       />
                     </div>
                   </div>
                 </div>
                 <div
-                  className="c32 c8"
+                  className="c10 c11"
                   height="0.75rem"
                 />
               </div>
             </div>
             <div
-              className="c8"
+              className="c11"
             >
               <div
-                className="c29"
+                className="c32"
               >
                 <div
-                  className="baseline-jVaZNU kXgQxt c30"
+                  className="c33"
                   name="value"
                   role="group"
                   style={undefined}
                 >
                   <label
-                    className="c3"
+                    className="c5 c6"
                     htmlFor="G"
                   >
                     Metadata
                      value
                   </label>
                   <div
-                    className="c4"
+                    className="c7"
                   >
                     <textarea
-                      className="c33 c34"
+                      className="c35 c36"
                       disabled={false}
                       id="G"
                       name="name"
@@ -4981,30 +4656,30 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     />
                   </div>
                   <div
-                    className="c8"
+                    className="c11"
                   >
                     <div
-                      className="c31"
+                      className="c34"
                     />
                   </div>
                 </div>
                 <div
-                  className="c32 c8"
+                  className="c10 c11"
                   height="0.75rem"
                 />
               </div>
             </div>
             <div
-              className="c35"
+              className="c37"
             >
               <div
-                className="c36"
+                className="c38"
               >
                 <div
-                  className="c37"
+                  className="c39"
                 >
                   <button
-                    className="c38 c10 c11"
+                    className="c40 c41 c13 c14 c15"
                     data-ui-button="true"
                     disabled={false}
                     href=""
@@ -5016,7 +4691,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     </span>
                   </button>
                   <button
-                    className="c39 c10 c11"
+                    className="c42 c13 c14 c15"
                     data-ui-button="true"
                     disabled={true}
                     href=""
@@ -5028,10 +4703,10 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                   </button>
                 </div>
                 <div
-                  className="c40"
+                  className="c43"
                 >
                   <button
-                    className="c42 c10 c11"
+                    className="c46 c13 c14 c15"
                     data-ui-button="true"
                     disabled={false}
                     href=""
@@ -5040,28 +4715,28 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     type="button"
                   >
                     <div
-                      className="c43"
+                      className="c47"
                     >
                       <svg
                         height="10"
                         width="28"
                       >
                         <rect
-                          className="c44"
+                          className="c48"
                           height="6"
                           width="6"
                           x="2"
                           y="2"
                         />
                         <rect
-                          className="c45"
+                          className="c49 c48"
                           height="6"
                           width="6"
                           x="11"
                           y="2"
                         />
                         <rect
-                          className="c46"
+                          className="c50 c48"
                           height="6"
                           width="6"
                           x="20"

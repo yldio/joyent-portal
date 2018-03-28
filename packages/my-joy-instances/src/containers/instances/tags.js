@@ -120,19 +120,21 @@ export const Tags = ({
 
   return (
     <ViewContainer main>
-      <ReduxForm form={MENU_FORM_NAME}>
-        {props => (
-          <ToolbarForm
-            {...props}
-            searchable={!_loading}
-            searchLabel="Filter tags"
-            searchPlaceholder="Search by name or value"
-            actionLabel="Add Tag"
-            actionable={!editing}
-            onActionClick={() => handleToggleAddOpen(!addOpen)}
-          />
-        )}
-      </ReduxForm>
+      <Margin bottom={3}>
+        <ReduxForm form={MENU_FORM_NAME}>
+          {props => (
+            <ToolbarForm
+              {...props}
+              searchable={!_loading}
+              searchLabel="Filter tags"
+              searchPlaceholder="Search by name or value"
+              actionLabel="Add Tag"
+              actionable={!editing}
+              onActionClick={() => handleToggleAddOpen(!addOpen)}
+            />
+          )}
+        </ReduxForm>
+      </Margin>
       <Divider height={remcalc(11)} transparent />
       {_line}
       {_loading}

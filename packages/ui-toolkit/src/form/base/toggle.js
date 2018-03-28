@@ -9,7 +9,7 @@ import isUndefined from 'lodash.isundefined';
 
 import BaseInput from './input';
 
-const StyledInput = Input.extend`
+const StyledInput = styled(Input)`
   font-family: ${props => props.theme.font.families};
 
   display: none;
@@ -117,23 +117,13 @@ const InnerContainer = styled.div`
   height: ${remcalc(18)};
   position: relative;
   cursor: pointer;
-
-  ${isNot('noMargin')`
-    margin-bottom: ${remcalc(12)};
-  `};
 `;
 
 const Container = styled.div`
-  margin-left: ${remcalc(12)};
-
   label {
     font-weight: normal;
     font-size: ${remcalc(15)};
   }
-
-  ${isNot('noMargin')`
-    margin-bottom: ${remcalc(12)};
-  `};
 `;
 
 const ToggleBase = ({ container = null, type = 'radio' }) =>

@@ -31,12 +31,12 @@ const StyledFirstRect = styled.rect`
   animation: ${animationName} 1.5s ease-out 0s infinite;
 `;
 
-const StyledSecondRect = StyledFirstRect.extend`
+const StyledSecondRect = styled(StyledFirstRect)`
   /* trick prettier */
   animation-delay: 0.5s;
 `;
 
-const StyledThirdRect = StyledFirstRect.extend`
+const StyledThirdRect = styled(StyledFirstRect)`
   /* trick prettier */
   animation-delay: 1s;
 `;

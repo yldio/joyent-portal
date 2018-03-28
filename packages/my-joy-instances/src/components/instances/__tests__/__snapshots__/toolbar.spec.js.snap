@@ -23,13 +23,17 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c3 {
+.c4 {
   margin-top: 0.1875rem;
 }
 
-.c10 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -39,39 +43,32 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c12::-moz-focus-inner,
+.c12[type='button']::-moz-focus-inner,
+.c12[type='reset']::-moz-focus-inner,
+.c12[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c12:-moz-focusring,
+.c12[type='button']:-moz-focusring,
+.c12[type='reset']:-moz-focusring,
+.c12[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
+.c11 {
+  min-width: 7.5rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c9 + button,
-.c9 + a {
-  margin-left: 0.375rem;
-}
-
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -121,7 +118,7 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -129,34 +126,26 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c8 svg {
-  max-height: 1.125rem;
-}
-
-.c2 {
+.c3 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -164,14 +153,9 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -190,37 +174,29 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c7 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
 .c1 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c5 {
+.c6 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -228,7 +204,7 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -250,65 +226,71 @@ exports[`renders <Toolbar /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c2 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 <div
   className="c0"
 >
   <div
-    className="baseline-jVaZNU kXgQxt c1"
+    className="c1"
     name="filter"
     role="group"
     style={undefined}
   >
     <label
-      className="c2"
+      className="c2 c3"
       htmlFor="k"
     >
       Filter
     </label>
     <div
-      className="c3"
+      className="c4"
     >
       <input
-        className="c4"
+        className="c5"
         disabled={false}
         id="k"
         onBlur={undefined}
@@ -317,16 +299,16 @@ exports[`renders <Toolbar /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="baseline-jVaZNU kXgQxt c5"
+    className="c6"
     role="group"
     style={undefined}
   >
     <div
-      className="c6 c7"
+      className="c7 c8"
       height="1.3125rem"
     />
     <button
-      className="c8 c9 c10"
+      className="c9 c10 c11 c12"
       data-ui-button="true"
       disabled={false}
       href=""
@@ -364,13 +346,17 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c3 {
+.c4 {
   margin-top: 0.1875rem;
 }
 
-.c10 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -380,39 +366,32 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c12::-moz-focus-inner,
+.c12[type='button']::-moz-focus-inner,
+.c12[type='reset']::-moz-focus-inner,
+.c12[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c12:-moz-focusring,
+.c12[type='button']:-moz-focusring,
+.c12[type='reset']:-moz-focusring,
+.c12[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
+.c11 {
+  min-width: 7.5rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c9 + button,
-.c9 + a {
-  margin-left: 0.375rem;
-}
-
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -462,7 +441,7 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -470,34 +449,26 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c8 svg {
-  max-height: 1.125rem;
-}
-
-.c2 {
+.c3 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -505,14 +476,9 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -531,37 +497,29 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c7 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
 .c1 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c5 {
+.c6 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -569,7 +527,7 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -591,65 +549,71 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c2 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 <div
   className="c0"
 >
   <div
-    className="baseline-jVaZNU kXgQxt c1"
+    className="c1"
     name="filter"
     role="group"
     style={undefined}
   >
     <label
-      className="c2"
+      className="c2 c3"
       htmlFor="w"
     >
       Filter
     </label>
     <div
-      className="c3"
+      className="c4"
     >
       <input
-        className="c4"
+        className="c5"
         disabled={false}
         id="w"
         onBlur={undefined}
@@ -658,16 +622,16 @@ exports[`renders <Toolbar actionLabel /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="baseline-jVaZNU kXgQxt c5"
+    className="c6"
     role="group"
     style={undefined}
   >
     <div
-      className="c6 c7"
+      className="c7 c8"
       height="1.3125rem"
     />
     <button
-      className="c8 c9 c10"
+      className="c9 c10 c11 c12"
       data-ui-button="true"
       disabled={false}
       href=""
@@ -705,13 +669,17 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c3 {
+.c4 {
   margin-top: 0.1875rem;
 }
 
-.c10 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -721,39 +689,32 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c12::-moz-focus-inner,
+.c12[type='button']::-moz-focus-inner,
+.c12[type='reset']::-moz-focus-inner,
+.c12[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c12:-moz-focusring,
+.c12[type='button']:-moz-focusring,
+.c12[type='reset']:-moz-focusring,
+.c12[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
+.c11 {
+  min-width: 7.5rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c9 + button,
-.c9 + a {
-  margin-left: 0.375rem;
-}
-
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -808,7 +769,7 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -816,51 +777,43 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8:focus {
+.c9:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c8 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c8 svg {
-  max-height: 1.125rem;
-}
-
-.c2 {
+.c3 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -868,14 +821,9 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -894,37 +842,29 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c7 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
 .c1 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c5 {
+.c6 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -932,7 +872,7 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -954,65 +894,71 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c2 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 <div
   className="c0"
 >
   <div
-    className="baseline-jVaZNU kXgQxt c1"
+    className="c1"
     name="filter"
     role="group"
     style={undefined}
   >
     <label
-      className="c2"
+      className="c2 c3"
       htmlFor="z"
     >
       Filter
     </label>
     <div
-      className="c3"
+      className="c4"
     >
       <input
-        className="c4"
+        className="c5"
         disabled={false}
         id="z"
         onBlur={undefined}
@@ -1021,16 +967,16 @@ exports[`renders <Toolbar actionable /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="baseline-jVaZNU kXgQxt c5"
+    className="c6"
     role="group"
     style={undefined}
   >
     <div
-      className="c6 c7"
+      className="c7 c8"
       height="1.3125rem"
     />
     <button
-      className="c8 c9 c10"
+      className="c9 c10 c11 c12"
       data-ui-button="true"
       disabled={true}
       href=""
@@ -1068,13 +1014,17 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c3 {
+.c4 {
   margin-top: 0.1875rem;
 }
 
-.c10 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1084,39 +1034,32 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c12::-moz-focus-inner,
+.c12[type='button']::-moz-focus-inner,
+.c12[type='reset']::-moz-focus-inner,
+.c12[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c12:-moz-focusring,
+.c12[type='button']:-moz-focusring,
+.c12[type='reset']:-moz-focusring,
+.c12[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
+.c11 {
+  min-width: 7.5rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c9 + button,
-.c9 + a {
-  margin-left: 0.375rem;
-}
-
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1166,7 +1109,7 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1174,34 +1117,26 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c8 svg {
-  max-height: 1.125rem;
-}
-
-.c2 {
+.c3 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1209,14 +1144,9 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1235,37 +1165,29 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c7 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
 .c1 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c5 {
+.c6 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -1273,7 +1195,7 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1295,65 +1217,71 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c2 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 <div
   className="c0"
 >
   <div
-    className="baseline-jVaZNU kXgQxt c1"
+    className="c1"
     name="filter"
     role="group"
     style={undefined}
   >
     <label
-      className="c2"
+      className="c2 c3"
       htmlFor="C"
     >
       Filter
     </label>
     <div
-      className="c3"
+      className="c4"
     >
       <input
-        className="c4"
+        className="c5"
         disabled={false}
         id="C"
         onBlur={undefined}
@@ -1362,16 +1290,16 @@ exports[`renders <Toolbar onActionClick /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="baseline-jVaZNU kXgQxt c5"
+    className="c6"
     role="group"
     style={undefined}
   >
     <div
-      className="c6 c7"
+      className="c7 c8"
       height="1.3125rem"
     />
     <button
-      className="c8 c9 c10"
+      className="c9 c10 c11 c12"
       data-ui-button="true"
       disabled={false}
       href=""
@@ -1409,13 +1337,17 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c3 {
+.c4 {
   margin-top: 0.1875rem;
 }
 
-.c10 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1425,39 +1357,32 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c12::-moz-focus-inner,
+.c12[type='button']::-moz-focus-inner,
+.c12[type='reset']::-moz-focus-inner,
+.c12[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c12:-moz-focusring,
+.c12[type='button']:-moz-focusring,
+.c12[type='reset']:-moz-focusring,
+.c12[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
+.c11 {
+  min-width: 7.5rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c9 + button,
-.c9 + a {
-  margin-left: 0.375rem;
-}
-
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1507,7 +1432,7 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1515,34 +1440,26 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c8 svg {
-  max-height: 1.125rem;
-}
-
-.c2 {
+.c3 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1550,14 +1467,9 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1576,37 +1488,29 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c7 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
 .c1 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c5 {
+.c6 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -1614,7 +1518,7 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1636,65 +1540,71 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c2 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 <div
   className="c0"
 >
   <div
-    className="baseline-jVaZNU kXgQxt c1"
+    className="c1"
     name="filter"
     role="group"
     style={undefined}
   >
     <label
-      className="c2"
+      className="c2 c3"
       htmlFor="n"
     >
       Search label
     </label>
     <div
-      className="c3"
+      className="c4"
     >
       <input
-        className="c4"
+        className="c5"
         disabled={false}
         id="n"
         onBlur={undefined}
@@ -1703,16 +1613,16 @@ exports[`renders <Toolbar searchLabel /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="baseline-jVaZNU kXgQxt c5"
+    className="c6"
     role="group"
     style={undefined}
   >
     <div
-      className="c6 c7"
+      className="c7 c8"
       height="1.3125rem"
     />
     <button
-      className="c8 c9 c10"
+      className="c9 c10 c11 c12"
       data-ui-button="true"
       disabled={false}
       href=""
@@ -1750,13 +1660,17 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c3 {
+.c4 {
   margin-top: 0.1875rem;
 }
 
-.c10 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1766,39 +1680,32 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c12::-moz-focus-inner,
+.c12[type='button']::-moz-focus-inner,
+.c12[type='reset']::-moz-focus-inner,
+.c12[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c12:-moz-focusring,
+.c12[type='button']:-moz-focusring,
+.c12[type='reset']:-moz-focusring,
+.c12[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
+.c11 {
+  min-width: 7.5rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c9 + button,
-.c9 + a {
-  margin-left: 0.375rem;
-}
-
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1848,7 +1755,7 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1856,34 +1763,26 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c8 svg {
-  max-height: 1.125rem;
-}
-
-.c2 {
+.c3 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1891,14 +1790,9 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1917,37 +1811,29 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c7 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
 .c1 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c5 {
+.c6 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -1955,7 +1841,7 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1977,65 +1863,71 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c2 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 <div
   className="c0"
 >
   <div
-    className="baseline-jVaZNU kXgQxt c1"
+    className="c1"
     name="filter"
     role="group"
     style={undefined}
   >
     <label
-      className="c2"
+      className="c2 c3"
       htmlFor="q"
     >
       Filter
     </label>
     <div
-      className="c3"
+      className="c4"
     >
       <input
-        className="c4"
+        className="c5"
         disabled={false}
         id="q"
         onBlur={undefined}
@@ -2044,16 +1936,16 @@ exports[`renders <Toolbar searchPlaceholder /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="baseline-jVaZNU kXgQxt c5"
+    className="c6"
     role="group"
     style={undefined}
   >
     <div
-      className="c6 c7"
+      className="c7 c8"
       height="1.3125rem"
     />
     <button
-      className="c8 c9 c10"
+      className="c9 c10 c11 c12"
       data-ui-button="true"
       disabled={false}
       href=""
@@ -2091,13 +1983,17 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c3 {
+.c4 {
   margin-top: 0.1875rem;
 }
 
-.c10 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2107,39 +2003,32 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c10::-moz-focus-inner,
-.c10[type='button']::-moz-focus-inner,
-.c10[type='reset']::-moz-focus-inner,
-.c10[type='submit']::-moz-focus-inner {
+.c12::-moz-focus-inner,
+.c12[type='button']::-moz-focus-inner,
+.c12[type='reset']::-moz-focus-inner,
+.c12[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c10:-moz-focusring,
-.c10[type='button']:-moz-focusring,
-.c10[type='reset']:-moz-focusring,
-.c10[type='submit']:-moz-focusring {
+.c12:-moz-focusring,
+.c12[type='button']:-moz-focusring,
+.c12[type='reset']:-moz-focusring,
+.c12[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
+.c11 {
+  min-width: 7.5rem;
 }
 
-.c9 {
+.c10 {
   display: inline-block;
 }
 
-.c9 + button,
-.c9 + a {
-  margin-left: 0.375rem;
-}
-
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2189,7 +2078,7 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c8:focus {
+.c9:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2197,34 +2086,26 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c8:hover {
+.c9:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c8:active,
-.c8:active:hover,
-.c8:active:focus {
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c8[disabled] {
+.c9[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c8 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c8 svg {
-  max-height: 1.125rem;
-}
-
-.c2 {
+.c3 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -2232,14 +2113,9 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c7 {
+.c8 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2258,37 +2134,29 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c6 {
+.c7 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
 .c1 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c5 {
+.c6 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -2296,7 +2164,7 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   float: right;
 }
 
-.c4 {
+.c5 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -2321,77 +2189,83 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c4:focus {
+.c5:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:invalid {
+.c5:invalid {
   box-shadow: none;
 }
 
-.c4::-webkit-input-placeholder {
+.c5::-webkit-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c4::-moz-placeholder {
+.c5::-moz-placeholder {
   color: rgb(216,216,216);
 }
 
-.c4:-ms-input-placeholder {
+.c5:-ms-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c4:disabled {
+.c5:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c4:disabled::-webkit-input-placeholder {
+.c5:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled::-moz-placeholder {
+.c5:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4:disabled:-ms-input-placeholder {
+.c5:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c2 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 <div
   className="c0"
 >
   <div
-    className="baseline-jVaZNU kXgQxt c1"
+    className="c1"
     name="filter"
     role="group"
     style={undefined}
   >
     <label
-      className="c2"
+      className="c2 c3"
       htmlFor="t"
     >
       Filter
     </label>
     <div
-      className="c3"
+      className="c4"
     >
       <input
-        className="c4"
+        className="c5"
         disabled={true}
         id="t"
         onBlur={undefined}
@@ -2400,16 +2274,16 @@ exports[`renders <Toolbar searchable /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="baseline-jVaZNU kXgQxt c5"
+    className="c6"
     role="group"
     style={undefined}
   >
     <div
-      className="c6 c7"
+      className="c7 c8"
       height="1.3125rem"
     />
     <button
-      className="c8 c9 c10"
+      className="c9 c10 c11 c12"
       data-ui-button="true"
       disabled={false}
       href=""

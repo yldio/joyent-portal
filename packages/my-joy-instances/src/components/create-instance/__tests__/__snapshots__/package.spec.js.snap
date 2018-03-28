@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Filters /> without throwing 1`] = `
-.c12 {
+.c14 {
   margin-right: 0.75rem;
   margin-left: 0.375rem;
 }
@@ -11,17 +11,17 @@ exports[`renders <Filters /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c11 {
+.c13 {
   margin-right: 0.375rem;
   margin-left: 0.375rem;
 }
 
-.c13 {
+.c15 {
   margin-top: 0.75rem;
   margin-bottom: 0.375rem;
 }
 
-.c10 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,7 +76,7 @@ exports[`renders <Filters /> without throwing 1`] = `
   align-items: center;
 }
 
-.c16 {
+.c19 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -86,102 +86,72 @@ exports[`renders <Filters /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c16::-moz-focus-inner,
-.c16[type='button']::-moz-focus-inner,
-.c16[type='reset']::-moz-focus-inner,
-.c16[type='submit']::-moz-focus-inner {
+.c19::-moz-focus-inner,
+.c19[type='button']::-moz-focus-inner,
+.c19[type='reset']::-moz-focus-inner,
+.c19[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c16:-moz-focusring,
-.c16[type='button']:-moz-focusring,
-.c16[type='reset']:-moz-focusring,
-.c16[type='submit']:-moz-focusring {
+.c19:-moz-focusring,
+.c19[type='button']:-moz-focusring,
+.c19[type='reset']:-moz-focusring,
+.c19[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c16 + button,
-.c16 + a {
-  margin-left: 0.375rem;
-}
-
-.c6 {
+.c7 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c6[type='checkbox'],
-.c6[type='radio'] {
+.c7[type='checkbox'],
+.c7[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c6[type='number']::-webkit-inner-spin-button,
-.c6[type='number']::-webkit-outer-spin-button {
+.c7[type='number']::-webkit-inner-spin-button,
+.c7[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c6[type='search'] {
+.c7[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c6[type='search']::-webkit-search-cancel-button,
-.c6[type='search']::-webkit-search-decoration {
+.c7[type='search']::-webkit-search-cancel-button,
+.c7[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c6::-webkit-file-upload-button {
+.c7::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c6:checked + label::after {
-  opacity: 1;
+.c18 {
+  min-width: 7.5rem;
 }
 
-.c6:selected + label::after {
-  opacity: 1;
-}
-
-.c6:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c6:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c6:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
-.c15 {
+.c17 {
   display: inline-block;
 }
 
-.c15 + button,
-.c15 + a {
-  margin-left: 0.375rem;
-}
-
-.c14 {
+.c16 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -225,7 +195,7 @@ exports[`renders <Filters /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c14:focus {
+.c16:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -233,43 +203,43 @@ exports[`renders <Filters /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c14:hover {
+.c16:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c14:active,
-.c14:active:hover,
-.c14:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c14[disabled] {
+.c16[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c14:focus {
+.c16:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c14:hover {
+.c16:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c14:active,
-.c14:active:hover,
-.c14:active:focus {
+.c16:active,
+.c16:active:hover,
+.c16:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c9 {
+.c11 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -277,13 +247,6 @@ exports[`renders <Filters /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
-  cursor: pointer;
-  margin: 0;
 }
 
 .c1 {
@@ -291,23 +254,35 @@ exports[`renders <Filters /> without throwing 1`] = `
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c1 + p,
-.c1 + small,
-.c1 + h1,
-.c1 + h2,
-.c1 + label,
-.c1 + h3,
-.c1 + h4,
-.c1 + h5,
-.c1 + div,
-.c1 + span {
-  margin-top: 0.75rem;
+.c6 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
 }
 
-.c7 {
+.c6:checked + label::after {
+  opacity: 1;
+}
+
+.c6:selected + label::after {
+  opacity: 1;
+}
+
+.c6:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c6:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c6:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c8 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -325,7 +300,7 @@ exports[`renders <Filters /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c7::after {
+.c8::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -349,15 +324,9 @@ exports[`renders <Filters /> without throwing 1`] = `
   height: 1.125rem;
   position: relative;
   cursor: pointer;
-  margin-bottom: 0.75rem;
 }
 
-.c8 {
-  margin-left: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.c8 label {
+.c9 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
@@ -380,17 +349,21 @@ exports[`renders <Filters /> without throwing 1`] = `
 
 .c3 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
+}
+
+.c10 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+  cursor: pointer;
 }
 
 <div
@@ -406,7 +379,7 @@ exports[`renders <Filters /> without throwing 1`] = `
     wrap={true}
   >
     <div
-      className="baseline-jVaZNU kXgQxt c3"
+      className="c3"
       name="compute-optimized"
       role="group"
       style={undefined}
@@ -425,30 +398,30 @@ exports[`renders <Filters /> without throwing 1`] = `
         >
           <input
             checked={false}
-            className="c6"
+            className="c6 c7"
             disabled={false}
             id="n"
             onBlur={undefined}
             type="checkbox"
           />
           <label
-            className="c7"
+            className="c8"
             htmlFor="n"
           />
         </div>
         <div
           checked={false}
-          className="c8"
+          className="c9"
           disabled={false}
           id="m"
           onBlur={undefined}
         >
           <label
-            className="c9"
+            className="c10 c11"
             htmlFor="n"
           >
             <div
-              className="c10"
+              className="c12"
             >
               <svg
                 height="24"
@@ -462,7 +435,7 @@ exports[`renders <Filters /> without throwing 1`] = `
                 />
               </svg>
               <div
-                className="c11"
+                className="c13"
               >
                 Compute Optimized
               </div>
@@ -472,7 +445,7 @@ exports[`renders <Filters /> without throwing 1`] = `
       </li>
     </div>
     <div
-      className="baseline-jVaZNU kXgQxt c3"
+      className="c3"
       name="memory-optimized"
       role="group"
       style={undefined}
@@ -491,30 +464,30 @@ exports[`renders <Filters /> without throwing 1`] = `
         >
           <input
             checked={false}
-            className="c6"
+            className="c6 c7"
             disabled={false}
             id="p"
             onBlur={undefined}
             type="checkbox"
           />
           <label
-            className="c7"
+            className="c8"
             htmlFor="p"
           />
         </div>
         <div
           checked={false}
-          className="c8"
+          className="c9"
           disabled={false}
           id="o"
           onBlur={undefined}
         >
           <label
-            className="c9"
+            className="c10 c11"
             htmlFor="p"
           >
             <div
-              className="c10"
+              className="c12"
             >
               <svg
                 height="21.68"
@@ -528,7 +501,7 @@ exports[`renders <Filters /> without throwing 1`] = `
                 />
               </svg>
               <div
-                className="c12"
+                className="c14"
               >
                 Memory Optimized
               </div>
@@ -538,7 +511,7 @@ exports[`renders <Filters /> without throwing 1`] = `
       </li>
     </div>
     <div
-      className="baseline-jVaZNU kXgQxt c3"
+      className="c3"
       name="general-purpose"
       role="group"
       style={undefined}
@@ -557,30 +530,30 @@ exports[`renders <Filters /> without throwing 1`] = `
         >
           <input
             checked={false}
-            className="c6"
+            className="c6 c7"
             disabled={false}
             id="r"
             onBlur={undefined}
             type="checkbox"
           />
           <label
-            className="c7"
+            className="c8"
             htmlFor="r"
           />
         </div>
         <div
           checked={false}
-          className="c8"
+          className="c9"
           disabled={false}
           id="q"
           onBlur={undefined}
         >
           <label
-            className="c9"
+            className="c10 c11"
             htmlFor="r"
           >
             <div
-              className="c10"
+              className="c12"
             >
               <svg
                 height="20"
@@ -594,7 +567,7 @@ exports[`renders <Filters /> without throwing 1`] = `
                 />
               </svg>
               <div
-                className="c12"
+                className="c14"
               >
                 General Purpose
               </div>
@@ -604,7 +577,7 @@ exports[`renders <Filters /> without throwing 1`] = `
       </li>
     </div>
     <div
-      className="baseline-jVaZNU kXgQxt c3"
+      className="c3"
       name="storage-optimized"
       role="group"
       style={undefined}
@@ -623,35 +596,33 @@ exports[`renders <Filters /> without throwing 1`] = `
         >
           <input
             checked={false}
-            className="c6"
+            className="c6 c7"
             disabled={false}
             id="t"
             onBlur={undefined}
             type="checkbox"
           />
           <label
-            className="c7"
+            className="c8"
             htmlFor="t"
           />
         </div>
         <div
           checked={false}
-          className="c8"
+          className="c9"
           disabled={false}
           id="s"
           onBlur={undefined}
         >
           <label
-            className="c9"
+            className="c10 c11"
             htmlFor="t"
           >
             <div
-              className="c10"
+              className="c12"
             >
               <svg
-                className=""
                 height="20"
-                innerRef={undefined}
                 style={
                   Object {
                     "transform": "rotate(0deg)",
@@ -667,7 +638,7 @@ exports[`renders <Filters /> without throwing 1`] = `
                 />
               </svg>
               <div
-                className="c12"
+                className="c14"
               >
                 Storage Optimized
               </div>
@@ -677,7 +648,7 @@ exports[`renders <Filters /> without throwing 1`] = `
       </li>
     </div>
     <div
-      className="baseline-jVaZNU kXgQxt c3"
+      className="c3"
       name="ssd"
       role="group"
       style={undefined}
@@ -696,26 +667,26 @@ exports[`renders <Filters /> without throwing 1`] = `
         >
           <input
             checked={false}
-            className="c6"
+            className="c6 c7"
             disabled={false}
             id="v"
             onBlur={undefined}
             type="checkbox"
           />
           <label
-            className="c7"
+            className="c8"
             htmlFor="v"
           />
         </div>
         <div
           checked={false}
-          className="c8"
+          className="c9"
           disabled={false}
           id="u"
           onBlur={undefined}
         >
           <label
-            className="c9"
+            className="c10 c11"
             htmlFor="v"
           >
             SSD
@@ -725,10 +696,10 @@ exports[`renders <Filters /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c13"
+    className="c15"
   >
     <button
-      className="c14 c15 c16"
+      className="c16 c17 c18 c19"
       data-ui-button="true"
       href=""
       onClick={undefined}
@@ -751,7 +722,6 @@ Array [
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
 <div
@@ -840,7 +810,6 @@ Array [
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
 <div
@@ -929,17 +898,17 @@ Array [
 `;
 
 exports[`renders <Package /> without throwing 1`] = `
-.c10 {
+.c11 {
   margin-right: 0.75rem;
   margin-left: 0.375rem;
 }
 
-.c12 {
+.c14 {
   display: inline-block;
   margin-right: 0.375rem;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -963,46 +932,59 @@ exports[`renders <Package /> without throwing 1`] = `
   align-items: center;
 }
 
-.c6 {
+.c7 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c6[type='checkbox'],
-.c6[type='radio'] {
+.c7[type='checkbox'],
+.c7[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c6[type='number']::-webkit-inner-spin-button,
-.c6[type='number']::-webkit-outer-spin-button {
+.c7[type='number']::-webkit-inner-spin-button,
+.c7[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c6[type='search'] {
+.c7[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c6[type='search']::-webkit-search-cancel-button,
-.c6[type='search']::-webkit-search-decoration {
+.c7[type='search']::-webkit-search-cancel-button,
+.c7[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c6::-webkit-file-upload-button {
+.c7::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c13 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+}
+
+.c6 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
 }
 
 .c6:checked + label::after {
@@ -1026,24 +1008,7 @@ exports[`renders <Package /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c11 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
-  cursor: pointer;
-  margin: 0;
-}
-
-.c7 {
+.c8 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -1061,7 +1026,7 @@ exports[`renders <Package /> without throwing 1`] = `
   border-radius: 50%;
 }
 
-.c7::after {
+.c8::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -1085,29 +1050,29 @@ exports[`renders <Package /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c8 {
-  margin-left: 0.75rem;
-}
-
-.c8 label {
+.c9 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
 .c3 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
   width: 100%;
+}
+
+.c12 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+  cursor: pointer;
 }
 
 .c4 {
@@ -1177,7 +1142,7 @@ exports[`renders <Package /> without throwing 1`] = `
     selected={false}
   >
     <div
-      className="baseline-jVaZNU kXgQxt c3"
+      className="c3"
       name="package"
       role="group"
       style={undefined}
@@ -1198,31 +1163,31 @@ exports[`renders <Package /> without throwing 1`] = `
         >
           <input
             checked={undefined}
-            className="c6"
+            className="c6 c7"
             disabled={false}
             id="l"
             onBlur={null}
             type="radio"
           />
           <label
-            className="c7"
+            className="c8"
             htmlFor="l"
           />
         </div>
         <div
-          className="c8"
+          className="c9"
           disabled={false}
           id="k"
           onBlur={null}
         >
           <div
-            className="c9"
+            className="c10"
           >
             <div
-              className="c10"
+              className="c11"
             >
               <label
-                className="c11"
+                className="c12 c13"
                 htmlFor="l"
                 style={
                   Object {
@@ -1253,7 +1218,7 @@ exports[`renders <Package /> without throwing 1`] = `
     selected={false}
   >
     <div
-      className="c12"
+      className="c14"
     >
       1
     </div>
@@ -1270,15 +1235,15 @@ exports[`renders <Package /> without throwing 1`] = `
 `;
 
 exports[`renders <Packages expanded /> without throwing 1`] = `
-.c11 {
+.c10 {
   margin-bottom: 0.75rem;
 }
 
-.c9 {
-  padding: 2.25rem;
+.c8 {
+  padding: 8rem;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1309,33 +1274,14 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
   align-items: center;
 }
 
-.c4 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c13 {
+.c12 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c13 + p,
-.c13 + small,
-.c13 + h1,
-.c13 + h2,
-.c13 + label,
-.c13 + h3,
-.c13 + h4,
-.c13 + h5,
-.c13 + div,
-.c13 + span {
-  margin-top: 0.75rem;
-}
-
-.c8 {
+.c7 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1379,7 +1325,7 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c6 {
+.c5 {
   width: 100%;
 }
 
@@ -1417,7 +1363,7 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c5 {
+.c4 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1441,11 +1387,11 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c5:not(:first-child) {
+.c4:not(:first-child) {
   border-left-width: 0;
 }
 
-.c5:not(:last-child) {
+.c4:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1469,12 +1415,12 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c12 {
+.c11 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c7 {
+.c6 {
   width: calc(100% - 0.125rem);
   border-top: none;
 }
@@ -1506,9 +1452,7 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
             Name 
           </span>
           <svg
-            className="c4"
             height="6"
-            innerRef={undefined}
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
             style={
@@ -1527,7 +1471,7 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1538,7 +1482,7 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1549,7 +1493,7 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1562,25 +1506,25 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c6"
+      className="c5"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
   </table>
   <div
-    className="c7 c8"
+    className="c6 c7"
     disabled={false}
     name="card"
   >
     <div
-      className="c9"
+      className="c8"
     >
       <div
-        className="c10"
+        className="c9"
       >
         <div
-          className="c11"
+          className="c10"
         >
           <svg
             height={60}
@@ -1807,7 +1751,7 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
           </svg>
         </div>
         <h3
-          className="c12 c13"
+          className="c11 c12"
         >
           Sorry, but we weren’t able to find any packages with that filter
         </h3>
@@ -1818,15 +1762,15 @@ exports[`renders <Packages expanded /> without throwing 1`] = `
 `;
 
 exports[`renders <Packages isVmSelected /> without throwing 1`] = `
-.c11 {
+.c10 {
   margin-bottom: 0.75rem;
 }
 
-.c9 {
-  padding: 2.25rem;
+.c8 {
+  padding: 8rem;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1857,33 +1801,14 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
   align-items: center;
 }
 
-.c4 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c13 {
+.c12 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c13 + p,
-.c13 + small,
-.c13 + h1,
-.c13 + h2,
-.c13 + label,
-.c13 + h3,
-.c13 + h4,
-.c13 + h5,
-.c13 + div,
-.c13 + span {
-  margin-top: 0.75rem;
-}
-
-.c8 {
+.c7 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1927,7 +1852,7 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c6 {
+.c5 {
   width: 100%;
 }
 
@@ -1965,7 +1890,7 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c5 {
+.c4 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1989,11 +1914,11 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c5:not(:first-child) {
+.c4:not(:first-child) {
   border-left-width: 0;
 }
 
-.c5:not(:last-child) {
+.c4:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2017,12 +1942,12 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c12 {
+.c11 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c7 {
+.c6 {
   width: calc(100% - 0.125rem);
   border-top: none;
 }
@@ -2054,9 +1979,7 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
             Name 
           </span>
           <svg
-            className="c4"
             height="6"
-            innerRef={undefined}
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
             style={
@@ -2075,7 +1998,7 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2086,7 +2009,7 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2097,7 +2020,7 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2110,25 +2033,25 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c6"
+      className="c5"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
   </table>
   <div
-    className="c7 c8"
+    className="c6 c7"
     disabled={false}
     name="card"
   >
     <div
-      className="c9"
+      className="c8"
     >
       <div
-        className="c10"
+        className="c9"
       >
         <div
-          className="c11"
+          className="c10"
         >
           <svg
             height={60}
@@ -2355,7 +2278,7 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
           </svg>
         </div>
         <h3
-          className="c12 c13"
+          className="c11 c12"
         >
           Sorry, but we weren’t able to find any packages with that filter
         </h3>
@@ -2366,15 +2289,15 @@ exports[`renders <Packages isVmSelected /> without throwing 1`] = `
 `;
 
 exports[`renders <Packages loading /> without throwing 1`] = `
-.c11 {
+.c10 {
   margin-bottom: 0.75rem;
 }
 
-.c9 {
-  padding: 2.25rem;
+.c8 {
+  padding: 8rem;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2405,33 +2328,14 @@ exports[`renders <Packages loading /> without throwing 1`] = `
   align-items: center;
 }
 
-.c4 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c13 {
+.c12 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c13 + p,
-.c13 + small,
-.c13 + h1,
-.c13 + h2,
-.c13 + label,
-.c13 + h3,
-.c13 + h4,
-.c13 + h5,
-.c13 + div,
-.c13 + span {
-  margin-top: 0.75rem;
-}
-
-.c8 {
+.c7 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2475,7 +2379,7 @@ exports[`renders <Packages loading /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c6 {
+.c5 {
   width: 100%;
 }
 
@@ -2513,7 +2417,7 @@ exports[`renders <Packages loading /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c5 {
+.c4 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2537,11 +2441,11 @@ exports[`renders <Packages loading /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c5:not(:first-child) {
+.c4:not(:first-child) {
   border-left-width: 0;
 }
 
-.c5:not(:last-child) {
+.c4:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2565,12 +2469,12 @@ exports[`renders <Packages loading /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c12 {
+.c11 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c7 {
+.c6 {
   width: calc(100% - 0.125rem);
   border-top: none;
 }
@@ -2602,9 +2506,7 @@ exports[`renders <Packages loading /> without throwing 1`] = `
             Name 
           </span>
           <svg
-            className="c4"
             height="6"
-            innerRef={undefined}
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
             style={
@@ -2623,7 +2525,7 @@ exports[`renders <Packages loading /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2634,7 +2536,7 @@ exports[`renders <Packages loading /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2645,7 +2547,7 @@ exports[`renders <Packages loading /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2658,25 +2560,25 @@ exports[`renders <Packages loading /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c6"
+      className="c5"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
   </table>
   <div
-    className="c7 c8"
+    className="c6 c7"
     disabled={false}
     name="card"
   >
     <div
-      className="c9"
+      className="c8"
     >
       <div
-        className="c10"
+        className="c9"
       >
         <div
-          className="c11"
+          className="c10"
         >
           <svg
             height={60}
@@ -2903,7 +2805,7 @@ exports[`renders <Packages loading /> without throwing 1`] = `
           </svg>
         </div>
         <h3
-          className="c12 c13"
+          className="c11 c12"
         >
           Sorry, but we weren’t able to find any packages with that filter
         </h3>
@@ -2914,11 +2816,6 @@ exports[`renders <Packages loading /> without throwing 1`] = `
 `;
 
 exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without throwing 1`] = `
-.c4 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
 .c0 {
   overflow: hidden;
   border-spacing: 0;
@@ -2941,7 +2838,7 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
   border-top-right-radius: 0.25rem;
 }
 
-.c6 {
+.c5 {
   width: 100%;
 }
 
@@ -2979,7 +2876,7 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
   border-right-width: 0;
 }
 
-.c5 {
+.c4 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3003,11 +2900,11 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
   border-bottom-width: 0;
 }
 
-.c5:not(:first-child) {
+.c4:not(:first-child) {
   border-left-width: 0;
 }
 
-.c5:not(:last-child) {
+.c4:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3058,9 +2955,7 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
             Name 
           </span>
           <svg
-            className="c4"
             height="6"
-            innerRef={undefined}
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
             style={
@@ -3079,7 +2974,7 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
           </svg>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3090,7 +2985,7 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
           </span>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3101,7 +2996,7 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
           </span>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3114,7 +3009,7 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
       </tr>
     </thead>
     <tbody
-      className="c6"
+      className="c5"
       disabled={undefined}
       name="tbody"
       selected={undefined}
@@ -3124,15 +3019,15 @@ exports[`renders <Packages packages=[{name: stuff, imageName: stuff}] /> without
 `;
 
 exports[`renders <Packages pristine={false} /> without throwing 1`] = `
-.c11 {
+.c10 {
   margin-bottom: 0.75rem;
 }
 
-.c9 {
-  padding: 2.25rem;
+.c8 {
+  padding: 8rem;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3163,33 +3058,14 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
   align-items: center;
 }
 
-.c4 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c13 {
+.c12 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c13 + p,
-.c13 + small,
-.c13 + h1,
-.c13 + h2,
-.c13 + label,
-.c13 + h3,
-.c13 + h4,
-.c13 + h5,
-.c13 + div,
-.c13 + span {
-  margin-top: 0.75rem;
-}
-
-.c8 {
+.c7 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3233,7 +3109,7 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c6 {
+.c5 {
   width: 100%;
 }
 
@@ -3271,7 +3147,7 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c5 {
+.c4 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3295,11 +3171,11 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c5:not(:first-child) {
+.c4:not(:first-child) {
   border-left-width: 0;
 }
 
-.c5:not(:last-child) {
+.c4:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3323,12 +3199,12 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c12 {
+.c11 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c7 {
+.c6 {
   width: calc(100% - 0.125rem);
   border-top: none;
 }
@@ -3360,9 +3236,7 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
             Name 
           </span>
           <svg
-            className="c4"
             height="6"
-            innerRef={undefined}
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
             style={
@@ -3381,7 +3255,7 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3392,7 +3266,7 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3403,7 +3277,7 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c5"
+          className="c4"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3416,25 +3290,25 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c6"
+      className="c5"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
   </table>
   <div
-    className="c7 c8"
+    className="c6 c7"
     disabled={false}
     name="card"
   >
     <div
-      className="c9"
+      className="c8"
     >
       <div
-        className="c10"
+        className="c9"
       >
         <div
-          className="c11"
+          className="c10"
         >
           <svg
             height={60}
@@ -3661,7 +3535,7 @@ exports[`renders <Packages pristine={false} /> without throwing 1`] = `
           </svg>
         </div>
         <h3
-          className="c12 c13"
+          className="c11 c12"
         >
           Sorry, but we weren’t able to find any packages with that filter
         </h3>

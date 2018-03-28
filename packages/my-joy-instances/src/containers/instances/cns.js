@@ -45,20 +45,18 @@ const CnsContainer = ({
   handleAsyncValidate
 }) => (
   <ViewContainer main>
-    <Margin bottom={1}>
-      <Description>
-        Triton CNS is used to automatically update hostnames for your instances.
-        You can serve multiple instances (with multiple IP addresses) under the
-        same hostname by matching the CNS service names.{' '}
-        <a
-          href="https://docs.joyent.com/private-cloud/install/cns"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Read the docs
-        </a>
-      </Description>
-    </Margin>
+    <Description>
+      Triton CNS is used to automatically update hostnames for your instances.
+      You can serve multiple instances (with multiple IP addresses) under the
+      same hostname by matching the CNS service names.{' '}
+      <a
+        href="https://docs.joyent.com/private-cloud/install/cns"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Read the docs
+      </a>
+    </Description>
     {loading ? <StatusLoader /> : null}
     {!loading && loadingError ? (
       <Margin bottom={4}>

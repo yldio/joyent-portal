@@ -4,7 +4,6 @@ import is from 'styled-is';
 
 export default styled.sup`
   position: absolute;
-  margin-left: ${remcalc(6)};
   font-weight: ${props => props.theme.font.weight.semibold};
   line-height: normal;
   font-size: ${remcalc(8)};

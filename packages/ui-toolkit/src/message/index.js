@@ -21,7 +21,6 @@ const Container = styled.div`
 const Color = styled.div`
   border-radius: ${remcalc(3)} 0 0 ${remcalc(3)};
 
-  margin: ${remcalc(-1)} 0 ${remcalc(-1)} ${remcalc(-1)};
   min-width: ${remcalc(12)};
 
   ${is('success')`
@@ -42,12 +41,12 @@ const Outlet = styled.div`
   padding: ${remcalc(18)} ${remcalc(18)};
 `;
 
-const Text = P.extend`
+const Text = styled(P)`
   line-height: ${remcalc(14)};
   font-size: ${remcalc(13)};
 `;
 
-const CloseIcons = Close.extend`
+const CloseIcons = styled(Close)`
   position: absolute;
   top: ${remcalc(23)};
   right: ${remcalc(18)};

@@ -5,10 +5,7 @@ import PropTypes from 'prop-types';
 import is, { isNot } from 'styled-is';
 import remcalc from 'remcalc';
 
-import Baseline from '../baseline';
-
 const paperEffect = css`
-  margin-bottom: ${remcalc(16)};
   box-shadow: 0 ${remcalc(8)} 0 ${remcalc(-5)}
       ${props => props.theme.background},
     0 ${remcalc(8)} ${remcalc(1)} ${remcalc(-4)} ${props => props.theme.grey},
@@ -204,4 +201,4 @@ Card.defaultProps = {
   preview: false
 };
 
-export default Baseline(Card);
+export default Card;

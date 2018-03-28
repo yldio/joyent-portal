@@ -1,17 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Message Description 1`] = `
-.c0 {
+.c1 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
+}
+
+.c0 {
   line-height: 0.875rem;
   font-size: 0.8125rem;
 }
 
 <p
-  className="c0"
+  className="c0 c1"
 >
   Choosing deployment data center
 </p>
@@ -23,7 +25,12 @@ exports[`Message Message 1`] = `
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
+}
+
+.c5 {
+  color: rgb(73,73,73);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
 }
 
 .c0 {
@@ -41,7 +48,6 @@ exports[`Message Message 1`] = `
 
 .c1 {
   border-radius: 0.1875rem 0 0 0.1875rem;
-  margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
   min-height: 100%;
   background-color: rgb(0,152,88);
@@ -52,10 +58,6 @@ exports[`Message Message 1`] = `
 }
 
 .c4 {
-  color: rgb(73,73,73);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
   line-height: 0.875rem;
   font-size: 0.8125rem;
 }
@@ -75,7 +77,7 @@ exports[`Message Message 1`] = `
       Choosing deployment data center
     </h4>
     <p
-      className="c4"
+      className="c4 c5"
     >
       Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements. Learn more
     </p>
@@ -89,7 +91,12 @@ exports[`Message Message Error 1`] = `
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
+}
+
+.c5 {
+  color: rgb(73,73,73);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
 }
 
 .c0 {
@@ -107,7 +114,6 @@ exports[`Message Message Error 1`] = `
 
 .c1 {
   border-radius: 0.1875rem 0 0 0.1875rem;
-  margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
   min-height: 100%;
   background-color: rgb(0,152,88);
@@ -119,10 +125,6 @@ exports[`Message Message Error 1`] = `
 }
 
 .c4 {
-  color: rgb(73,73,73);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
   line-height: 0.875rem;
   font-size: 0.8125rem;
 }
@@ -142,7 +144,7 @@ exports[`Message Message Error 1`] = `
       Choosing deployment data center
     </h4>
     <p
-      className="c4"
+      className="c4 c5"
     >
       Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements. Learn more
     </p>
@@ -156,7 +158,12 @@ exports[`Message Message Warning 1`] = `
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
+}
+
+.c5 {
+  color: rgb(73,73,73);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
 }
 
 .c0 {
@@ -174,7 +181,6 @@ exports[`Message Message Warning 1`] = `
 
 .c1 {
   border-radius: 0.1875rem 0 0 0.1875rem;
-  margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
   min-height: 100%;
   background-color: rgb(0,152,88);
@@ -186,10 +192,6 @@ exports[`Message Message Warning 1`] = `
 }
 
 .c4 {
-  color: rgb(73,73,73);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
   line-height: 0.875rem;
   font-size: 0.8125rem;
 }
@@ -209,7 +211,7 @@ exports[`Message Message Warning 1`] = `
       Choosing deployment data center
     </h4>
     <p
-      className="c4"
+      className="c4 c5"
     >
       Not all data centres have all configurations of instances available. Make sure that you choose the data center that suits your requirements. Learn more
     </p>
@@ -223,7 +225,6 @@ exports[`Message Title 1`] = `
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
 <h4
