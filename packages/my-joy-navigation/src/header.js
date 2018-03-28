@@ -3,6 +3,7 @@ import { graphql, compose } from 'react-apollo';
 import gql from 'graphql-tag';
 import pascalCase from 'pascal-case';
 import keys from 'lodash.keys';
+import md5 from 'md5';
 
 import { DataCenterIcon, TritonIcon, ServicesIcon } from './components';
 import * as Overlays from './containers';
@@ -40,13 +41,14 @@ const GetAccount = gql`
     }
     account {
       login
+      email
     }
   }
 `;
 
 const Navigation = ({
-  account = {},
-  datacenter = true,
+  user = {},
+  datacenter,
   toggleSectionOpen,
   isOpen,
   activePanel
@@ -85,15 +87,18 @@ const Navigation = ({
         </HeaderItem>
       ) : null}
       {datacenter ? <HeaderDividerItem /> : null}
-      {account.login ? (
-        <HeaderItem>
+      {user.login ? (
+        <HeaderItem
+          onClick={() => toggleSectionOpen('account')}
+          active={isOpen && activePanel === 'account'}
+        >
           <HeaderItemContent>
             <HeaderItemSubContent>Account:</HeaderItemSubContent>
             <HeaderSpace />
-            {`${account.login}`}
+            {`${user.login}`}
           </HeaderItemContent>
           <HeaderItemIcon>
-            <Avatar />
+            <Avatar src={user.image} />
           </HeaderItemIcon>
         </HeaderItem>
       ) : null}
@@ -121,7 +126,12 @@ export default compose(
 
       const { name } = datacenter;
 
-      return { account, datacenter: name, loading, error };
+      const user = {
+        ...account,
+        image: `https://www.gravatar.com/avatar/${md5(account.email || '')}`
+      };
+
+      return { user, datacenter: name, loading, error };
     }
   }),
   graphql(GetHeader, {

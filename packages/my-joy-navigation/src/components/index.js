@@ -33,4 +33,5 @@ export {
 
 export { default as Overlay } from './overlay';
 export { default as Anchor } from './anchor';
+export { default as Popover } from './popover';
 export { default as Sup } from './sup';
