@@ -47,6 +47,12 @@ const parsePartial = (p, index, style) => {
       </Margin>
     );
   }
+
+  return (
+    <Margin key={index} top={0.5} bottom={0.5}>
+      <P style={style}>{p[1]}</P>
+    </Margin>
+  );
 };
 
 const Rule = ({ enabled, rule_obj }) => {

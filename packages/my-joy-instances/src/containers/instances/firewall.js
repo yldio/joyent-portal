@@ -148,7 +148,7 @@ export default compose(
 
       return {
         enabled,
-        defaultRules: rules.filter(({ rule_obj = {} }) => rule_obj.isWildcard),
+        defaultRules: rules,
         tagRules: rules.filter(({ rule_obj = {} }) => rule_obj.tags.length),
         instance: machine,
         loading,
