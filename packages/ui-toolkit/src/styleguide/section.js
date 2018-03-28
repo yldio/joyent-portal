@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import { Card, H2, P, H4 } from '../';
 import remcalc from 'remcalc';
 
-const CardStyled = styled(Card)`
-  margin-bottom: ${remcalc(36)};
-`;
+const CardStyled = styled(Card);
 
 const Header = styled.header`
   background: ${props => props.theme.primary};
@@ -17,13 +15,8 @@ const Main = styled.div`
   padding: ${remcalc(50)} ${remcalc(120)};
 
   h4[class*='rsg--heading'] {
-    margin: 0;
     line-height: ${remcalc(26)};
     font-size: ${remcalc(21)};
-
-    & + p {
-      margin-top: ${remcalc(24)};
-    }
   }
 `;
 

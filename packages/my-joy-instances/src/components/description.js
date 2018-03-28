@@ -1,7 +1,12 @@
 import React from 'react';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Margin } from 'styled-components-spacing';
-import { P } from 'joyent-ui-toolkit';
+import styled from 'styled-components';
+import { P as BaseP } from 'joyent-ui-toolkit';
+
+const P = styled(BaseP)`
+  margin: 0;
+`;
 
 export default ({ children }) => (
   <Row>

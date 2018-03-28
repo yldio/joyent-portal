@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import { A as BaseA } from 'normalized-styled-components';
 import is, { isOr } from 'styled-is';
 import PropTypes from 'prop-types';
-import Baseline from '../baseline/index.js';
 
-const A = BaseA.extend`
+const A = styled(BaseA)`
   font-family: ${props => props.theme.font.families};
 `;
 
@@ -56,4 +55,4 @@ Anchor.defaultProps = {
   secondary: false
 };
 
-export default Baseline(Anchor);
+export default Anchor;

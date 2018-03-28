@@ -22,28 +22,31 @@ exports[`Layout PageContainer 1`] = `
 `;
 
 exports[`Layout ViewContainer 1`] = `
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
+}
+
+.c0 {
   box-sizing: border-box;
   width: 100%;
   max-width: 62.5rem;
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
   }
 }
@@ -56,14 +59,17 @@ exports[`Layout ViewContainer 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 />
 `;
 
 exports[`Layout ViewContainer center 1`] = `
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
+}
+
+.c0 {
   box-sizing: border-box;
   width: 100%;
   max-width: 62.5rem;
@@ -91,19 +97,19 @@ exports[`Layout ViewContainer center 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
   }
 }
@@ -116,16 +122,19 @@ exports[`Layout ViewContainer center 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 />
 `;
 
 exports[`Layout ViewContainer fluid 1`] = `
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
   padding-right: 1.875rem;
   padding-left: 1.875rem;
+}
+
+.c0 {
   box-sizing: border-box;
   width: 100%;
   padding-left: 0;
@@ -133,14 +142,17 @@ exports[`Layout ViewContainer fluid 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 />
 `;
 
 exports[`Layout ViewContainer main 1`] = `
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
+}
+
+.c0 {
   box-sizing: border-box;
   width: 100%;
   max-width: 62.5rem;
@@ -148,19 +160,19 @@ exports[`Layout ViewContainer main 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
   }
 }
@@ -173,6 +185,6 @@ exports[`Layout ViewContainer main 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 />
 `;

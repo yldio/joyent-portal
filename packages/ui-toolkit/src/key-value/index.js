@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
 import { Margin, Padding } from 'styled-components-spacing';
 import PropTypes from 'prop-types';
-import { withTheme } from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Field } from 'redux-form';
-import styled from 'styled-components';
 import remcalc from 'remcalc';
 import titleCase from 'title-case';
 import Flex, { FlexItem } from 'styled-flex-component';
@@ -33,6 +32,16 @@ const CollapsedKeyValue = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
+`;
+
+const Header = styled(CardHeader)`
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+`;
+
+const MarginalButton = styled(Button)`
+  margin-right: ${remcalc(6)};
 `;
 
 const PaddingMaxWidth = styled(Padding)`
@@ -176,7 +185,7 @@ export const KeyValue = ({
   const handleHeaderClick = method === 'edit' && onToggleExpanded;
   return (
     <Card collapsed={!expanded} actionable={!expanded} shadow>
-      <CardHeader
+      <Header
         secondary={false}
         transparent={false}
         actionable={Boolean(handleHeaderClick)}
@@ -211,7 +220,7 @@ export const KeyValue = ({
             ) : null}
           </Flex>
         </PaddingMaxWidth>
-      </CardHeader>
+      </Header>
       {expanded ? (
         <CardOutlet>
           <Padding all={3}>
@@ -252,20 +261,18 @@ export const KeyValue = ({
             <Margin top={1}>
               <Row between="xs" middle="xs">
                 <Col xs={method === 'add' ? 12 : 7}>
-                  <Button
+                  <MarginalButton
                     type="button"
                     onClick={onCancel}
                     disabled={submitting}
                     secondary
-                    marginless
                   >
                     <span>Cancel</span>
-                  </Button>
+                  </MarginalButton>
                   <Button
                     type="submit"
                     disabled={pristine || invalid}
                     loading={submitting && !removing}
-                    marginless
                   >
                     <span>{method === 'add' ? 'Create' : 'Save'}</span>
                   </Button>
@@ -281,12 +288,13 @@ export const KeyValue = ({
                       right
                       icon
                       error
-                      marginless
                     >
-                      <DeleteIcon
-                        disabled={submitting}
-                        fill={submitting ? undefined : theme.red}
-                      />
+                      <Margin right={2}>
+                        <DeleteIcon
+                          disabled={submitting}
+                          fill={submitting ? undefined : theme.red}
+                        />
+                      </Margin>
                       <span>Remove</span>
                     </Button>
                   </Col>

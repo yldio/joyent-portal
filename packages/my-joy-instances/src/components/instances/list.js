@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import remcalc from 'remcalc';
 import styled from 'styled-components';
+import { Margin } from 'styled-components-spacing';
 import titleCase from 'title-case';
 import { Link } from 'react-router-dom';
 import { Field } from 'redux-form';
@@ -56,6 +57,10 @@ const ItemAnchor = styled(Anchor)`
   color: ${props => props.theme.text};
   -webkit-text-fill-color: currentcolor;
   text-decoration: none;
+`;
+
+const MarginalPaginationItem = styled(PaginationItem)`
+  margin: 0 ${remcalc(3)};
 `;
 
 const Actions = styled(Flex)`
@@ -279,7 +284,7 @@ export default ({
                 {currPage - 1}
               </PaginationItem>
             ) : null}
-            <PaginationItem active>{currPage}</PaginationItem>
+            <MarginalPaginationItem active>{currPage}</MarginalPaginationItem>
             {numPages > currPage ? (
               <PaginationItem
                 to={`${Global().pathname}?${queryString.stringify({

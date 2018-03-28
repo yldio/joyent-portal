@@ -31,8 +31,7 @@ export const styles = ({
       outline: [[1, 'dotted', color.linkHover]]
     },
     '& + &': {
-      isolate: false,
-      marginLeft: space[1]
+      isolate: false
     }
   },
   isActive: {

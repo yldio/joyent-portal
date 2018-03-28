@@ -1,10 +1,11 @@
 import { Grid } from 'joyent-react-styled-flexboxgrid';
 import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
+import styled from 'styled-components';
 
 import { styled as breakpoints } from '../breakpoints';
 
-export default Grid.extend`
+export default styled(Grid)`
   box-sizing: border-box;
   width: 100%;
 

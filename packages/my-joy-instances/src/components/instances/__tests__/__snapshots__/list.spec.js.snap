@@ -1,130 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <InstanceList /> without throwing 1`] = `
-.c23 {
+.c21 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9 {
+.c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
-  opacity: 1;
+.c20 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
-.c22 {
+.c19 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c22:hover {
+.c19:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
 }
 
-.c5 {
-  padding-top: 0.25rem;
+.c7:checked + label::after {
+  opacity: 1;
 }
 
-.c16 {
-  padding: 0rem;
+.c7:selected + label::after {
+  opacity: 1;
 }
 
-.c12 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
+.c7:checked + label {
+  border-color: rgb(59,70,204);
 }
 
-.c21 {
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c7:selected + label {
+  border-color: rgb(59,70,204);
 }
 
-.c24 {
-  margin: 0.125rem 0.375rem;
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
 }
 
-.c25 {
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.375rem;
-  background-color: rgb(59,70,204);
-  border: 0.0625rem solid rgb(45,56,132);
-  border-radius: 0.25rem;
-  color: rgb(255,255,255);
-}
-
-.c10 {
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -142,7 +105,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -159,7 +122,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -168,7 +131,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -180,19 +143,16 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -208,20 +168,20 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c19 {
+.c16 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c19 th:first-child {
+.c16 th:first-child {
   border-bottom-left-radius: 0.25rem;
 }
 
-.c19 th:last-child {
+.c16 th:last-child {
   border-bottom-right-radius: 0.25rem;
 }
 
-.c19 th {
+.c16 th {
   border-top-width: 0;
 }
 
@@ -238,11 +198,11 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c18 {
+.c15 {
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -261,15 +221,15 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -293,11 +253,75 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   font-weight: 600;
 }
 
+.c10:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c10:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c11 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
 .c11:not(:first-child) {
   border-left-width: 0;
 }
 
 .c11:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -310,8 +334,8 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -342,15 +366,8 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
+  width: 3.75rem;
+  display: table-cell;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -365,64 +382,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c15 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c15:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c15:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 3.75rem;
-  display: table-cell;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c20 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -440,11 +400,11 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-bottom-width: 0.0625rem !important;
 }
 
-.c20:not(:first-child) {
+.c17:not(:first-child) {
   border-left-width: 0;
 }
 
-.c20:not(:last-child) {
+.c17:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -468,15 +428,44 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
+.c18 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.375rem;
+  background-color: rgb(59,70,204);
+  border: 0.0625rem solid rgb(45,56,132);
+  border-radius: 0.25rem;
+  color: rgb(255,255,255);
+}
+
+.c22 {
+  margin-right: 0.1875rem;
+}
+
+.c25 {
+  margin-left: 0.1875rem;
+}
+
+.c23 {
+  margin: 0 0.1875rem;
+}
+
 @media only screen and (min-width:47.9375rem) {
-  .c14 {
+  .c12 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c13 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -499,22 +488,22 @@ exports[`renders <InstanceList /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c3 c4"
+          className="c3"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
           <div
-            className="c5 baseline-jVaZNU c5 c6"
+            className="c4"
             role="group"
             style={undefined}
           >
             <li
-              className="c7"
+              className="c5"
             >
               <div
                 checked={false}
-                className="c8"
+                className="c6"
                 disabled={false}
                 id="t"
                 onBlur={undefined}
@@ -523,7 +512,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
               >
                 <input
                   checked={false}
-                  className="c9"
+                  className="c7 c8"
                   disabled={false}
                   id="u"
                   onBlur={undefined}
@@ -531,7 +520,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
                   type="checkbox"
                 />
                 <label
-                  className="c10"
+                  className="c9"
                   htmlFor="u"
                 />
               </div>
@@ -539,7 +528,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </div>
         </th>
         <th
-          className="c11"
+          className="c10"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -549,9 +538,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
             Name 
           </span>
           <svg
-            className="c12"
             height="6"
-            innerRef={undefined}
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
             style={
@@ -570,7 +557,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c13"
+          className="c11"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -581,7 +568,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c14"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -592,7 +579,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c15"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -603,7 +590,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c16 c17"
+          className="c14"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -611,13 +598,13 @@ exports[`renders <InstanceList /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c18"
+      className="c15"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
     <tfoot
-      className="c19"
+      className="c16"
       disabled={undefined}
       name="tfoot"
       selected={undefined}
@@ -629,21 +616,22 @@ exports[`renders <InstanceList /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c20"
+          className="c17"
           colSpan="6"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
           <a
-            className="c21 c22 c23"
+            className="c18 c19 c20 c21"
             disabled={false}
             to="/?limit=0&offset=0"
           >
             <svg
-              className="c24"
+              className="c22"
               height="6"
               innerRef={undefined}
+              left={true}
               style={
                 Object {
                   "transform": "rotate(90deg)",
@@ -661,22 +649,23 @@ exports[`renders <InstanceList /> without throwing 1`] = `
             Prev
           </a>
           <a
-            className="c25 c22 c23"
+            className="c23 c24 c19 c20 c21"
             disabled={undefined}
             to={null}
           >
             NaN
           </a>
           <a
-            className="c21 c22 c23"
+            className="c18 c19 c20 c21"
             disabled={false}
             to="/?limit=0&offset=0"
           >
             Next
             <svg
-              className="c24"
+              className="c25"
               height="6"
               innerRef={undefined}
+              right={true}
               style={
                 Object {
                   "transform": "rotate(-90deg)",
@@ -700,130 +689,93 @@ exports[`renders <InstanceList /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList allSelected /> without throwing 1`] = `
-.c23 {
+.c21 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9 {
+.c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
-  opacity: 1;
+.c20 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
-.c22 {
+.c19 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c22:hover {
+.c19:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
 }
 
-.c5 {
-  padding-top: 0.25rem;
+.c7:checked + label::after {
+  opacity: 1;
 }
 
-.c16 {
-  padding: 0rem;
+.c7:selected + label::after {
+  opacity: 1;
 }
 
-.c12 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
+.c7:checked + label {
+  border-color: rgb(59,70,204);
 }
 
-.c21 {
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c7:selected + label {
+  border-color: rgb(59,70,204);
 }
 
-.c24 {
-  margin: 0.125rem 0.375rem;
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
 }
 
-.c25 {
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.375rem;
-  background-color: rgb(59,70,204);
-  border: 0.0625rem solid rgb(45,56,132);
-  border-radius: 0.25rem;
-  color: rgb(255,255,255);
-}
-
-.c10 {
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -841,7 +793,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -858,7 +810,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -867,7 +819,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -879,19 +831,16 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -907,20 +856,20 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c19 {
+.c16 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c19 th:first-child {
+.c16 th:first-child {
   border-bottom-left-radius: 0.25rem;
 }
 
-.c19 th:last-child {
+.c16 th:last-child {
   border-bottom-right-radius: 0.25rem;
 }
 
-.c19 th {
+.c16 th {
   border-top-width: 0;
 }
 
@@ -937,11 +886,11 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c18 {
+.c15 {
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -960,15 +909,15 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -992,11 +941,75 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   font-weight: 600;
 }
 
+.c10:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c10:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c11 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
 .c11:not(:first-child) {
   border-left-width: 0;
 }
 
 .c11:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1009,8 +1022,8 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1041,15 +1054,8 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
+  width: 3.75rem;
+  display: table-cell;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -1064,64 +1070,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c15 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c15:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c15:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 3.75rem;
-  display: table-cell;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c20 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1139,11 +1088,11 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-bottom-width: 0.0625rem !important;
 }
 
-.c20:not(:first-child) {
+.c17:not(:first-child) {
   border-left-width: 0;
 }
 
-.c20:not(:last-child) {
+.c17:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1167,15 +1116,44 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
+.c18 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.375rem;
+  background-color: rgb(59,70,204);
+  border: 0.0625rem solid rgb(45,56,132);
+  border-radius: 0.25rem;
+  color: rgb(255,255,255);
+}
+
+.c22 {
+  margin-right: 0.1875rem;
+}
+
+.c25 {
+  margin-left: 0.1875rem;
+}
+
+.c23 {
+  margin: 0 0.1875rem;
+}
+
 @media only screen and (min-width:47.9375rem) {
-  .c14 {
+  .c12 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c13 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -1198,22 +1176,22 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c3 c4"
+          className="c3"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
           <div
-            className="c5 baseline-jVaZNU c5 c6"
+            className="c4"
             role="group"
             style={undefined}
           >
             <li
-              className="c7"
+              className="c5"
             >
               <div
                 checked={true}
-                className="c8"
+                className="c6"
                 disabled={false}
                 id="F"
                 onBlur={undefined}
@@ -1222,7 +1200,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
               >
                 <input
                   checked={true}
-                  className="c9"
+                  className="c7 c8"
                   disabled={false}
                   id="G"
                   onBlur={undefined}
@@ -1230,7 +1208,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
                   type="checkbox"
                 />
                 <label
-                  className="c10"
+                  className="c9"
                   htmlFor="G"
                 />
               </div>
@@ -1238,7 +1216,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </div>
         </th>
         <th
-          className="c11"
+          className="c10"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1248,9 +1226,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
             Name 
           </span>
           <svg
-            className="c12"
             height="6"
-            innerRef={undefined}
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
             style={
@@ -1269,7 +1245,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c13"
+          className="c11"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1280,7 +1256,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c14"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1291,7 +1267,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c15"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1302,7 +1278,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c16 c17"
+          className="c14"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -1310,13 +1286,13 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c18"
+      className="c15"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
     <tfoot
-      className="c19"
+      className="c16"
       disabled={undefined}
       name="tfoot"
       selected={undefined}
@@ -1328,21 +1304,22 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c20"
+          className="c17"
           colSpan="6"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
           <a
-            className="c21 c22 c23"
+            className="c18 c19 c20 c21"
             disabled={false}
             to="/?limit=0&offset=0"
           >
             <svg
-              className="c24"
+              className="c22"
               height="6"
               innerRef={undefined}
+              left={true}
               style={
                 Object {
                   "transform": "rotate(90deg)",
@@ -1360,22 +1337,23 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
             Prev
           </a>
           <a
-            className="c25 c22 c23"
+            className="c23 c24 c19 c20 c21"
             disabled={undefined}
             to={null}
           >
             NaN
           </a>
           <a
-            className="c21 c22 c23"
+            className="c18 c19 c20 c21"
             disabled={false}
             to="/?limit=0&offset=0"
           >
             Next
             <svg
-              className="c24"
+              className="c25"
               height="6"
               innerRef={undefined}
+              right={true}
               style={
                 Object {
                   "transform": "rotate(-90deg)",
@@ -1399,130 +1377,93 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList sortBy /> without throwing 1`] = `
-.c23 {
+.c21 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9 {
+.c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
-  opacity: 1;
+.c20 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
-.c22 {
+.c19 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c22:hover {
+.c19:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
 }
 
-.c5 {
-  padding-top: 0.25rem;
+.c7:checked + label::after {
+  opacity: 1;
 }
 
-.c16 {
-  padding: 0rem;
+.c7:selected + label::after {
+  opacity: 1;
 }
 
-.c13 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
+.c7:checked + label {
+  border-color: rgb(59,70,204);
 }
 
-.c21 {
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c7:selected + label {
+  border-color: rgb(59,70,204);
 }
 
-.c24 {
-  margin: 0.125rem 0.375rem;
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
 }
 
-.c25 {
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.375rem;
-  background-color: rgb(59,70,204);
-  border: 0.0625rem solid rgb(45,56,132);
-  border-radius: 0.25rem;
-  color: rgb(255,255,255);
-}
-
-.c10 {
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -1540,7 +1481,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -1557,7 +1498,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -1566,7 +1507,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1578,19 +1519,16 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -1606,20 +1544,20 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c19 {
+.c16 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c19 th:first-child {
+.c16 th:first-child {
   border-bottom-left-radius: 0.25rem;
 }
 
-.c19 th:last-child {
+.c16 th:last-child {
   border-bottom-right-radius: 0.25rem;
 }
 
-.c19 th {
+.c16 th {
   border-top-width: 0;
 }
 
@@ -1636,11 +1574,11 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c18 {
+.c15 {
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1659,79 +1597,79 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c13 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c13:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
 .c14 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c14:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c14:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c15 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c15:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c15:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c17 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1748,15 +1686,15 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c17:not(:first-child) {
+.c14:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
-.c20 {
+.c17 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1774,15 +1712,15 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-bottom-width: 0.0625rem !important;
 }
 
-.c20:not(:first-child) {
+.c17:not(:first-child) {
   border-left-width: 0;
 }
 
-.c20:not(:last-child) {
+.c17:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1804,15 +1742,15 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c11:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c11:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
-.c12 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1838,11 +1776,11 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   font-weight: 600;
 }
 
-.c12:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c12:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1866,15 +1804,44 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
+.c18 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.375rem;
+  background-color: rgb(59,70,204);
+  border: 0.0625rem solid rgb(45,56,132);
+  border-radius: 0.25rem;
+  color: rgb(255,255,255);
+}
+
+.c22 {
+  margin-right: 0.1875rem;
+}
+
+.c25 {
+  margin-left: 0.1875rem;
+}
+
+.c23 {
+  margin: 0 0.1875rem;
+}
+
 @media only screen and (min-width:47.9375rem) {
-  .c14 {
+  .c12 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c13 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -1897,22 +1864,22 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c3 c4"
+          className="c3"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
           <div
-            className="c5 baseline-jVaZNU c5 c6"
+            className="c4"
             role="group"
             style={undefined}
           >
             <li
-              className="c7"
+              className="c5"
             >
               <div
                 checked={false}
-                className="c8"
+                className="c6"
                 disabled={false}
                 id="w"
                 onBlur={undefined}
@@ -1921,7 +1888,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
               >
                 <input
                   checked={false}
-                  className="c9"
+                  className="c7 c8"
                   disabled={false}
                   id="x"
                   onBlur={undefined}
@@ -1929,7 +1896,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
                   type="checkbox"
                 />
                 <label
-                  className="c10"
+                  className="c9"
                   htmlFor="x"
                 />
               </div>
@@ -1937,7 +1904,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           </div>
         </th>
         <th
-          className="c11"
+          className="c10"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1948,7 +1915,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c12"
+          className="c11"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1958,9 +1925,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
             Status 
           </span>
           <svg
-            className="c13"
             height="6"
-            innerRef={undefined}
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
             style={
@@ -1979,7 +1944,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c14"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1990,7 +1955,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c15"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2001,7 +1966,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c16 c17"
+          className="c14"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -2009,13 +1974,13 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c18"
+      className="c15"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
     <tfoot
-      className="c19"
+      className="c16"
       disabled={undefined}
       name="tfoot"
       selected={undefined}
@@ -2027,21 +1992,22 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c20"
+          className="c17"
           colSpan="6"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
           <a
-            className="c21 c22 c23"
+            className="c18 c19 c20 c21"
             disabled={false}
             to="/?limit=0&offset=0"
           >
             <svg
-              className="c24"
+              className="c22"
               height="6"
               innerRef={undefined}
+              left={true}
               style={
                 Object {
                   "transform": "rotate(90deg)",
@@ -2059,22 +2025,23 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
             Prev
           </a>
           <a
-            className="c25 c22 c23"
+            className="c23 c24 c19 c20 c21"
             disabled={undefined}
             to={null}
           >
             NaN
           </a>
           <a
-            className="c21 c22 c23"
+            className="c18 c19 c20 c21"
             disabled={false}
             to="/?limit=0&offset=0"
           >
             Next
             <svg
-              className="c24"
+              className="c25"
               height="6"
               innerRef={undefined}
+              right={true}
               style={
                 Object {
                   "transform": "rotate(-90deg)",
@@ -2098,130 +2065,93 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
-.c23 {
+.c21 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9 {
+.c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
-  opacity: 1;
+.c20 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
-.c22 {
+.c19 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c22:hover {
+.c19:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
 }
 
-.c5 {
-  padding-top: 0.25rem;
+.c7:checked + label::after {
+  opacity: 1;
 }
 
-.c16 {
-  padding: 0rem;
+.c7:selected + label::after {
+  opacity: 1;
 }
 
-.c13 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
+.c7:checked + label {
+  border-color: rgb(59,70,204);
 }
 
-.c21 {
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c7:selected + label {
+  border-color: rgb(59,70,204);
 }
 
-.c24 {
-  margin: 0.125rem 0.375rem;
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
 }
 
-.c25 {
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.375rem;
-  background-color: rgb(59,70,204);
-  border: 0.0625rem solid rgb(45,56,132);
-  border-radius: 0.25rem;
-  color: rgb(255,255,255);
-}
-
-.c10 {
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -2239,7 +2169,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -2256,7 +2186,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -2265,7 +2195,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2277,19 +2207,16 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -2305,20 +2232,20 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c19 {
+.c16 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c19 th:first-child {
+.c16 th:first-child {
   border-bottom-left-radius: 0.25rem;
 }
 
-.c19 th:last-child {
+.c16 th:last-child {
   border-bottom-right-radius: 0.25rem;
 }
 
-.c19 th {
+.c16 th {
   border-top-width: 0;
 }
 
@@ -2335,11 +2262,11 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c18 {
+.c15 {
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2358,79 +2285,79 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c13 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c13:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
 .c14 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c14:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c14:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c15 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c15:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c15:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c17 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2447,15 +2374,15 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c17:not(:first-child) {
+.c14:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c14:not(:last-child) {
   border-right-width: 0;
 }
 
-.c20 {
+.c17 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2473,15 +2400,15 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-bottom-width: 0.0625rem !important;
 }
 
-.c20:not(:first-child) {
+.c17:not(:first-child) {
   border-left-width: 0;
 }
 
-.c20:not(:last-child) {
+.c17:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2503,15 +2430,15 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c11:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c11:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
-.c12 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2537,11 +2464,11 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   font-weight: 600;
 }
 
-.c12:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c12:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2565,15 +2492,44 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
+.c18 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.375rem;
+  background-color: rgb(59,70,204);
+  border: 0.0625rem solid rgb(45,56,132);
+  border-radius: 0.25rem;
+  color: rgb(255,255,255);
+}
+
+.c22 {
+  margin-right: 0.1875rem;
+}
+
+.c25 {
+  margin-left: 0.1875rem;
+}
+
+.c23 {
+  margin: 0 0.1875rem;
+}
+
 @media only screen and (min-width:47.9375rem) {
-  .c14 {
+  .c12 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c13 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -2596,22 +2552,22 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c3 c4"
+          className="c3"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
           <div
-            className="c5 baseline-jVaZNU c5 c6"
+            className="c4"
             role="group"
             style={undefined}
           >
             <li
-              className="c7"
+              className="c5"
             >
               <div
                 checked={false}
-                className="c8"
+                className="c6"
                 disabled={false}
                 id="z"
                 onBlur={undefined}
@@ -2620,7 +2576,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
               >
                 <input
                   checked={false}
-                  className="c9"
+                  className="c7 c8"
                   disabled={false}
                   id="A"
                   onBlur={undefined}
@@ -2628,7 +2584,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
                   type="checkbox"
                 />
                 <label
-                  className="c10"
+                  className="c9"
                   htmlFor="A"
                 />
               </div>
@@ -2636,7 +2592,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           </div>
         </th>
         <th
-          className="c11"
+          className="c10"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2647,7 +2603,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c12"
+          className="c11"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2657,9 +2613,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
             Status 
           </span>
           <svg
-            className="c13"
             height="6"
-            innerRef={undefined}
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
             style={
@@ -2678,7 +2632,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c14"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2689,7 +2643,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c15"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2700,7 +2654,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c16 c17"
+          className="c14"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -2708,13 +2662,13 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c18"
+      className="c15"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
     <tfoot
-      className="c19"
+      className="c16"
       disabled={undefined}
       name="tfoot"
       selected={undefined}
@@ -2726,21 +2680,22 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c20"
+          className="c17"
           colSpan="6"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
           <a
-            className="c21 c22 c23"
+            className="c18 c19 c20 c21"
             disabled={false}
             to="/?limit=0&offset=0"
           >
             <svg
-              className="c24"
+              className="c22"
               height="6"
               innerRef={undefined}
+              left={true}
               style={
                 Object {
                   "transform": "rotate(90deg)",
@@ -2758,22 +2713,23 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
             Prev
           </a>
           <a
-            className="c25 c22 c23"
+            className="c23 c24 c19 c20 c21"
             disabled={undefined}
             to={null}
           >
             NaN
           </a>
           <a
-            className="c21 c22 c23"
+            className="c18 c19 c20 c21"
             disabled={false}
             to="/?limit=0&offset=0"
           >
             Next
             <svg
-              className="c24"
+              className="c25"
               height="6"
               innerRef={undefined}
+              right={true}
               style={
                 Object {
                   "transform": "rotate(-90deg)",
@@ -2797,130 +2753,93 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList submitting /> without throwing 1`] = `
-.c23 {
+.c21 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9 {
+.c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
-  opacity: 1;
+.c20 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
-.c22 {
+.c19 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c22:hover {
+.c19:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
 }
 
-.c5 {
-  padding-top: 0.25rem;
+.c7:checked + label::after {
+  opacity: 1;
 }
 
-.c16 {
-  padding: 0rem;
+.c7:selected + label::after {
+  opacity: 1;
 }
 
-.c12 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
+.c7:checked + label {
+  border-color: rgb(59,70,204);
 }
 
-.c21 {
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c7:selected + label {
+  border-color: rgb(59,70,204);
 }
 
-.c24 {
-  margin: 0.125rem 0.375rem;
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
 }
 
-.c25 {
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.375rem;
-  background-color: rgb(59,70,204);
-  border: 0.0625rem solid rgb(45,56,132);
-  border-radius: 0.25rem;
-  color: rgb(255,255,255);
-}
-
-.c10 {
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -2938,7 +2857,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -2955,7 +2874,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -2964,7 +2883,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2976,19 +2895,16 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -3004,20 +2920,20 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c19 {
+.c16 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c19 th:first-child {
+.c16 th:first-child {
   border-bottom-left-radius: 0.25rem;
 }
 
-.c19 th:last-child {
+.c16 th:last-child {
   border-bottom-right-radius: 0.25rem;
 }
 
-.c19 th {
+.c16 th {
   border-top-width: 0;
 }
 
@@ -3034,11 +2950,11 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c18 {
+.c15 {
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3057,15 +2973,15 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3089,11 +3005,75 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   font-weight: 600;
 }
 
+.c10:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c10:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c11 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
 .c11:not(:first-child) {
   border-left-width: 0;
 }
 
 .c11:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3106,8 +3086,8 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3138,15 +3118,8 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
+  width: 3.75rem;
+  display: table-cell;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -3161,64 +3134,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c15 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c15:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c15:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 3.75rem;
-  display: table-cell;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c20 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3236,11 +3152,11 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-bottom-width: 0.0625rem !important;
 }
 
-.c20:not(:first-child) {
+.c17:not(:first-child) {
   border-left-width: 0;
 }
 
-.c20:not(:last-child) {
+.c17:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3264,15 +3180,44 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
+.c18 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.375rem;
+  background-color: rgb(59,70,204);
+  border: 0.0625rem solid rgb(45,56,132);
+  border-radius: 0.25rem;
+  color: rgb(255,255,255);
+}
+
+.c22 {
+  margin-right: 0.1875rem;
+}
+
+.c25 {
+  margin-left: 0.1875rem;
+}
+
+.c23 {
+  margin: 0 0.1875rem;
+}
+
 @media only screen and (min-width:47.9375rem) {
-  .c14 {
+  .c12 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c13 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -3295,22 +3240,22 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c3 c4"
+          className="c3"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
           <div
-            className="c5 baseline-jVaZNU c5 c6"
+            className="c4"
             role="group"
             style={undefined}
           >
             <li
-              className="c7"
+              className="c5"
             >
               <div
                 checked={false}
-                className="c8"
+                className="c6"
                 disabled={true}
                 id="C"
                 onBlur={undefined}
@@ -3319,7 +3264,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
               >
                 <input
                   checked={false}
-                  className="c9"
+                  className="c7 c8"
                   disabled={true}
                   id="D"
                   onBlur={undefined}
@@ -3327,7 +3272,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
                   type="checkbox"
                 />
                 <label
-                  className="c10"
+                  className="c9"
                   htmlFor="D"
                 />
               </div>
@@ -3335,7 +3280,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </div>
         </th>
         <th
-          className="c11"
+          className="c10"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3345,9 +3290,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
             Name 
           </span>
           <svg
-            className="c12"
             height="6"
-            innerRef={undefined}
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
             style={
@@ -3366,7 +3309,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </svg>
         </th>
         <th
-          className="c13"
+          className="c11"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3377,7 +3320,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c14"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3388,7 +3331,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c15"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3399,7 +3342,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c16 c17"
+          className="c14"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -3407,13 +3350,13 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c18"
+      className="c15"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
     <tfoot
-      className="c19"
+      className="c16"
       disabled={undefined}
       name="tfoot"
       selected={undefined}
@@ -3425,21 +3368,22 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c20"
+          className="c17"
           colSpan="6"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
           <a
-            className="c21 c22 c23"
+            className="c18 c19 c20 c21"
             disabled={false}
             to="/?limit=0&offset=0"
           >
             <svg
-              className="c24"
+              className="c22"
               height="6"
               innerRef={undefined}
+              left={true}
               style={
                 Object {
                   "transform": "rotate(90deg)",
@@ -3457,22 +3401,23 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
             Prev
           </a>
           <a
-            className="c25 c22 c23"
+            className="c23 c24 c19 c20 c21"
             disabled={undefined}
             to={null}
           >
             NaN
           </a>
           <a
-            className="c21 c22 c23"
+            className="c18 c19 c20 c21"
             disabled={false}
             to="/?limit=0&offset=0"
           >
             Next
             <svg
-              className="c24"
+              className="c25"
               height="6"
               innerRef={undefined}
+              right={true}
               style={
                 Object {
                   "transform": "rotate(-90deg)",
@@ -3496,130 +3441,93 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = `
-.c23 {
+.c21 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9 {
+.c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
-  opacity: 1;
+.c20 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
-.c22 {
+.c19 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c22:hover {
+.c19:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
 }
 
-.c5 {
-  padding-top: 0.25rem;
+.c7:checked + label::after {
+  opacity: 1;
 }
 
-.c16 {
-  padding: 0rem;
+.c7:selected + label::after {
+  opacity: 1;
 }
 
-.c12 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
+.c7:checked + label {
+  border-color: rgb(59,70,204);
 }
 
-.c21 {
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+.c7:selected + label {
+  border-color: rgb(59,70,204);
 }
 
-.c24 {
-  margin: 0.125rem 0.375rem;
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
 }
 
-.c25 {
-  margin-left: 0.375rem;
-  margin-right: 0.375rem;
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  padding: 0.375rem;
-  background-color: rgb(59,70,204);
-  border: 0.0625rem solid rgb(45,56,132);
-  border-radius: 0.25rem;
-  color: rgb(255,255,255);
-}
-
-.c10 {
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -3637,7 +3545,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -3654,7 +3562,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -3663,7 +3571,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3675,19 +3583,16 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -3703,20 +3608,20 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   max-width: 100%;
 }
 
-.c19 {
+.c16 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c19 th:first-child {
+.c16 th:first-child {
   border-bottom-left-radius: 0.25rem;
 }
 
-.c19 th:last-child {
+.c16 th:last-child {
   border-bottom-right-radius: 0.25rem;
 }
 
-.c19 th {
+.c16 th {
   border-top-width: 0;
 }
 
@@ -3733,11 +3638,11 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-top-right-radius: 0.25rem;
 }
 
-.c18 {
+.c15 {
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3756,15 +3661,15 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3788,11 +3693,75 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   font-weight: 600;
 }
 
+.c10:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c10:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c11 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
 .c11:not(:first-child) {
   border-left-width: 0;
 }
 
 .c11:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3805,8 +3774,8 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 9.375rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3837,15 +3806,8 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
+  width: 3.75rem;
+  display: table-cell;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -3860,64 +3822,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-right-width: 0;
 }
 
-.c15 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c15:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c15:not(:last-child) {
-  border-right-width: 0;
-}
-
 .c17 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 3.75rem;
-  display: table-cell;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c17:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c17:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c20 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3935,11 +3840,11 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-bottom-width: 0.0625rem !important;
 }
 
-.c20:not(:first-child) {
+.c17:not(:first-child) {
   border-left-width: 0;
 }
 
-.c20:not(:last-child) {
+.c17:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3963,15 +3868,44 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-bottom-width: 0.0625rem;
 }
 
+.c18 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c24 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0.375rem;
+  background-color: rgb(59,70,204);
+  border: 0.0625rem solid rgb(45,56,132);
+  border-radius: 0.25rem;
+  color: rgb(255,255,255);
+}
+
+.c22 {
+  margin-right: 0.1875rem;
+}
+
+.c25 {
+  margin-left: 0.1875rem;
+}
+
+.c23 {
+  margin: 0 0.1875rem;
+}
+
 @media only screen and (min-width:47.9375rem) {
-  .c14 {
+  .c12 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c15 {
+  .c13 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -3994,22 +3928,22 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
         selected={undefined}
       >
         <th
-          className="c3 c4"
+          className="c3"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
           <div
-            className="c5 baseline-jVaZNU c5 c6"
+            className="c4"
             role="group"
             style={undefined}
           >
             <li
-              className="c7"
+              className="c5"
             >
               <div
                 checked={false}
-                className="c8"
+                className="c6"
                 disabled={false}
                 id="I"
                 onBlur={undefined}
@@ -4018,7 +3952,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
               >
                 <input
                   checked={false}
-                  className="c9"
+                  className="c7 c8"
                   disabled={false}
                   id="J"
                   onBlur={undefined}
@@ -4026,7 +3960,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
                   type="checkbox"
                 />
                 <label
-                  className="c10"
+                  className="c9"
                   htmlFor="J"
                 />
               </div>
@@ -4034,7 +3968,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </div>
         </th>
         <th
-          className="c11"
+          className="c10"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -4044,9 +3978,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
             Name 
           </span>
           <svg
-            className="c12"
             height="6"
-            innerRef={undefined}
             marginBottom="0.125rem"
             marginLeft="0.5625rem"
             style={
@@ -4065,7 +3997,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </svg>
         </th>
         <th
-          className="c13"
+          className="c11"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -4076,7 +4008,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </span>
         </th>
         <th
-          className="c14"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -4087,7 +4019,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </span>
         </th>
         <th
-          className="c15"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -4098,7 +4030,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </span>
         </th>
         <th
-          className="c16 c17"
+          className="c14"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -4106,7 +4038,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
       </tr>
     </thead>
     <tbody
-      className="c18"
+      className="c15"
       disabled={undefined}
       name="tbody"
       selected={undefined}
@@ -4116,7 +4048,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
       </span>
     </tbody>
     <tfoot
-      className="c19"
+      className="c16"
       disabled={undefined}
       name="tfoot"
       selected={undefined}
@@ -4128,21 +4060,22 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
         selected={undefined}
       >
         <th
-          className="c20"
+          className="c17"
           colSpan="6"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
           <a
-            className="c21 c22 c23"
+            className="c18 c19 c20 c21"
             disabled={false}
             to="/?limit=0&offset=0"
           >
             <svg
-              className="c24"
+              className="c22"
               height="6"
               innerRef={undefined}
+              left={true}
               style={
                 Object {
                   "transform": "rotate(90deg)",
@@ -4160,22 +4093,23 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
             Prev
           </a>
           <a
-            className="c25 c22 c23"
+            className="c23 c24 c19 c20 c21"
             disabled={undefined}
             to={null}
           >
             NaN
           </a>
           <a
-            className="c21 c22 c23"
+            className="c18 c19 c20 c21"
             disabled={false}
             to="/?limit=0&offset=0"
           >
             Next
             <svg
-              className="c24"
+              className="c25"
               height="6"
               innerRef={undefined}
+              right={true}
               style={
                 Object {
                   "transform": "rotate(-90deg)",
@@ -4203,93 +4137,60 @@ exports[`renders <Item /> without throwing 1`] = `
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9 {
+.c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
-  opacity: 1;
-}
-
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
 .c12 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c11 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c12:hover {
+.c11:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
-}
-
-.c17 {
-  padding: 0rem;
 }
 
 .c14 {
@@ -4302,14 +4203,14 @@ exports[`renders <Item /> without throwing 1`] = `
   margin-left: 0rem;
 }
 
-.c19 {
+.c18 {
   cursor: pointer;
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4320,7 +4221,7 @@ exports[`renders <Item /> without throwing 1`] = `
   align-items: center;
 }
 
-.c21 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4348,7 +4249,33 @@ exports[`renders <Item /> without throwing 1`] = `
   align-items: center;
 }
 
-.c10 {
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
+  opacity: 1;
+}
+
+.c7:selected + label::after {
+  opacity: 1;
+}
+
+.c7:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -4366,7 +4293,7 @@ exports[`renders <Item /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -4383,7 +4310,7 @@ exports[`renders <Item /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -4392,7 +4319,7 @@ exports[`renders <Item /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4404,19 +4331,16 @@ exports[`renders <Item /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -4436,7 +4360,7 @@ exports[`renders <Item /> without throwing 1`] = `
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4450,11 +4374,11 @@ exports[`renders <Item /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4506,7 +4430,7 @@ exports[`renders <Item /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c18 {
+.c17 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4519,11 +4443,11 @@ exports[`renders <Item /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c18:not(:first-child) {
+.c17:not(:first-child) {
   border-left-width: 0;
 }
 
-.c18:not(:last-child) {
+.c17:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4543,7 +4467,7 @@ exports[`renders <Item /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c11 {
+.c10 {
   color: rgb(73,73,73);
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4555,7 +4479,7 @@ exports[`renders <Item /> without throwing 1`] = `
   display: block;
 }
 
-.c20 {
+.c19 {
   height: 3rem;
 }
 
@@ -4589,23 +4513,23 @@ exports[`renders <Item /> without throwing 1`] = `
       selected={undefined}
     >
       <td
-        className="c3 c4"
+        className="c3"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
-          className="c5 baseline-jVaZNU c5 c6"
+          className="c4"
           name=""
           role="group"
           style={undefined}
         >
           <li
-            className="c7"
+            className="c5"
           >
             <div
               checked={false}
-              className="c8"
+              className="c6"
               disabled={false}
               id="k"
               onBlur={undefined}
@@ -4613,14 +4537,14 @@ exports[`renders <Item /> without throwing 1`] = `
             >
               <input
                 checked={false}
-                className="c9"
+                className="c7 c8"
                 disabled={false}
                 id="l"
                 onBlur={undefined}
                 type="checkbox"
               />
               <label
-                className="c10"
+                className="c9"
                 htmlFor="l"
               />
             </div>
@@ -4628,18 +4552,18 @@ exports[`renders <Item /> without throwing 1`] = `
         </div>
       </td>
       <td
-        className="c4"
+        className="c3"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <a
-          className="c11 c12 c13"
+          className="c10 c11 c12 c13"
           to="/instances/"
         />
       </td>
       <td
-        className="c4"
+        className="c3"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -4673,14 +4597,14 @@ exports[`renders <Item /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c17 c18"
+        className="c17"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
           box={true}
-          className="c19"
+          className="c18"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -4692,12 +4616,10 @@ exports[`renders <Item /> without throwing 1`] = `
           tag="div"
         >
           <div
-            className="c20 c21"
+            className="c19 c20"
           >
             <svg
-              className=""
               height="16"
-              innerRef={undefined}
               style={
                 Object {
                   "transform": "rotate(0deg)",
@@ -4725,93 +4647,60 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9 {
+.c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
-  opacity: 1;
-}
-
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
 .c12 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c11 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c12:hover {
+.c11:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
-}
-
-.c17 {
-  padding: 0rem;
 }
 
 .c14 {
@@ -4824,14 +4713,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   margin-left: 0rem;
 }
 
-.c19 {
+.c18 {
   cursor: pointer;
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4842,7 +4731,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   align-items: center;
 }
 
-.c21 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4870,7 +4759,33 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   align-items: center;
 }
 
-.c10 {
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
+  opacity: 1;
+}
+
+.c7:selected + label::after {
+  opacity: 1;
+}
+
+.c7:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -4888,7 +4803,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -4905,7 +4820,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -4914,7 +4829,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4926,19 +4841,16 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -4958,7 +4870,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4972,11 +4884,11 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -5028,7 +4940,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c18 {
+.c17 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -5041,11 +4953,11 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c18:not(:first-child) {
+.c17:not(:first-child) {
   border-left-width: 0;
 }
 
-.c18:not(:last-child) {
+.c17:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -5065,7 +4977,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c11 {
+.c10 {
   color: rgb(73,73,73);
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5077,7 +4989,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   display: block;
 }
 
-.c20 {
+.c19 {
   height: 3rem;
 }
 
@@ -5111,23 +5023,23 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
       selected={undefined}
     >
       <td
-        className="c3 c4"
+        className="c3"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
-          className="c5 baseline-jVaZNU c5 c6"
+          className="c4"
           name="id"
           role="group"
           style={undefined}
         >
           <li
-            className="c7"
+            className="c5"
           >
             <div
               checked={false}
-              className="c8"
+              className="c6"
               disabled={false}
               id="q"
               onBlur={undefined}
@@ -5135,14 +5047,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
             >
               <input
                 checked={false}
-                className="c9"
+                className="c7 c8"
                 disabled={false}
                 id="r"
                 onBlur={undefined}
                 type="checkbox"
               />
               <label
-                className="c10"
+                className="c9"
                 htmlFor="r"
               />
             </div>
@@ -5150,20 +5062,20 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         </div>
       </td>
       <td
-        className="c4"
+        className="c3"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <a
-          className="c11 c12 c13"
+          className="c10 c11 c12 c13"
           to="/instances/id"
         >
           name
         </a>
       </td>
       <td
-        className="c4"
+        className="c3"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -5197,14 +5109,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c17 c18"
+        className="c17"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
           box={true}
-          className="c19"
+          className="c18"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -5216,12 +5128,10 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
           tag="div"
         >
           <div
-            className="c20 c21"
+            className="c19 c20"
           >
             <svg
-              className=""
               height="16"
-              innerRef={undefined}
               style={
                 Object {
                   "transform": "rotate(0deg)",
@@ -5249,93 +5159,60 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9 {
+.c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
-  opacity: 1;
-}
-
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
 .c12 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c11 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c12:hover {
+.c11:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
-}
-
-.c17 {
-  padding: 0rem;
 }
 
 .c14 {
@@ -5348,14 +5225,14 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   margin-left: 0rem;
 }
 
-.c19 {
+.c18 {
   cursor: pointer;
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -5366,7 +5243,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   align-items: center;
 }
 
-.c21 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5394,7 +5271,33 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   align-items: center;
 }
 
-.c10 {
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
+  opacity: 1;
+}
+
+.c7:selected + label::after {
+  opacity: 1;
+}
+
+.c7:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -5412,7 +5315,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -5429,7 +5332,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -5438,7 +5341,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5450,19 +5353,16 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -5482,7 +5382,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -5496,11 +5396,11 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -5552,7 +5452,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c18 {
+.c17 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -5565,11 +5465,11 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c18:not(:first-child) {
+.c17:not(:first-child) {
   border-left-width: 0;
 }
 
-.c18:not(:last-child) {
+.c17:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -5589,7 +5489,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c11 {
+.c10 {
   color: rgb(73,73,73);
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5601,7 +5501,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   display: block;
 }
 
-.c20 {
+.c19 {
   height: 3rem;
 }
 
@@ -5635,23 +5535,23 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
       selected={undefined}
     >
       <td
-        className="c3 c4"
+        className="c3"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
-          className="c5 baseline-jVaZNU c5 c6"
+          className="c4"
           name=""
           role="group"
           style={undefined}
         >
           <li
-            className="c7"
+            className="c5"
           >
             <div
               checked={false}
-              className="c8"
+              className="c6"
               disabled={false}
               id="o"
               onBlur={undefined}
@@ -5659,14 +5559,14 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
             >
               <input
                 checked={false}
-                className="c9"
+                className="c7 c8"
                 disabled={false}
                 id="p"
                 onBlur={undefined}
                 type="checkbox"
               />
               <label
-                className="c10"
+                className="c9"
                 htmlFor="p"
               />
             </div>
@@ -5674,18 +5574,18 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         </div>
       </td>
       <td
-        className="c4"
+        className="c3"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <a
-          className="c11 c12 c13"
+          className="c10 c11 c12 c13"
           to="/instances/"
         />
       </td>
       <td
-        className="c4"
+        className="c3"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -5719,14 +5619,14 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c17 c18"
+        className="c17"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
           box={true}
-          className="c19"
+          className="c18"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -5738,12 +5638,10 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
           tag="div"
         >
           <div
-            className="c20 c21"
+            className="c19 c20"
           >
             <svg
-              className=""
               height="16"
-              innerRef={undefined}
               style={
                 Object {
                   "transform": "rotate(0deg)",
@@ -5771,93 +5669,60 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c9 {
+.c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
-  opacity: 1;
-}
-
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
 .c12 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c11 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c12:hover {
+.c11:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
-}
-
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
-}
-
-.c20 {
-  padding: 0rem;
 }
 
 .c15 {
@@ -5868,19 +5733,11 @@ exports[`renders <Item mutating /> without throwing 1`] = `
 }
 
 .c16 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
 .c17 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
@@ -5913,7 +5770,33 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   flex: 1 0 auto;
 }
 
-.c10 {
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
+  opacity: 1;
+}
+
+.c7:selected + label::after {
+  opacity: 1;
+}
+
+.c7:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -5931,7 +5814,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -5948,7 +5831,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -5957,7 +5840,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5969,19 +5852,16 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -6001,7 +5881,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -6015,11 +5895,11 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -6071,7 +5951,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c21 {
+.c20 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -6086,11 +5966,11 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c21:not(:first-child) {
+.c20:not(:first-child) {
   border-left-width: 0;
 }
 
-.c21:not(:last-child) {
+.c20:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -6110,7 +5990,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c11 {
+.c10 {
   color: rgb(73,73,73);
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6152,23 +6032,23 @@ exports[`renders <Item mutating /> without throwing 1`] = `
       selected={undefined}
     >
       <td
-        className="c3 c4"
+        className="c3"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
-          className="c5 baseline-jVaZNU c5 c6"
+          className="c4"
           name=""
           role="group"
           style={undefined}
         >
           <li
-            className="c7"
+            className="c5"
           >
             <div
               checked={false}
-              className="c8"
+              className="c6"
               disabled={false}
               id="m"
               onBlur={undefined}
@@ -6176,14 +6056,14 @@ exports[`renders <Item mutating /> without throwing 1`] = `
             >
               <input
                 checked={false}
-                className="c9"
+                className="c7 c8"
                 disabled={false}
                 id="n"
                 onBlur={undefined}
                 type="checkbox"
               />
               <label
-                className="c10"
+                className="c9"
                 htmlFor="n"
               />
             </div>
@@ -6191,18 +6071,18 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         </div>
       </td>
       <td
-        className="c4"
+        className="c3"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <a
-          className="c11 c12 c13"
+          className="c10 c11 c12 c13"
           to="/instances/"
         />
       </td>
       <td
-        className="c4"
+        className="c3"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -6222,14 +6102,14 @@ exports[`renders <Item mutating /> without throwing 1`] = `
               y="2"
             />
             <rect
-              className="c16"
+              className="c16 c15"
               height="6"
               width="6"
               x="11"
               y="2"
             />
             <rect
-              className="c17"
+              className="c17 c15"
               height="6"
               width="6"
               x="20"
@@ -6257,15 +6137,13 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c20 c21"
+        className="c20"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <svg
-          className=""
           height="16"
-          innerRef={undefined}
           style={
             Object {
               "transform": "rotate(0deg)",

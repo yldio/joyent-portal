@@ -1,11 +1,10 @@
 import { Legend } from 'normalized-styled-components';
+import styled from 'styled-components';
 
-import Baseline from '../baseline';
-
-const StyledLegend = Legend.extend`
+const StyledLegend = styled(Legend)`
   /* trick prettier */
   font-family: ${props => props.theme.font.families};
   font-weight: ${props => props.theme.font.weight.semibold};
 `;
 
-export default Baseline(StyledLegend);
+export default StyledLegend;

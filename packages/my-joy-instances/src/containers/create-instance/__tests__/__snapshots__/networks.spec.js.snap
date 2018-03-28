@@ -2,15 +2,11 @@
 
 exports[`renders <Networks /> without throwing 1`] = `
 Array [
-  .c3 {
+  .c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -29,19 +25,24 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 .c0 {
@@ -108,9 +109,7 @@ Array [
                 className="c2"
             >
                 <svg
-                    className=""
                     height="19.78"
-                    innerRef={undefined}
                     style={
                         Object {
                             "transform": "rotate(0deg)",
@@ -128,16 +127,16 @@ Array [
             </div>
         </div>
         <small
-            className="c3"
+            className="c3 c4"
         >
             Networks
         </small>
     </div>
     <div
-        className="c4"
+        className="c5"
     >
         <div
-            className="c5 c6"
+            className="c6 c7"
             height="0.0625rem"
         />
     </div>
@@ -147,15 +146,11 @@ Array [
 `;
 
 exports[`renders <Networks loading /> without throwing 1`] = `
-.c3 {
+.c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -174,19 +169,24 @@ exports[`renders <Networks loading /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 .c0 {
@@ -253,9 +253,7 @@ exports[`renders <Networks loading /> without throwing 1`] = `
         className="c2"
       >
         <svg
-          className=""
           height="19.78"
-          innerRef={undefined}
           style={
             Object {
               "transform": "rotate(0deg)",
@@ -273,16 +271,16 @@ exports[`renders <Networks loading /> without throwing 1`] = `
       </div>
     </div>
     <small
-      className="c3"
+      className="c3 c4"
     >
       Networks
     </small>
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <div
-      className="c5 c6"
+      className="c6 c7"
       height="0.0625rem"
     />
   </div>
@@ -291,15 +289,11 @@ exports[`renders <Networks loading /> without throwing 1`] = `
 
 exports[`renders <Networks loading expanded /> without throwing 1`] = `
 Array [
-  .c3 {
+  .c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -318,17 +312,22 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
   margin-bottom: 1.125rem;
 }
@@ -397,9 +396,7 @@ Array [
                 className="c2"
             >
                 <svg
-                    className=""
                     height="19.78"
-                    innerRef={undefined}
                     style={
                         Object {
                             "transform": "rotate(0deg)",
@@ -417,25 +414,24 @@ Array [
             </div>
         </div>
         <small
-            className="c3"
+            className="c3 c4"
         >
             Networks
         </small>
     </div>
     <div
-        className="c4"
+        className="c5"
     >
         <div
-            className="c5 c6"
+            className="c6 c7"
             height="0.0625rem"
         />
     </div>
 </div>,
-  .c3 {
+  .c4 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
 .c0 {
@@ -471,6 +467,10 @@ Array [
   margin-bottom: 1.125rem;
 }
 
+.c3 {
+  margin: 0;
+}
+
 @media only screen and (min-width:0em) {
   .c1 {
     -webkit-flex-basis: 100%;
@@ -499,7 +499,7 @@ Array [
             className="c2"
         >
             <p
-                className="c3"
+                className="c3 c4"
             >
                 Instances are automatically connected to a private fabric network, which is the best choice for internal communication within your application. Data center networks are the best choice for exposing your application to the public internet (if the data center network is a public network).
                  
@@ -522,37 +522,19 @@ Array [
 }
 
 .c2 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
 .c3 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
-.c4 {
+.c5 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  text-align: center;
-  margin-bottom: 0;
-  margin-left: 0.375rem;
 }
 
 .c0 {
@@ -583,6 +565,16 @@ Array [
   flex: 1 0 auto;
 }
 
+.c4 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+}
+
 <div
     className="c0"
 >
@@ -598,14 +590,14 @@ Array [
             y="2"
         />
         <rect
-            className="c2"
+            className="c2 c1"
             height="6"
             width="6"
             x="11"
             y="2"
         />
         <rect
-            className="c3"
+            className="c3 c1"
             height="6"
             width="6"
             x="20"
@@ -613,7 +605,7 @@ Array [
         />
     </svg>
     <p
-        className="c4"
+        className="c4 c5"
     >
         Loading...
     </p>
@@ -623,15 +615,11 @@ Array [
 
 exports[`renders <Networks networks=[] /> without throwing 1`] = `
 Array [
-  .c3 {
+  .c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -650,19 +638,24 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 .c0 {
@@ -729,9 +722,7 @@ Array [
                 className="c2"
             >
                 <svg
-                    className=""
                     height="19.78"
-                    innerRef={undefined}
                     style={
                         Object {
                             "transform": "rotate(0deg)",
@@ -749,16 +740,16 @@ Array [
             </div>
         </div>
         <small
-            className="c3"
+            className="c3 c4"
         >
             Networks
         </small>
     </div>
     <div
-        className="c4"
+        className="c5"
     >
         <div
-            className="c5 c6"
+            className="c6 c7"
             height="0.0625rem"
         />
     </div>
@@ -769,15 +760,11 @@ Array [
 
 exports[`renders <Networks networks=[] expanded /> without throwing 1`] = `
 Array [
-  .c3 {
+  .c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -796,17 +783,22 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
   margin-bottom: 1.125rem;
 }
@@ -875,9 +867,7 @@ Array [
                 className="c2"
             >
                 <svg
-                    className=""
                     height="19.78"
-                    innerRef={undefined}
                     style={
                         Object {
                             "transform": "rotate(0deg)",
@@ -895,25 +885,24 @@ Array [
             </div>
         </div>
         <small
-            className="c3"
+            className="c3 c4"
         >
             Networks
         </small>
     </div>
     <div
-        className="c4"
+        className="c5"
     >
         <div
-            className="c5 c6"
+            className="c6 c7"
             height="0.0625rem"
         />
     </div>
 </div>,
-  .c3 {
+  .c4 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
 .c0 {
@@ -947,6 +936,10 @@ Array [
 
 .c2 {
   margin-bottom: 1.125rem;
+}
+
+.c3 {
+  margin: 0;
 }
 
 @media only screen and (min-width:0em) {
@@ -977,7 +970,7 @@ Array [
             className="c2"
         >
             <p
-                className="c3"
+                className="c3 c4"
             >
                 Instances are automatically connected to a private fabric network, which is the best choice for internal communication within your application. Data center networks are the best choice for exposing your application to the public internet (if the data center network is a public network).
                  
@@ -992,74 +985,50 @@ Array [
         </div>
     </div>
 </div>,
-  .c9 {
+  .c11 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c11[type='checkbox'],
+.c11[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c11[type='number']::-webkit-inner-spin-button,
+.c11[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c11[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c11[type='search']::-webkit-search-cancel-button,
+.c11[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c11::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
-  opacity: 1;
-}
-
-.c9:selected + label::after {
-  opacity: 1;
-}
-
-.c9:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c9:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
-.c17 {
+.c20 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
 .c0 {
@@ -1091,85 +1060,57 @@ Array [
   display: block;
 }
 
-.c13 {
+.c15 {
   color: rgb(73,73,73);
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c13 + p,
-.c13 + small,
-.c13 + h1,
-.c13 + h2,
-.c13 + label,
-.c13 + h3,
-.c13 + h4,
-.c13 + h5,
-.c13 + div,
-.c13 + span {
-  margin-top: 0.75rem;
-}
-
-.c31 {
+.c32 {
   color: rgb(73,73,73);
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
   -webkit-text-fill-color: currentcolor;
   color: rgb(255,255,255);
 }
 
-.c31 + p,
-.c31 + small,
-.c31 + h1,
-.c31 + h2,
-.c31 + label,
-.c31 + h3,
-.c31 + h4,
-.c31 + h5,
-.c31 + div,
-.c31 + span {
-  margin-top: 0.75rem;
-}
-
-.c22 {
+.c25 {
   margin-right: 0.375rem;
 }
 
-.c16 {
+.c19 {
   margin-bottom: 1.125rem;
 }
 
 .c2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.875rem;
 }
 
-.c19 {
-  margin-right: 1.5rem;
+.c22 {
+  margin-right: 1.875rem;
 }
 
-.c23 {
+.c26 {
   margin-top: 1.125rem;
 }
 
-.c12 {
+.c14 {
   padding-right: 0rem;
   padding-left: 0rem;
 }
 
-.c15 {
-  padding: 1.5rem;
+.c18 {
+  padding: 1.875rem;
 }
 
-.c27 {
+.c29 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c18 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1189,7 +1130,7 @@ Array [
   align-content: stretch;
 }
 
-.c21 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1213,7 +1154,7 @@ Array [
   align-items: center;
 }
 
-.c20 {
+.c23 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1253,46 +1194,6 @@ Array [
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c4 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-}
-
-.c4 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
 .c5 {
   box-sizing: content-box;
   display: -webkit-box;
@@ -1318,35 +1219,9 @@ Array [
   -webkit-flex: 0 0 2.875rem;
   -ms-flex: 0 0 2.875rem;
   flex: 0 0 2.875rem;
-  width: 2.875rem;
-  min-width: 2.875rem;
-  min-height: 2.875rem;
-  max-width: 100%;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: transparent;
-  border-width: 0;
-  border-radius: 0;
-  box-shadow: none;
 }
 
-.c11 {
+.c17 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1366,89 +1241,9 @@ Array [
   color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  box-sizing: border-box;
-  min-height: 2.9375rem;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  overflow: hidden;
-  background-color: transparent;
-  border-width: 0;
-  box-shadow: none;
-  color: inherit;
 }
 
-.c14 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c14 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c14 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c24 {
+.c27 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1476,7 +1271,7 @@ Array [
   flex: 0 0 2.875rem;
 }
 
-.c25 {
+.c31 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1496,12 +1291,33 @@ Array [
   color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  cursor: pointer;
+  color: rgb(255,255,255);
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
   min-height: auto;
   height: 2.875rem;
   -webkit-flex: 0 0 2.875rem;
   -ms-flex: 0 0 2.875rem;
   flex: 0 0 2.875rem;
+}
+
+.c16 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.c4 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1509,103 +1325,9 @@ Array [
   line-height: 1.5rem;
   height: auto;
   max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-  margin: -0.0625rem;
-  box-shadow: none;
-}
-
-.c25 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c26 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  box-sizing: border-box;
-  min-height: 2.9375rem;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  overflow: hidden;
-  background-color: transparent;
-  border-width: 0;
-  box-shadow: none;
-  color: inherit;
 }
 
 .c28 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(255,255,255);
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1613,98 +1335,49 @@ Array [
   line-height: 1.5rem;
   height: auto;
   max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
-}
-
-.c28 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c29 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(255,255,255);
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  width: 2.875rem;
-  min-width: 2.875rem;
-  min-height: 2.875rem;
-  max-width: 100%;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: transparent;
-  border-width: 0;
-  border-radius: 0;
   box-shadow: none;
 }
 
 .c30 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  max-width: 100%;
+}
+
+.c6 {
+  width: 2.875rem;
+  min-width: 2.875rem;
+  min-height: 2.875rem;
+  max-width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(255,255,255);
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.c13 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -1739,6 +1412,32 @@ Array [
 }
 
 .c10 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c10:checked + label::after {
+  opacity: 1;
+}
+
+.c10:selected + label::after {
+  opacity: 1;
+}
+
+.c10:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c10:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c10:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c12 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -1756,7 +1455,7 @@ Array [
   height: 1.125rem;
 }
 
-.c10::after {
+.c12::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -1773,7 +1472,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c9 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -1782,7 +1481,7 @@ Array [
   cursor: pointer;
 }
 
-.c7 {
+.c8 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1794,19 +1493,16 @@ Array [
   align-items: center;
 }
 
-.c7 label {
+.c8 label {
   font-weight: 400;
 }
 
-.c6 {
+.c7 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -1847,27 +1543,27 @@ Array [
                     name="card"
                 >
                     <div
-                        className="c4"
+                        className="c4 c5"
                         disabled={false}
                         name="card-header"
                     >
                         <div
-                            className="c5"
+                            className="c6 c5"
                             disabled={false}
                             name="card-header-box"
                         >
                             <div
-                                className="baseline-jVaZNU kXgQxt c6"
+                                className="c7"
                                 name="1"
                                 role="group"
                                 style={undefined}
                             >
                                 <li
-                                    className="c7"
+                                    className="c8"
                                 >
                                     <div
                                         checked={false}
-                                        className="c8"
+                                        className="c9"
                                         disabled={false}
                                         id="k"
                                         onBlur={undefined}
@@ -1875,14 +1571,14 @@ Array [
                                     >
                                         <input
                                             checked={false}
-                                            className="c9"
+                                            className="c10 c11"
                                             disabled={false}
                                             id="l"
                                             onBlur={undefined}
                                             type="checkbox"
                                         />
                                         <label
-                                            className="c10"
+                                            className="c12"
                                             htmlFor="l"
                                         />
                                     </div>
@@ -1890,15 +1586,15 @@ Array [
                             </div>
                         </div>
                         <div
-                            className="c11"
+                            className="c13 c5"
                             disabled={false}
                             name="card-header-meta"
                         >
                             <div
-                                className="c12"
+                                className="c14"
                             >
                                 <h4
-                                    className="c13"
+                                    className="c15"
                                 >
                                     name
                                 </h4>
@@ -1906,43 +1602,42 @@ Array [
                         </div>
                     </div>
                     <div
-                        className="c14"
+                        className="c16 c17"
+                        disabled={false}
                         name="card-outlet"
                     >
                         <div
-                            className="c15"
+                            className="c18"
                         >
                             <div
-                                className="c16"
+                                className="c19"
                             >
                                 <p
-                                    className="c17"
+                                    className="c20"
                                 >
                                     description
                                 </p>
                             </div>
                             <div
-                                className="c18"
+                                className="c21"
                             >
                                 <div
-                                    className="c19"
+                                    className="c22"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         <div
-                                            className="c21"
+                                            className="c24"
                                         >
                                             <div
-                                                className="c20"
+                                                className="c23"
                                             >
                                                 <div
-                                                    className="c22"
+                                                    className="c25"
                                                 >
                                                     <svg
-                                                        className=""
                                                         height="16"
-                                                        innerRef={undefined}
                                                         style={
                                                             Object {
                                                                 "transform": "rotate(0deg)",
@@ -1960,10 +1655,10 @@ Array [
                                                 </div>
                                             </div>
                                             <div
-                                                className="c20"
+                                                className="c23"
                                             >
                                                 <p
-                                                    className="c17"
+                                                    className="c20"
                                                 >
                                                     Private
                                                 </p>
@@ -1972,19 +1667,19 @@ Array [
                                     </div>
                                 </div>
                                 <div
-                                    className="c19"
+                                    className="c22"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         <div
-                                            className="c21"
+                                            className="c24"
                                         >
                                             <div
-                                                className="c20"
+                                                className="c23"
                                             >
                                                 <div
-                                                    className="c22"
+                                                    className="c25"
                                                 >
                                                     <svg
                                                         height="16.2"
@@ -2000,10 +1695,10 @@ Array [
                                                 </div>
                                             </div>
                                             <div
-                                                className="c20"
+                                                className="c23"
                                             >
                                                 <p
-                                                    className="c17"
+                                                    className="c20"
                                                 >
                                                     Fabric network
                                                 </p>
@@ -2012,24 +1707,22 @@ Array [
                                     </div>
                                 </div>
                                 <div
-                                    className="c19"
+                                    className="c22"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         <div
-                                            className="c21"
+                                            className="c24"
                                         >
                                             <div
-                                                className="c20"
+                                                className="c23"
                                             >
                                                 <div
-                                                    className="c22"
+                                                    className="c25"
                                                 >
                                                     <svg
-                                                        className=""
                                                         height="17"
-                                                        innerRef={undefined}
                                                         style={
                                                             Object {
                                                                 "transform": "rotate(0deg)",
@@ -2134,10 +1827,10 @@ Array [
                                                 </div>
                                             </div>
                                             <div
-                                                className="c20"
+                                                className="c23"
                                             >
                                                 <p
-                                                    className="c17"
+                                                    className="c20"
                                                 >
                                                     0 instances
                                                 </p>
@@ -2147,43 +1840,41 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c23"
+                                className="c26"
                             >
                                 <div
-                                    className="c24"
+                                    className="c27"
                                     disabled={false}
                                     name="card"
                                 >
                                     <div
-                                        className="c25"
+                                        className="c28 c27"
                                         disabled={false}
                                         name="card-header"
                                         onClick={[Function]}
                                     >
                                         <div
-                                            className="c26"
+                                            className="c13 c27"
                                             disabled={false}
                                             name="card-header-meta"
                                         >
                                             <div
-                                                className="c27"
+                                                className="c29"
                                             >
                                                 <p
-                                                    className="c17"
+                                                    className="c20"
                                                 >
                                                     Network information
                                                 </p>
                                             </div>
                                         </div>
                                         <div
-                                            className="c5"
+                                            className="c6 c5"
                                             disabled={false}
                                             name="card-header-box"
                                         >
                                             <svg
-                                                className=""
                                                 height="6"
-                                                innerRef={undefined}
                                                 style={
                                                     Object {
                                                         "transform": "rotate(0deg)",
@@ -2223,27 +1914,27 @@ Array [
                     name="card"
                 >
                     <div
-                        className="c28"
+                        className="c30 c31"
                         disabled={false}
                         name="card-header"
                     >
                         <div
-                            className="c29"
+                            className="c6 c31"
                             disabled={false}
                             name="card-header-box"
                         >
                             <div
-                                className="baseline-jVaZNU kXgQxt c6"
+                                className="c7"
                                 name="2"
                                 role="group"
                                 style={undefined}
                             >
                                 <li
-                                    className="c7"
+                                    className="c8"
                                 >
                                     <div
                                         checked={true}
-                                        className="c8"
+                                        className="c9"
                                         disabled={false}
                                         id="m"
                                         onBlur={undefined}
@@ -2251,14 +1942,14 @@ Array [
                                     >
                                         <input
                                             checked={true}
-                                            className="c9"
+                                            className="c10 c11"
                                             disabled={false}
                                             id="n"
                                             onBlur={undefined}
                                             type="checkbox"
                                         />
                                         <label
-                                            className="c10"
+                                            className="c12"
                                             htmlFor="n"
                                         />
                                     </div>
@@ -2266,15 +1957,15 @@ Array [
                             </div>
                         </div>
                         <div
-                            className="c30"
+                            className="c13 c31"
                             disabled={false}
                             name="card-header-meta"
                         >
                             <div
-                                className="c12"
+                                className="c14"
                             >
                                 <h4
-                                    className="c31"
+                                    className="c32"
                                 >
                                     name2
                                 </h4>
@@ -2282,43 +1973,42 @@ Array [
                         </div>
                     </div>
                     <div
-                        className="c14"
+                        className="c16 c17"
+                        disabled={false}
                         name="card-outlet"
                     >
                         <div
-                            className="c15"
+                            className="c18"
                         >
                             <div
-                                className="c16"
+                                className="c19"
                             >
                                 <p
-                                    className="c17"
+                                    className="c20"
                                 >
                                     description2
                                 </p>
                             </div>
                             <div
-                                className="c18"
+                                className="c21"
                             >
                                 <div
-                                    className="c19"
+                                    className="c22"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         <div
-                                            className="c21"
+                                            className="c24"
                                         >
                                             <div
-                                                className="c20"
+                                                className="c23"
                                             >
                                                 <div
-                                                    className="c22"
+                                                    className="c25"
                                                 >
                                                     <svg
-                                                        className=""
                                                         height="16"
-                                                        innerRef={undefined}
                                                         style={
                                                             Object {
                                                                 "transform": "rotate(0deg)",
@@ -2336,10 +2026,10 @@ Array [
                                                 </div>
                                             </div>
                                             <div
-                                                className="c20"
+                                                className="c23"
                                             >
                                                 <p
-                                                    className="c17"
+                                                    className="c20"
                                                 >
                                                     Private
                                                 </p>
@@ -2348,19 +2038,19 @@ Array [
                                     </div>
                                 </div>
                                 <div
-                                    className="c19"
+                                    className="c22"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         <div
-                                            className="c21"
+                                            className="c24"
                                         >
                                             <div
-                                                className="c20"
+                                                className="c23"
                                             >
                                                 <div
-                                                    className="c22"
+                                                    className="c25"
                                                 >
                                                     <svg
                                                         height="13"
@@ -2376,10 +2066,10 @@ Array [
                                                 </div>
                                             </div>
                                             <div
-                                                className="c20"
+                                                className="c23"
                                             >
                                                 <p
-                                                    className="c17"
+                                                    className="c20"
                                                 >
                                                     Data center network
                                                 </p>
@@ -2395,7 +2085,7 @@ Array [
         </div>
     </div>
 </form>,
-  .c3 {
+  .c4 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2405,36 +2095,29 @@ Array [
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c3::-moz-focus-inner,
-.c3[type='button']::-moz-focus-inner,
-.c3[type='reset']::-moz-focus-inner,
-.c3[type='submit']::-moz-focus-inner {
+.c4::-moz-focus-inner,
+.c4[type='button']::-moz-focus-inner,
+.c4[type='reset']::-moz-focus-inner,
+.c4[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c3:-moz-focusring,
-.c3[type='button']:-moz-focusring,
-.c3[type='reset']:-moz-focusring,
-.c3[type='submit']:-moz-focusring {
+.c4:-moz-focusring,
+.c4[type='button']:-moz-focusring,
+.c4[type='reset']:-moz-focusring,
+.c4[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c3 + button,
-.c3 + a {
-  margin-left: 0.375rem;
+.c3 {
+  min-width: 7.5rem;
 }
 
 .c2 {
   display: inline-block;
-}
-
-.c2 + button,
-.c2 + a {
-  margin-left: 0.375rem;
 }
 
 .c1 {
@@ -2505,14 +2188,14 @@ Array [
 }
 
 .c0 {
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 <div
     className="c0"
 >
     <button
-        className="c1 c2 c3"
+        className="c1 c2 c3 c4"
         data-ui-button="true"
         href=""
         onClick={undefined}
@@ -2526,15 +2209,11 @@ Array [
 
 exports[`renders <Networks networks=[] proceeded /> without throwing 1`] = `
 Array [
-  .c3 {
+  .c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2553,17 +2232,22 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
   margin-bottom: 1.125rem;
 }
@@ -2632,9 +2316,7 @@ Array [
                 className="c2"
             >
                 <svg
-                    className=""
                     height="19.78"
-                    innerRef={undefined}
                     style={
                         Object {
                             "transform": "rotate(0deg)",
@@ -2652,16 +2334,16 @@ Array [
             </div>
         </div>
         <small
-            className="c3"
+            className="c3 c4"
         >
             Networks
         </small>
     </div>
     <div
-        className="c4"
+        className="c5"
     >
         <div
-            className="c5 c6"
+            className="c6 c7"
             height="0.0625rem"
         />
     </div>
@@ -2671,20 +2353,6 @@ Array [
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c0 + p,
-.c0 + small,
-.c0 + h1,
-.c0 + h2,
-.c0 + label,
-.c0 + h3,
-.c0 + h4,
-.c0 + h5,
-.c0 + div,
-.c0 + span {
-  margin-top: 0.75rem;
 }
 
 <h3
@@ -2699,7 +2367,6 @@ Array [
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
 .c0 {
@@ -2733,8 +2400,6 @@ Array [
 
 .c8 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c12 {
@@ -2742,7 +2407,7 @@ Array [
 }
 
 .c10 {
-  margin-right: 1.5rem;
+  margin-right: 1.875rem;
 }
 
 .c2 {
@@ -2930,9 +2595,7 @@ Array [
                                                         className="c12"
                                                     >
                                                         <svg
-                                                            className=""
                                                             height="16"
-                                                            innerRef={undefined}
                                                             style={
                                                                 Object {
                                                                     "transform": "rotate(0deg)",
@@ -3010,7 +2673,7 @@ Array [
         </div>
     </div>
 </form>,
-  .c3 {
+  .c4 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3020,36 +2683,29 @@ Array [
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c3::-moz-focus-inner,
-.c3[type='button']::-moz-focus-inner,
-.c3[type='reset']::-moz-focus-inner,
-.c3[type='submit']::-moz-focus-inner {
+.c4::-moz-focus-inner,
+.c4[type='button']::-moz-focus-inner,
+.c4[type='reset']::-moz-focus-inner,
+.c4[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c3:-moz-focusring,
-.c3[type='button']:-moz-focusring,
-.c3[type='reset']:-moz-focusring,
-.c3[type='submit']:-moz-focusring {
+.c4:-moz-focusring,
+.c4[type='button']:-moz-focusring,
+.c4[type='reset']:-moz-focusring,
+.c4[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c3 + button,
-.c3 + a {
-  margin-left: 0.375rem;
+.c3 {
+  min-width: 7.5rem;
 }
 
 .c2 {
   display: inline-block;
-}
-
-.c2 + button,
-.c2 + a {
-  margin-left: 0.375rem;
 }
 
 .c1 {
@@ -3141,15 +2797,15 @@ Array [
 }
 
 .c0 {
-  margin-top: 1.5rem;
-  margin-bottom: 2.625rem;
+  margin-top: 1.875rem;
+  margin-bottom: undefined;
 }
 
 <div
     className="c0"
 >
     <button
-        className="c1 c2 c3"
+        className="c1 c2 c3 c4"
         data-ui-button="true"
         href=""
         onClick={undefined}

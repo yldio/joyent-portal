@@ -1,5 +1,6 @@
 import React from 'react';
-import { withTheme } from 'styled-components';
+import styled, { withTheme } from 'styled-components';
+import { Margin } from 'styled-components-spacing';
 import remcalc from 'remcalc';
 import is from 'styled-is';
 
@@ -7,13 +8,7 @@ import BaseAnchor from '../anchor';
 import { Tfoot, Tr, Th } from '../table';
 import { Arrow as BaseArrow } from '../icons';
 
-const Arrow = BaseArrow.extend`
-  margin: ${remcalc(2)} ${remcalc(6)};
-`;
-
-const Anchor = BaseAnchor.extend`
-  margin-left: ${remcalc(6)};
-  margin-right: ${remcalc(6)};
+const Anchor = styled(BaseAnchor)`
   text-decoration: underline;
 
   ${is('disabled')`
@@ -30,6 +25,16 @@ const Anchor = BaseAnchor.extend`
     border: ${remcalc(1)} solid ${props => props.theme.primaryActive};
     border-radius: ${remcalc(4)};
     color: ${props => props.theme.white};
+  `};
+`;
+
+const Arrow = styled(BaseArrow)`
+  ${is('right')`
+    margin-left: ${remcalc(3)};
+  `};
+
+  ${is('left')`
+    margin-right: ${remcalc(3)};
   `};
 `;
 
@@ -63,11 +68,19 @@ export const Item = withTheme(
       {...rest}
     >
       {prev ? (
-        <Arrow direction="right" fill={disabled ? theme.grey : theme.primary} />
+        <Arrow
+          left
+          direction="right"
+          fill={disabled ? theme.grey : theme.primary}
+        />
       ) : null}
       {children}
       {next ? (
-        <Arrow direction="left" fill={disabled ? theme.grey : theme.primary} />
+        <Arrow
+          right
+          direction="left"
+          fill={disabled ? theme.grey : theme.primary}
+        />
       ) : null}
     </Anchor>
   )

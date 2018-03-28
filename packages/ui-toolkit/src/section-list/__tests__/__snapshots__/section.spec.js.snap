@@ -1,10 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SectionList Anchor 1`] = `
-.c2 {
+.c3 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
+}
+
+.c2 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
@@ -44,17 +47,20 @@ exports[`SectionList Anchor 1`] = `
 }
 
 <a
-  className="c0 c1 c2"
+  className="c0 c1 c2 c3"
 >
   Instances
 </a>
 `;
 
 exports[`SectionList Anchor 2`] = `
-.c2 {
+.c3 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
+}
+
+.c2 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
@@ -106,17 +112,20 @@ exports[`SectionList Anchor 2`] = `
 }
 
 <a
-  className="c0 c1 c2"
+  className="c0 c1 c2 c3"
 >
   Instances
 </a>
 `;
 
 exports[`SectionList Item 1`] = `
-.c3 {
+.c4 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
+}
+
+.c3 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
@@ -136,10 +145,6 @@ exports[`SectionList Item 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-}
-
-.c0:not(:last-child) {
-  margin-right: 1.875rem;
 }
 
 .c1 {
@@ -171,7 +176,7 @@ exports[`SectionList Item 1`] = `
   className="c0"
 >
   <a
-    className="c1 c2 c3"
+    className="c1 c2 c3 c4"
   >
     Instances
   </a>
@@ -179,10 +184,13 @@ exports[`SectionList Item 1`] = `
 `;
 
 exports[`SectionList SectionList 1`] = `
-.c4 {
+.c5 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
+}
+
+.c4 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
@@ -202,10 +210,6 @@ exports[`SectionList SectionList 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-}
-
-.c1:not(:last-child) {
-  margin-right: 1.875rem;
 }
 
 .c2 {
@@ -245,7 +249,7 @@ exports[`SectionList SectionList 1`] = `
   z-index: 2;
 }
 
-.c5 {
+.c6 {
   color: rgb(70,70,70);
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -255,11 +259,11 @@ exports[`SectionList SectionList 1`] = `
   position: relative;
 }
 
-.c5.active {
+.c6.active {
   font-weight: 600;
 }
 
-.c5.active:after {
+.c6.active:after {
   width: 100%;
   height: 0.0625rem;
   background: rgb(70,70,70);
@@ -273,8 +277,7 @@ exports[`SectionList SectionList 1`] = `
 .c0 {
   background: rgb(250,250,250);
   list-style-type: none;
-  padding: 0.8125rem 0rem;
-  margin: 1.125rem 0 0 0;
+  padding: 0.75rem 0rem;
   max-height: 3.125rem;
   overflow-x: auto;
   overflow-y: hidden;
@@ -284,6 +287,7 @@ exports[`SectionList SectionList 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
+  margin: 0;
 }
 
 .c0:after {
@@ -304,7 +308,7 @@ exports[`SectionList SectionList 1`] = `
     className="c1"
   >
     <a
-      className="c2 c3 c4"
+      className="c2 c3 c4 c5"
     >
       Overview
     </a>
@@ -313,7 +317,7 @@ exports[`SectionList SectionList 1`] = `
     className="c1"
   >
     <a
-      className="c5 c3 c4"
+      className="c6 c3 c4 c5"
     >
       Services
     </a>
@@ -322,7 +326,7 @@ exports[`SectionList SectionList 1`] = `
     className="c1"
   >
     <a
-      className="c5 c3 c4"
+      className="c6 c3 c4 c5"
     >
       Instances
     </a>

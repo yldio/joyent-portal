@@ -8,13 +8,8 @@ const chevron =
 
 const Main = styled.div`
   h4[class*='rsg--heading'] {
-    margin: 0;
     line-height: ${remcalc(26)};
     font-size: ${remcalc(21)};
-
-    & + p {
-      margin-top: ${remcalc(12)};
-    }
   }
 `;
 
@@ -36,10 +31,6 @@ const Wrapper = styled.div`
 
     thead[class*='rsg--tableHead'] {
       border: none;
-    }
-
-    table[class*='rsg--table'] {
-      margin: 0;
     }
   }
 `;
@@ -77,9 +68,7 @@ const Props = styled.div`
   }
 `;
 
-const Content = styled.div`
-  margin-top: ${remcalc(40)};
-`;
+const Content = styled.div;
 
 export default ({
   name,

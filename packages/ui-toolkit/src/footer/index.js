@@ -12,7 +12,6 @@ const List = styled.ul`
   justify-content: flex-end;
   position: absolute;
   box-sizing: border-box;
-  margin: 0;
   bottom: 0;
 `;
 

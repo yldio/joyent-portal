@@ -3,10 +3,9 @@ import styled from 'styled-components';
 import is from 'styled-is';
 import remcalc from 'remcalc';
 
-import Baseline from '../baseline';
 import { ViewContainer } from '../layout';
 
-const Container = ViewContainer.extend`
+const Container = styled(ViewContainer)`
   display: flex;
   flex-wrap: nowrap;
   align-content: stretch;
@@ -40,8 +39,8 @@ const Footer = styled.div`
   `};
 `;
 
-export default Baseline(({ children, fluid, ...rest }) => (
+export default ({ children, fluid, ...rest }) => (
   <Footer {...rest}>
     <Container fluid={fluid}>{children}</Container>
   </Footer>
-));
+);

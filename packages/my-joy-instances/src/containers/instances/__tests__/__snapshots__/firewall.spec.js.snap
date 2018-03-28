@@ -2,38 +2,41 @@
 
 exports[`renders <Firewall /> without throwing 1`] = `
 Array [
-  .c1 {
+  .c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
 }
 
-.c6 {
-  margin-bottom: 2.625rem;
+.c8 {
+  margin-bottom: 1.875rem;
 }
 
-.c14 {
-  margin-top: 1.875rem;
+.c13 {
+  margin-left: 0.75rem;
 }
 
-.c19 {
+.c18 {
+  margin-top: 3rem;
+}
+
+.c23 {
   margin-bottom: 0.75rem;
 }
 
-.c17 {
-  padding: 2.25rem;
+.c21 {
+  padding: 8rem;
 }
 
-.c5 {
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c9 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -41,23 +44,14 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -76,7 +70,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -86,34 +80,25 @@ Array [
   display: block;
 }
 
-.c21 {
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c25 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c21 + p,
-.c21 + small,
-.c21 + h1,
-.c21 + h2,
-.c21 + label,
-.c21 + h3,
-.c21 + h4,
-.c21 + h5,
-.c21 + div,
-.c21 + span {
-  margin-top: 0.75rem;
-}
-
-.c13 {
+.c17 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -137,7 +122,7 @@ Array [
   align-items: center;
 }
 
-.c18 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -168,7 +153,7 @@ Array [
   align-items: center;
 }
 
-.c16 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -190,22 +175,25 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c7 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c10 {
+.c11 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c14 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -218,27 +206,27 @@ Array [
   align-items: center;
 }
 
-.c11 {
+.c15 {
   display: none;
 }
 
-.c11:checked + label {
+.c15:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c11:checked + label:after {
+.c15:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c11:checked + label:active {
+.c15:checked + label:active {
   box-shadow: none;
 }
 
-.c12 {
+.c16 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -255,27 +243,26 @@ Array [
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
 }
 
-.c12::selection {
+.c16::selection {
   background: none;
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c12:hover {
+.c16:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c12:hover:after {
+.c16:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c12:after,
-.c12:before {
+.c16:after,
+.c16:before {
   position: relative;
   display: block;
   content: '';
@@ -283,7 +270,7 @@ Array [
   height: 100%;
 }
 
-.c12:after {
+.c16:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -295,38 +282,60 @@ Array [
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c12:before {
+.c16:before {
   display: none;
 }
 
-.c20 {
+.c6 {
+  margin: 0;
+}
+
+.c24 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c15 {
+.c19 {
   width: calc(100% - 0.125rem);
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
   }
 }
 
@@ -337,41 +346,23 @@ Array [
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1"
+        className="c2"
     >
         <div
-            className="c2"
+            className="c3"
         >
             <div
-                className="c3"
+                className="c4"
             >
                 <div
-                    className="c4"
+                    className="c5"
                 >
                     <p
-                        className="c5"
+                        className="c6 c7"
                     >
                         Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                          
@@ -388,79 +379,83 @@ Array [
         </div>
     </div>
     <div
-        className="c6"
+        className="c8"
     >
         <form
             onChange={[Function]}
         >
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="enabled"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <label
-                        className="c9"
+                        className="c11 c12"
                         htmlFor="k"
                     >
                         Enable Firewall
                     </label>
                     <div
-                        className="c10"
+                        className="c13"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            disabled={false}
-                            id="k"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            disabled={false}
-                            htmlFor="k"
-                            id="k"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            disabled={false}
-                            htmlFor="k"
-                            id="k"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                disabled={false}
+                                id="k"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                disabled={false}
+                                htmlFor="k"
+                                id="k"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                disabled={false}
+                                htmlFor="k"
+                                id="k"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c13 c2"
+        className="c17 c3"
         height="0.0625rem"
     />
     <div
-        className="c14"
+        className="c18"
     >
         <div
-            className="c15 c16"
+            className="c19 c20"
             disabled={false}
             name="card"
         >
             <div
-                className="c17"
+                className="c21"
             >
                 <div
-                    className="c18"
+                    className="c22"
                 >
                     <div
-                        className="c19"
+                        className="c23"
                     >
                         <svg
                             height={60}
@@ -687,7 +682,7 @@ Array [
                         </svg>
                     </div>
                     <h3
-                        className="c20 c21"
+                        className="c24 c25"
                     >
                         Sorry, but we weren’t able to find any firewall rules.
                     </h3>
@@ -696,42 +691,49 @@ Array [
         </div>
     </div>
 </div>,
-  .c1 {
+  .c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
 }
 
-.c6 {
-  margin-bottom: 2.625rem;
+.c8 {
+  margin-bottom: 1.875rem;
 }
 
-.c15 {
-  margin-top: 1.875rem;
+.c13 {
+  margin-left: 0.75rem;
 }
 
 .c20 {
+  margin-top: 3rem;
+}
+
+.c25 {
   margin-bottom: 0.75rem;
 }
 
-.c14 {
-  margin-top: 1.5rem;
-}
-
 .c18 {
-  padding: 2.25rem;
+  margin-top: 1.875rem;
 }
 
-.c5 {
+.c19 {
+  margin-right: 0.75rem;
+}
+
+.c23 {
+  padding: 8rem;
+}
+
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c9 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -739,23 +741,14 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -774,7 +767,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -784,34 +777,25 @@ Array [
   display: block;
 }
 
-.c22 {
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c27 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c22 + p,
-.c22 + small,
-.c22 + h1,
-.c22 + h2,
-.c22 + label,
-.c22 + h3,
-.c22 + h4,
-.c22 + h5,
-.c22 + div,
-.c22 + span {
-  margin-top: 0.75rem;
-}
-
-.c13 {
+.c17 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -835,7 +819,7 @@ Array [
   align-items: center;
 }
 
-.c19 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -866,7 +850,7 @@ Array [
   align-items: center;
 }
 
-.c17 {
+.c22 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -888,22 +872,25 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c7 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c10 {
+.c11 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c14 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -916,27 +903,27 @@ Array [
   align-items: center;
 }
 
-.c11 {
+.c15 {
   display: none;
 }
 
-.c11:checked + label {
+.c15:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c11:checked + label:after {
+.c15:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c11:checked + label:active {
+.c15:checked + label:active {
   box-shadow: none;
 }
 
-.c12 {
+.c16 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -953,27 +940,26 @@ Array [
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
 }
 
-.c12::selection {
+.c16::selection {
   background: none;
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c12:hover {
+.c16:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c12:hover:after {
+.c16:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c12:after,
-.c12:before {
+.c16:after,
+.c16:before {
   position: relative;
   display: block;
   content: '';
@@ -981,7 +967,7 @@ Array [
   height: 100%;
 }
 
-.c12:after {
+.c16:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -993,38 +979,60 @@ Array [
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c12:before {
+.c16:before {
   display: none;
 }
 
-.c21 {
+.c6 {
+  margin: 0;
+}
+
+.c26 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c16 {
+.c21 {
   width: calc(100% - 0.125rem);
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
   }
 }
 
@@ -1035,41 +1043,23 @@ Array [
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1"
+        className="c2"
     >
         <div
-            className="c2"
+            className="c3"
         >
             <div
-                className="c3"
+                className="c4"
             >
                 <div
-                    className="c4"
+                    className="c5"
                 >
                     <p
-                        className="c5"
+                        className="c6 c7"
                     >
                         Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                          
@@ -1086,123 +1076,136 @@ Array [
         </div>
     </div>
     <div
-        className="c6"
+        className="c8"
     >
         <form
             onChange={[Function]}
         >
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="enabled"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <label
-                        className="c9"
+                        className="c11 c12"
                         htmlFor="l"
                     >
                         Enable Firewall
                     </label>
                     <div
-                        className="c10"
+                        className="c13"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            disabled={false}
-                            id="l"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            disabled={false}
-                            htmlFor="l"
-                            id="l"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            disabled={false}
-                            htmlFor="l"
-                            id="l"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                disabled={false}
+                                id="l"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                disabled={false}
+                                htmlFor="l"
+                                id="l"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                disabled={false}
+                                htmlFor="l"
+                                id="l"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c13 c2"
+        className="c17 c3"
         height="0.0625rem"
     />
     <div
-        className="c14"
+        className="c18"
     >
         <form>
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="inactive"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <div
-                        className="c10"
+                        className="c19"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            id="m"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            htmlFor="m"
-                            id="m"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            htmlFor="m"
-                            id="m"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                            Show inactive rules
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                id="m"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                htmlFor="m"
+                                id="m"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                htmlFor="m"
+                                id="m"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
+                    <label
+                        className="c11 c12"
+                        htmlFor="m"
+                    >
+                        Show inactive rules
+                    </label>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c15"
+        className="c20"
     >
         <div
-            className="c16 c17"
+            className="c21 c22"
             disabled={false}
             name="card"
         >
             <div
-                className="c18"
+                className="c23"
             >
                 <div
-                    className="c19"
+                    className="c24"
                 >
                     <div
-                        className="c20"
+                        className="c25"
                     >
                         <svg
                             height={60}
@@ -1429,7 +1432,7 @@ Array [
                         </svg>
                     </div>
                     <h3
-                        className="c21 c22"
+                        className="c26 c27"
                     >
                         Sorry, but we weren’t able to find any firewall rules.
                     </h3>
@@ -1443,38 +1446,41 @@ Array [
 
 exports[`renders <Firewall inactive /> without throwing 1`] = `
 Array [
-  .c1 {
+  .c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
 }
 
-.c6 {
-  margin-bottom: 2.625rem;
+.c8 {
+  margin-bottom: 1.875rem;
 }
 
-.c14 {
-  margin-top: 1.875rem;
+.c13 {
+  margin-left: 0.75rem;
 }
 
-.c19 {
+.c18 {
+  margin-top: 3rem;
+}
+
+.c23 {
   margin-bottom: 0.75rem;
 }
 
-.c17 {
-  padding: 2.25rem;
+.c21 {
+  padding: 8rem;
 }
 
-.c5 {
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c9 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1482,23 +1488,14 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1517,7 +1514,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1527,34 +1524,25 @@ Array [
   display: block;
 }
 
-.c21 {
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c25 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c21 + p,
-.c21 + small,
-.c21 + h1,
-.c21 + h2,
-.c21 + label,
-.c21 + h3,
-.c21 + h4,
-.c21 + h5,
-.c21 + div,
-.c21 + span {
-  margin-top: 0.75rem;
-}
-
-.c13 {
+.c17 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1578,7 +1566,7 @@ Array [
   align-items: center;
 }
 
-.c18 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1609,7 +1597,7 @@ Array [
   align-items: center;
 }
 
-.c16 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1631,22 +1619,25 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c7 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c10 {
+.c11 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c14 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -1659,27 +1650,27 @@ Array [
   align-items: center;
 }
 
-.c11 {
+.c15 {
   display: none;
 }
 
-.c11:checked + label {
+.c15:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c11:checked + label:after {
+.c15:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c11:checked + label:active {
+.c15:checked + label:active {
   box-shadow: none;
 }
 
-.c12 {
+.c16 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -1696,27 +1687,26 @@ Array [
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
 }
 
-.c12::selection {
+.c16::selection {
   background: none;
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c12:hover {
+.c16:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c12:hover:after {
+.c16:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c12:after,
-.c12:before {
+.c16:after,
+.c16:before {
   position: relative;
   display: block;
   content: '';
@@ -1724,7 +1714,7 @@ Array [
   height: 100%;
 }
 
-.c12:after {
+.c16:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -1736,38 +1726,60 @@ Array [
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c12:before {
+.c16:before {
   display: none;
 }
 
-.c20 {
+.c6 {
+  margin: 0;
+}
+
+.c24 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c15 {
+.c19 {
   width: calc(100% - 0.125rem);
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
   }
 }
 
@@ -1778,41 +1790,23 @@ Array [
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1"
+        className="c2"
     >
         <div
-            className="c2"
+            className="c3"
         >
             <div
-                className="c3"
+                className="c4"
             >
                 <div
-                    className="c4"
+                    className="c5"
                 >
                     <p
-                        className="c5"
+                        className="c6 c7"
                     >
                         Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                          
@@ -1829,79 +1823,83 @@ Array [
         </div>
     </div>
     <div
-        className="c6"
+        className="c8"
     >
         <form
             onChange={[Function]}
         >
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="enabled"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <label
-                        className="c9"
+                        className="c11 c12"
                         htmlFor="n"
                     >
                         Enable Firewall
                     </label>
                     <div
-                        className="c10"
+                        className="c13"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            disabled={false}
-                            id="n"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            disabled={false}
-                            htmlFor="n"
-                            id="n"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            disabled={false}
-                            htmlFor="n"
-                            id="n"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                disabled={false}
+                                id="n"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                disabled={false}
+                                htmlFor="n"
+                                id="n"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                disabled={false}
+                                htmlFor="n"
+                                id="n"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c13 c2"
+        className="c17 c3"
         height="0.0625rem"
     />
     <div
-        className="c14"
+        className="c18"
     >
         <div
-            className="c15 c16"
+            className="c19 c20"
             disabled={false}
             name="card"
         >
             <div
-                className="c17"
+                className="c21"
             >
                 <div
-                    className="c18"
+                    className="c22"
                 >
                     <div
-                        className="c19"
+                        className="c23"
                     >
                         <svg
                             height={60}
@@ -2128,7 +2126,7 @@ Array [
                         </svg>
                     </div>
                     <h3
-                        className="c20 c21"
+                        className="c24 c25"
                     >
                         Sorry, but we weren’t able to find any firewall rules.
                     </h3>
@@ -2137,42 +2135,49 @@ Array [
         </div>
     </div>
 </div>,
-  .c1 {
+  .c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
 }
 
-.c6 {
-  margin-bottom: 2.625rem;
+.c8 {
+  margin-bottom: 1.875rem;
 }
 
-.c15 {
-  margin-top: 1.875rem;
+.c13 {
+  margin-left: 0.75rem;
 }
 
 .c20 {
+  margin-top: 3rem;
+}
+
+.c25 {
   margin-bottom: 0.75rem;
 }
 
-.c14 {
-  margin-top: 1.5rem;
-}
-
 .c18 {
-  padding: 2.25rem;
+  margin-top: 1.875rem;
 }
 
-.c5 {
+.c19 {
+  margin-right: 0.75rem;
+}
+
+.c23 {
+  padding: 8rem;
+}
+
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c9 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -2180,23 +2185,14 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2215,7 +2211,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -2225,34 +2221,25 @@ Array [
   display: block;
 }
 
-.c22 {
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c27 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c22 + p,
-.c22 + small,
-.c22 + h1,
-.c22 + h2,
-.c22 + label,
-.c22 + h3,
-.c22 + h4,
-.c22 + h5,
-.c22 + div,
-.c22 + span {
-  margin-top: 0.75rem;
-}
-
-.c13 {
+.c17 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2276,7 +2263,7 @@ Array [
   align-items: center;
 }
 
-.c19 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2307,7 +2294,7 @@ Array [
   align-items: center;
 }
 
-.c17 {
+.c22 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2329,22 +2316,25 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c7 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c10 {
+.c11 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c14 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -2357,27 +2347,27 @@ Array [
   align-items: center;
 }
 
-.c11 {
+.c15 {
   display: none;
 }
 
-.c11:checked + label {
+.c15:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c11:checked + label:after {
+.c15:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c11:checked + label:active {
+.c15:checked + label:active {
   box-shadow: none;
 }
 
-.c12 {
+.c16 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -2394,27 +2384,26 @@ Array [
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
 }
 
-.c12::selection {
+.c16::selection {
   background: none;
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c12:hover {
+.c16:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c12:hover:after {
+.c16:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c12:after,
-.c12:before {
+.c16:after,
+.c16:before {
   position: relative;
   display: block;
   content: '';
@@ -2422,7 +2411,7 @@ Array [
   height: 100%;
 }
 
-.c12:after {
+.c16:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -2434,38 +2423,60 @@ Array [
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c12:before {
+.c16:before {
   display: none;
 }
 
-.c21 {
+.c6 {
+  margin: 0;
+}
+
+.c26 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c16 {
+.c21 {
   width: calc(100% - 0.125rem);
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
   }
 }
 
@@ -2476,41 +2487,23 @@ Array [
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1"
+        className="c2"
     >
         <div
-            className="c2"
+            className="c3"
         >
             <div
-                className="c3"
+                className="c4"
             >
                 <div
-                    className="c4"
+                    className="c5"
                 >
                     <p
-                        className="c5"
+                        className="c6 c7"
                     >
                         Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                          
@@ -2527,123 +2520,136 @@ Array [
         </div>
     </div>
     <div
-        className="c6"
+        className="c8"
     >
         <form
             onChange={[Function]}
         >
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="enabled"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <label
-                        className="c9"
+                        className="c11 c12"
                         htmlFor="o"
                     >
                         Enable Firewall
                     </label>
                     <div
-                        className="c10"
+                        className="c13"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            disabled={false}
-                            id="o"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            disabled={false}
-                            htmlFor="o"
-                            id="o"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            disabled={false}
-                            htmlFor="o"
-                            id="o"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                disabled={false}
+                                id="o"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                disabled={false}
+                                htmlFor="o"
+                                id="o"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                disabled={false}
+                                htmlFor="o"
+                                id="o"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c13 c2"
+        className="c17 c3"
         height="0.0625rem"
     />
     <div
-        className="c14"
+        className="c18"
     >
         <form>
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="inactive"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <div
-                        className="c10"
+                        className="c19"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            id="p"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            htmlFor="p"
-                            id="p"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            htmlFor="p"
-                            id="p"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                            Show inactive rules
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                id="p"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                htmlFor="p"
+                                id="p"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                htmlFor="p"
+                                id="p"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
+                    <label
+                        className="c11 c12"
+                        htmlFor="p"
+                    >
+                        Show inactive rules
+                    </label>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c15"
+        className="c20"
     >
         <div
-            className="c16 c17"
+            className="c21 c22"
             disabled={false}
             name="card"
         >
             <div
-                className="c18"
+                className="c23"
             >
                 <div
-                    className="c19"
+                    className="c24"
                 >
                     <div
-                        className="c20"
+                        className="c25"
                     >
                         <svg
                             height={60}
@@ -2870,7 +2876,7 @@ Array [
                         </svg>
                     </div>
                     <h3
-                        className="c21 c22"
+                        className="c26 c27"
                     >
                         Sorry, but we weren’t able to find any firewall rules.
                     </h3>
@@ -2884,28 +2890,12 @@ Array [
 
 exports[`renders <Firewall loading /> without throwing 1`] = `
 Array [
-  .c1 {
+  .c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
-}
-
-.c7 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-}
-
-.c8 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
 }
 
 .c9 {
@@ -2913,34 +2903,25 @@ Array [
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c10 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c11 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
-.c5 {
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c10 {
-  color: rgb(73,73,73);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  text-align: center;
-  margin-bottom: 0;
-  margin-left: 0.375rem;
-}
-
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2968,16 +2949,22 @@ Array [
   flex: 1 0 auto;
 }
 
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
+.c12 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
 }
 
-.c2 {
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2996,7 +2983,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3006,21 +2993,50 @@ Array [
   display: block;
 }
 
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c6 {
+  margin: 0;
+}
+
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
   }
 }
 
@@ -3031,41 +3047,23 @@ Array [
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1"
+        className="c2"
     >
         <div
-            className="c2"
+            className="c3"
         >
             <div
-                className="c3"
+                className="c4"
             >
                 <div
-                    className="c4"
+                    className="c5"
                 >
                     <p
-                        className="c5"
+                        className="c6 c7"
                     >
                         Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                          
@@ -3082,28 +3080,28 @@ Array [
         </div>
     </div>
     <div
-        className="c6"
+        className="c8"
     >
         <svg
             height="10"
             width="28"
         >
             <rect
-                className="c7"
+                className="c9"
                 height="6"
                 width="6"
                 x="2"
                 y="2"
             />
             <rect
-                className="c8"
+                className="c10 c9"
                 height="6"
                 width="6"
                 x="11"
                 y="2"
             />
             <rect
-                className="c9"
+                className="c11 c9"
                 height="6"
                 width="6"
                 x="20"
@@ -3111,34 +3109,18 @@ Array [
             />
         </svg>
         <p
-            className="c10"
+            className="c12 c7"
         >
             Loading...
         </p>
     </div>
 </div>,
-  .c1 {
+  .c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
-}
-
-.c7 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-}
-
-.c8 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
 }
 
 .c9 {
@@ -3146,34 +3128,25 @@ Array [
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c10 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c11 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
-.c5 {
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c10 {
-  color: rgb(73,73,73);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  text-align: center;
-  margin-bottom: 0;
-  margin-left: 0.375rem;
-}
-
-.c6 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3201,16 +3174,22 @@ Array [
   flex: 1 0 auto;
 }
 
-.c0 {
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
+.c12 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
 }
 
-.c2 {
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3229,7 +3208,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3239,21 +3218,50 @@ Array [
   display: block;
 }
 
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c6 {
+  margin: 0;
+}
+
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
   }
 }
 
@@ -3264,41 +3272,23 @@ Array [
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1"
+        className="c2"
     >
         <div
-            className="c2"
+            className="c3"
         >
             <div
-                className="c3"
+                className="c4"
             >
                 <div
-                    className="c4"
+                    className="c5"
                 >
                     <p
-                        className="c5"
+                        className="c6 c7"
                     >
                         Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                          
@@ -3315,28 +3305,28 @@ Array [
         </div>
     </div>
     <div
-        className="c6"
+        className="c8"
     >
         <svg
             height="10"
             width="28"
         >
             <rect
-                className="c7"
+                className="c9"
                 height="6"
                 width="6"
                 x="2"
                 y="2"
             />
             <rect
-                className="c8"
+                className="c10 c9"
                 height="6"
                 width="6"
                 x="11"
                 y="2"
             />
             <rect
-                className="c9"
+                className="c11 c9"
                 height="6"
                 width="6"
                 x="20"
@@ -3344,7 +3334,7 @@ Array [
             />
         </svg>
         <p
-            className="c10"
+            className="c12 c7"
         >
             Loading...
         </p>
@@ -3354,51 +3344,41 @@ Array [
 `;
 
 exports[`renders <Firewall loadingError /> without throwing 1`] = `
-.c1 {
+.c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
 }
 
-.c12 {
-  margin-bottom: 2.625rem;
+.c8 {
+  margin-bottom: 1.875rem;
 }
 
-.c20 {
-  margin-top: 1.875rem;
-}
-
-.c25 {
-  margin-bottom: 0.75rem;
-}
-
-.c6 {
-  margin-bottom: 1.5rem;
+.c18 {
+  margin-left: 0.75rem;
 }
 
 .c23 {
-  padding: 2.25rem;
+  margin-top: 3rem;
 }
 
-.c5 {
+.c28 {
+  margin-bottom: 0.75rem;
+}
+
+.c26 {
+  padding: 8rem;
+}
+
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c11 {
-  color: rgb(73,73,73);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-  line-height: 0.875rem;
-  font-size: 0.8125rem;
-}
-
-.c15 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -3406,23 +3386,14 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3441,7 +3412,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3451,42 +3422,32 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   display: block;
 }
 
-.c27 {
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c30 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c27 + p,
-.c27 + small,
-.c27 + h1,
-.c27 + h2,
-.c27 + label,
-.c27 + h3,
-.c27 + h4,
-.c27 + h5,
-.c27 + div,
-.c27 + span {
-  margin-top: 0.75rem;
-}
-
-.c10 {
+.c12 {
   color: rgb(73,73,73);
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c19 {
+.c22 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3510,7 +3471,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c24 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3541,7 +3502,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3554,20 +3515,24 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c10 {
   border-radius: 0.1875rem 0 0 0.1875rem;
-  margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
   min-height: 100%;
   background-color: rgb(0,152,88);
   background-color: rgb(210,67,58);
 }
 
-.c9 {
+.c11 {
   padding: 1.125rem 1.125rem;
 }
 
-.c22 {
+.c13 {
+  line-height: 0.875rem;
+  font-size: 0.8125rem;
+}
+
+.c25 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3589,15 +3554,12 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c13 {
+.c14 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -3605,6 +3567,12 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
 }
 
 .c16 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c19 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -3617,27 +3585,27 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c17 {
+.c20 {
   display: none;
 }
 
-.c17:checked + label {
+.c20:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c17:checked + label:after {
+.c20:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c17:checked + label:active {
+.c20:checked + label:active {
   box-shadow: none;
 }
 
-.c18 {
+.c21 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -3654,27 +3622,26 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
 }
 
-.c18::selection {
+.c21::selection {
   background: none;
 }
 
-.c18:active {
+.c21:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c18:hover {
+.c21:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c18:hover:after {
+.c21:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c18:after,
-.c18:before {
+.c21:after,
+.c21:before {
   position: relative;
   display: block;
   content: '';
@@ -3682,7 +3649,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   height: 100%;
 }
 
-.c18:after {
+.c21:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -3694,38 +3661,60 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c18:active {
+.c21:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c18:before {
+.c21:before {
   display: none;
 }
 
-.c26 {
+.c6 {
+  margin: 0;
+}
+
+.c29 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c21 {
+.c24 {
   width: calc(100% - 0.125rem);
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
   }
 }
 
@@ -3736,41 +3725,23 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
 <div
-  className="c0"
+  className="c0 c1"
 >
   <div
-    className="c1"
+    className="c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <div
-        className="c3"
+        className="c4"
       >
         <div
-          className="c4"
+          className="c5"
         >
           <p
-            className="c5"
+            className="c6 c7"
           >
             Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
              
@@ -3787,24 +3758,24 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c6"
+    className="c8"
   >
     <div
-      className="c7"
+      className="c9"
     >
       <div
-        className="c8"
+        className="c10"
       />
       <div
-        className="c9"
+        className="c11"
       >
         <h4
-          className="c10"
+          className="c12"
         >
           Ooops!
         </h4>
         <p
-          className="c11"
+          className="c13 c7"
         >
           An error occurred while loading your firewall rules
         </p>
@@ -3812,79 +3783,83 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c12"
+    className="c8"
   >
     <form
       onChange={[Function]}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c13"
+        className="c14"
         name="enabled"
         role="group"
         style={undefined}
         type="checkbox"
       >
         <div
-          className="c14"
+          className="c15"
         >
           <label
-            className="c15"
+            className="c16 c17"
             htmlFor="q"
           >
             Enable Firewall
           </label>
           <div
-            className="c16"
+            className="c18"
           >
-            <input
-              checked={undefined}
-              className="c17"
-              disabled={false}
-              id="q"
-              onBlur={undefined}
-              type="checkbox"
-            />
-            <label
-              className="c18"
-              disabled={false}
-              htmlFor="q"
-              id="q"
-              onBlur={undefined}
-            />
-            <label
-              className="c15"
-              disabled={false}
-              htmlFor="q"
-              id="q"
-              onBlur={undefined}
+            <div
+              className="c19"
             >
-               
-            </label>
+              <input
+                checked={undefined}
+                className="c20"
+                disabled={false}
+                id="q"
+                onBlur={undefined}
+                type="checkbox"
+              />
+              <label
+                className="c21"
+                disabled={false}
+                htmlFor="q"
+                id="q"
+                onBlur={undefined}
+              />
+              <label
+                className="c16 c17"
+                disabled={false}
+                htmlFor="q"
+                id="q"
+                onBlur={undefined}
+              >
+                 
+              </label>
+            </div>
           </div>
         </div>
       </div>
     </form>
   </div>
   <div
-    className="c19 c2"
+    className="c22 c3"
     height="0.0625rem"
   />
   <div
-    className="c20"
+    className="c23"
   >
     <div
-      className="c21 c22"
+      className="c24 c25"
       disabled={false}
       name="card"
     >
       <div
-        className="c23"
+        className="c26"
       >
         <div
-          className="c24"
+          className="c27"
         >
           <div
-            className="c25"
+            className="c28"
           >
             <svg
               height={60}
@@ -4111,7 +4086,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
             </svg>
           </div>
           <h3
-            className="c26 c27"
+            className="c29 c30"
           >
             Sorry, but we weren’t able to find any firewall rules.
           </h3>
@@ -4123,51 +4098,41 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
 `;
 
 exports[`renders <Firewall mutationError /> without throwing 1`] = `
-.c1 {
+.c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
 }
 
-.c12 {
-  margin-bottom: 2.625rem;
+.c8 {
+  margin-bottom: 1.875rem;
 }
 
-.c20 {
-  margin-top: 1.875rem;
-}
-
-.c25 {
-  margin-bottom: 0.75rem;
-}
-
-.c6 {
-  margin-bottom: 1.5rem;
+.c18 {
+  margin-left: 0.75rem;
 }
 
 .c23 {
-  padding: 2.25rem;
+  margin-top: 3rem;
 }
 
-.c5 {
+.c28 {
+  margin-bottom: 0.75rem;
+}
+
+.c26 {
+  padding: 8rem;
+}
+
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c11 {
-  color: rgb(73,73,73);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
-  line-height: 0.875rem;
-  font-size: 0.8125rem;
-}
-
-.c15 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -4175,23 +4140,14 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4210,7 +4166,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4220,42 +4176,32 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   display: block;
 }
 
-.c27 {
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c30 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c27 + p,
-.c27 + small,
-.c27 + h1,
-.c27 + h2,
-.c27 + label,
-.c27 + h3,
-.c27 + h4,
-.c27 + h5,
-.c27 + div,
-.c27 + span {
-  margin-top: 0.75rem;
-}
-
-.c10 {
+.c12 {
   color: rgb(73,73,73);
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c19 {
+.c22 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4279,7 +4225,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c24 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4310,7 +4256,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c7 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4323,20 +4269,24 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   width: 100%;
 }
 
-.c8 {
+.c10 {
   border-radius: 0.1875rem 0 0 0.1875rem;
-  margin: -0.0625rem 0 -0.0625rem -0.0625rem;
   min-width: 0.75rem;
   min-height: 100%;
   background-color: rgb(0,152,88);
   background-color: rgb(210,67,58);
 }
 
-.c9 {
+.c11 {
   padding: 1.125rem 1.125rem;
 }
 
-.c22 {
+.c13 {
+  line-height: 0.875rem;
+  font-size: 0.8125rem;
+}
+
+.c25 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4358,15 +4308,12 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c13 {
+.c14 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -4374,6 +4321,12 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
 }
 
 .c16 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c19 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -4386,27 +4339,27 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c17 {
+.c20 {
   display: none;
 }
 
-.c17:checked + label {
+.c20:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c17:checked + label:after {
+.c20:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c17:checked + label:active {
+.c20:checked + label:active {
   box-shadow: none;
 }
 
-.c18 {
+.c21 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -4423,27 +4376,26 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
 }
 
-.c18::selection {
+.c21::selection {
   background: none;
 }
 
-.c18:active {
+.c21:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c18:hover {
+.c21:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c18:hover:after {
+.c21:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c18:after,
-.c18:before {
+.c21:after,
+.c21:before {
   position: relative;
   display: block;
   content: '';
@@ -4451,7 +4403,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   height: 100%;
 }
 
-.c18:after {
+.c21:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -4463,38 +4415,60 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c18:active {
+.c21:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c18:before {
+.c21:before {
   display: none;
 }
 
-.c26 {
+.c6 {
+  margin: 0;
+}
+
+.c29 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c21 {
+.c24 {
   width: calc(100% - 0.125rem);
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
   }
 }
 
@@ -4505,41 +4479,23 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
 <div
-  className="c0"
+  className="c0 c1"
 >
   <div
-    className="c1"
+    className="c2"
   >
     <div
-      className="c2"
+      className="c3"
     >
       <div
-        className="c3"
+        className="c4"
       >
         <div
-          className="c4"
+          className="c5"
         >
           <p
-            className="c5"
+            className="c6 c7"
           >
             Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
              
@@ -4556,24 +4512,24 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c6"
+    className="c8"
   >
     <div
-      className="c7"
+      className="c9"
     >
       <div
-        className="c8"
+        className="c10"
       />
       <div
-        className="c9"
+        className="c11"
       >
         <h4
-          className="c10"
+          className="c12"
         >
           Ooops!
         </h4>
         <p
-          className="c11"
+          className="c13 c7"
         >
           error
         </p>
@@ -4581,79 +4537,83 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c12"
+    className="c8"
   >
     <form
       onChange={[Function]}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c13"
+        className="c14"
         name="enabled"
         role="group"
         style={undefined}
         type="checkbox"
       >
         <div
-          className="c14"
+          className="c15"
         >
           <label
-            className="c15"
+            className="c16 c17"
             htmlFor="r"
           >
             Enable Firewall
           </label>
           <div
-            className="c16"
+            className="c18"
           >
-            <input
-              checked={undefined}
-              className="c17"
-              disabled={false}
-              id="r"
-              onBlur={undefined}
-              type="checkbox"
-            />
-            <label
-              className="c18"
-              disabled={false}
-              htmlFor="r"
-              id="r"
-              onBlur={undefined}
-            />
-            <label
-              className="c15"
-              disabled={false}
-              htmlFor="r"
-              id="r"
-              onBlur={undefined}
+            <div
+              className="c19"
             >
-               
-            </label>
+              <input
+                checked={undefined}
+                className="c20"
+                disabled={false}
+                id="r"
+                onBlur={undefined}
+                type="checkbox"
+              />
+              <label
+                className="c21"
+                disabled={false}
+                htmlFor="r"
+                id="r"
+                onBlur={undefined}
+              />
+              <label
+                className="c16 c17"
+                disabled={false}
+                htmlFor="r"
+                id="r"
+                onBlur={undefined}
+              >
+                 
+              </label>
+            </div>
           </div>
         </div>
       </div>
     </form>
   </div>
   <div
-    className="c19 c2"
+    className="c22 c3"
     height="0.0625rem"
   />
   <div
-    className="c20"
+    className="c23"
   >
     <div
-      className="c21 c22"
+      className="c24 c25"
       disabled={false}
       name="card"
     >
       <div
-        className="c23"
+        className="c26"
       >
         <div
-          className="c24"
+          className="c27"
         >
           <div
-            className="c25"
+            className="c28"
           >
             <svg
               height={60}
@@ -4880,7 +4840,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
             </svg>
           </div>
           <h3
-            className="c26 c27"
+            className="c29 c30"
           >
             Sorry, but we weren’t able to find any firewall rules.
           </h3>
@@ -4893,26 +4853,29 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
 
 exports[`renders <Firewall tagRules /> without throwing 1`] = `
 Array [
-  .c1 {
+  .c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
 }
 
-.c6 {
-  margin-bottom: 2.625rem;
+.c8 {
+  margin-bottom: 1.875rem;
 }
 
-.c5 {
+.c13 {
+  margin-left: 0.75rem;
+}
+
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c9 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -4920,23 +4883,14 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4955,7 +4909,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4965,13 +4919,18 @@ Array [
   display: block;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c17 {
+  background-color: rgb(216,216,216);
+}
+
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4995,22 +4954,25 @@ Array [
   align-items: center;
 }
 
-.c7 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c10 {
+.c11 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c14 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -5023,27 +4985,27 @@ Array [
   align-items: center;
 }
 
-.c11 {
+.c15 {
   display: none;
 }
 
-.c11:checked + label {
+.c15:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c11:checked + label:after {
+.c15:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c11:checked + label:active {
+.c15:checked + label:active {
   box-shadow: none;
 }
 
-.c12 {
+.c16 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -5060,27 +5022,26 @@ Array [
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
 }
 
-.c12::selection {
+.c16::selection {
   background: none;
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c12:hover {
+.c16:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c12:hover:after {
+.c16:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c12:after,
-.c12:before {
+.c16:after,
+.c16:before {
   position: relative;
   display: block;
   content: '';
@@ -5088,7 +5049,7 @@ Array [
   height: 100%;
 }
 
-.c12:after {
+.c16:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -5100,29 +5061,51 @@ Array [
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c12:before {
+.c16:before {
   display: none;
 }
 
+.c6 {
+  margin: 0;
+}
+
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
   }
 }
 
@@ -5133,41 +5116,23 @@ Array [
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1"
+        className="c2"
     >
         <div
-            className="c2"
+            className="c3"
         >
             <div
-                className="c3"
+                className="c4"
             >
                 <div
-                    className="c4"
+                    className="c5"
                 >
                     <p
-                        className="c5"
+                        className="c6 c7"
                     >
                         Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                          
@@ -5184,84 +5149,91 @@ Array [
         </div>
     </div>
     <div
-        className="c6"
+        className="c8"
     >
         <form
             onChange={[Function]}
         >
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="enabled"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <label
-                        className="c9"
+                        className="c11 c12"
                         htmlFor="s"
                     >
                         Enable Firewall
                     </label>
                     <div
-                        className="c10"
+                        className="c13"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            disabled={false}
-                            id="s"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            disabled={false}
-                            htmlFor="s"
-                            id="s"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            disabled={false}
-                            htmlFor="s"
-                            id="s"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                disabled={false}
+                                id="s"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                disabled={false}
+                                htmlFor="s"
+                                id="s"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                disabled={false}
+                                htmlFor="s"
+                                id="s"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c13 c2"
+        className="c17 c3"
         height="0.0625rem"
     />
 </div>,
-  .c1 {
+  .c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
 }
 
-.c6 {
-  margin-bottom: 2.625rem;
+.c8 {
+  margin-bottom: 1.875rem;
 }
 
-.c5 {
+.c13 {
+  margin-left: 0.75rem;
+}
+
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c9 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -5269,23 +5241,14 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5304,7 +5267,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -5314,13 +5277,18 @@ Array [
   display: block;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c17 {
+  background-color: rgb(216,216,216);
+}
+
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5344,22 +5312,25 @@ Array [
   align-items: center;
 }
 
-.c7 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c10 {
+.c11 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c14 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -5372,27 +5343,27 @@ Array [
   align-items: center;
 }
 
-.c11 {
+.c15 {
   display: none;
 }
 
-.c11:checked + label {
+.c15:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c11:checked + label:after {
+.c15:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c11:checked + label:active {
+.c15:checked + label:active {
   box-shadow: none;
 }
 
-.c12 {
+.c16 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -5409,27 +5380,26 @@ Array [
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
 }
 
-.c12::selection {
+.c16::selection {
   background: none;
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c12:hover {
+.c16:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c12:hover:after {
+.c16:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c12:after,
-.c12:before {
+.c16:after,
+.c16:before {
   position: relative;
   display: block;
   content: '';
@@ -5437,7 +5407,7 @@ Array [
   height: 100%;
 }
 
-.c12:after {
+.c16:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -5449,29 +5419,51 @@ Array [
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c12:before {
+.c16:before {
   display: none;
 }
 
+.c6 {
+  margin: 0;
+}
+
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
   }
 }
 
@@ -5482,41 +5474,23 @@ Array [
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1"
+        className="c2"
     >
         <div
-            className="c2"
+            className="c3"
         >
             <div
-                className="c3"
+                className="c4"
             >
                 <div
-                    className="c4"
+                    className="c5"
                 >
                     <p
-                        className="c5"
+                        className="c6 c7"
                     >
                         Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                          
@@ -5533,125 +5507,136 @@ Array [
         </div>
     </div>
     <div
-        className="c6"
+        className="c8"
     >
         <form
             onChange={[Function]}
         >
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="enabled"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <label
-                        className="c9"
+                        className="c11 c12"
                         htmlFor="t"
                     >
                         Enable Firewall
                     </label>
                     <div
-                        className="c10"
+                        className="c13"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            disabled={false}
-                            id="t"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            disabled={false}
-                            htmlFor="t"
-                            id="t"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            disabled={false}
-                            htmlFor="t"
-                            id="t"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                disabled={false}
+                                id="t"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                disabled={false}
+                                htmlFor="t"
+                                id="t"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                disabled={false}
+                                htmlFor="t"
+                                id="t"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c13 c2"
+        className="c17 c3"
         height="0.0625rem"
     />
 </div>,
-  .c1 {
+  .c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
 }
 
-.c6 {
-  margin-bottom: 2.625rem;
+.c8 {
+  margin-bottom: 1.875rem;
 }
 
-.c18 {
-  margin-bottom: 0.75rem;
-}
-
-.c14 {
-  margin-top: 1.5rem;
-}
-
-.c15 {
-  margin-top: 3rem;
-}
-
-.c17 {
-  margin-top: 1.125rem;
+.c13 {
+  margin-left: 0.75rem;
 }
 
 .c23 {
+  margin-bottom: 0.75rem;
+}
+
+.c18 {
+  margin-top: 1.875rem;
+}
+
+.c19 {
+  margin-right: 0.75rem;
+}
+
+.c20 {
+  margin-top: undefined;
+}
+
+.c22 {
+  margin-top: 1.125rem;
+}
+
+.c28 {
   margin-right: 0.1875rem;
 }
 
-.c26 {
+.c31 {
   margin-top: 0.1875rem;
   margin-bottom: 0.1875rem;
 }
 
-.c27 {
+.c32 {
   margin-left: 0.1875rem;
 }
 
-.c29 {
+.c34 {
   margin-right: 0rem;
   margin-bottom: 0rem;
 }
 
-.c20 {
-  padding-top: 0.5625rem;
+.c25 {
+  padding-top: undefined;
   padding-right: 1.125rem;
-  padding-bottom: 0.5625rem;
+  padding-bottom: undefined;
   padding-left: 1.125rem;
 }
 
-.c5 {
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c9 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -5659,23 +5644,14 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5694,7 +5670,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -5702,64 +5678,54 @@ Array [
   padding-right: 0.625rem;
   padding-left: 0.625rem;
   display: block;
+}
+
+.c26 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c37 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
 }
 
 .c21 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c32 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c16 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c25 {
+.c30 {
   color: rgb(73,73,73);
   font-weight: 700;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c25 + p,
-.c25 + small,
-.c25 + h1,
-.c25 + h2,
-.c25 + label,
-.c25 + h3,
-.c25 + h4,
-.c25 + h5,
-.c25 + div,
-.c25 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c13 {
+.c17 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5783,7 +5749,7 @@ Array [
   align-items: center;
 }
 
-.c22 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5819,7 +5785,7 @@ Array [
   flex-basis: 100%;
 }
 
-.c24 {
+.c29 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -5836,7 +5802,7 @@ Array [
   display: block;
 }
 
-.c19 {
+.c24 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5862,22 +5828,25 @@ Array [
   cursor: default;
 }
 
-.c7 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c10 {
+.c11 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c14 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -5890,27 +5859,27 @@ Array [
   align-items: center;
 }
 
-.c11 {
+.c15 {
   display: none;
 }
 
-.c11:checked + label {
+.c15:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c11:checked + label:after {
+.c15:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c11:checked + label:active {
+.c15:checked + label:active {
   box-shadow: none;
 }
 
-.c12 {
+.c16 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -5927,27 +5896,26 @@ Array [
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
 }
 
-.c12::selection {
+.c16::selection {
   background: none;
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c12:hover {
+.c16:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c12:hover:after {
+.c16:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c12:after,
-.c12:before {
+.c16:after,
+.c16:before {
   position: relative;
   display: block;
   content: '';
@@ -5955,7 +5923,7 @@ Array [
   height: 100%;
 }
 
-.c12:after {
+.c16:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -5967,15 +5935,15 @@ Array [
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c12:before {
+.c16:before {
   display: none;
 }
 
-.c30 {
+.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5990,7 +5958,7 @@ Array [
   flex-grow: 1;
 }
 
-.c31 {
+.c36 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -6011,8 +5979,7 @@ Array [
   align-items: center;
 }
 
-.c28 {
-  margin: 0;
+.c33 {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6024,21 +5991,61 @@ Array [
   flex-wrap: wrap;
 }
 
+.c6 {
+  margin: 0;
+}
+
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c26 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c37 {
+    -webkit-flex-basis: 16.666666666666668%;
+    -ms-flex-preferred-size: 16.666666666666668%;
+    flex-basis: 16.666666666666668%;
+    max-width: 16.666666666666668%;
   }
 }
 
@@ -6049,59 +6056,23 @@ Array [
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c21 {
-    -webkit-flex-basis: 25%;
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%;
-    max-width: 25%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c32 {
-    -webkit-flex-basis: 16.666666666666668%;
-    -ms-flex-preferred-size: 16.666666666666668%;
-    flex-basis: 16.666666666666668%;
-    max-width: 16.666666666666668%;
-  }
-}
-
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1"
+        className="c2"
     >
         <div
-            className="c2"
+            className="c3"
         >
             <div
-                className="c3"
+                className="c4"
             >
                 <div
-                    className="c4"
+                    className="c5"
                 >
                     <p
-                        className="c5"
+                        className="c6 c7"
                     >
                         Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                          
@@ -6118,146 +6089,159 @@ Array [
         </div>
     </div>
     <div
-        className="c6"
+        className="c8"
     >
         <form
             onChange={[Function]}
         >
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="enabled"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <label
-                        className="c9"
+                        className="c11 c12"
                         htmlFor="u"
                     >
                         Enable Firewall
                     </label>
                     <div
-                        className="c10"
+                        className="c13"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            disabled={false}
-                            id="u"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            disabled={false}
-                            htmlFor="u"
-                            id="u"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            disabled={false}
-                            htmlFor="u"
-                            id="u"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                disabled={false}
+                                id="u"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                disabled={false}
+                                htmlFor="u"
+                                id="u"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                disabled={false}
+                                htmlFor="u"
+                                id="u"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c13 c2"
+        className="c17 c3"
         height="0.0625rem"
     />
     <div
-        className="c14"
+        className="c18"
     >
         <form>
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="inactive"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <div
-                        className="c10"
+                        className="c19"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            id="v"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            htmlFor="v"
-                            id="v"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            htmlFor="v"
-                            id="v"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                            Show inactive rules
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                id="v"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                htmlFor="v"
+                                id="v"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                htmlFor="v"
+                                id="v"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
+                    <label
+                        className="c11 c12"
+                        htmlFor="v"
+                    >
+                        Show inactive rules
+                    </label>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c15"
+        className="c20"
     >
         <h3
-            className="c16"
+            className="c21"
         >
             Firewall rules from instance tags
         </h3>
         <div
-            className="c17"
+            className="c22"
         >
             <div
-                className="c18"
+                className="c23"
             >
                 <div
-                    className="c19"
+                    className="c24"
                     disabled={true}
                     name="card"
                 >
                     <div
-                        className="c20"
+                        className="c25"
                     >
                         <div
-                            className="c2"
+                            className="c3"
                         >
                             <div
-                                className="c21"
+                                className="c26"
                             >
                                 <div
-                                    className="c22"
+                                    className="c27"
                                 >
                                     <div
-                                        className="c23"
+                                        className="c28"
                                     >
                                         <div
-                                            className="c24"
+                                            className="c29"
                                         >
                                             <strong
-                                                className="c25"
+                                                className="c30"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -6269,13 +6253,13 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c8"
+                                        className="c10"
                                     >
                                         <div
-                                            className="c26"
+                                            className="c31"
                                         >
                                             <p
-                                                className="c5"
+                                                className="c7"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -6289,19 +6273,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c21"
+                                className="c26"
                             >
                                 <div
-                                    className="c22"
+                                    className="c27"
                                 >
                                     <div
-                                        className="c23"
+                                        className="c28"
                                     >
                                         <div
-                                            className="c24"
+                                            className="c29"
                                         >
                                             <strong
-                                                className="c25"
+                                                className="c30"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -6313,22 +6297,22 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c8"
+                                        className="c10"
                                     >
                                         <div
-                                            className="c27"
+                                            className="c32"
                                         >
                                             <ul
-                                                className="c28"
+                                                className="c33"
                                             >
                                                 <div
-                                                    className="c29"
+                                                    className="c34"
                                                 >
                                                     <div
-                                                        className="c30"
+                                                        className="c35"
                                                     >
                                                         <li
-                                                            className="c31"
+                                                            className="c36"
                                                             onClick={undefined}
                                                         >
                                                             wat: 
@@ -6341,19 +6325,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c32"
+                                className="c37"
                             >
                                 <div
-                                    className="c22"
+                                    className="c27"
                                 >
                                     <div
-                                        className="c23"
+                                        className="c28"
                                     >
                                         <div
-                                            className="c24"
+                                            className="c29"
                                         >
                                             <strong
-                                                className="c25"
+                                                className="c30"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -6365,13 +6349,13 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c8"
+                                        className="c10"
                                     >
                                         <div
-                                            className="c26"
+                                            className="c31"
                                         >
                                             <p
-                                                className="c5"
+                                                className="c7"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -6385,19 +6369,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c32"
+                                className="c37"
                             >
                                 <div
-                                    className="c22"
+                                    className="c27"
                                 >
                                     <div
-                                        className="c23"
+                                        className="c28"
                                     >
                                         <div
-                                            className="c24"
+                                            className="c29"
                                         >
                                             <strong
-                                                className="c25"
+                                                className="c30"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -6409,13 +6393,13 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c8"
+                                        className="c10"
                                     >
                                         <div
-                                            className="c26"
+                                            className="c31"
                                         >
                                             <p
-                                                className="c5"
+                                                className="c7"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -6429,19 +6413,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c32"
+                                className="c37"
                             >
                                 <div
-                                    className="c22"
+                                    className="c27"
                                 >
                                     <div
-                                        className="c23"
+                                        className="c28"
                                     >
                                         <div
-                                            className="c24"
+                                            className="c29"
                                         >
                                             <strong
-                                                className="c25"
+                                                className="c30"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -6453,13 +6437,13 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c8"
+                                        className="c10"
                                     >
                                         <div
-                                            className="c26"
+                                            className="c31"
                                         >
                                             <p
-                                                className="c5"
+                                                className="c7"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -6484,26 +6468,29 @@ Array [
 
 exports[`renders <Firewall tagRules /> without throwing 2`] = `
 Array [
-  .c1 {
+  .c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
 }
 
-.c6 {
-  margin-bottom: 2.625rem;
+.c8 {
+  margin-bottom: 1.875rem;
 }
 
-.c5 {
+.c13 {
+  margin-left: 0.75rem;
+}
+
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c9 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -6511,23 +6498,14 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6546,7 +6524,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6556,13 +6534,18 @@ Array [
   display: block;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c17 {
+  background-color: rgb(216,216,216);
+}
+
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6586,22 +6569,25 @@ Array [
   align-items: center;
 }
 
-.c7 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c10 {
+.c11 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c14 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -6614,27 +6600,27 @@ Array [
   align-items: center;
 }
 
-.c11 {
+.c15 {
   display: none;
 }
 
-.c11:checked + label {
+.c15:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c11:checked + label:after {
+.c15:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c11:checked + label:active {
+.c15:checked + label:active {
   box-shadow: none;
 }
 
-.c12 {
+.c16 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -6651,27 +6637,26 @@ Array [
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
 }
 
-.c12::selection {
+.c16::selection {
   background: none;
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c12:hover {
+.c16:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c12:hover:after {
+.c16:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c12:after,
-.c12:before {
+.c16:after,
+.c16:before {
   position: relative;
   display: block;
   content: '';
@@ -6679,7 +6664,7 @@ Array [
   height: 100%;
 }
 
-.c12:after {
+.c16:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -6691,29 +6676,51 @@ Array [
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c12:before {
+.c16:before {
   display: none;
 }
 
+.c6 {
+  margin: 0;
+}
+
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
   }
 }
 
@@ -6724,41 +6731,23 @@ Array [
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1"
+        className="c2"
     >
         <div
-            className="c2"
+            className="c3"
         >
             <div
-                className="c3"
+                className="c4"
             >
                 <div
-                    className="c4"
+                    className="c5"
                 >
                     <p
-                        className="c5"
+                        className="c6 c7"
                     >
                         Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                          
@@ -6775,84 +6764,91 @@ Array [
         </div>
     </div>
     <div
-        className="c6"
+        className="c8"
     >
         <form
             onChange={[Function]}
         >
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="enabled"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <label
-                        className="c9"
+                        className="c11 c12"
                         htmlFor="w"
                     >
                         Enable Firewall
                     </label>
                     <div
-                        className="c10"
+                        className="c13"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            disabled={false}
-                            id="w"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            disabled={false}
-                            htmlFor="w"
-                            id="w"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            disabled={false}
-                            htmlFor="w"
-                            id="w"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                disabled={false}
+                                id="w"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                disabled={false}
+                                htmlFor="w"
+                                id="w"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                disabled={false}
+                                htmlFor="w"
+                                id="w"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c13 c2"
+        className="c17 c3"
         height="0.0625rem"
     />
 </div>,
-  .c1 {
+  .c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
 }
 
-.c6 {
-  margin-bottom: 2.625rem;
+.c8 {
+  margin-bottom: 1.875rem;
 }
 
-.c5 {
+.c13 {
+  margin-left: 0.75rem;
+}
+
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c9 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -6860,23 +6856,14 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6895,7 +6882,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6905,13 +6892,18 @@ Array [
   display: block;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c17 {
+  background-color: rgb(216,216,216);
+}
+
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6935,22 +6927,25 @@ Array [
   align-items: center;
 }
 
-.c7 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c10 {
+.c11 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c14 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -6963,27 +6958,27 @@ Array [
   align-items: center;
 }
 
-.c11 {
+.c15 {
   display: none;
 }
 
-.c11:checked + label {
+.c15:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c11:checked + label:after {
+.c15:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c11:checked + label:active {
+.c15:checked + label:active {
   box-shadow: none;
 }
 
-.c12 {
+.c16 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -7000,27 +6995,26 @@ Array [
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
 }
 
-.c12::selection {
+.c16::selection {
   background: none;
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c12:hover {
+.c16:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c12:hover:after {
+.c16:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c12:after,
-.c12:before {
+.c16:after,
+.c16:before {
   position: relative;
   display: block;
   content: '';
@@ -7028,7 +7022,7 @@ Array [
   height: 100%;
 }
 
-.c12:after {
+.c16:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -7040,29 +7034,51 @@ Array [
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c12:before {
+.c16:before {
   display: none;
 }
 
+.c6 {
+  margin: 0;
+}
+
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
   }
 }
 
@@ -7073,41 +7089,23 @@ Array [
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1"
+        className="c2"
     >
         <div
-            className="c2"
+            className="c3"
         >
             <div
-                className="c3"
+                className="c4"
             >
                 <div
-                    className="c4"
+                    className="c5"
                 >
                     <p
-                        className="c5"
+                        className="c6 c7"
                     >
                         Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                          
@@ -7124,125 +7122,136 @@ Array [
         </div>
     </div>
     <div
-        className="c6"
+        className="c8"
     >
         <form
             onChange={[Function]}
         >
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="enabled"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <label
-                        className="c9"
+                        className="c11 c12"
                         htmlFor="x"
                     >
                         Enable Firewall
                     </label>
                     <div
-                        className="c10"
+                        className="c13"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            disabled={false}
-                            id="x"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            disabled={false}
-                            htmlFor="x"
-                            id="x"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            disabled={false}
-                            htmlFor="x"
-                            id="x"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                disabled={false}
+                                id="x"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                disabled={false}
+                                htmlFor="x"
+                                id="x"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                disabled={false}
+                                htmlFor="x"
+                                id="x"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c13 c2"
+        className="c17 c3"
         height="0.0625rem"
     />
 </div>,
-  .c1 {
+  .c2 {
   margin-bottom: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-bottom: 1.125rem;
 }
 
-.c6 {
-  margin-bottom: 2.625rem;
+.c8 {
+  margin-bottom: 1.875rem;
 }
 
-.c15 {
-  margin-top: 1.875rem;
+.c13 {
+  margin-left: 0.75rem;
 }
 
-.c18 {
-  margin-bottom: 0.75rem;
-}
-
-.c14 {
-  margin-top: 1.5rem;
-}
-
-.c17 {
-  margin-top: 1.125rem;
+.c20 {
+  margin-top: 3rem;
 }
 
 .c23 {
+  margin-bottom: 0.75rem;
+}
+
+.c18 {
+  margin-top: 1.875rem;
+}
+
+.c19 {
+  margin-right: 0.75rem;
+}
+
+.c22 {
+  margin-top: 1.125rem;
+}
+
+.c28 {
   margin-right: 0.1875rem;
 }
 
-.c26 {
+.c31 {
   margin-top: 0.1875rem;
   margin-bottom: 0.1875rem;
 }
 
-.c27 {
+.c32 {
   margin-left: 0.1875rem;
 }
 
-.c29 {
+.c34 {
   margin-right: 0rem;
   margin-bottom: 0rem;
 }
 
-.c20 {
-  padding-top: 0.5625rem;
+.c25 {
+  padding-top: undefined;
   padding-right: 1.125rem;
-  padding-bottom: 0.5625rem;
+  padding-bottom: undefined;
   padding-left: 1.125rem;
 }
 
-.c5 {
+.c7 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c9 {
+.c12 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -7250,23 +7259,14 @@ Array [
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c2 {
+.c3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7285,7 +7285,7 @@ Array [
   margin-left: -0.625rem;
 }
 
-.c3 {
+.c4 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -7293,64 +7293,54 @@ Array [
   padding-right: 0.625rem;
   padding-left: 0.625rem;
   display: block;
+}
+
+.c26 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c37 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
 }
 
 .c21 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c32 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c16 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c25 {
+.c30 {
   color: rgb(73,73,73);
   font-weight: 700;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c25 + p,
-.c25 + small,
-.c25 + h1,
-.c25 + h2,
-.c25 + label,
-.c25 + h3,
-.c25 + h4,
-.c25 + h5,
-.c25 + div,
-.c25 + span {
-  padding-bottom: 2.25rem;
-}
-
-.c13 {
+.c17 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
-.c8 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7374,7 +7364,7 @@ Array [
   align-items: center;
 }
 
-.c22 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7410,7 +7400,7 @@ Array [
   flex-basis: 100%;
 }
 
-.c24 {
+.c29 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -7427,7 +7417,7 @@ Array [
   display: block;
 }
 
-.c19 {
+.c24 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7453,22 +7443,25 @@ Array [
   cursor: default;
 }
 
-.c7 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c10 {
+.c11 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c14 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -7481,27 +7474,27 @@ Array [
   align-items: center;
 }
 
-.c11 {
+.c15 {
   display: none;
 }
 
-.c11:checked + label {
+.c15:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c11:checked + label:after {
+.c15:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c11:checked + label:active {
+.c15:checked + label:active {
   box-shadow: none;
 }
 
-.c12 {
+.c16 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -7518,27 +7511,26 @@ Array [
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 0.0625rem solid rgb(216,216,216);
-  margin-right: 0.375rem;
 }
 
-.c12::selection {
+.c16::selection {
   background: none;
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c12:hover {
+.c16:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c12:hover:after {
+.c16:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c12:after,
-.c12:before {
+.c16:after,
+.c16:before {
   position: relative;
   display: block;
   content: '';
@@ -7546,7 +7538,7 @@ Array [
   height: 100%;
 }
 
-.c12:after {
+.c16:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -7558,15 +7550,15 @@ Array [
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c12:active {
+.c16:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c12:before {
+.c16:before {
   display: none;
 }
 
-.c30 {
+.c35 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7581,7 +7573,7 @@ Array [
   flex-grow: 1;
 }
 
-.c31 {
+.c36 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -7602,8 +7594,7 @@ Array [
   align-items: center;
 }
 
-.c28 {
-  margin: 0;
+.c33 {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7615,21 +7606,61 @@ Array [
   flex-wrap: wrap;
 }
 
+.c6 {
+  margin: 0;
+}
+
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c4 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c4 {
+    -webkit-flex-basis: 66.66666666666667%;
+    -ms-flex-preferred-size: 66.66666666666667%;
+    flex-basis: 66.66666666666667%;
+    max-width: 66.66666666666667%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c26 {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c37 {
+    -webkit-flex-basis: 16.666666666666668%;
+    -ms-flex-preferred-size: 16.666666666666668%;
+    flex-basis: 16.666666666666668%;
+    max-width: 16.666666666666668%;
   }
 }
 
@@ -7640,59 +7671,23 @@ Array [
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c3 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c3 {
-    -webkit-flex-basis: 66.66666666666667%;
-    -ms-flex-preferred-size: 66.66666666666667%;
-    flex-basis: 66.66666666666667%;
-    max-width: 66.66666666666667%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c21 {
-    -webkit-flex-basis: 25%;
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%;
-    max-width: 25%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c32 {
-    -webkit-flex-basis: 16.666666666666668%;
-    -ms-flex-preferred-size: 16.666666666666668%;
-    flex-basis: 16.666666666666668%;
-    max-width: 16.666666666666668%;
-  }
-}
-
 <div
-    className="c0"
+    className="c0 c1"
 >
     <div
-        className="c1"
+        className="c2"
     >
         <div
-            className="c2"
+            className="c3"
         >
             <div
-                className="c3"
+                className="c4"
             >
                 <div
-                    className="c4"
+                    className="c5"
                 >
                     <p
-                        className="c5"
+                        className="c6 c7"
                     >
                         Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                          
@@ -7709,146 +7704,159 @@ Array [
         </div>
     </div>
     <div
-        className="c6"
+        className="c8"
     >
         <form
             onChange={[Function]}
         >
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="enabled"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <label
-                        className="c9"
+                        className="c11 c12"
                         htmlFor="y"
                     >
                         Enable Firewall
                     </label>
                     <div
-                        className="c10"
+                        className="c13"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            disabled={false}
-                            id="y"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            disabled={false}
-                            htmlFor="y"
-                            id="y"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            disabled={false}
-                            htmlFor="y"
-                            id="y"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                disabled={false}
+                                id="y"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                disabled={false}
+                                htmlFor="y"
+                                id="y"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                disabled={false}
+                                htmlFor="y"
+                                id="y"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c13 c2"
+        className="c17 c3"
         height="0.0625rem"
     />
     <div
-        className="c14"
+        className="c18"
     >
         <form>
             <div
-                className="baseline-jVaZNU kXgQxt c7"
+                className="c9"
                 name="inactive"
                 role="group"
                 style={undefined}
                 type="checkbox"
             >
                 <div
-                    className="c8"
+                    className="c10"
                 >
                     <div
-                        className="c10"
+                        className="c19"
                     >
-                        <input
-                            checked={undefined}
-                            className="c11"
-                            id="z"
-                            onBlur={undefined}
-                            type="checkbox"
-                        />
-                        <label
-                            className="c12"
-                            htmlFor="z"
-                            id="z"
-                            onBlur={undefined}
-                        />
-                        <label
-                            className="c9"
-                            htmlFor="z"
-                            id="z"
-                            onBlur={undefined}
+                        <div
+                            className="c14"
                         >
-                             
-                            Show inactive rules
-                        </label>
+                            <input
+                                checked={undefined}
+                                className="c15"
+                                id="z"
+                                onBlur={undefined}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c16"
+                                htmlFor="z"
+                                id="z"
+                                onBlur={undefined}
+                            />
+                            <label
+                                className="c11 c12"
+                                htmlFor="z"
+                                id="z"
+                                onBlur={undefined}
+                            >
+                                 
+                            </label>
+                        </div>
                     </div>
+                    <label
+                        className="c11 c12"
+                        htmlFor="z"
+                    >
+                        Show inactive rules
+                    </label>
                 </div>
             </div>
         </form>
     </div>
     <div
-        className="c15"
+        className="c20"
     >
         <h3
-            className="c16"
+            className="c21"
         >
             Default firewall rules
         </h3>
         <div
-            className="c17"
+            className="c22"
         >
             <div
-                className="c18"
+                className="c23"
             >
                 <div
-                    className="c19"
+                    className="c24"
                     disabled={true}
                     name="card"
                 >
                     <div
-                        className="c20"
+                        className="c25"
                     >
                         <div
-                            className="c2"
+                            className="c3"
                         >
                             <div
-                                className="c21"
+                                className="c26"
                             >
                                 <div
-                                    className="c22"
+                                    className="c27"
                                 >
                                     <div
-                                        className="c23"
+                                        className="c28"
                                     >
                                         <div
-                                            className="c24"
+                                            className="c29"
                                         >
                                             <strong
-                                                className="c25"
+                                                className="c30"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -7860,13 +7868,13 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c8"
+                                        className="c10"
                                     >
                                         <div
-                                            className="c26"
+                                            className="c31"
                                         >
                                             <p
-                                                className="c5"
+                                                className="c7"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -7880,19 +7888,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c21"
+                                className="c26"
                             >
                                 <div
-                                    className="c22"
+                                    className="c27"
                                 >
                                     <div
-                                        className="c23"
+                                        className="c28"
                                     >
                                         <div
-                                            className="c24"
+                                            className="c29"
                                         >
                                             <strong
-                                                className="c25"
+                                                className="c30"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -7904,22 +7912,22 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c8"
+                                        className="c10"
                                     >
                                         <div
-                                            className="c27"
+                                            className="c32"
                                         >
                                             <ul
-                                                className="c28"
+                                                className="c33"
                                             >
                                                 <div
-                                                    className="c29"
+                                                    className="c34"
                                                 >
                                                     <div
-                                                        className="c30"
+                                                        className="c35"
                                                     >
                                                         <li
-                                                            className="c31"
+                                                            className="c36"
                                                             onClick={undefined}
                                                         >
                                                             wat: 
@@ -7932,19 +7940,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c32"
+                                className="c37"
                             >
                                 <div
-                                    className="c22"
+                                    className="c27"
                                 >
                                     <div
-                                        className="c23"
+                                        className="c28"
                                     >
                                         <div
-                                            className="c24"
+                                            className="c29"
                                         >
                                             <strong
-                                                className="c25"
+                                                className="c30"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -7956,13 +7964,13 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c8"
+                                        className="c10"
                                     >
                                         <div
-                                            className="c26"
+                                            className="c31"
                                         >
                                             <p
-                                                className="c5"
+                                                className="c7"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -7976,19 +7984,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c32"
+                                className="c37"
                             >
                                 <div
-                                    className="c22"
+                                    className="c27"
                                 >
                                     <div
-                                        className="c23"
+                                        className="c28"
                                     >
                                         <div
-                                            className="c24"
+                                            className="c29"
                                         >
                                             <strong
-                                                className="c25"
+                                                className="c30"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -8000,13 +8008,13 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c8"
+                                        className="c10"
                                     >
                                         <div
-                                            className="c26"
+                                            className="c31"
                                         >
                                             <p
-                                                className="c5"
+                                                className="c7"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -8020,19 +8028,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c32"
+                                className="c37"
                             >
                                 <div
-                                    className="c22"
+                                    className="c27"
                                 >
                                     <div
-                                        className="c23"
+                                        className="c28"
                                     >
                                         <div
-                                            className="c24"
+                                            className="c29"
                                         >
                                             <strong
-                                                className="c25"
+                                                className="c30"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -8044,13 +8052,13 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c8"
+                                        className="c10"
                                     >
                                         <div
-                                            className="c26"
+                                            className="c31"
                                         >
                                             <p
-                                                className="c5"
+                                                className="c7"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",

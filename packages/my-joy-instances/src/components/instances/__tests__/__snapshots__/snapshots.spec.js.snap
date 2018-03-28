@@ -2,88 +2,73 @@
 
 exports[`renders <Actions /> without throwing 1`] = `
 Array [
-  .c9 {
+  .c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
   opacity: 1;
 }
 
-.c9:selected + label::after {
+.c7:selected + label::after {
   opacity: 1;
 }
 
-.c9:checked + label {
+.c7:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c9:selected + label {
+.c7:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c9:disabled + label {
+.c7:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
-}
-
-.c15 {
-  padding: 0rem;
-}
-
-.c12 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c10 {
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -101,7 +86,7 @@ Array [
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -118,7 +103,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -127,7 +112,7 @@ Array [
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -139,19 +124,16 @@ Array [
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -180,11 +162,11 @@ Array [
   border-top-right-radius: 0.25rem;
 }
 
-.c17 {
+.c14 {
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -203,15 +185,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -235,15 +217,15 @@ Array [
   font-weight: 600;
 }
 
-.c11:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c11:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
-.c13 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -267,15 +249,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c13:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
-.c14 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -299,15 +281,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c14:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c14:not(:last-child) {
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
-.c16 {
+.c13 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -324,11 +306,11 @@ Array [
   border-bottom-width: 0;
 }
 
-.c16:not(:first-child) {
+.c13:not(:first-child) {
   border-left-width: 0;
 }
 
-.c16:not(:last-child) {
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -353,7 +335,7 @@ Array [
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c14 {
+  .c12 {
     width: 10rem;
     display: table-cell;
   }
@@ -375,22 +357,22 @@ Array [
             selected={undefined}
         >
             <th
-                className="c3 c4"
+                className="c3"
                 disabled={undefined}
                 name="th"
                 selected={undefined}
             >
                 <div
-                    className="c5 baseline-jVaZNU c5 c6"
+                    className="c4"
                     role="group"
                     style={undefined}
                 >
                     <li
-                        className="c7"
+                        className="c5"
                     >
                         <div
                             checked={false}
-                            className="c8"
+                            className="c6"
                             disabled={false}
                             id="t"
                             onBlur={undefined}
@@ -399,7 +381,7 @@ Array [
                         >
                             <input
                                 checked={false}
-                                className="c9"
+                                className="c7 c8"
                                 disabled={false}
                                 id="u"
                                 onBlur={undefined}
@@ -407,7 +389,7 @@ Array [
                                 type="checkbox"
                             />
                             <label
-                                className="c10"
+                                className="c9"
                                 htmlFor="u"
                             />
                         </div>
@@ -415,7 +397,7 @@ Array [
                 </div>
             </th>
             <th
-                className="c11"
+                className="c10"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -425,9 +407,7 @@ Array [
                     Name 
                 </span>
                 <svg
-                    className="c12"
                     height="6"
-                    innerRef={undefined}
                     marginBottom="0.125rem"
                     marginLeft="0.5625rem"
                     style={
@@ -446,7 +426,7 @@ Array [
                 </svg>
             </th>
             <th
-                className="c13"
+                className="c11"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -457,7 +437,7 @@ Array [
                 </span>
             </th>
             <th
-                className="c14"
+                className="c12"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -468,7 +448,7 @@ Array [
                 </span>
             </th>
             <th
-                className="c15 c16"
+                className="c13"
                 disabled={undefined}
                 name="th"
                 selected={undefined}
@@ -476,7 +456,7 @@ Array [
         </tr>
     </thead>
     <tbody
-        className="c17"
+        className="c14"
         disabled={undefined}
         name="tbody"
         selected={undefined}
@@ -487,20 +467,6 @@ Array [
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c6 + p,
-.c6 + small,
-.c6 + h1,
-.c6 + h2,
-.c6 + label,
-.c6 + h3,
-.c6 + h4,
-.c6 + h5,
-.c6 + div,
-.c6 + span {
-  margin-top: 0.75rem;
 }
 
 .c4 {
@@ -508,7 +474,7 @@ Array [
 }
 
 .c2 {
-  padding: 2.25rem;
+  padding: 8rem;
 }
 
 .c3 {
@@ -823,83 +789,47 @@ Array [
 `;
 
 exports[`renders <Item /> without throwing 1`] = `
-.c7 {
+.c6 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c7[type='checkbox'],
-.c7[type='radio'] {
+.c6[type='checkbox'],
+.c6[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c7[type='number']::-webkit-inner-spin-button,
-.c7[type='number']::-webkit-outer-spin-button {
+.c6[type='number']::-webkit-inner-spin-button,
+.c6[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c7[type='search'] {
+.c6[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c7[type='search']::-webkit-search-cancel-button,
-.c7[type='search']::-webkit-search-decoration {
+.c6[type='search']::-webkit-search-cancel-button,
+.c6[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c7::-webkit-file-upload-button {
+.c6::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c7:checked + label::after {
-  opacity: 1;
-}
-
-.c7:selected + label::after {
-  opacity: 1;
-}
-
-.c7:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c7:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c7:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
-.c1 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c3 {
-  padding-top: 0.25rem;
-}
-
-.c11 {
-  padding: 0rem;
-}
-
-.c9 {
+.c8 {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -908,14 +838,14 @@ exports[`renders <Item /> without throwing 1`] = `
   margin-left: 0rem;
 }
 
-.c13 {
+.c11 {
   cursor: pointer;
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -926,7 +856,33 @@ exports[`renders <Item /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 {
+.c5 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c5:checked + label::after {
+  opacity: 1;
+}
+
+.c5:selected + label::after {
+  opacity: 1;
+}
+
+.c5:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c5:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c5:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c7 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -944,7 +900,7 @@ exports[`renders <Item /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c8::after {
+.c7::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -961,7 +917,7 @@ exports[`renders <Item /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c6 {
+.c4 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -970,7 +926,7 @@ exports[`renders <Item /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c5 {
+.c3 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -982,26 +938,23 @@ exports[`renders <Item /> without throwing 1`] = `
   align-items: center;
 }
 
-.c5 label {
+.c3 label {
   font-weight: 400;
 }
 
-.c4 {
+.c2 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c2 {
+.c1 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1015,15 +968,15 @@ exports[`renders <Item /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c2:not(:first-child) {
+.c1:not(:first-child) {
   border-left-width: 0;
 }
 
-.c2:not(:last-child) {
+.c1:not(:last-child) {
   border-right-width: 0;
 }
 
-.c10 {
+.c9 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1039,15 +992,15 @@ exports[`renders <Item /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c10:not(:first-child) {
+.c9:not(:first-child) {
   border-left-width: 0;
 }
 
-.c10:not(:last-child) {
+.c9:not(:last-child) {
   border-right-width: 0;
 }
 
-.c12 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1060,11 +1013,11 @@ exports[`renders <Item /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c12:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c12:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1085,7 +1038,7 @@ exports[`renders <Item /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c10 {
+  .c9 {
     width: 10rem;
     display: table-cell;
   }
@@ -1098,23 +1051,23 @@ exports[`renders <Item /> without throwing 1`] = `
   selected={undefined}
 >
   <td
-    className="c1 c2"
+    className="c1"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     <div
-      className="c3 baseline-jVaZNU c3 c4"
+      className="c2"
       name={undefined}
       role="group"
       style={undefined}
     >
       <li
-        className="c5"
+        className="c3"
       >
         <div
           checked={false}
-          className="c6"
+          className="c4"
           disabled={false}
           id="l"
           onBlur={undefined}
@@ -1122,14 +1075,14 @@ exports[`renders <Item /> without throwing 1`] = `
         >
           <input
             checked={false}
-            className="c7"
+            className="c5 c6"
             disabled={false}
             id="m"
             onBlur={undefined}
             type="checkbox"
           />
           <label
-            className="c8"
+            className="c7"
             htmlFor="m"
           />
         </div>
@@ -1137,19 +1090,19 @@ exports[`renders <Item /> without throwing 1`] = `
     </div>
   </td>
   <td
-    className="c2"
+    className="c1"
     disabled={undefined}
     name="td"
     selected={undefined}
   />
   <td
-    className="c2"
+    className="c1"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     <span
-      className="c9"
+      className="c8"
       color={undefined}
       size="0.75rem"
     />
@@ -1157,7 +1110,7 @@ exports[`renders <Item /> without throwing 1`] = `
     
   </td>
   <td
-    className="c10"
+    className="c9"
     disabled={undefined}
     name="td"
     selected={undefined}
@@ -1165,14 +1118,14 @@ exports[`renders <Item /> without throwing 1`] = `
     almost NaN years
   </td>
   <td
-    className="c11 c12"
+    className="c10"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     <div
       box={true}
-      className="c13"
+      className="c11"
       onClick={[Function]}
       onMouseEnter={undefined}
       onMouseLeave={undefined}
@@ -1184,9 +1137,7 @@ exports[`renders <Item /> without throwing 1`] = `
       tag="div"
     >
       <svg
-        className=""
         height="16"
-        innerRef={undefined}
         style={
           Object {
             "transform": "rotate(0deg)",
@@ -1207,83 +1158,47 @@ exports[`renders <Item /> without throwing 1`] = `
 `;
 
 exports[`renders <Item {...item} /> without throwing 1`] = `
-.c7 {
+.c6 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c7[type='checkbox'],
-.c7[type='radio'] {
+.c6[type='checkbox'],
+.c6[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c7[type='number']::-webkit-inner-spin-button,
-.c7[type='number']::-webkit-outer-spin-button {
+.c6[type='number']::-webkit-inner-spin-button,
+.c6[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c7[type='search'] {
+.c6[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c7[type='search']::-webkit-search-cancel-button,
-.c7[type='search']::-webkit-search-decoration {
+.c6[type='search']::-webkit-search-cancel-button,
+.c6[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c7::-webkit-file-upload-button {
+.c6::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c7:checked + label::after {
-  opacity: 1;
-}
-
-.c7:selected + label::after {
-  opacity: 1;
-}
-
-.c7:checked + label {
-  border-color: rgb(59,70,204);
-}
-
-.c7:selected + label {
-  border-color: rgb(59,70,204);
-}
-
-.c7:disabled + label {
-  background-color: rgb(249,249,249);
-  cursor: not-allowed;
-}
-
-.c1 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c3 {
-  padding-top: 0.25rem;
-}
-
-.c11 {
-  padding: 0rem;
-}
-
-.c9 {
+.c8 {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -1292,14 +1207,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   margin-left: 0rem;
 }
 
-.c13 {
+.c11 {
   cursor: pointer;
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1310,7 +1225,33 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 {
+.c5 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c5:checked + label::after {
+  opacity: 1;
+}
+
+.c5:selected + label::after {
+  opacity: 1;
+}
+
+.c5:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c5:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c5:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c7 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -1328,7 +1269,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c8::after {
+.c7::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -1345,7 +1286,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c6 {
+.c4 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -1354,7 +1295,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c5 {
+.c3 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1366,26 +1307,23 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   align-items: center;
 }
 
-.c5 label {
+.c3 label {
   font-weight: 400;
 }
 
-.c4 {
+.c2 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c2 {
+.c1 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1399,15 +1337,15 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c2:not(:first-child) {
+.c1:not(:first-child) {
   border-left-width: 0;
 }
 
-.c2:not(:last-child) {
+.c1:not(:last-child) {
   border-right-width: 0;
 }
 
-.c10 {
+.c9 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1423,15 +1361,15 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c10:not(:first-child) {
+.c9:not(:first-child) {
   border-left-width: 0;
 }
 
-.c10:not(:last-child) {
+.c9:not(:last-child) {
   border-right-width: 0;
 }
 
-.c12 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1444,11 +1382,11 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-left-width: 0.0625rem !important;
 }
 
-.c12:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c12:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1469,7 +1407,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c10 {
+  .c9 {
     width: 10rem;
     display: table-cell;
   }
@@ -1482,23 +1420,23 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   selected={undefined}
 >
   <td
-    className="c1 c2"
+    className="c1"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     <div
-      className="c3 baseline-jVaZNU c3 c4"
+      className="c2"
       name="name"
       role="group"
       style={undefined}
     >
       <li
-        className="c5"
+        className="c3"
       >
         <div
           checked={false}
-          className="c6"
+          className="c4"
           disabled={false}
           id="n"
           onBlur={undefined}
@@ -1506,14 +1444,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         >
           <input
             checked={false}
-            className="c7"
+            className="c5 c6"
             disabled={false}
             id="o"
             onBlur={undefined}
             type="checkbox"
           />
           <label
-            className="c8"
+            className="c7"
             htmlFor="o"
           />
         </div>
@@ -1521,7 +1459,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
     </div>
   </td>
   <td
-    className="c2"
+    className="c1"
     disabled={undefined}
     name="td"
     selected={undefined}
@@ -1529,13 +1467,13 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
     name
   </td>
   <td
-    className="c2"
+    className="c1"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     <span
-      className="c9"
+      className="c8"
       color={undefined}
       size="0.75rem"
     />
@@ -1543,7 +1481,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
     Started
   </td>
   <td
-    className="c10"
+    className="c9"
     disabled={undefined}
     name="td"
     selected={undefined}
@@ -1551,14 +1489,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
     5 months
   </td>
   <td
-    className="c11 c12"
+    className="c10"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     <div
       box={true}
-      className="c13"
+      className="c11"
       onClick={[Function]}
       onMouseEnter={undefined}
       onMouseLeave={undefined}
@@ -1570,9 +1508,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
       tag="div"
     >
       <svg
-        className=""
         height="16"
-        innerRef={undefined}
         style={
           Object {
             "transform": "rotate(0deg)",
@@ -1601,37 +1537,19 @@ exports[`renders <Item mutating /> without throwing 1`] = `
 }
 
 .c6 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
 .c7 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
-.c8 {
+.c9 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  text-align: center;
-  margin-bottom: 0;
-  margin-left: 0.375rem;
 }
 
 .c4 {
@@ -1660,6 +1578,16 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
+}
+
+.c8 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
 }
 
 .c0 {
@@ -1748,14 +1676,14 @@ exports[`renders <Item mutating /> without throwing 1`] = `
               y="2"
             />
             <rect
-              className="c6"
+              className="c6 c5"
               height="6"
               width="6"
               x="11"
               y="2"
             />
             <rect
-              className="c7"
+              className="c7 c5"
               height="6"
               width="6"
               x="20"
@@ -1763,7 +1691,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
             />
           </svg>
           <p
-            className="c8"
+            className="c8 c9"
           >
             Starting...
           </p>
@@ -1798,14 +1726,14 @@ exports[`renders <Item mutating /> without throwing 1`] = `
               y="2"
             />
             <rect
-              className="c6"
+              className="c6 c5"
               height="6"
               width="6"
               x="11"
               y="2"
             />
             <rect
-              className="c7"
+              className="c7 c5"
               height="6"
               width="6"
               x="20"
@@ -1813,7 +1741,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
             />
           </svg>
           <p
-            className="c8"
+            className="c8 c9"
           >
             Removing...
           </p>
@@ -1826,88 +1754,73 @@ exports[`renders <Item mutating /> without throwing 1`] = `
 
 exports[`renders <SnapshotList /> without throwing 1`] = `
 Array [
-  .c9 {
+  .c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
   opacity: 1;
 }
 
-.c9:selected + label::after {
+.c7:selected + label::after {
   opacity: 1;
 }
 
-.c9:checked + label {
+.c7:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c9:selected + label {
+.c7:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c9:disabled + label {
+.c7:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
-}
-
-.c15 {
-  padding: 0rem;
-}
-
-.c12 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c10 {
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -1925,7 +1838,7 @@ Array [
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -1942,7 +1855,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -1951,7 +1864,7 @@ Array [
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1963,19 +1876,16 @@ Array [
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -2004,11 +1914,11 @@ Array [
   border-top-right-radius: 0.25rem;
 }
 
-.c17 {
+.c14 {
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2027,15 +1937,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2059,15 +1969,15 @@ Array [
   font-weight: 600;
 }
 
-.c11:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c11:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
-.c13 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2091,15 +2001,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c13:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
-.c14 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2123,15 +2033,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c14:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c14:not(:last-child) {
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
-.c16 {
+.c13 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2148,11 +2058,11 @@ Array [
   border-bottom-width: 0;
 }
 
-.c16:not(:first-child) {
+.c13:not(:first-child) {
   border-left-width: 0;
 }
 
-.c16:not(:last-child) {
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2177,7 +2087,7 @@ Array [
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c14 {
+  .c12 {
     width: 10rem;
     display: table-cell;
   }
@@ -2199,22 +2109,22 @@ Array [
             selected={undefined}
         >
             <th
-                className="c3 c4"
+                className="c3"
                 disabled={undefined}
                 name="th"
                 selected={undefined}
             >
                 <div
-                    className="c5 baseline-jVaZNU c5 c6"
+                    className="c4"
                     role="group"
                     style={undefined}
                 >
                     <li
-                        className="c7"
+                        className="c5"
                     >
                         <div
                             checked={false}
-                            className="c8"
+                            className="c6"
                             disabled={false}
                             id="q"
                             onBlur={undefined}
@@ -2223,7 +2133,7 @@ Array [
                         >
                             <input
                                 checked={false}
-                                className="c9"
+                                className="c7 c8"
                                 disabled={false}
                                 id="r"
                                 onBlur={undefined}
@@ -2231,7 +2141,7 @@ Array [
                                 type="checkbox"
                             />
                             <label
-                                className="c10"
+                                className="c9"
                                 htmlFor="r"
                             />
                         </div>
@@ -2239,7 +2149,7 @@ Array [
                 </div>
             </th>
             <th
-                className="c11"
+                className="c10"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -2249,9 +2159,7 @@ Array [
                     Name 
                 </span>
                 <svg
-                    className="c12"
                     height="6"
-                    innerRef={undefined}
                     marginBottom="0.125rem"
                     marginLeft="0.5625rem"
                     style={
@@ -2270,7 +2178,7 @@ Array [
                 </svg>
             </th>
             <th
-                className="c13"
+                className="c11"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -2281,7 +2189,7 @@ Array [
                 </span>
             </th>
             <th
-                className="c14"
+                className="c12"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -2292,7 +2200,7 @@ Array [
                 </span>
             </th>
             <th
-                className="c15 c16"
+                className="c13"
                 disabled={undefined}
                 name="th"
                 selected={undefined}
@@ -2300,7 +2208,7 @@ Array [
         </tr>
     </thead>
     <tbody
-        className="c17"
+        className="c14"
         disabled={undefined}
         name="tbody"
         selected={undefined}
@@ -2311,20 +2219,6 @@ Array [
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c6 + p,
-.c6 + small,
-.c6 + h1,
-.c6 + h2,
-.c6 + label,
-.c6 + h3,
-.c6 + h4,
-.c6 + h5,
-.c6 + div,
-.c6 + span {
-  margin-top: 0.75rem;
 }
 
 .c4 {
@@ -2332,7 +2226,7 @@ Array [
 }
 
 .c2 {
-  padding: 2.25rem;
+  padding: 8rem;
 }
 
 .c3 {
@@ -2648,88 +2542,73 @@ Array [
 
 exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
 Array [
-  .c9 {
+  .c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
   opacity: 1;
 }
 
-.c9:selected + label::after {
+.c7:selected + label::after {
   opacity: 1;
 }
 
-.c9:checked + label {
+.c7:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c9:selected + label {
+.c7:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c9:disabled + label {
+.c7:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
-}
-
-.c15 {
-  padding: 0rem;
-}
-
-.c12 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c10 {
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -2747,7 +2626,7 @@ Array [
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -2764,7 +2643,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -2773,7 +2652,7 @@ Array [
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2785,19 +2664,16 @@ Array [
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -2826,11 +2702,11 @@ Array [
   border-top-right-radius: 0.25rem;
 }
 
-.c17 {
+.c14 {
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2849,15 +2725,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2881,15 +2757,15 @@ Array [
   font-weight: 600;
 }
 
-.c11:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c11:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
-.c13 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2913,15 +2789,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c13:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
-.c14 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2945,15 +2821,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c14:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c14:not(:last-child) {
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
-.c16 {
+.c13 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2970,11 +2846,11 @@ Array [
   border-bottom-width: 0;
 }
 
-.c16:not(:first-child) {
+.c13:not(:first-child) {
   border-left-width: 0;
 }
 
-.c16:not(:last-child) {
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2999,7 +2875,7 @@ Array [
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c14 {
+  .c12 {
     width: 10rem;
     display: table-cell;
   }
@@ -3021,22 +2897,22 @@ Array [
             selected={undefined}
         >
             <th
-                className="c3 c4"
+                className="c3"
                 disabled={undefined}
                 name="th"
                 selected={undefined}
             >
                 <div
-                    className="c5 baseline-jVaZNU c5 c6"
+                    className="c4"
                     role="group"
                     style={undefined}
                 >
                     <li
-                        className="c7"
+                        className="c5"
                     >
                         <div
                             checked={true}
-                            className="c8"
+                            className="c6"
                             disabled={false}
                             id="F"
                             onBlur={undefined}
@@ -3045,7 +2921,7 @@ Array [
                         >
                             <input
                                 checked={true}
-                                className="c9"
+                                className="c7 c8"
                                 disabled={false}
                                 id="G"
                                 onBlur={undefined}
@@ -3053,7 +2929,7 @@ Array [
                                 type="checkbox"
                             />
                             <label
-                                className="c10"
+                                className="c9"
                                 htmlFor="G"
                             />
                         </div>
@@ -3061,7 +2937,7 @@ Array [
                 </div>
             </th>
             <th
-                className="c11"
+                className="c10"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -3071,9 +2947,7 @@ Array [
                     Name 
                 </span>
                 <svg
-                    className="c12"
                     height="6"
-                    innerRef={undefined}
                     marginBottom="0.125rem"
                     marginLeft="0.5625rem"
                     style={
@@ -3092,7 +2966,7 @@ Array [
                 </svg>
             </th>
             <th
-                className="c13"
+                className="c11"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -3103,7 +2977,7 @@ Array [
                 </span>
             </th>
             <th
-                className="c14"
+                className="c12"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -3114,7 +2988,7 @@ Array [
                 </span>
             </th>
             <th
-                className="c15 c16"
+                className="c13"
                 disabled={undefined}
                 name="th"
                 selected={undefined}
@@ -3122,7 +2996,7 @@ Array [
         </tr>
     </thead>
     <tbody
-        className="c17"
+        className="c14"
         disabled={undefined}
         name="tbody"
         selected={undefined}
@@ -3133,20 +3007,6 @@ Array [
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c6 + p,
-.c6 + small,
-.c6 + h1,
-.c6 + h2,
-.c6 + label,
-.c6 + h3,
-.c6 + h4,
-.c6 + h5,
-.c6 + div,
-.c6 + span {
-  margin-top: 0.75rem;
 }
 
 .c4 {
@@ -3154,7 +3014,7 @@ Array [
 }
 
 .c2 {
-  padding: 2.25rem;
+  padding: 8rem;
 }
 
 .c3 {
@@ -3470,88 +3330,73 @@ Array [
 
 exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
 Array [
-  .c9 {
+  .c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
   opacity: 1;
 }
 
-.c9:selected + label::after {
+.c7:selected + label::after {
   opacity: 1;
 }
 
-.c9:checked + label {
+.c7:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c9:selected + label {
+.c7:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c9:disabled + label {
+.c7:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
-}
-
-.c15 {
-  padding: 0rem;
-}
-
-.c13 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c10 {
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -3569,7 +3414,7 @@ Array [
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -3586,7 +3431,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -3595,7 +3440,7 @@ Array [
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3607,19 +3452,16 @@ Array [
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -3648,11 +3490,11 @@ Array [
   border-top-right-radius: 0.25rem;
 }
 
-.c17 {
+.c14 {
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3671,15 +3513,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
-.c14 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3703,15 +3545,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c14:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c14:not(:last-child) {
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
-.c16 {
+.c13 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3728,15 +3570,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c16:not(:first-child) {
+.c13:not(:first-child) {
   border-left-width: 0;
 }
 
-.c16:not(:last-child) {
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3758,15 +3600,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c11:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c11:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
-.c12 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3792,11 +3634,11 @@ Array [
   font-weight: 600;
 }
 
-.c12:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c12:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3821,7 +3663,7 @@ Array [
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c14 {
+  .c12 {
     width: 10rem;
     display: table-cell;
   }
@@ -3843,22 +3685,22 @@ Array [
             selected={undefined}
         >
             <th
-                className="c3 c4"
+                className="c3"
                 disabled={undefined}
                 name="th"
                 selected={undefined}
             >
                 <div
-                    className="c5 baseline-jVaZNU c5 c6"
+                    className="c4"
                     role="group"
                     style={undefined}
                 >
                     <li
-                        className="c7"
+                        className="c5"
                     >
                         <div
                             checked={false}
-                            className="c8"
+                            className="c6"
                             disabled={false}
                             id="w"
                             onBlur={undefined}
@@ -3867,7 +3709,7 @@ Array [
                         >
                             <input
                                 checked={false}
-                                className="c9"
+                                className="c7 c8"
                                 disabled={false}
                                 id="x"
                                 onBlur={undefined}
@@ -3875,7 +3717,7 @@ Array [
                                 type="checkbox"
                             />
                             <label
-                                className="c10"
+                                className="c9"
                                 htmlFor="x"
                             />
                         </div>
@@ -3883,7 +3725,7 @@ Array [
                 </div>
             </th>
             <th
-                className="c11"
+                className="c10"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -3894,7 +3736,7 @@ Array [
                 </span>
             </th>
             <th
-                className="c12"
+                className="c11"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -3904,9 +3746,7 @@ Array [
                     Status 
                 </span>
                 <svg
-                    className="c13"
                     height="6"
-                    innerRef={undefined}
                     marginBottom="0.125rem"
                     marginLeft="0.5625rem"
                     style={
@@ -3925,7 +3765,7 @@ Array [
                 </svg>
             </th>
             <th
-                className="c14"
+                className="c12"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -3936,7 +3776,7 @@ Array [
                 </span>
             </th>
             <th
-                className="c15 c16"
+                className="c13"
                 disabled={undefined}
                 name="th"
                 selected={undefined}
@@ -3944,7 +3784,7 @@ Array [
         </tr>
     </thead>
     <tbody
-        className="c17"
+        className="c14"
         disabled={undefined}
         name="tbody"
         selected={undefined}
@@ -3955,20 +3795,6 @@ Array [
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c6 + p,
-.c6 + small,
-.c6 + h1,
-.c6 + h2,
-.c6 + label,
-.c6 + h3,
-.c6 + h4,
-.c6 + h5,
-.c6 + div,
-.c6 + span {
-  margin-top: 0.75rem;
 }
 
 .c4 {
@@ -3976,7 +3802,7 @@ Array [
 }
 
 .c2 {
-  padding: 2.25rem;
+  padding: 8rem;
 }
 
 .c3 {
@@ -4292,88 +4118,73 @@ Array [
 
 exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
 Array [
-  .c9 {
+  .c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
   opacity: 1;
 }
 
-.c9:selected + label::after {
+.c7:selected + label::after {
   opacity: 1;
 }
 
-.c9:checked + label {
+.c7:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c9:selected + label {
+.c7:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c9:disabled + label {
+.c7:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
-}
-
-.c15 {
-  padding: 0rem;
-}
-
-.c13 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c10 {
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -4391,7 +4202,7 @@ Array [
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -4408,7 +4219,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -4417,7 +4228,7 @@ Array [
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4429,19 +4240,16 @@ Array [
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -4470,11 +4278,11 @@ Array [
   border-top-right-radius: 0.25rem;
 }
 
-.c17 {
+.c14 {
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4493,15 +4301,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
-.c14 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4525,15 +4333,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c14:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c14:not(:last-child) {
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
-.c16 {
+.c13 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4550,15 +4358,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c16:not(:first-child) {
+.c13:not(:first-child) {
   border-left-width: 0;
 }
 
-.c16:not(:last-child) {
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4580,15 +4388,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c11:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c11:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
-.c12 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4614,11 +4422,11 @@ Array [
   font-weight: 600;
 }
 
-.c12:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c12:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4643,7 +4451,7 @@ Array [
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c14 {
+  .c12 {
     width: 10rem;
     display: table-cell;
   }
@@ -4665,22 +4473,22 @@ Array [
             selected={undefined}
         >
             <th
-                className="c3 c4"
+                className="c3"
                 disabled={undefined}
                 name="th"
                 selected={undefined}
             >
                 <div
-                    className="c5 baseline-jVaZNU c5 c6"
+                    className="c4"
                     role="group"
                     style={undefined}
                 >
                     <li
-                        className="c7"
+                        className="c5"
                     >
                         <div
                             checked={false}
-                            className="c8"
+                            className="c6"
                             disabled={false}
                             id="z"
                             onBlur={undefined}
@@ -4689,7 +4497,7 @@ Array [
                         >
                             <input
                                 checked={false}
-                                className="c9"
+                                className="c7 c8"
                                 disabled={false}
                                 id="A"
                                 onBlur={undefined}
@@ -4697,7 +4505,7 @@ Array [
                                 type="checkbox"
                             />
                             <label
-                                className="c10"
+                                className="c9"
                                 htmlFor="A"
                             />
                         </div>
@@ -4705,7 +4513,7 @@ Array [
                 </div>
             </th>
             <th
-                className="c11"
+                className="c10"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -4716,7 +4524,7 @@ Array [
                 </span>
             </th>
             <th
-                className="c12"
+                className="c11"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -4726,9 +4534,7 @@ Array [
                     Status 
                 </span>
                 <svg
-                    className="c13"
                     height="6"
-                    innerRef={undefined}
                     marginBottom="0.125rem"
                     marginLeft="0.5625rem"
                     style={
@@ -4747,7 +4553,7 @@ Array [
                 </svg>
             </th>
             <th
-                className="c14"
+                className="c12"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -4758,7 +4564,7 @@ Array [
                 </span>
             </th>
             <th
-                className="c15 c16"
+                className="c13"
                 disabled={undefined}
                 name="th"
                 selected={undefined}
@@ -4766,7 +4572,7 @@ Array [
         </tr>
     </thead>
     <tbody
-        className="c17"
+        className="c14"
         disabled={undefined}
         name="tbody"
         selected={undefined}
@@ -4777,20 +4583,6 @@ Array [
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c6 + p,
-.c6 + small,
-.c6 + h1,
-.c6 + h2,
-.c6 + label,
-.c6 + h3,
-.c6 + h4,
-.c6 + h5,
-.c6 + div,
-.c6 + span {
-  margin-top: 0.75rem;
 }
 
 .c4 {
@@ -4798,7 +4590,7 @@ Array [
 }
 
 .c2 {
-  padding: 2.25rem;
+  padding: 8rem;
 }
 
 .c3 {
@@ -5114,88 +4906,73 @@ Array [
 
 exports[`renders <SnapshotList submitting /> without throwing 1`] = `
 Array [
-  .c9 {
+  .c8 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
   overflow: visible;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  display: none;
 }
 
-.c9[type='checkbox'],
-.c9[type='radio'] {
+.c8[type='checkbox'],
+.c8[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c9[type='number']::-webkit-inner-spin-button,
-.c9[type='number']::-webkit-outer-spin-button {
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c9[type='search'] {
+.c8[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c9[type='search']::-webkit-search-cancel-button,
-.c9[type='search']::-webkit-search-decoration {
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c9::-webkit-file-upload-button {
+.c8::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9:checked + label::after {
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
   opacity: 1;
 }
 
-.c9:selected + label::after {
+.c7:selected + label::after {
   opacity: 1;
 }
 
-.c9:checked + label {
+.c7:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c9:selected + label {
+.c7:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c9:disabled + label {
+.c7:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c3 {
-  padding: 0rem;
-  padding-left: 0.75rem;
-}
-
-.c5 {
-  padding-top: 0.25rem;
-}
-
-.c15 {
-  padding: 0rem;
-}
-
-.c12 {
-  margin-bottom: 0.125rem;
-  margin-left: 0.5625rem;
-}
-
-.c10 {
+.c9 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -5213,7 +4990,7 @@ Array [
   height: 1.125rem;
 }
 
-.c10::after {
+.c9::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -5230,7 +5007,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c8 {
+.c6 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -5239,7 +5016,7 @@ Array [
   cursor: pointer;
 }
 
-.c7 {
+.c5 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5251,19 +5028,16 @@ Array [
   align-items: center;
 }
 
-.c7 label {
+.c5 label {
   font-weight: 400;
 }
 
-.c6 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -5292,11 +5066,11 @@ Array [
   border-top-right-radius: 0.25rem;
 }
 
-.c17 {
+.c14 {
   width: 100%;
 }
 
-.c4 {
+.c3 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -5315,15 +5089,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c4:not(:first-child) {
+.c3:not(:first-child) {
   border-left-width: 0;
 }
 
-.c4:not(:last-child) {
+.c3:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -5347,15 +5121,15 @@ Array [
   font-weight: 600;
 }
 
-.c11:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c11:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
-.c13 {
+.c11 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -5379,15 +5153,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c13:not(:first-child) {
+.c11:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c11:not(:last-child) {
   border-right-width: 0;
 }
 
-.c14 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -5411,15 +5185,15 @@ Array [
   border-bottom-width: 0;
 }
 
-.c14:not(:first-child) {
+.c12:not(:first-child) {
   border-left-width: 0;
 }
 
-.c14:not(:last-child) {
+.c12:not(:last-child) {
   border-right-width: 0;
 }
 
-.c16 {
+.c13 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -5436,11 +5210,11 @@ Array [
   border-bottom-width: 0;
 }
 
-.c16:not(:first-child) {
+.c13:not(:first-child) {
   border-left-width: 0;
 }
 
-.c16:not(:last-child) {
+.c13:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -5465,7 +5239,7 @@ Array [
 }
 
 @media only screen and (min-width:47.9375rem) {
-  .c14 {
+  .c12 {
     width: 10rem;
     display: table-cell;
   }
@@ -5487,22 +5261,22 @@ Array [
             selected={undefined}
         >
             <th
-                className="c3 c4"
+                className="c3"
                 disabled={undefined}
                 name="th"
                 selected={undefined}
             >
                 <div
-                    className="c5 baseline-jVaZNU c5 c6"
+                    className="c4"
                     role="group"
                     style={undefined}
                 >
                     <li
-                        className="c7"
+                        className="c5"
                     >
                         <div
                             checked={false}
-                            className="c8"
+                            className="c6"
                             disabled={true}
                             id="C"
                             onBlur={undefined}
@@ -5511,7 +5285,7 @@ Array [
                         >
                             <input
                                 checked={false}
-                                className="c9"
+                                className="c7 c8"
                                 disabled={true}
                                 id="D"
                                 onBlur={undefined}
@@ -5519,7 +5293,7 @@ Array [
                                 type="checkbox"
                             />
                             <label
-                                className="c10"
+                                className="c9"
                                 htmlFor="D"
                             />
                         </div>
@@ -5527,7 +5301,7 @@ Array [
                 </div>
             </th>
             <th
-                className="c11"
+                className="c10"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -5537,9 +5311,7 @@ Array [
                     Name 
                 </span>
                 <svg
-                    className="c12"
                     height="6"
-                    innerRef={undefined}
                     marginBottom="0.125rem"
                     marginLeft="0.5625rem"
                     style={
@@ -5558,7 +5330,7 @@ Array [
                 </svg>
             </th>
             <th
-                className="c13"
+                className="c11"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -5569,7 +5341,7 @@ Array [
                 </span>
             </th>
             <th
-                className="c14"
+                className="c12"
                 disabled={undefined}
                 name="th"
                 onClick={[Function]}
@@ -5580,7 +5352,7 @@ Array [
                 </span>
             </th>
             <th
-                className="c15 c16"
+                className="c13"
                 disabled={undefined}
                 name="th"
                 selected={undefined}
@@ -5588,7 +5360,7 @@ Array [
         </tr>
     </thead>
     <tbody
-        className="c17"
+        className="c14"
         disabled={undefined}
         name="tbody"
         selected={undefined}
@@ -5599,20 +5371,6 @@ Array [
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
-}
-
-.c6 + p,
-.c6 + small,
-.c6 + h1,
-.c6 + h2,
-.c6 + label,
-.c6 + h3,
-.c6 + h4,
-.c6 + h5,
-.c6 + div,
-.c6 + span {
-  margin-top: 0.75rem;
 }
 
 .c4 {
@@ -5620,7 +5378,7 @@ Array [
 }
 
 .c2 {
-  padding: 2.25rem;
+  padding: 8rem;
 }
 
 .c3 {

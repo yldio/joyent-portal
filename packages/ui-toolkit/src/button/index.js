@@ -6,27 +6,16 @@ import styled from 'styled-components';
 import { Button as NButton } from 'normalized-styled-components';
 
 import BaseAnchor from '../anchor';
-import Baseline from '../baseline';
 import StatusLoader from '../status-loader';
 
-const StyledButton = NButton.extend`
+const StyledButton = styled(NButton)`
   min-width: ${remcalc(120)};
-
-  & + button,
-  & + a {
-    margin-left: ${remcalc(6)};
-  }
 `;
 
 const InlineAnchor = styled(({ component, children, ...rest }) =>
   React.createElement(component, rest, children)
 )`
   display: inline-block;
-
-  & + button,
-  & + a {
-    margin-left: ${remcalc(6)};
-  }
 `;
 
 /**
@@ -239,22 +228,11 @@ const Button = styled(BaseButton)`
     display: inline-flex;
     align-items: center;
 
-    & svg + span {
-      margin-left: ${remcalc(12)};
-    }
-
-    & svg {
-      max-height: ${remcalc(18)};
-    }
   `};
 
   ${is('fluid')`
     width: 100%;
     max-width: 100%;
-  `};
-
-  ${is('marginless')`
-    margin: 0;
   `};
 
   ${is('bold')`
@@ -304,4 +282,4 @@ Button.defaultProps = {
   loading: false
 };
 
-export default Baseline(Button);
+export default Button;

@@ -6,7 +6,7 @@ import { Arrow } from '../icons';
 import Popover, { Container, Target } from '../popover';
 import BaseButton from './';
 
-const DropdownButton = BaseButton.extend`
+const DropdownButton = styled(BaseButton)`
   padding: 0;
   min-width: ${remcalc(47)};
   max-width: ${remcalc(47)};

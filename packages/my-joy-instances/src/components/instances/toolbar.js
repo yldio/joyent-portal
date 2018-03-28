@@ -22,7 +22,7 @@ export const Toolbar = ({
   onActionClick,
   actionTo
 }) => (
-  <Flex justifyBetween>
+  <Flex justifyBetween alignEnd>
     <FormGroup name="filter" field={Field}>
       <FormLabel>{searchLabel}</FormLabel>
       <Margin top={0.5}>

@@ -6,7 +6,6 @@ import styled, { css } from 'styled-components';
 import is, { isOr } from 'styled-is';
 import remcalc from 'remcalc';
 
-import Baseline from '../baseline';
 import * as breakpoints from '../breakpoints';
 import { Arrow as ArrowIcon } from '../icons';
 
@@ -66,10 +65,6 @@ const Column = css`
   ${is('actionable')`
     cursor: pointer;
     user-select: none;
-  `};
-
-  ${is('baseline')`
-    vertical-align: baseline;
   `};
 
   ${is('sub')`
@@ -258,11 +253,11 @@ const BaseTr = styled.tr`
 /**
  * @example ./usage.md
  */
-export default Baseline(({ children, ...rest }) => (
+export default ({ children, ...rest }) => (
   <Broadcast channel="almost-responsive-table" value={rest}>
     <BaseTable {...rest}>{children}</BaseTable>
   </Broadcast>
-));
+);
 
 const Propagate = ({ children, ...rest }) => (
   <Subscriber channel="almost-responsive-table">
@@ -277,7 +272,7 @@ const Propagate = ({ children, ...rest }) => (
   </Subscriber>
 );
 
-export const Thead = Baseline(({ children, ...rest }) => (
+export const Thead = ({ children, ...rest }) => (
   <Propagate {...rest} header={true}>
     {value => (
       <BaseThead {...value} name="thdead">
@@ -285,9 +280,9 @@ export const Thead = Baseline(({ children, ...rest }) => (
       </BaseThead>
     )}
   </Propagate>
-));
+);
 
-export const Tfoot = Baseline(({ children, ...rest }) => (
+export const Tfoot = ({ children, ...rest }) => (
   <Propagate {...rest} header={true}>
     {value => (
       <BaseTfoot {...value} name="tfoot">
@@ -295,9 +290,9 @@ export const Tfoot = Baseline(({ children, ...rest }) => (
       </BaseTfoot>
     )}
   </Propagate>
-));
+);
 
-export const Tr = Baseline(({ children, ...rest }) => (
+export const Tr = ({ children, ...rest }) => (
   <Propagate {...rest}>
     {value => (
       <BaseTr {...rest} {...value} name="tr">
@@ -305,9 +300,9 @@ export const Tr = Baseline(({ children, ...rest }) => (
       </BaseTr>
     )}
   </Propagate>
-));
+);
 
-export const Th = Baseline(({ children, ...rest }) => (
+export const Th = ({ children, ...rest }) => (
   <Propagate {...rest}>
     {({ showSort, sortOrder, header, ...value }) => (
       <BaseTh
@@ -328,9 +323,9 @@ export const Th = Baseline(({ children, ...rest }) => (
       </BaseTh>
     )}
   </Propagate>
-));
+);
 
-export const Tbody = Baseline(({ children, ...rest }) => (
+export const Tbody = ({ children, ...rest }) => (
   <Propagate {...rest}>
     {value => (
       <BaseTbody {...value} name="tbody">
@@ -338,9 +333,9 @@ export const Tbody = Baseline(({ children, ...rest }) => (
       </BaseTbody>
     )}
   </Propagate>
-));
+);
 
-export const Td = Baseline(({ children, ...rest }) => (
+export const Td = ({ children, ...rest }) => (
   <Propagate {...rest}>
     {value => (
       <BaseTd {...rest} {...value} name="td">
@@ -348,4 +343,4 @@ export const Td = Baseline(({ children, ...rest }) => (
       </BaseTd>
     )}
   </Propagate>
-));
+);

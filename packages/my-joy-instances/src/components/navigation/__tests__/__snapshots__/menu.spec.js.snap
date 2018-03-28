@@ -3,36 +3,42 @@
 exports[`renders <Menu /> without throwing 1`] = `null`;
 
 exports[`renders <Menu links /> without throwing 1`] = `
-.c1 {
-  margin-bottom: 2.25rem;
+.c2 {
+  margin-bottom: 1.875rem;
 }
 
-.c6 {
+.c8 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
+}
+
+.c7 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c5 {
+.c6 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c5:hover {
+.c6:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
+}
+
+.c0 {
   box-sizing: border-box;
   width: 100%;
   max-width: 62.5rem;
 }
 
-.c3 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.6;
   -webkit-flex-shrink: 0;
@@ -40,11 +46,7 @@ exports[`renders <Menu links /> without throwing 1`] = `
   flex-shrink: 0;
 }
 
-.c3:not(:last-child) {
-  margin-right: 1.875rem;
-}
-
-.c4 {
+.c5 {
   color: rgb(70,70,70);
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -54,11 +56,11 @@ exports[`renders <Menu links /> without throwing 1`] = `
   position: relative;
 }
 
-.c4.active {
+.c5.active {
   font-weight: 600;
 }
 
-.c4.active:after {
+.c5.active:after {
   width: 100%;
   height: 0.0625rem;
   background: rgb(70,70,70);
@@ -69,11 +71,10 @@ exports[`renders <Menu links /> without throwing 1`] = `
   z-index: 2;
 }
 
-.c2 {
+.c3 {
   background: rgb(250,250,250);
   list-style-type: none;
-  padding: 0.8125rem 0rem;
-  margin: 1.125rem 0 0 0;
+  padding: 0.75rem 0rem;
   max-height: 3.125rem;
   overflow-x: auto;
   overflow-y: hidden;
@@ -83,9 +84,10 @@ exports[`renders <Menu links /> without throwing 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
+  margin: 0;
 }
 
-.c2:after {
+.c3:after {
   width: 100%;
   height: 0.0625rem;
   background: rgb(216,216,216);
@@ -97,19 +99,19 @@ exports[`renders <Menu links /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
   }
 }
@@ -122,79 +124,79 @@ exports[`renders <Menu links /> without throwing 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
   <div
-    className="c1"
+    className="c2"
   >
     <ul
-      className="c2"
+      className="c3"
     >
       <li
-        className="c3"
+        className="c4"
       >
         <a
-          className="c4 c5 c6"
+          className="c5 c6 c7 c8"
           to="/:name/summary"
         >
           summary
         </a>
       </li>
       <li
-        className="c3"
+        className="c4"
       >
         <a
-          className="c4 c5 c6"
+          className="c5 c6 c7 c8"
           to="/:name/tags"
         >
           tags
         </a>
       </li>
       <li
-        className="c3"
+        className="c4"
       >
         <a
-          className="c4 c5 c6"
+          className="c5 c6 c7 c8"
           to="/:name/metadata"
         >
           metadata
         </a>
       </li>
       <li
-        className="c3"
+        className="c4"
       >
         <a
-          className="c4 c5 c6"
+          className="c5 c6 c7 c8"
           to="/:name/networks"
         >
           networks
         </a>
       </li>
       <li
-        className="c3"
+        className="c4"
       >
         <a
-          className="c4 c5 c6"
+          className="c5 c6 c7 c8"
           to="/:name/firewall"
         >
           firewall
         </a>
       </li>
       <li
-        className="c3"
+        className="c4"
       >
         <a
-          className="c4 c5 c6"
+          className="c5 c6 c7 c8"
           to="/:name/dns"
         >
           dns
         </a>
       </li>
       <li
-        className="c3"
+        className="c4"
       >
         <a
-          className="c4 c5 c6"
+          className="c5 c6 c7 c8"
           to="/:name/snapshots"
         >
           snapshots

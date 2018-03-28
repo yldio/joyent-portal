@@ -6,8 +6,6 @@ const InputDropdown = styled.div`
   border: ${remcalc(1)} solid #d8d8d8;
   box-sizing: border-box;
   border-radius: ${remcalc(4)};
-  margin-bottom: ${remcalc(8)};
-  margin-top: ${remcalc(8)};
 
   &:hover {
     border: ${remcalc(1)} solid ${props => props.theme.primary};

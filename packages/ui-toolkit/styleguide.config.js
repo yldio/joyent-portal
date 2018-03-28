@@ -64,12 +64,6 @@ module.exports = {
         'Triton’s grid aims to have maximum coverage over a wide range of devices. With a maximum container width of 964px, we are able to display the main desktop experience all the way down to a tradional landscape tablet device.'
     },
     {
-      name: 'Baseline Grids',
-      content: 'src/grids/Baseline.md',
-      description:
-        'All of the size and spacing values are derived on the baseline grid. The baseline grid is composed of horizontal lines positioned 6 px apart, making the base measurement unit 6 px.'
-    },
-    {
       name: 'Superscript',
       content: 'src/text/Superscript.md',
       description:

@@ -1,6 +1,5 @@
 export { default as Anchor } from './anchor';
 export { default as Base, global } from './base';
-export { default as Baseline } from './baseline';
 export { default as Button } from './button';
 export { default as PopoverButton } from './button/popover';
 export { default as ButtonGroup } from './button/group';

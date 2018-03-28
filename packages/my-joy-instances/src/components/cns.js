@@ -6,13 +6,13 @@ import Flex, { FlexItem } from 'styled-flex-component';
 import { Field } from 'redux-form';
 
 import {
-  P,
-  H3,
+  P as BaseP,
+  H3 as BaseH3,
   Card,
   Divider,
   TagList,
   Input,
-  Toggle,
+  Toggle as BaseToggle,
   Small,
   Button,
   FormGroup,
@@ -31,15 +31,27 @@ const SmallBordered = styled(Small)`
   border-right: ${remcalc(1)} solid ${props => props.theme.grey};
 `;
 
+const H3 = styled(BaseH3)`
+  margin: 0;
+`;
+
+const P = styled(BaseP)`
+  margin: 0;
+`;
+
+const Toggle = styled(BaseToggle)`
+  margin: 0 6px;
+`;
+
 export const Header = () => (
   <Fragment>
     <H3>Hostnames</H3>
-    <Padding bottom={2}>
+    <Margin top={2} bottom={3}>
       <P>
         Default hostnames are automatically generated from both the instance
         name and any attached networks.
       </P>
-    </Padding>
+    </Margin>
   </Fragment>
 );
 
@@ -49,9 +61,11 @@ export const Footer = ({ enabled, submitting, onToggle }) => (
       <FormGroup name="cns-enabled">
         <Flex alignCenter>
           <FormLabel disabled={submitting}>Disabled CNS</FormLabel>
-          <Toggle checked={enabled} onChange={onToggle} disabled={submitting}>
-            Enabled CNS
-          </Toggle>
+          <Margin left={1}>
+            <Toggle checked={enabled} onChange={onToggle} disabled={submitting}>
+              Enabled CNS
+            </Toggle>
+          </Margin>
         </Flex>
       </FormGroup>
     </Margin>
@@ -69,13 +83,13 @@ export const Footer = ({ enabled, submitting, onToggle }) => (
 export const HostnamesHeader = () => (
   <Margin top={4}>
     <H3>CNS service hostnames</H3>
-    <Padding bottom={3}>
+    <Margin top={2} bottom={3}>
       <P>
         CNS service hostnames are created by attaching a CNS service name to one
         or more instances. You can serve multiple instances under the same
         hostname by assigning them to a matching CNS service name.
       </P>
-    </Padding>
+    </Margin>
   </Margin>
 );
 
@@ -87,23 +101,25 @@ export const AddServiceForm = ({
   invalid
 }) => (
   <form onSubmit={handleSubmit}>
-    <Flex wrap>
+    <Flex wrap alignEnd>
       <FlexItem>
-        <FormGroup name="name" field={Field}>
-          <FormLabel>Attach to new CNS service name</FormLabel>
-          <Margin top={0.5}>
-            <Input
-              onBlur={null}
-              type="text"
-              placeholder="Example: mySQLdb"
-              disabled={disabled || submitting}
-            />
-            <FormMeta />
-          </Margin>
-        </FormGroup>
+        <Flex collumn>
+          <FormGroup name="name" field={Field}>
+            <FormLabel>Attach to new CNS service name</FormLabel>
+            <Margin top={0.5}>
+              <Input
+                onBlur={null}
+                type="text"
+                placeholder="Example: mySQLdb"
+                disabled={disabled || submitting}
+              />
+              <FormMeta />
+            </Margin>
+          </FormGroup>
+        </Flex>
       </FlexItem>
       <FlexItem>
-        <Margin top={3.5} left={2}>
+        <Margin left={2}>
           <Button
             type="submit"
             disabled={submitting}
@@ -128,7 +144,7 @@ export const Hostname = ({
 }) => (
   <Fragment>
     {values.length ? (
-      <Margin bottom={4}>
+      <Margin bottom={3}>
         <Flex>
           <SmallBordered bold noMargin>
             {network && service
@@ -139,7 +155,7 @@ export const Hostname = ({
             hostname{values.length === 1 ? '' : 's'}
           </SmallBordered>
           <FlexItem>
-            <Margin right={1}>
+            <Margin bottom={0.5} right={1}>
               {hostname.public ? <PublicIcon /> : <PrivateIcon />}
             </Margin>
           </FlexItem>

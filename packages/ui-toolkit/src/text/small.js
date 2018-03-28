@@ -1,8 +1,9 @@
 import { Small } from 'normalized-styled-components';
 import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
+import styled from 'styled-components';
 
-export default Small.extend`
+export default styled(Small)`
   font-family: ${props => props.theme.font.families};
   color: ${props => props.theme.text};
 

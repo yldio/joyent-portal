@@ -19,7 +19,7 @@ injectGlobal`
   }
 `;
 
-const StyledBase = Base.extend`
+const StyledBase = styled(Base)`
   /* trick prettier */
   background-color: transparent;
 `;

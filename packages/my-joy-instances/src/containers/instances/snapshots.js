@@ -139,19 +139,21 @@ const Snapshots = ({
 
   return (
     <ViewContainer main>
-      <ReduxForm form={MENU_FORM_NAME}>
-        {props => (
-          <ToolbarForm
-            {...props}
-            searchLabel="Filter snapshots"
-            searchPlaceholder="Search for name, created...."
-            searchable={!_loading}
-            actionLabel="Create Snapshot"
-            actionable={!createSnapshotOpen}
-            onActionClick={() => toggleCreateSnapshotOpen(true)}
-          />
-        )}
-      </ReduxForm>
+      <Margin bottom={4}>
+        <ReduxForm form={MENU_FORM_NAME}>
+          {props => (
+            <ToolbarForm
+              {...props}
+              searchLabel="Filter snapshots"
+              searchPlaceholder="Search for name, created...."
+              searchable={!_loading}
+              actionLabel="Create Snapshot"
+              actionable={!createSnapshotOpen}
+              onActionClick={() => toggleCreateSnapshotOpen(true)}
+            />
+          )}
+        </ReduxForm>
+      </Margin>
       {_loading}
       {_error}
       {_mutationError}

@@ -9,21 +9,19 @@ exports[`StatusLoader StatusLoader 1`] = `
 }
 
 .c2 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
 .c3 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
+}
+
+.c5 {
+  color: rgb(73,73,73);
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
 }
 
 .c0 {
@@ -55,10 +53,6 @@ exports[`StatusLoader StatusLoader 1`] = `
 }
 
 .c4 {
-  color: rgb(73,73,73);
-  line-height: 1.5rem;
-  font-size: 0.9375rem;
-  margin: 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -66,8 +60,6 @@ exports[`StatusLoader StatusLoader 1`] = `
   -ms-flex-item-align: stretch;
   align-self: stretch;
   text-align: center;
-  margin-bottom: 0;
-  margin-left: 0.375rem;
 }
 
 <div
@@ -85,14 +77,14 @@ exports[`StatusLoader StatusLoader 1`] = `
       y="2"
     />
     <rect
-      className="c2"
+      className="c2 c1"
       height="6"
       width="6"
       x="11"
       y="2"
     />
     <rect
-      className="c3"
+      className="c3 c1"
       height="6"
       width="6"
       x="20"
@@ -100,7 +92,7 @@ exports[`StatusLoader StatusLoader 1`] = `
     />
   </svg>
   <p
-    className="c4"
+    className="c4 c5"
   >
     Loading...
   </p>

@@ -1,16 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Tags /> without throwing 1`] = `
-.c4 {
+.c2 {
+  margin-bottom: 1.125rem;
+}
+
+.c7 {
   margin-top: 0.1875rem;
 }
 
-.c16 {
+.c17 {
   margin-top: 0rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.875rem;
 }
 
-.c11 {
+.c15 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -20,39 +24,32 @@ exports[`renders <Tags /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
+.c14 {
+  min-width: 7.5rem;
 }
 
-.c10 {
+.c13 {
   display: inline-block;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -102,7 +99,7 @@ exports[`renders <Tags /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c9:focus {
+.c12:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -110,34 +107,26 @@ exports[`renders <Tags /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c9:hover {
+.c12:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c9[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -145,23 +134,14 @@ exports[`renders <Tags /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -180,62 +160,30 @@ exports[`renders <Tags /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c17 {
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c18 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c17 + p,
-.c17 + small,
-.c17 + h1,
-.c17 + h2,
-.c17 + label,
-.c17 + h3,
-.c17 + h4,
-.c17 + h5,
-.c17 + div,
-.c17 + span {
-  margin-top: 0.75rem;
-}
-
-.c7 {
+.c10 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
-.c12 {
+.c16 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.25rem;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c14 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.5rem;
-}
-
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -257,32 +205,30 @@ exports[`renders <Tags /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c2 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c6 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -290,7 +236,7 @@ exports[`renders <Tags /> without throwing 1`] = `
   float: right;
 }
 
-.c5 {
+.c8 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -312,47 +258,52 @@ exports[`renders <Tags /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c8:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c8::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c8:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c8:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c8:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c8:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c8:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18 {
-  margin: 0;
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c19 {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -365,19 +316,19 @@ exports[`renders <Tags /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
   }
 }
@@ -390,83 +341,87 @@ exports[`renders <Tags /> without throwing 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
-  <form
-    onSubmit={undefined}
+  <div
+    className="c2"
   >
-    <div
-      className="c1"
+    <form
+      onSubmit={undefined}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
+        className="c3"
       >
-        <label
-          className="c3"
-          htmlFor="k"
-        >
-          Filter tags
-        </label>
         <div
           className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
         >
-          <input
-            className="c5"
-            disabled={false}
-            id="k"
-            onBlur={undefined}
-            placeholder="Search by name or value"
+          <label
+            className="c5 c6"
+            htmlFor="k"
+          >
+            Filter tags
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={false}
+              id="k"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
           />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Tag
+          </button>
         </div>
       </div>
       <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Tag
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
   <div
-    className="c13 c8"
+    className="c10 c11"
     height="0.6875rem"
   />
   <div
-    className="c14 c8"
+    className="c16 c11"
     height="0.0625rem"
   />
   <div
-    className="c15 c8"
+    className="c10 c11"
     height="1.5rem"
   />
   <div
-    className="c16"
+    className="c17"
   >
     <h3
-      className="c17"
+      className="c18"
     >
       0
        tag
@@ -474,35 +429,43 @@ exports[`renders <Tags /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c18"
+    className="c19"
   />
 </div>
 `;
 
 exports[`renders <Tags addOpen /> without throwing 1`] = `
-.c4 {
+.c2 {
+  margin-bottom: 1.125rem;
+}
+
+.c7 {
   margin-top: 0.1875rem;
 }
 
-.c31 {
+.c35 {
   margin-top: 0.375rem;
 }
 
-.c38 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+.c43 {
+  margin-right: 0.75rem;
 }
 
-.c19 {
+.c44 {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.c22 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c25 {
+.c29 {
   padding: 1.125rem;
 }
 
-.c11 {
+.c15 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -512,39 +475,32 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
+.c14 {
+  min-width: 7.5rem;
 }
 
-.c10 {
+.c13 {
   display: inline-block;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -594,7 +550,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c9:focus {
+.c12:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -602,34 +558,26 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c9:hover {
+.c12:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c9[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
-}
-
-.c34 {
+.c39 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -671,10 +619,9 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c34:focus {
+.c39:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -682,43 +629,43 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c34:hover {
+.c39:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
+.c39:active,
+.c39:active:hover,
+.c39:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c34[disabled] {
+.c39[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c34:focus {
+.c39:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c34:hover {
+.c39:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
+.c39:active,
+.c39:active:hover,
+.c39:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c35 {
+.c40 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -761,10 +708,9 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c35:focus {
+.c40:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -772,43 +718,43 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c35:hover {
+.c40:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
+.c40:active,
+.c40:active:hover,
+.c40:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c35[disabled] {
+.c40[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c35:focus {
+.c40:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c35:hover {
+.c40:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
+.c40:active,
+.c40:active:hover,
+.c40:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c37 {
+.c42 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -862,11 +808,10 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   float: right;
 }
 
-.c37:focus {
+.c42:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -874,70 +819,62 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c37:hover {
+.c42:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c37[disabled] {
+.c42[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c37:focus {
+.c42:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c37:hover {
+.c42:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c37:focus {
+.c42:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c37:hover {
+.c42:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c37 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c37 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -945,23 +882,14 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -980,7 +908,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c32 {
+.c36 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -997,16 +925,6 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   flex-wrap: wrap;
   margin-right: -0.625rem;
   margin-left: -0.625rem;
-}
-
-.c29 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
 }
 
 .c33 {
@@ -1019,7 +937,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   display: block;
 }
 
-.c36 {
+.c37 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1029,83 +947,47 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   display: block;
 }
 
-.c39 {
+.c41 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c45 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c39 + p,
-.c39 + small,
-.c39 + h1,
-.c39 + h2,
-.c39 + label,
-.c39 + h3,
-.c39 + h4,
-.c39 + h5,
-.c39 + div,
-.c39 + span {
-  margin-top: 0.75rem;
-}
-
-.c23 {
+.c26 {
   color: rgb(73,73,73);
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
 }
 
-.c23 + p,
-.c23 + small,
-.c23 + h1,
-.c23 + h2,
-.c23 + label,
-.c23 + h3,
-.c23 + h4,
-.c23 + h5,
-.c23 + div,
-.c23 + span {
-  margin-top: 0.75rem;
-}
-
-.c7 {
+.c10 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
-.c12 {
+.c16 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.25rem;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c14 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.5rem;
-}
-
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1127,9 +1009,13 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c20 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1162,7 +1048,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   flex-basis: 100%;
 }
 
-.c26 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1192,7 +1078,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c27 {
+.c31 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1212,7 +1098,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c30 {
+.c34 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1230,29 +1116,6 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -webkit-flex-basis: 0.75rem;
   -ms-flex-preferred-size: 0.75rem;
   flex-basis: 0.75rem;
-}
-
-.c16 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
 .c17 {
@@ -1275,27 +1138,10 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c17 button {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.c22 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1320,6 +1166,57 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   -webkit-flex: 0 0 2.875rem;
   -ms-flex: 0 0 2.875rem;
   flex: 0 0 2.875rem;
+}
+
+.c28 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c27 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.c19 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  max-width: 100%;
+}
+
+.c25 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -1353,74 +1250,24 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   color: inherit;
 }
 
-.c24 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c24 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c24 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
-}
-
-.c2 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c6 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -1428,15 +1275,12 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   float: right;
 }
 
-.c28 {
+.c32 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -1444,7 +1288,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c8 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1466,59 +1310,74 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c8:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c8::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c8:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c8:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c8:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c8:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c8:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 .c18 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.c38 {
+  margin-right: 0.375rem;
+}
+
+.c21 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c21 {
+.c24 {
   height: 2.9375rem;
   max-width: 98%;
 }
 
-.c40 {
-  margin: 0;
+.c46 {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1531,20 +1390,62 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c36 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c36 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c33 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c37 {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c41 {
+    display: none;
   }
 }
 
@@ -1555,148 +1456,110 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c32 {
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c32 {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c29 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c33 {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c36 {
-    display: none;
-  }
-}
-
 <div
-  className="c0"
+  className="c0 c1"
 >
-  <form
-    onSubmit={undefined}
+  <div
+    className="c2"
   >
-    <div
-      className="c1"
+    <form
+      onSubmit={undefined}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
+        className="c3"
       >
-        <label
-          className="c3"
-          htmlFor="t"
-        >
-          Filter tags
-        </label>
         <div
           className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
         >
-          <input
-            className="c5"
-            disabled={false}
-            id="t"
-            onBlur={undefined}
-            placeholder="Search by name or value"
+          <label
+            className="c5 c6"
+            htmlFor="t"
+          >
+            Filter tags
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={false}
+              id="t"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
           />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Tag
+          </button>
         </div>
       </div>
       <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Tag
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
   <div
-    className="c13 c8"
+    className="c10 c11"
     height="0.6875rem"
   />
   <div
-    className="c14 c8"
+    className="c16 c11"
     height="0.0625rem"
   />
   <div
-    className="c15 c8"
+    className="c10 c11"
     height="1.5rem"
   />
   <form
     onSubmit={undefined}
   >
     <div
-      className="c16"
+      className="c17"
       disabled={false}
       name="card"
     >
       <div
-        className="c17"
+        className="c18 c19 c20"
         disabled={false}
         name="card-header"
         onClick={false}
       >
         <div
-          className="c18 c19"
+          className="c21 c22"
         >
           <div
-            className="c20"
+            className="c23"
           >
             <div
-              className="c21 c22"
+              className="c24 c25 c20"
               disabled={false}
               name="card-header-meta"
             >
               <h4
-                className="c23"
+                className="c26"
               >
                 Add tag
               </h4>
@@ -1705,27 +1568,28 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
         </div>
       </div>
       <div
-        className="c24"
+        className="c27 c28"
+        disabled={false}
         name="card-outlet"
       >
         <div
-          className="c25"
+          className="c29"
         >
           <div
-            className="c26"
+            className="c30"
             wrap={true}
           >
             <div
-              className="c27"
+              className="c31"
             >
               <div
-                className="baseline-jVaZNU kXgQxt c28"
+                className="c32"
                 name="name"
                 role="group"
                 style={undefined}
               >
                 <label
-                  className="c3"
+                  className="c5 c6"
                   htmlFor="w"
                 >
                   Tag
@@ -1733,57 +1597,57 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                   key
                 </label>
                 <div
-                  className="c4"
+                  className="c7"
                 >
                   <input
-                    className="c5"
+                    className="c8"
                     disabled={false}
                     id="w"
                     onBlur={null}
                   />
                   <div
-                    className="c8"
+                    className="c11"
                   >
                     <div
-                      className="c29"
+                      className="c33"
                     />
                   </div>
                 </div>
               </div>
             </div>
             <div
-              className="c30"
+              className="c34"
             />
             <div
-              className="c27"
+              className="c31"
             >
               <div
-                className="baseline-jVaZNU kXgQxt c28"
+                className="c32"
                 name="value"
                 role="group"
                 style={undefined}
               >
                 <label
-                  className="c3"
+                  className="c5 c6"
                   htmlFor="x"
                 >
                   Tag
                    value
                 </label>
                 <div
-                  className="c4"
+                  className="c7"
                 >
                   <input
-                    className="c5"
+                    className="c8"
                     disabled={false}
                     id="x"
                     onBlur={null}
                   />
                   <div
-                    className="c8"
+                    className="c11"
                   >
                     <div
-                      className="c29"
+                      className="c33"
                     />
                   </div>
                 </div>
@@ -1791,16 +1655,16 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
             </div>
           </div>
           <div
-            className="c31"
+            className="c35"
           >
             <div
-              className="c32"
+              className="c36"
             >
               <div
-                className="c33"
+                className="c37"
               >
                 <button
-                  className="c34 c10 c11"
+                  className="c38 c39 c13 c14 c15"
                   data-ui-button="true"
                   disabled={false}
                   href=""
@@ -1812,7 +1676,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                   </span>
                 </button>
                 <button
-                  className="c35 c10 c11"
+                  className="c40 c13 c14 c15"
                   data-ui-button="true"
                   disabled={true}
                   href=""
@@ -1824,10 +1688,10 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                 </button>
               </div>
               <div
-                className="c36"
+                className="c41"
               >
                 <button
-                  className="c37 c10 c11"
+                  className="c42 c13 c14 c15"
                   data-ui-button="true"
                   disabled={false}
                   href=""
@@ -1835,24 +1699,26 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
-                  <svg
-                    className=""
-                    height="16"
-                    innerRef={undefined}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    viewBox="0 0 12 16"
-                    width="12"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    className="c43"
                   >
-                    <path
-                      d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                      fill="rgb(210, 67, 58)"
-                    />
-                  </svg>
+                    <svg
+                      height="16"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 12 16"
+                      width="12"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                        fill="rgb(210, 67, 58)"
+                      />
+                    </svg>
+                  </div>
                   <span>
                     Remove
                   </span>
@@ -1865,10 +1731,10 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
     </div>
   </form>
   <div
-    className="c38"
+    className="c44"
   >
     <h3
-      className="c39"
+      className="c45"
     >
       0
        tag
@@ -1876,22 +1742,26 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c40"
+    className="c46"
   />
 </div>
 `;
 
 exports[`renders <Tags editable /> without throwing 1`] = `
-.c4 {
+.c2 {
+  margin-bottom: 1.125rem;
+}
+
+.c7 {
   margin-top: 0.1875rem;
 }
 
-.c16 {
+.c17 {
   margin-top: 0rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.875rem;
 }
 
-.c11 {
+.c15 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1901,39 +1771,32 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
+.c14 {
+  min-width: 7.5rem;
 }
 
-.c10 {
+.c13 {
   display: inline-block;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1983,7 +1846,7 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c9:focus {
+.c12:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1991,34 +1854,26 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c9:hover {
+.c12:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c9[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -2026,23 +1881,14 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2061,62 +1907,30 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c17 {
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c18 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c17 + p,
-.c17 + small,
-.c17 + h1,
-.c17 + h2,
-.c17 + label,
-.c17 + h3,
-.c17 + h4,
-.c17 + h5,
-.c17 + div,
-.c17 + span {
-  margin-top: 0.75rem;
-}
-
-.c7 {
+.c10 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
-.c12 {
+.c16 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.25rem;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c14 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.5rem;
-}
-
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2138,32 +1952,30 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c2 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c6 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -2171,7 +1983,7 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   float: right;
 }
 
-.c5 {
+.c8 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -2193,47 +2005,52 @@ exports[`renders <Tags editable /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c8:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c8::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c8:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c8:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c8:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c8:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c8:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18 {
-  margin: 0;
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c19 {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2246,19 +2063,19 @@ exports[`renders <Tags editable /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
   }
 }
@@ -2271,83 +2088,87 @@ exports[`renders <Tags editable /> without throwing 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
-  <form
-    onSubmit={undefined}
+  <div
+    className="c2"
   >
-    <div
-      className="c1"
+    <form
+      onSubmit={undefined}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
+        className="c3"
       >
-        <label
-          className="c3"
-          htmlFor="D"
-        >
-          Filter tags
-        </label>
         <div
           className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
         >
-          <input
-            className="c5"
-            disabled={false}
-            id="D"
-            onBlur={undefined}
-            placeholder="Search by name or value"
+          <label
+            className="c5 c6"
+            htmlFor="D"
+          >
+            Filter tags
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={false}
+              id="D"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
           />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Tag
+          </button>
         </div>
       </div>
       <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Tag
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
   <div
-    className="c13 c8"
+    className="c10 c11"
     height="0.6875rem"
   />
   <div
-    className="c14 c8"
+    className="c16 c11"
     height="0.0625rem"
   />
   <div
-    className="c15 c8"
+    className="c10 c11"
     height="1.5rem"
   />
   <div
-    className="c16"
+    className="c17"
   >
     <h3
-      className="c17"
+      className="c18"
     >
       0
        tag
@@ -2355,35 +2176,43 @@ exports[`renders <Tags editable /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c18"
+    className="c19"
   />
 </div>
 `;
 
 exports[`renders <Tags editing /> without throwing 1`] = `
-.c4 {
+.c2 {
+  margin-bottom: 1.125rem;
+}
+
+.c7 {
   margin-top: 0.1875rem;
 }
 
-.c31 {
+.c35 {
   margin-top: 0.375rem;
 }
 
-.c38 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+.c43 {
+  margin-right: 0.75rem;
 }
 
-.c19 {
+.c44 {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.c22 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c25 {
+.c29 {
   padding: 1.125rem;
 }
 
-.c11 {
+.c15 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2393,39 +2222,32 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
+.c14 {
+  min-width: 7.5rem;
 }
 
-.c10 {
+.c13 {
   display: inline-block;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c34 {
+.c39 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2467,10 +2289,9 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c34:focus {
+.c39:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2478,43 +2299,43 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c34:hover {
+.c39:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
+.c39:active,
+.c39:active:hover,
+.c39:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c34[disabled] {
+.c39[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c34:focus {
+.c39:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c34:hover {
+.c39:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
+.c39:active,
+.c39:active:hover,
+.c39:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c35 {
+.c40 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2557,10 +2378,9 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c35:focus {
+.c40:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2568,43 +2388,43 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c35:hover {
+.c40:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
+.c40:active,
+.c40:active:hover,
+.c40:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c35[disabled] {
+.c40[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c35:focus {
+.c40:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c35:hover {
+.c40:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
+.c40:active,
+.c40:active:hover,
+.c40:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c37 {
+.c42 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2658,11 +2478,10 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   float: right;
 }
 
-.c37:focus {
+.c42:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2670,70 +2489,62 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c37:hover {
+.c42:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c37[disabled] {
+.c42[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c37:focus {
+.c42:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c37:hover {
+.c42:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c37:focus {
+.c42:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c37:hover {
+.c42:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c37 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c37 svg {
-  max-height: 1.125rem;
-}
-
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2788,7 +2599,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c9:focus {
+.c12:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2796,51 +2607,43 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c9:hover {
+.c12:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c9[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c9:focus {
+.c12:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c9:hover {
+.c12:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -2848,23 +2651,14 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2883,7 +2677,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c32 {
+.c36 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2900,16 +2694,6 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   flex-wrap: wrap;
   margin-right: -0.625rem;
   margin-left: -0.625rem;
-}
-
-.c29 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
 }
 
 .c33 {
@@ -2922,7 +2706,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   display: block;
 }
 
-.c36 {
+.c37 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -2932,62 +2716,40 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   display: block;
 }
 
-.c39 {
+.c41 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c45 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c39 + p,
-.c39 + small,
-.c39 + h1,
-.c39 + h2,
-.c39 + label,
-.c39 + h3,
-.c39 + h4,
-.c39 + h5,
-.c39 + div,
-.c39 + span {
-  margin-top: 0.75rem;
-}
-
-.c7 {
+.c10 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
-.c12 {
+.c16 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.25rem;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c14 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.5rem;
-}
-
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3009,9 +2771,13 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c20 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3044,7 +2810,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   flex-basis: 100%;
 }
 
-.c26 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3074,7 +2840,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c27 {
+.c31 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3094,7 +2860,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c30 {
+.c34 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3112,73 +2878,6 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-flex-basis: 0.75rem;
   -ms-flex-preferred-size: 0.75rem;
   flex-basis: 0.75rem;
-}
-
-.c16 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c24 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c24 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c24 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
 }
 
 .c17 {
@@ -3201,28 +2900,32 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c17 button {
-  margin-bottom: 0;
-  margin-top: 0;
+.c28 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
 }
 
-.c22 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3248,6 +2951,35 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-flex: 0 0 2.875rem;
   -ms-flex: 0 0 2.875rem;
   flex: 0 0 2.875rem;
+}
+
+.c27 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.c19 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  max-width: 100%;
+}
+
+.c25 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -3281,30 +3013,24 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   color: inherit;
 }
 
-.c2 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c6 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -3312,15 +3038,12 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   float: right;
 }
 
-.c28 {
+.c32 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -3328,7 +3051,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c8 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -3350,46 +3073,52 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c8:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c8::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c8:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c8:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c8:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c8:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c8:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23 {
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c26 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -3399,19 +3128,28 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 }
 
 .c18 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.c38 {
+  margin-right: 0.375rem;
+}
+
+.c21 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c21 {
+.c24 {
   height: 2.9375rem;
   max-width: 98%;
 }
 
-.c40 {
-  margin: 0;
+.c46 {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3424,20 +3162,65 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c36 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c36 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c33 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c37 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c41 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
   }
 }
 
@@ -3448,151 +3231,110 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c32 {
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c32 {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c29 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c33 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c36 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-  }
-}
-
 <div
-  className="c0"
+  className="c0 c1"
 >
-  <form
-    onSubmit={undefined}
+  <div
+    className="c2"
   >
-    <div
-      className="c1"
+    <form
+      onSubmit={undefined}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
+        className="c3"
       >
-        <label
-          className="c3"
-          htmlFor="y"
-        >
-          Filter tags
-        </label>
         <div
           className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
         >
-          <input
-            className="c5"
-            disabled={false}
-            id="y"
-            onBlur={undefined}
-            placeholder="Search by name or value"
+          <label
+            className="c5 c6"
+            htmlFor="y"
+          >
+            Filter tags
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={false}
+              id="y"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
           />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={true}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Tag
+          </button>
         </div>
       </div>
       <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={true}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Tag
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
   <div
-    className="c13 c8"
+    className="c10 c11"
     height="0.6875rem"
   />
   <div
-    className="c14 c8"
+    className="c16 c11"
     height="0.0625rem"
   />
   <div
-    className="c15 c8"
+    className="c10 c11"
     height="1.5rem"
   />
   <form
     onSubmit={undefined}
   >
     <div
-      className="c16"
+      className="c17"
       disabled={false}
       name="card"
     >
       <div
-        className="c17"
+        className="c18 c19 c20"
         disabled={false}
         name="card-header"
         onClick={[Function]}
       >
         <div
-          className="c18 c19"
+          className="c21 c22"
         >
           <div
-            className="c20"
+            className="c23"
           >
             <div
-              className="c21 c22"
+              className="c24 c25 c20"
               disabled={false}
               name="card-header-meta"
             >
               <div
-                className="c23"
+                className="c26"
               >
                 <span>
                   name1: 
@@ -3603,9 +3345,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
               </div>
             </div>
             <svg
-              className=""
               height="6"
-              innerRef={undefined}
               onClick={[Function]}
               style={
                 Object {
@@ -3625,27 +3365,28 @@ exports[`renders <Tags editing /> without throwing 1`] = `
         </div>
       </div>
       <div
-        className="c24"
+        className="c27 c28"
+        disabled={false}
         name="card-outlet"
       >
         <div
-          className="c25"
+          className="c29"
         >
           <div
-            className="c26"
+            className="c30"
             wrap={true}
           >
             <div
-              className="c27"
+              className="c31"
             >
               <div
-                className="baseline-jVaZNU kXgQxt c28"
+                className="c32"
                 name="name"
                 role="group"
                 style={undefined}
               >
                 <label
-                  className="c3"
+                  className="c5 c6"
                   htmlFor="B"
                 >
                   Tag
@@ -3653,57 +3394,57 @@ exports[`renders <Tags editing /> without throwing 1`] = `
                   key
                 </label>
                 <div
-                  className="c4"
+                  className="c7"
                 >
                   <input
-                    className="c5"
+                    className="c8"
                     disabled={false}
                     id="B"
                     onBlur={null}
                   />
                   <div
-                    className="c8"
+                    className="c11"
                   >
                     <div
-                      className="c29"
+                      className="c33"
                     />
                   </div>
                 </div>
               </div>
             </div>
             <div
-              className="c30"
+              className="c34"
             />
             <div
-              className="c27"
+              className="c31"
             >
               <div
-                className="baseline-jVaZNU kXgQxt c28"
+                className="c32"
                 name="value"
                 role="group"
                 style={undefined}
               >
                 <label
-                  className="c3"
+                  className="c5 c6"
                   htmlFor="C"
                 >
                   Tag
                    value
                 </label>
                 <div
-                  className="c4"
+                  className="c7"
                 >
                   <input
-                    className="c5"
+                    className="c8"
                     disabled={false}
                     id="C"
                     onBlur={null}
                   />
                   <div
-                    className="c8"
+                    className="c11"
                   >
                     <div
-                      className="c29"
+                      className="c33"
                     />
                   </div>
                 </div>
@@ -3711,16 +3452,16 @@ exports[`renders <Tags editing /> without throwing 1`] = `
             </div>
           </div>
           <div
-            className="c31"
+            className="c35"
           >
             <div
-              className="c32"
+              className="c36"
             >
               <div
-                className="c33"
+                className="c37"
               >
                 <button
-                  className="c34 c10 c11"
+                  className="c38 c39 c13 c14 c15"
                   data-ui-button="true"
                   disabled={false}
                   href=""
@@ -3732,7 +3473,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
                   </span>
                 </button>
                 <button
-                  className="c35 c10 c11"
+                  className="c40 c13 c14 c15"
                   data-ui-button="true"
                   disabled={true}
                   href=""
@@ -3744,10 +3485,10 @@ exports[`renders <Tags editing /> without throwing 1`] = `
                 </button>
               </div>
               <div
-                className="c36"
+                className="c41"
               >
                 <button
-                  className="c37 c10 c11"
+                  className="c42 c13 c14 c15"
                   data-ui-button="true"
                   disabled={false}
                   href=""
@@ -3755,24 +3496,26 @@ exports[`renders <Tags editing /> without throwing 1`] = `
                   onClick={[Function]}
                   type="button"
                 >
-                  <svg
-                    className=""
-                    height="16"
-                    innerRef={undefined}
-                    style={
-                      Object {
-                        "transform": "rotate(0deg)",
-                      }
-                    }
-                    viewBox="0 0 12 16"
-                    width="12"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    className="c43"
                   >
-                    <path
-                      d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                      fill="rgb(210, 67, 58)"
-                    />
-                  </svg>
+                    <svg
+                      height="16"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 12 16"
+                      width="12"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                        fill="rgb(210, 67, 58)"
+                      />
+                    </svg>
+                  </div>
                   <span>
                     Remove
                   </span>
@@ -3785,10 +3528,10 @@ exports[`renders <Tags editing /> without throwing 1`] = `
     </div>
   </form>
   <div
-    className="c38"
+    className="c44"
   >
     <h3
-      className="c39"
+      className="c45"
     >
       0
        tag
@@ -3796,35 +3539,39 @@ exports[`renders <Tags editing /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c40"
+    className="c46"
   />
 </div>
 `;
 
 exports[`renders <Tags editing.removing /> without throwing 1`] = `
-.c4 {
+.c2 {
+  margin-bottom: 1.125rem;
+}
+
+.c7 {
   margin-top: 0.1875rem;
 }
 
-.c31 {
+.c35 {
   margin-top: 0.375rem;
 }
 
-.c42 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+.c47 {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
 }
 
-.c19 {
+.c22 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c25 {
+.c29 {
   padding: 1.125rem;
 }
 
-.c11 {
+.c15 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3834,55 +3581,41 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
-}
-
-.c39 {
+.c44 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c40 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
+.c45 {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
-.c41 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
+.c46 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
-.c38 {
+.c43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3910,16 +3643,15 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   flex: 1 0 auto;
 }
 
-.c10 {
+.c14 {
+  min-width: 7.5rem;
+}
+
+.c13 {
   display: inline-block;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c34 {
+.c39 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3961,10 +3693,9 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c34:focus {
+.c39:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3972,43 +3703,43 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c34:hover {
+.c39:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
+.c39:active,
+.c39:active:hover,
+.c39:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c34[disabled] {
+.c39[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c34:focus {
+.c39:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c34:hover {
+.c39:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
+.c39:active,
+.c39:active:hover,
+.c39:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c35 {
+.c40 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4051,10 +3782,9 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   color: rgb(216,216,216);
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
-  margin: 0;
 }
 
-.c35:focus {
+.c40:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4062,43 +3792,43 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c35:hover {
+.c40:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
+.c40:active,
+.c40:active:hover,
+.c40:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c35[disabled] {
+.c40[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c35:focus {
+.c40:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c35:hover {
+.c40:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
+.c40:active,
+.c40:active:hover,
+.c40:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4153,7 +3883,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c9:focus {
+.c12:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4161,51 +3891,43 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c9:hover {
+.c12:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c9[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c9:focus {
+.c12:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c9:hover {
+.c12:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
-}
-
-.c37 {
+.c42 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4264,11 +3986,10 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
   float: right;
 }
 
-.c37:focus {
+.c42:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4276,87 +3997,79 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c37:hover {
+.c42:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c37[disabled] {
+.c42[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c37:focus {
+.c42:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c37:hover {
+.c42:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c37:focus {
+.c42:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c37:hover {
+.c42:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c37:focus {
+.c42:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c37:hover {
+.c42:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c37 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c37 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -4364,23 +4077,14 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4399,7 +4103,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c32 {
+.c36 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4416,16 +4120,6 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   flex-wrap: wrap;
   margin-right: -0.625rem;
   margin-left: -0.625rem;
-}
-
-.c29 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
 }
 
 .c33 {
@@ -4438,7 +4132,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   display: block;
 }
 
-.c36 {
+.c37 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4448,62 +4142,40 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   display: block;
 }
 
-.c43 {
+.c41 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c48 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c43 + p,
-.c43 + small,
-.c43 + h1,
-.c43 + h2,
-.c43 + label,
-.c43 + h3,
-.c43 + h4,
-.c43 + h5,
-.c43 + div,
-.c43 + span {
-  margin-top: 0.75rem;
-}
-
-.c7 {
+.c10 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
-.c12 {
+.c16 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.25rem;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c14 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.5rem;
-}
-
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4525,9 +4197,13 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c20 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4560,7 +4236,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   flex-basis: 100%;
 }
 
-.c26 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4590,7 +4266,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c27 {
+.c31 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4610,7 +4286,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c30 {
+.c34 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4628,73 +4304,6 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -webkit-flex-basis: 0.75rem;
   -ms-flex-preferred-size: 0.75rem;
   flex-basis: 0.75rem;
-}
-
-.c16 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-}
-
-.c24 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-}
-
-.c24 > [name='card']:not(:last-child) {
-  margin-bottom: 0.8125rem;
-}
-
-.c24 > [name='card']:last-child {
-  margin-bottom: 0.4375rem;
 }
 
 .c17 {
@@ -4717,28 +4326,32 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   color: rgb(73,73,73);
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  height: auto;
-  max-width: 100%;
-  margin: -0.0625rem -0.0625rem 0 -0.0625rem;
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c17 button {
-  margin-bottom: 0;
-  margin-top: 0;
+.c28 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
 }
 
-.c22 {
+.c20 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4764,6 +4377,35 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   -webkit-flex: 0 0 2.875rem;
   -ms-flex: 0 0 2.875rem;
   flex: 0 0 2.875rem;
+}
+
+.c27 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.c19 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  height: auto;
+  max-width: 100%;
+}
+
+.c25 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -4797,30 +4439,24 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   color: inherit;
 }
 
-.c2 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c6 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -4828,15 +4464,12 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   float: right;
 }
 
-.c28 {
+.c32 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -4844,7 +4477,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c8 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -4866,46 +4499,52 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c8:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c8::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c8:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c8:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c8:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c8:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c8:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c23 {
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c26 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -4915,19 +4554,28 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 .c18 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.c38 {
+  margin-right: 0.375rem;
+}
+
+.c21 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c21 {
+.c24 {
   height: 2.9375rem;
   max-width: 98%;
 }
 
-.c44 {
-  margin: 0;
+.c49 {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4940,20 +4588,65 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c36 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c36 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c33 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c37 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c41 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
   }
 }
 
@@ -4964,151 +4657,110 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   }
 }
 
-@media only screen and (min-width:0em) {
-  .c32 {
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c32 {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c29 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c33 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c36 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-  }
-}
-
 <div
-  className="c0"
+  className="c0 c1"
 >
-  <form
-    onSubmit={undefined}
+  <div
+    className="c2"
   >
-    <div
-      className="c1"
+    <form
+      onSubmit={undefined}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
+        className="c3"
       >
-        <label
-          className="c3"
-          htmlFor="G"
-        >
-          Filter tags
-        </label>
         <div
           className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
         >
-          <input
-            className="c5"
-            disabled={false}
-            id="G"
-            onBlur={undefined}
-            placeholder="Search by name or value"
+          <label
+            className="c5 c6"
+            htmlFor="G"
+          >
+            Filter tags
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={false}
+              id="G"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
           />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={true}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Tag
+          </button>
         </div>
       </div>
       <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={true}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Tag
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
   <div
-    className="c13 c8"
+    className="c10 c11"
     height="0.6875rem"
   />
   <div
-    className="c14 c8"
+    className="c16 c11"
     height="0.0625rem"
   />
   <div
-    className="c15 c8"
+    className="c10 c11"
     height="1.5rem"
   />
   <form
     onSubmit={undefined}
   >
     <div
-      className="c16"
+      className="c17"
       disabled={false}
       name="card"
     >
       <div
-        className="c17"
+        className="c18 c19 c20"
         disabled={false}
         name="card-header"
         onClick={[Function]}
       >
         <div
-          className="c18 c19"
+          className="c21 c22"
         >
           <div
-            className="c20"
+            className="c23"
           >
             <div
-              className="c21 c22"
+              className="c24 c25 c20"
               disabled={false}
               name="card-header-meta"
             >
               <div
-                className="c23"
+                className="c26"
               >
                 <span>
                   name1: 
@@ -5119,9 +4771,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
               </div>
             </div>
             <svg
-              className=""
               height="6"
-              innerRef={undefined}
               onClick={[Function]}
               style={
                 Object {
@@ -5141,27 +4791,28 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
         </div>
       </div>
       <div
-        className="c24"
+        className="c27 c28"
+        disabled={false}
         name="card-outlet"
       >
         <div
-          className="c25"
+          className="c29"
         >
           <div
-            className="c26"
+            className="c30"
             wrap={true}
           >
             <div
-              className="c27"
+              className="c31"
             >
               <div
-                className="baseline-jVaZNU kXgQxt c28"
+                className="c32"
                 name="name"
                 role="group"
                 style={undefined}
               >
                 <label
-                  className="c3"
+                  className="c5 c6"
                   htmlFor="J"
                 >
                   Tag
@@ -5169,57 +4820,57 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                   key
                 </label>
                 <div
-                  className="c4"
+                  className="c7"
                 >
                   <input
-                    className="c5"
+                    className="c8"
                     disabled={false}
                     id="J"
                     onBlur={null}
                   />
                   <div
-                    className="c8"
+                    className="c11"
                   >
                     <div
-                      className="c29"
+                      className="c33"
                     />
                   </div>
                 </div>
               </div>
             </div>
             <div
-              className="c30"
+              className="c34"
             />
             <div
-              className="c27"
+              className="c31"
             >
               <div
-                className="baseline-jVaZNU kXgQxt c28"
+                className="c32"
                 name="value"
                 role="group"
                 style={undefined}
               >
                 <label
-                  className="c3"
+                  className="c5 c6"
                   htmlFor="K"
                 >
                   Tag
                    value
                 </label>
                 <div
-                  className="c4"
+                  className="c7"
                 >
                   <input
-                    className="c5"
+                    className="c8"
                     disabled={false}
                     id="K"
                     onBlur={null}
                   />
                   <div
-                    className="c8"
+                    className="c11"
                   >
                     <div
-                      className="c29"
+                      className="c33"
                     />
                   </div>
                 </div>
@@ -5227,16 +4878,16 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
             </div>
           </div>
           <div
-            className="c31"
+            className="c35"
           >
             <div
-              className="c32"
+              className="c36"
             >
               <div
-                className="c33"
+                className="c37"
               >
                 <button
-                  className="c34 c10 c11"
+                  className="c38 c39 c13 c14 c15"
                   data-ui-button="true"
                   disabled={false}
                   href=""
@@ -5248,7 +4899,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                   </span>
                 </button>
                 <button
-                  className="c35 c10 c11"
+                  className="c40 c13 c14 c15"
                   data-ui-button="true"
                   disabled={true}
                   href=""
@@ -5260,10 +4911,10 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                 </button>
               </div>
               <div
-                className="c36"
+                className="c41"
               >
                 <button
-                  className="c37 c10 c11"
+                  className="c42 c13 c14 c15"
                   data-ui-button="true"
                   disabled={false}
                   href=""
@@ -5272,28 +4923,28 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                   type="button"
                 >
                   <div
-                    className="c38"
+                    className="c43"
                   >
                     <svg
                       height="10"
                       width="28"
                     >
                       <rect
-                        className="c39"
+                        className="c44"
                         height="6"
                         width="6"
                         x="2"
                         y="2"
                       />
                       <rect
-                        className="c40"
+                        className="c45 c44"
                         height="6"
                         width="6"
                         x="11"
                         y="2"
                       />
                       <rect
-                        className="c41"
+                        className="c46 c44"
                         height="6"
                         width="6"
                         x="20"
@@ -5310,10 +4961,10 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
     </div>
   </form>
   <div
-    className="c42"
+    className="c47"
   >
     <h3
-      className="c43"
+      className="c48"
     >
       0
        tag
@@ -5321,22 +4972,26 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c44"
+    className="c49"
   />
 </div>
 `;
 
 exports[`renders <Tags error /> without throwing 1`] = `
-.c4 {
+.c2 {
+  margin-bottom: 1.125rem;
+}
+
+.c7 {
   margin-top: 0.1875rem;
 }
 
-.c16 {
+.c17 {
   margin-top: 0rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.875rem;
 }
 
-.c11 {
+.c15 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -5346,39 +5001,32 @@ exports[`renders <Tags error /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
+.c14 {
+  min-width: 7.5rem;
 }
 
-.c10 {
+.c13 {
   display: inline-block;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5428,7 +5076,7 @@ exports[`renders <Tags error /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c9:focus {
+.c12:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5436,34 +5084,26 @@ exports[`renders <Tags error /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c9:hover {
+.c12:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c9[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -5471,23 +5111,14 @@ exports[`renders <Tags error /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5506,62 +5137,30 @@ exports[`renders <Tags error /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c17 {
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c18 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c17 + p,
-.c17 + small,
-.c17 + h1,
-.c17 + h2,
-.c17 + label,
-.c17 + h3,
-.c17 + h4,
-.c17 + h5,
-.c17 + div,
-.c17 + span {
-  margin-top: 0.75rem;
-}
-
-.c7 {
+.c10 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
-.c12 {
+.c16 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.25rem;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c14 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.5rem;
-}
-
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5583,32 +5182,30 @@ exports[`renders <Tags error /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c2 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c6 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -5616,7 +5213,7 @@ exports[`renders <Tags error /> without throwing 1`] = `
   float: right;
 }
 
-.c5 {
+.c8 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -5638,47 +5235,52 @@ exports[`renders <Tags error /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c8:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c8::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c8:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c8:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c8:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c8:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c8:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c18 {
-  margin: 0;
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c19 {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5691,19 +5293,19 @@ exports[`renders <Tags error /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
   }
 }
@@ -5716,83 +5318,87 @@ exports[`renders <Tags error /> without throwing 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
-  <form
-    onSubmit={undefined}
+  <div
+    className="c2"
   >
-    <div
-      className="c1"
+    <form
+      onSubmit={undefined}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
+        className="c3"
       >
-        <label
-          className="c3"
-          htmlFor="q"
-        >
-          Filter tags
-        </label>
         <div
           className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
         >
-          <input
-            className="c5"
-            disabled={false}
-            id="q"
-            onBlur={undefined}
-            placeholder="Search by name or value"
+          <label
+            className="c5 c6"
+            htmlFor="q"
+          >
+            Filter tags
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={false}
+              id="q"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
           />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Tag
+          </button>
         </div>
       </div>
       <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Tag
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
   <div
-    className="c13 c8"
+    className="c10 c11"
     height="0.6875rem"
   />
   <div
-    className="c14 c8"
+    className="c16 c11"
     height="0.0625rem"
   />
   <div
-    className="c15 c8"
+    className="c10 c11"
     height="1.5rem"
   />
   <div
-    className="c16"
+    className="c17"
   >
     <h3
-      className="c17"
+      className="c18"
     >
       0
        tag
@@ -5800,17 +5406,21 @@ exports[`renders <Tags error /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c18"
+    className="c19"
   />
 </div>
 `;
 
 exports[`renders <Tags loading /> without throwing 1`] = `
-.c4 {
+.c2 {
+  margin-bottom: 1.125rem;
+}
+
+.c7 {
   margin-top: 0.1875rem;
 }
 
-.c11 {
+.c15 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -5820,43 +5430,21 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
-}
-
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
-}
-
-.c15 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-}
-
-.c16 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
 }
 
 .c17 {
@@ -5864,27 +5452,25 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c18 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c19 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
-.c18 {
+.c21 {
   color: rgb(73,73,73);
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  -webkit-align-self: stretch;
-  -ms-flex-item-align: stretch;
-  align-self: stretch;
-  text-align: center;
-  margin-bottom: 0;
-  margin-left: 0.375rem;
 }
 
-.c14 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5912,16 +5498,25 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   flex: 1 0 auto;
 }
 
-.c10 {
+.c20 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+}
+
+.c14 {
+  min-width: 7.5rem;
+}
+
+.c13 {
   display: inline-block;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5971,7 +5566,7 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c9:focus {
+.c12:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5979,34 +5574,26 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c9:hover {
+.c12:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c9[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -6014,23 +5601,14 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6049,28 +5627,19 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c7 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.3125rem;
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
 }
 
-.c12 {
+.c10 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.25rem;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6092,32 +5661,30 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c2 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c6 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -6125,7 +5692,7 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   float: right;
 }
 
-.c5 {
+.c8 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -6150,71 +5717,77 @@ exports[`renders <Tags loading /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c8:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c8::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c8:invalid {
   box-shadow: none;
 }
 
-.c5::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c5::-moz-placeholder {
+.c8::-moz-placeholder {
   color: rgb(216,216,216);
 }
 
-.c5:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c5:disabled {
+.c8:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c8:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c8:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c8:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
   }
 }
@@ -6227,93 +5800,97 @@ exports[`renders <Tags loading /> without throwing 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
-  <form
-    onSubmit={undefined}
+  <div
+    className="c2"
   >
-    <div
-      className="c1"
+    <form
+      onSubmit={undefined}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
+        className="c3"
       >
-        <label
-          className="c3"
-          htmlFor="n"
-        >
-          Filter tags
-        </label>
         <div
           className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
         >
-          <input
-            className="c5"
-            disabled={true}
-            id="n"
-            onBlur={undefined}
-            placeholder="Search by name or value"
+          <label
+            className="c5 c6"
+            htmlFor="n"
+          >
+            Filter tags
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={true}
+              id="n"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
           />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Tag
+          </button>
         </div>
       </div>
       <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Tag
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
   <div
-    className="c13 c8"
+    className="c10 c11"
     height="0.6875rem"
   />
   <div
-    className="c14"
+    className="c16"
   >
     <svg
       height="10"
       width="28"
     >
       <rect
-        className="c15"
+        className="c17"
         height="6"
         width="6"
         x="2"
         y="2"
       />
       <rect
-        className="c16"
+        className="c18 c17"
         height="6"
         width="6"
         x="11"
         y="2"
       />
       <rect
-        className="c17"
+        className="c19 c17"
         height="6"
         width="6"
         x="20"
@@ -6321,7 +5898,7 @@ exports[`renders <Tags loading /> without throwing 1`] = `
       />
     </svg>
     <p
-      className="c18"
+      className="c20 c21"
     >
       Loading...
     </p>
@@ -6330,21 +5907,25 @@ exports[`renders <Tags loading /> without throwing 1`] = `
 `;
 
 exports[`renders <Tags tags /> without throwing 1`] = `
-.c4 {
+.c2 {
+  margin-bottom: 1.125rem;
+}
+
+.c7 {
   margin-top: 0.1875rem;
 }
 
-.c16 {
+.c17 {
   margin-top: 0rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.875rem;
 }
 
-.c19 {
+.c20 {
   margin-right: 0.375rem;
   margin-bottom: 0.375rem;
 }
 
-.c11 {
+.c15 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -6354,39 +5935,32 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c11::-moz-focus-inner,
-.c11[type='button']::-moz-focus-inner,
-.c11[type='reset']::-moz-focus-inner,
-.c11[type='submit']::-moz-focus-inner {
+.c15::-moz-focus-inner,
+.c15[type='button']::-moz-focus-inner,
+.c15[type='reset']::-moz-focus-inner,
+.c15[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c11:-moz-focusring,
-.c11[type='button']:-moz-focusring,
-.c11[type='reset']:-moz-focusring,
-.c11[type='submit']:-moz-focusring {
+.c15:-moz-focusring,
+.c15[type='button']:-moz-focusring,
+.c15[type='reset']:-moz-focusring,
+.c15[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
+.c14 {
+  min-width: 7.5rem;
 }
 
-.c10 {
+.c13 {
   display: inline-block;
 }
 
-.c10 + button,
-.c10 + a {
-  margin-left: 0.375rem;
-}
-
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6436,7 +6010,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c9:focus {
+.c12:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6444,34 +6018,26 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c9:hover {
+.c12:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c12:active,
+.c12:active:hover,
+.c12:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c9[disabled] {
+.c12[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c9 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c9 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c6 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -6479,23 +6045,14 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c0 {
+.c1 {
   margin-right: auto;
   margin-left: auto;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 62.5rem;
-  padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6514,62 +6071,30 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c17 {
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 62.5rem;
+  padding-bottom: 1.125rem;
+}
+
+.c18 {
   color: rgb(73,73,73);
   font-weight: normal;
   line-height: 1.625rem;
   font-size: 1.3125rem;
-  margin: 0;
 }
 
-.c17 + p,
-.c17 + small,
-.c17 + h1,
-.c17 + h2,
-.c17 + label,
-.c17 + h3,
-.c17 + h4,
-.c17 + h5,
-.c17 + div,
-.c17 + span {
-  margin-top: 0.75rem;
-}
-
-.c7 {
+.c10 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 1.3125rem;
 }
 
-.c12 {
+.c16 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.25rem;
 }
 
-.c13 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 0.6875rem;
-}
-
-.c14 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
-}
-
-.c15 {
-  background-color: rgb(216,216,216);
-  margin: 0;
-  background-color: transparent;
-  height: 1.5rem;
-}
-
-.c1 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6591,32 +6116,30 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
-.c2 {
+.c4 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
 }
 
-.c6 {
+.c9 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -6624,7 +6147,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   float: right;
 }
 
-.c5 {
+.c8 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -6646,46 +6169,52 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c8:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c8::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c8::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c8:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c8:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c8:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c8:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c8:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c8:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c20 {
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6700,7 +6229,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   flex-grow: 1;
 }
 
-.c21 {
+.c22 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -6721,8 +6250,7 @@ exports[`renders <Tags tags /> without throwing 1`] = `
   align-items: center;
 }
 
-.c18 {
-  margin: 0;
+.c19 {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6735,19 +6263,19 @@ exports[`renders <Tags tags /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c0 {
+  .c1 {
     width: 46rem;
   }
 }
 
 @media only screen and (min-width:64em) {
-  .c0 {
+  .c1 {
     width: 56rem;
   }
 }
 
 @media only screen and (min-width:75em) {
-  .c0 {
+  .c1 {
     width: 59rem;
   }
 }
@@ -6760,83 +6288,87 @@ exports[`renders <Tags tags /> without throwing 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 c1"
 >
-  <form
-    onSubmit={undefined}
+  <div
+    className="c2"
   >
-    <div
-      className="c1"
+    <form
+      onSubmit={undefined}
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
-        name="filter"
-        role="group"
-        style={undefined}
+        className="c3"
       >
-        <label
-          className="c3"
-          htmlFor="L"
-        >
-          Filter tags
-        </label>
         <div
           className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
         >
-          <input
-            className="c5"
-            disabled={false}
-            id="L"
-            onBlur={undefined}
-            placeholder="Search by name or value"
+          <label
+            className="c5 c6"
+            htmlFor="L"
+          >
+            Filter tags
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={false}
+              id="L"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <div
+            className="c10 c11"
+            height="1.3125rem"
           />
+          <button
+            className="c12 c13 c14 c15"
+            data-ui-button="true"
+            disabled={false}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Tag
+          </button>
         </div>
       </div>
       <div
-        className="baseline-jVaZNU kXgQxt c6"
-        role="group"
-        style={undefined}
-      >
-        <div
-          className="c7 c8"
-          height="1.3125rem"
-        />
-        <button
-          className="c9 c10 c11"
-          data-ui-button="true"
-          disabled={false}
-          href=""
-          icon={true}
-          onClick={[Function]}
-          to={undefined}
-          type="button"
-        >
-          Add Tag
-        </button>
-      </div>
-    </div>
-    <div
-      className="c12 c8"
-      height="1.25rem"
-    />
-  </form>
+        className="c10 c11"
+        height="1.25rem"
+      />
+    </form>
+  </div>
   <div
-    className="c13 c8"
+    className="c10 c11"
     height="0.6875rem"
   />
   <div
-    className="c14 c8"
+    className="c16 c11"
     height="0.0625rem"
   />
   <div
-    className="c15 c8"
+    className="c10 c11"
     height="1.5rem"
   />
   <div
-    className="c16"
+    className="c17"
   >
     <h3
-      className="c17"
+      className="c18"
     >
       3
        tag
@@ -6844,16 +6376,16 @@ exports[`renders <Tags tags /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c18"
+    className="c19"
   >
     <div
-      className="c19"
+      className="c20"
     >
       <div
-        className="c20"
+        className="c21"
       >
         <li
-          className="c21"
+          className="c22"
           onClick={undefined}
         >
           name1: value1
@@ -6861,13 +6393,13 @@ exports[`renders <Tags tags /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c19"
+      className="c20"
     >
       <div
-        className="c20"
+        className="c21"
       >
         <li
-          className="c21"
+          className="c22"
           onClick={undefined}
         >
           name2: value2
@@ -6875,13 +6407,13 @@ exports[`renders <Tags tags /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c19"
+      className="c20"
     >
       <div
-        className="c20"
+        className="c21"
       >
         <li
-          className="c21"
+          className="c22"
           onClick={undefined}
         >
           name3: value3

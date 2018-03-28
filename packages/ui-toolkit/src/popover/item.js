@@ -3,15 +3,10 @@ import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
-import Baseline from '../baseline';
 
 const BaseItem = styled.span`
   display: block;
   text-align: left;
-
-  &:not(:last-child) {
-    margin-bottom: ${remcalc(12)};
-  }
 
   ${isNot('disabled')`
     cursor: pointer;
@@ -50,4 +45,4 @@ class Item extends Component {
   };
 }
 
-export default Baseline(Item);
+export default Item;

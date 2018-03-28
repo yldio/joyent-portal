@@ -58,7 +58,6 @@ const InputLabel = styled.label`
   border-radius: ${remcalc(23)};
   transition: all 0.3s ease;
   border: ${remcalc(1)} solid ${props => props.theme.grey};
-  margin-right: ${remcalc(6)};
 
   &::selection {
     background: none;

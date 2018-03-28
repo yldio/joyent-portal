@@ -180,13 +180,17 @@ export const ToggleFirewallForm = ({
         <Flex alignCenter>
           {left ? (
             <Fragment>
-              <Toggle disabled={submitting} />
+              <Margin right={2}>
+                <Toggle disabled={submitting} />
+              </Margin>
               <FormLabel marginless>Enable Firewall</FormLabel>
             </Fragment>
           ) : (
             <Fragment>
               <FormLabel marginless>Enable Firewall</FormLabel>
-              <Toggle disabled={submitting} />
+              <Margin left={2}>
+                <Toggle disabled={submitting} />
+              </Margin>
             </Fragment>
           )}
         </Flex>
@@ -199,7 +203,12 @@ export const ToggleInactiveForm = () => (
   <form>
     <FormGroup name="inactive" type="checkbox" field={Field}>
       <Flex alignCenter>
-        <Toggle>Show inactive rules</Toggle>
+        <Fragment>
+          <Margin right={2}>
+            <Toggle />
+          </Margin>
+          <FormLabel marginless>Show inactive rules</FormLabel>
+        </Fragment>
       </Flex>
     </FormGroup>
   </form>

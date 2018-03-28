@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Name /> without throwing 1`] = `
-.c4 {
+.c5 {
   margin-top: 0.1875rem;
 }
 
-.c9 {
+.c10 {
   margin-left: 0.375rem;
 }
 
@@ -53,7 +53,7 @@ exports[`renders <Name /> without throwing 1`] = `
   display: flex;
 }
 
-.c6 {
+.c7 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -70,7 +70,7 @@ exports[`renders <Name /> without throwing 1`] = `
   display: block;
 }
 
-.c12 {
+.c14 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -80,39 +80,32 @@ exports[`renders <Name /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c12::-moz-focus-inner,
-.c12[type='button']::-moz-focus-inner,
-.c12[type='reset']::-moz-focus-inner,
-.c12[type='submit']::-moz-focus-inner {
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c12:-moz-focusring,
-.c12[type='button']:-moz-focusring,
-.c12[type='reset']:-moz-focusring,
-.c12[type='submit']:-moz-focusring {
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c12 + button,
-.c12 + a {
-  margin-left: 0.375rem;
+.c13 {
+  min-width: 7.5rem;
 }
 
-.c11 {
+.c12 {
   display: inline-block;
 }
 
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
-}
-
-.c10 {
+.c11 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -162,11 +155,9 @@ exports[`renders <Name /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
-  margin-top: 0.5rem;
 }
 
-.c10:focus {
+.c11:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -174,51 +165,43 @@ exports[`renders <Name /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c10:hover {
+.c11:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c10:active,
-.c10:active:hover,
-.c10:active:focus {
+.c11:active,
+.c11:active:hover,
+.c11:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c10[disabled] {
+.c11[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c10:focus {
+.c11:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c10:hover {
+.c11:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c10:active,
-.c10:active:hover,
-.c10:active:focus {
+.c11:active,
+.c11:active:hover,
+.c11:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c10 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c10 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -226,14 +209,9 @@ exports[`renders <Name /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -252,22 +230,17 @@ exports[`renders <Name /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c7 {
+.c8 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 0.8125rem;
 }
 
 .c2 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -275,7 +248,7 @@ exports[`renders <Name /> without throwing 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -297,43 +270,49 @@ exports[`renders <Name /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c6:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c6::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c6:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c6:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c6:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c6:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c6:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c3 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 <form>
@@ -345,22 +324,22 @@ exports[`renders <Name /> without throwing 1`] = `
       className="c1"
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
+        className="c2"
         name="name"
         role="group"
         style={undefined}
       >
         <label
-          className="c3"
+          className="c3 c4"
           htmlFor="k"
         >
           Instance name
         </label>
         <div
-          className="c4"
+          className="c5"
         >
           <input
-            className="c5"
+            className="c6"
             disabled={false}
             id="k"
             onBlur={null}
@@ -370,17 +349,17 @@ exports[`renders <Name /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c6"
+      className="c7"
     >
       <div
-        className="c7 c8"
+        className="c8 c9"
         height="0.8125rem"
       />
       <div
-        className="c9"
+        className="c10"
       >
         <button
-          className="c10 c11 c12"
+          className="c11 c12 c13 c14"
           data-ui-button="true"
           href=""
           icon={true}
@@ -388,9 +367,7 @@ exports[`renders <Name /> without throwing 1`] = `
           type="button"
         >
           <svg
-            className=""
             height="18.22"
-            innerRef={undefined}
             style={
               Object {
                 "transform": "rotate(0deg)",
@@ -418,11 +395,11 @@ exports[`renders <Name /> without throwing 1`] = `
 `;
 
 exports[`renders <Name expanded /> without throwing 1`] = `
-.c4 {
+.c5 {
   margin-top: 0.1875rem;
 }
 
-.c9 {
+.c10 {
   margin-left: 0.375rem;
 }
 
@@ -470,7 +447,7 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   display: flex;
 }
 
-.c6 {
+.c7 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -487,7 +464,7 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   display: block;
 }
 
-.c12 {
+.c14 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -497,39 +474,32 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c12::-moz-focus-inner,
-.c12[type='button']::-moz-focus-inner,
-.c12[type='reset']::-moz-focus-inner,
-.c12[type='submit']::-moz-focus-inner {
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c12:-moz-focusring,
-.c12[type='button']:-moz-focusring,
-.c12[type='reset']:-moz-focusring,
-.c12[type='submit']:-moz-focusring {
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c12 + button,
-.c12 + a {
-  margin-left: 0.375rem;
+.c13 {
+  min-width: 7.5rem;
 }
 
-.c11 {
+.c12 {
   display: inline-block;
 }
 
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
-}
-
-.c10 {
+.c11 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -579,11 +549,9 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
-  margin-top: 0.5rem;
 }
 
-.c10:focus {
+.c11:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -591,51 +559,43 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c10:hover {
+.c11:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c10:active,
-.c10:active:hover,
-.c10:active:focus {
+.c11:active,
+.c11:active:hover,
+.c11:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c10[disabled] {
+.c11[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c10:focus {
+.c11:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c10:hover {
+.c11:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c10:active,
-.c10:active:hover,
-.c10:active:focus {
+.c11:active,
+.c11:active:hover,
+.c11:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c10 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c10 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -643,14 +603,9 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -669,22 +624,17 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c7 {
+.c8 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 0.8125rem;
 }
 
 .c2 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -692,7 +642,7 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -714,43 +664,49 @@ exports[`renders <Name expanded /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c6:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c6::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c6:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c6:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c6:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c6:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c6:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c3 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 <form>
@@ -762,22 +718,22 @@ exports[`renders <Name expanded /> without throwing 1`] = `
       className="c1"
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
+        className="c2"
         name="name"
         role="group"
         style={undefined}
       >
         <label
-          className="c3"
+          className="c3 c4"
           htmlFor="l"
         >
           Instance name
         </label>
         <div
-          className="c4"
+          className="c5"
         >
           <input
-            className="c5"
+            className="c6"
             disabled={false}
             id="l"
             onBlur={null}
@@ -787,17 +743,17 @@ exports[`renders <Name expanded /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c6"
+      className="c7"
     >
       <div
-        className="c7 c8"
+        className="c8 c9"
         height="0.8125rem"
       />
       <div
-        className="c9"
+        className="c10"
       >
         <button
-          className="c10 c11 c12"
+          className="c11 c12 c13 c14"
           data-ui-button="true"
           href=""
           icon={true}
@@ -805,9 +761,7 @@ exports[`renders <Name expanded /> without throwing 1`] = `
           type="button"
         >
           <svg
-            className=""
             height="18.22"
-            innerRef={undefined}
             style={
               Object {
                 "transform": "rotate(0deg)",
@@ -835,11 +789,11 @@ exports[`renders <Name expanded /> without throwing 1`] = `
 `;
 
 exports[`renders <Name name="test" /> without throwing 1`] = `
-.c4 {
+.c5 {
   margin-top: 0.1875rem;
 }
 
-.c9 {
+.c10 {
   margin-left: 0.375rem;
 }
 
@@ -887,7 +841,7 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   display: flex;
 }
 
-.c6 {
+.c7 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -904,7 +858,7 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   display: block;
 }
 
-.c12 {
+.c14 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -914,39 +868,32 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c12::-moz-focus-inner,
-.c12[type='button']::-moz-focus-inner,
-.c12[type='reset']::-moz-focus-inner,
-.c12[type='submit']::-moz-focus-inner {
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c12:-moz-focusring,
-.c12[type='button']:-moz-focusring,
-.c12[type='reset']:-moz-focusring,
-.c12[type='submit']:-moz-focusring {
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c12 + button,
-.c12 + a {
-  margin-left: 0.375rem;
+.c13 {
+  min-width: 7.5rem;
 }
 
-.c11 {
+.c12 {
   display: inline-block;
 }
 
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
-}
-
-.c10 {
+.c11 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -996,11 +943,9 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
-  margin-top: 0.5rem;
 }
 
-.c10:focus {
+.c11:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1008,51 +953,43 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c10:hover {
+.c11:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c10:active,
-.c10:active:hover,
-.c10:active:focus {
+.c11:active,
+.c11:active:hover,
+.c11:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c10[disabled] {
+.c11[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c10:focus {
+.c11:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c10:hover {
+.c11:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c10:active,
-.c10:active:hover,
-.c10:active:focus {
+.c11:active,
+.c11:active:hover,
+.c11:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c10 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c10 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1060,14 +997,9 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1086,22 +1018,17 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c7 {
+.c8 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 0.8125rem;
 }
 
 .c2 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -1109,7 +1036,7 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1131,43 +1058,49 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c6:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c6::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c6:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c6:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c6:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c6:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c6:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c3 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 <form>
@@ -1179,22 +1112,22 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
       className="c1"
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
+        className="c2"
         name="name"
         role="group"
         style={undefined}
       >
         <label
-          className="c3"
+          className="c3 c4"
           htmlFor="m"
         >
           Instance name
         </label>
         <div
-          className="c4"
+          className="c5"
         >
           <input
-            className="c5"
+            className="c6"
             disabled={false}
             id="m"
             onBlur={null}
@@ -1204,17 +1137,17 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c6"
+      className="c7"
     >
       <div
-        className="c7 c8"
+        className="c8 c9"
         height="0.8125rem"
       />
       <div
-        className="c9"
+        className="c10"
       >
         <button
-          className="c10 c11 c12"
+          className="c11 c12 c13 c14"
           data-ui-button="true"
           href=""
           icon={true}
@@ -1222,9 +1155,7 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
           type="button"
         >
           <svg
-            className=""
             height="18.22"
-            innerRef={undefined}
             style={
               Object {
                 "transform": "rotate(0deg)",
@@ -1252,11 +1183,11 @@ exports[`renders <Name name="test" /> without throwing 1`] = `
 `;
 
 exports[`renders <Name pristine={false} /> without throwing 1`] = `
-.c4 {
+.c5 {
   margin-top: 0.1875rem;
 }
 
-.c9 {
+.c10 {
   margin-left: 0.375rem;
 }
 
@@ -1304,7 +1235,7 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   display: flex;
 }
 
-.c6 {
+.c7 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1321,7 +1252,7 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   display: block;
 }
 
-.c12 {
+.c14 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1331,39 +1262,32 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
-  min-width: 7.5rem;
 }
 
-.c12::-moz-focus-inner,
-.c12[type='button']::-moz-focus-inner,
-.c12[type='reset']::-moz-focus-inner,
-.c12[type='submit']::-moz-focus-inner {
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c12:-moz-focusring,
-.c12[type='button']:-moz-focusring,
-.c12[type='reset']:-moz-focusring,
-.c12[type='submit']:-moz-focusring {
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c12 + button,
-.c12 + a {
-  margin-left: 0.375rem;
+.c13 {
+  min-width: 7.5rem;
 }
 
-.c11 {
+.c12 {
   display: inline-block;
 }
 
-.c11 + button,
-.c11 + a {
-  margin-left: 0.375rem;
-}
-
-.c10 {
+.c11 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1413,11 +1337,9 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0;
-  margin-top: 0.5rem;
 }
 
-.c10:focus {
+.c11:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1425,51 +1347,43 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c10:hover {
+.c11:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c10:active,
-.c10:active:hover,
-.c10:active:focus {
+.c11:active,
+.c11:active:hover,
+.c11:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c10[disabled] {
+.c11[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c10:focus {
+.c11:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c10:hover {
+.c11:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c10:active,
-.c10:active:hover,
-.c10:active:focus {
+.c11:active,
+.c11:active:hover,
+.c11:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c10 svg + span {
-  margin-left: 0.75rem;
-}
-
-.c10 svg {
-  max-height: 1.125rem;
-}
-
-.c3 {
+.c4 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1477,14 +1391,9 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   display: block;
   color: rgb(70,70,70);
   text-align: left;
-  margin-bottom: 0.1875rem;
-  margin-right: 0.75rem;
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
 }
 
-.c8 {
+.c9 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1503,22 +1412,17 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c7 {
+.c8 {
   background-color: rgb(216,216,216);
-  margin: 0;
   background-color: transparent;
-  height: 0.8125rem;
 }
 
 .c2 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -1526,7 +1430,7 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   width: 100%;
 }
 
-.c5 {
+.c6 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1548,43 +1452,49 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c5:focus {
+.c6:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c5::-webkit-input-placeholder {
+.c6::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5::-moz-placeholder {
+.c6::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:-ms-input-placeholder {
+.c6:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:invalid {
+.c6:invalid {
   box-shadow: none;
 }
 
-.c5:disabled {
+.c6:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c5:disabled::-webkit-input-placeholder {
+.c6:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled::-moz-placeholder {
+.c6:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c5:disabled:-ms-input-placeholder {
+.c6:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
+}
+
+.c3 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
 }
 
 <form>
@@ -1596,22 +1506,22 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
       className="c1"
     >
       <div
-        className="baseline-jVaZNU kXgQxt c2"
+        className="c2"
         name="name"
         role="group"
         style={undefined}
       >
         <label
-          className="c3"
+          className="c3 c4"
           htmlFor="n"
         >
           Instance name
         </label>
         <div
-          className="c4"
+          className="c5"
         >
           <input
-            className="c5"
+            className="c6"
             disabled={false}
             id="n"
             onBlur={null}
@@ -1621,17 +1531,17 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c6"
+      className="c7"
     >
       <div
-        className="c7 c8"
+        className="c8 c9"
         height="0.8125rem"
       />
       <div
-        className="c9"
+        className="c10"
       >
         <button
-          className="c10 c11 c12"
+          className="c11 c12 c13 c14"
           data-ui-button="true"
           href=""
           icon={true}
@@ -1639,9 +1549,7 @@ exports[`renders <Name pristine={false} /> without throwing 1`] = `
           type="button"
         >
           <svg
-            className=""
             height="18.22"
-            innerRef={undefined}
             style={
               Object {
                 "transform": "rotate(0deg)",

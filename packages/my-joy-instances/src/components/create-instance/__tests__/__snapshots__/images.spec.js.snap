@@ -115,35 +115,11 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   margin-bottom: 1.125rem;
 }
 
-.c8 {
-  position: relative;
-  padding: 0.75rem;
-  padding-right: 1.5625rem;
-}
-
-.c8::-ms-expand {
-  display: none;
-}
-
 .c4 {
   color: rgb(73,73,73);
   font-weight: 600;
   line-height: 1.5rem;
   font-size: 0.9375rem;
-  margin: 0;
-}
-
-.c4 + p,
-.c4 + small,
-.c4 + h1,
-.c4 + h2,
-.c4 + label,
-.c4 + h3,
-.c4 + h4,
-.c4 + h5,
-.c4 + div,
-.c4 + span {
-  margin-top: 0.75rem;
 }
 
 .c3 {
@@ -176,13 +152,10 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
 
 .c5 {
   display: inline-block;
-  margin: 0;
   padding: 0;
   border: none;
   overflow: hidden;
   height: auto;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
   -webkit-padding-before: 0;
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
@@ -276,6 +249,16 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
   color: rgba(73,73,73,0.5);
 }
 
+.c8 {
+  position: relative;
+  padding: 0.75rem;
+  padding-right: 1.5625rem;
+}
+
+.c8::-ms-expand {
+  display: none;
+}
+
 .c6 {
   min-width: 100%;
   width: 9rem;
@@ -345,7 +328,7 @@ exports[`renders <Images images=[{name: stuff, imageName: stuff}] /> without thr
             Stuff
           </h4>
           <div
-            className="baseline-jVaZNU kXgQxt c5"
+            className="c5"
             name="image"
             role="group"
             style={undefined}

@@ -13,8 +13,8 @@ import {
   CardOutlet,
   Divider,
   ResetIcon,
-  Button,
-  H2,
+  Button as BaseButton,
+  H2 as BaseH2,
   Label,
   CopiableField,
   QueryBreakpoints,
@@ -80,6 +80,14 @@ const VerticalDivider = styled.div`
   }
 `;
 
+const H2 = styled(BaseH2)`
+  margin: 0;
+`;
+
+const Button = styled(BaseButton)`
+  margin-right: ${remcalc(6)};
+`;
+
 export const Meta = ({
   created,
   updated,
@@ -95,43 +103,45 @@ export const Meta = ({
 }) => [
   <Row middle="xs">
     <Col xs={12}>
-      <H2>
-        {editingName ? (
-          <form onSubmit={handleSubmit}>
-            <Flex style={{ alignItems: 'start' }}>
-              <FormGroup name="name" field={Field}>
-                <Input
-                  onBlur={null}
-                  type="text"
-                  placeholder={instance.name}
-                  disabled={disabled || submitting}
-                />
-                <FormMeta />
-              </FormGroup>
-              <Margin left={1}>
-                <Button
-                  type="submit"
-                  disabled={submitting}
-                  loading={submitting}
-                  inline
-                >
-                  Add
-                </Button>
-              </Margin>
+      <Margin bottom={1}>
+        <H2>
+          {editingName ? (
+            <form onSubmit={handleSubmit}>
+              <Flex style={{ alignItems: 'start' }}>
+                <FormGroup name="name" field={Field}>
+                  <Input
+                    onBlur={null}
+                    type="text"
+                    placeholder={instance.name}
+                    disabled={disabled || submitting}
+                  />
+                  <FormMeta />
+                </FormGroup>
+                <Margin left={1}>
+                  <Button
+                    type="submit"
+                    disabled={submitting}
+                    loading={submitting}
+                    inline
+                  >
+                    Add
+                  </Button>
+                </Margin>
+              </Flex>
+            </form>
+          ) : (
+            <Flex>
+              {instance.name}
+              <Actionable left={2} onClick={editName}>
+                <EditIcon />
+              </Actionable>
             </Flex>
-          </form>
-        ) : (
-          <Flex>
-            {instance.name}
-            <Actionable left={2} onClick={editName}>
-              <EditIcon />
-            </Actionable>
-          </Flex>
-        )}
-      </H2>
+          )}
+        </H2>
+      </Margin>
     </Col>
   </Row>,
-  <Margin top={2} bottom={3}>
+  <Margin vertical={1}>
     <Flex>
       <TrimedLabel>
         {image && image.name ? titleCase(image.name) : 'Custom Image'}
@@ -187,186 +197,237 @@ export default withTheme(
           <CardOutlet>
             <Padding all={4}>
               <Meta {...instance} {...props} />
-              <Row between="xs">
-                <Col xs={9}>
-                  <Button
-                    href={`${GLOBAL.origin}/images/~create/${instance.id}`}
-                    target="__blank"
-                    rel="noopener noreferrer"
-                    secondary
-                    bold
-                    small
-                    icon
-                  >
-                    <Padding top={0.5}>
-                      <InstanceTypeIcon />
-                    </Padding>
-                  </Button>
-                  <SmallOnly>
+              <Margin top={3}>
+                <Row between="xs">
+                  <Col xs={9}>
                     <Button
-                      type="button"
-                      loading={starting}
-                      disabled={instance.state !== 'STOPPED'}
-                      onClick={() => onAction('start')}
-                      secondary
-                      small
-                      icon
-                    >
-                      <StartIcon disabled={instance.state !== 'STOPPED'} />
-                    </Button>
-                  </SmallOnly>
-                  <Medium>
-                    <Button
-                      type="button"
-                      loading={starting}
-                      disabled={instance.state !== 'STOPPED'}
-                      onClick={() => onAction('start')}
+                      href={`${GLOBAL.origin}/images/~create/${instance.id}`}
+                      target="__blank"
+                      rel="noopener noreferrer"
                       secondary
                       bold
-                      icon
-                    >
-                      <StartIcon disabled={instance.state !== 'STOPPED'} />
-                      <span>Start</span>
-                    </Button>
-                  </Medium>
-                  <SmallOnly>
-                    <Button
-                      type="button"
-                      loading={stopping}
-                      disabled={instance.state !== 'RUNNING'}
-                      onClick={() => onAction('stop')}
-                      secondary
                       small
                       icon
                     >
-                      <StopIcon disabled={instance.state !== 'RUNNING'} />
+                      <Padding top={0.5}>
+                        <InstanceTypeIcon />
+                      </Padding>
                     </Button>
-                  </SmallOnly>
-                  <Medium>
-                    <Button
-                      type="button"
-                      loading={stopping}
-                      disabled={instance.state !== 'RUNNING'}
-                      onClick={() => onAction('stop')}
-                      secondary
-                      bold
-                      icon
-                    >
-                      <StopIcon disabled={instance.state !== 'RUNNING'} />
-                      <span>Stop</span>
-                    </Button>
-                  </Medium>
-                  <SmallOnly>
-                    <Button
-                      type="button"
-                      loading={rebooting}
-                      disabled={instance.state !== 'RUNNING'}
-                      onClick={() => onAction('reboot')}
-                      secondary
-                      small
-                      icon
-                    >
-                      <ResetIcon disabled={instance.state !== 'RUNNING'} />
-                    </Button>
-                  </SmallOnly>
-                  <Medium>
-                    <Button
-                      type="button"
-                      loading={rebooting}
-                      disabled={instance.state !== 'RUNNING'}
-                      onClick={() => onAction('reboot')}
-                      secondary
-                      bold
-                      icon
-                    >
-                      <ResetIcon disabled={instance.state !== 'RUNNING'} />
-                      <span>Reboot</span>
-                    </Button>
-                  </Medium>
-                </Col>
-                <Col xs={3}>
-                  <SmallOnly>
-                    <Button
-                      type="button"
-                      loading={removing}
-                      disabled={
-                        ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
-                      }
-                      onClick={() => onAction('remove')}
-                      secondary
-                      small
-                      right
-                      icon
-                      error
-                    >
-                      <DeleteIcon
-                        fill={theme.red}
+                    <SmallOnly>
+                      <Button
+                        href={`${GLOBAL.origin}/images/~create/${instance.id}`}
+                        target="__blank"
+                        rel="noopener noreferrer"
+                        secondary
+                        bold
+                        small
+                        icon
+                      >
+                        <Padding top={0}>
+                          <InstanceTypeIcon />
+                        </Padding>
+                      </Button>
+                    </SmallOnly>
+                    <SmallOnly>
+                      <Button
+                        type="button"
+                        loading={starting}
+                        disabled={instance.state !== 'STOPPED'}
+                        onClick={() => onAction('start')}
+                        secondary
+                        small
+                        icon
+                      >
+                        <Margin right={2}>
+                          <StartIcon disabled={instance.state !== 'STOPPED'} />
+                        </Margin>
+                      </Button>
+                    </SmallOnly>
+                    <Medium>
+                      <Button
+                        type="button"
+                        loading={starting}
+                        disabled={instance.state !== 'STOPPED'}
+                        onClick={() => onAction('start')}
+                        secondary
+                        bold
+                        icon
+                      >
+                        <Margin right={2}>
+                          <StartIcon disabled={instance.state !== 'STOPPED'} />
+                        </Margin>
+                        <span>Start</span>
+                      </Button>
+                    </Medium>
+                    <SmallOnly>
+                      <Button
+                        type="button"
+                        loading={stopping}
+                        disabled={instance.state !== 'RUNNING'}
+                        onClick={() => onAction('stop')}
+                        secondary
+                        small
+                        icon
+                      >
+                        <Margin right={2}>
+                          <StopIcon disabled={instance.state !== 'RUNNING'} />
+                        </Margin>
+                      </Button>
+                    </SmallOnly>
+                    <Medium>
+                      <Button
+                        type="button"
+                        loading={stopping}
+                        disabled={instance.state !== 'RUNNING'}
+                        onClick={() => onAction('stop')}
+                        secondary
+                        bold
+                        icon
+                      >
+                        <Margin right={2}>
+                          <StopIcon disabled={instance.state !== 'RUNNING'} />
+                        </Margin>
+                        <span>Stop</span>
+                      </Button>
+                    </Medium>
+                    <SmallOnly>
+                      <Button
+                        type="button"
+                        loading={rebooting}
+                        disabled={instance.state !== 'RUNNING'}
+                        onClick={() => onAction('reboot')}
+                        secondary
+                        small
+                        icon
+                      >
+                        <Margin right={2}>
+                          <ResetIcon disabled={instance.state !== 'RUNNING'} />
+                        </Margin>
+                      </Button>
+                    </SmallOnly>
+                    <Medium>
+                      <Button
+                        type="button"
+                        loading={rebooting}
+                        disabled={instance.state !== 'RUNNING'}
+                        onClick={() => onAction('reboot')}
+                        secondary
+                        bold
+                        icon
+                      >
+                        <Margin right={2}>
+                          <ResetIcon disabled={instance.state !== 'RUNNING'} />
+                        </Margin>
+                        <span>Reboot</span>
+                      </Button>
+                    </Medium>
+                  </Col>
+                  <Col xs={3}>
+                    <SmallOnly>
+                      <Button
+                        type="button"
+                        loading={removing}
                         disabled={
                           ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
                         }
-                      />
-                    </Button>
-                  </SmallOnly>
-                  <Medium>
-                    <Button
-                      type="button"
-                      loading={removing}
-                      disabled={
-                        ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
-                      }
-                      onClick={() => onAction('remove')}
-                      secondary
-                      bold
-                      right
-                      icon
-                      error
-                    >
-                      <DeleteIcon
-                        fill={
-                          ['RUNNING', 'STOPPED'].indexOf(instance.state) >= 0
-                            ? theme.red
-                            : undefined
-                        }
+                        onClick={() => onAction('remove')}
+                        secondary
+                        small
+                        right
+                        icon
+                        error
+                      >
+                        <Margin right={2}>
+                          <DeleteIcon
+                            fill={theme.red}
+                            disabled={
+                              ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
+                            }
+                          />
+                        </Margin>
+                      </Button>
+                    </SmallOnly>
+                    <Medium>
+                      <Button
+                        type="button"
+                        loading={removing}
                         disabled={
                           ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
                         }
-                      />
-                      <span>Remove</span>
-                    </Button>
-                  </Medium>
-                </Col>
-              </Row>
-              <Margin bottom={5} top={4}>
-                <Divider height={remcalc(1)} />
+                        onClick={() => onAction('remove')}
+                        secondary
+                        bold
+                        right
+                        icon
+                        error
+                      >
+                        <Margin right={2}>
+                          <DeleteIcon
+                            fill={
+                              ['RUNNING', 'STOPPED'].indexOf(instance.state) >=
+                              0
+                                ? theme.red
+                                : undefined
+                            }
+                            disabled={
+                              ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
+                            }
+                          />
+                        </Margin>
+                        <span>Remove</span>
+                      </Button>
+                    </Medium>
+                  </Col>
+                </Row>
               </Margin>
-              <CopiableField
-                text={(instance.id || '').split('-')[0]}
-                label="Short ID"
-              />
-              <CopiableField text={instance.id} label="ID" />
-              <CopiableField text={instance.compute_node} label="CN UUID" />
+              <Margin bottom={4} top={1}>
+                <Divider height={1} />
+              </Margin>
+              <Margin bottom={3}>
+                <CopiableField
+                  text={(instance.id || '').split('-')[0]}
+                  label="Short ID"
+                />
+              </Margin>
+              <Margin bottom={3}>
+                <CopiableField text={instance.id} label="ID" />
+              </Margin>
+              <Margin bottom={3}>
+                <CopiableField text={instance.compute_node} label="CN UUID" />
+              </Margin>
               {instance.image &&
                 instance.image.id && (
-                  <CopiableField text={instance.image.id} label="Image UUID" />
+                  <Margin bottom={3}>
+                    <CopiableField
+                      text={instance.image.id}
+                      label="Image UUID"
+                    />
+                  </Margin>
                 )}
-              <CopiableField
-                text={`ssh root@${instance.primary_ip}`}
-                label="Login"
-              />
-              {get(instance, 'ips.public', []).map((ip, i, ips) => (
+              <Margin bottom={3}>
                 <CopiableField
-                  key={`public-${i}`}
-                  label={`Public IP address ${ips.length > 1 ? i + 1 : ''}`}
-                  text={ip}
+                  text={`ssh root@${instance.primary_ip}`}
+                  label="Login"
                 />
+              </Margin>
+              {get(instance, 'ips.public', []).map((ip, i, ips) => (
+                <Margin bottom={3}>
+                  <CopiableField
+                    key={`public-${i}`}
+                    label={`Public IP address ${ips.length > 1 ? i + 1 : ''}`}
+                    text={ip}
+                  />
+                </Margin>
               ))}
               {get(instance, 'ips.private', []).map((ip, i, ips) => (
-                <CopiableField
-                  key={`private-${i}`}
-                  noMargin={i === ips.length - 1}
-                  label={`Private IP address ${ips.length > 1 ? i + 1 : ''}`}
-                  text={ip}
-                />
+                <Margin bottom={3}>
+                  <CopiableField
+                    key={`private-${i}`}
+                    noMargin={i === ips.length - 1}
+                    label={`Private IP address ${ips.length > 1 ? i + 1 : ''}`}
+                    text={ip}
+                  />
+                </Margin>
               ))}
             </Padding>
           </CardOutlet>

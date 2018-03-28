@@ -3,11 +3,11 @@ import is from 'styled-is';
 import PropTypes from 'prop-types';
 import React from 'react';
 import remcalc from 'remcalc';
+import styled from 'styled-components';
 
-import Baseline from '../baseline';
 import Label from '../label';
 
-const StyledLabel = Label.extend`
+const StyledLabel = styled(Label)`
   ${is('right')`
     float: right;
   `};
@@ -27,13 +27,7 @@ const StyledLabel = Label.extend`
     -webkit-text-fill-color: currentcolor;
   `};
 
-  ${is('top')`
-    margin-top: ${remcalc(0)};
-    margin-bottom: ${remcalc(6)};
-  `};
-
   font-size: ${remcalc(13)};
-  margin-top: ${remcalc(6)};
   float: none;
   width: ${remcalc(300)};
 
@@ -92,4 +86,4 @@ Meta.propTypes = {
   warning: PropTypes.oneOfType([PropTypes.string, PropTypes.bool])
 };
 
-export default Baseline(Meta);
+export default Meta;

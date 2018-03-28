@@ -1,8 +1,6 @@
 import React from 'react';
 import { withTheme } from 'styled-components';
 
-import Baseline from '../baseline';
-
 import {
   Actions as BaseActions,
   Affinity as BaseAffinity,
@@ -54,46 +52,46 @@ const Colors = Component =>
     <Component {...rest} colors={theme} />
   ));
 
-export const Actions = Baseline(Colors(BaseActions));
-export const Affinity = Baseline(Colors(BaseAffinity));
-export const Arrow = Baseline(Colors(BaseArrow));
-export const Bin = Baseline(Colors(BaseBin));
-export const Clipboard = Baseline(Colors(BaseClipboard));
-export const Close = Baseline(Colors(BaseClose));
-export const Cns = Baseline(Colors(BaseCns));
-export const Copy = Baseline(Colors(BaseCopy));
-export const Cpu = Baseline(Colors(BaseCpu));
-export const DataCenter = Baseline(Colors(BaseDataCenter));
-export const Delete = Baseline(Colors(BaseDelete));
-export const Dot = Baseline(Colors(BaseDot));
-export const Duplicate = Baseline(Colors(BaseDuplicate));
-export const Edit = Baseline(Colors(BaseEdit));
-export const Fabric = Baseline(Colors(BaseFabric));
-export const Firewall = Baseline(Colors(BaseFirewall));
-export const General = Baseline(Colors(BaseGeneral));
-export const Id = Baseline(Colors(BaseId));
-export const InstanceCount = Baseline(Colors(BaseInstanceCount));
-export const InstanceType = Baseline(Colors(BaseInstanceType));
-export const Instances = Baseline(Colors(BaseInstances));
-export const Loading = Baseline(Colors(BaseLoading));
-export const Login = Baseline(Colors(BaseLogin));
-export const Memory = Baseline(Colors(BaseMemory));
-export const Metadata = Baseline(Colors(BaseMetadata));
-export const Minus = Baseline(Colors(BaseMinus));
-export const Name = Baseline(Colors(BaseName));
-export const Network = Baseline(Colors(BaseNetwork));
-export const Package = Baseline(Colors(BasePackage));
-export const Plus = Baseline(Colors(BasePlus));
-export const Private = Baseline(Colors(BasePrivate));
-export const Public = Baseline(Colors(BasePublic));
-export const Randomize = Baseline(Colors(BaseRandomize));
-export const Reset = Baseline(Colors(BaseReset));
-export const Restart = Baseline(Colors(BaseRestart));
-export const Script = Baseline(Colors(BaseScript));
-export const Services = Baseline(Colors(BaseServices));
-export const Start = Baseline(Colors(BaseStart));
-export const Stop = Baseline(Colors(BaseStop));
-export const Storage = Baseline(Colors(BaseStorage));
-export const Tags = Baseline(Colors(BaseTags));
-export const Triton = Baseline(Colors(BaseTriton));
-export const User = Baseline(Colors(BaseUser));
+export const Actions = Colors(BaseActions);
+export const Affinity = Colors(BaseAffinity);
+export const Arrow = Colors(BaseArrow);
+export const Bin = Colors(BaseBin);
+export const Clipboard = Colors(BaseClipboard);
+export const Close = Colors(BaseClose);
+export const Cns = Colors(BaseCns);
+export const Copy = Colors(BaseCopy);
+export const Cpu = Colors(BaseCpu);
+export const DataCenter = Colors(BaseDataCenter);
+export const Delete = Colors(BaseDelete);
+export const Dot = Colors(BaseDot);
+export const Duplicate = Colors(BaseDuplicate);
+export const Edit = Colors(BaseEdit);
+export const Fabric = Colors(BaseFabric);
+export const Firewall = Colors(BaseFirewall);
+export const General = Colors(BaseGeneral);
+export const Id = Colors(BaseId);
+export const InstanceCount = Colors(BaseInstanceCount);
+export const InstanceType = Colors(BaseInstanceType);
+export const Instances = Colors(BaseInstances);
+export const Loading = Colors(BaseLoading);
+export const Login = Colors(BaseLogin);
+export const Memory = Colors(BaseMemory);
+export const Metadata = Colors(BaseMetadata);
+export const Minus = Colors(BaseMinus);
+export const Name = Colors(BaseName);
+export const Network = Colors(BaseNetwork);
+export const Package = Colors(BasePackage);
+export const Plus = Colors(BasePlus);
+export const Private = Colors(BasePrivate);
+export const Public = Colors(BasePublic);
+export const Randomize = Colors(BaseRandomize);
+export const Reset = Colors(BaseReset);
+export const Restart = Colors(BaseRestart);
+export const Script = Colors(BaseScript);
+export const Services = Colors(BaseServices);
+export const Start = Colors(BaseStart);
+export const Stop = Colors(BaseStop);
+export const Storage = Colors(BaseStorage);
+export const Tags = Colors(BaseTags);
+export const Triton = Colors(BaseTriton);
+export const User = Colors(BaseUser);

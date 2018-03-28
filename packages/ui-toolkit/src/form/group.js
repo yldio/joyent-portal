@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import is from 'styled-is';
 
 import Fieldset from './fieldset';
-import Baseline from '../baseline';
 
 const Noop = ({ children }) => children;
 
@@ -70,4 +69,4 @@ FormGroup.propTypes = {
   style: PropTypes.object
 };
 
-export default Baseline(FormGroup);
+export default FormGroup;

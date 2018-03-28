@@ -1,15 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <Title /> without throwing 1`] = `
-.c3 {
+.c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -28,19 +24,24 @@ exports[`renders <Title /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 .c0 {
@@ -106,14 +107,14 @@ exports[`renders <Title /> without throwing 1`] = `
       />
     </div>
     <small
-      className="c3"
+      className="c3 c4"
     />
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <div
-      className="c5 c6"
+      className="c6 c7"
       height="0.0625rem"
     />
   </div>
@@ -121,15 +122,11 @@ exports[`renders <Title /> without throwing 1`] = `
 `;
 
 exports[`renders <Title icon="NameIcon"/> without throwing 1`] = `
-.c3 {
+.c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -148,19 +145,24 @@ exports[`renders <Title icon="NameIcon"/> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 .c0 {
@@ -225,9 +227,7 @@ exports[`renders <Title icon="NameIcon"/> without throwing 1`] = `
         className="c2"
       >
         <svg
-          className=""
           height="21.91"
-          innerRef={undefined}
           style={
             Object {
               "transform": "rotate(0deg)",
@@ -245,14 +245,14 @@ exports[`renders <Title icon="NameIcon"/> without throwing 1`] = `
       </div>
     </div>
     <small
-      className="c3"
+      className="c3 c4"
     />
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <div
-      className="c5 c6"
+      className="c6 c7"
       height="0.0625rem"
     />
   </div>
@@ -260,15 +260,11 @@ exports[`renders <Title icon="NameIcon"/> without throwing 1`] = `
 `;
 
 exports[`renders <Title icon="Test" label="Instance name"/> without throwing 1`] = `
-.c3 {
+.c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -287,19 +283,24 @@ exports[`renders <Title icon="Test" label="Instance name"/> without throwing 1`]
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 .c0 {
@@ -365,9 +366,7 @@ exports[`renders <Title icon="Test" label="Instance name"/> without throwing 1`]
         className="c2"
       >
         <svg
-          className=""
           height="21.91"
-          innerRef={undefined}
           style={
             Object {
               "transform": "rotate(0deg)",
@@ -385,14 +384,14 @@ exports[`renders <Title icon="Test" label="Instance name"/> without throwing 1`]
       </div>
     </div>
     <small
-      className="c3"
+      className="c3 c4"
     />
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <div
-      className="c5 c6"
+      className="c6 c7"
       height="0.0625rem"
     />
   </div>
@@ -400,15 +399,11 @@ exports[`renders <Title icon="Test" label="Instance name"/> without throwing 1`]
 `;
 
 exports[`renders <Title label="Test"/> without throwing 1`] = `
-.c3 {
+.c4 {
   font-size: 80%;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  color: rgb(73,73,73);
-  line-height: 1.125rem;
-  font-size: 0.8125rem;
 }
 
-.c6 {
+.c7 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -427,19 +422,24 @@ exports[`renders <Title label="Test"/> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c5 {
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c6 {
   background-color: rgb(216,216,216);
-  margin: 0;
-  height: 0.0625rem;
 }
 
 .c1 {
   margin-right: 0.375rem;
 }
 
-.c4 {
+.c5 {
   margin-top: 0.375rem;
-  margin-bottom: 2.625rem;
+  margin-bottom: undefined;
 }
 
 .c0 {
@@ -506,14 +506,14 @@ exports[`renders <Title label="Test"/> without throwing 1`] = `
       />
     </div>
     <small
-      className="c3"
+      className="c3 c4"
     />
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <div
-      className="c5 c6"
+      className="c6 c7"
       height="0.0625rem"
     />
   </div>

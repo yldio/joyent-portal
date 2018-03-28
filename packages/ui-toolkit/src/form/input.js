@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BaseInput, { Stylable } from './base/input';
-import Baseline from '../baseline';
 
-const InputStyled = Baseline(BaseInput(Stylable('input')));
+const InputStyled = BaseInput(Stylable('input'));
 
 /**
  * @example ./usage-input.md

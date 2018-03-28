@@ -2,11 +2,11 @@ import React from 'react';
 import { Subscriber } from 'joy-react-broadcast';
 import is from 'styled-is';
 import remcalc from 'remcalc';
+import styled from 'styled-components';
 
 import Label from '../label';
 
-const StyledLabel = Label.extend`
-  margin-right: ${remcalc(12)};
+const StyledLabel = styled(Label)`
   font-weight: ${props => props.theme.font.weight.semibold};
   white-space: pre;
   font-size: ${remcalc(13)};
@@ -25,10 +25,6 @@ const StyledLabel = Label.extend`
 
   ${is('normal')`
       font-weight: ${props => props.theme.font.weight.normal};
-  `};
-
-  ${is('noMargin')`
-      margin: 0;
   `};
 `;
 

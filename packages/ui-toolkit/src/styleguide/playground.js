@@ -3,10 +3,7 @@ import styled from 'styled-components';
 import is from 'styled-is';
 import remcalc from 'remcalc';
 
-const Wrapper = styled.section`
-  margin-top: ${remcalc(24)};
-  margin-bottom: ${remcalc(46)};
-`;
+const Wrapper = styled.section;
 
 const Tabs = styled.ul`
   list-style: none;
@@ -21,7 +18,6 @@ const TabHeader = styled.li`
   height: ${remcalc(30)};
   box-sizing: border-box;
   line-height: inherit;
-  margin-right: ${remcalc(18)};
 
   ${is('active')`
      border-bottom: ${remcalc(1)} solid ${props => props.theme.primary};
@@ -43,7 +39,6 @@ const Button = styled.button`
   cursor: pointer;
   text-transform: none;
   padding: 0;
-  margin: 0 ${remcalc(2)};
 
   ${is('active')`
     color: ${props => props.theme.primary};

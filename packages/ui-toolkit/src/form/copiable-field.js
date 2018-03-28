@@ -17,12 +17,7 @@ import { Clipboard } from '../icons';
 
 const InputIconWrapper = styled.div`
   display: flex;
-  margin-bottom: ${remcalc(10)};
   align-items: center;
-
-  ${is('noMargin')`
-    margin-bottom: ${remcalc(0)};
-  `};
 
   input {
     padding-right: ${remcalc(30)};
@@ -34,7 +29,7 @@ const InputIconWrapper = styled.div`
   }
 `;
 
-const ClipboardIconActionable = Clipboard.extend`
+const ClipboardIconActionable = styled(Clipboard)`
   cursor: pointer;
 `;
 
