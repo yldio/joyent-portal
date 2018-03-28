@@ -3,7 +3,6 @@ import { graphql, compose } from 'react-apollo';
 import gql from 'graphql-tag';
 import pascalCase from 'pascal-case';
 import keys from 'lodash.keys';
-import md5 from 'md5';
 
 import { DataCenterIcon, TritonIcon, ServicesIcon } from './components';
 import * as Overlays from './containers';
@@ -41,7 +40,7 @@ const GetAccount = gql`
     }
     account {
       login
-      email
+      emailHash
     }
   }
 `;
@@ -128,7 +127,7 @@ export default compose(
 
       const user = {
         ...account,
-        image: `https://www.gravatar.com/avatar/${md5(account.email || '')}`
+        image: `https://www.gravatar.com/avatar/${account.emailHash}`
       };
 
       return { user, datacenter: name, loading, error };
