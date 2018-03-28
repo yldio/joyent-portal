@@ -3,16 +3,16 @@ import { H1 as NH1 } from 'normalized-styled-components';
 import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 
-export const H1 = NH1.extend`
+export const H1 = styled(NH1)`
   font-family: ${props => props.theme.font.families};
   color: ${props => props.theme.text};
+  margin: 0;
 
   font-size: ${remcalc(36)};
   line-height: ${remcalc(45)};
   font-style: normal;
   font-stretch: normal;
   font-weight: normal;
-  margin: 0;
 
   ${is('inline')`
     display: inline-block;
@@ -29,21 +29,6 @@ export const H1 = NH1.extend`
   ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
-  `};
-
-  ${isNot('noMargin')`
-    & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
-      margin-top: ${remcalc(24)};
-    }
   `};
 `;
 
@@ -70,21 +55,6 @@ export const H2 = styled.h2`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
-
-  ${isNot('noMargin')`
-    & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
-      margin-top: ${remcalc(24)};
-    }
-  `};
 `;
 
 export const H3 = styled.h3`
@@ -110,21 +80,6 @@ export const H3 = styled.h3`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
-
-  ${isNot('noMargin')`
-    & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
-      margin-top: ${remcalc(12)};
-    }
-  `};
 `;
 
 export const H4 = styled.h4`
@@ -141,21 +96,6 @@ export const H4 = styled.h4`
   ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
-  `};
-
-  ${isNot('noMargin')`
-    & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
-      margin-top: ${remcalc(12)};
-    }
   `};
 `;
 
@@ -178,21 +118,6 @@ export const H5 = styled.h4`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
   `};
-
-  ${isNot('noMargin')`
-    & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
-      margin-top: ${remcalc(12)};
-    }
-  `};
 `;
 
 export const H6 = styled.h6`
@@ -213,20 +138,5 @@ export const H6 = styled.h6`
   ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
-  `};
-
-  ${isNot('noMargin')`
-    & + p,
-    & + small,
-    & + h1,
-    & + h2,
-    & + label,
-    & + h3,
-    & + h4,
-    & + h5,
-    & + div,
-    & + span {
-      margin-top: ${remcalc(12)};
-    }
   `};
 `;

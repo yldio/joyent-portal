@@ -87,7 +87,7 @@ export const Firewall = ({
       {props =>
         loading ? null : (
           <Fragment>
-            <Margin bottom={7}>
+            <Margin bottom={4}>
               <ToggleFirewallForm {...props} submitOnChange />
             </Margin>
             <Divider height={remcalc(1)} />

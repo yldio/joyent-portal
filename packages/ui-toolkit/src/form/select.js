@@ -4,7 +4,6 @@ import is, { isNot } from 'styled-is';
 import remcalc from 'remcalc';
 import PropTypes from 'prop-types';
 
-import Baseline from '../baseline';
 import BaseInput, { Stylable } from './base/input';
 
 const chevron =
@@ -38,7 +37,6 @@ const SelectWrapper = styled.div`
   }
 
   ${is('embedded')`
-    margin: 0 ${remcalc(6)};
     width: auto;
     max-width: auto;
     min-width: 0;
@@ -48,10 +46,6 @@ const SelectWrapper = styled.div`
     }
   `};
 
-  ${is('embedded', 'left')`
-    margin-left: 0;
-  `};
-
   ${is('disabled')`
     &:after {
       background: url(${chevronDisabled}) center center no-repeat;
@@ -59,8 +53,8 @@ const SelectWrapper = styled.div`
   `};
 `;
 
-const select = Baseline(BaseInput(Stylable('select')));
-const StyledSelect = select.extend`
+const select = BaseInput(Stylable('select'));
+const StyledSelect = styled(select)`
   position: relative;
   padding: ${remcalc(12)};
   padding-right: ${remcalc(25)};
@@ -86,12 +80,10 @@ const StyledSelect = select.extend`
     height: ${remcalc(24)};
     appearance: none;
     min-height: 0;
-    margin: 0 ${remcalc(6)};
     color: ${props => props.theme.text};
   `};
 
   ${is('wrapped')`
-    margin: 0;
     border: none;
     width: ${remcalc(65)};
     border-left: ${remcalc(1)} solid ${props => props.theme.grey};

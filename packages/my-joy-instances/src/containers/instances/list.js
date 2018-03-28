@@ -23,7 +23,8 @@ import {
   MessageDescription,
   MessageTitle,
   StatusLoader,
-  Divider
+  Divider,
+  H3
 } from 'joyent-ui-toolkit';
 
 import GLOBAL from '@state/global';
@@ -163,18 +164,20 @@ export const List = ({
 
   return (
     <ViewContainer main>
-      <Divider height={remcalc(24)} transparent />
-      <ReduxForm form={MENU_FORM_NAME}>
-        {props => (
-          <ToolbarForm
-            {...props}
-            searchLabel="Filter instances"
-            searchable={!_loading}
-            actionLabel="Create Instance"
-            actionTo="/instances/~create"
-          />
-        )}
-      </ReduxForm>
+      <H3>Instances</H3>
+      <Margin top={2} bottom={3}>
+        <ReduxForm form={MENU_FORM_NAME}>
+          {props => (
+            <ToolbarForm
+              {...props}
+              searchLabel="Filter instances"
+              searchable={!_loading}
+              actionLabel="Create Instance"
+              actionTo="/instances/~create"
+            />
+          )}
+        </ReduxForm>
+      </Margin>
       {!_mutationError ? _error : null}
       {_mutationError}
       {_loading}

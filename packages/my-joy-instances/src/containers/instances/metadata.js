@@ -129,19 +129,21 @@ export const Metadata = ({
 
   return (
     <ViewContainer main>
-      <ReduxForm form={MENU_FORM_NAME}>
-        {props => (
-          <ToolbarForm
-            {...props}
-            searchable={!_loading}
-            searchLabel="Filter metadata"
-            searchPlaceholder="Search by name or value"
-            actionLabel="Add Metadata"
-            actionable={!_loading}
-            onActionClick={() => handleToggleAddOpen(!addOpen)}
-          />
-        )}
-      </ReduxForm>
+      <Margin bottom={4}>
+        <ReduxForm form={MENU_FORM_NAME}>
+          {props => (
+            <ToolbarForm
+              {...props}
+              searchable={!_loading}
+              searchLabel="Filter metadata"
+              searchPlaceholder="Search by name or value"
+              actionLabel="Add Metadata"
+              actionable={!_loading}
+              onActionClick={() => handleToggleAddOpen(!addOpen)}
+            />
+          )}
+        </ReduxForm>
+      </Margin>
       <Divider height={remcalc(11)} transparent />
       {_line}
       {_error}

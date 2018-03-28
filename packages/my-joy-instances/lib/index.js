@@ -1,8 +1,6 @@
 const Inert = require('inert');
 const Path = require('path');
 const RenderReact = require('hapi-render-react');
-const Wreck = require('wreck');
-const Url = require('url');
 const Intercept = require('apr-intercept');
 const Fs = require('mz/fs');
 

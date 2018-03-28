@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Baseline from '../baseline';
 import remcalc from 'remcalc';
 
 const Label = styled.label`
@@ -10,7 +9,6 @@ const Label = styled.label`
   display: block;
   color: ${props => props.theme.secondary};
   text-align: left;
-  margin-bottom: ${remcalc(3)};
 `;
 
-export default Baseline(Label);
+export default Label;

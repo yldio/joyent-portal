@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import BaseToggle from './base/toggle';
-import Baseline from '../baseline';
 import BaseInput from './base/input';
 
 const Li = styled.li`
@@ -13,7 +12,6 @@ const Li = styled.li`
 `;
 
 const Ul = styled.ul`
-  margin: 0;
   padding: 0;
 `;
 
@@ -21,12 +19,10 @@ const RadioItem = BaseInput(({ children, id, ...rest }) => (
   <Li {...rest}>{children}</Li>
 ));
 
-const RadioStyled = Baseline(
-  BaseToggle({
-    container: RadioItem,
-    type: 'radio'
-  })
-);
+const RadioStyled = BaseToggle({
+  container: RadioItem,
+  type: 'radio'
+});
 
 /**
  * @example ./usage-radio.md
@@ -35,7 +31,7 @@ const Radio = ({ children, ...rest }) => (
   <RadioStyled {...rest}>{children}</RadioStyled>
 );
 
-export const RadioList = Baseline(Ul);
+export const RadioList = Ul;
 export default Radio;
 
 Radio.propTypes = {

@@ -14,7 +14,6 @@ export default ({ background, color, border, arrow }) => css`
     height: 0;
     border-style: solid;
     position: absolute;
-    margin: ${remcalc(6)};
   }
 
   /* top */
@@ -23,8 +22,6 @@ export default ({ background, color, border, arrow }) => css`
     border-color: ${props => props.theme[background]} transparent transparent
       transparent;
     bottom: ${remcalc(-6)};
-    margin-top: 0;
-    margin-bottom: 0;
 
     &:after {
       content: '';
@@ -46,8 +43,6 @@ export default ({ background, color, border, arrow }) => css`
     border-color: transparent transparent ${props => props.theme[background]}
       transparent;
     top: ${remcalc(-6)};
-    margin-top: 0;
-    margin-bottom: 0;
 
     &:after {
       content: '';
@@ -59,16 +54,8 @@ export default ({ background, color, border, arrow }) => css`
       border-style: solid;
       top: ${remcalc(-1)};
       left: ${remcalc(-7)};
-      margin-top: 0;
-      margin-bottom: 0;
       z-index: -1;
     }
-  }
-
-  /* top & bottom */
-  &[data-placement^='top'],
-  &[data-placement^='bottom'] {
-    margin-bottom: ${remcalc(6)};
   }
 
   &[data-placement='top-start']
@@ -89,18 +76,11 @@ export default ({ background, color, border, arrow }) => css`
     left: calc(50% - ${remcalc(11)});
   }
 
-  /* left */
-  &[data-placement^='left'] {
-    margin-right: ${remcalc(6)};
-  }
-
   &[data-placement^='left'] .${arrow} {
     border-width: ${remcalc(6)} 0 ${remcalc(6)} ${remcalc(6)};
     border-color: transparent transparent transparent
       ${props => props.theme[background]};
     right: ${remcalc(-12)};
-    margin-top: 0;
-    margin-bottom: 0;
 
     &:after {
       content: '';
@@ -118,18 +98,11 @@ export default ({ background, color, border, arrow }) => css`
     }
   }
 
-  /* right */
-  &[data-placement^='right'] {
-    margin-left: ${remcalc(6)};
-  }
-
   &[data-placement^='right'] .${arrow} {
     border-width: ${remcalc(6)} ${remcalc(6)} ${remcalc(6)} 0;
     border-color: transparent ${props => props.theme[background]} transparent
       transparent;
     left: ${remcalc(-12)};
-    margin-top: 0;
-    margin-bottom: 0;
 
     &:after {
       content: '';

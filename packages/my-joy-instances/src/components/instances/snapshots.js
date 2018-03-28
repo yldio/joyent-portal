@@ -3,6 +3,7 @@ import { Field } from 'redux-form';
 import titleCase from 'title-case';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import remcalc from 'remcalc';
+import { Margin } from 'styled-components-spacing';
 
 import {
   FormGroup,
@@ -60,8 +61,12 @@ export const Item = ({ name, state, created, onStart, onRemove, mutating }) => (
               <ActionsIcon />
             </PopoverTarget>
             <Popover placement="top">
-              <PopoverItem onClick={onStart}>Start</PopoverItem>
-              <PopoverItem onClick={onRemove}>Remove</PopoverItem>
+              <Margin vertical={2} horizontal={3}>
+                <PopoverItem onClick={onStart}>Start</PopoverItem>
+              </Margin>
+              <Margin vertical={2} horizontal={3}>
+                <PopoverItem onClick={onRemove}>Remove</PopoverItem>
+              </Margin>
             </Popover>
           </TableTd>
         </PopoverContainer>

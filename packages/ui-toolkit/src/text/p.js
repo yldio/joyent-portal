@@ -8,7 +8,6 @@ export default styled.p`
 
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
-  margin: 0;
 
   ${is('white')`
     -webkit-text-fill-color: currentcolor;
