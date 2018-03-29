@@ -36,13 +36,19 @@ module.exports = {
   showCode: true,
   sections: [
     {
-      name: 'Color Palette',
+      name: 'Principles',
+      description:
+        'Tritons design language is underpinned by 4 key principles. These principle guide our hand when we are decision making and help us keep our thinking consistent.',
+      content: 'src/principles/readme.md'
+    },
+    {
+      name: 'Colors',
       description:
         'Triton’s color palette aim to accessible and clear, whilst making distinctions between elements that are alive and elements that are static. We’ve split our palette into two sections; Action colors and Greys. ',
       content: 'src/theme/colors.md'
     },
     {
-      name: 'Typographic Scale',
+      name: 'Typography',
       content: 'src/text/Readme.md',
       description:
         'Triton uses two typographic scales, a large and a small. The large is to be used on breakpoints above 600px, whilst the small is to be used on anything under that. '

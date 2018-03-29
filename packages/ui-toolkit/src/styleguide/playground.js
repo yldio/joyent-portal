@@ -104,31 +104,6 @@ class Playground extends Component {
     }
   }
 
-  // async componentDidMount() {
-  //   const code = this.props.preview.props.code;
-
-  //   const matches = (/Tab:\s*?(.*)/gi).exec(code)
-
-  //   if (!matches) {
-  //     return;
-  //   }
-
-  //   matches.unshift();
-
-  //   await ForEach(
-  //     matches,
-  //     match =>
-  //       new Promise(resolve =>
-  //         this.setState(
-  //           {
-  //             states: [...this.state.states, match.trim()]
-  //           },
-  //           resolve
-  //         )
-  //       )
-  //   );
-  // }
-
   changeTab = tab => {
     this.setState({
       tab

@@ -8,7 +8,7 @@ const List = styled.ul`
   padding: 0;
 
   ul.rsg--list-1 {
-    padding-left: ${remcalc(6)};
+    padding-left: ${remcalc(36)};
   }
 
   a.rsg--link-6 {
@@ -45,7 +45,7 @@ export default ({ children: { props } }) => {
   const items = props.items.filter(item => item.name);
   const link = decodeURIComponent(window.location.href).split('/#!/')[1] || '/';
   const isActive = name =>
-    link === name || (name === 'Color Palette' && link === '/');
+    link === name || (name === 'Principles' && link === '/');
 
   if (!items.length) {
     return null;

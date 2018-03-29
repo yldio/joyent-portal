@@ -4,7 +4,7 @@ export default () => (
   <svg
     id="Capa_1"
     xmlns="http://www.w3.org/2000/svg"
-    width="438.549"
+    width="22"
     height="22"
     viewBox="0 0 438.549 438.549"
   >
