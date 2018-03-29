@@ -4,7 +4,7 @@ import { Anchor, Popover } from '../components';
 const Account = ({ expanded }) =>
   expanded ? (
     <Popover>
-      <Anchor href="/navigation/signout">Log Out</Anchor>
+      <Anchor href="/navigation/logout">Log Out</Anchor>
     </Popover>
   ) : null;
 
