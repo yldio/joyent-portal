@@ -4,8 +4,7 @@
   "private": true,
   "license": "MPL-2.0",
   "scripts": {
-    "start": "UMD=1 NODE_ENV=development PORT=3069 REACT_APP_GQL_PORT=3069 REACT_APP_GQL_HOSTNAME=localhost REACT_APP_GQL_PROTOCOL=http node src/index.js",
-    "dev": "echo 0",
+    "dev": "NODE_ENV=development PORT=4000 node index.js",
     "build:test": "echo 0",
     "build:lib": "echo 0",
     "build:bundle": "echo 0",
@@ -16,14 +15,18 @@
     "test:ci": "echo 0"
   },
   "dependencies": {
+    "apr-main": "^4.0.3",
     "brule": "^3.1.0",
-    "cloudapi-gql": "^7.1.3",
-    "hapi": "^17.2.0",
-    "hapi-triton-auth": "^2.0.0",
+    "cloudapi-gql": "^7.1.4",
+    "execa": "^0.10.0",
+    "h2o2": "^8.0.1",
+    "hapi": "^17.3.1",
+    "hapi-triton-auth": "^2.0.1",
+    "hapi-webconsole-nav": "^1.1.1",
     "inert": "^5.1.0",
-    "my-joy-navigation": "*",
     "my-joy-images": "*",
     "my-joy-instances": "*",
+    "my-joy-navigation": "*",
     "rollover": "^1.0.0"
   }
 }

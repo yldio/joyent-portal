@@ -45,16 +45,31 @@
   },
   "resolutions": {
     "axios": "0.16.2",
-    "core-js": "2.5.3",
+    "follow-redirects": "1.4.1",
+    "debug": "3.1.0",
+    "chalk": "2.1.0",
+    "minimist": "1.2.0",
+    "node-fetch": "2.1.1",
+    "ansi-styles": "3.2.1",
+    "strip-ansi": "4.0.0",
+    "supports-color": "4.5.0",
+    "ansi-regex": "3.0.0",
+    "core-js": "2.5.4",
     "regenerator-runtime": "0.11.1",
     "pify": "3.0.0",
-    "parse-json": "3.0.0",
-    "graphql": "0.13.0",
-    "hoist-non-react-statics": "2.5.0",
-    "stylis-rule-sheet": "0.0.10",
-    "react": "16.2.0",
+    "has-flag": "2.0.0",
+    "parse-json": "4.0.0",
+    "whatwg-fetch": "2.0.4",
+    "react": "16.3.1",
     "breeze-nexttick": "0.2.1",
-    "isarray": "1.0.0"
+    "isarray": "1.0.0",
+    "boom": "7.2.0",
+    "lru-cache": "4.1.2",
+    "uuid": "3.0.1",
+    "extsprintf": "1.0.1"
   },
-  "workspaces": ["packages/*", "bundle"]
+  "workspaces": [
+    "packages/*",
+    "bundle"
+  ]
 }
