@@ -1,4 +1,4 @@
-#### Select
+### Select
 
 This is the standard dropdown menu to be used in forms and for multiple choice selections.
 

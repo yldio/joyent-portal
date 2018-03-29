@@ -1,4 +1,4 @@
-#### Default Superscript
+### Default Superscript
 
 The default superscript was intially designed to offer supporting information on the service menu regarding service status. It can used as a typographic ident to support titles and names without the need for iconography.
 
@@ -26,7 +26,7 @@ const styles = {
 </div>;
 ```
 
-#### Alert Superscript
+### Alert Superscript
 
 The Alert variation of superscript is to be used as an excliamation, to announce supporting information that requires action, such as ‘New service’ or ‘Available now’.
 
@@ -54,7 +54,7 @@ const styles = {
 </div>;
 ```
 
-#### Badge Superscript
+### Badge Superscript
 
 The badge variation of superscript is for when a specific element of information is repeated numberous times in one page/component. In being more visual, it becomes an ‘ident’ in information dense areas to allow for clear recognition.
 

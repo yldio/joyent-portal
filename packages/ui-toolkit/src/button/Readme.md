@@ -1,4 +1,4 @@
-#### Primary Button
+### Primary Button
 
 Primary button to be used once per page. Only use to indicate main action per pattern.
 Min. width: 120px
@@ -20,7 +20,7 @@ const { default: Button } = require('./');
 </span>;
 ```
 
-#### Secondary Button
+### Secondary Button
 
 Secondary buttons can be used freely to indicate other actions on patterns.
 Min. width: 120px
@@ -44,7 +44,7 @@ const { default: Button } = require('./');
 </span>;
 ```
 
-#### Loading Button
+### Loading Button
 
 ```jsx
 const React = require('react');
@@ -57,7 +57,7 @@ const { default: Button } = require('./');
 </span>;
 ```
 
-#### Quick Action
+### Quick Action
 
 Quick action buttons can be embedded in components to give additional functionality. They can be used in either primary or secondary color palettes, depending on importance.
 
@@ -83,7 +83,7 @@ const { Actions } = require('../icons');
 </span>;
 ```
 
-#### Primary
+### Primary
 
 Primary anchor is a type of a link that sits outside the body text.
 
@@ -94,7 +94,7 @@ const Anchor = require('../text').Anchor;
 <Anchor href="https://joyent.com">Inspire the lazy</Anchor>;
 ```
 
-#### Disabled
+### Disabled
 
 Disabled anchors cannot be actioned and the cursor is disabled.
 

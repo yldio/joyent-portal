@@ -1,4 +1,4 @@
-#### Checkbox > Default
+### Checkbox > Default
 
 ```jsx
 const React = require('react');
@@ -20,7 +20,7 @@ const { FormLabel, Checkbox } = require('./');
 </FormGroup>;
 ```
 
-#### Checkbox > Active/Focused
+### Checkbox > Active/Focused
 
 ```jsx
 const React = require('react');
@@ -42,7 +42,7 @@ const { FormLabel, Checkbox } = require('./');
 </FormGroup>;
 ```
 
-#### Checkbox > Disabled
+### Checkbox > Disabled
 
 ```jsx
 const React = require('react');
@@ -64,7 +64,7 @@ const { FormLabel, Checkbox } = require('./');
 </FormGroup>;
 ```
 
-#### Checkbox > Error
+### Checkbox > Error
 
 ```jsx
 const React = require('react');

@@ -1,4 +1,4 @@
-#### Icon Button
+### Icon Button
 
 Icon buttons are to be used to illustrate important actions and for when we are redirecting users to seperate services such as Github.
 
@@ -14,7 +14,7 @@ const { StartIcon } = require('../');
 </Button>;
 ```
 
-#### Delete Button
+### Delete Button
 
 The delete button is basically an icon button, however it is coloured red to display the destructive nature of the action.
 
@@ -40,7 +40,7 @@ const { DeleteIcon } = require('../');
 </Button>;
 ```
 
-#### Dropdown Button
+### Dropdown Button
 
 Dropdown Button is to be used when users have choices that are secondary to the one shown as the main action
 
@@ -65,7 +65,7 @@ const { StartIcon } = require('../');
 </ButtonGroup>;
 ```
 
-#### Toggle Switch
+### Toggle Switch
 
 Toggle switch is to be used when users have the choice to turn a service or feature on or off.
 

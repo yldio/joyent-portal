@@ -1,4 +1,4 @@
-#### Text Entry
+### Text Entry
 
 ```jsx
 // Name: Active

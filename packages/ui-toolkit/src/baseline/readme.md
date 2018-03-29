@@ -61,7 +61,7 @@ Whoever required that `<Button />`, will be able to declare any of the
 properties especified above and have the style of the component be applied
 accordingly.
 
-#### examples
+### examples
 
 ```
 const React = require('react');

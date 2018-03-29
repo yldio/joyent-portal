@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import styled, { keyframes } from 'styled-components';
 import remcalc from 'remcalc';
-import { P, H4 } from '../';
+import { P, H3 } from '../';
 
 const chevron =
   'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgOSA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJ0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTsiIGNsYXNzPSJiYXNlbGluZS1idFRncEsgaGltUHhaIj48cGF0aCBmaWxsPSJyZ2JhKDczLCA3MywgNzMsIDEpIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik05IDEuMzg2TDcuNjQ4IDAgNC41IDMuMjI4IDEuMzUyIDAgMCAxLjM4NiA0LjUgNnoiPjwvcGF0aD48L3N2Zz4=';
@@ -92,7 +92,7 @@ export default ({
   return (
     <Fragment>
       <header>
-        <H4 white>{heading.props.children}</H4>
+        <H3 white>{heading.props.children}</H3>
         {description &&
           description.props && <P white>{description.props.text}</P>}
       </header>

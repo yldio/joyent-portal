@@ -1,4 +1,4 @@
-#### Page Message
+### Page Message
 
 ```jsx
 const React = require('react');
