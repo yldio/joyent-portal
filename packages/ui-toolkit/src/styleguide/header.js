@@ -13,6 +13,8 @@ const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
 `;
 
 const List = styled.ul`
@@ -46,7 +48,10 @@ export default () => (
         <a href="#!/Download">Downloads</a>
       </li>
     </List>
-    <Logo />
+    {decodeURIComponent(window.location.href).split('/#!/')[1] ||
+    '/' !== '/' ? (
+      <Logo />
+    ) : null}
     <a
       href="https://github.com/yldio/joyent-portal/tree/master/packages/ui-toolkit"
       rel="noopener noreferrer"

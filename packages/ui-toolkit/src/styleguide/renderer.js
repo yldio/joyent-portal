@@ -2,9 +2,11 @@ import React, { Fragment } from 'react';
 import { Grid, Row, Col } from 'joyent-react-styled-flexboxgrid';
 import styled, { ThemeProvider } from 'styled-components';
 import remcalc from 'remcalc';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import theme from '../theme';
 import Header from './header';
+import Parallax from './parallax';
 
 const Main = styled(Row)`
   padding-top: ${remcalc(24)};
@@ -50,24 +52,31 @@ const StyleGuideRenderer = ({
   children,
   toc,
   hasSidebar
-}) => (
-  <ThemeProvider theme={fullTheme}>
-    <Fragment>
-      <Header />
-      <Grid style={{ marginLeft: 0 }}>
-        <Main>
-          {hasSidebar && (
-            <Col xs={3}>
-              <Sidebar>{toc}</Sidebar>
-            </Col>
-          )}
-          <Col xs={hasSidebar ? 9 : 12} lg={hasSidebar ? 8 : 12}>
-            {children}
-          </Col>
-        </Main>
-      </Grid>
-    </Fragment>
-  </ThemeProvider>
-);
+}) => {
+  const link = decodeURIComponent(window.location.href).split('/#!/')[1] || '/';
+
+  return (
+    <ThemeProvider theme={fullTheme}>
+      <ParallaxProvider>
+        <Fragment>
+          {link === '/' ? <Parallax /> : null}
+          <Header />
+          <Grid style={{ marginLeft: 0, zIndex: 2, position: 'relative' }}>
+            <Main>
+              {hasSidebar && (
+                <Col xs={3}>
+                  <Sidebar>{toc}</Sidebar>
+                </Col>
+              )}
+              <Col xs={hasSidebar ? 9 : 12} lg={hasSidebar ? 8 : 12}>
+                {children}
+              </Col>
+            </Main>
+          </Grid>
+        </Fragment>
+      </ParallaxProvider>
+    </ThemeProvider>
+  );
+};
 
 export default StyleGuideRenderer;
