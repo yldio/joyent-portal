@@ -5,7 +5,7 @@
   "license": "MPL-2.0",
   "main": "lib/index.js",
   "scripts": {
-    "dev": "NAMESPACE=navigation NODE_ENV=development PREACT=1 REACT_APP_GQL_PORT=3068 PORT=3000 joyent-react-scripts start",
+    "dev": "NAMESPACE=navigation NODE_ENV=development PREACT=1 REACT_APP_GQL_PORT=4000 PORT=3000 joyent-react-scripts start",
     "build:test": "echo 0",
     "build:lib": "echo 0",
     "build:bundle": "NAMESPACE=navigation NODE_ENV=production redrun build",
@@ -23,7 +23,7 @@
     "apollo-link-http": "^1.5.3",
     "apollo-link-state": "^0.4.1",
     "apr-intercept": "^3.0.3",
-    "emotion": "^9.1.0",
+    "emotion": "^9.1.1",
     "emotion-theming": "^9.0.0",
     "graphql-tag": "^2.8.0",
     "inert": "^5.1.0",
@@ -37,9 +37,9 @@
     "pascal-case": "^2.0.1",
     "preact": "^8.2.7",
     "preact-compat": "^3.18.0",
-    "preact-emotion": "^9.1.0",
+    "preact-emotion": "^9.1.1",
     "preact-emotion-flexboxgrid": "^2.0.1",
-    "react-apollo": "^2.1.1",
+    "react-apollo": "^2.1.2",
     "remcalc": "^1.0.10",
     "stickybits": "^3.2.0"
   },
@@ -49,6 +49,6 @@
     "eslint": "^4.19.1",
     "eslint-config-joyent-portal": "^3.3.1",
     "joyent-react-scripts": "^8.0.3",
-    "redrun": "^6.0.1"
+    "redrun": "^6.0.2"
   }
 }
