@@ -58,6 +58,7 @@ const Button = styled.button`
 const Tab = styled.div`
   height: 0;
   opacity: 0;
+  overflow: hidden;
   transition: opacity 150ms ease-in;
 
   ${is('active')`
