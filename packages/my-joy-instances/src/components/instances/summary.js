@@ -6,6 +6,7 @@ import { Margin, Padding } from 'styled-components-spacing';
 import titleCase from 'title-case';
 import get from 'lodash.get';
 import remcalc from 'remcalc';
+import { Field } from 'redux-form';
 
 import {
   Card,
@@ -21,7 +22,11 @@ import {
   DeleteIcon,
   StartIcon,
   StopIcon,
-  InstanceTypeIcon
+  EditIcon,
+  InstanceTypeIcon,
+  Input,
+  FormMeta,
+  FormGroup
 } from 'joyent-ui-toolkit';
 
 import GLOBAL from '@state/global';
@@ -58,6 +63,10 @@ const Flex = styled.div`
   }
 `;
 
+const Actionable = styled(Margin)`
+  cursor: pointer;
+`;
+
 const VerticalDivider = styled.div`
   width: ${remcalc(1)};
   background: ${props => props.theme.grey};
@@ -77,11 +86,49 @@ export const Meta = ({
   state,
   brand,
   image,
+  editingName,
+  handleSubmit,
+  editName,
+  disabled,
+  submitting,
   ...instance
 }) => [
   <Row middle="xs">
     <Col xs={12}>
-      <H2>{instance.name}</H2>
+      <H2>
+        {editingName ? (
+          <form onSubmit={handleSubmit}>
+            <Flex style={{ alignItems: 'start' }}>
+              <FormGroup name="name" field={Field}>
+                <Input
+                  onBlur={null}
+                  type="text"
+                  placeholder={instance.name}
+                  disabled={disabled || submitting}
+                />
+                <FormMeta />
+              </FormGroup>
+              <Margin left={1}>
+                <Button
+                  type="submit"
+                  disabled={submitting}
+                  loading={submitting}
+                  inline
+                >
+                  Add
+                </Button>
+              </Margin>
+            </Flex>
+          </form>
+        ) : (
+          <Flex>
+            {instance.name}
+            <Actionable left={2} onClick={editName}>
+              <EditIcon />
+            </Actionable>
+          </Flex>
+        )}
+      </H2>
     </Col>
   </Row>,
   <Margin top={2} bottom={3}>
@@ -131,14 +178,15 @@ export default withTheme(
     rebooting = false,
     removing = false,
     onAction,
-    theme = {}
+    theme = {},
+    ...props
   }) => (
     <Row>
       <Col xs={12} sm={12} md={9}>
         <Card>
           <CardOutlet>
             <Padding all={4}>
-              <Meta {...instance} />
+              <Meta {...instance} {...props} />
               <Row between="xs">
                 <Col xs={9}>
                   <Button
