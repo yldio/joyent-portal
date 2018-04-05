@@ -1,4 +1,4 @@
-#### Standard Tags
+### Standard Tags
 
 ```jsx
 // Name: Active
@@ -26,7 +26,7 @@ const { TagItem, TagList } = require('./');
 <TagItem error>Tags:4lyf</TagItem>;
 ```
 
-#### Deleteable Tags
+### Deleteable Tags
 
 ```jsx
 // Name: Active

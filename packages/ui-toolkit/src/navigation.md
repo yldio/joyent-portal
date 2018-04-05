@@ -1,4 +1,4 @@
-#### Breadcrumb
+### Breadcrumb
 
 ```jsx
 // Name: Active
@@ -19,7 +19,7 @@ const { Breadcrumb, BreadcrumbItem, Anchor } = require('./index.js');
 </Breadcrumb>;
 ```
 
-#### Footer
+### Footer
 
 ```jsx
 // Name: Active

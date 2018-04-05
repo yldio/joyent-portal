@@ -1,4 +1,4 @@
-#### Large Grid
+### Large Grid
 
 ```jsx noeditor
 const big = require('./big.svg');
@@ -10,7 +10,7 @@ const big = require('./big.svg');
 }} src={big} />
 ```
 
-#### Medium Grid
+### Medium Grid
 
 ```jsx noeditor
 const medium = require('./medium.svg');
@@ -22,7 +22,7 @@ const medium = require('./medium.svg');
 }} src={medium} />
 ```
 
-#### Small Grid
+### Small Grid
 
 ```jsx noeditor
 const small = require('./small.svg');

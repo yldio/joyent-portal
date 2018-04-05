@@ -1,4 +1,4 @@
-#### Quick Action Toast
+### Quick Action Toast
 
 Quick Action Toasts are used to show contextually relevent commands and actions and should stick to the bottom of the page when they are active.
 

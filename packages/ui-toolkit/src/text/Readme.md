@@ -1,4 +1,4 @@
-#### Large Type Scale
+### Large Type Scale
 
 ```jsx
 const React = require('react');
@@ -33,7 +33,7 @@ const styles = {
 </div>;
 ```
 
-#### Small Type Scale
+### Small Type Scale
 
 ```jsx
 const React = require('react');

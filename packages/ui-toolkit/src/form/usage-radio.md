@@ -1,4 +1,4 @@
-#### Radio > Default
+### Radio > Default
 
 ```jsx
 const React = require('react');
@@ -25,7 +25,7 @@ const { FormLabel } = require('./');
 </FormGroup>;
 ```
 
-#### Checkbox > Active/Focused
+### Checkbox > Active/Focused
 
 ```jsx
 const React = require('react');
@@ -52,7 +52,7 @@ const { FormLabel } = require('./');
 </FormGroup>;
 ```
 
-#### Checkbox > Disabled
+### Checkbox > Disabled
 
 ```jsx
 const React = require('react');
@@ -79,7 +79,7 @@ const { FormLabel } = require('./');
 </FormGroup>;
 ```
 
-#### Radio input validation
+### Radio input validation
 
 ```jsx
 const React = require('react');

@@ -1,4 +1,4 @@
-#### Table Header
+### Table Header
 
 ```jsx
 // Name: Active
@@ -30,7 +30,7 @@ const { default: Table, Thead, Tr, Th, Tbody } = require('./');
 </Table>;
 ```
 
-#### Table Footer
+### Table Footer
 
 ```jsx
 // Name: Active
@@ -93,7 +93,7 @@ const { default: Table, Tfoot, Tr, Th } = require('./');
 </Table>;
 ```
 
-#### Empty Table
+### Empty Table
 
 ```jsx
 // Name: Active
@@ -175,7 +175,7 @@ const { default: Flex } = require('styled-flex-component');
 </div>;
 ```
 
-#### Multiple Selection List
+### Multiple Selection List
 
 ```jsx
 // Name: Active
@@ -251,7 +251,7 @@ const { Dot, Actions } = require('../icons');
 </Table>;
 ```
 
-#### Single Selection List
+### Single Selection List
 
 ```jsx
 // Name: Active

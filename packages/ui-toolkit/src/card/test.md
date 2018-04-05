@@ -1,4 +1,4 @@
-#### Card
+### Card
 
 ```jsx
 const React = require('react');
@@ -32,7 +32,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Collapsed
+### Card > Collapsed
 
 ```jsx
 const React = require('react');
@@ -66,7 +66,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Shadow
+### Card > Shadow
 
 ```jsx
 const React = require('react');
@@ -124,7 +124,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Actionable
+### Card > Actionable
 
 ```jsx
 const React = require('react');
@@ -182,7 +182,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Active
+### Card > Active
 
 ```jsx
 const React = require('react');
@@ -240,7 +240,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Header
+### Card > Header
 
 ```jsx
 const React = require('react');
@@ -313,7 +313,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Header > Shadow
+### Card > Header > Shadow
 
 ```jsx
 const React = require('react');
@@ -386,7 +386,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Header > Transparent
+### Card > Header > Transparent
 
 ```jsx
 const React = require('react');
@@ -459,7 +459,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Header > Box
+### Card > Header > Box
 
 ```jsx
 const React = require('react');
@@ -586,7 +586,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Header > Meta
+### Card > Header > Meta
 
 ```jsx
 const React = require('react');
@@ -725,7 +725,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Header > Secondary
+### Card > Header > Secondary
 
 ```jsx
 const React = require('react');
@@ -864,7 +864,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Outlet
+### Card > Outlet
 
 ```jsx
 const React = require('react');
@@ -1024,7 +1024,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Outlet > Card
+### Card > Outlet > Card
 
 ```jsx
 const React = require('react');
@@ -1229,7 +1229,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 ];
 ```
 
-#### Card > Disabled
+### Card > Disabled
 
 ```jsx
 const React = require('react');

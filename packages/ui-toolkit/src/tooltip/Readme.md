@@ -40,7 +40,7 @@ const { P } = require('../text');
 </Row>;
 ```
 
-#### Tooltip > hover
+### Tooltip > hover
 
 ```jsx
 const React = require('react');
@@ -60,7 +60,7 @@ const { P } = require('../text');
 </Row>;
 ```
 
-#### Tooltip > click
+### Tooltip > click
 
 ```jsx
 const React = require('react');
