@@ -14,14 +14,6 @@ query instances($offset: Int, $limit: Int) {
       brand
       memory
       disk
-      package {
-        id
-        name
-      }
-      snapshots {
-        id
-        name
-      }
     }
   }
 }
