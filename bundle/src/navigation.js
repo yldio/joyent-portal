@@ -5,6 +5,7 @@ const Server = require('./server');
 
 const Regions = require('../data/regions');
 const Categories = require('../data/categories');
+const Account = require('../data/account');
 
 const {
   PORT = 4001,
@@ -38,6 +39,7 @@ Main(async () => {
       dcName,
       baseUrl,
       regions: Regions,
+      accountServices: Account,
       categories: Categories
     },
     routes: {

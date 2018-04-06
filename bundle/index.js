@@ -12,7 +12,7 @@ const Fs = require('fs');
 const { PORT = 4000 } = process.env;
 const ROOT = Path.join(__dirname, 'src');
 
-const calcPort = (i) => Number(PORT) + Number(i) + 1;
+const calcPort = i => Number(PORT) + Number(i) + 1;
 
 const namespaces = Fs.readdirSync(ROOT)
   .filter(filename => /.js$/.test(filename))
