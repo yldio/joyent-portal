@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React from 'react';
 import intercept from 'apr-intercept';
 import { connect } from 'react-redux';
@@ -43,7 +42,7 @@ export const Firewall = ({
   handleEnabledToggle
 }) => (
   <ViewContainer main>
-    <Margin bottom={3}>
+    <Margin bottom="3">
       <Description href="https://docs.joyent.com/private-cloud/install/cns">
         Cloud Firewall rules control traffic across instances. Enabling the
         firewall adds a default set of rules and rules defined by your chosen
@@ -52,7 +51,7 @@ export const Firewall = ({
     </Margin>
     {loading ? <StatusLoader /> : null}
     {!loading && loadingError ? (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>
@@ -62,7 +61,7 @@ export const Firewall = ({
       </Margin>
     ) : null}
     {!loading && mutationError ? (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>{mutationError}</MessageDescription>
@@ -80,7 +79,7 @@ export const Firewall = ({
         >
           {props =>
             loading ? null : (
-              <Margin right={5}>
+              <Margin right="5">
                 <ToggleFirewallForm {...props} submitOnChange />
               </Margin>
             )
@@ -101,19 +100,19 @@ export const Firewall = ({
       </FlexItem>
     </Flex>
     {!loading && !defaultRules.length && !tagRules.length ? (
-      <Margin top={5}>
+      <Margin top="5">
         <Empty borderTop>
           Sorry, but we weren’t able to find any firewall rules.
         </Empty>
       </Margin>
     ) : null}
     {!loading && enabled && defaultRules.length ? (
-      <Margin top={5}>
+      <Margin top="5">
         <DefaultRules rules={defaultRules} />
       </Margin>
     ) : null}
     {!loading && enabled && tagRules.length ? (
-      <Margin top={5}>
+      <Margin top="5">
         <TagRules rules={tagRules} />
       </Margin>
     ) : null}

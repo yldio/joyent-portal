@@ -30,8 +30,8 @@ import { Forms, Values } from '../constants';
 import imageData from './images-map.json';
 import ImageView, { Preview as ImagePreview, ImageType } from './components';
 
-const { IC_IMG_F } = Forms;
-const { IC_IMG_V_VMS } = Values;
+const { IR_IMG_F } = Forms;
+const { IR_IMG_V_VMS } = Values;
 
 const Image = ({
   handleGetValue,
@@ -52,7 +52,7 @@ const Image = ({
       Linux image on secure, bare metal containers.
     </StepDescription>
     <StepPreview>
-      <Margin top={3}>
+      <Margin top="3">
         <ImagePreview {...preview} />
       </Margin>
     </StepPreview>
@@ -60,7 +60,7 @@ const Image = ({
       {({ next }) => (
         <Margin top="5">
           <ReduxForm
-            form={IC_IMG_F}
+            form={IR_IMG_F}
             destroyOnUnmount={false}
             forceUnregisterOnUnmount={true}
             enableReinitialize
@@ -80,7 +80,7 @@ const Image = ({
                     />
                     <Margin top="2">
                       <Button
-                        id={'next-button-image'}
+                        id="next-button-image"
                         type="button"
                         component={Link}
                         to={next}
@@ -102,8 +102,8 @@ const Image = ({
 export default compose(
   connect(
     ({ form, values }, ownProps) => {
-      const image = get(form, `${IC_IMG_F}.values.image`, null);
-      const vms = get(values, IC_IMG_V_VMS, true);
+      const image = get(form, `${IR_IMG_F}.values.image`, null);
+      const vms = get(values, IR_IMG_V_VMS, true);
 
       return {
         ...ownProps,
@@ -113,10 +113,10 @@ export default compose(
     },
     dispatch => ({
       setImageType: isVm => {
-        return dispatch(set({ name: IC_IMG_V_VMS, value: isVm }));
+        return dispatch(set({ name: IR_IMG_V_VMS, value: isVm }));
       },
       handleSelectLatest: ({ versions }) => {
-        return dispatch(change(IC_IMG_F, 'image', versions[0].id));
+        return dispatch(change(IR_IMG_F, 'image', versions[0].id));
       }
     })
   ),

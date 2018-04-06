@@ -14,11 +14,11 @@ import {
   H3,
   ViewContainer,
   StatusLoader,
-  Divider,
   Message,
   MessageTitle,
   MessageDescription,
-  TagList
+  TagList,
+  Divider
 } from 'joyent-ui-toolkit';
 
 import { Forms } from '@root/constants';
@@ -63,7 +63,7 @@ export const Tags = ({
       )}
     </ReduxForm>
     {error && !loading && !tags.length ? (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>
@@ -73,7 +73,7 @@ export const Tags = ({
       </Margin>
     ) : null}
     {mutationError ? (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>{mutationError}</MessageDescription>
@@ -88,7 +88,7 @@ export const Tags = ({
     >
       {props =>
         addOpen ? (
-          <Margin bottom={5}>
+          <Margin bottom="5">
             <AddForm
               {...props}
               onToggleExpanded={() => handleToggleAddOpen(!addOpen)}
@@ -98,13 +98,13 @@ export const Tags = ({
         ) : null
       }
     </ReduxForm>
-    {!loading ? (
-      <Margin bottom={5}>
+    {loading ? null : (
+      <Margin bottom="5">
         <H3>
           {tags.length} tag{tags.length === 1 ? '' : 's'}
         </H3>
       </Margin>
-    ) : null}
+    )}
     {loading && !tags.length ? <StatusLoader /> : null}
     <TagList>
       {tags.map(({ id, name, value }) => (

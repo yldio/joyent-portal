@@ -27,7 +27,7 @@ export default ({ children, ...rest }) => (
   <FullWidthCard {...rest}>
     <Padding all={6}>
       <Flex alignCenter justifyCenter column>
-        <Margin bottom={2}>
+        <Margin bottom="2">
           <EmptyState />
         </Margin>
         <NoPackagesTitle>{children}</NoPackagesTitle>

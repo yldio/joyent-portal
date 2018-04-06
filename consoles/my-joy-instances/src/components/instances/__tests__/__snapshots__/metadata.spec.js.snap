@@ -1,7 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <AddForm /> without throwing 1`] = `
+.c13 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c24 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c14 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c31 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c18 {
+  margin-top: 0.1875rem;
+}
+
+.c23 {
+  margin-top: 0.75rem;
+}
+
+.c33 {
+  margin-right: 0.75rem;
+}
+
+.c5 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c12 {
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c29 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -13,30 +133,30 @@ exports[`renders <AddForm /> without throwing 1`] = `
   appearance: button;
 }
 
-.c31::-moz-focus-inner,
-.c31[type='button']::-moz-focus-inner,
-.c31[type='reset']::-moz-focus-inner,
-.c31[type='submit']::-moz-focus-inner {
+.c29::-moz-focus-inner,
+.c29[type='button']::-moz-focus-inner,
+.c29[type='reset']::-moz-focus-inner,
+.c29[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c31:-moz-focusring,
-.c31[type='button']:-moz-focusring,
-.c31[type='reset']:-moz-focusring,
-.c31[type='submit']:-moz-focusring {
+.c29:-moz-focusring,
+.c29[type='button']:-moz-focusring,
+.c29[type='reset']:-moz-focusring,
+.c29[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c30 {
+.c28 {
   min-width: 7.5rem;
 }
 
-.c29 {
+.c27 {
   display: inline-block;
 }
 
-.c28 {
+.c26 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -79,7 +199,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c28:focus {
+.c26:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -87,43 +207,43 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c28:hover {
+.c26:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c28[disabled] {
+.c26[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c28:focus {
+.c26:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c28:hover {
+.c26:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c28:active,
-.c28:active:hover,
-.c28:active:focus {
+.c26:active,
+.c26:active:hover,
+.c26:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c32 {
+.c30 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -167,7 +287,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c32:focus {
+.c30:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -175,43 +295,43 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c32:hover {
+.c30:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
-.c32:active,
-.c32:active:hover,
-.c32:active:focus {
+.c30:active,
+.c30:active:hover,
+.c30:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c32[disabled] {
+.c30[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c32:focus {
+.c30:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c32:hover {
+.c30:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c32:active,
-.c32:active:hover,
-.c32:active:focus {
+.c30:active,
+.c30:active:hover,
+.c30:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c34 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -267,7 +387,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   float: right;
 }
 
-.c34:focus {
+.c32:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -275,62 +395,62 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c34:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c34[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c34:focus {
+.c32:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c34:hover {
+.c32:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c34:focus {
+.c32:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c34:hover {
+.c32:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c34:active,
-.c34:active:hover,
-.c34:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c18 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -340,141 +460,15 @@ exports[`renders <AddForm /> without throwing 1`] = `
   text-align: left;
 }
 
-.c14 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c26 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c15 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c21 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c33 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c10 {
+.c9 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
 
-.c22 {
-  height: 1px;
-  background-color: rgb(216,216,216);
-  background-color: transparent;
-}
-
-.c19 {
-  margin-top: 0.1875rem;
-}
-
-.c25 {
-  margin-top: 0.75rem;
-}
-
-.c35 {
-  margin-right: 0.75rem;
-}
-
-.c6 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c13 {
-  padding-left: 1.125rem;
-  padding-right: 1.125rem;
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
+.c0 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -497,7 +491,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c4 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -524,7 +518,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c12 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -546,7 +540,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c11 {
+.c10 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -562,7 +556,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c3 {
+.c2 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -574,7 +568,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c9 {
+.c8 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -608,7 +602,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   color: inherit;
 }
 
-.c16 {
+.c15 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -621,7 +615,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   width: 100%;
 }
 
-.c20 {
+.c19 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -643,46 +637,46 @@ exports[`renders <AddForm /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c20:focus {
+.c19:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c20::-webkit-input-placeholder {
+.c19::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c20::-moz-placeholder {
+.c19::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c20:-ms-input-placeholder {
+.c19:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c20:invalid {
+.c19:invalid {
   box-shadow: none;
 }
 
-.c20:disabled {
+.c19:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c20:disabled::-webkit-input-placeholder {
+.c19:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c20:disabled::-moz-placeholder {
+.c19:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c20:disabled:-ms-input-placeholder {
+.c19:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24 {
+.c22 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 6rem;
@@ -707,62 +701,62 @@ exports[`renders <AddForm /> without throwing 1`] = `
   resize: vertical;
 }
 
-.c24:focus {
+.c22:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c24::-webkit-input-placeholder {
+.c22::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24::-moz-placeholder {
+.c22::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:-ms-input-placeholder {
+.c22:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:invalid {
+.c22:invalid {
   box-shadow: none;
 }
 
-.c24:disabled {
+.c22:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c24:disabled::-webkit-input-placeholder {
+.c22:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:disabled::-moz-placeholder {
+.c22:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:disabled:-ms-input-placeholder {
+.c22:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:disabled {
+.c22:disabled {
   color: rgb(73,73,73);
 }
 
-.c24:disabled::-webkit-input-placeholder {
+.c22:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c24:disabled::-moz-placeholder {
+.c22:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c24:disabled:-ms-input-placeholder {
+.c22:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c23 {
+.c21 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -775,40 +769,36 @@ exports[`renders <AddForm /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c17 {
+.c16 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c0 {
-  margin-bottom: 0;
-}
-
-.c2 {
+.c1 {
   border-top: 0;
   border-left: 0;
   border-right: 0;
 }
 
-.c27 {
+.c25 {
   margin-right: 0.375rem;
 }
 
-.c5 {
+.c4 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c8 {
+.c7 {
   height: 2.9375rem;
   max-width: 98%;
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c24 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -817,7 +807,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c24 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -826,7 +816,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c15 {
+  .c14 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -835,7 +825,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c21 {
+  .c20 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -844,39 +834,38 @@ exports[`renders <AddForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c33 {
+  .c31 {
     display: none;
   }
 }
 
 <form
-  className="c0"
   onSubmit={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     disabled={false}
     name="card"
   >
     <div
-      className="c2 c3 c4"
+      className="c1 c2 c3"
       disabled={false}
       name="card-header"
       onClick={false}
     >
       <div
-        className="c5 c6"
+        className="c4 c5"
       >
         <div
-          className="c7"
+          className="c6"
         >
           <div
-            className="c8 c9 c4"
+            className="c7 c8 c3"
             disabled={false}
             name="card-header-meta"
           >
             <h4
-              className="c10"
+              className="c9"
             >
               Add metadata
             </h4>
@@ -885,82 +874,78 @@ exports[`renders <AddForm /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c11 c12"
+      className="c10 c11"
       disabled={false}
       name="card-outlet"
     >
       <div
-        className="c13"
+        className="c12"
       >
         <div
-          className="c14"
+          className="c13"
         >
           <div
-            className="c15"
+            className="c14"
           >
             <div
-              className="c16"
+              className="c15"
               id={null}
               name="name"
               role="group"
               style={undefined}
             >
               <label
-                className="c17 c18"
+                className="c16 c17"
                 htmlFor={null}
               >
                 Metadata
                  key
               </label>
               <div
-                className="c19"
+                className="c18"
               >
                 <input
-                  className="c20"
+                  className="c19"
                   disabled={false}
                   id={null}
                   onBlur={null}
                 />
                 <div
-                  className="c14"
+                  className="c13"
                 >
                   <div
-                    className="c21"
+                    className="c20"
                   />
                 </div>
               </div>
             </div>
-            <div
-              className="c22 c14"
-              height="0.75rem"
-            />
           </div>
         </div>
         <div
-          className="c14"
+          className="c13"
         >
           <div
-            className="c15"
+            className="c14"
           >
             <div
-              className="c16"
+              className="c15"
               id={null}
               name="value"
               role="group"
               style={undefined}
             >
               <label
-                className="c17 c18"
+                className="c16 c17"
                 htmlFor={null}
               >
                 Metadata
                  value
               </label>
               <div
-                className="c19"
+                className="c18"
               >
                 <textarea
-                  className="c23 c24"
+                  className="c21 c22"
                   disabled={false}
                   id={null}
                   name="name"
@@ -968,30 +953,26 @@ exports[`renders <AddForm /> without throwing 1`] = `
                 />
               </div>
               <div
-                className="c14"
+                className="c13"
               >
                 <div
-                  className="c21"
+                  className="c20"
                 />
               </div>
             </div>
-            <div
-              className="c22 c14"
-              height="0.75rem"
-            />
           </div>
         </div>
         <div
-          className="c25"
+          className="c23"
         >
           <div
-            className="c26"
+            className="c24"
           >
             <div
-              className="c15"
+              className="c14"
             >
               <button
-                className="c27 c28 c29 c30 c31"
+                className="c25 c26 c27 c28 c29"
                 data-ui-button="true"
                 disabled={false}
                 href=""
@@ -1004,7 +985,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c32 c29 c30 c31"
+                className="c30 c27 c28 c29"
                 data-ui-button="true"
                 disabled={true}
                 href=""
@@ -1017,10 +998,10 @@ exports[`renders <AddForm /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c33"
+              className="c31"
             >
               <button
-                className="c34 c29 c30 c31"
+                className="c32 c27 c28 c29"
                 data-ui-button="true"
                 disabled={false}
                 href=""
@@ -1030,7 +1011,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c35"
+                  className="c33"
                 >
                   <svg
                     height="16"
@@ -1063,7 +1044,137 @@ exports[`renders <AddForm /> without throwing 1`] = `
 `;
 
 exports[`renders <EditForm /> without throwing 1`] = `
+.c13 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c24 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c14 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c20 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c25 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
 .c32 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c18 {
+  margin-top: 0.1875rem;
+}
+
+.c23 {
+  margin-top: 0.75rem;
+}
+
+.c34 {
+  margin-right: 0.75rem;
+}
+
+.c5 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c12 {
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c30 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1075,30 +1186,30 @@ exports[`renders <EditForm /> without throwing 1`] = `
   appearance: button;
 }
 
-.c32::-moz-focus-inner,
-.c32[type='button']::-moz-focus-inner,
-.c32[type='reset']::-moz-focus-inner,
-.c32[type='submit']::-moz-focus-inner {
+.c30::-moz-focus-inner,
+.c30[type='button']::-moz-focus-inner,
+.c30[type='reset']::-moz-focus-inner,
+.c30[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c32:-moz-focusring,
-.c32[type='button']:-moz-focusring,
-.c32[type='reset']:-moz-focusring,
-.c32[type='submit']:-moz-focusring {
+.c30:-moz-focusring,
+.c30[type='button']:-moz-focusring,
+.c30[type='reset']:-moz-focusring,
+.c30[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c31 {
+.c29 {
   min-width: 7.5rem;
 }
 
-.c30 {
+.c28 {
   display: inline-block;
 }
 
-.c29 {
+.c27 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1141,7 +1252,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c29:focus {
+.c27:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1149,43 +1260,43 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c29:hover {
+.c27:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c29[disabled] {
+.c27[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c29:focus {
+.c27:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c29:hover {
+.c27:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c29:active,
-.c29:active:hover,
-.c29:active:focus {
+.c27:active,
+.c27:active:hover,
+.c27:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c33 {
+.c31 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1229,7 +1340,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c33:focus {
+.c31:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1237,43 +1348,43 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c33:hover {
+.c31:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c31:active,
+.c31:active:hover,
+.c31:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c33[disabled] {
+.c31[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c33:focus {
+.c31:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c33:hover {
+.c31:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c31:active,
+.c31:active:hover,
+.c31:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c35 {
+.c33 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1329,7 +1440,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   float: right;
 }
 
-.c35:focus {
+.c33:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1337,62 +1448,62 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c35:hover {
+.c33:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c35[disabled] {
+.c33[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c35:focus {
+.c33:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c35:hover {
+.c33:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c35:focus {
+.c33:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c35:hover {
+.c33:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c18 {
+.c17 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1402,143 +1513,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   text-align: left;
 }
 
-.c14 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c26 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c15 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c21 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c27 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c34 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c22 {
-  height: 1px;
-  background-color: rgb(216,216,216);
-  background-color: transparent;
-}
-
-.c19 {
-  margin-top: 0.1875rem;
-}
-
-.c25 {
-  margin-top: 0.75rem;
-}
-
-.c36 {
-  margin-right: 0.75rem;
-}
-
-.c6 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c13 {
-  padding-left: 1.125rem;
-  padding-right: 1.125rem;
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1 {
+.c0 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1561,7 +1536,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c4 {
+.c3 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1588,7 +1563,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c12 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1610,7 +1585,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c11 {
+.c10 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1626,7 +1601,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c3 {
+.c2 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1638,7 +1613,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c9 {
+.c8 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -1672,7 +1647,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   color: inherit;
 }
 
-.c16 {
+.c15 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -1685,7 +1660,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   width: 100%;
 }
 
-.c20 {
+.c19 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1707,46 +1682,46 @@ exports[`renders <EditForm /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c20:focus {
+.c19:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c20::-webkit-input-placeholder {
+.c19::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c20::-moz-placeholder {
+.c19::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c20:-ms-input-placeholder {
+.c19:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c20:invalid {
+.c19:invalid {
   box-shadow: none;
 }
 
-.c20:disabled {
+.c19:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c20:disabled::-webkit-input-placeholder {
+.c19:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c20:disabled::-moz-placeholder {
+.c19:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c20:disabled:-ms-input-placeholder {
+.c19:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24 {
+.c22 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 6rem;
@@ -1771,62 +1746,62 @@ exports[`renders <EditForm /> without throwing 1`] = `
   resize: vertical;
 }
 
-.c24:focus {
+.c22:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c24::-webkit-input-placeholder {
+.c22::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24::-moz-placeholder {
+.c22::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:-ms-input-placeholder {
+.c22:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:invalid {
+.c22:invalid {
   box-shadow: none;
 }
 
-.c24:disabled {
+.c22:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c24:disabled::-webkit-input-placeholder {
+.c22:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:disabled::-moz-placeholder {
+.c22:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:disabled:-ms-input-placeholder {
+.c22:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c24:disabled {
+.c22:disabled {
   color: rgb(73,73,73);
 }
 
-.c24:disabled::-webkit-input-placeholder {
+.c22:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c24:disabled::-moz-placeholder {
+.c22:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c24:disabled:-ms-input-placeholder {
+.c22:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c23 {
+.c21 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1839,17 +1814,13 @@ exports[`renders <EditForm /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c17 {
+.c16 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c0 {
-  margin-bottom: 0;
-}
-
-.c10 {
+.c9 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -1858,30 +1829,30 @@ exports[`renders <EditForm /> without throwing 1`] = `
   display: block;
 }
 
-.c2 {
+.c1 {
   border-top: 0;
   border-left: 0;
   border-right: 0;
 }
 
-.c28 {
+.c26 {
   margin-right: 0.375rem;
 }
 
-.c5 {
+.c4 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c8 {
+.c7 {
   height: 2.9375rem;
   max-width: 98%;
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c24 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1890,7 +1861,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c26 {
+  .c24 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1899,7 +1870,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c15 {
+  .c14 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1908,7 +1879,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c21 {
+  .c20 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -1917,7 +1888,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c25 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -1926,7 +1897,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c34 {
+  .c32 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -1935,115 +1906,110 @@ exports[`renders <EditForm /> without throwing 1`] = `
 }
 
 <form
-  className="c0"
   onSubmit={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     disabled={false}
     name="card"
   >
     <div
-      className="c2 c3 c4"
+      className="c1 c2 c3"
       disabled={false}
       name="card-header"
       onClick={undefined}
     >
       <div
-        className="c5 c6"
+        className="c4 c5"
       >
         <div
-          className="c7"
+          className="c6"
         >
           <div
-            className="c8 c9 c4"
+            className="c7 c8 c3"
             disabled={false}
             name="card-header-meta"
           >
             <div
-              className="c10"
+              className="c9"
             />
           </div>
         </div>
       </div>
     </div>
     <div
-      className="c11 c12"
+      className="c10 c11"
       disabled={false}
       name="card-outlet"
     >
       <div
-        className="c13"
+        className="c12"
       >
         <div
-          className="c14"
+          className="c13"
         >
           <div
-            className="c15"
+            className="c14"
           >
             <div
-              className="c16"
+              className="c15"
               id={null}
               name="name"
               role="group"
               style={undefined}
             >
               <label
-                className="c17 c18"
+                className="c16 c17"
                 htmlFor={null}
               >
                 Metadata
                  key
               </label>
               <div
-                className="c19"
+                className="c18"
               >
                 <input
-                  className="c20"
+                  className="c19"
                   disabled={false}
                   id={null}
                   onBlur={null}
                 />
                 <div
-                  className="c14"
+                  className="c13"
                 >
                   <div
-                    className="c21"
+                    className="c20"
                   />
                 </div>
               </div>
             </div>
-            <div
-              className="c22 c14"
-              height="0.75rem"
-            />
           </div>
         </div>
         <div
-          className="c14"
+          className="c13"
         >
           <div
-            className="c15"
+            className="c14"
           >
             <div
-              className="c16"
+              className="c15"
               id={null}
               name="value"
               role="group"
               style={undefined}
             >
               <label
-                className="c17 c18"
+                className="c16 c17"
                 htmlFor={null}
               >
                 Metadata
                  value
               </label>
               <div
-                className="c19"
+                className="c18"
               >
                 <textarea
-                  className="c23 c24"
+                  className="c21 c22"
                   disabled={false}
                   id={null}
                   name="name"
@@ -2051,30 +2017,26 @@ exports[`renders <EditForm /> without throwing 1`] = `
                 />
               </div>
               <div
-                className="c14"
+                className="c13"
               >
                 <div
-                  className="c21"
+                  className="c20"
                 />
               </div>
             </div>
-            <div
-              className="c22 c14"
-              height="0.75rem"
-            />
           </div>
         </div>
         <div
-          className="c25"
+          className="c23"
         >
           <div
-            className="c26"
+            className="c24"
           >
             <div
-              className="c27"
+              className="c25"
             >
               <button
-                className="c28 c29 c30 c31 c32"
+                className="c26 c27 c28 c29 c30"
                 data-ui-button="true"
                 disabled={false}
                 href=""
@@ -2087,7 +2049,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
                 </span>
               </button>
               <button
-                className="c33 c30 c31 c32"
+                className="c31 c28 c29 c30"
                 data-ui-button="true"
                 disabled={true}
                 href=""
@@ -2100,10 +2062,10 @@ exports[`renders <EditForm /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c34"
+              className="c32"
             >
               <button
-                className="c35 c30 c31 c32"
+                className="c33 c28 c29 c30"
                 data-ui-button="true"
                 disabled={false}
                 href=""
@@ -2113,7 +2075,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c36"
+                  className="c34"
                 >
                   <svg
                     height="16"

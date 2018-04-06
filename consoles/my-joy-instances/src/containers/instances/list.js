@@ -83,7 +83,7 @@ export const List = ({
 
   const _error =
     error && !_instances.length && !_loading && !filter.length ? (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>
@@ -94,7 +94,7 @@ export const List = ({
     ) : null;
 
   const _mutationError = mutationError && (
-    <Margin bottom={5}>
+    <Margin bottom="5">
       <Message error>
         <MessageTitle>Ooops!</MessageTitle>
         <MessageDescription>{mutationError}</MessageDescription>
@@ -107,7 +107,7 @@ export const List = ({
   const handleReboot = selected => handleAction({ name: 'reboot', selected });
   const handleRemove = selected => handleAction({ name: 'remove', selected });
 
-  const _table = !_loading ? (
+  const _table = _loading ? null : (
     <ReduxForm form={TABLE_FORM_NAME}>
       {props => (
         <InstanceList
@@ -123,7 +123,7 @@ export const List = ({
           total={total}
         >
           {fetching ? <InstanceListFetchingItem /> : null}
-          {(!fetching ? _instances : []).map(instance => (
+          {(fetching ? [] : _instances).map(instance => (
             <InstanceListItem
               key={instance.id}
               {...instance}
@@ -137,7 +137,7 @@ export const List = ({
         </InstanceList>
       )}
     </ReduxForm>
-  ) : null;
+  );
 
   const _empty =
     !_loading && !_instances.length ? (
@@ -164,10 +164,10 @@ export const List = ({
 
   return (
     <ViewContainer main>
-      <Margin top={5}>
+      <Margin top="5">
         <H3>Instances</H3>
       </Margin>
-      <Margin top={3} bottom={5}>
+      <Margin top="3" bottom="5">
         <ReduxForm form={MENU_FORM_NAME}>
           {props => (
             <ToolbarForm
@@ -180,7 +180,7 @@ export const List = ({
           )}
         </ReduxForm>
       </Margin>
-      {!_mutationError ? _error : null}
+      {_mutationError ? null : _error}
       {_mutationError}
       {_loading}
       {_table}
@@ -259,7 +259,6 @@ export default compose(
       const sortBy = get(values, 'instance-list-sort-by', 'name');
       const sortOrder = get(values, 'instance-list-sort-order', 'asc');
 
-      console.log(index, filter);
       // if user is searching something, get items that match that query
       const filtered =
         filter && index.list.length
@@ -366,13 +365,13 @@ export default compose(
       handleAction: async ({ selected, name }) => {
         // eslint-disable-next-line no-alert
         if (
-          !await Confirm(
+          !(await Confirm(
             `Do you want to ${name} ${
               selected.length === 1
                 ? `"${selected[0].name}"`
                 : `${selected.length} instances`
             }`
-          )
+          ))
         ) {
           return;
         }

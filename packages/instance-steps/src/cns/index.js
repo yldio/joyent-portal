@@ -27,8 +27,25 @@ import GetAccount from '../graphql/get-account.gql';
 import { addCnsService as validateServiceName } from '../validators';
 import { Forms, Values } from '../constants';
 
-const { IC_CNS_F, IR_NAME_F } = Forms;
-const { IC_CNS_V_ENABLED, IC_CNS_V_SERVICES } = Values;
+const { IR_CNS_F, IR_NAME_F } = Forms;
+const { IR_CNS_V_ENABLED, IR_CNS_V_SERVICES } = Values;
+
+export const Preview = ({ enabled = false }) => (
+  <Flex>
+    <FlexItem>
+      <Margin right="2">
+        <StatusIcon
+          fill="green"
+          border="greenDark"
+          Icon={() => <TickIcon fill="white" />}
+        />
+      </Margin>
+    </FlexItem>
+    <FlexItem>
+      <H3>{enabled ? 'CNS enabled' : 'CNS not enabled'}</H3>
+    </FlexItem>
+  </Flex>
+);
 
 const CnsContainer = ({
   handleValidate,
@@ -47,20 +64,7 @@ const CnsContainer = ({
     <StepHeader icon={<CnsIcon />}>CNS</StepHeader>
     <StepPreview>
       <Margin top="3">
-        <Flex>
-          <FlexItem>
-            <Margin right={2}>
-              <StatusIcon
-                fill="green"
-                border="greenDark"
-                Icon={() => <TickIcon fill="white" />}
-              />
-            </Margin>
-          </FlexItem>
-          <FlexItem>
-            <H3>{preview.cnsEnabled ? 'CNS enabled' : 'CNS not enabled'}</H3>
-          </FlexItem>
-        </Flex>
+        <Preview enabled={preview.cnsEnabled} />
       </Margin>
     </StepPreview>
     <StepOutlet>
@@ -72,7 +76,7 @@ const CnsContainer = ({
             onRemoveService={handleRemoveService}
           >
             <ReduxForm
-              form={IC_CNS_F}
+              form={IR_CNS_F}
               destroyOnUnmount={false}
               forceUnregisterOnUnmount={true}
               onSubmit={handleAddService}
@@ -82,9 +86,9 @@ const CnsContainer = ({
               {props => <AddServiceForm {...props} />}
             </ReduxForm>
           </Cns>
-          <Margin top={5}>
+          <Margin top="5">
             <Button
-              id={'next-button-cns'}
+              id="next-button-cns"
               type="button"
               component={Link}
               to={next}
@@ -92,7 +96,7 @@ const CnsContainer = ({
               Next
             </Button>
           </Margin>
-          <Margin top={3}>
+          <Margin top="3">
             <P>
               *All hostnames listed here will be confirmed after deployment.
             </P>
@@ -119,7 +123,7 @@ export default compose(
     }
   }),
   connect(({ form, values }, { id, datacenter }) => {
-    const cnsEnabled = get(values, IC_CNS_V_ENABLED, true);
+    const cnsEnabled = get(values, IR_CNS_V_ENABLED, true);
 
     if (!cnsEnabled) {
       return {
@@ -129,7 +133,7 @@ export default compose(
     }
 
     const instanceName = get(form, `${IR_NAME_F}.values.name`, '<inst-name>');
-    const serviceNames = get(values, IC_CNS_V_SERVICES, []);
+    const serviceNames = get(values, IR_CNS_V_SERVICES, []);
 
     const hostnames = [
       {
@@ -178,18 +182,18 @@ export default compose(
     },
     handleValidate: validateServiceName,
     handleToggleCnsEnabled: ({ target }) => {
-      return dispatch(set({ name: IC_CNS_V_ENABLED, value: !cnsEnabled }));
+      return dispatch(set({ name: IR_CNS_V_ENABLED, value: !cnsEnabled }));
     },
     handleAddService: ({ name }) => {
       return dispatch([
-        destroy(IC_CNS_F),
-        set({ name: IC_CNS_V_SERVICES, value: serviceNames.concat(name) })
+        destroy(IR_CNS_F),
+        set({ name: IR_CNS_V_SERVICES, value: serviceNames.concat(name) })
       ]);
     },
     handleRemoveService: value => {
       return dispatch(
         set({
-          name: IC_CNS_V_SERVICES,
+          name: IR_CNS_V_SERVICES,
           value: serviceNames.filter(name => name !== value)
         })
       );

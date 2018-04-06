@@ -25,8 +25,8 @@ import ListNetworks from '../graphql/list-networks.gql';
 import { Network as NetworkWidget } from 'joyent-ui-resource-widgets';
 import { Forms, Values } from '../constants';
 
-const { IC_NW_F } = Forms;
-const { IC_NW_V_INFO_EXPANDED, IC_NW_V_MACHINES_EXPANDED } = Values;
+const { IR_NW_F } = Forms;
+const { IR_NW_V_INFO_EXPANDED, IR_NW_V_MACHINES_EXPANDED } = Values;
 
 const Form = styled.form`
   padding-top: ${remcalc(1)};
@@ -45,7 +45,7 @@ const Networks = ({
 }) => (
   <Step name="networks" getValue={handleGetValue} {...props}>
     <StepHeader icon={<NetworkIcon />}>Networks</StepHeader>
-    <StepDescription href={'https://docs.joyent.com/public-cloud/network/sdn'}>
+    <StepDescription href="https://docs.joyent.com/public-cloud/network/sdn">
       Instances are automatically connected to a private fabric network, which
       is the best choice for internal communication within your application.
       Data center networks are the best choice for exposing your application to
@@ -74,7 +74,7 @@ const Networks = ({
       {({ next }) => (
         <Margin top="5">
           <ReduxForm
-            form={IC_NW_F}
+            form={IR_NW_F}
             destroyOnUnmount={false}
             forceUnregisterOnUnmount={true}
             initialValues={initialValues}
@@ -114,7 +114,7 @@ const Networks = ({
                   </Form>
                   <Margin top="5">
                     <Button
-                      id={'next-button-networks'}
+                      id="next-button-networks"
                       type="button"
                       component={Link}
                       to={next}
@@ -150,7 +150,7 @@ export default compose(
   }),
   connect(
     ({ values, form }, { networks }) => {
-      const selected = get(form, `${IC_NW_F}.values`, {});
+      const selected = get(form, `${IR_NW_F}.values`, {});
       const empty = id => !includes(Object.keys(selected), id);
       const _public = find(networks, ['name', 'Joyent-SDC-Public']);
 
@@ -173,8 +173,8 @@ export default compose(
             empty(id) && name === 'Joyent-SDC-Public'
               ? true
               : Boolean(selected[id]),
-          machinesExpanded: get(values, IC_NW_V_MACHINES_EXPANDED(id), false),
-          infoExpanded: get(values, IC_NW_V_INFO_EXPANDED(id), false)
+          machinesExpanded: get(values, IR_NW_V_MACHINES_EXPANDED(id), false),
+          infoExpanded: get(values, IR_NW_V_INFO_EXPANDED(id), false)
         };
       });
 
@@ -188,12 +188,12 @@ export default compose(
     (dispatch, { history }) => ({
       setInfoExpanded: (id, expanded) => {
         return dispatch(
-          set({ name: IC_NW_V_INFO_EXPANDED(id), value: expanded })
+          set({ name: IR_NW_V_INFO_EXPANDED(id), value: expanded })
         );
       },
       setMachinesExpanded: (id, expanded) => {
         return dispatch(
-          set({ name: IC_NW_V_MACHINES_EXPANDED(id), value: expanded })
+          set({ name: IR_NW_V_MACHINES_EXPANDED(id), value: expanded })
         );
       }
     })

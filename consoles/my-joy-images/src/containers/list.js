@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { Margin } from 'styled-components-spacing';
-import remcalc from 'remcalc';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
@@ -41,22 +40,21 @@ export const List = ({
   handleRemove
 }) => (
   <ViewContainer main>
-    <Margin top={4}>
+    <Margin top="4">
       <ReduxForm form={LIST_TOOLBAR_FORM}>
         {props => <ToolbarForm {...props} actionable={!loading} />}
       </ReduxForm>
     </Margin>
-    <Margin vertical={4}>
+    <Margin vertical="4">
       <Divider />
     </Margin>
     {loading && !images.length ? (
       <Fragment>
-        <Divider height={remcalc(30)} transparent />
         <StatusLoader />
       </Fragment>
     ) : null}
     {error && !images.length && !loading ? (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>
@@ -66,7 +64,7 @@ export const List = ({
       </Margin>
     ) : null}
     <Fragment>
-      <Margin bottom={4}>
+      <Margin bottom="4">
         <ReduxForm
           form={LIST_TOGGLE_TYPE_FORM}
           initialValues={{ 'image-type': 'all' }}

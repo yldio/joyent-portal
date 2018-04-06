@@ -30,7 +30,7 @@ export default ({ match }) => {
     .filter(Boolean)
     .map(({ name, pathname }) => (
       <BreadcrumbItem key={name} to={pathname} component={Link}>
-        <Margin horizontal={1} vertical={3}>
+        <Margin horizontal="1" vertical="3">
           {name}
         </Margin>
       </BreadcrumbItem>

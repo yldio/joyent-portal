@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React, { Fragment } from 'react';
 import { toMatchImageSnapshot } from 'jest-image-snapshot';
 import screenshot from 'react-screenshot-renderer';

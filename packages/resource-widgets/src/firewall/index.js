@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import { Margin, Padding } from 'styled-components-spacing';
@@ -10,7 +9,6 @@ import {
   H3,
   FormGroup,
   FormLabel,
-  Toggle,
   TagList,
   TagItem,
   P,
@@ -41,7 +39,7 @@ const parsePartial = (p, index, style) => {
     const name = Array.isArray(p[1]) ? p[1][0] : p[1];
 
     return (
-      <Margin left={0.5}>
+      <Margin left="0.5">
         <TagList>
           <TagItem
             style={style}
@@ -56,7 +54,7 @@ const parsePartial = (p, index, style) => {
   }
 
   return (
-    <Margin key={index} top={0.5} bottom={0.5}>
+    <Margin key={index} top="0.5" bottom="0.5">
       <P style={style}>{p[1]}</P>
     </Margin>
   );
@@ -73,11 +71,11 @@ const Rule = ({ enabled, rule_obj }) => {
   const tos = rule_obj.to.map((p, index) => parsePartial(p, index, style));
   return (
     <Card disabled={!enabled}>
-      <Padding left={3} right={3} top={2} bottom={2}>
+      <Padding left="3" right="3" top="2" bottom="2">
         <Row>
           <Col xs={3}>
             <Flex justifyStart alignCenter contentStretch>
-              <Margin right={0.5}>
+              <Margin right="0.5">
                 <FlexItem>
                   <Strong style={style}>From: </Strong>
                 </FlexItem>
@@ -87,7 +85,7 @@ const Rule = ({ enabled, rule_obj }) => {
           </Col>
           <Col xs={3}>
             <Flex justifyStart alignCenter contentStretch>
-              <Margin right={0.5}>
+              <Margin right="0.5">
                 <FlexItem>
                   <Strong style={style}>To: </Strong>
                 </FlexItem>
@@ -97,7 +95,7 @@ const Rule = ({ enabled, rule_obj }) => {
           </Col>
           <Col xs={2}>
             <Flex justifyStart alignCenter contentStretch>
-              <Margin right={0.5}>
+              <Margin right="0.5">
                 <FlexItem>
                   <Strong style={style}>Protocol: </Strong>
                 </FlexItem>
@@ -109,7 +107,7 @@ const Rule = ({ enabled, rule_obj }) => {
           </Col>
           <Col xs={2}>
             <Flex justifyStart alignCenter contentStretch>
-              <Margin right={0.5}>
+              <Margin right="0.5">
                 <FlexItem>
                   <Strong style={style}>Ports: </Strong>
                 </FlexItem>
@@ -121,7 +119,7 @@ const Rule = ({ enabled, rule_obj }) => {
           </Col>
           <Col xs={2}>
             <Flex justifyStart alignCenter contentStretch>
-              <Margin right={0.5}>
+              <Margin right="0.5">
                 <FlexItem>
                   <Strong style={style}>Action: </Strong>
                 </FlexItem>
@@ -150,7 +148,7 @@ export const Rules = ({ rules = [] }) => (
 export const DefaultRules = ({ rules = [] }) => (
   <Fragment>
     <H3 noMargin>Default firewall rules</H3>
-    <Margin top={3}>
+    <Margin top="3">
       <Rules rules={rules} />
     </Margin>
   </Fragment>
@@ -159,7 +157,7 @@ export const DefaultRules = ({ rules = [] }) => (
 export const TagRules = ({ rules = [] }) => (
   <Fragment>
     <H3 noMargin>Firewall rules from instance tags</H3>
-    <Margin top={3}>
+    <Margin top="3">
       <Rules rules={rules} />
     </Margin>
   </Fragment>
@@ -178,14 +176,14 @@ export const ToggleFirewallForm = ({
   return (
     <Form onChange={onChange}>
       <FormGroup
-        id={'fw-toggle-firewall'}
+        id="fw-toggle-firewall"
         type="checkbox"
         name="enabled"
         field={Field}
       >
         <Checkbox disabled={submitting}>
           <FormLabel noMargin actionable>
-            <Margin left={2} right={2}>
+            <Margin left="2" right="2">
               Enable Firewall
             </Margin>
           </FormLabel>
@@ -198,14 +196,14 @@ export const ToggleFirewallForm = ({
 export const ToggleInactiveForm = () => (
   <Form>
     <FormGroup
-      id={'fw-toggle-inactive'}
+      id="fw-toggle-inactive"
       type="checkbox"
       name="inactive"
       field={Field}
     >
       <Checkbox>
         <FormLabel noMargin actionable>
-          <Margin left={2} right={2}>
+          <Margin left="2" right="2">
             Show inactive rules
           </Margin>
         </FormLabel>

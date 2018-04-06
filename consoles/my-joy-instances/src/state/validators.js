@@ -16,7 +16,7 @@ const validateSchema = async (schema, value) => {
     keys(schema),
     async (errors, name) => {
       const msg = await validateField(schema[name], value[name]);
-      return !msg ? errors : assign(errors, { [name]: msg });
+      return msg ? assign(errors, { [name]: msg }) : errors;
     },
     {}
   );
@@ -109,6 +109,6 @@ export const addMetadata = metadata =>
   validateSchema(Schemas.metadata, metadata);
 
 export const instanceName = ({ name }) =>
-  !name ? null : validateSchema(Schemas.instanceName, { name });
+  name ? validateSchema(Schemas.instanceName, { name }) : null;
 
 export const editMetadata = addMetadata;

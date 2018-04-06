@@ -161,7 +161,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
 
 .c11:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c11:active,
@@ -497,7 +497,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
 
 .c11:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c11:active,
@@ -686,6 +686,7 @@ exports[`renders <Header/> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c2 {
@@ -1109,6 +1110,7 @@ exports[`renders <HostnamesHeader /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c2 {

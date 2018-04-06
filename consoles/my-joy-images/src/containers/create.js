@@ -1,5 +1,3 @@
-/* eslint-disable camelcase */
-
 import React from 'react';
 import { Margin } from 'styled-components-spacing';
 import ReduxForm from 'declarative-redux-form';
@@ -41,12 +39,12 @@ const Create = ({
 }) => (
   <ViewContainer>
     {loading ? (
-      <Margin top={4}>
+      <Margin top="4">
         <StatusLoader />
       </Margin>
     ) : null}
     {loadingError ? (
-      <Margin top={4}>
+      <Margin top="4">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>{loadingError}</MessageDescription>
@@ -54,7 +52,7 @@ const Create = ({
       </Margin>
     ) : null}
     {!loading && !loadingError ? (
-      <Margin top={4} bottom={5}>
+      <Margin top="4" bottom="5">
         <H2>Create Image</H2>
       </Margin>
     ) : null}

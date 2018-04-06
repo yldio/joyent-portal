@@ -48,9 +48,14 @@ export default ({ theme }) => css`
     border: solid ${remcalc(1)} ${theme.grey};
     margin: ${remcalc(8)} 0 ${remcalc(8)} 0;
     font-family: "Roboto Mono", monospace !important;
+    height: ${remcalc(180)} !important;
   }
 
   [name=user-script] .CodeMirror {
+    margin: 0;
+  }
+
+  form {
     margin: 0;
   }
 `;

@@ -23,6 +23,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c2 {
@@ -199,6 +200,7 @@ exports[`renders <Summary loading /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c2 {
@@ -362,6 +364,7 @@ exports[`renders <Summary loadingError /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c1 {
@@ -379,7 +382,7 @@ exports[`renders <Summary loadingError /> without throwing 1`] = `
 .c6 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
@@ -506,6 +509,7 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c2 {
@@ -582,7 +586,7 @@ exports[`renders <Summary mutationError /> without throwing 1`] = `
 .c11 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
@@ -740,6 +744,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c2 {
@@ -1059,7 +1064,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c29:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c29:active,
@@ -1146,7 +1151,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c35:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c35:active,
@@ -1251,7 +1256,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c41:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c41:active,
@@ -1371,7 +1376,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c42:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c42:active,
@@ -1600,43 +1605,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 .c44 {
   height: 1px;
   background-color: rgb(216,216,216);
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c26 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
+  height: 1;
 }
 
 .c4 {
@@ -1675,6 +1644,43 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   flex-direction: column;
   border-width: 0;
   background-color: transparent;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c26 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
 }
 
 .c50 {
@@ -3041,7 +3047,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c29:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c29:active,
@@ -3128,7 +3134,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c35:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c35:active,
@@ -3233,7 +3239,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c41:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c41:active,
@@ -3353,7 +3359,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 
 .c42:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c42:active,
@@ -3582,43 +3588,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 .c44 {
   height: 1px;
   background-color: rgb(216,216,216);
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c26 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
+  height: 1;
 }
 
 .c4 {
@@ -3657,6 +3627,43 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   flex-direction: column;
   border-width: 0;
   background-color: transparent;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c26 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
 }
 
 .c50 {

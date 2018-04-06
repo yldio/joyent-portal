@@ -84,7 +84,7 @@ export const Image = ({
   onRemove,
   onCreateInstance
 }) => (
-  <Margin bottom={3}>
+  <Margin bottom="3">
     <CardAnchor to={`/images/${id}`} component={Link}>
       <Card radius>
         {removing ? (
@@ -94,10 +94,10 @@ export const Image = ({
         ) : (
           <Fragment>
             <CardHeader white radius>
-              <Padding left={2} right={2}>
+              <Padding left="2" right="2">
                 <Flex full alignCenter>
                   <FlexItem>
-                    <Margin right={2}>
+                    <Margin right="2">
                       {React.createElement(OS[os], {
                         width: '24',
                         height: '24'
@@ -113,7 +113,7 @@ export const Image = ({
               </Padding>
             </CardHeader>
             <Flex justifyBetween>
-              <Content left={2} top={2} bottom={2}>
+              <Content left="2" top="2" bottom="2">
                 <Max justifyBetween>
                   <Max alignCenter>
                     <Flex>{version}</Flex>
@@ -130,7 +130,7 @@ export const Image = ({
                     </ActionsWrapper>
                   </PopoverTarget>
                   <Popover noPadding placement="bottom">
-                    <Padding horizontal={3} vertical={2}>
+                    <Padding horizontal="3" vertical="2">
                       <PopoverItem disabled={false} onClick={onCreateInstance}>
                         <ItemAnchor
                           href={`${
@@ -144,7 +144,7 @@ export const Image = ({
                       </PopoverItem>
                     </Padding>
                     <PopoverDivider />
-                    <Padding horizontal={3} vertical={2}>
+                    <Padding horizontal="3" vertical="2">
                       <PopoverItem disabled={removing} onClick={onRemove}>
                         Remove
                       </PopoverItem>
@@ -165,7 +165,7 @@ export const Filters = ({ selected }) => (
     <FormGroup name="image-type" value="all" field={Field} type="radio">
       <Radio>
         <Flex alignCenter>
-          <Margin horizontal={2}>
+          <Margin horizontal="2">
             <FormLabel big normal={selected !== 'all'}>
               All
             </FormLabel>
@@ -181,7 +181,7 @@ export const Filters = ({ selected }) => (
     >
       <Radio noMargin>
         <Flex alignCenter>
-          <Margin horizontal={2}>
+          <Margin horizontal="2">
             <FormLabel big normal={selected !== 'hardware-virtual-machine'}>
               Virtual machines
             </FormLabel>
@@ -197,7 +197,7 @@ export const Filters = ({ selected }) => (
     >
       <Radio noMargin>
         <Flex alignCenter>
-          <Margin horizontal={2}>
+          <Margin horizontal="2">
             <FormLabel big normal={selected !== 'infrastructure-container'}>
               Infrastructure container
             </FormLabel>

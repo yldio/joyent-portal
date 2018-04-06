@@ -1,6 +1,7 @@
+require('../.env.js');
+
 const Hapi = require('hapi');
 const Sso = require('hapi-triton-auth');
-const Url = require('url');
 
 const {
   COOKIE_PASSWORD,
@@ -8,12 +9,10 @@ const {
   SDC_KEY_PATH,
   SDC_ACCOUNT,
   SDC_KEY_ID,
-  SDC_URL,
-  DC_NAME
+  SDC_URL
 } = process.env;
 
 module.exports = async ({ PORT, BASE_URL }) => {
-  const dcName = DC_NAME || Url.parse(SDC_URL).host.split('.')[0];
   const keyPath = SDC_KEY_PATH;
   const keyId = `/${SDC_ACCOUNT}/keys/${SDC_KEY_ID}`;
   const apiBaseUrl = SDC_URL;
@@ -50,6 +49,7 @@ module.exports = async ({ PORT, BASE_URL }) => {
 
   server.events.on('log', (event, tags) => {
     if (tags.error) {
+      // eslint-disable-next-line no-console
       console.log(event);
     }
   });
@@ -58,6 +58,7 @@ module.exports = async ({ PORT, BASE_URL }) => {
     const { tags } = event;
     if (tags.includes('error') && event.data && event.data.errors) {
       event.data.errors.forEach(error => {
+        // eslint-disable-next-line no-console
         console.log(error);
       });
     }

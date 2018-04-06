@@ -1,6 +1,5 @@
 import React from 'react';
 import { Margin } from 'styled-components-spacing';
-import remcalc from 'remcalc';
 
 import {
   RootContainer,
@@ -8,16 +7,14 @@ import {
   ViewContainer,
   Message,
   MessageDescription,
-  MessageTitle,
-  Divider
+  MessageTitle
 } from 'joyent-ui-toolkit';
 
 import Breadcrumb from '@containers/navigation/breadcrumb';
 
 export const Route = () => (
   <ViewContainer main>
-    <Divider height={remcalc(24)} transparent />
-    <Margin bottom={5}>
+    <Margin bottom="4">
       <Message error>
         <MessageTitle>Ooops!</MessageTitle>
         <MessageDescription>

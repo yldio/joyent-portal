@@ -1,5 +1,8 @@
+require('../.env.js');
+
 const Main = require('apr-main');
 const CloudApiGql = require('cloudapi-gql');
+const Graphi = require('graphi');
 const Url = require('url');
 
 const Server = require('./server');
@@ -28,6 +31,17 @@ Main(async () => {
   });
 
   await server.register([
+    {
+      plugin: Graphi,
+      options: {
+        graphqlPath: '/graphql',
+        graphiqlPath: '/graphiql',
+        authStrategy: 'sso'
+      },
+      routes: {
+        prefix: `/${PREFIX}`
+      }
+    },
     {
       plugin: CloudApiGql,
       options: {

@@ -2,7 +2,7 @@
 
 exports[`Popover Divider 1`] = `
 .c0 {
-  width: calc(100% + 2.25rem);
+  width: 100%;
   border-top: 0.0625rem solid rgb(216,216,216);
 }
 
@@ -29,7 +29,7 @@ Array [
     Hello
 </div>,
   .c2 {
-  width: calc(100% + 2.25rem);
+  width: 100%;
   border-top: 0.0625rem solid rgb(216,216,216);
 }
 
@@ -37,6 +37,7 @@ Array [
   display: block;
   text-align: left;
   font-size: 1rem;
+  margin: 0.375rem 1.125rem;
   cursor: pointer;
 }
 

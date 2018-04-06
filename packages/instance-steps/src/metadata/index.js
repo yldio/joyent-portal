@@ -16,15 +16,16 @@ import Step, {
   Outlet as StepOutlet
 } from 'joyent-ui-resource-step';
 
-import { Button, KeyValue, MetadataIcon } from 'joyent-ui-toolkit';
+import { Button, MetadataIcon } from 'joyent-ui-toolkit';
+import { KeyValue } from 'joyent-ui-resource-widgets';
 
 import { Forms, Values } from '../constants';
-import { default as Preview, Overview } from './components';
+import { default as Preview } from './components';
 import Editor from 'joyent-ui-toolkit/dist/es/editor';
 import { addMetadata as validateMetadata } from '../validators';
 
-const { IC_MD_F_ADD, IC_MD_F_EDIT } = Forms;
-const { IC_MD_V_ADD_OPEN, IC_MD_V_MD } = Values;
+const { IR_MD_F_ADD, IR_MD_F_EDIT } = Forms;
+const { IR_MD_V_ADD_OPEN, IR_MD_V_MD } = Values;
 
 const Metadata = ({
   handleValidate,
@@ -74,7 +75,7 @@ const Metadata = ({
             </Fragment>
           ) : null}
           <ReduxForm
-            form={IC_MD_F_ADD}
+            form={IR_MD_F_ADD}
             destroyOnUnmount={false}
             forceUnregisterOnUnmount={true}
             onSubmit={handleAddMetadata}
@@ -97,12 +98,12 @@ const Metadata = ({
                   />
                 </Fragment>
               ) : (
-                <Margin top={5}>
+                <Margin top="5">
                   <Flex>
                     <FlexItem>
-                      <Margin right={1}>
+                      <Margin right="1">
                         <Button
-                          id={'button-add-metadata'}
+                          id="button-add-metadata"
                           type="button"
                           onClick={() => handleChangeAddOpen(true)}
                           secondary
@@ -113,7 +114,7 @@ const Metadata = ({
                     </FlexItem>
                     <FlexItem>
                       <Button
-                        id={'next-button-metadata'}
+                        id="next-button-metadata"
                         type="button"
                         component={Link}
                         to={next}
@@ -134,8 +135,8 @@ const Metadata = ({
 
 export default compose(
   connect(({ values }, ownProps) => {
-    const addOpen = get(values, IC_MD_V_ADD_OPEN, false);
-    const metadata = get(values, IC_MD_V_MD, []);
+    const addOpen = get(values, IR_MD_V_ADD_OPEN, false);
+    const metadata = get(values, IR_MD_V_MD, []);
     return {
       addOpen,
       metadata
@@ -148,14 +149,14 @@ export default compose(
     handleGetValue: () => metadata,
     handleAsyncValidate: validateMetadata,
     handleAddMetadata: value => {
-      const toggleToClosed = set({ name: IC_MD_V_ADD_OPEN, value: false });
+      const toggleToClosed = set({ name: IR_MD_V_ADD_OPEN, value: false });
 
       const appendMetadata = set({
-        name: IC_MD_V_MD,
+        name: IR_MD_V_MD,
         value: metadata.concat([{ ...value, open: false }])
       });
 
-      return dispatch([destroy(IC_MD_F_ADD), toggleToClosed, appendMetadata]);
+      return dispatch([destroy(IR_MD_F_ADD), toggleToClosed, appendMetadata]);
     },
     handleUpdateMetadata: (index, newMetadata) => {
       metadata[index] = {
@@ -164,14 +165,14 @@ export default compose(
       };
 
       return dispatch([
-        destroy(IC_MD_F_EDIT(index)),
-        set({ name: IC_MD_V_MD, value: metadata.slice() })
+        destroy(IR_MD_F_EDIT(index)),
+        set({ name: IR_MD_V_MD, value: metadata.slice() })
       ]);
     },
     handleChangeAddOpen: value => {
       return dispatch([
-        reset(IC_MD_F_ADD),
-        set({ name: IC_MD_V_ADD_OPEN, value })
+        reset(IR_MD_F_ADD),
+        set({ name: IR_MD_V_ADD_OPEN, value })
       ]);
     },
     handleToggleExpanded: index => {
@@ -180,7 +181,7 @@ export default compose(
         open: !metadata[index].open
       };
 
-      return dispatch(set({ name: IC_MD_V_MD, value: metadata.slice() }));
+      return dispatch(set({ name: IR_MD_V_MD, value: metadata.slice() }));
     },
     handleCancelEdit: index => {
       metadata[index] = {
@@ -189,16 +190,16 @@ export default compose(
       };
 
       return dispatch([
-        reset(IC_MD_F_EDIT(index)),
-        set({ name: IC_MD_V_MD, value: metadata.slice() })
+        reset(IR_MD_F_EDIT(index)),
+        set({ name: IR_MD_V_MD, value: metadata.slice() })
       ]);
     },
     handleRemoveMetadata: index => {
       metadata.splice(index, 1);
 
       return dispatch([
-        destroy(IC_MD_F_EDIT(index)),
-        set({ name: IC_MD_V_MD, value: metadata.slice() })
+        destroy(IR_MD_F_EDIT(index)),
+        set({ name: IR_MD_V_MD, value: metadata.slice() })
       ]);
     }
   }))

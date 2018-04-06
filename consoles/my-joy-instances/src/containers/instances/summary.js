@@ -79,7 +79,7 @@ export const Summary = ({
   const _error = loadingError &&
     !_loading &&
     !instance && (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>
@@ -265,7 +265,7 @@ export default compose(
         const { instance } = ownProps;
         const { id } = instance;
 
-        if (!await Confirm(`Do you want to ${action} "${instance.name}"?`)) {
+        if (!(await Confirm(`Do you want to ${action} "${instance.name}"?`))) {
           return;
         }
 

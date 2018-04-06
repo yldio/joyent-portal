@@ -33,7 +33,8 @@ const flexboxgrid = {
 const spacing = [0, 0.5, 1, 2, 3, 4, 5, 8].reduce(
   (sum, mult) => ({
     ...sum,
-    [mult]: remcalc(mult * 6)
+    [mult]: remcalc(mult * 6),
+    [`-${mult}`]: `-${remcalc(mult * 6)}`
   }),
   {}
 );

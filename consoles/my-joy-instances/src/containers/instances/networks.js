@@ -30,7 +30,7 @@ export const Networks = ({
   setInfoExpanded
 }) => (
   <ViewContainer main>
-    <Margin bottom={3}>
+    <Margin bottom="3">
       <Description href="https://docs.joyent.com/public-cloud/network/sdn">
         Use predefined or customized fabric networks which can be public-facing
         or private. All fabrics are isolated from other customers giving you
@@ -42,7 +42,7 @@ export const Networks = ({
     </Margin>
     {loading ? <StatusLoader /> : null}
     {!loading && error && !networks.length ? (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>
@@ -81,7 +81,6 @@ export default compose(
       }
     }),
     props: ({ data }) => {
-      console.log(data);
       const { loading, error, variables } = data;
       const { id } = variables;
 

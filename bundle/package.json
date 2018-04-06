@@ -9,24 +9,21 @@
     "build:lib": "echo 0",
     "build:bundle": "echo 0",
     "prepublish": "echo 0",
-    "lint": "echo 0",
-    "lint:ci": "echo 0",
     "test": "echo 0",
     "test:ci": "echo 0"
   },
   "dependencies": {
     "apr-main": "^4.0.3",
-    "brule": "^3.1.0",
-    "cloudapi-gql": "^7.1.4",
+    "cloudapi-gql": "^8.0.0",
     "execa": "^0.10.0",
-    "h2o2": "^8.0.1",
-    "hapi": "^17.3.1",
-    "hapi-triton-auth": "^2.0.1",
-    "hapi-webconsole-nav": "^1.2.0",
-    "inert": "^5.1.0",
+    "graphi": "^5.7.0",
+    "h2o2": "^8.1.2",
+    "hapi": "^17.4.0",
+    "hapi-triton-auth": "^3.0.0",
+    "hapi-webconsole-nav": "^2.1.0",
     "my-joy-images": "*",
     "my-joy-instances": "*",
     "my-joy-navigation": "*",
-    "rollover": "^1.0.0"
+    "tsg-graphql": "^1.0.0"
   }
 }

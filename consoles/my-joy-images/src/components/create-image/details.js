@@ -6,7 +6,6 @@ import remcalc from 'remcalc';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 
 import {
-  Divider,
   FormGroup,
   FormLabel,
   Input,
@@ -22,15 +21,14 @@ export default ({ placeholderName, randomizing, onRandomize }) => (
       <FlexItem flex>
         <FormGroup name="name" fluid field={Field}>
           <FormLabel>Image name</FormLabel>
-          <Margin top={0.5}>
+          <Margin top="0.5">
             <Input placeholder={placeholderName} onBlur={null} required />
           </Margin>
           <FormMeta />
         </FormGroup>
       </FlexItem>
       <FlexItem>
-        <Divider height={remcalc(13)} transparent />
-        <Margin left={1}>
+        <Margin left="1">
           <Button
             type="button"
             marginTop={remcalc(8)}
@@ -46,10 +44,10 @@ export default ({ placeholderName, randomizing, onRandomize }) => (
         </Margin>
       </FlexItem>
     </Flex>
-    <Margin top={3}>
+    <Margin top="3">
       <FormGroup name="version" fluid field={Field}>
         <FormLabel>Version</FormLabel>
-        <Margin top={0.5}>
+        <Margin top="0.5">
           <Input placeholder="Example: v1.0" onBlur={null} required />
         </Margin>
         <FormMeta />
@@ -57,10 +55,10 @@ export default ({ placeholderName, randomizing, onRandomize }) => (
     </Margin>
     <Row>
       <Col xs={12} sm={8}>
-        <Margin top={3}>
+        <Margin top="3">
           <FormGroup name="description" fluid field={Field}>
             <FormLabel>Description</FormLabel>
-            <Margin top={0.5}>
+            <Margin top="0.5">
               <Textarea
                 placeholder="Example: JarJarBinks, Anakin Skywalker, Obi Wan Kenobi, Qui-Gon Jinn, Han Solo, Wookies"
                 fluid

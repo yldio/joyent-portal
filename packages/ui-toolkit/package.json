@@ -14,8 +14,6 @@
     "build:lib": "NODE_ENV=production redrun -p build:es build:umd",
     "build:bundle": "echo 0",
     "prepublish": "NODE_ENV=production redrun build:lib",
-    "lint": "redrun lint:ci -- --fix",
-    "lint:ci": "NODE_ENV=test eslint . --ext .js --ext .md",
     "test": "NODE_ENV=test joyent-react-scripts test --env=jsdom",
     "test:ci": "redrun test",
     "build:es": "babel src --out-dir dist/es --ignore spec.js",

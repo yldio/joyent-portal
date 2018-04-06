@@ -16,14 +16,14 @@ const Container = styled.div`
 export default ({ icon, children, collapsed = true, ...rest }) => (
   <Container {...rest}>
     <Flex>
-      <Margin right={1}>
+      <Margin right="1">
         <Flex alignCenter full>
           {icon}
         </Flex>
       </Margin>
       <Small noMargin>{children}</Small>
     </Flex>
-    <Margin top={1} bottom={collapsed ? 7 : 3}>
+    <Margin top="1" bottom={collapsed ? 7 : 3}>
       <Divider height={remcalc(1)} />
     </Margin>
   </Container>

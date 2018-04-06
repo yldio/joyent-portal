@@ -6,17 +6,10 @@ import { destroy, reset } from 'redux-form';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
-import remcalc from 'remcalc';
 import Flex from 'styled-flex-component';
 
-import {
-  TagsIcon,
-  Button,
-  H3,
-  TagList,
-  Divider,
-  KeyValue
-} from 'joyent-ui-toolkit';
+import { TagsIcon, Button, H3, TagList } from 'joyent-ui-toolkit';
+import { KeyValue } from 'joyent-ui-resource-widgets';
 
 import Title from '@components/create-image/title';
 import Description from '@components/description';
@@ -66,7 +59,7 @@ export const Tags = ({
     ) : null}
     {proceeded || expanded ? (
       <Fragment>
-        <Margin bottom={5}>
+        <Margin bottom="5">
           <H3>
             {tags.length} Tag{tags.length === 1 ? '' : 's'}
           </H3>
@@ -102,12 +95,11 @@ export const Tags = ({
               expanded
               onCancel={() => handleChangeAddOpen(false)}
             />
-            <Divider height={remcalc(18)} transparent />
           </Fragment>
         ) : null
       }
     </ReduxForm>
-    <Margin top={1}>
+    <Margin top="1">
       <Flex alignCenter>
         {expanded ? (
           <Button
@@ -118,11 +110,11 @@ export const Tags = ({
             Add Tag
           </Button>
         ) : null}
-        <Margin left={1}>{children}</Margin>
+        <Margin left="1">{children}</Margin>
       </Flex>
     </Margin>
     {proceeded ? (
-      <Margin top={1}>
+      <Margin top="1">
         <Button type="button" onClick={handleEdit} secondary>
           Edit
         </Button>

@@ -18,9 +18,10 @@ import {
   Divider,
   H3,
   TagList,
-  TagItem,
-  KeyValue
+  TagItem
 } from 'joyent-ui-toolkit';
+
+import { KeyValue } from 'joyent-ui-resource-widgets';
 
 import ToolbarForm from '@components/instances/toolbar';
 import GetTags from '@graphql/list-tags.gql';
@@ -37,11 +38,13 @@ const EDIT_FORM_KEY = field => `instance-tags-${paramCase(field)}`;
 const TagsAddForm = props => (
   <KeyValue {...props} method="add" input="input" type="tag" expanded />
 );
+
 const TagsEditForm = props => (
   <KeyValue {...props} method="edit" input="input" type="tag" expanded />
 );
+
 const Tag = ({ name, value, onRemoveClick, onClick }) => (
-  <Margin right={1} bottom={1} key={`${name}-${value}`}>
+  <Margin right="1" bottom="1" key={`${name}-${value}`}>
     <TagItem onClick={onClick} onRemoveClick={onRemoveClick}>
       {name ? `${name}: ${value}` : value}
     </TagItem>
@@ -63,7 +66,7 @@ export const Tags = ({
   shouldAsyncValidate,
   handleAsyncValidate
 }) => {
-  const _loading = !(loading && !tags.length) ? null : <StatusLoader />;
+  const _loading = loading && !tags.length ? <StatusLoader /> : null;
 
   const _add = addOpen ? (
     <ReduxForm
@@ -85,15 +88,15 @@ export const Tags = ({
         ]
       : null;
 
-  const _count = !_loading ? (
-    <Margin bottom={3} top={5}>
+  const _count = _loading ? null : (
+    <Margin bottom="3" top="5">
       <H3>
         {tags.length} tag{tags.length === 1 ? '' : 's'}
       </H3>
     </Margin>
-  ) : null;
+  );
 
-  const _tags = !_loading ? (
+  const _tags = _loading ? null : (
     <TagList>
       {tags.map(({ id, name, value }) => (
         <Tag
@@ -105,7 +108,7 @@ export const Tags = ({
         />
       ))}
     </TagList>
-  ) : null;
+  );
 
   const _edit = editing ? (
     <ReduxForm
@@ -131,7 +134,7 @@ export const Tags = ({
 
   return (
     <ViewContainer main>
-      <Margin bottom={3}>
+      <Margin bottom="3">
         <ReduxForm form={MENU_FORM_NAME}>
           {props => (
             <ToolbarForm
@@ -282,7 +285,7 @@ export default compose(
         },
         handleRemove: async (form, { name }) => {
           // eslint-disable-next-line no-alert
-          if (!await Confirm(`Do you want to remove "${name}"?`)) {
+          if (!(await Confirm(`Do you want to remove "${name}"?`))) {
             return;
           }
 

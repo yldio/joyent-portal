@@ -37,9 +37,9 @@ import { QueryBreakpoints } from 'joyent-ui-toolkit';
 
 const { SmallOnly, Medium } = QueryBreakpoints;
 
-const { IC_PKG_F_SELECT, IC_PKG_F_FILTER } = Forms;
+const { IR_PKG_F_SELECT, IR_PKG_F_FILTER } = Forms;
 
-const { IC_PKG_V_SORT_BY, IC_PKG_V_SORT_ORDER, IC_IMG_V_VMS } = Values;
+const { IR_PKG_V_SORT_BY, IR_PKG_V_SORT_ORDER, IR_IMG_V_VMS } = Values;
 
 const PackageComponent = ({
   handleRowClick,
@@ -63,16 +63,16 @@ const PackageComponent = ({
       size can only increase.
     </StepDescription>
     <StepPreview>
-      <Margin top={3}>
+      <Margin top="3">
         <Overview {...preview} />
       </Margin>
     </StepPreview>
     <StepOutlet>
       {({ next }) => (
-        <Margin top={5}>
+        <Margin top="5">
           <Margin>
             <ReduxForm
-              form={IC_PKG_F_FILTER}
+              form={IR_PKG_F_FILTER}
               destroyOnUnmount={false}
               forceUnregisterOnUnmount={true}
             >
@@ -83,7 +83,7 @@ const PackageComponent = ({
               }
             </ReduxForm>
             <ReduxForm
-              form={IC_PKG_F_SELECT}
+              form={IR_PKG_F_SELECT}
               destroyOnUnmount={false}
               forceUnregisterOnUnmount={true}
               onSubmit={null}
@@ -130,7 +130,7 @@ const PackageComponent = ({
                     </Medium>
                     <Margin top="4">
                       <Button
-                        id={'next-button-packages'}
+                        id="next-button-packages"
                         type="button"
                         component={Link}
                         to={next}
@@ -177,36 +177,36 @@ export default compose(
   }),
   connect(
     ({ form = {}, values, ...rest }, { packages, ...ownProps }) => {
-      const _sortBy = get(values, IC_PKG_V_SORT_BY, 'price');
-      const _sortOrder = get(values, IC_PKG_V_SORT_ORDER, 'asc');
-      const ssdOnly = get(form, `${IC_PKG_F_FILTER}.values.ssd`, false);
+      const _sortBy = get(values, IR_PKG_V_SORT_BY, 'price');
+      const _sortOrder = get(values, IR_PKG_V_SORT_ORDER, 'asc');
+      const ssdOnly = get(form, `${IR_PKG_F_FILTER}.values.ssd`, false);
 
       const computeOptimized = get(
         form,
-        `${IC_PKG_F_FILTER}.values.compute-optimized`,
+        `${IR_PKG_F_FILTER}.values.compute-optimized`,
         false
       );
 
       const generalPurpose = get(
         form,
-        `${IC_PKG_F_FILTER}.values.general-purpose`,
+        `${IR_PKG_F_FILTER}.values.general-purpose`,
         false
       );
 
       const storageOptimized = get(
         form,
-        `${IC_PKG_F_FILTER}.values.storage-optimized`,
+        `${IR_PKG_F_FILTER}.values.storage-optimized`,
         false
       );
 
       const memoryOptimized = get(
         form,
-        `${IC_PKG_F_FILTER}.values.memory-optimized`,
+        `${IR_PKG_F_FILTER}.values.memory-optimized`,
         false
       );
 
-      const vmSelected = get(values, IC_IMG_V_VMS, true);
-      const pkgSelected = get(form, `${IC_PKG_F_SELECT}.values.package`, null);
+      const vmSelected = get(values, IR_IMG_V_VMS, true);
+      const pkgSelected = get(form, `${IR_PKG_F_SELECT}.values.package`, null);
       const selected = find(packages, ['id', pkgSelected]);
 
       const sorted = sortBy(packages, [_sortBy]);
@@ -242,18 +242,18 @@ export default compose(
     },
     (dispatch, { history }) => ({
       handleResetFilters: () => {
-        dispatch(destroy(IC_PKG_F_FILTER));
+        dispatch(destroy(IR_PKG_F_FILTER));
       },
       handleRowClick: id => {
-        dispatch(change(IC_PKG_F_SELECT, 'package', id));
+        dispatch(change(IR_PKG_F_SELECT, 'package', id));
       },
       handleSortBy: (newSortBy, sortOrder) => {
         dispatch([
           set({
-            name: IC_PKG_V_SORT_ORDER,
+            name: IR_PKG_V_SORT_ORDER,
             value: sortOrder === 'desc' ? 'asc' : 'desc'
           }),
-          set({ name: IC_PKG_V_SORT_BY, value: newSortBy })
+          set({ name: IR_PKG_V_SORT_BY, value: newSortBy })
         ]);
       }
     })

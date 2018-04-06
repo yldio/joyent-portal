@@ -118,24 +118,24 @@ export default () => (
         components.
       </P>
     </div>
-    <Margin style={{ display: 'inline-block' }} top={4} bottom={5} right={5}>
+    <Margin style={{ display: 'inline-block' }} top="4" bottom="5" right="5">
       <Color key="primaryHover" name="Blue 1" color={theme.primary} />
       <Color key="primaryActive" name="Blue 2" color={theme.primaryActive} />
     </Margin>
-    <Margin style={{ display: 'inline-block' }} top={4} bottom={5}>
+    <Margin style={{ display: 'inline-block' }} top="4" bottom="5">
       <Color key="joyent1" name="Joyent 1" color="rgb(44, 72, 89)" />
       <Color key="joyent2" name="Joyent 2" color="rgb(27, 50, 64)" />
     </Margin>
     <div>
-      <Margin right={5} style={{ display: 'inline-block' }} bottom={2}>
+      <Margin right="5" style={{ display: 'inline-block' }} bottom="2">
         <Color key="green" name="Green 1" color={theme.green} />
         <Color key="greenDark" name="Green 2" color={theme.greenDark} />
       </Margin>
-      <Margin bottom={2} right={5} style={{ display: 'inline-block' }}>
+      <Margin bottom="2" right="5" style={{ display: 'inline-block' }}>
         <Color key="orange" name="Orange 1" color={theme.orange} />
         <Color key="orangeDark" name="Orange 2" color={theme.orangeDark} />
       </Margin>
-      <Margin bottom={5} right={5} style={{ display: 'inline-block' }}>
+      <Margin bottom="5" right="5" style={{ display: 'inline-block' }}>
         <Color key="red" name="Red 1" color={theme.red} />
         <Color key="redDark" name="Red 2" color={theme.redDark} />
       </Margin>
@@ -146,7 +146,7 @@ export default () => (
       similar components. They allow us to make certain components look
       clickable, whilst making others appear disabled or static.
     </P>
-    <Margin top={4}>
+    <Margin top="4">
       <Flex wrap>
         <Color
           bottom

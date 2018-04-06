@@ -80,7 +80,7 @@ class CopyToClipboardTooltip extends Component {
 const CopiableField = ({ md, label, text, ...rest }) => (
   <Row>
     <Col xs={12} md={md || 7}>
-      <Margin bottom={0.5}>
+      <Margin bottom="0.5">
         {label ? <FormLabel>{label}</FormLabel> : null}
       </Margin>
       <InputIconWrapper {...rest}>

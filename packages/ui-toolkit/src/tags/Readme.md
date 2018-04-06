@@ -37,7 +37,7 @@ const { Margin } = require('styled-components-spacing');
 
 <TagItem active>
   Tags:4lyf
-  <Margin left={1}>
+  <Margin left="1">
     <PlusIcon />
   </Margin>
 </TagItem>;
@@ -50,7 +50,7 @@ const { Margin } = require('styled-components-spacing');
 
 <TagItem>
   Tags:4lyf
-  <Margin left={1}>
+  <Margin left="1">
     <PlusIcon />
   </Margin>
 </TagItem>;
@@ -63,7 +63,7 @@ const { Margin } = require('styled-components-spacing');
 
 <TagItem disabled>
   Tags:4lyf
-  <Margin left={1}>
+  <Margin left="1">
     <PlusIcon />
   </Margin>
 </TagItem>;
@@ -76,7 +76,7 @@ const { Margin } = require('styled-components-spacing');
 
 <TagItem error>
   Tags:4lyf
-  <Margin left={1}>
+  <Margin left="1">
     <PlusIcon />
   </Margin>
 </TagItem>;

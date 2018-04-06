@@ -30,7 +30,7 @@ export const Summary = ({
   <ViewContainer main>
     {loading && !image ? <StatusLoader /> : null}
     {error && !loading && !image ? (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>
@@ -40,7 +40,7 @@ export const Summary = ({
       </Margin>
     ) : null}
     {mutationError ? (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>

@@ -2,12 +2,13 @@ import React, { Fragment } from 'react';
 import { Margin } from 'styled-components-spacing';
 import ReduxForm from 'declarative-redux-form';
 
-import { H3, KeyValue } from 'joyent-ui-toolkit';
+import { H3 } from 'joyent-ui-toolkit';
 import Editor from 'joyent-ui-toolkit/dist/es/editor';
+import { KeyValue } from 'joyent-ui-resource-widgets';
 
 import { Forms } from '../constants';
 
-const { IC_MD_F_EDIT } = Forms;
+const { IR_MD_F_EDIT } = Forms;
 
 export const Overview = ({ total = 0 }) => (
   <H3>
@@ -27,12 +28,12 @@ export default ({
   disabled
 }) => (
   <Fragment>
-    <Margin bottom={5}>
+    <Margin bottom="5">
       <Overview total={metadata.length} />
     </Margin>
     {metadata.map(({ name, value, open }, index) => (
       <ReduxForm
-        form={IC_MD_F_EDIT(index)}
+        form={IR_MD_F_EDIT(index)}
         key={index}
         initialValues={{ name, value }}
         destroyOnUnmount={false}
@@ -62,7 +63,7 @@ export default ({
               shadow={false}
             />
             {addOpen || index !== metadata.length - 1 ? (
-              <Margin bottom={2} />
+              <Margin bottom="2" />
             ) : null}
           </Fragment>
         )}

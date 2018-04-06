@@ -67,12 +67,12 @@ const NameContainer = ({
             onRandomize={handleRandomize}
           />
         ) : name ? (
-          <Margin top={3}>
+          <Margin top="3">
             <H3 bold noMargin>
               {name}
             </H3>
             {version ? (
-              <Margin top={2}>
+              <Margin top="2">
                 <H4 bold noMargin>
                   {version}
                 </H4>
@@ -81,7 +81,7 @@ const NameContainer = ({
             {description ? (
               <Row>
                 <Col xs={12} sm={8}>
-                  <Margin top={1}>
+                  <Margin top="1">
                     <P>{description}</P>
                   </Margin>
                 </Col>
@@ -92,13 +92,13 @@ const NameContainer = ({
       }
     </ReduxForm>
     {expanded ? (
-      <Margin top={4} bottom={7}>
+      <Margin top="4" bottom="7">
         <Button type="button" disabled={!name} onClick={handleNext}>
           Next
         </Button>
       </Margin>
     ) : proceeded ? (
-      <Margin top={4} bottom={7}>
+      <Margin top="4" bottom="7">
         <Button type="button" onClick={handleEdit} secondary>
           Edit
         </Button>
@@ -166,6 +166,7 @@ export default compose(
         dispatch(set({ name: 'create-image-name-randomizing', value: false }));
 
         if (err) {
+          // eslint-disable-next-line no-console
           console.error(err);
           return;
         }
