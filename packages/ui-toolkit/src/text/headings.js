@@ -13,6 +13,7 @@ export const H1 = styled(NH1)`
   font-style: normal;
   font-stretch: normal;
   font-weight: normal;
+  margin: 0;
 
   ${is('inline')`
     display: inline-block;
@@ -85,7 +86,7 @@ export const H3 = styled.h3`
 export const H4 = styled.h4`
   margin: 0;
   color: ${props => props.theme.text};
-  font-weight: ${props => props.theme.font.weight.semibold};
+  font-weight: ${props => props.theme.font.weight.normal};
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
 
@@ -102,7 +103,7 @@ export const H4 = styled.h4`
 export const H5 = styled.h4`
   margin: 0;
   color: ${props => props.theme.text};
-  font-weight: normal;
+  font-weight: ${props => props.theme.font.weight.normal};
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
 
@@ -123,7 +124,7 @@ export const H5 = styled.h4`
 export const H6 = styled.h6`
   margin: 0;
   color: ${props => props.theme.text};
-  font-weight: normal;
+  font-weight: ${props => props.theme.font.weight.normal};
   line-height: ${remcalc(18)};
   font-size: ${remcalc(13)};
 

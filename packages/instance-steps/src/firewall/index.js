@@ -30,8 +30,8 @@ import { Forms, Values } from '../constants';
 import { Preview } from './components';
 import ListFwRules from '../graphql/list-fw-rules.gql';
 
-const { IC_FW_F_ENABLED, IC_FW_F_INACTIVE } = Forms;
-const { IC_TAG_V_TAGS } = Values;
+const { IR_FW_F_ENABLED, IR_FW_F_INACTIVE } = Forms;
+const { IR_TAG_V_TAGS } = Values;
 
 const Firewall = ({
   handleGetValue,
@@ -60,16 +60,16 @@ const Firewall = ({
     <StepOutlet>
       {({ next }) => (
         <Fragment>
-          <Margin top={5}>
+          <Margin top="5">
             <Flex>
               <FlexItem>
                 <ReduxForm
-                  form={IC_FW_F_ENABLED}
+                  form={IR_FW_F_ENABLED}
                   destroyOnUnmount={false}
                   forceUnregisterOnUnmount={true}
                 >
                   {props => (
-                    <Margin right={5}>
+                    <Margin right="5">
                       <ToggleFirewallForm {...props} submitting={loading} />
                     </Margin>
                   )}
@@ -77,7 +77,7 @@ const Firewall = ({
               </FlexItem>
               <FlexItem>
                 <ReduxForm
-                  form={IC_FW_F_INACTIVE}
+                  form={IR_FW_F_INACTIVE}
                   destroyOnUnmount={false}
                   forceUnregisterOnUnmount={true}
                 >
@@ -91,17 +91,17 @@ const Firewall = ({
             </Flex>
           </Margin>
           {enabled && !loading && !defaultRules.length && !tagRules.length ? (
-            <Margin top={5}>
+            <Margin top="5">
               <Empty borderTop>
                 <Fragment>
                   <H3>No Firewall rules found</H3>
-                  <Margin top={1}>
+                  <Margin top="1">
                     <P>
                       Try viewing inactive rules instead to see firewalls that
                       can potentially affect your instance
                     </P>
                   </Margin>
-                  <Margin top={2}>
+                  <Margin top="2">
                     <Button
                       secondary
                       onClick={showInactiveRules}
@@ -115,17 +115,17 @@ const Firewall = ({
             </Margin>
           ) : null}
           {!loading && enabled && defaultRules.length ? (
-            <Margin top={5}>
+            <Margin top="5">
               <DefaultRules rules={defaultRules} />
             </Margin>
           ) : null}
           {!loading && enabled && tagRules.length ? (
-            <Margin top={5}>
+            <Margin top="5">
               <TagRules rules={tagRules} />
             </Margin>
           ) : null}
           {!loading && enabled && (tagRules.length || defaultRules.length) ? (
-            <Margin top={5}>
+            <Margin top="5">
               <P>
                 *Other firewall rules may apply as defined by wildcard(s),
                 IP(s), subnet(s), tag(s) or VM(s). Please see{' '}
@@ -140,9 +140,9 @@ const Firewall = ({
               </P>
             </Margin>
           ) : null}
-          <Margin top={5}>
+          <Margin top="5">
             <Button
-              id={'next-button-firewall'}
+              id="next-button-firewall"
               type="button"
               component={Link}
               to={next}
@@ -159,11 +159,9 @@ const Firewall = ({
 export default compose(
   connect(({ form, values }, ownProps) => ({
     ...ownProps,
-    enabled:
-      console.log(form, values) ||
-      get(form, `${IC_FW_F_ENABLED}.values.enabled`, false),
-    showInactive: get(form, `${IC_FW_F_INACTIVE}.values.inactive`, false),
-    tags: get(values, IC_TAG_V_TAGS, [])
+    enabled: get(form, `${IR_FW_F_ENABLED}.values.enabled`, false),
+    showInactive: get(form, `${IR_FW_F_INACTIVE}.values.inactive`, false),
+    tags: get(values, IR_TAG_V_TAGS, [])
   })),
   graphql(ListFwRules, {
     options: ({ tags, expanded, enabled }) => ({
@@ -206,6 +204,8 @@ export default compose(
   }),
   connect(null, (dispatch, { ...args }) => ({
     showInactiveRules: () =>
-      dispatch(change(IC_FW_F_INACTIVE, 'inactive', true))
+      dispatch(change(IR_FW_F_INACTIVE, 'inactive', true))
   }))
 )(Firewall);
+
+export { Preview } from './components';

@@ -19,8 +19,8 @@ import { ScriptIcon, Button } from 'joyent-ui-toolkit';
 import { Forms, Values } from '../constants';
 import UserScriptForm, { Overview } from './components';
 
-const { IC_US_F } = Forms;
-const { IC_US_V_OPEN } = Values;
+const { IR_US_F } = Forms;
+const { IR_US_V_OPEN } = Values;
 
 const UserScript = ({
   handleGetValue,
@@ -43,9 +43,9 @@ const UserScript = ({
     </StepPreview>
     <StepOutlet>
       {({ next }) => (
-        <Margin top={5}>
+        <Margin top="5">
           <ReduxForm
-            form={IC_US_F}
+            form={IR_US_F}
             destroyOnUnmount={false}
             forceUnregisterOnUnmount={true}
             onSubmit={handleSubmit}
@@ -53,9 +53,9 @@ const UserScript = ({
             {props => (
               <Fragment>
                 <UserScriptForm {...props} />
-                <Margin top={5}>
+                <Margin top="5">
                   <Button
-                    id={'next-button-userscript'}
+                    id="next-button-userscript"
                     type="button"
                     component={Link}
                     to={next}
@@ -75,8 +75,8 @@ const UserScript = ({
 export default compose(
   connect(
     ({ values, form }, ownProps) => {
-      const formOpen = get(values, IC_US_V_OPEN, false);
-      const script = get(form, `${IC_US_F}.values.value`, '');
+      const formOpen = get(values, IR_US_V_OPEN, false);
+      const script = get(form, `${IR_US_F}.values.value`, '');
       const lines = script.trim() === '' ? 0 : script.trim().split('\n').length;
 
       return {
@@ -90,13 +90,13 @@ export default compose(
     },
     (dispatch, { history }) => ({
       handleEdit: () => {
-        dispatch([set({ name: IC_US_V_OPEN, value: true })]);
+        dispatch([set({ name: IR_US_V_OPEN, value: true })]);
       },
       handleChangeOpenForm: value => {
-        return dispatch([set({ name: IC_US_V_OPEN, value })]);
+        return dispatch([set({ name: IR_US_V_OPEN, value })]);
       },
       handleSubmit: value => {
-        dispatch([set({ name: IC_US_V_OPEN, value: false })]);
+        dispatch([set({ name: IR_US_V_OPEN, value: false })]);
       }
     })
   )

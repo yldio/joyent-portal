@@ -16,6 +16,7 @@ exports.register = async server => {
     if (NODE_ENV === 'production') {
       throw err;
     } else {
+      // eslint-disable-next-line no-console
       console.error(err);
     }
   }

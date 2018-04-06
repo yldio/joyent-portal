@@ -7,7 +7,10 @@ import remcalc from 'remcalc';
 const BaseItem = styled.span`
   display: block;
   text-align: left;
-  font-size: ${remcalc(16)} ${isNot('disabled')`
+  font-size: ${remcalc(16)};
+  margin: ${remcalc(6)} ${remcalc(18)};
+
+  ${isNot('disabled')`
     cursor: pointer;
 
     &:hover {

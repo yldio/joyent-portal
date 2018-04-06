@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React from 'react';
 import renderer from 'react-test-renderer';
 import 'jest-styled-components';

@@ -55,9 +55,9 @@ const Form = styled.form`
 `;
 
 export const Header = () => (
-  <Margin bottom={5}>
+  <Margin bottom="5">
     <H3>CNS Default Hostnames</H3>
-    <Margin top={2}>
+    <Margin top="2">
       <P>
         Default hostnames are automatically generated from both the instance
         name and any attached networks.
@@ -68,11 +68,11 @@ export const Header = () => (
 
 export const Footer = ({ enabled, submitting, onToggle }) => (
   <Fragment>
-    <Margin bottom={3}>
+    <Margin bottom="3">
       <FormGroup name="cns-enabled">
         <Flex alignCenter>
           <FormLabel disabled={submitting}>Disabled CNS</FormLabel>
-          <Margin left={1}>
+          <Margin left="1">
             <Toggle checked={enabled} onChange={onToggle} disabled={submitting}>
               Enabled CNS
             </Toggle>
@@ -84,9 +84,9 @@ export const Footer = ({ enabled, submitting, onToggle }) => (
 );
 
 export const HostnamesHeader = () => (
-  <Margin vertical={5}>
+  <Margin vertical="5">
     <H3>CNS Service hostnames</H3>
-    <Margin top={2}>
+    <Margin top="2">
       <P>
         CNS service hostnames are created by attaching a CNS service name to one
         or more instances. You can serve multiple instances under the same
@@ -103,14 +103,14 @@ export const AddServiceForm = ({
   pristine,
   invalid
 }) => (
-  <Margin bottom={3}>
+  <Margin bottom="3">
     <Form onSubmit={handleSubmit}>
       <Flex wrap alignCenter={invalid} alignEnd={!invalid}>
         <FlexItem>
           <Flex collumn>
             <FormGroup name="name" field={Field}>
               <FormLabel>Attach to new CNS service name</FormLabel>
-              <Margin top={0.5}>
+              <Margin top="0.5">
                 <Input
                   onBlur={null}
                   type="text"
@@ -123,7 +123,7 @@ export const AddServiceForm = ({
           </Flex>
         </FlexItem>
         <FlexItem>
-          <Margin left={2}>
+          <Margin left="2">
             <Button
               type="submit"
               disabled={submitting}
@@ -155,11 +155,13 @@ export const Hostname = ({
             ? 'Network CNS service'
             : network
               ? 'Network'
-              : service ? 'CNS service' : 'Instance name'}{' '}
+              : service
+                ? 'CNS service'
+                : 'Instance name'}{' '}
           hostname{values.length === 1 ? '' : 's'}
         </SmallBordered>
         <FlexItem>
-          <Margin bottom={0.5} right={1}>
+          <Margin bottom="0.5" right="1">
             {hostname.public ? <PublicIcon /> : <PrivateIcon />}
           </Margin>
         </FlexItem>
@@ -169,7 +171,7 @@ export const Hostname = ({
       </Flex>
       {values.map((value, i) => (
         <Margin
-          top={0.5}
+          top="0.5"
           bottom={
             values.length !== 1 && values.length !== i + 1 ? '1' : undefined
           }
@@ -207,20 +209,20 @@ const CnsHostnames = ({
     <HostnamesHeader />
     {children}
     {services.length ? (
-      <Margin bottom={3}>
+      <Margin bottom="3">
         <FormLabel>Existing CNS service name(s)</FormLabel>
-        <Margin top={1}>
+        <Margin top="1">
           <TagList>
             {services.map((value, index) => (
               <Margin right={1} bottom={1}>
                 <TagItem
                   active
-                  fill={'rgba(66, 134, 244, 0.1)'}
+                  fill="rgba(66, 134, 244, 0.1)"
                   key={value}
                   onRemoveClick={
                     onRemoveService && (() => onRemoveService(value))
                   }
-                  id={'cns-tag-' + index}
+                  id={`cns-tag-${index}`}
                 >
                   {value}
                 </TagItem>
@@ -232,7 +234,7 @@ const CnsHostnames = ({
     ) : null}
     {hostnames.length &&
     hostnames.filter(({ values }) => values.length).length ? (
-      <Margin top={5}>
+      <Margin top="5">
         <Flex column>
           {hostnames.map(({ value, ...hostname }, index) => (
             <Hostname
@@ -261,10 +263,10 @@ export default ({
       copy={copy}
       hostnames={hostnames.filter(({ service }) => !service)}
     />
-    <Margin top={2}>
+    <Margin top="2">
       <ShortDivider height={remcalc(1)} />
     </Margin>
-    <Margin top={5}>
+    <Margin top="5">
       <CnsHostnames
         copy={copy}
         services={services}

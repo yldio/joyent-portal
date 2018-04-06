@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Flex, { FlexItem } from 'styled-flex-component';
 import { Subscriber } from 'joy-react-broadcast';
 import styled, { css } from 'styled-components';
 import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
+
+import Button from '../../button';
 
 const colorWithDisabled = props =>
   props.disabled ? props.theme.disabled : props.theme.text;
@@ -193,9 +196,32 @@ const style = css`
     width: ${remcalc(355)};
     max-width: 100%;
   `};
+
+  ${is('number')`
+    border-radius: 0;
+  `};
 `;
 
-const BaseInput = Component => ({ resize, onBlur, type, ...props }) => {
+const LeftButton = styled(Button)`
+  border-top-left-radius: ${props => props.theme.borderRadius};
+  border-bottom-left-radius: ${props => props.theme.borderRadius};
+  border-right: 0;
+`;
+
+const RightButton = styled(Button)`
+  border-top-right-radius: ${props => props.theme.borderRadius};
+  border-bottom-right-radius: ${props => props.theme.borderRadius};
+  border-left: 0;
+`;
+
+const BaseInput = Component => ({
+  resize,
+  onBlur,
+  type,
+  onPlusClick,
+  onMinusClick,
+  ...props
+}) => {
   const render = value => {
     const _value = value || {};
     const { input = {}, meta = {}, id = '' } = _value;
@@ -204,24 +230,47 @@ const BaseInput = Component => ({ resize, onBlur, type, ...props }) => {
     const hasWarning = Boolean(props.warning || _value.warning || meta.warning);
     const hasSuccess = Boolean(props.success || _value.success || meta.success);
 
+    const number = type === 'number' && (onPlusClick || onMinusClick);
     const textarea = type === 'textarea';
     const fluid = Boolean(props.fluid);
     const mono = Boolean(props.mono);
 
+    const TheFragment = number ? Flex : Fragment;
+    const TheItem = number ? FlexItem : Fragment;
+
     return (
-      <Component
-        {...props}
-        {...input}
-        onBlur={onBlur}
-        id={id}
-        error={hasError}
-        warning={hasWarning}
-        success={hasSuccess}
-        fluid={fluid}
-        mono={mono}
-        resize={textarea ? resize : null}
-        textarea={textarea}
-      />
+      <TheFragment>
+        {number ? (
+          <TheItem>
+            <LeftButton type="button" onClick={onMinusClick} secondary actions>
+              -
+            </LeftButton>
+          </TheItem>
+        ) : null}
+        <TheItem>
+          <Component
+            {...props}
+            {...input}
+            onBlur={onBlur}
+            id={id}
+            error={hasError}
+            warning={hasWarning}
+            success={hasSuccess}
+            fluid={fluid}
+            mono={mono}
+            resize={textarea ? resize : null}
+            textarea={textarea}
+            number={number}
+          />
+        </TheItem>
+        {number ? (
+          <TheItem>
+            <RightButton type="button" onClick={onPlusClick} secondary actions>
+              +
+            </RightButton>
+          </TheItem>
+        ) : null}
+      </TheFragment>
     );
   };
 

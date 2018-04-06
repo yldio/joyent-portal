@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import paramCase from 'param-case';
 import { Margin } from 'styled-components-spacing';
 import { set } from 'react-redux-values';
@@ -53,10 +53,10 @@ export const Metadata = ({
   handleUpdate,
   handleRemove
 }) => {
-  const _loading = !(loading && !metadata.length) ? null : <StatusLoader />;
+  const _loading = loading && !metadata.length ? <StatusLoader /> : null;
 
   const _add = addOpen ? (
-    <Margin bottom={3}>
+    <Margin bottom="3">
       <ReduxForm
         form={ADD_FORM_NAME}
         onSubmit={handleCreate}
@@ -73,25 +73,25 @@ export const Metadata = ({
     </Margin>
   ) : null;
 
-  const _line = !_loading
-    ? [
-        <Divider key="line" height={remcalc(1)} />,
-        <Divider key="after-line-space" height={remcalc(24)} transparent />
-      ]
-    : null;
+  const _line = _loading ? null : (
+    <Fragment>
+      <Divider key="line" height={remcalc(1)} />
+      <Divider key="after-line-space" height={remcalc(24)} transparent />
+    </Fragment>
+  );
 
-  const _count = !_loading ? (
-    <Margin bottom={3} top={5}>
+  const _count = _loading ? null : (
+    <Margin bottom="3" top="5">
       <H3>
         {metadata.length} key-value pair{metadata.length === 1 ? '' : 's'}
       </H3>
     </Margin>
-  ) : null;
+  );
 
   const _metadata =
     !_loading &&
     metadata.map(({ form, initialValues, expanded, removing }) => (
-      <Margin bottom={2}>
+      <Margin bottom="2">
         <ReduxForm
           form={form}
           key={form}
@@ -119,7 +119,7 @@ export const Metadata = ({
 
   const _error =
     error && !_metadata.length && !_loading ? (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>
@@ -131,7 +131,7 @@ export const Metadata = ({
 
   return (
     <ViewContainer main>
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <ReduxForm form={MENU_FORM_NAME}>
           {props => (
             <ToolbarForm
@@ -316,7 +316,7 @@ export default compose(
             'initialValues.name'
           );
 
-          if (!await Confirm(`Do you want to remove "${name}"?`)) {
+          if (!(await Confirm(`Do you want to remove "${name}"?`))) {
             return;
           }
 

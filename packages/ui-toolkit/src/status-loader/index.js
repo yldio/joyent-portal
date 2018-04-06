@@ -35,10 +35,10 @@ const Msg = styled(P)`
   text-align: center;
 `;
 
-const StatusLoader = ({ msg, row, inline, small, ...rest }) => (
+const StatusLoader = ({ msg, row, inline, small, children, ...rest }) => (
   <Container row={row} inline={inline} {...rest}>
     <Loader />
-    {!small && <Msg>{msg || 'Loading...'}</Msg>}
+    {!small && <Msg>{children || msg || 'Loading...'}</Msg>}
   </Container>
 );
 

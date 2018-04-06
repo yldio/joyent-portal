@@ -1,8 +1,8 @@
 import React from 'react';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
-import { default as Flex, FlexItem } from 'styled-flex-component';
-import styled, { withTheme } from 'styled-components';
+import Flex, { FlexItem } from 'styled-flex-component';
+import styled from 'styled-components';
 import { Margin, Padding } from 'styled-components-spacing';
 import titleCase from 'title-case';
 import get from 'lodash.get';
@@ -100,7 +100,7 @@ export const Meta = ({
 }) => [
   <Row middle="xs">
     <Col xs={12}>
-      <Margin bottom={1}>
+      <Margin bottom="1">
         <H2>
           {editingName ? (
             <form onSubmit={handleSubmit}>
@@ -114,7 +114,7 @@ export const Meta = ({
                   />
                   <FormMeta />
                 </FormGroup>
-                <Margin left={1}>
+                <Margin left="1">
                   <Button
                     type="submit"
                     disabled={submitting}
@@ -138,7 +138,7 @@ export const Meta = ({
       </Margin>
     </Col>
   </Row>,
-  <Margin vertical={1}>
+  <Margin vertical="1">
     <Flex>
       <TrimedLabel>
         {image && image.name ? titleCase(image.name) : 'Custom Image'}
@@ -161,7 +161,7 @@ export const Meta = ({
         {titleCase(state)}
       </Flex>
     </Flex>
-    <Margin top={1}>
+    <Margin top="1">
       <Flex>
         <Flex>
           <GreyLabel>Created: </GreyLabel>
@@ -177,227 +177,218 @@ export const Meta = ({
   </Margin>
 ];
 
-export default withTheme(
-  ({
-    instance = {},
-    starting = false,
-    stopping = false,
-    rebooting = false,
-    removing = false,
-    onAction,
-    theme = {},
-    ...props
-  }) => (
-    <Row>
-      <Col xs={12} sm={12} md={9}>
-        <Card>
-          <CardOutlet>
-            <Padding all={5}>
-              <Meta {...instance} {...props} />
-              <Margin top={3}>
-                <Row between="xs">
-                  <Col xs={9}>
-                    <Flex>
-                      <FlexItem>
-                        <Margin right={1}>
-                          <ButtonGroup>
-                            {instance.state === 'STOPPED' ? (
-                              <Button
-                                type="button"
-                                loading={starting}
-                                disabled={instance.state !== 'STOPPED'}
-                                onClick={() => onAction('start')}
-                                secondary
-                                bold
-                                icon
-                              >
-                                <Margin right={2}>
-                                  <StartIcon
-                                    disabled={instance.state !== 'STOPPED'}
-                                  />
-                                </Margin>
-                                <span>Start</span>
-                              </Button>
-                            ) : (
-                              <Button
-                                type="button"
-                                loading={stopping}
-                                disabled={instance.state !== 'RUNNING'}
-                                onClick={() => onAction('stop')}
-                                secondary
-                                bold
-                                icon
-                              >
-                                <Margin right={2}>
-                                  <StopIcon
-                                    disabled={instance.state !== 'RUNNING'}
-                                  />
-                                </Margin>
-                                <span>Stop</span>
-                              </Button>
-                            )}
-                            <PopoverButton secondary>
-                              <PopoverItem
-                                disabled={instance.state === 'RUNNING'}
-                                onClick={() =>
-                                  instance.state === 'RUNNING'
-                                    ? null
-                                    : onAction('start')
-                                }
-                              >
-                                Start
-                              </PopoverItem>
-                              <PopoverItem
-                                disabled={instance.state === 'STOPPED'}
-                                onClick={() =>
-                                  instance.state === 'STOPPED'
-                                    ? null
-                                    : onAction('reboot')
-                                }
-                              >
-                                Restart
-                              </PopoverItem>
-                              <PopoverItem
-                                disabled={instance.state === 'STOPPED'}
-                                onClick={() =>
-                                  instance.state === 'STOPPED'
-                                    ? null
-                                    : onAction('stop')
-                                }
-                              >
-                                Stop
-                              </PopoverItem>
-                            </PopoverButton>
-                          </ButtonGroup>
-                        </Margin>
-                      </FlexItem>
-                      <FlexItem>
-                        <Button
-                          href={`${GLOBAL.origin}/images/~create/${
-                            instance.id
-                          }`}
-                          target="__blank"
-                          rel="noopener noreferrer"
-                          secondary
-                          bold
-                          icon
-                        >
-                          Create Image
-                        </Button>
-                      </FlexItem>
-                    </Flex>
-                  </Col>
-                  <Col xs={3}>
-                    <SmallOnly>
+export default ({
+  instance = {},
+  starting = false,
+  stopping = false,
+  rebooting = false,
+  removing = false,
+  onAction,
+  ...props
+}) => (
+  <Row>
+    <Col xs={12} sm={12} md={9}>
+      <Card>
+        <CardOutlet>
+          <Padding all={5}>
+            <Meta {...instance} {...props} />
+            <Margin top="3">
+              <Row between="xs">
+                <Col xs={9}>
+                  <Flex>
+                    <FlexItem>
+                      <Margin right="1">
+                        <ButtonGroup>
+                          {instance.state === 'STOPPED' ? (
+                            <Button
+                              type="button"
+                              loading={starting}
+                              disabled={instance.state !== 'STOPPED'}
+                              onClick={() => onAction('start')}
+                              secondary
+                              bold
+                              icon
+                            >
+                              <Margin right="2">
+                                <StartIcon
+                                  disabled={instance.state !== 'STOPPED'}
+                                />
+                              </Margin>
+                              <span>Start</span>
+                            </Button>
+                          ) : (
+                            <Button
+                              type="button"
+                              loading={stopping}
+                              disabled={instance.state !== 'RUNNING'}
+                              onClick={() => onAction('stop')}
+                              secondary
+                              bold
+                              icon
+                            >
+                              <Margin right="2">
+                                <StopIcon
+                                  disabled={instance.state !== 'RUNNING'}
+                                />
+                              </Margin>
+                              <span>Stop</span>
+                            </Button>
+                          )}
+                          <PopoverButton secondary>
+                            <PopoverItem
+                              disabled={instance.state === 'RUNNING'}
+                              onClick={() =>
+                                instance.state === 'RUNNING'
+                                  ? null
+                                  : onAction('start')
+                              }
+                            >
+                              Start
+                            </PopoverItem>
+                            <PopoverItem
+                              disabled={instance.state === 'STOPPED'}
+                              onClick={() =>
+                                instance.state === 'STOPPED'
+                                  ? null
+                                  : onAction('reboot')
+                              }
+                            >
+                              Restart
+                            </PopoverItem>
+                            <PopoverItem
+                              disabled={instance.state === 'STOPPED'}
+                              onClick={() =>
+                                instance.state === 'STOPPED'
+                                  ? null
+                                  : onAction('stop')
+                              }
+                            >
+                              Stop
+                            </PopoverItem>
+                          </PopoverButton>
+                        </ButtonGroup>
+                      </Margin>
+                    </FlexItem>
+                    <FlexItem>
                       <Button
-                        type="button"
-                        loading={removing}
-                        disabled={
-                          ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
-                        }
-                        onClick={() => onAction('remove')}
-                        secondary
-                        small
-                        right
-                        icon
-                        error
-                      >
-                        <Margin right={2}>
-                          <DeleteIcon
-                            fill={theme.red}
-                            disabled={
-                              ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
-                            }
-                          />
-                        </Margin>
-                      </Button>
-                    </SmallOnly>
-                    <Medium>
-                      <Button
-                        type="button"
-                        loading={removing}
-                        disabled={
-                          ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
-                        }
-                        onClick={() => onAction('remove')}
+                        href={`${GLOBAL.origin}/images/~create/${instance.id}`}
+                        target="__blank"
+                        rel="noopener noreferrer"
                         secondary
                         bold
-                        right
                         icon
-                        error
                       >
-                        <Margin right={2}>
-                          <DeleteIcon
-                            fill={
-                              ['RUNNING', 'STOPPED'].indexOf(instance.state) >=
-                              0
-                                ? theme.red
-                                : undefined
-                            }
-                            disabled={
-                              ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
-                            }
-                          />
-                        </Margin>
-                        <span>Delete</span>
+                        Create Image
                       </Button>
-                    </Medium>
-                  </Col>
-                </Row>
-              </Margin>
-              <Margin bottom={5} top={3}>
-                <Divider height={1} />
-              </Margin>
-              <Margin bottom={3}>
+                    </FlexItem>
+                  </Flex>
+                </Col>
+                <Col xs={3}>
+                  <SmallOnly>
+                    <Button
+                      type="button"
+                      loading={removing}
+                      disabled={
+                        ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
+                      }
+                      onClick={() => onAction('remove')}
+                      secondary
+                      small
+                      right
+                      icon
+                      error
+                    >
+                      <Margin right="2">
+                        <DeleteIcon
+                          fill="red"
+                          disabled={
+                            ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
+                          }
+                        />
+                      </Margin>
+                    </Button>
+                  </SmallOnly>
+                  <Medium>
+                    <Button
+                      type="button"
+                      loading={removing}
+                      disabled={
+                        ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
+                      }
+                      onClick={() => onAction('remove')}
+                      secondary
+                      bold
+                      right
+                      icon
+                      error
+                    >
+                      <Margin right="2">
+                        <DeleteIcon
+                          fill={
+                            ['RUNNING', 'STOPPED'].indexOf(instance.state) >= 0
+                              ? 'red'
+                              : undefined
+                          }
+                          disabled={
+                            ['RUNNING', 'STOPPED'].indexOf(instance.state) < 0
+                          }
+                        />
+                      </Margin>
+                      <span>Delete</span>
+                    </Button>
+                  </Medium>
+                </Col>
+              </Row>
+            </Margin>
+            <Margin bottom="5" top="3">
+              <Divider height={1} />
+            </Margin>
+            <Margin bottom="3">
+              <CopiableField
+                text={(instance.id || '').split('-')[0]}
+                label="Short ID"
+              />
+            </Margin>
+            <Margin bottom="3">
+              <CopiableField text={instance.id} label="ID" />
+            </Margin>
+            <Margin bottom="3">
+              <CopiableField text={instance.compute_node} label="CN UUID" />
+            </Margin>
+            {instance.image &&
+              instance.image.id && (
+                <Margin bottom="3">
+                  <CopiableField text={instance.image.id} label="Image UUID" />
+                </Margin>
+              )}
+            <Margin bottom="3">
+              <CopiableField
+                text={`ssh root@${instance.primary_ip}`}
+                label="Login"
+              />
+            </Margin>
+            {get(instance, 'ips.public', []).map((ip, i, ips) => (
+              <Margin bottom="3">
                 <CopiableField
-                  text={(instance.id || '').split('-')[0]}
-                  label="Short ID"
+                  key={`public-${i}`}
+                  label={`Public IP address ${ips.length > 1 ? i + 1 : ''}`}
+                  text={ip}
                 />
               </Margin>
-              <Margin bottom={3}>
-                <CopiableField text={instance.id} label="ID" />
-              </Margin>
-              <Margin bottom={3}>
-                <CopiableField text={instance.compute_node} label="CN UUID" />
-              </Margin>
-              {instance.image &&
-                instance.image.id && (
-                  <Margin bottom={3}>
-                    <CopiableField
-                      text={instance.image.id}
-                      label="Image UUID"
-                    />
-                  </Margin>
-                )}
-              <Margin bottom={3}>
+            ))}
+            {get(instance, 'ips.private', []).map((ip, i, ips) => (
+              <Margin bottom="3">
                 <CopiableField
-                  text={`ssh root@${instance.primary_ip}`}
-                  label="Login"
+                  key={`private-${i}`}
+                  noMargin={i === ips.length - 1}
+                  label={`Private IP address ${ips.length > 1 ? i + 1 : ''}`}
+                  text={ip}
                 />
               </Margin>
-              {get(instance, 'ips.public', []).map((ip, i, ips) => (
-                <Margin bottom={3}>
-                  <CopiableField
-                    key={`public-${i}`}
-                    label={`Public IP address ${ips.length > 1 ? i + 1 : ''}`}
-                    text={ip}
-                  />
-                </Margin>
-              ))}
-              {get(instance, 'ips.private', []).map((ip, i, ips) => (
-                <Margin bottom={3}>
-                  <CopiableField
-                    key={`private-${i}`}
-                    noMargin={i === ips.length - 1}
-                    label={`Private IP address ${ips.length > 1 ? i + 1 : ''}`}
-                    text={ip}
-                  />
-                </Margin>
-              ))}
-            </Padding>
-          </CardOutlet>
-        </Card>
-      </Col>
-    </Row>
-  )
+            ))}
+          </Padding>
+        </CardOutlet>
+      </Card>
+    </Col>
+  </Row>
 );

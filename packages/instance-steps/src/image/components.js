@@ -63,9 +63,9 @@ const H4 = styled(BaseH4)`
 export const Preview = ({ name, version, isVm }) => {
   return (
     <Fragment>
-      <Margin top={3}>
+      <Margin top="3">
         <H3>{name}</H3>
-        <Margin top={2}>
+        <Margin top="2">
           <P>
             {isVm ? 'Hardware Virtual Machine' : 'Infrastructure Container'}{' '}
           </P>
@@ -92,7 +92,7 @@ const Image = ({ onClick, active, ...image }) => {
 
   return (
     <Col lg={3} md={4} xs={6}>
-      <Margin bottom={3}>
+      <Margin bottom="3">
         <Card id={id} onClick={handleCardClick} active={active} preview>
           <Logo
             fill={active ? '#3b46cc' : null}
@@ -120,11 +120,11 @@ const Image = ({ onClick, active, ...image }) => {
 };
 
 export const ImageType = ({ setImageType, vms }) => (
-  <Margin bottom={3}>
+  <Margin bottom="3">
     <SectionList>
       <SectionListItem>
         <SectionListAnchor
-          id={'image-type-hwvm'}
+          id="image-type-hwvm"
           active={vms}
           onClick={() => setImageType(true)}
         >
@@ -133,7 +133,7 @@ export const ImageType = ({ setImageType, vms }) => (
       </SectionListItem>
       <SectionListItem>
         <SectionListAnchor
-          id={'image-type-ic'}
+          id="image-type-ic"
           active={!vms}
           onClick={() => setImageType(false)}
         >

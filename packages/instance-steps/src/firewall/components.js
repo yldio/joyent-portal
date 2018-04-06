@@ -8,7 +8,7 @@ import { StatusIcon, ErrorIcon } from 'joyent-ui-resource-step';
 export const Preview = ({ enabled }) => (
   <Flex>
     <FlexItem>
-      <Margin right={2}>
+      <Margin right="2">
         {enabled ? (
           <StatusIcon
             fill="green"

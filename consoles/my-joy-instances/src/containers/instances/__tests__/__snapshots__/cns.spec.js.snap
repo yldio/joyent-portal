@@ -114,6 +114,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c33 {
@@ -173,7 +174,7 @@ exports[`renders <Cns /> without throwing 1`] = `
 
 .c31:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c31:active,
@@ -218,6 +219,45 @@ exports[`renders <Cns /> without throwing 1`] = `
 .c18 {
   height: 1px;
   background-color: rgb(216,216,216);
+  height: 0.0625rem;
+}
+
+.c8 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
 }
 
 .c16 {
@@ -329,44 +369,6 @@ exports[`renders <Cns /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
-}
-
-.c8 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c9 {
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  background-color: transparent;
 }
 
 .c25 {
@@ -545,10 +547,6 @@ exports[`renders <Cns /> without throwing 1`] = `
   display: none;
 }
 
-.c5 {
-  font-weight: 200;
-}
-
 .c12 {
   margin: 0;
 }
@@ -568,6 +566,10 @@ exports[`renders <Cns /> without throwing 1`] = `
 
 .c21 {
   margin-bottom: 0;
+}
+
+.c5 {
+  font-weight: 200;
 }
 
 @media only screen and (min-width:48em) {
@@ -953,6 +955,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c15 {
@@ -970,30 +973,6 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   width: 100%;
   max-width: 78.75rem;
   padding-bottom: 1.125rem;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .c8 {
@@ -1032,6 +1011,30 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   flex-direction: column;
   border-width: 0;
   background-color: transparent;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c12 {
@@ -1149,12 +1152,12 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   display: none;
 }
 
-.c5 {
-  font-weight: 200;
-}
-
 .c18 {
   margin: 0 6px;
+}
+
+.c5 {
+  font-weight: 200;
 }
 
 @media only screen and (min-width:48em) {
@@ -1505,6 +1508,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c43 {
@@ -1564,7 +1568,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
 
 .c41:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c41:active,
@@ -1624,6 +1628,45 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
 .c31 {
   height: 1px;
   background-color: rgb(216,216,216);
+  height: 0.0625rem;
+}
+
+.c8 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
 }
 
 .c16 {
@@ -1735,44 +1778,6 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
-}
-
-.c8 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c9 {
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  background-color: transparent;
 }
 
 .c36 {
@@ -2068,10 +2073,6 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c5 {
-  font-weight: 200;
-}
-
 .c18 {
   padding-right: 0.75rem;
   margin-right: 0.75rem;
@@ -2097,6 +2098,10 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
 
 .c34 {
   margin-bottom: 0;
+}
+
+.c5 {
+  font-weight: 200;
 }
 
 @media only screen and (min-width:48em) {
@@ -3168,6 +3173,7 @@ exports[`renders <Cns loading /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c11 {
@@ -3541,6 +3547,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c38 {
@@ -3600,7 +3607,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
 
 .c36:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c36:active,
@@ -3645,7 +3652,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
 .c15 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
@@ -3653,6 +3660,45 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
 .c23 {
   height: 1px;
   background-color: rgb(216,216,216);
+  height: 0.0625rem;
+}
+
+.c8 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
 }
 
 .c21 {
@@ -3742,73 +3788,6 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   display: block;
 }
 
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  background-color: rgb(255,255,255);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-  border: 0.0625rem solid rgb(216,216,216);
-  border-radius: 0.1875rem;
-  width: 100%;
-}
-
-.c13 {
-  border-radius: 0.1875rem 0 0 0.1875rem;
-  min-width: 0.75rem;
-  background-color: rgb(0,152,88);
-  background-color: rgb(210,67,58);
-}
-
-.c14 {
-  padding: 1.125rem 1.125rem;
-}
-
-.c16 {
-  line-height: 0.875rem;
-  font-size: 0.8125rem;
-}
-
-.c8 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c9 {
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  background-color: transparent;
-}
-
 .c30 {
   display: inline-block;
   padding: 0;
@@ -3888,8 +3867,33 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c5 {
-  font-weight: 200;
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  border-radius: 0.1875rem;
+  width: 100%;
+}
+
+.c13 {
+  border-radius: 0.1875rem 0 0 0.1875rem;
+  min-width: 0.75rem;
+  background-color: rgb(0,152,88);
+  background-color: rgb(210,67,58);
+}
+
+.c14 {
+  padding: 1.125rem 1.125rem;
+}
+
+.c16 {
+  line-height: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .c17 {
@@ -3907,6 +3911,10 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
 
 .c26 {
   margin-bottom: 0;
+}
+
+.c5 {
+  font-weight: 200;
 }
 
 @media only screen and (min-width:48em) {
@@ -4342,6 +4350,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c43 {
@@ -4401,7 +4410,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
 
 .c41:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c41:active,
@@ -4461,6 +4470,45 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
 .c31 {
   height: 1px;
   background-color: rgb(216,216,216);
+  height: 0.0625rem;
+}
+
+.c8 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
 }
 
 .c16 {
@@ -4572,44 +4620,6 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
-}
-
-.c8 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c9 {
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  background-color: transparent;
 }
 
 .c36 {
@@ -4998,10 +5008,6 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c5 {
-  font-weight: 200;
-}
-
 .c46 {
   margin-bottom: -0.375rem;
 }
@@ -5031,6 +5037,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
 
 .c34 {
   margin-bottom: 0;
+}
+
+.c5 {
+  font-weight: 200;
 }
 
 @media only screen and (min-width:48em) {
@@ -6192,6 +6202,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c38 {
@@ -6251,7 +6262,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
 
 .c36:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c36:active,
@@ -6296,7 +6307,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
 .c15 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
@@ -6304,6 +6315,45 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
 .c23 {
   height: 1px;
   background-color: rgb(216,216,216);
+  height: 0.0625rem;
+}
+
+.c8 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
 }
 
 .c21 {
@@ -6415,73 +6465,6 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
-}
-
-.c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  background-color: rgb(255,255,255);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-  border: 0.0625rem solid rgb(216,216,216);
-  border-radius: 0.1875rem;
-  width: 100%;
-}
-
-.c13 {
-  border-radius: 0.1875rem 0 0 0.1875rem;
-  min-width: 0.75rem;
-  background-color: rgb(0,152,88);
-  background-color: rgb(210,67,58);
-}
-
-.c14 {
-  padding: 1.125rem 1.125rem;
-}
-
-.c16 {
-  line-height: 0.875rem;
-  font-size: 0.8125rem;
-}
-
-.c8 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c9 {
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  background-color: transparent;
 }
 
 .c30 {
@@ -6660,8 +6643,33 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   display: none;
 }
 
-.c5 {
-  font-weight: 200;
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  border: 0.0625rem solid rgb(216,216,216);
+  border-radius: 0.1875rem;
+  width: 100%;
+}
+
+.c13 {
+  border-radius: 0.1875rem 0 0 0.1875rem;
+  min-width: 0.75rem;
+  background-color: rgb(0,152,88);
+  background-color: rgb(210,67,58);
+}
+
+.c14 {
+  padding: 1.125rem 1.125rem;
+}
+
+.c16 {
+  line-height: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 .c17 {
@@ -6683,6 +6691,10 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
 
 .c26 {
   margin-bottom: 0;
+}
+
+.c5 {
+  font-weight: 200;
 }
 
 @media only screen and (min-width:48em) {
@@ -7150,6 +7162,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c33 {
@@ -7209,7 +7222,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
 
 .c31:hover {
   background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
+  border-color: rgb(45,56,132);
 }
 
 .c31:active,
@@ -7254,6 +7267,45 @@ exports[`renders <Cns services /> without throwing 1`] = `
 .c18 {
   height: 1px;
   background-color: rgb(216,216,216);
+  height: 0.0625rem;
+}
+
+.c8 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
 }
 
 .c16 {
@@ -7365,44 +7417,6 @@ exports[`renders <Cns services /> without throwing 1`] = `
   -ms-flex-negative: 1;
   flex-shrink: 1;
   display: block;
-}
-
-.c8 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c9 {
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  background-color: transparent;
 }
 
 .c25 {
@@ -7622,10 +7636,6 @@ exports[`renders <Cns services /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c5 {
-  font-weight: 200;
-}
-
 .c36 {
   margin-bottom: -0.375rem;
 }
@@ -7649,6 +7659,10 @@ exports[`renders <Cns services /> without throwing 1`] = `
 
 .c21 {
   margin-bottom: 0;
+}
+
+.c5 {
+  font-weight: 200;
 }
 
 @media only screen and (min-width:48em) {
@@ -8142,6 +8156,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+  margin: 0;
 }
 
 .c15 {
@@ -8159,30 +8174,6 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   width: 100%;
   max-width: 78.75rem;
   padding-bottom: 1.125rem;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .c8 {
@@ -8221,6 +8212,30 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   flex-direction: column;
   border-width: 0;
   background-color: transparent;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c12 {
@@ -8338,12 +8353,12 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   display: none;
 }
 
-.c5 {
-  font-weight: 200;
-}
-
 .c18 {
   margin: 0 6px;
+}
+
+.c5 {
+  font-weight: 200;
 }
 
 @media only screen and (min-width:48em) {

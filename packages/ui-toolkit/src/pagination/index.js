@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
+import { Margin } from 'styled-components-spacing';
 import remcalc from 'remcalc';
 import is from 'styled-is';
 
@@ -47,18 +48,17 @@ export const TableFoot = ({ children, colSpan, ...rest }) => (
   </Tfoot>
 );
 
-export const Item = withTheme(
-  ({
-    children,
-    next,
-    prev,
-    disabled,
-    to,
-    component,
-    active,
-    theme,
-    ...rest
-  }) => (
+export const Item = ({
+  children,
+  next,
+  prev,
+  disabled,
+  to,
+  component,
+  active,
+  ...rest
+}) => (
+  <Margin horizontal="1" inline>
     <Anchor
       disabled={disabled}
       active={active}
@@ -67,20 +67,12 @@ export const Item = withTheme(
       {...rest}
     >
       {prev ? (
-        <Arrow
-          left
-          direction="right"
-          fill={disabled ? theme.grey : theme.primary}
-        />
+        <Arrow left direction="right" fill={disabled ? 'grey' : 'primary'} />
       ) : null}
       {children}
       {next ? (
-        <Arrow
-          right
-          direction="left"
-          fill={disabled ? theme.grey : theme.primary}
-        />
+        <Arrow right direction="left" fill={disabled ? 'grey' : 'primary'} />
       ) : null}
     </Anchor>
-  )
+  </Margin>
 );

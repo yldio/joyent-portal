@@ -16,14 +16,15 @@ import Step, {
   Outlet as StepOutlet
 } from 'joyent-ui-resource-step';
 
-import { AffinityIcon, Button, KeyValue } from 'joyent-ui-toolkit';
+import { AffinityIcon, Button } from 'joyent-ui-toolkit';
+import { KeyValue } from 'joyent-ui-resource-widgets';
 
 import { Rule, Header } from './components';
 import { addAffinityRule as validateRule } from '../validators';
 import { Forms, Values } from '../constants';
 
-const { IC_AFF_F_ADD, IC_AFF_F_EDIT } = Forms;
-const { IC_AFF_V_ADD_OPEN, IC_AFF_V_EDIT_OPEN, IC_AFF_V_AFF } = Values;
+const { IR_AFF_F_ADD, IR_AFF_F_EDIT } = Forms;
+const { IR_AFF_V_ADD_OPEN, IR_AFF_V_EDIT_OPEN, IR_AFF_V_AFF } = Values;
 
 const RULE_DEFAULTS = {
   conditional: 'should',
@@ -47,7 +48,7 @@ const Preview = ({
   disabled = false
 }) => (
   <ReduxForm
-    form={IC_AFF_F_EDIT}
+    form={IR_AFF_F_EDIT}
     initialValues={exitingRule}
     destroyOnUnmount={false}
     forceUnregisterOnUnmount={false}
@@ -57,7 +58,7 @@ const Preview = ({
   >
     {formProps =>
       exitingRule ? (
-        <Margin top={3}>
+        <Margin top="3">
           <KeyValue
             {...formProps}
             expanded={editOpen}
@@ -125,7 +126,7 @@ const Affinity = ({
             exitingRule={exitingRule}
           />
           <ReduxForm
-            form={IC_AFF_F_ADD}
+            form={IR_AFF_F_ADD}
             initialValues={RULE_DEFAULTS}
             destroyOnUnmount={false}
             forceUnregisterOnUnmount={false}
@@ -135,7 +136,7 @@ const Affinity = ({
           >
             {formProps =>
               addOpen ? (
-                <Margin top={3}>
+                <Margin top="3">
                   <KeyValue
                     {...formProps}
                     method="create"
@@ -158,7 +159,7 @@ const Affinity = ({
             }
           </ReduxForm>
           {!addOpen && !exitingRule ? (
-            <Margin top={5}>
+            <Margin top="5">
               <Button
                 type="button"
                 onClick={() => handleChangeAddOpen(true)}
@@ -169,9 +170,9 @@ const Affinity = ({
             </Margin>
           ) : null}
           {!addOpen && exitingRule ? (
-            <Margin top={5}>
+            <Margin top="5">
               <Button
-                id={'next-button-affinity'}
+                id="next-button-affinity"
                 type="button"
                 component={Link}
                 to={next}
@@ -188,12 +189,12 @@ const Affinity = ({
 
 export default compose(
   connect(({ values, form }, ownProps) => {
-    const editingRule = get(form, `${IC_AFF_F_EDIT}.values`, null);
-    const creatingRule = get(form, `${IC_AFF_F_ADD}.values`, null);
-    const exitingRule = get(values, IC_AFF_V_AFF, null);
+    const editingRule = get(form, `${IR_AFF_F_EDIT}.values`, null);
+    const creatingRule = get(form, `${IR_AFF_F_ADD}.values`, null);
+    const exitingRule = get(values, IR_AFF_V_AFF, null);
 
-    const addOpen = get(values, IC_AFF_V_ADD_OPEN, true);
-    const editOpen = get(values, IC_AFF_V_EDIT_OPEN, false);
+    const addOpen = get(values, IR_AFF_V_ADD_OPEN, true);
+    const editOpen = get(values, IR_AFF_V_EDIT_OPEN, false);
 
     return {
       addOpen,
@@ -216,34 +217,34 @@ export default compose(
 
     handleCreateAffinityRules: value => {
       return dispatch([
-        destroy(IC_AFF_F_ADD),
-        set({ name: IC_AFF_V_ADD_OPEN, value: false }),
-        set({ name: IC_AFF_V_AFF, value })
+        destroy(IR_AFF_F_ADD),
+        set({ name: IR_AFF_V_ADD_OPEN, value: false }),
+        set({ name: IR_AFF_V_AFF, value })
       ]);
     },
     handleUpdateAffinityRule: value => {
       return dispatch([
-        destroy(IC_AFF_F_EDIT),
-        set({ name: IC_AFF_V_EDIT_OPEN, value: false }),
-        set({ name: IC_AFF_V_AFF, value })
+        destroy(IR_AFF_F_EDIT),
+        set({ name: IR_AFF_V_EDIT_OPEN, value: false }),
+        set({ name: IR_AFF_V_AFF, value })
       ]);
     },
     handleChangeAddOpen: value => {
       return dispatch([
-        reset(IC_AFF_F_ADD),
-        set({ name: IC_AFF_V_ADD_OPEN, value })
+        reset(IR_AFF_F_ADD),
+        set({ name: IR_AFF_V_ADD_OPEN, value })
       ]);
     },
     handleToggleExpanded: value => {
-      return dispatch(set({ name: IC_AFF_V_EDIT_OPEN, value }));
+      return dispatch(set({ name: IR_AFF_V_EDIT_OPEN, value }));
     },
     handleCancelEdit: () => {
-      return dispatch([set({ name: IC_AFF_V_EDIT_OPEN, value: false })]);
+      return dispatch([set({ name: IR_AFF_V_EDIT_OPEN, value: false })]);
     },
     handleRemoveAffinityRule: () => {
       return dispatch([
-        destroy(IC_AFF_F_EDIT),
-        set({ name: IC_AFF_V_AFF, value: null })
+        destroy(IR_AFF_F_EDIT),
+        set({ name: IR_AFF_V_AFF, value: null })
       ]);
     }
   }))

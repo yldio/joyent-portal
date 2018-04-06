@@ -1,0 +1,20 @@
+query template($id: ID!) {
+  template(id: $id) {
+    id
+    name
+    package
+    image
+    enableFirewall
+    networks
+    userdata
+    metadata {
+      name
+      value
+    }
+    tags {
+      name
+      value
+    }
+    created
+  }
+}

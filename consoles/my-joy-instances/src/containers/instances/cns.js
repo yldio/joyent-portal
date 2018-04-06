@@ -22,12 +22,13 @@ import {
   MessageDescription
 } from 'joyent-ui-toolkit';
 
-import Description from '@components/instances/description';
 import {
   Cns,
   CnsFooter as Footer,
   CnsAddServiceForm as AddServiceForm
 } from 'joyent-ui-resource-widgets';
+
+import Description from '@components/instances/description';
 import GetAccount from '@graphql/get-account.gql';
 import DeleteTag from '@graphql/delete-tag.gql';
 import UpdateTags from '@graphql/update-tags.gql';
@@ -52,7 +53,7 @@ const CnsContainer = ({
   handleAsyncValidate
 }) => (
   <ViewContainer main>
-    <Margin bottom={3}>
+    <Margin bottom="3">
       <Description href="https://docs.joyent.com/private-cloud/install/cns">
         Triton CNS is used to automatically update hostnames for your instances.
         You can serve multiple instances (with multiple IP addresses) under the
@@ -66,7 +67,7 @@ const CnsContainer = ({
             <Padding all={5}>
               {loading ? <StatusLoader /> : null}
               {!loading && loadingError ? (
-                <Margin bottom={5}>
+                <Margin bottom="5">
                   <Message error>
                     <MessageTitle>Ooops!</MessageTitle>
                     <MessageDescription>
@@ -76,7 +77,7 @@ const CnsContainer = ({
                 </Margin>
               ) : null}
               {!loading && mutationError ? (
-                <Margin bottom={5}>
+                <Margin bottom="5">
                   <Message error>
                     <MessageTitle>Ooops!</MessageTitle>
                     <MessageDescription>{mutationError}</MessageDescription>
@@ -108,7 +109,7 @@ const CnsContainer = ({
           </CardOutlet>
         </Card>
         {!loading && !loadingError ? (
-          <Margin top={5}>
+          <Margin top="5">
             <Footer
               enabled={!disabled}
               submitting={mutating}
@@ -278,14 +279,8 @@ export default compose(
         ]);
 
         const newValue = value.join(',');
-        const mutation = !newValue.length
-          ? deleteTag({
-              variables: {
-                id: instance.id,
-                name: 'triton.cns.services'
-              }
-            })
-          : updateTags({
+        const mutation = newValue.length
+          ? updateTags({
               variables: {
                 id: instance.id,
                 tags: [
@@ -294,6 +289,12 @@ export default compose(
                     value: value.join(',')
                   }
                 ]
+              }
+            })
+          : deleteTag({
+              variables: {
+                id: instance.id,
+                name: 'triton.cns.services'
               }
             });
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import remcalc from 'remcalc';
 
 export default styled.ul`
   margin: 0;

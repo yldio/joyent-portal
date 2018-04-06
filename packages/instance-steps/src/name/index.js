@@ -49,13 +49,15 @@ const Form = styled.form`
   margin-bottom: 0;
 `;
 
-const Name = ({
+const NameContainer = ({
+  randomizable = false,
   initialValues,
   handleValidate,
   randomizing,
   handleRandomize,
   handleGetValue,
   preview = {},
+  children,
   ...props
 }) => (
   <Step
@@ -64,10 +66,7 @@ const Name = ({
     isValid={handleValidate(preview)}
     {...props}
   >
-    <StepHeader icon={<NameIcon />}>Instance name</StepHeader>
-    <StepDescription>
-      Your instance name will be used to identify this specific instance.
-    </StepDescription>
+    {children}
     <StepPreview>
       <Margin top="5">
         <H2>{preview.name}</H2>
@@ -87,7 +86,7 @@ const Name = ({
           >
             {props => (
               <Form onSubmit={null}>
-                <FormGroup id={'input-name'} name="name" fluid field={Field}>
+                <FormGroup id="input-name" name="name" fluid field={Field}>
                   <FormLabel>Instance name</FormLabel>
                   <Margin top="0.5">
                     <SmallOnly>
@@ -95,25 +94,26 @@ const Name = ({
                         <FlexItem>
                           <Input onBlur={null} fluid />
                         </FlexItem>
-                        <FlexItem>
-                          <Margin top="2">
-                            <Button
-                              id={'randomize-button-name'}
-                              type="button"
-                              loading={randomizing}
-                              onClick={handleRandomize}
-                              marginless
-                              secondary
-                              icon
-                              fluid
-                            >
-                              <Margin right="1">
-                                <RandomizeIcon />
-                              </Margin>
-                              Randomize
-                            </Button>
-                          </Margin>
-                        </FlexItem>
+                        {randomizable ? (
+                          <FlexItem>
+                            <Margin top="2">
+                              <Button
+                                id="randomize-button-name"
+                                type="button"
+                                loading={randomizing}
+                                onClick={handleRandomize}
+                                marginless
+                                secondary
+                                icon
+                                fluid
+                              >
+                                <Margin right="1">
+                                  <RandomizeIcon />
+                                </Margin>
+                                Randomize
+                              </Button>
+                            </Margin>
+                          </FlexItem>) : null}
                       </Flex>
                     </SmallOnly>
                     <Medium>
@@ -121,24 +121,26 @@ const Name = ({
                         <FlexItem>
                           <Input onBlur={null} />
                         </FlexItem>
-                        <FlexItem>
-                          <Margin left="1" inline>
-                            <Button
-                              id={'randomize-button-name'}
-                              type="button"
-                              loading={randomizing}
-                              onClick={handleRandomize}
-                              marginless
-                              secondary
-                              icon
-                            >
-                              <Margin right="1">
-                                <RandomizeIcon />
-                              </Margin>
-                              Randomize
-                            </Button>
-                          </Margin>
-                        </FlexItem>
+                        {randomizable ? (
+                          <FlexItem>
+                            <Margin left="1" inline>
+                              <Button
+                                id="randomize-button-name"
+                                type="button"
+                                loading={randomizing}
+                                onClick={handleRandomize}
+                                marginless
+                                secondary
+                                icon
+                              >
+                                <Margin right="1">
+                                  <RandomizeIcon />
+                                </Margin>
+                                Randomize
+                              </Button>
+                            </Margin>
+                          </FlexItem>
+                        ) : null}
                       </Flex>
                     </Medium>
                   </Margin>
@@ -146,7 +148,7 @@ const Name = ({
                 </FormGroup>
                 <Margin top="5">
                   <Button
-                    id={'next-button-name'}
+                    id="next-button-name"
                     type="button"
                     component={Link}
                     to={next}
@@ -162,6 +164,34 @@ const Name = ({
     </StepOutlet>
   </Step>
 );
+
+const TemplateName = props => (
+  <NameContainer {...props}>
+    <StepHeader icon={<NameIcon />}>Name this template</StepHeader>
+    <StepDescription>
+      Please give your Template a name and define what prefix will be attached
+      to all instances created from this template.
+    </StepDescription>
+  </NameContainer>
+);
+
+const InstanceName = props => (
+  <NameContainer {...props}>
+    <StepHeader icon={<NameIcon />} randomizable>
+      Name this instance
+    </StepHeader>
+    <StepDescription>
+      Your instance name will be used to identify this specific instance.
+    </StepDescription>
+  </NameContainer>
+);
+
+const Name = ({ type = 'instance', ...props }) =>
+  type === 'instance' ? (
+    <InstanceName {...props} />
+  ) : (
+    <TemplateName {...props} />
+  );
 
 const Container = compose(
   graphql(GetRandomName, {

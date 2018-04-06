@@ -10,7 +10,7 @@ const SECTIONS = [
 
 export default ({ match }) => {
   const imageId = get(match, 'params.image');
-  const sections = imageId !== '~create' ? SECTIONS : [];
+  const sections = imageId === '~create' ? [] : SECTIONS;
 
   const links = sections.map(({ name, pathname }) => ({
     name,

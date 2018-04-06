@@ -1,7 +1,9 @@
 import React from 'react';
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import isBoolean from 'lodash.isboolean';
+import isUndefined from 'lodash.isundefined';
 import isNaN from 'lodash.isnan';
+import { Margin } from 'styled-components-spacing';
 import styled, { css } from 'styled-components';
 import is, { isOr } from 'styled-is';
 import remcalc from 'remcalc';
@@ -45,7 +47,8 @@ const Column = css`
   white-space: nowrap;
 
   box-sizing: border-box;
-  padding: 0 ${remcalc(24)};
+  padding: 0
+    ${props => remcalc(isUndefined(props.padding) ? 24 : props.padding)};
   height: ${remcalc(60)};
 
   ${handleBreakpoint('xs')};
@@ -60,6 +63,10 @@ const Column = css`
 
   ${query.xlargeUp`
     ${handleBreakpoint('lg')};
+  `};
+
+  ${is('shrinken')`
+    height: ${remcalc(42)};
   `};
 
   ${is('actionable')`
@@ -314,7 +321,9 @@ export const Th = ({ children, ...rest }) => (
       >
         {children}
         {!showSort || !header ? null : (
-          <ArrowIcon direction={sortOrder === 'asc' ? 'down' : 'up'} />
+          <Margin left="1" inline>
+            <ArrowIcon direction={sortOrder === 'asc' ? 'down' : 'up'} />
+          </Margin>
         )}
       </BaseTh>
     )}

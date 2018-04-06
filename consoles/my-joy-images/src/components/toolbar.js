@@ -17,7 +17,7 @@ export const Toolbar = ({
   <Flex justifyBetween alignEnd>
     <FormGroup name="filter" field={Field}>
       <FormLabel>{searchLabel}</FormLabel>
-      <Margin top={0.5}>
+      <Margin top="0.5">
         <Input placeholder={searchPlaceholder} disabled={!searchable} />
       </Margin>
     </FormGroup>

@@ -64,7 +64,7 @@ const MarginalPaginationItem = styled(PaginationItem)`
 `;
 
 const Actions = styled(Flex)`
-  height: ${remcalc(48)};
+  height: 100%;
 `;
 
 const PopoverItem = styled(BasePopoverItem)`
@@ -124,7 +124,11 @@ export const Item = ({
     <TableTd xs="0" sm="130" middle left>
       <code>{id.substring(0, 7)}</code>
     </TableTd>
-    {!mutating ? (
+    {mutating ? (
+      <TableTd padding="0" hasBorder="left" center middle>
+        <ActionsIcon disabled />
+      </TableTd>
+    ) : (
       <PopoverContainer clickable>
         <TableTd padding="0" hasBorder="left">
           <PopoverTarget box>
@@ -160,10 +164,6 @@ export const Item = ({
           </Popover>
         </TableTd>
       </PopoverContainer>
-    ) : (
-      <TableTd padding="0" hasBorder="left" center middle>
-        <ActionsIcon disabled />
-      </TableTd>
     )}
   </TableTr>
 );
@@ -250,7 +250,7 @@ export default ({
           </TableTr>
         </TableThead>
         <TableTbody>{children}</TableTbody>
-        {!noInstances ? (
+        {noInstances ? null : (
           <PaginationTableFoot colSpan="6">
             <PaginationItem
               to={`${Global().pathname}?${queryString.stringify({
@@ -336,7 +336,7 @@ export default ({
               Next
             </PaginationItem>
           </PaginationTableFoot>
-        ) : null}
+        )}
       </Table>
     </form>
   );

@@ -15,7 +15,7 @@ const BreadcrumContianer = styled(Container)`
  */
 export default ({ children, ...rest }) => (
   <BreadcrumContianer {...rest} fluid>
-    <Padding top={1} bottom={1}>
+    <Padding top="1" bottom="1">
       <Container>
         <Row name="breadcrum">
           <Col xs={12}>{children}</Col>

@@ -3,4 +3,4 @@ import remcalc from 'remcalc';
 
 import Divider from '../divider';
 
-export default () => <Divider height={remcalc(1)} />;
+export default props => <Divider height={remcalc(1)} {...props} />;

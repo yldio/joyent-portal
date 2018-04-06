@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import React, { Fragment } from 'react';
 import { Field } from 'redux-form';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
@@ -54,11 +53,11 @@ const ResponsiveFormGroup = styled(FormGroup)`
 `;
 
 export const Collapsed = ({ name, fabric, ...network }) => (
-  <Margin inline right={3} top={3}>
+  <Margin inline right="3" top="3">
     <Box>
       <Flex column>
         <FlexItem>
-          <Margin left={3} right={3} top={2} bottom={2}>
+          <Margin left="3" right="3" top="2" bottom="2">
             <P>{name}</P>
           </Margin>
         </FlexItem>
@@ -66,13 +65,13 @@ export const Collapsed = ({ name, fabric, ...network }) => (
           <Divider noMargin height={remcalc(0)} />
         </FlexItem>
         <FlexItem>
-          <Margin left={3} right={3} top={2} bottom={2}>
+          <Margin left="3" right="3" top="2" bottom="2">
             <Flex>
-              <Margin right={5}>
+              <Margin right="5">
                 <FlexItem>
                   <Flex alignCenter>
                     <FlexItem>
-                      <Margin right={1}>
+                      <Margin right="1">
                         {network.public ? <PublicIcon /> : <PrivateIcon />}
                       </Margin>
                     </FlexItem>
@@ -86,7 +85,7 @@ export const Collapsed = ({ name, fabric, ...network }) => (
                 <FlexItem>
                   <Flex alignCenter>
                     <FlexItem>
-                      <Margin right={1}>
+                      <Margin right="1">
                         {fabric ? <FabricIcon /> : <DataCenterIcon />}
                       </Margin>
                     </FlexItem>
@@ -130,7 +129,7 @@ export const Expanded = ({
             {readOnly ? null : (
               <CardHeaderBox>
                 <FormGroup
-                  id={'network-checkbox-' + paramCase(name)}
+                  id={`network-checkbox-${paramCase(name)}`}
                   name={id}
                   field={Field}
                 >
@@ -147,16 +146,16 @@ export const Expanded = ({
           <CardOutlet>
             <Padding all={{ mobile: 3, tablet: 5 }}>
               {description && (
-                <Margin bottom={3}>
+                <Margin bottom="3">
                   <P>{description}</P>
                 </Margin>
               )}
               <Flex>
-                <Margin right={5}>
+                <Margin right="5">
                   <FlexItem>
                     <Flex alignCenter>
                       <FlexItem>
-                        <Margin right={1}>
+                        <Margin right="1">
                           {network.public ? <PublicIcon /> : <PrivateIcon />}
                         </Margin>
                       </FlexItem>
@@ -166,11 +165,11 @@ export const Expanded = ({
                     </Flex>
                   </FlexItem>
                 </Margin>
-                <Margin right={5}>
+                <Margin right="5">
                   <FlexItem>
                     <Flex alignCenter>
                       <FlexItem>
-                        <Margin right={1}>
+                        <Margin right="1">
                           {fabric ? <FabricIcon /> : <DataCenterIcon />}
                         </Margin>
                       </FlexItem>
@@ -206,11 +205,11 @@ export const Expanded = ({
               <SmallOnly>
                 {fabric ? (
                   <Flex>
-                    <Margin right={5}>
+                    <Margin right="5">
                       <FlexItem>
                         <Flex alignCenter>
                           <FlexItem>
-                            <Margin right={1}>
+                            <Margin right="1">
                               <InstanceCountIcon />
                             </Margin>
                           </FlexItem>
@@ -227,7 +226,7 @@ export const Expanded = ({
               </SmallOnly>
               {fabric ? (
                 <Fragment>
-                  <Margin top={3}>
+                  <Margin top="3">
                     <Card collapsed={!infoExpanded} actionable={!infoExpanded}>
                       <BaseCardHeader
                         secondary={false}
@@ -235,7 +234,7 @@ export const Expanded = ({
                         onClick={onInfoClick}
                       >
                         <CardHeaderMeta>
-                          <Padding left={3} right={3}>
+                          <Padding left="3" right="3">
                             <P>Network information</P>
                           </Padding>
                         </CardHeaderMeta>
@@ -249,9 +248,9 @@ export const Expanded = ({
                             <Flex column>
                               {network.internet_nat ? (
                                 <FlexItem>
-                                  <Margin bottom={3}>
+                                  <Margin bottom="3">
                                     <Flex alignCenter>
-                                      <Margin right={1} top={0.5}>
+                                      <Margin right="1" top="0.5">
                                         <DotIcon
                                           size={remcalc(12)}
                                           color="green"
@@ -265,10 +264,10 @@ export const Expanded = ({
                                 </FlexItem>
                               ) : null}
                               <FlexItem>
-                                <Margin bottom={2}>
+                                <Margin bottom="2">
                                   <ResponsiveFormGroup name="id">
                                     <FormLabel>ID</FormLabel>
-                                    <Margin top={0.5}>
+                                    <Margin top="0.5">
                                       <Input
                                         onBlur={null}
                                         big
@@ -283,7 +282,7 @@ export const Expanded = ({
                               <FlexItem>
                                 <ResponsiveFormGroup name="subnet">
                                   <FormLabel>Subnet</FormLabel>
-                                  <Margin top={0.5}>
+                                  <Margin top="0.5">
                                     <Input
                                       onBlur={null}
                                       big
@@ -297,7 +296,7 @@ export const Expanded = ({
                               <FlexItem>
                                 <ResponsiveFormGroup name="ip-range">
                                   <FormLabel>IP range</FormLabel>
-                                  <Margin top={0.5}>
+                                  <Margin top="0.5">
                                     <Input
                                       onBlur={null}
                                       big
@@ -315,7 +314,7 @@ export const Expanded = ({
                     </Card>
                   </Margin>
                   {machines.length ? (
-                    <Margin top={3}>
+                    <Margin top="3">
                       <Card
                         collapsed={!machinesExpanded}
                         actionable={!machinesExpanded}
@@ -326,7 +325,7 @@ export const Expanded = ({
                           onClick={onMachinesClick}
                         >
                           <CardHeaderMeta>
-                            <Padding left={3} right={3}>
+                            <Padding left="3" right="3">
                               <P>Instances on network</P>
                             </Padding>
                           </CardHeaderMeta>
@@ -338,7 +337,7 @@ export const Expanded = ({
                         </BaseCardHeader>
                         {machinesExpanded ? (
                           <CardOutlet>
-                            <Padding top={2} bottom={2} left={3} right={3}>
+                            <Padding top="2" bottom="2" left="3" right="3">
                               <Flex column>
                                 {machines.map(({ name }) => (
                                   <FlexItem>

@@ -124,8 +124,8 @@ const PackageSpecs = styled('div')`
 `;
 
 export const Filters = ({ onResetFilters }) => (
-  <Margin bottom={3}>
-    <Margin bottom={3}>
+  <Margin bottom="3">
+    <Margin bottom="3">
       <H4>Filters</H4>
     </Margin>
     <Flex wrap alignCenter>
@@ -133,8 +133,8 @@ export const Filters = ({ onResetFilters }) => (
         <Checkbox>
           <FormLabel noMargin actionable>
             <Flex alignCenter>
-              <Margin left={1}>{GroupIcons.COMPUTE}</Margin>
-              <Margin left={1} right={3}>
+              <Margin left="1">{GroupIcons.COMPUTE}</Margin>
+              <Margin left="1" right="3">
                 Compute Optimized
               </Margin>
             </Flex>
@@ -145,8 +145,8 @@ export const Filters = ({ onResetFilters }) => (
         <Checkbox>
           <FormLabel noMargin actionable>
             <Flex alignCenter>
-              <Margin left={1}>{GroupIcons.MEMORY}</Margin>
-              <Margin left={1} right={3}>
+              <Margin left="1">{GroupIcons.MEMORY}</Margin>
+              <Margin left="1" right="3">
                 Memory Optimized
               </Margin>
             </Flex>
@@ -157,8 +157,8 @@ export const Filters = ({ onResetFilters }) => (
         <Checkbox>
           <FormLabel noMargin actionable>
             <Flex alignCenter>
-              <Margin left={1}>{GroupIcons.GENERAL}</Margin>
-              <Margin left={1} right={3}>
+              <Margin left="1">{GroupIcons.GENERAL}</Margin>
+              <Margin left="1" right="3">
                 General Purpose
               </Margin>
             </Flex>
@@ -169,8 +169,8 @@ export const Filters = ({ onResetFilters }) => (
         <Checkbox>
           <FormLabel noMargin actionable>
             <Flex alignCenter>
-              <Margin left={1}>{GroupIcons.GENERAL}</Margin>
-              <Margin left={1} right={3}>
+              <Margin left="1">{GroupIcons.GENERAL}</Margin>
+              <Margin left="1" right="3">
                 Storage Optimized
               </Margin>
             </Flex>
@@ -180,12 +180,12 @@ export const Filters = ({ onResetFilters }) => (
       <FormGroup type="checkbox" name="ssd" field={Field}>
         <Checkbox>
           <FormLabel noMargin actionable>
-            <Margin left={1}>SSD</Margin>
+            <Margin left="1">SSD</Margin>
           </FormLabel>
         </Checkbox>
       </FormGroup>
     </Flex>
-    <Margin top={3} bottom={5}>
+    <Margin top="3" bottom="5">
       <Button type="button" onClick={onResetFilters} secondary>
         Reset Filters
       </Button>
@@ -318,10 +318,10 @@ export const Package = ({
       <FormGroup name="package" value={id} type="radio" field={Field} fluid>
         <Radio onBlur={null} noMargin>
           <Flex alignCenter>
-            <Margin left={5} right={1}>
+            <Margin left="5" right="1">
               {GroupIcons[group]}
             </Margin>
-            <Margin left={1} right={2}>
+            <Margin left="1" right="2">
               <FormLabel
                 style={{ fontWeight: sortBy === 'name' ? 'bold' : 'normal' }}
                 noMargin
@@ -338,7 +338,7 @@ export const Package = ({
       {bytes(memory, { decimalPlaces: 0, unitSeparator: ' ' })}
     </TableTd>
     <TableTd right selected={selected} bold={sortBy === 'disk'}>
-      <Margin inline right={1}>
+      <Margin inline right="1">
         {bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })}
       </Margin>
       {ssd && <Sup badge>SSD</Sup>}
@@ -447,7 +447,7 @@ export const Overview = ({
   onCancel
 }) => (
   <Fragment>
-    <Margin bottom={2}>
+    <Margin bottom="2">
       <H3 noMargin>{name}</H3>
     </Margin>
     <Flex alignCenter>
@@ -472,7 +472,7 @@ export const Empty = ({ children, ...rest }) => (
   <FullWidthCard {...rest}>
     <Padding all={6}>
       <Flex alignCenter justifyCenter column>
-        <Margin bottom={2}>
+        <Margin bottom="2">
           <EmptyState />
         </Margin>
         <NoPackagesTitle>{children}</NoPackagesTitle>

@@ -166,7 +166,7 @@ const { default: Flex } = require('styled-flex-component');
           You haven’t commissioned any instances yet, but they’re really easy to
           set up. Click below to get going.
         </P>
-        <Margin top={2}>
+        <Margin top="2">
           <Button>Create Instance</Button>
         </Margin>
       </Flex>
@@ -207,7 +207,7 @@ const { Dot, Actions } = require('../icons');
   <Tbody>
     <Tr>
       <Td padding="0" paddingLeft="12" middle left>
-        <FormGroup paddingTop={4}>
+        <FormGroup>
           <Checkbox noMargin checked />
         </FormGroup>
       </Td>
@@ -228,7 +228,7 @@ const { Dot, Actions } = require('../icons');
     </Tr>
     <Tr>
       <Td padding="0" paddingLeft="12" middle left>
-        <FormGroup paddingTop={4}>
+        <FormGroup>
           <Checkbox noMargin />
         </FormGroup>
       </Td>
@@ -278,7 +278,7 @@ const { Dot } = require('../icons');
   <Tbody>
     <Tr>
       <Td padding="0" paddingLeft="12" middle left selected>
-        <FormGroup paddingTop={4}>
+        <FormGroup>
           <Radio noMargin checked />
         </FormGroup>
       </Td>
@@ -296,7 +296,7 @@ const { Dot } = require('../icons');
     </Tr>
     <Tr>
       <Td padding="0" paddingLeft="12" middle left>
-        <FormGroup paddingTop={4}>
+        <FormGroup>
           <Radio noMargin />
         </FormGroup>
       </Td>

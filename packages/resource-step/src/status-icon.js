@@ -60,7 +60,6 @@ export const Saved = ({ inverted, children }) => {
 export const Error = ({ inverted = false, noLabel = false, children }) => {
   const fill = inverted ? 'red' : 'white';
   const iconFill = inverted ? 'white' : 'redDark';
-  console.log(inverted, fill, iconFill);
 
   return (
     <StatusIcon

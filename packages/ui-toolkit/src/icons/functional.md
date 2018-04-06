@@ -118,7 +118,7 @@ const {
   </ListItem>
   <ListItem>
     <Icon>
-      <Dot color='primary' />
+      <Dot color="primary" />
     </Icon>
     <Label>Dot > Primary</Label>
   </ListItem>

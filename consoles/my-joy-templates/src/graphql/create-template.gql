@@ -1,0 +1,21 @@
+mutation createTemplate(
+  $name: String!
+  $package: String!
+  $image: ID!
+  $networks: [String]
+  $metadata: [KeyValueInput]
+  $tags: [KeyValueInput]
+  $firewall_enabled: Boolean
+) {
+  createTemplate(
+    name: $name
+    package: $package
+    image: $image
+    networks: $networks
+    metadata: $metadata
+    tags: $tags
+    enableFirewall: $firewall_enabled
+  ) {
+    id
+  }
+}

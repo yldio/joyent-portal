@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Margin, Padding } from 'styled-components-spacing';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 import Flex, { FlexItem } from 'styled-flex-component';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import titleCase from 'title-case';
@@ -76,7 +76,7 @@ export const Meta = ({ name, version, type, published_at, state, os }) => (
         <H2 bold>{name}</H2>
       </FlexItem>
     </Flex>
-    <Margin top={2} bottom={3}>
+    <Margin top="2" bottom="3">
       <Flex>
         <Label>{version}</Label>
         <VerticalDivider />
@@ -104,7 +104,7 @@ export const Meta = ({ name, version, type, published_at, state, os }) => (
   </Fragment>
 );
 
-export default withTheme(({ theme = {}, onRemove, removing, ...image }) => (
+export default ({ theme = {}, onRemove, removing, ...image }) => (
   <Row>
     <Col xs={12} sm={12} md={9}>
       <Card>
@@ -136,7 +136,7 @@ export default withTheme(({ theme = {}, onRemove, removing, ...image }) => (
               <Col xs={3}>
                 <SmallOnly>
                   <Button type="button" small icon error right>
-                    <DeleteIcon fill={theme.red} />
+                    <DeleteIcon fill="red" />
                   </Button>
                 </SmallOnly>
                 <Medium>
@@ -150,7 +150,7 @@ export default withTheme(({ theme = {}, onRemove, removing, ...image }) => (
                     right
                   >
                     <Margin right="1">
-                      <DeleteIcon fill={theme.red} />
+                      <DeleteIcon fill="red" />
                     </Margin>
                     <span>Delete</span>
                   </Button>
@@ -163,15 +163,15 @@ export default withTheme(({ theme = {}, onRemove, removing, ...image }) => (
             <Margin bottom="2">
               <P>{image.description}</P>
             </Margin>
-            <Margin bottom={3}>
+            <Margin bottom="3">
               <CopiableField text={(image.id || '').split('-')[0]} label="ID" />
             </Margin>
-            <Margin bottom={3}>
+            <Margin bottom="3">
               <CopiableField text={image.id} label="UUID" />
             </Margin>
             <Row>
               <Col xs={12} md={7}>
-                <Margin bottom={3}>
+                <Margin bottom="3">
                   <FormLabel>Operating system</FormLabel>
                   <Input
                     monospace
@@ -187,4 +187,4 @@ export default withTheme(({ theme = {}, onRemove, removing, ...image }) => (
       </Card>
     </Col>
   </Row>
-));
+);

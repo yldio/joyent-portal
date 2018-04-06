@@ -17,7 +17,7 @@ import Breadcrumb from '@containers/breadcrumb';
 export const Route = () => (
   <ViewContainer main>
     <Divider height={remcalc(30)} transparent />
-    <Margin bottom={5}>
+    <Margin bottom="5">
       <Message error>
         <MessageTitle>Ooops!</MessageTitle>
         <MessageDescription>

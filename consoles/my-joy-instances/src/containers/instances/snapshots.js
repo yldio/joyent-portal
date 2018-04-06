@@ -70,7 +70,7 @@ const Snapshots = ({
   const _error = error &&
     !_loading &&
     !_values.length && (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>
@@ -82,7 +82,7 @@ const Snapshots = ({
 
   const _createSnapshot =
     !loading && createSnapshotOpen ? (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <ReduxForm
           form={CREATE_FORM_NAME}
           shouldAsyncValidate={shouldAsyncValidate}
@@ -111,7 +111,7 @@ const Snapshots = ({
     ) : null;
 
   const _mutationError = mutationError ? (
-    <Margin bottom={5}>
+    <Margin bottom="5">
       <Message error>
         <MessageTitle>Ooops!</MessageTitle>
         <MessageDescription>{mutationError}</MessageDescription>
@@ -119,7 +119,7 @@ const Snapshots = ({
     </Margin>
   ) : null;
 
-  const _items = !_loading ? (
+  const _items = _loading ? null : (
     <ReduxForm form={TABLE_FORM_NAME}>
       {props => (
         <SnapshotsList
@@ -135,11 +135,11 @@ const Snapshots = ({
         />
       )}
     </ReduxForm>
-  ) : null;
+  );
 
   return (
     <ViewContainer main>
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <ReduxForm form={MENU_FORM_NAME}>
           {props => (
             <ToolbarForm
@@ -349,13 +349,13 @@ export default compose(
         handleAction: async ({ name, selected = [] }) => {
           // eslint-disable-next-line no-alert
           if (
-            !await Confirm(
+            !(await Confirm(
               `Do you want to ${name} ${
                 selected.length === 1
                   ? `"${selected[0].name}"`
                   : `${selected.length} snapshots`
               }`
-            )
+            ))
           ) {
             return;
           }

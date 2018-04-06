@@ -18,14 +18,14 @@ import GetMetadata from '@graphql/list-metadata.gql';
 
 export const UserScript = ({ metadata, loading = false, error = null }) => (
   <ViewContainer main>
-    <Margin bottom={3}>
+    <Margin bottom="3">
       <Description href="https://docs.joyent.com/private-cloud/instances/using-mdata#UsingtheMetadataAPI-ListofMetadataKeys">
         User script can be used to inject a custom boot script.
       </Description>
     </Margin>
     {loading ? <StatusLoader /> : null}
     {!loading && error ? (
-      <Margin bottom={5}>
+      <Margin bottom="5">
         <Message error>
           <MessageTitle>Ooops!</MessageTitle>
           <MessageDescription>

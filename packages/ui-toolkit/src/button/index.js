@@ -111,7 +111,7 @@ const Button = styled(BaseButton)`
 
   &:hover {
     background-color: ${props => props.theme.primaryHover};
-    border: solid ${remcalc(1)} ${props => props.theme.primaryActive};
+    border-color: ${props => props.theme.primaryActive};
   }
 
   &:active,

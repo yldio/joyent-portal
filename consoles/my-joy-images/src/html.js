@@ -20,7 +20,7 @@ module.exports = ({
     </head>
     <body {...bodyAttrs}>
       <div id="header" />
-      {!children ? <div id="root" /> : null}
+      {children ? null : <div id="root" />}
       {children}
       <script src="/navigation/static/main.js" />
     </body>

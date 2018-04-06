@@ -4,7 +4,16 @@ module.exports = {
     'scope-enum': [
       2,
       'always',
-      ['ui-toolkit', 'icons', 'instances', 'navigation', 'bundle', 'images']
+      [
+        'ui-toolkit',
+        'icons',
+        'instances',
+        'navigation',
+        'bundle',
+        'images',
+        'sg',
+        'templates'
+      ]
     ]
   }
 };

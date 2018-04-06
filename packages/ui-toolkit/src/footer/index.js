@@ -57,4 +57,4 @@ export default () => (
   </List>
 );
 
-export { default as StickyFooter } from './sticky-footer';
+export { default as Sticky } from './sticky';

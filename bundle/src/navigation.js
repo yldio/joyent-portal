@@ -1,5 +1,8 @@
+require('../.env.js');
+
 const Main = require('apr-main');
 const Nav = require('hapi-webconsole-nav');
+const Graphi = require('graphi');
 const Url = require('url');
 
 const Server = require('./server');
@@ -33,6 +36,17 @@ Main(async () => {
   });
 
   await server.register([
+    {
+      plugin: Graphi,
+      options: {
+        graphqlPath: '/graphql',
+        graphiqlPath: '/graphiql',
+        authStrategy: 'sso'
+      },
+      routes: {
+        prefix: `/${PREFIX}`
+      }
+    },
     {
       plugin: Nav,
       options: {

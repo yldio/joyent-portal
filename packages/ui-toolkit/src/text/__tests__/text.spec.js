@@ -92,7 +92,7 @@ describe('Button', () => {
     expect(tree).toHaveStyleRule('font-size', remcalc(15));
     expect(tree).toHaveStyleRule(
       'font-weight',
-      `${theme.font.weight.semibold}`
+      `${theme.font.weight.normal}`
     );
   });
 

@@ -15,7 +15,6 @@ import {
   TableTbody,
   TableTd,
   Checkbox,
-  KeyValue,
   Popover,
   PopoverContainer,
   PopoverTarget,
@@ -24,7 +23,7 @@ import {
   DotIcon
 } from 'joyent-ui-toolkit';
 
-import { Empty } from 'joyent-ui-resource-widgets';
+import { Empty, KeyValue } from 'joyent-ui-resource-widgets';
 
 const stateColor = {
   QUEUED: 'primary',
@@ -38,7 +37,11 @@ const loadingState = {
 
 export const Item = ({ name, state, created, onStart, onRemove, mutating }) => (
   <TableTr>
-    {!mutating ? (
+    {mutating ? (
+      <TableTd colSpan="5">
+        <StatusLoader msg={loadingState[mutating]} />
+      </TableTd>
+    ) : (
       <Fragment>
         <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
           <FormGroup paddingTop={remcalc(4)} name={name} field={Field}>
@@ -61,20 +64,16 @@ export const Item = ({ name, state, created, onStart, onRemove, mutating }) => (
               <ActionsIcon />
             </PopoverTarget>
             <Popover placement="top">
-              <Margin vertical={2} horizontal={3}>
+              <Margin vertical="2" horizontal="3">
                 <PopoverItem onClick={onStart}>Start</PopoverItem>
               </Margin>
-              <Margin vertical={2} horizontal={3}>
+              <Margin vertical="2" horizontal="3">
                 <PopoverItem onClick={onRemove}>Remove</PopoverItem>
               </Margin>
             </Popover>
           </TableTd>
         </PopoverContainer>
       </Fragment>
-    ) : (
-      <TableTd colSpan="5">
-        <StatusLoader msg={loadingState[mutating]} />
-      </TableTd>
     )}
   </TableTr>
 );
@@ -171,6 +170,6 @@ export default ({
           : null}
       </TableTbody>
     </Table>
-    {!snapshots.length ? <Empty borderTop>You have no Snapshots</Empty> : null}
+    {snapshots.length ? null : <Empty borderTop>You have no Snapshots</Empty>}
   </Fragment>
 );

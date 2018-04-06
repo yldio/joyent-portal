@@ -9,11 +9,14 @@ When defining the space necessary between and within components, alway use one o
 ```jsx noeditor
 const spacing = require('./spacing.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={spacing} />
+  }}
+  src={spacing}
+/>;
 ```
 
 ### Stack - Vertical spacing
@@ -23,11 +26,14 @@ Stack, or the vertical spacing between elements, uses all of the values provided
 ```jsx noeditor
 const stack = require('./stack.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={stack} />
+  }}
+  src={stack}
+/>;
 ```
 
 <h4>Stack example</h4>
@@ -35,11 +41,14 @@ const stack = require('./stack.svg');
 ```jsx noeditor
 const stackExample = require('./stack-example.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={stackExample} />
+  }}
+  src={stackExample}
+/>;
 ```
 
 ### Inline - Horizontal spacing
@@ -49,11 +58,14 @@ Inline, or the horizontal spacing between elements, is used to provide additiona
 ```jsx noeditor
 const inline = require('./inline.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={inline} />
+  }}
+  src={inline}
+/>;
 ```
 
 <h4>Inline example</h4>
@@ -61,11 +73,14 @@ const inline = require('./inline.svg');
 ```jsx noeditor
 const inlineExample = require('./inline-example.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={inlineExample} />
+  }}
+  src={inlineExample}
+/>;
 ```
 
 ### Uniform Inset — Interior padding
@@ -75,11 +90,14 @@ Uniform Inset, or the equal padding on the interior of a component, takes the pl
 ```jsx noeditor
 const inset = require('./inset.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={inset} />
+  }}
+  src={inset}
+/>;
 ```
 
 <h4>Uniform Inset example</h4>
@@ -87,11 +105,14 @@ const inset = require('./inset.svg');
 ```jsx noeditor
 const insetExample = require('./inset-example.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={insetExample} />
+  }}
+  src={insetExample}
+/>;
 ```
 
 ### Squish Inset — Irregular interior padding
@@ -101,11 +122,14 @@ Squish inset, or irregular interior padding, adopts similar patterns of use to t
 ```jsx noeditor
 const squishInset = require('./squish-inset.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={squishInset} />
+  }}
+  src={squishInset}
+/>;
 ```
 
 <h4>Squish Inset example</h4>
@@ -113,9 +137,12 @@ const squishInset = require('./squish-inset.svg');
 ```jsx noeditor
 const squishInsetExample = require('./squish-inset-example.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={squishInsetExample} />
+  }}
+  src={squishInsetExample}
+/>;
 ```

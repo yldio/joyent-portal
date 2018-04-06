@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { KeyValue } from 'joyent-ui-toolkit';
+import { KeyValue } from 'joyent-ui-resource-widgets';
 import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
 export const AddForm = props => (

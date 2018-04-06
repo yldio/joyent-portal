@@ -38,11 +38,19 @@ class ManifestEditorBundle extends Component {
   }
 }
 
-export default ({ input = {}, value = '', mode, defaultValue, readOnly }) => (
+export default ({
+  input = {},
+  value = '',
+  mode,
+  defaultValue,
+  readOnly,
+  ...props
+}) => (
   <ManifestEditorBundle
     mode={mode}
     {...input}
     value={input.value || value || defaultValue}
     readOnly={readOnly}
+    {...props}
   />
 );

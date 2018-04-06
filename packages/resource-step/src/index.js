@@ -1,4 +1,5 @@
 import React, { Fragment, PureComponent } from 'react';
+import { withRouter } from 'react-router';
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
 import { Link as BaseLink } from 'react-router-dom';
 import Flex, { FlexItem } from 'styled-flex-component';
@@ -6,6 +7,7 @@ import { Margin, Padding } from 'styled-components-spacing';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import styled from 'styled-components';
 import is from 'styled-is';
+import isFunction from 'lodash.isfunction';
 import remcalc from 'remcalc';
 
 import {
@@ -17,7 +19,7 @@ import {
   ArrowIcon
 } from 'joyent-ui-toolkit';
 
-import { Saved as SavedIcon, Error as ErrorIcon } from './status-icon';
+import { Error as ErrorIcon } from './status-icon';
 
 import { QueryBreakpoints } from 'joyent-ui-toolkit';
 
@@ -29,7 +31,7 @@ const Card = styled(BaseCard)`
   `};
 
   ${is('expanded')`
-    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 ${remcalc(2)} ${remcalc(12)} rgba(0, 0, 0, 0.1);
   `};
 }`;
 
@@ -41,11 +43,11 @@ const Link = styled(BaseLink)`
   }
 `;
 
-export const Header = ({ icon = null, children }) => (
+export const Header = withRouter(({ icon = null, location, children }) => (
   <Subscriber channel="create-resource-group">
     {({ namespace }) => (
       <Subscriber channel="create-resource-step">
-        {({ expanded, optional, saved, name, isValid }) => (
+        {({ expanded, optional, saved, name, isValid, readOnly }) => (
           <Fragment>
             <Flex justifyBetween>
               <FlexItem>
@@ -60,7 +62,7 @@ export const Header = ({ icon = null, children }) => (
                   </FlexItem>
                   {/* improve this */}
                   <Medium>
-                    {optional ? (
+                    {readOnly && optional ? (
                       <Fragment>
                         <FlexItem>
                           <Margin horizontal="1">
@@ -75,21 +77,25 @@ export const Header = ({ icon = null, children }) => (
                   </Medium>
                 </Flex>
               </FlexItem>
-              <FlexItem alignCenter>
-                <Link to={expanded ? `/${namespace}` : `/${namespace}/${name}`}>
-                  <Flex alignCenter>
-                    {expanded ? 'Save and Collapse' : 'Edit'}
-                    <Margin left="1">
-                      <Flex>
-                        <ArrowIcon
-                          fill="primary"
-                          direction={expanded ? 'up' : 'down'}
-                        />
-                      </Flex>
-                    </Margin>
-                  </Flex>
-                </Link>
-              </FlexItem>
+              {readOnly ? null : (
+                <FlexItem alignCenter>
+                  <Link
+                    to={expanded ? `/${namespace}` : `/${namespace}/${name}`}
+                  >
+                    <Flex alignCenter>
+                      {expanded ? 'Save and Collapse' : 'Edit'}
+                      <Margin left="1">
+                        <Flex>
+                          <ArrowIcon
+                            fill="primary"
+                            direction={expanded ? 'up' : 'down'}
+                          />
+                        </Flex>
+                      </Margin>
+                    </Flex>
+                  </Link>
+                </FlexItem>
+              )}
               {!expanded && !isValid ? (
                 <FlexItem>
                   <ErrorIcon />
@@ -106,7 +112,7 @@ export const Header = ({ icon = null, children }) => (
       </Subscriber>
     )}
   </Subscriber>
-);
+));
 
 export const Description = ({ href = '', children }) => (
   <Subscriber channel="create-resource-step">
@@ -126,8 +132,8 @@ export const Description = ({ href = '', children }) => (
 
 export const Preview = ({ children }) => (
   <Subscriber channel="create-resource-step">
-    {({ expanded, saved }) =>
-      !expanded && saved ? <Fragment>{children}</Fragment> : null
+    {({ expanded, saved, readOnly }) =>
+      !expanded && (saved || readOnly) ? <Fragment>{children}</Fragment> : null
     }
   </Subscriber>
 );
@@ -136,8 +142,10 @@ export const Outlet = ({ children }) => (
   <Subscriber channel="create-resource-group">
     {({ namespace }) => (
       <Subscriber channel="create-resource-step">
-        {({ expanded, next }) =>
-          expanded ? children({ next: `/${namespace}/${next}` }) : null
+        {({ expanded, next, readOnly }) =>
+          expanded && isFunction(children) && !readOnly
+            ? children({ next: `/${namespace}/${next}` })
+            : null
         }
       </Subscriber>
     )}
@@ -166,13 +174,14 @@ export default class Step extends PureComponent {
       next = '',
       name = '',
       isValid = true,
+      readOnly = false,
       children
     } = this.props;
 
     return (
       <Broadcast
         channel="create-resource-step"
-        value={{ expanded, optional, saved, next, name, isValid }}
+        value={{ expanded, optional, saved, next, name, isValid, readOnly }}
       >
         <Card expanded={expanded} error={!expanded && !isValid}>
           <CardOutlet>

@@ -24,7 +24,7 @@ const GetAccountServices = gql`
 `;
 
 const Account = ({ expanded, services = [] }) => {
-  return !expanded ? null : (
+  return expanded ? (
     <Popover>
       <Ul>
         {services.map(({ name, url }) => (
@@ -34,7 +34,7 @@ const Account = ({ expanded, services = [] }) => {
         ))}
       </Ul>
     </Popover>
-  );
+  ) : null;
 };
 
 export default compose(

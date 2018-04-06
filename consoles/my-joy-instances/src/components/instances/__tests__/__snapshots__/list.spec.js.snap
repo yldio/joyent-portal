@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <InstanceList /> without throwing 1`] = `
-.c24 {
+.c26 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
@@ -47,18 +47,29 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   font: inherit;
 }
 
-.c23 {
+.c25 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c19 {
+.c21 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c19:hover {
+.c21:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c11 {
+  display: inline-block;
+  margin-left: 0.375rem;
+}
+
+.c19 {
+  display: inline-block;
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
 }
 
 .c7 {
@@ -193,20 +204,20 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c16 {
+.c17 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c16 th:first-child {
+.c17 th:first-child {
   border-bottom-left-radius: 0.25rem;
 }
 
-.c16 th:last-child {
+.c17 th:last-child {
   border-bottom-right-radius: 0.25rem;
 }
 
-.c16 th {
+.c17 th {
   border-top-width: 0;
 }
 
@@ -223,7 +234,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c15 {
+.c16 {
   width: 100%;
 }
 
@@ -234,7 +245,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 1.5rem;
+  padding: 0 0rem;
   height: 3.75rem;
   width: 2rem;
   display: table-cell;
@@ -286,7 +297,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c11 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -297,38 +308,6 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   height: 3.75rem;
   width: 9.375rem;
   display: table-cell;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c11:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c11:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c12 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -391,8 +370,15 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 3.75rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -407,7 +393,32 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
+.c15 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 0rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c15:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c15:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -425,11 +436,11 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-bottom-width: 0.0625rem !important;
 }
 
-.c17:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -453,12 +464,12 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c18 {
+.c20 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c22 {
+.c24 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration: none;
@@ -470,27 +481,27 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   color: rgb(255,255,255);
 }
 
-.c20 {
+.c22 {
   margin-right: 0.1875rem;
 }
 
-.c25 {
+.c27 {
   margin-left: 0.1875rem;
 }
 
-.c21 {
+.c23 {
   margin: 0 0.1875rem;
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c12 {
+  .c13 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c13 {
+  .c14 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -562,25 +573,29 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           <span>
             Name 
           </span>
-          <svg
-            height="6"
-            style={
-              Object {
-                "transform": "rotate(180deg)",
-              }
-            }
-            viewBox="0 0 9.6 6"
-            width="9.6"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="c11"
           >
-            <path
-              d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-              fill="rgb(73, 73, 73)"
-            />
-          </svg>
+            <svg
+              height="6"
+              style={
+                Object {
+                  "transform": "rotate(180deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(73, 73, 73)"
+              />
+            </svg>
+          </div>
         </th>
         <th
-          className="c11"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -591,7 +606,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c12"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -602,7 +617,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c13"
+          className="c14"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -613,7 +628,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c14"
+          className="c15"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -621,13 +636,13 @@ exports[`renders <InstanceList /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c15"
+      className="c16"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
     <tfoot
-      className="c16"
+      className="c17"
       disabled={undefined}
       name="tfoot"
       selected={undefined}
@@ -639,77 +654,89 @@ exports[`renders <InstanceList /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c17"
+          className="c18"
           colSpan="6"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
-          <a
-            active={undefined}
-            activeClassName="active"
-            className="c18 c19"
-            disabled={false}
-            secondary={false}
-            to="/?limit=0&offset=0"
+          <div
+            className="c19"
           >
-            <svg
-              className="c20"
-              height="6"
-              innerRef={undefined}
-              left={true}
-              style={
-                Object {
-                  "transform": "rotate(90deg)",
-                }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              active={undefined}
+              activeClassName="active"
+              className="c20 c21"
+              disabled={false}
+              secondary={false}
+              to="/?limit=0&offset=0"
             >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(59, 70, 204)"
-              />
-            </svg>
-            Prev
-          </a>
-          <a
-            className="c21 c22 c19 c23 c24"
-            disabled={undefined}
-            to={null}
-          >
-            NaN
-          </a>
-          <a
-            active={undefined}
-            activeClassName="active"
-            className="c18 c19"
-            disabled={false}
-            secondary={false}
-            to="/?limit=0&offset=0"
-          >
-            Next
-            <svg
-              className="c25"
-              height="6"
-              innerRef={undefined}
-              right={true}
-              style={
-                Object {
-                  "transform": "rotate(-90deg)",
+              <svg
+                className="c22"
+                height="6"
+                innerRef={undefined}
+                left={true}
+                style={
+                  Object {
+                    "transform": "rotate(90deg)",
+                  }
                 }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 9.6 6"
+                width="9.6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                  fill="rgb(59, 70, 204)"
+                />
+              </svg>
+              Prev
+            </a>
+          </div>
+          <div
+            className="c19"
+          >
+            <a
+              className="c23 c24 c21 c25 c26"
+              disabled={undefined}
+              to={null}
             >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(59, 70, 204)"
-              />
-            </svg>
-          </a>
+              NaN
+            </a>
+          </div>
+          <div
+            className="c19"
+          >
+            <a
+              active={undefined}
+              activeClassName="active"
+              className="c20 c21"
+              disabled={false}
+              secondary={false}
+              to="/?limit=0&offset=0"
+            >
+              Next
+              <svg
+                className="c27"
+                height="6"
+                innerRef={undefined}
+                right={true}
+                style={
+                  Object {
+                    "transform": "rotate(-90deg)",
+                  }
+                }
+                viewBox="0 0 9.6 6"
+                width="9.6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                  fill="rgb(59, 70, 204)"
+                />
+              </svg>
+            </a>
+          </div>
         </th>
       </tr>
     </tfoot>
@@ -718,7 +745,7 @@ exports[`renders <InstanceList /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList allSelected /> without throwing 1`] = `
-.c24 {
+.c26 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
@@ -764,18 +791,29 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   font: inherit;
 }
 
-.c23 {
+.c25 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c19 {
+.c21 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c19:hover {
+.c21:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c11 {
+  display: inline-block;
+  margin-left: 0.375rem;
+}
+
+.c19 {
+  display: inline-block;
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
 }
 
 .c7 {
@@ -910,20 +948,20 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c16 {
+.c17 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c16 th:first-child {
+.c17 th:first-child {
   border-bottom-left-radius: 0.25rem;
 }
 
-.c16 th:last-child {
+.c17 th:last-child {
   border-bottom-right-radius: 0.25rem;
 }
 
-.c16 th {
+.c17 th {
   border-top-width: 0;
 }
 
@@ -940,7 +978,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c15 {
+.c16 {
   width: 100%;
 }
 
@@ -951,7 +989,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 1.5rem;
+  padding: 0 0rem;
   height: 3.75rem;
   width: 2rem;
   display: table-cell;
@@ -1003,7 +1041,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c11 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1014,38 +1052,6 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   height: 3.75rem;
   width: 9.375rem;
   display: table-cell;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c11:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c11:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c12 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1108,8 +1114,15 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 3.75rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -1124,7 +1137,32 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
+.c15 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 0rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c15:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c15:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1142,11 +1180,11 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-bottom-width: 0.0625rem !important;
 }
 
-.c17:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1170,12 +1208,12 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c18 {
+.c20 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c22 {
+.c24 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration: none;
@@ -1187,27 +1225,27 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   color: rgb(255,255,255);
 }
 
-.c20 {
+.c22 {
   margin-right: 0.1875rem;
 }
 
-.c25 {
+.c27 {
   margin-left: 0.1875rem;
 }
 
-.c21 {
+.c23 {
   margin: 0 0.1875rem;
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c12 {
+  .c13 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c13 {
+  .c14 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -1279,25 +1317,29 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           <span>
             Name 
           </span>
-          <svg
-            height="6"
-            style={
-              Object {
-                "transform": "rotate(180deg)",
-              }
-            }
-            viewBox="0 0 9.6 6"
-            width="9.6"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="c11"
           >
-            <path
-              d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-              fill="rgb(73, 73, 73)"
-            />
-          </svg>
+            <svg
+              height="6"
+              style={
+                Object {
+                  "transform": "rotate(180deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(73, 73, 73)"
+              />
+            </svg>
+          </div>
         </th>
         <th
-          className="c11"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1308,7 +1350,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c12"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1319,7 +1361,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c13"
+          className="c14"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -1330,7 +1372,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c14"
+          className="c15"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -1338,13 +1380,13 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c15"
+      className="c16"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
     <tfoot
-      className="c16"
+      className="c17"
       disabled={undefined}
       name="tfoot"
       selected={undefined}
@@ -1356,77 +1398,89 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c17"
+          className="c18"
           colSpan="6"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
-          <a
-            active={undefined}
-            activeClassName="active"
-            className="c18 c19"
-            disabled={false}
-            secondary={false}
-            to="/?limit=0&offset=0"
+          <div
+            className="c19"
           >
-            <svg
-              className="c20"
-              height="6"
-              innerRef={undefined}
-              left={true}
-              style={
-                Object {
-                  "transform": "rotate(90deg)",
-                }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              active={undefined}
+              activeClassName="active"
+              className="c20 c21"
+              disabled={false}
+              secondary={false}
+              to="/?limit=0&offset=0"
             >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(59, 70, 204)"
-              />
-            </svg>
-            Prev
-          </a>
-          <a
-            className="c21 c22 c19 c23 c24"
-            disabled={undefined}
-            to={null}
-          >
-            NaN
-          </a>
-          <a
-            active={undefined}
-            activeClassName="active"
-            className="c18 c19"
-            disabled={false}
-            secondary={false}
-            to="/?limit=0&offset=0"
-          >
-            Next
-            <svg
-              className="c25"
-              height="6"
-              innerRef={undefined}
-              right={true}
-              style={
-                Object {
-                  "transform": "rotate(-90deg)",
+              <svg
+                className="c22"
+                height="6"
+                innerRef={undefined}
+                left={true}
+                style={
+                  Object {
+                    "transform": "rotate(90deg)",
+                  }
                 }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 9.6 6"
+                width="9.6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                  fill="rgb(59, 70, 204)"
+                />
+              </svg>
+              Prev
+            </a>
+          </div>
+          <div
+            className="c19"
+          >
+            <a
+              className="c23 c24 c21 c25 c26"
+              disabled={undefined}
+              to={null}
             >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(59, 70, 204)"
-              />
-            </svg>
-          </a>
+              NaN
+            </a>
+          </div>
+          <div
+            className="c19"
+          >
+            <a
+              active={undefined}
+              activeClassName="active"
+              className="c20 c21"
+              disabled={false}
+              secondary={false}
+              to="/?limit=0&offset=0"
+            >
+              Next
+              <svg
+                className="c27"
+                height="6"
+                innerRef={undefined}
+                right={true}
+                style={
+                  Object {
+                    "transform": "rotate(-90deg)",
+                  }
+                }
+                viewBox="0 0 9.6 6"
+                width="9.6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                  fill="rgb(59, 70, 204)"
+                />
+              </svg>
+            </a>
+          </div>
         </th>
       </tr>
     </tfoot>
@@ -1435,7 +1489,7 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList sortBy /> without throwing 1`] = `
-.c24 {
+.c26 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
@@ -1481,18 +1535,29 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   font: inherit;
 }
 
-.c23 {
+.c25 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c19 {
+.c21 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c19:hover {
+.c21:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c12 {
+  display: inline-block;
+  margin-left: 0.375rem;
+}
+
+.c19 {
+  display: inline-block;
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
 }
 
 .c7 {
@@ -1627,20 +1692,20 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c16 {
+.c17 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c16 th:first-child {
+.c17 th:first-child {
   border-bottom-left-radius: 0.25rem;
 }
 
-.c16 th:last-child {
+.c17 th:last-child {
   border-bottom-right-radius: 0.25rem;
 }
 
-.c16 th {
+.c17 th {
   border-top-width: 0;
 }
 
@@ -1657,7 +1722,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c15 {
+.c16 {
   width: 100%;
 }
 
@@ -1668,7 +1733,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 1.5rem;
+  padding: 0 0rem;
   height: 3.75rem;
   width: 2rem;
   display: table-cell;
@@ -1685,38 +1750,6 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
 }
 
 .c3:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c12 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c12:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c12:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1761,8 +1794,15 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 3.75rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -1777,7 +1817,32 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
+.c15 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 0rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c15:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c15:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1795,11 +1860,11 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-bottom-width: 0.0625rem !important;
 }
 
-.c17:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1887,12 +1952,12 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c18 {
+.c20 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c22 {
+.c24 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration: none;
@@ -1904,27 +1969,27 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   color: rgb(255,255,255);
 }
 
-.c20 {
+.c22 {
   margin-right: 0.1875rem;
 }
 
-.c25 {
+.c27 {
   margin-left: 0.1875rem;
 }
 
-.c21 {
+.c23 {
   margin: 0 0.1875rem;
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c12 {
+  .c13 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c13 {
+  .c14 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -2007,25 +2072,29 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           <span>
             Status 
           </span>
-          <svg
-            height="6"
-            style={
-              Object {
-                "transform": "rotate(180deg)",
-              }
-            }
-            viewBox="0 0 9.6 6"
-            width="9.6"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="c12"
           >
-            <path
-              d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-              fill="rgb(73, 73, 73)"
-            />
-          </svg>
+            <svg
+              height="6"
+              style={
+                Object {
+                  "transform": "rotate(180deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(73, 73, 73)"
+              />
+            </svg>
+          </div>
         </th>
         <th
-          className="c12"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2036,7 +2105,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c13"
+          className="c14"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2047,7 +2116,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c14"
+          className="c15"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -2055,13 +2124,13 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c15"
+      className="c16"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
     <tfoot
-      className="c16"
+      className="c17"
       disabled={undefined}
       name="tfoot"
       selected={undefined}
@@ -2073,77 +2142,89 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c17"
+          className="c18"
           colSpan="6"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
-          <a
-            active={undefined}
-            activeClassName="active"
-            className="c18 c19"
-            disabled={false}
-            secondary={false}
-            to="/?limit=0&offset=0"
+          <div
+            className="c19"
           >
-            <svg
-              className="c20"
-              height="6"
-              innerRef={undefined}
-              left={true}
-              style={
-                Object {
-                  "transform": "rotate(90deg)",
-                }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              active={undefined}
+              activeClassName="active"
+              className="c20 c21"
+              disabled={false}
+              secondary={false}
+              to="/?limit=0&offset=0"
             >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(59, 70, 204)"
-              />
-            </svg>
-            Prev
-          </a>
-          <a
-            className="c21 c22 c19 c23 c24"
-            disabled={undefined}
-            to={null}
-          >
-            NaN
-          </a>
-          <a
-            active={undefined}
-            activeClassName="active"
-            className="c18 c19"
-            disabled={false}
-            secondary={false}
-            to="/?limit=0&offset=0"
-          >
-            Next
-            <svg
-              className="c25"
-              height="6"
-              innerRef={undefined}
-              right={true}
-              style={
-                Object {
-                  "transform": "rotate(-90deg)",
+              <svg
+                className="c22"
+                height="6"
+                innerRef={undefined}
+                left={true}
+                style={
+                  Object {
+                    "transform": "rotate(90deg)",
+                  }
                 }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 9.6 6"
+                width="9.6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                  fill="rgb(59, 70, 204)"
+                />
+              </svg>
+              Prev
+            </a>
+          </div>
+          <div
+            className="c19"
+          >
+            <a
+              className="c23 c24 c21 c25 c26"
+              disabled={undefined}
+              to={null}
             >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(59, 70, 204)"
-              />
-            </svg>
-          </a>
+              NaN
+            </a>
+          </div>
+          <div
+            className="c19"
+          >
+            <a
+              active={undefined}
+              activeClassName="active"
+              className="c20 c21"
+              disabled={false}
+              secondary={false}
+              to="/?limit=0&offset=0"
+            >
+              Next
+              <svg
+                className="c27"
+                height="6"
+                innerRef={undefined}
+                right={true}
+                style={
+                  Object {
+                    "transform": "rotate(-90deg)",
+                  }
+                }
+                viewBox="0 0 9.6 6"
+                width="9.6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                  fill="rgb(59, 70, 204)"
+                />
+              </svg>
+            </a>
+          </div>
         </th>
       </tr>
     </tfoot>
@@ -2152,7 +2233,7 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
-.c24 {
+.c26 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
@@ -2198,18 +2279,29 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   font: inherit;
 }
 
-.c23 {
+.c25 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c19 {
+.c21 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c19:hover {
+.c21:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c12 {
+  display: inline-block;
+  margin-left: 0.375rem;
+}
+
+.c19 {
+  display: inline-block;
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
 }
 
 .c7 {
@@ -2344,20 +2436,20 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c16 {
+.c17 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c16 th:first-child {
+.c17 th:first-child {
   border-bottom-left-radius: 0.25rem;
 }
 
-.c16 th:last-child {
+.c17 th:last-child {
   border-bottom-right-radius: 0.25rem;
 }
 
-.c16 th {
+.c17 th {
   border-top-width: 0;
 }
 
@@ -2374,7 +2466,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c15 {
+.c16 {
   width: 100%;
 }
 
@@ -2385,7 +2477,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 1.5rem;
+  padding: 0 0rem;
   height: 3.75rem;
   width: 2rem;
   display: table-cell;
@@ -2402,38 +2494,6 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
 }
 
 .c3:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c12 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c12:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c12:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2478,8 +2538,15 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 3.75rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -2494,7 +2561,32 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
+.c15 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 0rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c15:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c15:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -2512,11 +2604,11 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-bottom-width: 0.0625rem !important;
 }
 
-.c17:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -2604,12 +2696,12 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c18 {
+.c20 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c22 {
+.c24 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration: none;
@@ -2621,27 +2713,27 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   color: rgb(255,255,255);
 }
 
-.c20 {
+.c22 {
   margin-right: 0.1875rem;
 }
 
-.c25 {
+.c27 {
   margin-left: 0.1875rem;
 }
 
-.c21 {
+.c23 {
   margin: 0 0.1875rem;
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c12 {
+  .c13 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c13 {
+  .c14 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -2724,25 +2816,29 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           <span>
             Status 
           </span>
-          <svg
-            height="6"
-            style={
-              Object {
-                "transform": "rotate(0deg)",
-              }
-            }
-            viewBox="0 0 9.6 6"
-            width="9.6"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="c12"
           >
-            <path
-              d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-              fill="rgb(73, 73, 73)"
-            />
-          </svg>
+            <svg
+              height="6"
+              style={
+                Object {
+                  "transform": "rotate(0deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(73, 73, 73)"
+              />
+            </svg>
+          </div>
         </th>
         <th
-          className="c12"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2753,7 +2849,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c13"
+          className="c14"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -2764,7 +2860,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c14"
+          className="c15"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -2772,13 +2868,13 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c15"
+      className="c16"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
     <tfoot
-      className="c16"
+      className="c17"
       disabled={undefined}
       name="tfoot"
       selected={undefined}
@@ -2790,77 +2886,89 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c17"
+          className="c18"
           colSpan="6"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
-          <a
-            active={undefined}
-            activeClassName="active"
-            className="c18 c19"
-            disabled={false}
-            secondary={false}
-            to="/?limit=0&offset=0"
+          <div
+            className="c19"
           >
-            <svg
-              className="c20"
-              height="6"
-              innerRef={undefined}
-              left={true}
-              style={
-                Object {
-                  "transform": "rotate(90deg)",
-                }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              active={undefined}
+              activeClassName="active"
+              className="c20 c21"
+              disabled={false}
+              secondary={false}
+              to="/?limit=0&offset=0"
             >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(59, 70, 204)"
-              />
-            </svg>
-            Prev
-          </a>
-          <a
-            className="c21 c22 c19 c23 c24"
-            disabled={undefined}
-            to={null}
-          >
-            NaN
-          </a>
-          <a
-            active={undefined}
-            activeClassName="active"
-            className="c18 c19"
-            disabled={false}
-            secondary={false}
-            to="/?limit=0&offset=0"
-          >
-            Next
-            <svg
-              className="c25"
-              height="6"
-              innerRef={undefined}
-              right={true}
-              style={
-                Object {
-                  "transform": "rotate(-90deg)",
+              <svg
+                className="c22"
+                height="6"
+                innerRef={undefined}
+                left={true}
+                style={
+                  Object {
+                    "transform": "rotate(90deg)",
+                  }
                 }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 9.6 6"
+                width="9.6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                  fill="rgb(59, 70, 204)"
+                />
+              </svg>
+              Prev
+            </a>
+          </div>
+          <div
+            className="c19"
+          >
+            <a
+              className="c23 c24 c21 c25 c26"
+              disabled={undefined}
+              to={null}
             >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(59, 70, 204)"
-              />
-            </svg>
-          </a>
+              NaN
+            </a>
+          </div>
+          <div
+            className="c19"
+          >
+            <a
+              active={undefined}
+              activeClassName="active"
+              className="c20 c21"
+              disabled={false}
+              secondary={false}
+              to="/?limit=0&offset=0"
+            >
+              Next
+              <svg
+                className="c27"
+                height="6"
+                innerRef={undefined}
+                right={true}
+                style={
+                  Object {
+                    "transform": "rotate(-90deg)",
+                  }
+                }
+                viewBox="0 0 9.6 6"
+                width="9.6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                  fill="rgb(59, 70, 204)"
+                />
+              </svg>
+            </a>
+          </div>
         </th>
       </tr>
     </tfoot>
@@ -2869,7 +2977,7 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList submitting /> without throwing 1`] = `
-.c24 {
+.c26 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
@@ -2915,18 +3023,29 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   font: inherit;
 }
 
-.c23 {
+.c25 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c19 {
+.c21 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c19:hover {
+.c21:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c11 {
+  display: inline-block;
+  margin-left: 0.375rem;
+}
+
+.c19 {
+  display: inline-block;
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
 }
 
 .c7 {
@@ -3061,20 +3180,20 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c16 {
+.c17 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c16 th:first-child {
+.c17 th:first-child {
   border-bottom-left-radius: 0.25rem;
 }
 
-.c16 th:last-child {
+.c17 th:last-child {
   border-bottom-right-radius: 0.25rem;
 }
 
-.c16 th {
+.c17 th {
   border-top-width: 0;
 }
 
@@ -3091,7 +3210,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-top-right-radius: 0.25rem;
 }
 
-.c15 {
+.c16 {
   width: 100%;
 }
 
@@ -3102,7 +3221,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 1.5rem;
+  padding: 0 0rem;
   height: 3.75rem;
   width: 2rem;
   display: table-cell;
@@ -3154,7 +3273,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c11 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3165,38 +3284,6 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   height: 3.75rem;
   width: 9.375rem;
   display: table-cell;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c11:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c11:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c12 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3259,8 +3346,15 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 3.75rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -3275,7 +3369,32 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c17 {
+.c15 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 0rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c15:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c15:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3293,11 +3412,11 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-bottom-width: 0.0625rem !important;
 }
 
-.c17:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -3321,12 +3440,12 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c18 {
+.c20 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c22 {
+.c24 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration: none;
@@ -3338,27 +3457,27 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   color: rgb(255,255,255);
 }
 
-.c20 {
+.c22 {
   margin-right: 0.1875rem;
 }
 
-.c25 {
+.c27 {
   margin-left: 0.1875rem;
 }
 
-.c21 {
+.c23 {
   margin: 0 0.1875rem;
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c12 {
+  .c13 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c13 {
+  .c14 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -3430,25 +3549,29 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           <span>
             Name 
           </span>
-          <svg
-            height="6"
-            style={
-              Object {
-                "transform": "rotate(180deg)",
-              }
-            }
-            viewBox="0 0 9.6 6"
-            width="9.6"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="c11"
           >
-            <path
-              d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-              fill="rgb(73, 73, 73)"
-            />
-          </svg>
+            <svg
+              height="6"
+              style={
+                Object {
+                  "transform": "rotate(180deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(73, 73, 73)"
+              />
+            </svg>
+          </div>
         </th>
         <th
-          className="c11"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3459,7 +3582,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c12"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3470,7 +3593,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c13"
+          className="c14"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -3481,7 +3604,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </span>
         </th>
         <th
-          className="c14"
+          className="c15"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -3489,13 +3612,13 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
       </tr>
     </thead>
     <tbody
-      className="c15"
+      className="c16"
       disabled={undefined}
       name="tbody"
       selected={undefined}
     />
     <tfoot
-      className="c16"
+      className="c17"
       disabled={undefined}
       name="tfoot"
       selected={undefined}
@@ -3507,77 +3630,89 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
         selected={undefined}
       >
         <th
-          className="c17"
+          className="c18"
           colSpan="6"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
-          <a
-            active={undefined}
-            activeClassName="active"
-            className="c18 c19"
-            disabled={false}
-            secondary={false}
-            to="/?limit=0&offset=0"
+          <div
+            className="c19"
           >
-            <svg
-              className="c20"
-              height="6"
-              innerRef={undefined}
-              left={true}
-              style={
-                Object {
-                  "transform": "rotate(90deg)",
-                }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              active={undefined}
+              activeClassName="active"
+              className="c20 c21"
+              disabled={false}
+              secondary={false}
+              to="/?limit=0&offset=0"
             >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(59, 70, 204)"
-              />
-            </svg>
-            Prev
-          </a>
-          <a
-            className="c21 c22 c19 c23 c24"
-            disabled={undefined}
-            to={null}
-          >
-            NaN
-          </a>
-          <a
-            active={undefined}
-            activeClassName="active"
-            className="c18 c19"
-            disabled={false}
-            secondary={false}
-            to="/?limit=0&offset=0"
-          >
-            Next
-            <svg
-              className="c25"
-              height="6"
-              innerRef={undefined}
-              right={true}
-              style={
-                Object {
-                  "transform": "rotate(-90deg)",
+              <svg
+                className="c22"
+                height="6"
+                innerRef={undefined}
+                left={true}
+                style={
+                  Object {
+                    "transform": "rotate(90deg)",
+                  }
                 }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 9.6 6"
+                width="9.6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                  fill="rgb(59, 70, 204)"
+                />
+              </svg>
+              Prev
+            </a>
+          </div>
+          <div
+            className="c19"
+          >
+            <a
+              className="c23 c24 c21 c25 c26"
+              disabled={undefined}
+              to={null}
             >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(59, 70, 204)"
-              />
-            </svg>
-          </a>
+              NaN
+            </a>
+          </div>
+          <div
+            className="c19"
+          >
+            <a
+              active={undefined}
+              activeClassName="active"
+              className="c20 c21"
+              disabled={false}
+              secondary={false}
+              to="/?limit=0&offset=0"
+            >
+              Next
+              <svg
+                className="c27"
+                height="6"
+                innerRef={undefined}
+                right={true}
+                style={
+                  Object {
+                    "transform": "rotate(-90deg)",
+                  }
+                }
+                viewBox="0 0 9.6 6"
+                width="9.6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                  fill="rgb(59, 70, 204)"
+                />
+              </svg>
+            </a>
+          </div>
         </th>
       </tr>
     </tfoot>
@@ -3586,7 +3721,7 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
 `;
 
 exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = `
-.c24 {
+.c26 {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   text-decoration-skip: objects;
@@ -3632,18 +3767,29 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   font: inherit;
 }
 
-.c23 {
+.c25 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
 }
 
-.c19 {
+.c21 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c19:hover {
+.c21:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c11 {
+  display: inline-block;
+  margin-left: 0.375rem;
+}
+
+.c19 {
+  display: inline-block;
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
 }
 
 .c7 {
@@ -3778,20 +3924,20 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   max-width: 100%;
 }
 
-.c16 {
+.c17 {
   width: 100%;
   background: rgb(250,250,250);
 }
 
-.c16 th:first-child {
+.c17 th:first-child {
   border-bottom-left-radius: 0.25rem;
 }
 
-.c16 th:last-child {
+.c17 th:last-child {
   border-bottom-right-radius: 0.25rem;
 }
 
-.c16 th {
+.c17 th {
   border-top-width: 0;
 }
 
@@ -3808,7 +3954,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-top-right-radius: 0.25rem;
 }
 
-.c15 {
+.c16 {
   width: 100%;
 }
 
@@ -3819,7 +3965,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 1.5rem;
+  padding: 0 0rem;
   height: 3.75rem;
   width: 2rem;
   display: table-cell;
@@ -3871,7 +4017,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-right-width: 0;
 }
 
-.c11 {
+.c12 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -3882,38 +4028,6 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   height: 3.75rem;
   width: 9.375rem;
   display: table-cell;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-  text-align: left;
-  height: 2.625rem;
-  color: rgb(189,189,189);
-  font-weight: 500;
-  border-bottom-width: 0;
-}
-
-.c11:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c11:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c12 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  width: 0rem;
-  display: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -3976,8 +4090,15 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 3.75rem;
-  display: table-cell;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
   height: 2.625rem;
   color: rgb(189,189,189);
   font-weight: 500;
@@ -3992,7 +4113,32 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-right-width: 0;
 }
 
-.c17 {
+.c15 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 0rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c15:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c15:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c18 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4010,11 +4156,11 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-bottom-width: 0.0625rem !important;
 }
 
-.c17:not(:first-child) {
+.c18:not(:first-child) {
   border-left-width: 0;
 }
 
-.c17:not(:last-child) {
+.c18:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4038,12 +4184,12 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   border-bottom-width: 0.0625rem;
 }
 
-.c18 {
+.c20 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c22 {
+.c24 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
   -webkit-text-decoration: none;
@@ -4055,27 +4201,27 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   color: rgb(255,255,255);
 }
 
-.c20 {
+.c22 {
   margin-right: 0.1875rem;
 }
 
-.c25 {
+.c27 {
   margin-left: 0.1875rem;
 }
 
-.c21 {
+.c23 {
   margin: 0 0.1875rem;
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c12 {
+  .c13 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c13 {
+  .c14 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -4147,25 +4293,29 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           <span>
             Name 
           </span>
-          <svg
-            height="6"
-            style={
-              Object {
-                "transform": "rotate(180deg)",
-              }
-            }
-            viewBox="0 0 9.6 6"
-            width="9.6"
-            xmlns="http://www.w3.org/2000/svg"
+          <div
+            className="c11"
           >
-            <path
-              d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-              fill="rgb(73, 73, 73)"
-            />
-          </svg>
+            <svg
+              height="6"
+              style={
+                Object {
+                  "transform": "rotate(180deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(73, 73, 73)"
+              />
+            </svg>
+          </div>
         </th>
         <th
-          className="c11"
+          className="c12"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -4176,7 +4326,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </span>
         </th>
         <th
-          className="c12"
+          className="c13"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -4187,7 +4337,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </span>
         </th>
         <th
-          className="c13"
+          className="c14"
           disabled={undefined}
           name="th"
           onClick={[Function]}
@@ -4198,7 +4348,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </span>
         </th>
         <th
-          className="c14"
+          className="c15"
           disabled={undefined}
           name="th"
           selected={undefined}
@@ -4206,7 +4356,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
       </tr>
     </thead>
     <tbody
-      className="c15"
+      className="c16"
       disabled={undefined}
       name="tbody"
       selected={undefined}
@@ -4216,7 +4366,7 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
       </span>
     </tbody>
     <tfoot
-      className="c16"
+      className="c17"
       disabled={undefined}
       name="tfoot"
       selected={undefined}
@@ -4228,77 +4378,89 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
         selected={undefined}
       >
         <th
-          className="c17"
+          className="c18"
           colSpan="6"
           disabled={undefined}
           name="th"
           selected={undefined}
         >
-          <a
-            active={undefined}
-            activeClassName="active"
-            className="c18 c19"
-            disabled={false}
-            secondary={false}
-            to="/?limit=0&offset=0"
+          <div
+            className="c19"
           >
-            <svg
-              className="c20"
-              height="6"
-              innerRef={undefined}
-              left={true}
-              style={
-                Object {
-                  "transform": "rotate(90deg)",
-                }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              active={undefined}
+              activeClassName="active"
+              className="c20 c21"
+              disabled={false}
+              secondary={false}
+              to="/?limit=0&offset=0"
             >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(59, 70, 204)"
-              />
-            </svg>
-            Prev
-          </a>
-          <a
-            className="c21 c22 c19 c23 c24"
-            disabled={undefined}
-            to={null}
-          >
-            NaN
-          </a>
-          <a
-            active={undefined}
-            activeClassName="active"
-            className="c18 c19"
-            disabled={false}
-            secondary={false}
-            to="/?limit=0&offset=0"
-          >
-            Next
-            <svg
-              className="c25"
-              height="6"
-              innerRef={undefined}
-              right={true}
-              style={
-                Object {
-                  "transform": "rotate(-90deg)",
+              <svg
+                className="c22"
+                height="6"
+                innerRef={undefined}
+                left={true}
+                style={
+                  Object {
+                    "transform": "rotate(90deg)",
+                  }
                 }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 9.6 6"
+                width="9.6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                  fill="rgb(59, 70, 204)"
+                />
+              </svg>
+              Prev
+            </a>
+          </div>
+          <div
+            className="c19"
+          >
+            <a
+              className="c23 c24 c21 c25 c26"
+              disabled={undefined}
+              to={null}
             >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(59, 70, 204)"
-              />
-            </svg>
-          </a>
+              NaN
+            </a>
+          </div>
+          <div
+            className="c19"
+          >
+            <a
+              active={undefined}
+              activeClassName="active"
+              className="c20 c21"
+              disabled={false}
+              secondary={false}
+              to="/?limit=0&offset=0"
+            >
+              Next
+              <svg
+                className="c27"
+                height="6"
+                innerRef={undefined}
+                right={true}
+                style={
+                  Object {
+                    "transform": "rotate(-90deg)",
+                  }
+                }
+                viewBox="0 0 9.6 6"
+                width="9.6"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                  fill="rgb(59, 70, 204)"
+                />
+              </svg>
+            </a>
+          </div>
         </th>
       </tr>
     </tfoot>
@@ -4347,17 +4509,17 @@ exports[`renders <Item /> without throwing 1`] = `
   font: inherit;
 }
 
-.c11 {
+.c12 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c11:hover {
+.c12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c12 {
+.c13 {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -4367,7 +4529,7 @@ exports[`renders <Item /> without throwing 1`] = `
   margin-left: 0rem;
 }
 
-.c16 {
+.c17 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -4385,7 +4547,7 @@ exports[`renders <Item /> without throwing 1`] = `
   align-items: center;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4556,7 +4718,7 @@ exports[`renders <Item /> without throwing 1`] = `
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 1.5rem;
+  padding: 0 0rem;
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
@@ -4571,7 +4733,7 @@ exports[`renders <Item /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c13 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -4580,18 +4742,16 @@ exports[`renders <Item /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 0rem;
-  display: none;
   vertical-align: middle;
   text-align: left;
   border-bottom-width: 0;
 }
 
-.c13:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4628,8 +4788,11 @@ exports[`renders <Item /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
   border-bottom-width: 0;
-  border-left-width: 0.0625rem !important;
 }
 
 .c15:not(:first-child) {
@@ -4637,6 +4800,27 @@ exports[`renders <Item /> without throwing 1`] = `
 }
 
 .c15:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c16 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 0rem;
+  height: 3.75rem;
+  border-bottom-width: 0;
+  border-left-width: 0.0625rem !important;
+}
+
+.c16:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c16:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -4656,7 +4840,7 @@ exports[`renders <Item /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c10 {
+.c11 {
   color: rgb(73,73,73);
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4668,19 +4852,19 @@ exports[`renders <Item /> without throwing 1`] = `
   display: block;
 }
 
-.c17 {
-  height: 3rem;
+.c18 {
+  height: 100%;
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c13 {
+  .c14 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c14 {
+  .c15 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -4741,27 +4925,27 @@ exports[`renders <Item /> without throwing 1`] = `
         </div>
       </td>
       <td
-        className="c3"
+        className="c10"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <a
           activeClassName="active"
-          className="c10 c11"
+          className="c11 c12"
           secondary={false}
           to="/instances/"
         />
       </td>
       <td
-        className="c3"
+        className="c10"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <span>
           <span
-            className="c12"
+            className="c13"
             color="green"
             size="0.75rem"
           />
@@ -4770,7 +4954,7 @@ exports[`renders <Item /> without throwing 1`] = `
         </span>
       </td>
       <td
-        className="c13"
+        className="c14"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -4778,7 +4962,7 @@ exports[`renders <Item /> without throwing 1`] = `
         almost NaN years
       </td>
       <td
-        className="c14"
+        className="c15"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -4788,14 +4972,14 @@ exports[`renders <Item /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c15"
+        className="c16"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
           box={true}
-          className="c16"
+          className="c17"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -4807,7 +4991,7 @@ exports[`renders <Item /> without throwing 1`] = `
           tag="div"
         >
           <div
-            className="c17 c18"
+            className="c18 c19"
           >
             <svg
               height="16"
@@ -4874,17 +5058,17 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   font: inherit;
 }
 
-.c11 {
+.c12 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c11:hover {
+.c12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c12 {
+.c13 {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -4894,7 +5078,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   margin-left: 0rem;
 }
 
-.c16 {
+.c17 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -4912,7 +5096,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   align-items: center;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5083,7 +5267,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 1.5rem;
+  padding: 0 0rem;
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
@@ -5098,7 +5282,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c13 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -5107,18 +5291,16 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 0rem;
-  display: none;
   vertical-align: middle;
   text-align: left;
   border-bottom-width: 0;
 }
 
-.c13:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -5155,8 +5337,11 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
   border-bottom-width: 0;
-  border-left-width: 0.0625rem !important;
 }
 
 .c15:not(:first-child) {
@@ -5164,6 +5349,27 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
 }
 
 .c15:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c16 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 0rem;
+  height: 3.75rem;
+  border-bottom-width: 0;
+  border-left-width: 0.0625rem !important;
+}
+
+.c16:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c16:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -5183,7 +5389,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c10 {
+.c11 {
   color: rgb(73,73,73);
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5195,19 +5401,19 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   display: block;
 }
 
-.c17 {
-  height: 3rem;
+.c18 {
+  height: 100%;
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c13 {
+  .c14 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c14 {
+  .c15 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -5268,14 +5474,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         </div>
       </td>
       <td
-        className="c3"
+        className="c10"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <a
           activeClassName="active"
-          className="c10 c11"
+          className="c11 c12"
           secondary={false}
           to="/instances/id"
         >
@@ -5283,14 +5489,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         </a>
       </td>
       <td
-        className="c3"
+        className="c10"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <span>
           <span
-            className="c12"
+            className="c13"
             color="primary"
             size="0.75rem"
           />
@@ -5299,7 +5505,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         </span>
       </td>
       <td
-        className="c13"
+        className="c14"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -5307,7 +5513,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         almost NaN years
       </td>
       <td
-        className="c14"
+        className="c15"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -5317,14 +5523,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c15"
+        className="c16"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
           box={true}
-          className="c16"
+          className="c17"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -5336,7 +5542,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
           tag="div"
         >
           <div
-            className="c17 c18"
+            className="c18 c19"
           >
             <svg
               height="16"
@@ -5403,17 +5609,17 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   font: inherit;
 }
 
-.c11 {
+.c12 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c11:hover {
+.c12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c12 {
+.c13 {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -5423,7 +5629,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   margin-left: 0rem;
 }
 
-.c16 {
+.c17 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -5441,7 +5647,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   align-items: center;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5612,7 +5818,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 1.5rem;
+  padding: 0 0rem;
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
@@ -5627,7 +5833,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c13 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -5636,18 +5842,16 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 0rem;
-  display: none;
   vertical-align: middle;
   text-align: left;
   border-bottom-width: 0;
 }
 
-.c13:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c13:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -5684,8 +5888,11 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
   border-bottom-width: 0;
-  border-left-width: 0.0625rem !important;
 }
 
 .c15:not(:first-child) {
@@ -5693,6 +5900,27 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
 }
 
 .c15:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c16 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 0rem;
+  height: 3.75rem;
+  border-bottom-width: 0;
+  border-left-width: 0.0625rem !important;
+}
+
+.c16:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c16:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -5712,7 +5940,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c10 {
+.c11 {
   color: rgb(73,73,73);
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5724,19 +5952,19 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   display: block;
 }
 
-.c17 {
-  height: 3rem;
+.c18 {
+  height: 100%;
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c13 {
+  .c14 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c14 {
+  .c15 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -5797,27 +6025,27 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         </div>
       </td>
       <td
-        className="c3"
+        className="c10"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <a
           activeClassName="active"
-          className="c10 c11"
+          className="c11 c12"
           secondary={false}
           to="/instances/"
         />
       </td>
       <td
-        className="c3"
+        className="c10"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <span>
           <span
-            className="c12"
+            className="c13"
             color="green"
             size="0.75rem"
           />
@@ -5826,7 +6054,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         </span>
       </td>
       <td
-        className="c13"
+        className="c14"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -5834,7 +6062,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         almost NaN years
       </td>
       <td
-        className="c14"
+        className="c15"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -5844,14 +6072,14 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c15"
+        className="c16"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
           box={true}
-          className="c16"
+          className="c17"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -5863,7 +6091,7 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
           tag="div"
         >
           <div
-            className="c17 c18"
+            className="c18 c19"
           >
             <svg
               height="16"
@@ -5930,34 +6158,34 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   font: inherit;
 }
 
-.c11 {
+.c12 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
 }
 
-.c11:hover {
+.c12:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c13 {
+.c14 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c14 {
+.c15 {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
-.c15 {
+.c16 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
-.c12 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6128,7 +6356,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 1.5rem;
+  padding: 0 0rem;
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
@@ -6143,7 +6371,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c16 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -6152,18 +6380,16 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
-  width: 0rem;
-  display: none;
   vertical-align: middle;
   text-align: left;
   border-bottom-width: 0;
 }
 
-.c16:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c16:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -6200,10 +6426,11 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   box-sizing: border-box;
   padding: 0 1.5rem;
   height: 3.75rem;
+  width: 0rem;
+  display: none;
   vertical-align: middle;
-  text-align: center;
+  text-align: left;
   border-bottom-width: 0;
-  border-left-width: 0.0625rem !important;
 }
 
 .c18:not(:first-child) {
@@ -6211,6 +6438,29 @@ exports[`renders <Item mutating /> without throwing 1`] = `
 }
 
 .c18:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c19 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 0rem;
+  height: 3.75rem;
+  vertical-align: middle;
+  text-align: center;
+  border-bottom-width: 0;
+  border-left-width: 0.0625rem !important;
+}
+
+.c19:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c19:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -6230,7 +6480,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   border-bottom-width: 0.0625rem;
 }
 
-.c10 {
+.c11 {
   color: rgb(73,73,73);
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6243,14 +6493,14 @@ exports[`renders <Item mutating /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c16 {
+  .c17 {
     width: 10rem;
     display: table-cell;
   }
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c17 {
+  .c18 {
     width: 8.125rem;
     display: table-cell;
   }
@@ -6311,47 +6561,47 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         </div>
       </td>
       <td
-        className="c3"
+        className="c10"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <a
           activeClassName="active"
-          className="c10 c11"
+          className="c11 c12"
           secondary={false}
           to="/instances/"
         />
       </td>
       <td
-        className="c3"
+        className="c10"
         disabled={undefined}
         name="td"
         selected={undefined}
       >
         <div
-          className="c12"
+          className="c13"
         >
           <svg
             height="10"
             width="28"
           >
             <rect
-              className="c13"
+              className="c14"
               height="6"
               width="6"
               x="2"
               y="2"
             />
             <rect
-              className="c14 c13"
+              className="c15 c14"
               height="6"
               width="6"
               x="11"
               y="2"
             />
             <rect
-              className="c15 c13"
+              className="c16 c14"
               height="6"
               width="6"
               x="20"
@@ -6361,7 +6611,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         </div>
       </td>
       <td
-        className="c16"
+        className="c17"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -6369,7 +6619,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         almost NaN years
       </td>
       <td
-        className="c17"
+        className="c18"
         disabled={undefined}
         name="td"
         selected={undefined}
@@ -6379,7 +6629,7 @@ exports[`renders <Item mutating /> without throwing 1`] = `
         </code>
       </td>
       <td
-        className="c18"
+        className="c19"
         disabled={undefined}
         name="td"
         selected={undefined}

@@ -7,15 +7,9 @@ import { SubmissionError, destroy } from 'redux-form';
 import { set, destroyAll } from 'react-redux-values';
 import intercept from 'apr-intercept';
 import get from 'lodash.get';
-import omit from 'lodash.omit';
-import uniqBy from 'lodash.uniqby';
-import constantCase from 'constant-case';
 
 import { H3, ViewContainer, Button } from 'joyent-ui-toolkit';
-import { Forms } from '../constants';
 import { Provider as ResourceSteps } from 'joyent-ui-resource-step';
-import parseError from '../state/parse-error';
-import CreateInstanceMutation from '../graphql/create-instance.gql';
 
 import {
   Name,
@@ -27,8 +21,13 @@ import {
   UserScript,
   Firewall,
   CNS,
-  Affinity
+  Affinity,
+  generatePayload
 } from 'joyent-ui-instance-steps';
+
+import { Forms } from '@root/constants';
+import parseError from '@state/parse-error';
+import CreateInstanceMutation from '@graphql/create-instance.gql';
 
 const { IC_F } = Forms;
 const names = {
@@ -94,7 +93,7 @@ class CreateInstance extends Component {
     const {
       name,
       image,
-      package: packageResult,
+      package: pkg,
       networks,
       tags,
       metadata,
@@ -105,7 +104,7 @@ class CreateInstance extends Component {
 
     return (
       <ViewContainer main>
-        <Margin top={5}>
+        <Margin top="5">
           <H3>Create Instance</H3>
         </Margin>
         <Padding top="5">
@@ -138,7 +137,7 @@ class CreateInstance extends Component {
                 next="networks"
                 saved={steps.package}
                 onDefocus={handleDefocus('package')}
-                preview={packageResult}
+                preview={pkg}
               />
             </Margin>
             <Margin bottom="5">
@@ -218,7 +217,7 @@ class CreateInstance extends Component {
               />
             </Margin>
           </ResourceSteps>
-          <Margin bottom={5}>
+          <Margin bottom="5">
             <ReduxForm form={IC_F} onSubmit={handleSubmit}>
               {({ handleSubmit, submitting }) => (
                 <form onSubmit={handleSubmit}>
@@ -277,94 +276,15 @@ export default compose(
     };
   }),
   connect(null, (dispatch, { steps = {}, forms, history, createInstance }) => {
-    const parseAffRule = ({
-      conditional,
-      placement,
-      type: identity,
-      name,
-      pattern,
-      value
-    }) => {
-      const type = constantCase(
-        `${conditional}_${placement === 'same' ? 'equal' : 'not_equal'}`
-      );
-
-      const patterns = {
-        equalling: value => value,
-        starting: value => `/^${value}/`
-      };
-
-      const _name = identity === 'name' ? 'instance' : name;
-      const _value = patterns[pattern](type === 'name' ? name : value);
-
-      return {
-        type,
-        key: _name,
-        value: _value
-      };
-    };
-
     return {
       handleDefocus: name => value => {
         return dispatch(set({ name: names[name], value }));
       },
 
       handleSubmit: async () => {
-        const _affinity = steps.affinity ? parseAffRule(steps.affinity) : null;
-        const _name = steps.name && steps.name.name.toLowerCase();
-
-        const _metadata =
-          (steps.metadata && steps.metadata.map(a => omit(a, 'open'))) || [];
-
-        const _tags =
-          (steps.tags &&
-            uniqBy(steps.tags.map(a => omit(a, 'expanded')), 'name').map(a =>
-              omit(a, 'expanded')
-            )) ||
-          [];
-
-        const _networks = steps.networks && steps.networks.map(({ id }) => id);
-
-        if (steps['user-script'] && steps['user-script'].lines) {
-          _metadata.push({
-            name: 'user-script',
-            value: steps['user-script'].script
-          });
-        }
-
-        if (steps.cns) {
-          _tags.push({
-            name: 'triton.cns.disable',
-            value: !steps.cns.cnsEnabled
-          });
-        }
-
-        if (
-          steps.cns &&
-          (steps.cns.serviceNames &&
-            steps.cns.serviceNames.length &&
-            steps.cns.cnsEnabled)
-        ) {
-          _tags.push({
-            name: 'triton.cns.services',
-            value: steps.cns.serviceNames.join(',')
-          });
-        }
-
         const [err, res] = await intercept(
           createInstance({
-            variables: {
-              name: _name,
-              package: steps.package.id,
-              image: steps.image.id,
-              affinity: _affinity ? [_affinity] : [],
-              metadata: _metadata,
-              tags: _tags,
-              firewall_enabled: steps.firewall
-                ? steps.firewall.enabled
-                : undefined,
-              networks: _networks && _networks.length ? _networks : undefined
-            }
+            variables: generatePayload(steps)
           })
         );
 

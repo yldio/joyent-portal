@@ -3,11 +3,14 @@
 ```jsx noeditor
 const big = require('./big.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={big} />
+  }}
+  src={big}
+/>;
 ```
 
 ### Medium Grid
@@ -15,11 +18,14 @@ const big = require('./big.svg');
 ```jsx noeditor
 const medium = require('./medium.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={medium} />
+  }}
+  src={medium}
+/>;
 ```
 
 ### Small Grid
@@ -27,11 +33,14 @@ const medium = require('./medium.svg');
 ```jsx noeditor
 const small = require('./small.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={small} />
+  }}
+  src={small}
+/>;
 ```
 
 ### Baseline & Spacing
@@ -41,9 +50,12 @@ Most of the horizontal spacing between different elements and components is deri
 ```jsx noeditor
 const baseline = require('./baseline.svg');
 
-<img style={{
+<img
+  style={{
     maxWidth: '100%',
     marginTop: 22,
     marginBottom: 40
-}} src={baseline} />
+  }}
+  src={baseline}
+/>;
 ```
