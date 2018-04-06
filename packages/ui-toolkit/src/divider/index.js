@@ -7,7 +7,7 @@ import remcalc from 'remcalc';
 const HorizontalDivider = styled(Row)`
   height: 1px;
   background-color: ${props => props.theme.grey};
-  height: ${remcalc(1)};
+  height: ${props => props.height};
 
   ${is('transparent')`
     background-color: transparent;

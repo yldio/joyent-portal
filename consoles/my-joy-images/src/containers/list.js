@@ -41,15 +41,12 @@ export const List = ({
   handleRemove
 }) => (
   <ViewContainer main>
-    <Divider height={remcalc(30)} transparent />
     <ReduxForm form={LIST_TOOLBAR_FORM}>
       {props => <ToolbarForm {...props} actionable={!loading} />}
     </ReduxForm>
     <Divider height={remcalc(1)} />
-    <Divider height={remcalc(24)} transparent />
     {loading && !images.length ? (
       <Fragment>
-        <Divider height={remcalc(30)} transparent />
         <StatusLoader />
       </Fragment>
     ) : null}

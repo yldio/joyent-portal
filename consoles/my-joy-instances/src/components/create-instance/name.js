@@ -5,7 +5,6 @@ import Flex, { FlexItem } from 'styled-flex-component';
 import remcalc from 'remcalc';
 
 import {
-  Divider,
   FormGroup,
   FormLabel,
   Input,
@@ -27,7 +26,6 @@ export default ({ placeholderName, randomizing, onRandomize, onSave }) => (
         </FormGroup>
       </FlexItem>
       <FlexItem>
-        <Divider height={remcalc(13)} transparent />
         <Margin left={1}>
           <Button
             type="button"

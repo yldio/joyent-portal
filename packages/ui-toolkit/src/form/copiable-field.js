@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import copy from 'clipboard-copy';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
-import is from 'styled-is';
 import { Col, Row } from 'joyent-react-styled-flexboxgrid';
 
 import {

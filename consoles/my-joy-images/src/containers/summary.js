@@ -5,12 +5,10 @@ import { connect } from 'react-redux';
 import intercept from 'apr-intercept';
 import { set } from 'react-redux-values';
 import get from 'lodash.get';
-import remcalc from 'remcalc';
 
 import {
   ViewContainer,
   StatusLoader,
-  Divider,
   Message,
   MessageTitle,
   MessageDescription
@@ -32,7 +30,6 @@ export const Summary = ({
   <ViewContainer main>
     {loading && !image ? (
       <Fragment>
-        <Divider height={remcalc(30)} transparent />
         <StatusLoader />
       </Fragment>
     ) : null}

@@ -13,7 +13,6 @@ const {
 } = process.env;
 
 module.exports = async ({ PORT, BASE_URL }) => {
-  const dcName = DC_NAME || Url.parse(SDC_URL).host.split('.')[0];
   const keyPath = SDC_KEY_PATH;
   const keyId = `/${SDC_ACCOUNT}/keys/${SDC_KEY_ID}`;
   const apiBaseUrl = SDC_URL;

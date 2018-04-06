@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { H1 as NH1 } from 'normalized-styled-components';
 import remcalc from 'remcalc';
-import is, { isNot } from 'styled-is';
+import is from 'styled-is';
 
 export const H1 = styled(NH1)`
   margin: 0;
@@ -14,6 +14,7 @@ export const H1 = styled(NH1)`
   font-style: normal;
   font-stretch: normal;
   font-weight: normal;
+  margin: 0;
 
   ${is('inline')`
     display: inline-block;
@@ -88,7 +89,7 @@ export const H3 = styled.h3`
 export const H4 = styled.h4`
   margin: 0;
   color: ${props => props.theme.text};
-  font-weight: ${props => props.theme.font.weight.semibold};
+  font-weight: ${props => props.theme.font.weight.normal};
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
   margin: 0;
@@ -106,7 +107,7 @@ export const H4 = styled.h4`
 export const H5 = styled.h4`
   margin: 0;
   color: ${props => props.theme.text};
-  font-weight: normal;
+  font-weight: ${props => props.theme.font.weight.normal};
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
   margin: 0;
@@ -128,7 +129,7 @@ export const H5 = styled.h4`
 export const H6 = styled.h6`
   margin: 0;
   color: ${props => props.theme.text};
-  font-weight: normal;
+  font-weight: ${props => props.theme.font.weight.normal};
   line-height: ${remcalc(18)};
   font-size: ${remcalc(13)};
   margin: 0;

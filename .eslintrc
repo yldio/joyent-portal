@@ -1,8 +1,10 @@
 {
   "extends": "joyent-portal",
   "rules": {
-    "jsx-a11y/href-no-hash": 0,
+    "no-console": 1,
     "new-cap": 0,
-    "no-console": 0
+    "jsx-a11y/href-no-hash": 0,
+    "no-negated-condition": 1,
+    "camelcase": 1
   }
 }

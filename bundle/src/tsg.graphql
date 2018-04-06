@@ -1,0 +1,128 @@
+input KeyValueInput {
+  id: ID!
+}
+
+type KeyValue {
+  id: ID!
+}
+
+type Network {
+  id: ID!
+}
+
+type Image {
+  id: ID!
+}
+
+type Package {
+  id: ID!
+}
+
+################################################################################
+
+type Group {
+  # The universal identifier (UUID) of the group.
+  id: ID!
+  # The name of the group. The group name is limited to a maximum of 182 alphanumeric characters.
+  name: String
+  # A unique identifier for the template that the group is associated with.
+  template: Template
+  # The number of compute instances to run and maintain a specified number (the "desired count") of instances.
+  capacity: Int
+  # When this group was created. ISO8601 date format.
+  created_at: String
+  # When this group's details were last updated. ISO8601 date format.
+  updated_at: String
+}
+
+input GroupInput {
+  # The name of the group. The group name is limited to a maximum of 182 alphanumeric characters.
+  name: String
+  # A unique identifier for the template that the group is associated with.
+  template: ID
+  # The number of compute instances to run and maintain a specified number (the "desired count") of instances.
+  capacity: Int
+}
+
+type Template {
+  # The universal identifier (UUID) of the template.
+  id: ID!
+  # The name of the template.
+  name: String
+  # The unique identifier (UUID) of the package to use when launching compute instances.
+  package: Package
+  # The unique identifier (UUID) of the image to use when launching compute instances.
+  image: Image
+  # Whether to enable or disable the firewall on the instances launched. Default is false.
+  firewall_enabled: Boolean
+  # A list of unique network identifiers to attach to the compute instances launched.
+  networks: [Network]
+  # Arbitrary data to be copied to the instances on boot. This will not be executed.
+  userdata: String
+  # A mapping of metadata (a key-value pairs) to apply to the instances launched.
+  metadata: [KeyValue]
+  # A mapping of tags (a key-value pairs) to apply to the instances launched.
+  tags: [KeyValue]
+  # When this template was created. ISO8601 date format.
+  created_at: String
+}
+
+input TemplateInput {
+  # The name of the template.
+  name: String!
+  # The unique identifier (UUID) of the package to use when launching compute instances.
+  package: ID!
+  # The unique identifier (UUID) of the image to use when launching compute instances.
+  image: ID!
+  # Whether to enable or disable the firewall on the instances launched. Default is false.
+  firewall_enabled: Boolean
+  # A list of unique network identifiers to attach to the compute instances launched.
+  networks: [ID]
+  # Arbitrary data to be copied to the instances on boot. This will not be executed.
+  userdata: String
+  # A mapping of metadata (a key-value pairs) to apply to the instances launched.
+  metadata: [KeyValueInput]
+  # A mapping of tags (a key-value pairs) to apply to the instances launched.
+  tags: [KeyValueInput]
+}
+
+type Mutation {
+  # Create a new group.
+  createGroup(group: GroupInput!): Group
+
+  # Update an existing group
+  updateGroup(
+    # UUID of group to update.
+    id: ID!
+    group: GroupInput!
+  ): Group
+
+  # Delete a group.
+  deleteGroup(id: ID!): Group
+
+  # Create a new template.
+  createTemplate(template: TemplateInput!): Template
+
+  # Delete an existing template.
+  deleteTemplate(id: ID!): Template
+}
+
+type Query {
+  # List all of the existing groups
+  groups: [Group]
+
+  # Retrieve a specific group
+  group(
+    # The universal identifier (UUID) of the group.
+    id: ID!
+  ): Group
+
+  # List all of the existing templates
+  templates: [Template]
+
+  # Retrieve a specific template
+  template(
+    # The universal identifier (UUID) of the template.
+    id: ID!
+  ): Template
+}

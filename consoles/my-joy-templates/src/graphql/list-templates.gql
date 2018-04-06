@@ -1,0 +1,13 @@
+query templates {
+  templates {
+    id
+    name
+    created_at
+    image {
+      id
+    }
+    package {
+      id
+    }
+  }
+}

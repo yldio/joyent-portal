@@ -124,7 +124,6 @@ export const AddServiceForm = ({
           >
             Add
           </Button>
-          <Divider height={remcalc(4)} transparent />
         </Margin>
       </FlexItem>
     </Flex>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Subscriber } from 'joy-react-broadcast';
 import PropTypes from 'prop-types';
-import remcalc from 'remcalc';
 import is from 'styled-is';
 import styled from 'styled-components';
 

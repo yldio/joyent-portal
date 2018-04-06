@@ -63,7 +63,7 @@ const MarginalPaginationItem = styled(PaginationItem)`
 `;
 
 const Actions = styled(Flex)`
-  height: ${remcalc(48)};
+  height: 100%;
 `;
 
 export const FetchingItem = () => (

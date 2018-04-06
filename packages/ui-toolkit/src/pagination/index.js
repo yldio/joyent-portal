@@ -6,7 +6,7 @@ import is from 'styled-is';
 
 import BaseAnchor from '../anchor';
 import { Tfoot, Tr, Th } from '../table';
-import { Arrow } from '../icons';
+import { Arrow as BaseArrow } from '../icons';
 
 const Anchor = styled(BaseAnchor)`
   text-decoration: underline;
@@ -59,7 +59,7 @@ export const Item = ({
   theme,
   ...rest
 }) => (
-  <Margin horizontal="1">
+  <Margin horizontal="1" inline>
     <Anchor
       disabled={disabled}
       active={active}

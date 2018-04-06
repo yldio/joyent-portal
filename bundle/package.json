@@ -9,8 +9,6 @@
     "build:lib": "echo 0",
     "build:bundle": "echo 0",
     "prepublish": "echo 0",
-    "lint": "echo 0",
-    "lint:ci": "echo 0",
     "test": "echo 0",
     "test:ci": "echo 0"
   },
@@ -19,6 +17,7 @@
     "brule": "^3.1.0",
     "cloudapi-gql": "^7.1.4",
     "execa": "^0.10.0",
+    "graphql-tools": "^2.24.0",
     "h2o2": "^8.0.1",
     "hapi": "^17.3.1",
     "hapi-triton-auth": "^2.0.1",

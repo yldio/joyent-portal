@@ -6,7 +6,7 @@ const { Margin } = require('styled-components-spacing');
 const { default: Card } = require('.');
 
 <Card>
-  <Margin top={11} />
+  <Margin top="11" />
 </Card>;
 ```
 
@@ -22,7 +22,7 @@ const { Actions } = require('../icons');
 <Card>
   <Header>
     <HeaderMeta>
-      <Margin left={2} rigth={2}>
+      <Margin left="2" rigth="2">
         <H4 white>Nginx</H4>
       </Margin>
     </HeaderMeta>
@@ -30,7 +30,7 @@ const { Actions } = require('../icons');
       <Actions light />
     </HeaderBox>
   </Header>
-  <Margin top={11} />
+  <Margin top="11" />
 </Card>;
 ```
 
@@ -46,7 +46,7 @@ const { Actions } = require('../icons');
 <Card disabled>
   <Header>
     <HeaderMeta>
-      <Margin left={2} rigth={2}>
+      <Margin left="2" rigth="2">
         <H4>Nginx</H4>
       </Margin>
     </HeaderMeta>
@@ -54,7 +54,7 @@ const { Actions } = require('../icons');
       <Actions />
     </HeaderBox>
   </Header>
-  <Margin top={11} />
+  <Margin top="11" />
 </Card>;
 ```
 
@@ -71,13 +71,13 @@ const { TagList, TagItem } = require('../tags');
 const { Fragment } = React;
 
 <Fragment>
-  <Margin bottom={2}>
+  <Margin bottom="2">
     <Card>
-      <Padding left={3} right={3} top={1.5} bottom={1.5}>
+      <Padding left="3" right="3" top="1.5" bottom="1.5">
         <Row>
           <Col xs={3}>
             <Flex justifyStart alignCenter contentStretch full>
-              <Margin right={0.5}>
+              <Margin right="0.5">
                 <FlexItem>
                   <Strong>From: </Strong>
                 </FlexItem>

@@ -23,7 +23,6 @@ import { FormGroup, Input, Textarea, FormLabel, FormMeta } from '../form';
 import { Delete as DeleteIcon, Arrow as ArrowIcon } from '../icons';
 import { H4 } from '../text/headings';
 import Button from '../button';
-import Divider from '../divider';
 
 const CollapsedKeyValue = styled.div`
   word-break: break-all;
@@ -82,7 +81,6 @@ const TextareaKeyValue = ({
               </Row>
             </Margin>
           </FormGroup>
-          <Divider height={remcalc(12)} transparent />
         </Col>
       </Row>
     ) : null}
@@ -106,7 +104,6 @@ const TextareaKeyValue = ({
               </Col>
             </Row>
           </FormGroup>
-          <Divider height={remcalc(12)} transparent />
         </Col>
       </Row>
     ) : null}

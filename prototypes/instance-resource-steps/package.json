@@ -11,8 +11,6 @@
     "build:lib": "echo 0",
     "build:bundle": "NAMESPACE=instance-resource-steps NODE_ENV=production redrun -p build:frontend build:ssr",
     "prepublish": "NODE_ENV=production redrun build:bundle",
-    "lint": "redrun lint:ci -- --fix",
-    "lint:ci": "NODE_ENV=test eslint . --ext .js --ext .md",
     "test": "DEFAULT_TIMEOUT_INTERVAL=100000 NODE_ENV=test joyent-react-scripts test --env=jsdom",
     "test:ci": "NODE_ENV=test joyent-react-scripts test --env=jsdom --testPathIgnorePatterns='.ui.js'",
     "build:frontend": "joyent-react-scripts build",

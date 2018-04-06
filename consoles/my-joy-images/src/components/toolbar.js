@@ -2,15 +2,8 @@ import React from 'react';
 import { Field } from 'redux-form';
 import Flex from 'styled-flex-component';
 import { Margin } from 'styled-components-spacing';
-import remcalc from 'remcalc';
 
-import {
-  Button,
-  FormGroup,
-  Input,
-  FormLabel,
-  Divider
-} from 'joyent-ui-toolkit';
+import { Button, FormGroup, Input, FormLabel } from 'joyent-ui-toolkit';
 
 export const Toolbar = ({
   searchable = true,
@@ -30,7 +23,6 @@ export const Toolbar = ({
     </FormGroup>
     {action ? (
       <FormGroup right>
-        <Divider height={remcalc(21)} transparent />
         <Button
           type="button"
           disabled={!actionable}
@@ -48,6 +40,5 @@ export const Toolbar = ({
 export default ({ handleSubmit, ...rest }) => (
   <form onSubmit={handleSubmit}>
     <Toolbar {...rest} />
-    <Divider height={remcalc(20)} transparent />
   </form>
 );

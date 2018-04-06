@@ -6,17 +6,9 @@ import { destroy, reset } from 'redux-form';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
-import remcalc from 'remcalc';
 import Flex from 'styled-flex-component';
 
-import {
-  TagsIcon,
-  Button,
-  H3,
-  TagList,
-  Divider,
-  KeyValue
-} from 'joyent-ui-toolkit';
+import { TagsIcon, Button, H3, TagList, KeyValue } from 'joyent-ui-toolkit';
 
 import Title from '@components/create-image/title';
 import Description from '@components/description';
@@ -102,7 +94,6 @@ export const Tags = ({
               expanded
               onCancel={() => handleChangeAddOpen(false)}
             />
-            <Divider height={remcalc(18)} transparent />
           </Fragment>
         ) : null
       }

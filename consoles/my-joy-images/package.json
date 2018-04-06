@@ -11,8 +11,6 @@
     "build:lib": "echo 0",
     "build:bundle": "NAMESPACE=images NODE_ENV=production redrun -p build:frontend build:ssr",
     "prepublish": "NODE_ENV=production redrun build:bundle",
-    "lint": "redrun lint:ci -- --fix",
-    "lint:ci": "NODE_ENV=test eslint . --ext .js --ext .md",
     "test": "echo 0",
     "test:ci": "echo 0",
     "build:frontend": "joyent-react-scripts build",
