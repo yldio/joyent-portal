@@ -6,6 +6,7 @@ import { Margin, Padding } from 'styled-components-spacing';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import styled from 'styled-components';
 import is from 'styled-is';
+import isFunction from 'lodash.isfunction';
 import remcalc from 'remcalc';
 
 import {
@@ -122,7 +123,9 @@ export const Outlet = ({ children }) => (
     {({ namespace }) => (
       <Subscriber channel="create-resource-step">
         {({ expanded, next }) =>
-          expanded ? children({ next: `/${namespace}/${next}` }) : null
+          expanded && isFunction(children)
+            ? children({ next: `/${namespace}/${next}` })
+            : null
         }
       </Subscriber>
     )}
@@ -140,10 +143,7 @@ export default class Step extends PureComponent {
 
     if (wasExpanded && !expanded) {
       onDefocus(getValue());
-      return;
     }
-
-    return;
   }
 
   render() {

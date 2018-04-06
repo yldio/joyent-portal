@@ -6,7 +6,6 @@ import remcalc from 'remcalc';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 
 import {
-  Divider,
   FormGroup,
   FormLabel,
   Input,
@@ -29,7 +28,6 @@ export default ({ placeholderName, randomizing, onRandomize }) => (
         </FormGroup>
       </FlexItem>
       <FlexItem>
-        <Divider height={remcalc(13)} transparent />
         <Margin left={1}>
           <Button
             type="button"

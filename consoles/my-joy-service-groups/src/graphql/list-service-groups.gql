@@ -1,0 +1,12 @@
+query groups {
+  groups {
+    id
+    name
+    template {
+      name
+    }
+    capacity
+    created_at
+    updated_at
+  }
+}

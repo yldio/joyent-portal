@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
-import remcalc from 'remcalc';
+import { Margin } from 'styled-components-spacing';
 
 import { H4 } from '../text/headings';
 import { Arrow } from '../icons';
@@ -48,7 +48,9 @@ export default withTheme(({ children, component, theme, ...rest }) => {
   return (
     <Container>
       <Name name="breadcrum-item">{_child}</Name>
-      <Arrow direction="left" fill={theme.greyDark} />
+      <Margin horizontal="1">
+        <Arrow direction="left" fill={theme.greyDark} />
+      </Margin>
     </Container>
   );
 });

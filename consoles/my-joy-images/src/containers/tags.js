@@ -14,11 +14,11 @@ import {
   H3,
   ViewContainer,
   StatusLoader,
-  Divider,
   Message,
   MessageTitle,
   MessageDescription,
-  TagList
+  TagList,
+  Divider
 } from 'joyent-ui-toolkit';
 
 import { Forms } from '@root/constants';

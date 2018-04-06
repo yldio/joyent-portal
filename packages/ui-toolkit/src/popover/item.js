@@ -7,6 +7,7 @@ import remcalc from 'remcalc';
 const BaseItem = styled.span`
   display: block;
   text-align: left;
+  margin: ${remcalc(6)} ${remcalc(18)};
 
   ${isNot('disabled')`
     cursor: pointer;

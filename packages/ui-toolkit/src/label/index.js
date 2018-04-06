@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import remcalc from 'remcalc';
+import is from 'styled-is';
 
 const Label = styled.label`
   font-size: ${remcalc(15)};
@@ -9,6 +10,10 @@ const Label = styled.label`
   display: block;
   color: ${props => props.theme.secondary};
   text-align: left;
+
+  ${is('inline')`
+    display: inline-block;
+  `};
 `;
 
 export default Label;
