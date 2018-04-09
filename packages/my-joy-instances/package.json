@@ -1,7 +1,6 @@
 {
   "name": "my-joy-instances",
-  "version": "2.3.2",
-  "private": true,
+  "version": "2.3.4",
   "license": "MPL-2.0",
   "repository": "github:yldio/joyent-portal",
   "main": "lib/index.js",
@@ -20,6 +19,7 @@
   },
   "dependencies": {
     "@manaflair/redux-batch": "^0.1.0",
+    "apollo-client": "^2.2.8",
     "apr-intercept": "^3.0.3",
     "apr-reduce": "^3.0.3",
     "bytes": "^3.0.0",
