@@ -1,3 +1,6 @@
+'use strict';
+
+const Boom = require('boom');
 const Inert = require('inert');
 const Path = require('path');
 const Url = require('url');
@@ -53,6 +56,10 @@ exports.register = async server => {
         const { params } = request;
         const { rest } = params;
 
+        if (!rest) {
+          return Boom.notFound();
+        }
+
         const publicPathname = Path.join(publicRoot, rest);
         const [err1] = await Intercept(
           Fs.access(publicPathname, Fs.constants.R_OK)
@@ -64,7 +71,12 @@ exports.register = async server => {
           });
         }
 
-        const buildMapPathname = Path.join(buildRoot, manifest[rest]);
+        const filename = manifest[rest];
+        if (!filename) {
+          return Boom.notFound();
+        }
+
+        const buildMapPathname = Path.join(buildRoot, filename);
         const [err2] = await Intercept(
           Fs.access(buildMapPathname, Fs.constants.R_OK)
         );
@@ -74,8 +86,6 @@ exports.register = async server => {
             confine: buildStatic
           });
         }
-
-        console.log({ buildPathname });
 
         const buildPathname = Path.join(buildStatic, rest);
         return h.file(buildPathname, {
