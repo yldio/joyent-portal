@@ -17,6 +17,7 @@ import {
   KeyValue
 } from 'joyent-ui-toolkit';
 
+import Strings from '@data/string.json';
 import Title from '@components/create-instance/title';
 import Description from '@components/description';
 import Tag from '@components/tags';
@@ -53,10 +54,7 @@ export const Tags = ({
       Tags
     </Title>
     {expanded ? (
-      <Description>
-        Tags can be used to identify your instances, group multiple instances
-        together, define firewall and affinity rules, and more.{' '}
-        <a
+      <Description>{Strings['tags-description']}<a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/tags-metadata/tags"
           rel="noopener noreferrer"
