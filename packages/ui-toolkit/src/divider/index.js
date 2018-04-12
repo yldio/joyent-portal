@@ -1,8 +1,11 @@
+import React from 'react';
 import styled from 'styled-components';
 import { Row } from 'joyent-react-styled-flexboxgrid';
 import is from 'styled-is';
+import remcalc from 'remcalc';
 
-const Divider = styled(Row)`
+const HorizontalDivider = styled(Row)`
+  height: 1px;
   background-color: ${props => props.theme.grey};
   height: ${remcalc(1)};
 
@@ -19,4 +22,14 @@ const Divider = styled(Row)`
   `};
 `;
 
-export default Divider;
+const VerticalDivider = styled.div`
+  width: ${remcalc(1)};
+  background: ${props => props.theme.grey};
+  height: ${remcalc(24)};
+  display: flex;
+  align-self: flex-end;
+  margin: 0 ${remcalc(12)};
+`;
+
+export default ({ vertical, ...props }) =>
+  vertical ? <VerticalDivider {...props} /> : <HorizontalDivider {...props} />;

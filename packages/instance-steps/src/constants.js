@@ -1,0 +1,7 @@
+export const Forms = {
+  IR_NAME_F: 'INSTANCE_RESOURCE_NAME_FORM'
+};
+
+export const Values = {
+  IR_NAME_V_USE_RANDOM: 'INSTANCE_RESOURCE_NAME_VALUE_USE_RANDOM'
+};

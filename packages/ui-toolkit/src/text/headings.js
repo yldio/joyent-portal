@@ -4,6 +4,7 @@ import remcalc from 'remcalc';
 import is, { isNot } from 'styled-is';
 
 export const H1 = styled(NH1)`
+  margin: 0;
   font-family: ${props => props.theme.font.families};
   color: ${props => props.theme.text};
   margin: 0;
@@ -33,6 +34,7 @@ export const H1 = styled(NH1)`
 `;
 
 export const H2 = styled.h2`
+  margin: 0;
   color: ${props => props.theme.text};
   font-weight: normal;
   line-height: ${remcalc(30)};
@@ -58,6 +60,7 @@ export const H2 = styled.h2`
 `;
 
 export const H3 = styled.h3`
+  margin: 0;
   color: ${props => props.theme.text};
   font-weight: normal;
   line-height: ${remcalc(26)};
@@ -83,6 +86,7 @@ export const H3 = styled.h3`
 `;
 
 export const H4 = styled.h4`
+  margin: 0;
   color: ${props => props.theme.text};
   font-weight: ${props => props.theme.font.weight.semibold};
   line-height: ${remcalc(24)};
@@ -100,6 +104,7 @@ export const H4 = styled.h4`
 `;
 
 export const H5 = styled.h4`
+  margin: 0;
   color: ${props => props.theme.text};
   font-weight: normal;
   line-height: ${remcalc(24)};
@@ -121,6 +126,7 @@ export const H5 = styled.h4`
 `;
 
 export const H6 = styled.h6`
+  margin: 0;
   color: ${props => props.theme.text};
   font-weight: normal;
   line-height: ${remcalc(18)};

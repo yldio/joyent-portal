@@ -5,6 +5,7 @@ import is from 'styled-is';
 
 export default styled.p`
   color: ${props => props.theme.text};
+  margin: 0;
 
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
