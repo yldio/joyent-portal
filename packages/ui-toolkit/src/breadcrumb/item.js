@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
-import remcalc from 'remcalc';
 
 import { H4 } from '../text/headings';
 import { Arrow } from '../icons';

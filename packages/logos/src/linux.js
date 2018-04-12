@@ -1,12 +1,18 @@
 import React from 'react';
 
-export default props => (
+export default ({
+  fill = null,
+  light = false,
+  disabled = false,
+  colors = {},
+  ...rest
+}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="25.55"
     height={30}
     viewBox="0 0 30.66 36"
-    {...props}
+    {...rest}
   >
     <defs>
       <style dangerouslySetInnerHTML={{ __html: '.cls-1{fill:#010002;}' }} />

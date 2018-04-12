@@ -3,7 +3,6 @@ const { NODE_ENV } = process.env;
 const env = NODE_ENV === 'production' ? 'prod' : 'dev';
 
 // const resolvePkg = require('resolve-pkg');
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const webpackConfig = require(`joyent-react-scripts/config/webpack.config.${env}.js`);
 const { defaultHandlers } = require('react-docgen');
 const dnHandler = require('react-docgen-displayname-handler');

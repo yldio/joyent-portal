@@ -44,6 +44,7 @@ import {
   Storage as BaseStorage,
   Tags as BaseTags,
   Triton as BaseTriton,
+  Tick as BaseTick,
   User as BaseUser
 } from 'joyent-icons';
 
@@ -93,5 +94,6 @@ export const Start = Colors(BaseStart);
 export const Stop = Colors(BaseStop);
 export const Storage = Colors(BaseStorage);
 export const Tags = Colors(BaseTags);
+export const Tick = Colors(BaseTick);
 export const Triton = Colors(BaseTriton);
 export const User = Colors(BaseUser);

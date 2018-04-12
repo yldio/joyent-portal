@@ -7,13 +7,15 @@ import { Field } from 'redux-form';
 import remcalc from 'remcalc';
 import titleCase from 'title-case';
 import Flex, { FlexItem } from 'styled-flex-component';
+import is from 'styled-is';
 
 import Message, {
   Title as MessageTitle,
   Description as MessageDescription
 } from '../message';
 
-import Card, {
+import {
+  default as BaseCard,
   Outlet as CardOutlet,
   Header as CardHeader,
   HeaderMeta as CardHeaderMeta
@@ -32,6 +34,13 @@ const CollapsedKeyValue = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
+`;
+
+const Card = styled(BaseCard)`
+  ${is('borderless')`
+    border: none;
+    box-shadow: none;
+  `};
 `;
 
 const Header = styled(CardHeader)`
@@ -127,7 +136,7 @@ const InputKeyValue = ({
           <FormLabel>
             {titleCase(type)} {typeLabel}
           </FormLabel>
-          <Margin top={0.5}>
+          <Margin right={3} top={0.5}>
             <Input onBlur={null} type="text" disabled={submitting} />
             <Row>
               <Col sm={7}>
@@ -140,7 +149,6 @@ const InputKeyValue = ({
     ) : null}
     {!onlyName ? (
       <Fragment>
-        <FlexItem basis={remcalc(12)} />
         <FlexItem basis="auto">
           <FormGroup name="value" field={Field} fluid>
             <FormLabel>{titleCase(type)} value</FormLabel>
@@ -172,7 +180,7 @@ export const KeyValue = ({
   pristine = true,
   invalid = false,
   removing = false,
-  onToggleExpanded = () => null,
+  onToggleExpanded,
   onCancel = () => null,
   onRemove = () => null,
   theme = {},
@@ -180,54 +188,69 @@ export const KeyValue = ({
   onlyName = false,
   onlyValue = false,
   noRemove = false,
-  customHeader
+  borderless = false,
+  customHeader,
+  headless = false
 }) => {
   const handleHeaderClick = method === 'edit' && onToggleExpanded;
+
   return (
-    <Card collapsed={!expanded} actionable={!expanded} shadow>
-      <Header
-        secondary={false}
-        transparent={false}
-        actionable={Boolean(handleHeaderClick)}
-        onClick={handleHeaderClick}
-      >
-        <PaddingMaxWidth left={3} right={3}>
-          <Flex alignCenter justifyBetween full>
-            <Meta>
-              {method === 'add' || method === 'create' ? (
-                <H4>{`${titleCase(method)} ${type}`}</H4>
-              ) : (
-                <CollapsedKeyValue>
-                  {customHeader ? customHeader : null}
-                  {initialValues.name ? (
-                    <Fragment>
-                      {expanded ? (
-                        <span>{`${initialValues.name}${': '}`}</span>
-                      ) : (
-                        <Bold>{`${initialValues.name}${': '}`}</Bold>
-                      )}
-                      <span>{initialValues.value}</span>
-                    </Fragment>
-                  ) : null}
-                </CollapsedKeyValue>
-              )}
-            </Meta>
-            {method === 'edit' && !disabled ? (
-              <ArrowIcon
-                onClick={onToggleExpanded}
-                direction={expanded ? 'up' : 'down'}
-              />
-            ) : null}
-          </Flex>
-        </PaddingMaxWidth>
-      </Header>
+    <Card
+      collapsed={!expanded}
+      actionable={Boolean(handleHeaderClick)}
+      borderless={borderless}
+      headless={headless}
+      shadow
+    >
+      {headless ? null : (
+        <Header
+          secondary={false}
+          transparent={false}
+          actionable={Boolean(handleHeaderClick)}
+          onClick={handleHeaderClick}
+        >
+          <PaddingMaxWidth left={borderless ? 0 : 3} right={borderless ? 0 : 3}>
+            <Flex alignCenter justifyBetween full>
+              <Meta>
+                {method === 'add' || method === 'create' ? (
+                  <H4>{`${titleCase(method)} ${type}`}</H4>
+                ) : (
+                  <CollapsedKeyValue>
+                    {customHeader ? customHeader : null}
+                    {initialValues.name ? (
+                      <Fragment>
+                        {expanded ? (
+                          <span>{`${initialValues.name}${': '}`}</span>
+                        ) : (
+                          <Bold>{`${initialValues.name}${': '}`}</Bold>
+                        )}
+                        <span>{initialValues.value}</span>
+                      </Fragment>
+                    ) : null}
+                  </CollapsedKeyValue>
+                )}
+              </Meta>
+              {handleHeaderClick ? (
+                <ArrowIcon
+                  onClick={onToggleExpanded}
+                  direction={expanded ? 'up' : 'down'}
+                />
+              ) : null}
+            </Flex>
+          </PaddingMaxWidth>
+        </Header>
+      )}
       {expanded ? (
         <CardOutlet>
-          <Padding all={3}>
+          <Padding
+            top={headless ? 0 : 3}
+            bottom={borderless ? 0 : 3}
+            horizontal={borderless ? 0 : 3}
+          >
             {error && !submitting ? (
               <Row>
                 <Col xs={12}>
-                  <Margin bottom={4}>
+                  <Margin bottom={5}>
                     <Message error>
                       <MessageTitle>Ooops!</MessageTitle>
                       <MessageDescription>{error}</MessageDescription>
@@ -241,7 +264,7 @@ export const KeyValue = ({
                 onBlur={null}
                 type={type}
                 typeLabel={typeLabel}
-                submitting={submitting}
+                submitting={disabled || submitting}
                 onlyName={onlyName}
                 onlyValue={onlyValue}
               />
@@ -249,7 +272,7 @@ export const KeyValue = ({
             {input === 'textarea' ? (
               <TextareaKeyValue
                 type={type}
-                submitting={submitting}
+                submitting={disabled || submitting}
                 onlyName={onlyName}
                 onlyValue={onlyValue}
                 editor={editor}
@@ -258,13 +281,13 @@ export const KeyValue = ({
             {input !== 'textarea' && input !== 'input'
               ? input(submitting)
               : null}
-            <Margin top={1}>
+            <Margin top={2}>
               <Row between="xs" middle="xs">
                 <Col xs={method === 'add' ? 12 : 7}>
                   <MarginalButton
                     type="button"
                     onClick={onCancel}
-                    disabled={submitting}
+                    disabled={disabled || submitting}
                     secondary
                   >
                     <span>Cancel</span>
@@ -282,7 +305,7 @@ export const KeyValue = ({
                     <Button
                       type="button"
                       onClick={onRemove}
-                      disabled={submitting}
+                      disabled={disabled || submitting}
                       loading={removing}
                       secondary
                       right
@@ -291,8 +314,8 @@ export const KeyValue = ({
                     >
                       <Margin right={2}>
                         <DeleteIcon
-                          disabled={submitting}
-                          fill={submitting ? undefined : theme.red}
+                          disabled={disabled || submitting}
+                          fill={disabled || submitting ? undefined : theme.red}
                         />
                       </Margin>
                       <span>Remove</span>

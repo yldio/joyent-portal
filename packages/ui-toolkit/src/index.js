@@ -12,6 +12,7 @@ export { default as Strong } from './text/strong';
 export { default as Sup } from './text/sup';
 export { default as theme } from './theme';
 export { default as Divider } from './divider';
+export { default as Hr } from './hr';
 export { default as Footer, StickyFooter } from './footer';
 export { default as KeyValue } from './key-value';
 export { default as StatusLoader } from './status-loader';
@@ -111,6 +112,7 @@ export {
   Stop as StopIcon,
   Storage as StorageIcon,
   Tags as TagsIcon,
+  Tick as TickIcon,
   Triton as TritonIcon,
   User as UserIcon
 } from './icons';

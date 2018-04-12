@@ -1,0 +1,10 @@
+query rules($tags: [KeyValueInput]!) {
+  firewall_rules_create_machine(tags: $tags) {
+    id
+    enabled
+    rule_obj
+    rule_str
+    global
+    tag
+  }
+}

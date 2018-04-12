@@ -1,0 +1,5700 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Actions /> without throwing 1`] = `
+Array [
+  .c8 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+
+.c8[type='checkbox'],
+.c8[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c8[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c8::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
+  opacity: 1;
+}
+
+.c7:selected + label::after {
+  opacity: 1;
+}
+
+.c7:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c9 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c9::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c5 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 label {
+  font-weight: 400;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c1 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c1 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.c14 {
+  width: 100%;
+}
+
+.c3 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 2rem;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c3:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c10 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+  color: rgb(73,73,73);
+  font-weight: 600;
+}
+
+.c10:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c10:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c11 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c11:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c11:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c13 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c13:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c13:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  color: rgb(73,73,73);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+@media only screen and (min-width:47.9375rem) {
+  .c12 {
+    width: 10rem;
+    display: table-cell;
+  }
+}
+
+<table
+    className="c0"
+>
+    <thead
+        className="c1"
+        disabled={undefined}
+        name="thdead"
+        selected={undefined}
+    >
+        <tr
+            className="c2"
+            disabled={undefined}
+            name="tr"
+            selected={undefined}
+        >
+            <th
+                className="c3"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            >
+                <div
+                    className="c4"
+                    role="group"
+                    style={undefined}
+                >
+                    <li
+                        className="c5"
+                    >
+                        <div
+                            checked={false}
+                            className="c6"
+                            disabled={false}
+                            id="t"
+                            onBlur={undefined}
+                            onChange={[Function]}
+                            type="checkbox"
+                        >
+                            <input
+                                checked={false}
+                                className="c7 c8"
+                                disabled={false}
+                                id="u"
+                                onBlur={undefined}
+                                onChange={[Function]}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c9"
+                                htmlFor="u"
+                            />
+                        </div>
+                    </li>
+                </div>
+            </th>
+            <th
+                className="c10"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Name 
+                </span>
+                <svg
+                    height="6"
+                    marginBottom="0.125rem"
+                    marginLeft="0.5625rem"
+                    style={
+                        Object {
+                            "transform": "rotate(180deg)",
+                          }
+                    }
+                    viewBox="0 0 9.6 6"
+                    width="9.6"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgb(73, 73, 73)"
+                    />
+                </svg>
+            </th>
+            <th
+                className="c11"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Status 
+                </span>
+            </th>
+            <th
+                className="c12"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Created 
+                </span>
+            </th>
+            <th
+                className="c13"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            />
+        </tr>
+    </thead>
+    <tbody
+        className="c14"
+        disabled={undefined}
+        name="tbody"
+        selected={undefined}
+    />
+</table>,
+  .c6 {
+  margin: 0;
+  color: rgb(73,73,73);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+}
+
+.c4 {
+  margin-bottom: 0.75rem;
+}
+
+.c2 {
+  padding: 8rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c5 {
+  color: rgb(151,151,151);
+  text-align: center;
+}
+
+.c0 {
+  width: calc(100% - 0.125rem);
+}
+
+<div
+    className="c0 c1"
+    disabled={false}
+    name="card"
+>
+    <div
+        className="c2"
+    >
+        <div
+            className="c3"
+        >
+            <div
+                className="c4"
+            >
+                <svg
+                    height={60}
+                    viewBox="0 0 79 60"
+                    width={79}
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                >
+                    <title>
+                        Guilty_Salamander
+                    </title>
+                    <desc>
+                        Created using Figma
+                    </desc>
+                    <use
+                        fill="#FAA427"
+                        transform="translate(23.8 22)"
+                        xlinkHref="#a"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(27.3 25.5)"
+                        xlinkHref="#b"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(4.8 32.1)"
+                        xlinkHref="#c"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(12.2 31.8)"
+                        xlinkHref="#d"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(54.4 31.9)"
+                        xlinkHref="#e"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(54.4 32)"
+                        xlinkHref="#f"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(15.8 26.8)"
+                        xlinkHref="#g"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(5)"
+                        xlinkHref="#h"
+                    />
+                    <use
+                        fill="#FAFBFC"
+                        transform="rotate(-15.13 41.037 5.45)"
+                        xlinkHref="#i"
+                    />
+                    <use
+                        fill="#412B13"
+                        transform="rotate(-15.13 67.273 -24.78)"
+                        xlinkHref="#j"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(2.2 8)"
+                        xlinkHref="#k"
+                    />
+                    <use
+                        fill="#FAFBFC"
+                        transform="rotate(-74.87 40.46 -20.511)"
+                        xlinkHref="#l"
+                    />
+                    <use
+                        fill="#412B13"
+                        transform="rotate(-74.87 41.364 -22.098)"
+                        xlinkHref="#m"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(52.1 8)"
+                        xlinkHref="#n"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(31.5 34.3)"
+                        xlinkHref="#o"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(14.3)"
+                        xlinkHref="#p"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(30.9 18.9)"
+                        xlinkHref="#q"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(37.6 18.9)"
+                        xlinkHref="#r"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(27.4 53.9)"
+                        xlinkHref="#s"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(39.1 53.9)"
+                        xlinkHref="#t"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(27.4 53.9)"
+                        xlinkHref="#u"
+                    />
+                    <use
+                        fill="#342013"
+                        transform="translate(28.6 26.2)"
+                        xlinkHref="#v"
+                    />
+                    <use
+                        fill="#FFF"
+                        transform="translate(32.6 28.7)"
+                        xlinkHref="#w"
+                    />
+                    <defs>
+                        <path
+                            d="M54.921 36.053L0 0l1.413 24.908c.359 6.249 5.752 11.145 12.283 11.145H54.92z"
+                            id="a"
+                        />
+                        <path
+                            d="M42.12 32.526L13.47 0 0 23.737c.282 4.924 4.527 8.778 9.672 8.778l32.448.01z"
+                            id="b"
+                        />
+                        <path
+                            d="M3.326 17.01a3.312 3.312 0 0 1-1.545-6.25C6.059 8.52 8.482 2.226 8.52 2.165a3.313 3.313 0 0 1 6.216 2.296c-.133.354-3.312 8.717-9.86 12.145-.475.26-1.008.4-1.55.403z"
+                            id="c"
+                        />
+                        <path
+                            d="M5.079 9.205A28.654 28.654 0 0 0 7.287 4.75a3.312 3.312 0 1 0-6.183-2.296C.781 3.234.412 3.996 0 4.734c1.33 1.181 3.544 3.152 5.079 4.471z"
+                            id="d"
+                        />
+                        <path
+                            d="M11.682 17.27a3.312 3.312 0 0 0 1.545-6.248C8.95 8.78 6.526 2.487 6.504 2.427A3.312 3.312 0 1 0 .316 4.723c.126.353 3.312 8.717 9.853 12.145.464.254.983.393 1.513.403z"
+                            id="e"
+                        />
+                        <path
+                            d="M2.45 9.01A28.33 28.33 0 0 1 .242 4.553a3.312 3.312 0 1 1 6.21-2.296c.326.78.695 1.54 1.104 2.28C6.187 5.719 3.973 7.69 2.45 9.009z"
+                            id="f"
+                        />
+                        <path
+                            d="M35.159 0H6.542A6.542 6.542 0 0 0 0 6.542v14.016a6.542 6.542 0 0 0 6.542 6.541h28.617a6.541 6.541 0 0 0 6.541-6.541V6.542A6.542 6.542 0 0 0 35.16 0z"
+                            id="g"
+                        />
+                        <path
+                            d="M54.254 0H9.026A9.026 9.026 0 0 0 0 9.026v17.207a9.026 9.026 0 0 0 9.026 9.025h45.228a9.026 9.026 0 0 0 9.025-9.026V9.027A9.026 9.026 0 0 0 54.253 0z"
+                            id="h"
+                        />
+                        <path
+                            d="M9.721 18.637c5.37 0 9.721-4.172 9.721-9.319C19.442 4.172 15.09 0 9.722 0 4.351 0 0 4.172 0 9.318c0 5.147 4.352 9.319 9.721 9.319z"
+                            id="i"
+                        />
+                        <path
+                            d="M5.19 9.959c2.865 0 5.188-2.23 5.188-4.98C10.378 2.23 8.055 0 5.19 0S0 2.23 0 4.98c0 2.75 2.323 4.979 5.19 4.979z"
+                            id="j"
+                        />
+                        <path
+                            d="M7.262.351C2.078 1.753-1.018 6.921.306 11.89l18.77-5.073C17.705 1.847 12.411-1.045 7.261.35z"
+                            id="k"
+                        />
+                        <path
+                            d="M9.318 19.442c5.147 0 9.319-4.352 9.319-9.72C18.637 4.351 14.465 0 9.318 0 4.172 0 0 4.352 0 9.721c0 5.37 4.172 9.721 9.318 9.721z"
+                            id="l"
+                        />
+                        <path
+                            d="M4.98 10.378c2.75 0 4.979-2.323 4.979-5.189S7.729 0 4.979 0C2.23 0 0 2.323 0 5.19c0 2.865 2.23 5.188 4.98 5.188z"
+                            id="m"
+                        />
+                        <path
+                            d="M11.819.351c5.178 1.402 8.28 6.57 6.95 11.538L0 6.816C1.347 1.847 6.635-1.045 11.819.35z"
+                            id="n"
+                        />
+                        <path
+                            d="M5.106 4.897A5.007 5.007 0 0 0 10.218 0H0a5.001 5.001 0 0 0 5.106 4.897z"
+                            id="o"
+                        />
+                        <path
+                            d="M0 0l22.258 18.498L44.516 0H0z"
+                            id="p"
+                        />
+                        <path
+                            d="M2.445 0A2.396 2.396 0 0 0 0 2.342h4.885a2.39 2.39 0 0 0-2.44-2.34z"
+                            id="q"
+                        />
+                        <path
+                            d="M2.462 0A2.396 2.396 0 0 0 0 2.343h4.885A2.39 2.39 0 0 0 2.462 0z"
+                            id="r"
+                        />
+                        <path
+                            d="M0 0h6.227v3.091A3.047 3.047 0 0 1 3.18 6.14h-.127A3.047 3.047 0 0 1 .006 3.09V0H0z"
+                            id="s"
+                        />
+                        <path
+                            d="M.006 0H6.22v3.091A3.047 3.047 0 0 1 3.174 6.14h-.127A3.047 3.047 0 0 1 0 3.09V0h.006z"
+                            id="t"
+                        />
+                        <path
+                            d="M31.328 0H0v1.474h31.328V0z"
+                            id="u"
+                        />
+                        <path
+                            d="M15.422 1.503A17.422 17.422 0 0 0 8.113.002 17.4 17.4 0 0 0 .805 1.503a1.457 1.457 0 0 0 .629 2.76h2.572V4.06a1.579 1.579 0 0 1 2.126-1.468 6.194 6.194 0 0 0 3.963 0 1.574 1.574 0 0 1 2.12 1.468v.204h2.572a1.463 1.463 0 0 0 .635-2.76z"
+                            id="v"
+                        />
+                        <path
+                            d="M6.072.104a6.194 6.194 0 0 1-3.963 0A1.579 1.579 0 0 0 0 1.573v.204h8.209v-.204A1.573 1.573 0 0 0 6.072.104z"
+                            id="w"
+                        />
+                    </defs>
+                </svg>
+            </div>
+            <h3
+                className="c5 c6"
+            >
+                You have no Snapshots
+            </h3>
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`renders <Item /> without throwing 1`] = `
+.c6 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+
+.c6[type='checkbox'],
+.c6[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c6[type='number']::-webkit-inner-spin-button,
+.c6[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c6[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c6[type='search']::-webkit-search-cancel-button,
+.c6[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c6::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c8 {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c11 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c5:checked + label::after {
+  opacity: 1;
+}
+
+.c5:selected + label::after {
+  opacity: 1;
+}
+
+.c5:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c5:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c5:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c7 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c7::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c4 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c3 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 label {
+  font-weight: 400;
+}
+
+.c2 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c1 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c1:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c1:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c9 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c9:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c9:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c10 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  border-bottom-width: 0;
+  border-left-width: 0.0625rem !important;
+}
+
+.c10:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c10:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c0 {
+  display: table-row;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+.c0:last-child {
+  box-shadow: none;
+}
+
+.c0:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+@media only screen and (min-width:47.9375rem) {
+  .c9 {
+    width: 10rem;
+    display: table-cell;
+  }
+}
+
+<tr
+  className="c0"
+  disabled={undefined}
+  name="tr"
+  selected={undefined}
+>
+  <td
+    className="c1"
+    disabled={undefined}
+    name="td"
+    selected={undefined}
+  >
+    <div
+      className="c2"
+      name={undefined}
+      role="group"
+      style={undefined}
+    >
+      <li
+        className="c3"
+      >
+        <div
+          checked={false}
+          className="c4"
+          disabled={false}
+          id="l"
+          onBlur={undefined}
+          type="checkbox"
+        >
+          <input
+            checked={false}
+            className="c5 c6"
+            disabled={false}
+            id="m"
+            onBlur={undefined}
+            type="checkbox"
+          />
+          <label
+            className="c7"
+            htmlFor="m"
+          />
+        </div>
+      </li>
+    </div>
+  </td>
+  <td
+    className="c1"
+    disabled={undefined}
+    name="td"
+    selected={undefined}
+  />
+  <td
+    className="c1"
+    disabled={undefined}
+    name="td"
+    selected={undefined}
+  >
+    <span
+      className="c8"
+      color={undefined}
+      size="0.75rem"
+    />
+     
+    
+  </td>
+  <td
+    className="c9"
+    disabled={undefined}
+    name="td"
+    selected={undefined}
+  >
+    almost NaN years
+  </td>
+  <td
+    className="c10"
+    disabled={undefined}
+    name="td"
+    selected={undefined}
+  >
+    <div
+      box={true}
+      className="c11"
+      onClick={[Function]}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+      tag="div"
+    >
+      <svg
+        height="16"
+        style={
+          Object {
+            "transform": "rotate(0deg)",
+          }
+        }
+        viewBox="0 0 4 16"
+        width="4"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
+          fill="rgb(73, 73, 73)"
+        />
+      </svg>
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`renders <Item {...item} /> without throwing 1`] = `
+.c6 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+
+.c6[type='checkbox'],
+.c6[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c6[type='number']::-webkit-inner-spin-button,
+.c6[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c6[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c6[type='search']::-webkit-search-cancel-button,
+.c6[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c6::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c8 {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0rem;
+  margin-left: 0rem;
+}
+
+.c11 {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c5:checked + label::after {
+  opacity: 1;
+}
+
+.c5:selected + label::after {
+  opacity: 1;
+}
+
+.c5:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c5:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c5:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c7 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c7::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c4 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c3 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 label {
+  font-weight: 400;
+}
+
+.c2 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c1 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c1:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c1:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c9 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  vertical-align: middle;
+  text-align: left;
+  border-bottom-width: 0;
+}
+
+.c9:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c9:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c10 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  border-bottom-width: 0;
+  border-left-width: 0.0625rem !important;
+}
+
+.c10:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c10:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c0 {
+  display: table-row;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+.c0:last-child {
+  box-shadow: none;
+}
+
+.c0:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+@media only screen and (min-width:47.9375rem) {
+  .c9 {
+    width: 10rem;
+    display: table-cell;
+  }
+}
+
+<tr
+  className="c0"
+  disabled={undefined}
+  name="tr"
+  selected={undefined}
+>
+  <td
+    className="c1"
+    disabled={undefined}
+    name="td"
+    selected={undefined}
+  >
+    <div
+      className="c2"
+      name="name"
+      role="group"
+      style={undefined}
+    >
+      <li
+        className="c3"
+      >
+        <div
+          checked={false}
+          className="c4"
+          disabled={false}
+          id="n"
+          onBlur={undefined}
+          type="checkbox"
+        >
+          <input
+            checked={false}
+            className="c5 c6"
+            disabled={false}
+            id="o"
+            onBlur={undefined}
+            type="checkbox"
+          />
+          <label
+            className="c7"
+            htmlFor="o"
+          />
+        </div>
+      </li>
+    </div>
+  </td>
+  <td
+    className="c1"
+    disabled={undefined}
+    name="td"
+    selected={undefined}
+  >
+    name
+  </td>
+  <td
+    className="c1"
+    disabled={undefined}
+    name="td"
+    selected={undefined}
+  >
+    <span
+      className="c8"
+      color={undefined}
+      size="0.75rem"
+    />
+     
+    Started
+  </td>
+  <td
+    className="c9"
+    disabled={undefined}
+    name="td"
+    selected={undefined}
+  >
+    5 months
+  </td>
+  <td
+    className="c10"
+    disabled={undefined}
+    name="td"
+    selected={undefined}
+  >
+    <div
+      box={true}
+      className="c11"
+      onClick={[Function]}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+      tag="div"
+    >
+      <svg
+        height="16"
+        style={
+          Object {
+            "transform": "rotate(0deg)",
+          }
+        }
+        viewBox="0 0 4 16"
+        width="4"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2,16a2,2,0,1,0-2-2A2,2,0,0,0,2,16Zm0-6A2,2,0,1,0,0,8,2,2,0,0,0,2,10ZM2,4A2,2,0,1,0,0,2,2,2,0,0,0,2,4Z"
+          fill="rgb(73, 73, 73)"
+        />
+      </svg>
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`renders <Item mutating /> without throwing 1`] = `
+.c5 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c6 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c7 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c9 {
+  color: rgb(73,73,73);
+  margin: 0;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c8 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  text-align: center;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c3 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  border-bottom-width: 0;
+}
+
+.c3:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+<table
+  className="c0"
+>
+  <tbody
+    className="c1"
+    disabled={undefined}
+    name="tbody"
+    selected={undefined}
+  >
+    <tr
+      className="c2"
+      disabled={undefined}
+      name="tr"
+      selected={undefined}
+    >
+      <td
+        className="c3"
+        colSpan="5"
+        disabled={undefined}
+        name="td"
+        selected={undefined}
+      >
+        <div
+          className="c4"
+        >
+          <svg
+            height="10"
+            width="28"
+          >
+            <rect
+              className="c5"
+              height="6"
+              width="6"
+              x="2"
+              y="2"
+            />
+            <rect
+              className="c6 c5"
+              height="6"
+              width="6"
+              x="11"
+              y="2"
+            />
+            <rect
+              className="c7 c5"
+              height="6"
+              width="6"
+              x="20"
+              y="2"
+            />
+          </svg>
+          <p
+            className="c8 c9"
+          >
+            Starting...
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className="c2"
+      disabled={undefined}
+      name="tr"
+      selected={undefined}
+    >
+      <td
+        className="c3"
+        colSpan="5"
+        disabled={undefined}
+        name="td"
+        selected={undefined}
+      >
+        <div
+          className="c4"
+        >
+          <svg
+            height="10"
+            width="28"
+          >
+            <rect
+              className="c5"
+              height="6"
+              width="6"
+              x="2"
+              y="2"
+            />
+            <rect
+              className="c6 c5"
+              height="6"
+              width="6"
+              x="11"
+              y="2"
+            />
+            <rect
+              className="c7 c5"
+              height="6"
+              width="6"
+              x="20"
+              y="2"
+            />
+          </svg>
+          <p
+            className="c8 c9"
+          >
+            Removing...
+          </p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`renders <SnapshotList /> without throwing 1`] = `
+Array [
+  .c8 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+
+.c8[type='checkbox'],
+.c8[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c8[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c8::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
+  opacity: 1;
+}
+
+.c7:selected + label::after {
+  opacity: 1;
+}
+
+.c7:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c9 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c9::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c5 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 label {
+  font-weight: 400;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c1 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c1 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.c14 {
+  width: 100%;
+}
+
+.c3 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 2rem;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c3:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c10 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+  color: rgb(73,73,73);
+  font-weight: 600;
+}
+
+.c10:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c10:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c11 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c11:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c11:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c13 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c13:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c13:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  color: rgb(73,73,73);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+@media only screen and (min-width:47.9375rem) {
+  .c12 {
+    width: 10rem;
+    display: table-cell;
+  }
+}
+
+<table
+    className="c0"
+>
+    <thead
+        className="c1"
+        disabled={undefined}
+        name="thdead"
+        selected={undefined}
+    >
+        <tr
+            className="c2"
+            disabled={undefined}
+            name="tr"
+            selected={undefined}
+        >
+            <th
+                className="c3"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            >
+                <div
+                    className="c4"
+                    role="group"
+                    style={undefined}
+                >
+                    <li
+                        className="c5"
+                    >
+                        <div
+                            checked={false}
+                            className="c6"
+                            disabled={false}
+                            id="q"
+                            onBlur={undefined}
+                            onChange={[Function]}
+                            type="checkbox"
+                        >
+                            <input
+                                checked={false}
+                                className="c7 c8"
+                                disabled={false}
+                                id="r"
+                                onBlur={undefined}
+                                onChange={[Function]}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c9"
+                                htmlFor="r"
+                            />
+                        </div>
+                    </li>
+                </div>
+            </th>
+            <th
+                className="c10"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Name 
+                </span>
+                <svg
+                    height="6"
+                    marginBottom="0.125rem"
+                    marginLeft="0.5625rem"
+                    style={
+                        Object {
+                            "transform": "rotate(180deg)",
+                          }
+                    }
+                    viewBox="0 0 9.6 6"
+                    width="9.6"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgb(73, 73, 73)"
+                    />
+                </svg>
+            </th>
+            <th
+                className="c11"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Status 
+                </span>
+            </th>
+            <th
+                className="c12"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Created 
+                </span>
+            </th>
+            <th
+                className="c13"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            />
+        </tr>
+    </thead>
+    <tbody
+        className="c14"
+        disabled={undefined}
+        name="tbody"
+        selected={undefined}
+    />
+</table>,
+  .c6 {
+  margin: 0;
+  color: rgb(73,73,73);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+}
+
+.c4 {
+  margin-bottom: 0.75rem;
+}
+
+.c2 {
+  padding: 8rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c5 {
+  color: rgb(151,151,151);
+  text-align: center;
+}
+
+.c0 {
+  width: calc(100% - 0.125rem);
+}
+
+<div
+    className="c0 c1"
+    disabled={false}
+    name="card"
+>
+    <div
+        className="c2"
+    >
+        <div
+            className="c3"
+        >
+            <div
+                className="c4"
+            >
+                <svg
+                    height={60}
+                    viewBox="0 0 79 60"
+                    width={79}
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                >
+                    <title>
+                        Guilty_Salamander
+                    </title>
+                    <desc>
+                        Created using Figma
+                    </desc>
+                    <use
+                        fill="#FAA427"
+                        transform="translate(23.8 22)"
+                        xlinkHref="#a"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(27.3 25.5)"
+                        xlinkHref="#b"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(4.8 32.1)"
+                        xlinkHref="#c"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(12.2 31.8)"
+                        xlinkHref="#d"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(54.4 31.9)"
+                        xlinkHref="#e"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(54.4 32)"
+                        xlinkHref="#f"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(15.8 26.8)"
+                        xlinkHref="#g"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(5)"
+                        xlinkHref="#h"
+                    />
+                    <use
+                        fill="#FAFBFC"
+                        transform="rotate(-15.13 41.037 5.45)"
+                        xlinkHref="#i"
+                    />
+                    <use
+                        fill="#412B13"
+                        transform="rotate(-15.13 67.273 -24.78)"
+                        xlinkHref="#j"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(2.2 8)"
+                        xlinkHref="#k"
+                    />
+                    <use
+                        fill="#FAFBFC"
+                        transform="rotate(-74.87 40.46 -20.511)"
+                        xlinkHref="#l"
+                    />
+                    <use
+                        fill="#412B13"
+                        transform="rotate(-74.87 41.364 -22.098)"
+                        xlinkHref="#m"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(52.1 8)"
+                        xlinkHref="#n"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(31.5 34.3)"
+                        xlinkHref="#o"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(14.3)"
+                        xlinkHref="#p"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(30.9 18.9)"
+                        xlinkHref="#q"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(37.6 18.9)"
+                        xlinkHref="#r"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(27.4 53.9)"
+                        xlinkHref="#s"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(39.1 53.9)"
+                        xlinkHref="#t"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(27.4 53.9)"
+                        xlinkHref="#u"
+                    />
+                    <use
+                        fill="#342013"
+                        transform="translate(28.6 26.2)"
+                        xlinkHref="#v"
+                    />
+                    <use
+                        fill="#FFF"
+                        transform="translate(32.6 28.7)"
+                        xlinkHref="#w"
+                    />
+                    <defs>
+                        <path
+                            d="M54.921 36.053L0 0l1.413 24.908c.359 6.249 5.752 11.145 12.283 11.145H54.92z"
+                            id="a"
+                        />
+                        <path
+                            d="M42.12 32.526L13.47 0 0 23.737c.282 4.924 4.527 8.778 9.672 8.778l32.448.01z"
+                            id="b"
+                        />
+                        <path
+                            d="M3.326 17.01a3.312 3.312 0 0 1-1.545-6.25C6.059 8.52 8.482 2.226 8.52 2.165a3.313 3.313 0 0 1 6.216 2.296c-.133.354-3.312 8.717-9.86 12.145-.475.26-1.008.4-1.55.403z"
+                            id="c"
+                        />
+                        <path
+                            d="M5.079 9.205A28.654 28.654 0 0 0 7.287 4.75a3.312 3.312 0 1 0-6.183-2.296C.781 3.234.412 3.996 0 4.734c1.33 1.181 3.544 3.152 5.079 4.471z"
+                            id="d"
+                        />
+                        <path
+                            d="M11.682 17.27a3.312 3.312 0 0 0 1.545-6.248C8.95 8.78 6.526 2.487 6.504 2.427A3.312 3.312 0 1 0 .316 4.723c.126.353 3.312 8.717 9.853 12.145.464.254.983.393 1.513.403z"
+                            id="e"
+                        />
+                        <path
+                            d="M2.45 9.01A28.33 28.33 0 0 1 .242 4.553a3.312 3.312 0 1 1 6.21-2.296c.326.78.695 1.54 1.104 2.28C6.187 5.719 3.973 7.69 2.45 9.009z"
+                            id="f"
+                        />
+                        <path
+                            d="M35.159 0H6.542A6.542 6.542 0 0 0 0 6.542v14.016a6.542 6.542 0 0 0 6.542 6.541h28.617a6.541 6.541 0 0 0 6.541-6.541V6.542A6.542 6.542 0 0 0 35.16 0z"
+                            id="g"
+                        />
+                        <path
+                            d="M54.254 0H9.026A9.026 9.026 0 0 0 0 9.026v17.207a9.026 9.026 0 0 0 9.026 9.025h45.228a9.026 9.026 0 0 0 9.025-9.026V9.027A9.026 9.026 0 0 0 54.253 0z"
+                            id="h"
+                        />
+                        <path
+                            d="M9.721 18.637c5.37 0 9.721-4.172 9.721-9.319C19.442 4.172 15.09 0 9.722 0 4.351 0 0 4.172 0 9.318c0 5.147 4.352 9.319 9.721 9.319z"
+                            id="i"
+                        />
+                        <path
+                            d="M5.19 9.959c2.865 0 5.188-2.23 5.188-4.98C10.378 2.23 8.055 0 5.19 0S0 2.23 0 4.98c0 2.75 2.323 4.979 5.19 4.979z"
+                            id="j"
+                        />
+                        <path
+                            d="M7.262.351C2.078 1.753-1.018 6.921.306 11.89l18.77-5.073C17.705 1.847 12.411-1.045 7.261.35z"
+                            id="k"
+                        />
+                        <path
+                            d="M9.318 19.442c5.147 0 9.319-4.352 9.319-9.72C18.637 4.351 14.465 0 9.318 0 4.172 0 0 4.352 0 9.721c0 5.37 4.172 9.721 9.318 9.721z"
+                            id="l"
+                        />
+                        <path
+                            d="M4.98 10.378c2.75 0 4.979-2.323 4.979-5.189S7.729 0 4.979 0C2.23 0 0 2.323 0 5.19c0 2.865 2.23 5.188 4.98 5.188z"
+                            id="m"
+                        />
+                        <path
+                            d="M11.819.351c5.178 1.402 8.28 6.57 6.95 11.538L0 6.816C1.347 1.847 6.635-1.045 11.819.35z"
+                            id="n"
+                        />
+                        <path
+                            d="M5.106 4.897A5.007 5.007 0 0 0 10.218 0H0a5.001 5.001 0 0 0 5.106 4.897z"
+                            id="o"
+                        />
+                        <path
+                            d="M0 0l22.258 18.498L44.516 0H0z"
+                            id="p"
+                        />
+                        <path
+                            d="M2.445 0A2.396 2.396 0 0 0 0 2.342h4.885a2.39 2.39 0 0 0-2.44-2.34z"
+                            id="q"
+                        />
+                        <path
+                            d="M2.462 0A2.396 2.396 0 0 0 0 2.343h4.885A2.39 2.39 0 0 0 2.462 0z"
+                            id="r"
+                        />
+                        <path
+                            d="M0 0h6.227v3.091A3.047 3.047 0 0 1 3.18 6.14h-.127A3.047 3.047 0 0 1 .006 3.09V0H0z"
+                            id="s"
+                        />
+                        <path
+                            d="M.006 0H6.22v3.091A3.047 3.047 0 0 1 3.174 6.14h-.127A3.047 3.047 0 0 1 0 3.09V0h.006z"
+                            id="t"
+                        />
+                        <path
+                            d="M31.328 0H0v1.474h31.328V0z"
+                            id="u"
+                        />
+                        <path
+                            d="M15.422 1.503A17.422 17.422 0 0 0 8.113.002 17.4 17.4 0 0 0 .805 1.503a1.457 1.457 0 0 0 .629 2.76h2.572V4.06a1.579 1.579 0 0 1 2.126-1.468 6.194 6.194 0 0 0 3.963 0 1.574 1.574 0 0 1 2.12 1.468v.204h2.572a1.463 1.463 0 0 0 .635-2.76z"
+                            id="v"
+                        />
+                        <path
+                            d="M6.072.104a6.194 6.194 0 0 1-3.963 0A1.579 1.579 0 0 0 0 1.573v.204h8.209v-.204A1.573 1.573 0 0 0 6.072.104z"
+                            id="w"
+                        />
+                    </defs>
+                </svg>
+            </div>
+            <h3
+                className="c5 c6"
+            >
+                You have no Snapshots
+            </h3>
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`renders <SnapshotList allSelected /> without throwing 1`] = `
+Array [
+  .c8 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+
+.c8[type='checkbox'],
+.c8[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c8[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c8::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
+  opacity: 1;
+}
+
+.c7:selected + label::after {
+  opacity: 1;
+}
+
+.c7:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c9 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c9::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c5 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 label {
+  font-weight: 400;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c1 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c1 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.c14 {
+  width: 100%;
+}
+
+.c3 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 2rem;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c3:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c10 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+  color: rgb(73,73,73);
+  font-weight: 600;
+}
+
+.c10:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c10:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c11 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c11:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c11:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c13 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c13:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c13:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  color: rgb(73,73,73);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+@media only screen and (min-width:47.9375rem) {
+  .c12 {
+    width: 10rem;
+    display: table-cell;
+  }
+}
+
+<table
+    className="c0"
+>
+    <thead
+        className="c1"
+        disabled={undefined}
+        name="thdead"
+        selected={undefined}
+    >
+        <tr
+            className="c2"
+            disabled={undefined}
+            name="tr"
+            selected={undefined}
+        >
+            <th
+                className="c3"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            >
+                <div
+                    className="c4"
+                    role="group"
+                    style={undefined}
+                >
+                    <li
+                        className="c5"
+                    >
+                        <div
+                            checked={true}
+                            className="c6"
+                            disabled={false}
+                            id="F"
+                            onBlur={undefined}
+                            onChange={[Function]}
+                            type="checkbox"
+                        >
+                            <input
+                                checked={true}
+                                className="c7 c8"
+                                disabled={false}
+                                id="G"
+                                onBlur={undefined}
+                                onChange={[Function]}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c9"
+                                htmlFor="G"
+                            />
+                        </div>
+                    </li>
+                </div>
+            </th>
+            <th
+                className="c10"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Name 
+                </span>
+                <svg
+                    height="6"
+                    marginBottom="0.125rem"
+                    marginLeft="0.5625rem"
+                    style={
+                        Object {
+                            "transform": "rotate(180deg)",
+                          }
+                    }
+                    viewBox="0 0 9.6 6"
+                    width="9.6"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgb(73, 73, 73)"
+                    />
+                </svg>
+            </th>
+            <th
+                className="c11"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Status 
+                </span>
+            </th>
+            <th
+                className="c12"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Created 
+                </span>
+            </th>
+            <th
+                className="c13"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            />
+        </tr>
+    </thead>
+    <tbody
+        className="c14"
+        disabled={undefined}
+        name="tbody"
+        selected={undefined}
+    />
+</table>,
+  .c6 {
+  margin: 0;
+  color: rgb(73,73,73);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+}
+
+.c4 {
+  margin-bottom: 0.75rem;
+}
+
+.c2 {
+  padding: 8rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c5 {
+  color: rgb(151,151,151);
+  text-align: center;
+}
+
+.c0 {
+  width: calc(100% - 0.125rem);
+}
+
+<div
+    className="c0 c1"
+    disabled={false}
+    name="card"
+>
+    <div
+        className="c2"
+    >
+        <div
+            className="c3"
+        >
+            <div
+                className="c4"
+            >
+                <svg
+                    height={60}
+                    viewBox="0 0 79 60"
+                    width={79}
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                >
+                    <title>
+                        Guilty_Salamander
+                    </title>
+                    <desc>
+                        Created using Figma
+                    </desc>
+                    <use
+                        fill="#FAA427"
+                        transform="translate(23.8 22)"
+                        xlinkHref="#a"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(27.3 25.5)"
+                        xlinkHref="#b"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(4.8 32.1)"
+                        xlinkHref="#c"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(12.2 31.8)"
+                        xlinkHref="#d"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(54.4 31.9)"
+                        xlinkHref="#e"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(54.4 32)"
+                        xlinkHref="#f"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(15.8 26.8)"
+                        xlinkHref="#g"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(5)"
+                        xlinkHref="#h"
+                    />
+                    <use
+                        fill="#FAFBFC"
+                        transform="rotate(-15.13 41.037 5.45)"
+                        xlinkHref="#i"
+                    />
+                    <use
+                        fill="#412B13"
+                        transform="rotate(-15.13 67.273 -24.78)"
+                        xlinkHref="#j"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(2.2 8)"
+                        xlinkHref="#k"
+                    />
+                    <use
+                        fill="#FAFBFC"
+                        transform="rotate(-74.87 40.46 -20.511)"
+                        xlinkHref="#l"
+                    />
+                    <use
+                        fill="#412B13"
+                        transform="rotate(-74.87 41.364 -22.098)"
+                        xlinkHref="#m"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(52.1 8)"
+                        xlinkHref="#n"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(31.5 34.3)"
+                        xlinkHref="#o"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(14.3)"
+                        xlinkHref="#p"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(30.9 18.9)"
+                        xlinkHref="#q"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(37.6 18.9)"
+                        xlinkHref="#r"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(27.4 53.9)"
+                        xlinkHref="#s"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(39.1 53.9)"
+                        xlinkHref="#t"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(27.4 53.9)"
+                        xlinkHref="#u"
+                    />
+                    <use
+                        fill="#342013"
+                        transform="translate(28.6 26.2)"
+                        xlinkHref="#v"
+                    />
+                    <use
+                        fill="#FFF"
+                        transform="translate(32.6 28.7)"
+                        xlinkHref="#w"
+                    />
+                    <defs>
+                        <path
+                            d="M54.921 36.053L0 0l1.413 24.908c.359 6.249 5.752 11.145 12.283 11.145H54.92z"
+                            id="a"
+                        />
+                        <path
+                            d="M42.12 32.526L13.47 0 0 23.737c.282 4.924 4.527 8.778 9.672 8.778l32.448.01z"
+                            id="b"
+                        />
+                        <path
+                            d="M3.326 17.01a3.312 3.312 0 0 1-1.545-6.25C6.059 8.52 8.482 2.226 8.52 2.165a3.313 3.313 0 0 1 6.216 2.296c-.133.354-3.312 8.717-9.86 12.145-.475.26-1.008.4-1.55.403z"
+                            id="c"
+                        />
+                        <path
+                            d="M5.079 9.205A28.654 28.654 0 0 0 7.287 4.75a3.312 3.312 0 1 0-6.183-2.296C.781 3.234.412 3.996 0 4.734c1.33 1.181 3.544 3.152 5.079 4.471z"
+                            id="d"
+                        />
+                        <path
+                            d="M11.682 17.27a3.312 3.312 0 0 0 1.545-6.248C8.95 8.78 6.526 2.487 6.504 2.427A3.312 3.312 0 1 0 .316 4.723c.126.353 3.312 8.717 9.853 12.145.464.254.983.393 1.513.403z"
+                            id="e"
+                        />
+                        <path
+                            d="M2.45 9.01A28.33 28.33 0 0 1 .242 4.553a3.312 3.312 0 1 1 6.21-2.296c.326.78.695 1.54 1.104 2.28C6.187 5.719 3.973 7.69 2.45 9.009z"
+                            id="f"
+                        />
+                        <path
+                            d="M35.159 0H6.542A6.542 6.542 0 0 0 0 6.542v14.016a6.542 6.542 0 0 0 6.542 6.541h28.617a6.541 6.541 0 0 0 6.541-6.541V6.542A6.542 6.542 0 0 0 35.16 0z"
+                            id="g"
+                        />
+                        <path
+                            d="M54.254 0H9.026A9.026 9.026 0 0 0 0 9.026v17.207a9.026 9.026 0 0 0 9.026 9.025h45.228a9.026 9.026 0 0 0 9.025-9.026V9.027A9.026 9.026 0 0 0 54.253 0z"
+                            id="h"
+                        />
+                        <path
+                            d="M9.721 18.637c5.37 0 9.721-4.172 9.721-9.319C19.442 4.172 15.09 0 9.722 0 4.351 0 0 4.172 0 9.318c0 5.147 4.352 9.319 9.721 9.319z"
+                            id="i"
+                        />
+                        <path
+                            d="M5.19 9.959c2.865 0 5.188-2.23 5.188-4.98C10.378 2.23 8.055 0 5.19 0S0 2.23 0 4.98c0 2.75 2.323 4.979 5.19 4.979z"
+                            id="j"
+                        />
+                        <path
+                            d="M7.262.351C2.078 1.753-1.018 6.921.306 11.89l18.77-5.073C17.705 1.847 12.411-1.045 7.261.35z"
+                            id="k"
+                        />
+                        <path
+                            d="M9.318 19.442c5.147 0 9.319-4.352 9.319-9.72C18.637 4.351 14.465 0 9.318 0 4.172 0 0 4.352 0 9.721c0 5.37 4.172 9.721 9.318 9.721z"
+                            id="l"
+                        />
+                        <path
+                            d="M4.98 10.378c2.75 0 4.979-2.323 4.979-5.189S7.729 0 4.979 0C2.23 0 0 2.323 0 5.19c0 2.865 2.23 5.188 4.98 5.188z"
+                            id="m"
+                        />
+                        <path
+                            d="M11.819.351c5.178 1.402 8.28 6.57 6.95 11.538L0 6.816C1.347 1.847 6.635-1.045 11.819.35z"
+                            id="n"
+                        />
+                        <path
+                            d="M5.106 4.897A5.007 5.007 0 0 0 10.218 0H0a5.001 5.001 0 0 0 5.106 4.897z"
+                            id="o"
+                        />
+                        <path
+                            d="M0 0l22.258 18.498L44.516 0H0z"
+                            id="p"
+                        />
+                        <path
+                            d="M2.445 0A2.396 2.396 0 0 0 0 2.342h4.885a2.39 2.39 0 0 0-2.44-2.34z"
+                            id="q"
+                        />
+                        <path
+                            d="M2.462 0A2.396 2.396 0 0 0 0 2.343h4.885A2.39 2.39 0 0 0 2.462 0z"
+                            id="r"
+                        />
+                        <path
+                            d="M0 0h6.227v3.091A3.047 3.047 0 0 1 3.18 6.14h-.127A3.047 3.047 0 0 1 .006 3.09V0H0z"
+                            id="s"
+                        />
+                        <path
+                            d="M.006 0H6.22v3.091A3.047 3.047 0 0 1 3.174 6.14h-.127A3.047 3.047 0 0 1 0 3.09V0h.006z"
+                            id="t"
+                        />
+                        <path
+                            d="M31.328 0H0v1.474h31.328V0z"
+                            id="u"
+                        />
+                        <path
+                            d="M15.422 1.503A17.422 17.422 0 0 0 8.113.002 17.4 17.4 0 0 0 .805 1.503a1.457 1.457 0 0 0 .629 2.76h2.572V4.06a1.579 1.579 0 0 1 2.126-1.468 6.194 6.194 0 0 0 3.963 0 1.574 1.574 0 0 1 2.12 1.468v.204h2.572a1.463 1.463 0 0 0 .635-2.76z"
+                            id="v"
+                        />
+                        <path
+                            d="M6.072.104a6.194 6.194 0 0 1-3.963 0A1.579 1.579 0 0 0 0 1.573v.204h8.209v-.204A1.573 1.573 0 0 0 6.072.104z"
+                            id="w"
+                        />
+                    </defs>
+                </svg>
+            </div>
+            <h3
+                className="c5 c6"
+            >
+                You have no Snapshots
+            </h3>
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`renders <SnapshotList sortBy /> without throwing 1`] = `
+Array [
+  .c8 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+
+.c8[type='checkbox'],
+.c8[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c8[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c8::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
+  opacity: 1;
+}
+
+.c7:selected + label::after {
+  opacity: 1;
+}
+
+.c7:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c9 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c9::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c5 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 label {
+  font-weight: 400;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c1 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c1 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.c14 {
+  width: 100%;
+}
+
+.c3 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 2rem;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c3:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c13 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c13:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c13:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c10 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c10:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c10:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c11 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+  color: rgb(73,73,73);
+  font-weight: 600;
+}
+
+.c11:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c11:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  color: rgb(73,73,73);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+@media only screen and (min-width:47.9375rem) {
+  .c12 {
+    width: 10rem;
+    display: table-cell;
+  }
+}
+
+<table
+    className="c0"
+>
+    <thead
+        className="c1"
+        disabled={undefined}
+        name="thdead"
+        selected={undefined}
+    >
+        <tr
+            className="c2"
+            disabled={undefined}
+            name="tr"
+            selected={undefined}
+        >
+            <th
+                className="c3"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            >
+                <div
+                    className="c4"
+                    role="group"
+                    style={undefined}
+                >
+                    <li
+                        className="c5"
+                    >
+                        <div
+                            checked={false}
+                            className="c6"
+                            disabled={false}
+                            id="w"
+                            onBlur={undefined}
+                            onChange={[Function]}
+                            type="checkbox"
+                        >
+                            <input
+                                checked={false}
+                                className="c7 c8"
+                                disabled={false}
+                                id="x"
+                                onBlur={undefined}
+                                onChange={[Function]}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c9"
+                                htmlFor="x"
+                            />
+                        </div>
+                    </li>
+                </div>
+            </th>
+            <th
+                className="c10"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Name 
+                </span>
+            </th>
+            <th
+                className="c11"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Status 
+                </span>
+                <svg
+                    height="6"
+                    marginBottom="0.125rem"
+                    marginLeft="0.5625rem"
+                    style={
+                        Object {
+                            "transform": "rotate(180deg)",
+                          }
+                    }
+                    viewBox="0 0 9.6 6"
+                    width="9.6"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgb(73, 73, 73)"
+                    />
+                </svg>
+            </th>
+            <th
+                className="c12"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Created 
+                </span>
+            </th>
+            <th
+                className="c13"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            />
+        </tr>
+    </thead>
+    <tbody
+        className="c14"
+        disabled={undefined}
+        name="tbody"
+        selected={undefined}
+    />
+</table>,
+  .c6 {
+  margin: 0;
+  color: rgb(73,73,73);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+}
+
+.c4 {
+  margin-bottom: 0.75rem;
+}
+
+.c2 {
+  padding: 8rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c5 {
+  color: rgb(151,151,151);
+  text-align: center;
+}
+
+.c0 {
+  width: calc(100% - 0.125rem);
+}
+
+<div
+    className="c0 c1"
+    disabled={false}
+    name="card"
+>
+    <div
+        className="c2"
+    >
+        <div
+            className="c3"
+        >
+            <div
+                className="c4"
+            >
+                <svg
+                    height={60}
+                    viewBox="0 0 79 60"
+                    width={79}
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                >
+                    <title>
+                        Guilty_Salamander
+                    </title>
+                    <desc>
+                        Created using Figma
+                    </desc>
+                    <use
+                        fill="#FAA427"
+                        transform="translate(23.8 22)"
+                        xlinkHref="#a"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(27.3 25.5)"
+                        xlinkHref="#b"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(4.8 32.1)"
+                        xlinkHref="#c"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(12.2 31.8)"
+                        xlinkHref="#d"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(54.4 31.9)"
+                        xlinkHref="#e"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(54.4 32)"
+                        xlinkHref="#f"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(15.8 26.8)"
+                        xlinkHref="#g"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(5)"
+                        xlinkHref="#h"
+                    />
+                    <use
+                        fill="#FAFBFC"
+                        transform="rotate(-15.13 41.037 5.45)"
+                        xlinkHref="#i"
+                    />
+                    <use
+                        fill="#412B13"
+                        transform="rotate(-15.13 67.273 -24.78)"
+                        xlinkHref="#j"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(2.2 8)"
+                        xlinkHref="#k"
+                    />
+                    <use
+                        fill="#FAFBFC"
+                        transform="rotate(-74.87 40.46 -20.511)"
+                        xlinkHref="#l"
+                    />
+                    <use
+                        fill="#412B13"
+                        transform="rotate(-74.87 41.364 -22.098)"
+                        xlinkHref="#m"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(52.1 8)"
+                        xlinkHref="#n"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(31.5 34.3)"
+                        xlinkHref="#o"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(14.3)"
+                        xlinkHref="#p"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(30.9 18.9)"
+                        xlinkHref="#q"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(37.6 18.9)"
+                        xlinkHref="#r"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(27.4 53.9)"
+                        xlinkHref="#s"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(39.1 53.9)"
+                        xlinkHref="#t"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(27.4 53.9)"
+                        xlinkHref="#u"
+                    />
+                    <use
+                        fill="#342013"
+                        transform="translate(28.6 26.2)"
+                        xlinkHref="#v"
+                    />
+                    <use
+                        fill="#FFF"
+                        transform="translate(32.6 28.7)"
+                        xlinkHref="#w"
+                    />
+                    <defs>
+                        <path
+                            d="M54.921 36.053L0 0l1.413 24.908c.359 6.249 5.752 11.145 12.283 11.145H54.92z"
+                            id="a"
+                        />
+                        <path
+                            d="M42.12 32.526L13.47 0 0 23.737c.282 4.924 4.527 8.778 9.672 8.778l32.448.01z"
+                            id="b"
+                        />
+                        <path
+                            d="M3.326 17.01a3.312 3.312 0 0 1-1.545-6.25C6.059 8.52 8.482 2.226 8.52 2.165a3.313 3.313 0 0 1 6.216 2.296c-.133.354-3.312 8.717-9.86 12.145-.475.26-1.008.4-1.55.403z"
+                            id="c"
+                        />
+                        <path
+                            d="M5.079 9.205A28.654 28.654 0 0 0 7.287 4.75a3.312 3.312 0 1 0-6.183-2.296C.781 3.234.412 3.996 0 4.734c1.33 1.181 3.544 3.152 5.079 4.471z"
+                            id="d"
+                        />
+                        <path
+                            d="M11.682 17.27a3.312 3.312 0 0 0 1.545-6.248C8.95 8.78 6.526 2.487 6.504 2.427A3.312 3.312 0 1 0 .316 4.723c.126.353 3.312 8.717 9.853 12.145.464.254.983.393 1.513.403z"
+                            id="e"
+                        />
+                        <path
+                            d="M2.45 9.01A28.33 28.33 0 0 1 .242 4.553a3.312 3.312 0 1 1 6.21-2.296c.326.78.695 1.54 1.104 2.28C6.187 5.719 3.973 7.69 2.45 9.009z"
+                            id="f"
+                        />
+                        <path
+                            d="M35.159 0H6.542A6.542 6.542 0 0 0 0 6.542v14.016a6.542 6.542 0 0 0 6.542 6.541h28.617a6.541 6.541 0 0 0 6.541-6.541V6.542A6.542 6.542 0 0 0 35.16 0z"
+                            id="g"
+                        />
+                        <path
+                            d="M54.254 0H9.026A9.026 9.026 0 0 0 0 9.026v17.207a9.026 9.026 0 0 0 9.026 9.025h45.228a9.026 9.026 0 0 0 9.025-9.026V9.027A9.026 9.026 0 0 0 54.253 0z"
+                            id="h"
+                        />
+                        <path
+                            d="M9.721 18.637c5.37 0 9.721-4.172 9.721-9.319C19.442 4.172 15.09 0 9.722 0 4.351 0 0 4.172 0 9.318c0 5.147 4.352 9.319 9.721 9.319z"
+                            id="i"
+                        />
+                        <path
+                            d="M5.19 9.959c2.865 0 5.188-2.23 5.188-4.98C10.378 2.23 8.055 0 5.19 0S0 2.23 0 4.98c0 2.75 2.323 4.979 5.19 4.979z"
+                            id="j"
+                        />
+                        <path
+                            d="M7.262.351C2.078 1.753-1.018 6.921.306 11.89l18.77-5.073C17.705 1.847 12.411-1.045 7.261.35z"
+                            id="k"
+                        />
+                        <path
+                            d="M9.318 19.442c5.147 0 9.319-4.352 9.319-9.72C18.637 4.351 14.465 0 9.318 0 4.172 0 0 4.352 0 9.721c0 5.37 4.172 9.721 9.318 9.721z"
+                            id="l"
+                        />
+                        <path
+                            d="M4.98 10.378c2.75 0 4.979-2.323 4.979-5.189S7.729 0 4.979 0C2.23 0 0 2.323 0 5.19c0 2.865 2.23 5.188 4.98 5.188z"
+                            id="m"
+                        />
+                        <path
+                            d="M11.819.351c5.178 1.402 8.28 6.57 6.95 11.538L0 6.816C1.347 1.847 6.635-1.045 11.819.35z"
+                            id="n"
+                        />
+                        <path
+                            d="M5.106 4.897A5.007 5.007 0 0 0 10.218 0H0a5.001 5.001 0 0 0 5.106 4.897z"
+                            id="o"
+                        />
+                        <path
+                            d="M0 0l22.258 18.498L44.516 0H0z"
+                            id="p"
+                        />
+                        <path
+                            d="M2.445 0A2.396 2.396 0 0 0 0 2.342h4.885a2.39 2.39 0 0 0-2.44-2.34z"
+                            id="q"
+                        />
+                        <path
+                            d="M2.462 0A2.396 2.396 0 0 0 0 2.343h4.885A2.39 2.39 0 0 0 2.462 0z"
+                            id="r"
+                        />
+                        <path
+                            d="M0 0h6.227v3.091A3.047 3.047 0 0 1 3.18 6.14h-.127A3.047 3.047 0 0 1 .006 3.09V0H0z"
+                            id="s"
+                        />
+                        <path
+                            d="M.006 0H6.22v3.091A3.047 3.047 0 0 1 3.174 6.14h-.127A3.047 3.047 0 0 1 0 3.09V0h.006z"
+                            id="t"
+                        />
+                        <path
+                            d="M31.328 0H0v1.474h31.328V0z"
+                            id="u"
+                        />
+                        <path
+                            d="M15.422 1.503A17.422 17.422 0 0 0 8.113.002 17.4 17.4 0 0 0 .805 1.503a1.457 1.457 0 0 0 .629 2.76h2.572V4.06a1.579 1.579 0 0 1 2.126-1.468 6.194 6.194 0 0 0 3.963 0 1.574 1.574 0 0 1 2.12 1.468v.204h2.572a1.463 1.463 0 0 0 .635-2.76z"
+                            id="v"
+                        />
+                        <path
+                            d="M6.072.104a6.194 6.194 0 0 1-3.963 0A1.579 1.579 0 0 0 0 1.573v.204h8.209v-.204A1.573 1.573 0 0 0 6.072.104z"
+                            id="w"
+                        />
+                    </defs>
+                </svg>
+            </div>
+            <h3
+                className="c5 c6"
+            >
+                You have no Snapshots
+            </h3>
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`renders <SnapshotList sortBy sortOrder /> without throwing 1`] = `
+Array [
+  .c8 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+
+.c8[type='checkbox'],
+.c8[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c8[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c8::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
+  opacity: 1;
+}
+
+.c7:selected + label::after {
+  opacity: 1;
+}
+
+.c7:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c9 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c9::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c5 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 label {
+  font-weight: 400;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c1 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c1 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.c14 {
+  width: 100%;
+}
+
+.c3 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 2rem;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c3:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c13 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c13:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c13:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c10 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c10:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c10:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c11 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+  color: rgb(73,73,73);
+  font-weight: 600;
+}
+
+.c11:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c11:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  color: rgb(73,73,73);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+@media only screen and (min-width:47.9375rem) {
+  .c12 {
+    width: 10rem;
+    display: table-cell;
+  }
+}
+
+<table
+    className="c0"
+>
+    <thead
+        className="c1"
+        disabled={undefined}
+        name="thdead"
+        selected={undefined}
+    >
+        <tr
+            className="c2"
+            disabled={undefined}
+            name="tr"
+            selected={undefined}
+        >
+            <th
+                className="c3"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            >
+                <div
+                    className="c4"
+                    role="group"
+                    style={undefined}
+                >
+                    <li
+                        className="c5"
+                    >
+                        <div
+                            checked={false}
+                            className="c6"
+                            disabled={false}
+                            id="z"
+                            onBlur={undefined}
+                            onChange={[Function]}
+                            type="checkbox"
+                        >
+                            <input
+                                checked={false}
+                                className="c7 c8"
+                                disabled={false}
+                                id="A"
+                                onBlur={undefined}
+                                onChange={[Function]}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c9"
+                                htmlFor="A"
+                            />
+                        </div>
+                    </li>
+                </div>
+            </th>
+            <th
+                className="c10"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Name 
+                </span>
+            </th>
+            <th
+                className="c11"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Status 
+                </span>
+                <svg
+                    height="6"
+                    marginBottom="0.125rem"
+                    marginLeft="0.5625rem"
+                    style={
+                        Object {
+                            "transform": "rotate(0deg)",
+                          }
+                    }
+                    viewBox="0 0 9.6 6"
+                    width="9.6"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgb(73, 73, 73)"
+                    />
+                </svg>
+            </th>
+            <th
+                className="c12"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Created 
+                </span>
+            </th>
+            <th
+                className="c13"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            />
+        </tr>
+    </thead>
+    <tbody
+        className="c14"
+        disabled={undefined}
+        name="tbody"
+        selected={undefined}
+    />
+</table>,
+  .c6 {
+  margin: 0;
+  color: rgb(73,73,73);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+}
+
+.c4 {
+  margin-bottom: 0.75rem;
+}
+
+.c2 {
+  padding: 8rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c5 {
+  color: rgb(151,151,151);
+  text-align: center;
+}
+
+.c0 {
+  width: calc(100% - 0.125rem);
+}
+
+<div
+    className="c0 c1"
+    disabled={false}
+    name="card"
+>
+    <div
+        className="c2"
+    >
+        <div
+            className="c3"
+        >
+            <div
+                className="c4"
+            >
+                <svg
+                    height={60}
+                    viewBox="0 0 79 60"
+                    width={79}
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                >
+                    <title>
+                        Guilty_Salamander
+                    </title>
+                    <desc>
+                        Created using Figma
+                    </desc>
+                    <use
+                        fill="#FAA427"
+                        transform="translate(23.8 22)"
+                        xlinkHref="#a"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(27.3 25.5)"
+                        xlinkHref="#b"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(4.8 32.1)"
+                        xlinkHref="#c"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(12.2 31.8)"
+                        xlinkHref="#d"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(54.4 31.9)"
+                        xlinkHref="#e"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(54.4 32)"
+                        xlinkHref="#f"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(15.8 26.8)"
+                        xlinkHref="#g"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(5)"
+                        xlinkHref="#h"
+                    />
+                    <use
+                        fill="#FAFBFC"
+                        transform="rotate(-15.13 41.037 5.45)"
+                        xlinkHref="#i"
+                    />
+                    <use
+                        fill="#412B13"
+                        transform="rotate(-15.13 67.273 -24.78)"
+                        xlinkHref="#j"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(2.2 8)"
+                        xlinkHref="#k"
+                    />
+                    <use
+                        fill="#FAFBFC"
+                        transform="rotate(-74.87 40.46 -20.511)"
+                        xlinkHref="#l"
+                    />
+                    <use
+                        fill="#412B13"
+                        transform="rotate(-74.87 41.364 -22.098)"
+                        xlinkHref="#m"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(52.1 8)"
+                        xlinkHref="#n"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(31.5 34.3)"
+                        xlinkHref="#o"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(14.3)"
+                        xlinkHref="#p"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(30.9 18.9)"
+                        xlinkHref="#q"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(37.6 18.9)"
+                        xlinkHref="#r"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(27.4 53.9)"
+                        xlinkHref="#s"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(39.1 53.9)"
+                        xlinkHref="#t"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(27.4 53.9)"
+                        xlinkHref="#u"
+                    />
+                    <use
+                        fill="#342013"
+                        transform="translate(28.6 26.2)"
+                        xlinkHref="#v"
+                    />
+                    <use
+                        fill="#FFF"
+                        transform="translate(32.6 28.7)"
+                        xlinkHref="#w"
+                    />
+                    <defs>
+                        <path
+                            d="M54.921 36.053L0 0l1.413 24.908c.359 6.249 5.752 11.145 12.283 11.145H54.92z"
+                            id="a"
+                        />
+                        <path
+                            d="M42.12 32.526L13.47 0 0 23.737c.282 4.924 4.527 8.778 9.672 8.778l32.448.01z"
+                            id="b"
+                        />
+                        <path
+                            d="M3.326 17.01a3.312 3.312 0 0 1-1.545-6.25C6.059 8.52 8.482 2.226 8.52 2.165a3.313 3.313 0 0 1 6.216 2.296c-.133.354-3.312 8.717-9.86 12.145-.475.26-1.008.4-1.55.403z"
+                            id="c"
+                        />
+                        <path
+                            d="M5.079 9.205A28.654 28.654 0 0 0 7.287 4.75a3.312 3.312 0 1 0-6.183-2.296C.781 3.234.412 3.996 0 4.734c1.33 1.181 3.544 3.152 5.079 4.471z"
+                            id="d"
+                        />
+                        <path
+                            d="M11.682 17.27a3.312 3.312 0 0 0 1.545-6.248C8.95 8.78 6.526 2.487 6.504 2.427A3.312 3.312 0 1 0 .316 4.723c.126.353 3.312 8.717 9.853 12.145.464.254.983.393 1.513.403z"
+                            id="e"
+                        />
+                        <path
+                            d="M2.45 9.01A28.33 28.33 0 0 1 .242 4.553a3.312 3.312 0 1 1 6.21-2.296c.326.78.695 1.54 1.104 2.28C6.187 5.719 3.973 7.69 2.45 9.009z"
+                            id="f"
+                        />
+                        <path
+                            d="M35.159 0H6.542A6.542 6.542 0 0 0 0 6.542v14.016a6.542 6.542 0 0 0 6.542 6.541h28.617a6.541 6.541 0 0 0 6.541-6.541V6.542A6.542 6.542 0 0 0 35.16 0z"
+                            id="g"
+                        />
+                        <path
+                            d="M54.254 0H9.026A9.026 9.026 0 0 0 0 9.026v17.207a9.026 9.026 0 0 0 9.026 9.025h45.228a9.026 9.026 0 0 0 9.025-9.026V9.027A9.026 9.026 0 0 0 54.253 0z"
+                            id="h"
+                        />
+                        <path
+                            d="M9.721 18.637c5.37 0 9.721-4.172 9.721-9.319C19.442 4.172 15.09 0 9.722 0 4.351 0 0 4.172 0 9.318c0 5.147 4.352 9.319 9.721 9.319z"
+                            id="i"
+                        />
+                        <path
+                            d="M5.19 9.959c2.865 0 5.188-2.23 5.188-4.98C10.378 2.23 8.055 0 5.19 0S0 2.23 0 4.98c0 2.75 2.323 4.979 5.19 4.979z"
+                            id="j"
+                        />
+                        <path
+                            d="M7.262.351C2.078 1.753-1.018 6.921.306 11.89l18.77-5.073C17.705 1.847 12.411-1.045 7.261.35z"
+                            id="k"
+                        />
+                        <path
+                            d="M9.318 19.442c5.147 0 9.319-4.352 9.319-9.72C18.637 4.351 14.465 0 9.318 0 4.172 0 0 4.352 0 9.721c0 5.37 4.172 9.721 9.318 9.721z"
+                            id="l"
+                        />
+                        <path
+                            d="M4.98 10.378c2.75 0 4.979-2.323 4.979-5.189S7.729 0 4.979 0C2.23 0 0 2.323 0 5.19c0 2.865 2.23 5.188 4.98 5.188z"
+                            id="m"
+                        />
+                        <path
+                            d="M11.819.351c5.178 1.402 8.28 6.57 6.95 11.538L0 6.816C1.347 1.847 6.635-1.045 11.819.35z"
+                            id="n"
+                        />
+                        <path
+                            d="M5.106 4.897A5.007 5.007 0 0 0 10.218 0H0a5.001 5.001 0 0 0 5.106 4.897z"
+                            id="o"
+                        />
+                        <path
+                            d="M0 0l22.258 18.498L44.516 0H0z"
+                            id="p"
+                        />
+                        <path
+                            d="M2.445 0A2.396 2.396 0 0 0 0 2.342h4.885a2.39 2.39 0 0 0-2.44-2.34z"
+                            id="q"
+                        />
+                        <path
+                            d="M2.462 0A2.396 2.396 0 0 0 0 2.343h4.885A2.39 2.39 0 0 0 2.462 0z"
+                            id="r"
+                        />
+                        <path
+                            d="M0 0h6.227v3.091A3.047 3.047 0 0 1 3.18 6.14h-.127A3.047 3.047 0 0 1 .006 3.09V0H0z"
+                            id="s"
+                        />
+                        <path
+                            d="M.006 0H6.22v3.091A3.047 3.047 0 0 1 3.174 6.14h-.127A3.047 3.047 0 0 1 0 3.09V0h.006z"
+                            id="t"
+                        />
+                        <path
+                            d="M31.328 0H0v1.474h31.328V0z"
+                            id="u"
+                        />
+                        <path
+                            d="M15.422 1.503A17.422 17.422 0 0 0 8.113.002 17.4 17.4 0 0 0 .805 1.503a1.457 1.457 0 0 0 .629 2.76h2.572V4.06a1.579 1.579 0 0 1 2.126-1.468 6.194 6.194 0 0 0 3.963 0 1.574 1.574 0 0 1 2.12 1.468v.204h2.572a1.463 1.463 0 0 0 .635-2.76z"
+                            id="v"
+                        />
+                        <path
+                            d="M6.072.104a6.194 6.194 0 0 1-3.963 0A1.579 1.579 0 0 0 0 1.573v.204h8.209v-.204A1.573 1.573 0 0 0 6.072.104z"
+                            id="w"
+                        />
+                    </defs>
+                </svg>
+            </div>
+            <h3
+                className="c5 c6"
+            >
+                You have no Snapshots
+            </h3>
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`renders <SnapshotList submitting /> without throwing 1`] = `
+Array [
+  .c8 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+
+.c8[type='checkbox'],
+.c8[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c8[type='number']::-webkit-inner-spin-button,
+.c8[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c8[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c8[type='search']::-webkit-search-cancel-button,
+.c8[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c8::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c7:checked + label::after {
+  opacity: 1;
+}
+
+.c7:selected + label::after {
+  opacity: 1;
+}
+
+.c7:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c7:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c9 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c9::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c6 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c5 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 label {
+  font-weight: 400;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c0 {
+  overflow: hidden;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  background: rgb(250,250,250);
+}
+
+.c1 th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.c1 th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.c14 {
+  width: 100%;
+}
+
+.c3 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 2rem;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c3:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c3:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c10 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+  color: rgb(73,73,73);
+  font-weight: 600;
+}
+
+.c10:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c10:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c11 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 9.375rem;
+  display: table-cell;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c11:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c11:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c12 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 0rem;
+  display: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  text-align: left;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c12:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c12:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c13 {
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: rgb(216,216,216);
+  border-spacing: 0;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  display: table-cell;
+  height: 2.625rem;
+  color: rgb(189,189,189);
+  font-weight: 500;
+  border-bottom-width: 0;
+}
+
+.c13:not(:first-child) {
+  border-left-width: 0;
+}
+
+.c13:not(:last-child) {
+  border-right-width: 0;
+}
+
+.c2 {
+  display: table-row;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  box-shadow: 0 0.125rem 0 rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  color: rgb(73,73,73);
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.c2:last-child {
+  box-shadow: none;
+}
+
+.c2:last-child td {
+  border-bottom-width: 0.0625rem;
+}
+
+@media only screen and (min-width:47.9375rem) {
+  .c12 {
+    width: 10rem;
+    display: table-cell;
+  }
+}
+
+<table
+    className="c0"
+>
+    <thead
+        className="c1"
+        disabled={undefined}
+        name="thdead"
+        selected={undefined}
+    >
+        <tr
+            className="c2"
+            disabled={undefined}
+            name="tr"
+            selected={undefined}
+        >
+            <th
+                className="c3"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            >
+                <div
+                    className="c4"
+                    role="group"
+                    style={undefined}
+                >
+                    <li
+                        className="c5"
+                    >
+                        <div
+                            checked={false}
+                            className="c6"
+                            disabled={true}
+                            id="C"
+                            onBlur={undefined}
+                            onChange={[Function]}
+                            type="checkbox"
+                        >
+                            <input
+                                checked={false}
+                                className="c7 c8"
+                                disabled={true}
+                                id="D"
+                                onBlur={undefined}
+                                onChange={[Function]}
+                                type="checkbox"
+                            />
+                            <label
+                                className="c9"
+                                htmlFor="D"
+                            />
+                        </div>
+                    </li>
+                </div>
+            </th>
+            <th
+                className="c10"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Name 
+                </span>
+                <svg
+                    height="6"
+                    marginBottom="0.125rem"
+                    marginLeft="0.5625rem"
+                    style={
+                        Object {
+                            "transform": "rotate(180deg)",
+                          }
+                    }
+                    viewBox="0 0 9.6 6"
+                    width="9.6"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                        fill="rgb(73, 73, 73)"
+                    />
+                </svg>
+            </th>
+            <th
+                className="c11"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Status 
+                </span>
+            </th>
+            <th
+                className="c12"
+                disabled={undefined}
+                name="th"
+                onClick={[Function]}
+                selected={undefined}
+            >
+                <span>
+                    Created 
+                </span>
+            </th>
+            <th
+                className="c13"
+                disabled={undefined}
+                name="th"
+                selected={undefined}
+            />
+        </tr>
+    </thead>
+    <tbody
+        className="c14"
+        disabled={undefined}
+        name="tbody"
+        selected={undefined}
+    />
+</table>,
+  .c6 {
+  margin: 0;
+  color: rgb(73,73,73);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+}
+
+.c4 {
+  margin-bottom: 0.75rem;
+}
+
+.c2 {
+  padding: 8rem;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c5 {
+  color: rgb(151,151,151);
+  text-align: center;
+}
+
+.c0 {
+  width: calc(100% - 0.125rem);
+}
+
+<div
+    className="c0 c1"
+    disabled={false}
+    name="card"
+>
+    <div
+        className="c2"
+    >
+        <div
+            className="c3"
+        >
+            <div
+                className="c4"
+            >
+                <svg
+                    height={60}
+                    viewBox="0 0 79 60"
+                    width={79}
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlnsXlink="http://www.w3.org/1999/xlink"
+                >
+                    <title>
+                        Guilty_Salamander
+                    </title>
+                    <desc>
+                        Created using Figma
+                    </desc>
+                    <use
+                        fill="#FAA427"
+                        transform="translate(23.8 22)"
+                        xlinkHref="#a"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(27.3 25.5)"
+                        xlinkHref="#b"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(4.8 32.1)"
+                        xlinkHref="#c"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(12.2 31.8)"
+                        xlinkHref="#d"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(54.4 31.9)"
+                        xlinkHref="#e"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(54.4 32)"
+                        xlinkHref="#f"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(15.8 26.8)"
+                        xlinkHref="#g"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(5)"
+                        xlinkHref="#h"
+                    />
+                    <use
+                        fill="#FAFBFC"
+                        transform="rotate(-15.13 41.037 5.45)"
+                        xlinkHref="#i"
+                    />
+                    <use
+                        fill="#412B13"
+                        transform="rotate(-15.13 67.273 -24.78)"
+                        xlinkHref="#j"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(2.2 8)"
+                        xlinkHref="#k"
+                    />
+                    <use
+                        fill="#FAFBFC"
+                        transform="rotate(-74.87 40.46 -20.511)"
+                        xlinkHref="#l"
+                    />
+                    <use
+                        fill="#412B13"
+                        transform="rotate(-74.87 41.364 -22.098)"
+                        xlinkHref="#m"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(52.1 8)"
+                        xlinkHref="#n"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(31.5 34.3)"
+                        xlinkHref="#o"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(14.3)"
+                        xlinkHref="#p"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(30.9 18.9)"
+                        xlinkHref="#q"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(37.6 18.9)"
+                        xlinkHref="#r"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(27.4 53.9)"
+                        xlinkHref="#s"
+                    />
+                    <use
+                        fill="#FAA427"
+                        transform="translate(39.1 53.9)"
+                        xlinkHref="#t"
+                    />
+                    <use
+                        fill="#F3722C"
+                        transform="translate(27.4 53.9)"
+                        xlinkHref="#u"
+                    />
+                    <use
+                        fill="#342013"
+                        transform="translate(28.6 26.2)"
+                        xlinkHref="#v"
+                    />
+                    <use
+                        fill="#FFF"
+                        transform="translate(32.6 28.7)"
+                        xlinkHref="#w"
+                    />
+                    <defs>
+                        <path
+                            d="M54.921 36.053L0 0l1.413 24.908c.359 6.249 5.752 11.145 12.283 11.145H54.92z"
+                            id="a"
+                        />
+                        <path
+                            d="M42.12 32.526L13.47 0 0 23.737c.282 4.924 4.527 8.778 9.672 8.778l32.448.01z"
+                            id="b"
+                        />
+                        <path
+                            d="M3.326 17.01a3.312 3.312 0 0 1-1.545-6.25C6.059 8.52 8.482 2.226 8.52 2.165a3.313 3.313 0 0 1 6.216 2.296c-.133.354-3.312 8.717-9.86 12.145-.475.26-1.008.4-1.55.403z"
+                            id="c"
+                        />
+                        <path
+                            d="M5.079 9.205A28.654 28.654 0 0 0 7.287 4.75a3.312 3.312 0 1 0-6.183-2.296C.781 3.234.412 3.996 0 4.734c1.33 1.181 3.544 3.152 5.079 4.471z"
+                            id="d"
+                        />
+                        <path
+                            d="M11.682 17.27a3.312 3.312 0 0 0 1.545-6.248C8.95 8.78 6.526 2.487 6.504 2.427A3.312 3.312 0 1 0 .316 4.723c.126.353 3.312 8.717 9.853 12.145.464.254.983.393 1.513.403z"
+                            id="e"
+                        />
+                        <path
+                            d="M2.45 9.01A28.33 28.33 0 0 1 .242 4.553a3.312 3.312 0 1 1 6.21-2.296c.326.78.695 1.54 1.104 2.28C6.187 5.719 3.973 7.69 2.45 9.009z"
+                            id="f"
+                        />
+                        <path
+                            d="M35.159 0H6.542A6.542 6.542 0 0 0 0 6.542v14.016a6.542 6.542 0 0 0 6.542 6.541h28.617a6.541 6.541 0 0 0 6.541-6.541V6.542A6.542 6.542 0 0 0 35.16 0z"
+                            id="g"
+                        />
+                        <path
+                            d="M54.254 0H9.026A9.026 9.026 0 0 0 0 9.026v17.207a9.026 9.026 0 0 0 9.026 9.025h45.228a9.026 9.026 0 0 0 9.025-9.026V9.027A9.026 9.026 0 0 0 54.253 0z"
+                            id="h"
+                        />
+                        <path
+                            d="M9.721 18.637c5.37 0 9.721-4.172 9.721-9.319C19.442 4.172 15.09 0 9.722 0 4.351 0 0 4.172 0 9.318c0 5.147 4.352 9.319 9.721 9.319z"
+                            id="i"
+                        />
+                        <path
+                            d="M5.19 9.959c2.865 0 5.188-2.23 5.188-4.98C10.378 2.23 8.055 0 5.19 0S0 2.23 0 4.98c0 2.75 2.323 4.979 5.19 4.979z"
+                            id="j"
+                        />
+                        <path
+                            d="M7.262.351C2.078 1.753-1.018 6.921.306 11.89l18.77-5.073C17.705 1.847 12.411-1.045 7.261.35z"
+                            id="k"
+                        />
+                        <path
+                            d="M9.318 19.442c5.147 0 9.319-4.352 9.319-9.72C18.637 4.351 14.465 0 9.318 0 4.172 0 0 4.352 0 9.721c0 5.37 4.172 9.721 9.318 9.721z"
+                            id="l"
+                        />
+                        <path
+                            d="M4.98 10.378c2.75 0 4.979-2.323 4.979-5.189S7.729 0 4.979 0C2.23 0 0 2.323 0 5.19c0 2.865 2.23 5.188 4.98 5.188z"
+                            id="m"
+                        />
+                        <path
+                            d="M11.819.351c5.178 1.402 8.28 6.57 6.95 11.538L0 6.816C1.347 1.847 6.635-1.045 11.819.35z"
+                            id="n"
+                        />
+                        <path
+                            d="M5.106 4.897A5.007 5.007 0 0 0 10.218 0H0a5.001 5.001 0 0 0 5.106 4.897z"
+                            id="o"
+                        />
+                        <path
+                            d="M0 0l22.258 18.498L44.516 0H0z"
+                            id="p"
+                        />
+                        <path
+                            d="M2.445 0A2.396 2.396 0 0 0 0 2.342h4.885a2.39 2.39 0 0 0-2.44-2.34z"
+                            id="q"
+                        />
+                        <path
+                            d="M2.462 0A2.396 2.396 0 0 0 0 2.343h4.885A2.39 2.39 0 0 0 2.462 0z"
+                            id="r"
+                        />
+                        <path
+                            d="M0 0h6.227v3.091A3.047 3.047 0 0 1 3.18 6.14h-.127A3.047 3.047 0 0 1 .006 3.09V0H0z"
+                            id="s"
+                        />
+                        <path
+                            d="M.006 0H6.22v3.091A3.047 3.047 0 0 1 3.174 6.14h-.127A3.047 3.047 0 0 1 0 3.09V0h.006z"
+                            id="t"
+                        />
+                        <path
+                            d="M31.328 0H0v1.474h31.328V0z"
+                            id="u"
+                        />
+                        <path
+                            d="M15.422 1.503A17.422 17.422 0 0 0 8.113.002 17.4 17.4 0 0 0 .805 1.503a1.457 1.457 0 0 0 .629 2.76h2.572V4.06a1.579 1.579 0 0 1 2.126-1.468 6.194 6.194 0 0 0 3.963 0 1.574 1.574 0 0 1 2.12 1.468v.204h2.572a1.463 1.463 0 0 0 .635-2.76z"
+                            id="v"
+                        />
+                        <path
+                            d="M6.072.104a6.194 6.194 0 0 1-3.963 0A1.579 1.579 0 0 0 0 1.573v.204h8.209v-.204A1.573 1.573 0 0 0 6.072.104z"
+                            id="w"
+                        />
+                    </defs>
+                </svg>
+            </div>
+            <h3
+                className="c5 c6"
+            >
+                You have no Snapshots
+            </h3>
+        </div>
+    </div>
+</div>,
+]
+`;

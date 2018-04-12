@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import is, { isNot } from 'styled-is';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import remcalc from 'remcalc';
 
 const BaseItem = styled.span`
   display: block;

@@ -53,4 +53,8 @@ export default ({ theme }) => css`
     margin: ${remcalc(8)} 0 ${remcalc(8)} 0;
     font-family: "Roboto Mono", monospace !important;
   }
+
+  [name=user-script] .CodeMirror {
+    margin: 0;
+  }
 `;

@@ -112,10 +112,10 @@ const Preview = styled.div`
   `};
 
   ${is('active')`
-    border: ${remcalc(1)} solid ${props => props.theme.primaryActive};
+    border: ${remcalc(1)} solid ${props => props.theme.primary};
 
     select {
-      border-color: ${props => props.theme.primaryActive};
+      border-color: ${props => props.theme.primary};
     }
   `};
 

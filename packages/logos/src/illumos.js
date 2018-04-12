@@ -1,12 +1,18 @@
 import React from 'react';
 
-export default props => (
+export default ({
+  fill = null,
+  light = false,
+  disabled = false,
+  colors = {},
+  ...rest
+}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={42}
     height={42}
     viewBox="0 0 32.32 42"
-    {...props}
+    {...rest}
   >
     <title>Illumos</title>
     <g id="Layer_2" data-name="Layer 2">
