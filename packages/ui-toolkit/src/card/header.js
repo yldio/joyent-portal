@@ -14,6 +14,9 @@ const BaseHeader = styled(BaseCard)`
   line-height: ${remcalc(24)};
   height: auto;
   max-width: 100%;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
 
   ${is('radius')`
     border-radius: ${remcalc(4)};

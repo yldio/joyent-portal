@@ -1,0 +1,10 @@
+query Images {
+  packages {
+    id
+    name
+    memory
+    disk
+    vcpus
+    group
+  }
+}

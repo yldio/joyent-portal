@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
-import { Margin } from 'styled-components-spacing';
 import remcalc from 'remcalc';
 import is from 'styled-is';
 

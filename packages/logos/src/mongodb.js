@@ -1,11 +1,18 @@
 import React from 'react';
 
-export default props => (
+import calcFill from './fill';
+export default ({
+  fill = null,
+  light = false,
+  disabled = false,
+  colors = {},
+  ...rest
+}) => (
   <svg
     id="svg4300"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 42 42"
-    {...props}
+    {...rest}
   >
     <defs>
       <style
@@ -23,7 +30,7 @@ export default props => (
     </defs>
     <title>Artboard 1 copy 8</title>
     <path
-      fill="#1B3240"
+      fill={calcFill({ fill, disabled, light, colors })}
       d="M30.91 16.5c-2.2-9.7-7.4-12.9-8-14.1a16.31 16.31 0 0 1-1.2-2.4v-.1a2.8 2.8 0 0 1-.9 2.1c-1.3 1-7.7 6.4-8.3 17.5C12 29.8 20 36 21 36.7a14.06 14.06 0 0 1 .7 4.9l1.1.4a22.75 22.75 0 0 1 .1-4.4 2.38 2.38 0 0 1 .6-1.1 11.46 11.46 0 0 0 1.4-1.1h.1a21.29 21.29 0 0 0 5.91-18.9z"
     />
     <path

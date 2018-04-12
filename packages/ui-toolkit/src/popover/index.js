@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Popper as BasePopper, Arrow } from 'react-popper';
 import rndId from 'rnd-id';
 import remcalc from 'remcalc';
-import is from 'styled-is';
+import is, { isNot } from 'styled-is';
 
 import style from '../tooltip/style';
 import { default as BaseTarget } from '../tooltip/target';
@@ -15,7 +15,9 @@ const Popper = styled(BasePopper)`
   box-shadow: 0 ${remcalc(2)} ${remcalc(6)} rgba(0, 0, 0, 0.1);
   border: ${remcalc(1)} solid ${props => props.theme.grey};
 
-  padding: ${remcalc(15)} ${remcalc(18)} ${remcalc(3)} ${remcalc(18)};
+  ${isNot('noPadding')`
+    padding: ${remcalc(15)} ${remcalc(18)} ${remcalc(3)} ${remcalc(18)};
+  `};
 
   ${style({
     background: 'white',

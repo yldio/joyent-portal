@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 
-import is, { isNot } from 'styled-is';
+import is from 'styled-is';
 
 export default styled.strong`
   color: ${props => props.theme.text};

@@ -1,4 +1,8 @@
 export default ({ fill = null, disabled = false, light = false, colors }) => {
+  if (fill && colors[fill]) {
+    return colors[fill];
+  }
+
   if (fill) {
     return fill;
   }

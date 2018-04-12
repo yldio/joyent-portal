@@ -6,7 +6,7 @@ import is from 'styled-is';
 import { Close } from '../icons';
 
 const CloseIcon = styled(Close)`
-  ${is('onClick')`
+  margin-left: ${remcalc(12)} ${is('onClick')`
     cursor: pointer;
   `};
 `;

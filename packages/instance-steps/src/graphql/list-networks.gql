@@ -1,0 +1,19 @@
+query {
+  networks {
+    id
+    name
+    public
+    fabric
+    description
+    subnet
+    provision_start_ip
+    provision_end_ip
+    gateway
+    resolvers
+    internet_nat
+    machines {
+      id
+      name
+    }
+  }
+}

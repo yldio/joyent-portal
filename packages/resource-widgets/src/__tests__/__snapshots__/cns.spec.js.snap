@@ -1,0 +1,1124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <AddServiceForm /> without throwing 1`] = `
+.c6 {
+  margin-top: 0.1875rem;
+}
+
+.c8 {
+  margin-left: 0.75rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c1 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+}
+
+.c12 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+.c12::-moz-focus-inner,
+.c12[type='button']::-moz-focus-inner,
+.c12[type='reset']::-moz-focus-inner,
+.c12[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c12:-moz-focusring,
+.c12[type='button']:-moz-focusring,
+.c12[type='reset']:-moz-focusring,
+.c12[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c11 {
+  min-width: 7.5rem;
+}
+
+.c10 {
+  display: inline-block;
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c9:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c9:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c9[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c5 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+}
+
+.c3 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c7 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c7:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c7:invalid {
+  box-shadow: none;
+}
+
+.c7:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c7:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c7:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c7:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c4 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+<form
+  onSubmit={undefined}
+>
+  <div
+    className="c0"
+    wrap={true}
+  >
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          name="name"
+          role="group"
+          style={undefined}
+        >
+          <label
+            className="c4 c5"
+            htmlFor="k"
+          >
+            Attach to new CNS service name
+          </label>
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              disabled={false}
+              id="k"
+              onBlur={null}
+              placeholder="Example: mySQLdb"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c1"
+    >
+      <div
+        className="c8"
+      >
+        <button
+          className="c9 c10 c11 c12"
+          data-ui-button="true"
+          disabled={undefined}
+          href=""
+          type="submit"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
+.c6 {
+  margin-top: 0.1875rem;
+}
+
+.c8 {
+  margin-left: 0.75rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c1 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+}
+
+.c12 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+.c12::-moz-focus-inner,
+.c12[type='button']::-moz-focus-inner,
+.c12[type='reset']::-moz-focus-inner,
+.c12[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c12:-moz-focusring,
+.c12[type='button']:-moz-focusring,
+.c12[type='reset']:-moz-focusring,
+.c12[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c11 {
+  min-width: 7.5rem;
+}
+
+.c10 {
+  display: inline-block;
+}
+
+.c9 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c9:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c9:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c9:active,
+.c9:active:hover,
+.c9:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c9[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c5 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+}
+
+.c3 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c7 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c7:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c7:invalid {
+  box-shadow: none;
+}
+
+.c7:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c7:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c7:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c7:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c4 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+<form
+  onSubmit={undefined}
+>
+  <div
+    className="c0"
+    wrap={true}
+  >
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          name="name"
+          role="group"
+          style={undefined}
+        >
+          <label
+            className="c4 c5"
+            htmlFor="l"
+          >
+            Attach to new CNS service name
+          </label>
+          <div
+            className="c6"
+          >
+            <input
+              className="c7"
+              disabled={false}
+              id="l"
+              onBlur={null}
+              placeholder="Example: mySQLdb"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c1"
+    >
+      <div
+        className="c8"
+      >
+        <button
+          className="c9 c10 c11 c12"
+          data-ui-button="true"
+          disabled={undefined}
+          href=""
+          type="submit"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`renders <Header/> without throwing 1`] = `
+.c0 {
+  margin-bottom: 1.875rem;
+}
+
+.c3 {
+  margin-top: 0.75rem;
+}
+
+.c5 {
+  color: rgb(73,73,73);
+  margin: 0;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.c2 {
+  margin: 0;
+  color: rgb(73,73,73);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+}
+
+.c1 {
+  margin: 0;
+}
+
+.c4 {
+  margin: 0;
+}
+
+<div
+  className="c0"
+>
+  <h3
+    className="c1 c2"
+  >
+    CNS Default Hostnames
+  </h3>
+  <div
+    className="c3"
+  >
+    <p
+      className="c4 c5"
+    >
+      Default hostnames are automatically generated from both the instance name and any attached networks.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`renders <Hostname /> without throwing 1`] = `
+.c0 {
+  margin-bottom: 1.125rem;
+}
+
+.c6 {
+  margin-right: 0.375rem;
+  margin-bottom: 0.1875rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c5 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+}
+
+.c4 {
+  font-size: 80%;
+}
+
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c2 {
+  padding-right: 0.75rem;
+  margin-right: 0.75rem;
+  border-right: 0.0625rem solid rgb(216,216,216);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <small
+      className="c2 c3 c4"
+    >
+      Instance name
+       
+      hostname
+      s
+    </small>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <svg
+          height="16"
+          style={
+            Object {
+              "transform": "rotate(0deg)",
+            }
+          }
+          viewBox="0 0 12 16"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+            fill="rgb(73, 73, 73)"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="c5"
+    >
+      <small
+        className="c7 c4"
+      >
+        Private
+      </small>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders <Hostname values /> without throwing 1`] = `
+.c10 {
+  margin-top: 0.1875rem;
+}
+
+.c0 {
+  margin-bottom: 1.125rem;
+}
+
+.c6 {
+  margin-right: 0.375rem;
+  margin-bottom: 0.1875rem;
+}
+
+.c8 {
+  margin-top: 0.1875rem;
+  margin-bottom: 0.375rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c5 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+}
+
+.c4 {
+  font-size: 80%;
+}
+
+.c3 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.c7 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  color: rgb(73,73,73);
+  line-height: 1.125rem;
+  font-size: 0.8125rem;
+}
+
+.c9 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(250,250,250);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+  font-family: "Roboto Mono",monospace;
+  width: 100%;
+  min-width: 100%;
+}
+
+.c9:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c9::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:invalid {
+  box-shadow: none;
+}
+
+.c9::-webkit-input-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c9::-moz-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c9:-ms-input-placeholder {
+  color: rgb(216,216,216);
+}
+
+.c9:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c9:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c9:disabled {
+  color: rgb(73,73,73);
+}
+
+.c9:disabled::-webkit-input-placeholder {
+  color: rgb(73,73,73);
+}
+
+.c9:disabled::-moz-placeholder {
+  color: rgb(73,73,73);
+}
+
+.c9:disabled:-ms-input-placeholder {
+  color: rgb(73,73,73);
+}
+
+.c2 {
+  padding-right: 0.75rem;
+  margin-right: 0.75rem;
+  border-right: 0.0625rem solid rgb(216,216,216);
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <small
+      className="c2 c3 c4"
+    >
+      Instance name
+       
+      hostname
+      s
+    </small>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <svg
+          height="16"
+          style={
+            Object {
+              "transform": "rotate(0deg)",
+            }
+          }
+          viewBox="0 0 12 16"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10,6V4A4,4,0,0,0,2,4V6H2A2,2,0,0,0,0,8v6a2,2,0,0,0,2,2h8a2,2,0,0,0,2-2V8A2,2,0,0,0,10,6ZM4,4c0-1.65.35-2,2-2s2,.35,2,2V6H4Zm6,9a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V9A1,1,0,0,1,3,8H9a1,1,0,0,1,1,1ZM6,13H6a1,1,0,0,1-1-1V10A1,1,0,0,1,6,9H6a1,1,0,0,1,1,1v2A1,1,0,0,1,6,13Z"
+            fill="rgb(73, 73, 73)"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      className="c5"
+    >
+      <small
+        className="c7 c4"
+      >
+        Private
+      </small>
+    </div>
+  </div>
+  <div
+    className="c8"
+  >
+    <input
+      className="c9"
+      disabled={true}
+      id=""
+      onBlur={null}
+      value="111"
+    />
+  </div>
+  <div
+    className="c10"
+  >
+    <input
+      className="c9"
+      disabled={true}
+      id=""
+      onBlur={null}
+      value="111"
+    />
+  </div>
+</div>
+`;
+
+exports[`renders <HostnamesHeader /> without throwing 1`] = `
+.c3 {
+  margin-top: 0.75rem;
+}
+
+.c0 {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.c5 {
+  color: rgb(73,73,73);
+  margin: 0;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.c2 {
+  margin: 0;
+  color: rgb(73,73,73);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+}
+
+.c1 {
+  margin: 0;
+}
+
+.c4 {
+  margin: 0;
+}
+
+<div
+  className="c0"
+>
+  <h3
+    className="c1 c2"
+  >
+    CNS Service hostnames
+  </h3>
+  <div
+    className="c3"
+  >
+    <p
+      className="c4 c5"
+    >
+      CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
+    </p>
+  </div>
+</div>
+`;

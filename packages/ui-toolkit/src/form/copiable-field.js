@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import copy from 'clipboard-copy';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
-import is from 'styled-is';
 import { Col, Row } from 'joyent-react-styled-flexboxgrid';
+import { Margin } from 'styled-components-spacing';
+
+import { FormLabel, Input } from '..';
 
 import {
-  FormLabel,
-  Input,
-  TooltipContainer,
-  TooltipTarget,
-  Tooltip
-} from '../';
+  default as Tooltip,
+  Container as TooltipContainer,
+  Target as TooltipTarget
+} from '../tooltip';
 
 import { Clipboard } from '../icons';
 
@@ -76,7 +76,9 @@ class CopyToClipboardTooltip extends Component {
 const CopiableField = ({ md, label, text, ...rest }) => (
   <Row>
     <Col xs={12} md={md || 7}>
-      {label ? <FormLabel>{label}</FormLabel> : null}
+      <Margin bottom={0.5}>
+        {label ? <FormLabel>{label}</FormLabel> : null}
+      </Margin>
       <InputIconWrapper {...rest}>
         <Input {...rest} monospace onBlur={null} fluid value={text} />
         <CopyToClipboardTooltip>{text}</CopyToClipboardTooltip>

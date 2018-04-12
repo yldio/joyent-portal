@@ -30,15 +30,13 @@ const flexboxgrid = {
   }
 };
 
-const spacing = {
-  0: remcalc(0),
-  0.5: remcalc(3),
-  1: remcalc(6),
-  2: remcalc(12),
-  3: remcalc(18),
-  4: remcalc(30),
-  5: remcalc(48)
-};
+const spacing = [0, 0.5, 1, 2, 3, 4, 5, 8].reduce(
+  (sum, mult) => ({
+    ...sum,
+    [mult]: remcalc(mult * 6)
+  }),
+  {}
+);
 
 /*
 * There should be no string value to keys outside the `base` object.

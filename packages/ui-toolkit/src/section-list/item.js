@@ -7,7 +7,7 @@ import BaseAnchor from '../anchor';
 const border = css`
   width: 100%;
   height: ${remcalc(1)};
-  background: ${props => props.theme.secondary};
+  background: ${props => props.theme.text};
   content: '';
   position: absolute;
   bottom: 0;
@@ -22,15 +22,15 @@ export default styled.li`
 `;
 
 export const Anchor = styled(BaseAnchor)`
-  color: ${props => props.theme.secondary};
+  color: ${props => props.theme.text};
   text-decoration: none;
   cursor: pointer;
   padding: 0 ${remcalc(12)};
-  padding-bottom: ${remcalc(16)};
+  padding-bottom: ${remcalc(6)};
   position: relative;
 
   &.active {
-    font-weight: ${props => props.theme.font.weight.semibold};
+    font-weight: ${props => props.theme.font.weight.text};
 
     &:after {
       ${border};
@@ -38,7 +38,7 @@ export const Anchor = styled(BaseAnchor)`
   }
 
   ${is('active')`
-    font-weight: ${props => props.theme.font.weight.semibold};
+    font-weight: ${props => props.theme.font.weight.text};
 
     &:after {
       ${border}

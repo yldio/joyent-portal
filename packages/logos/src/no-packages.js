@@ -1,13 +1,19 @@
 import React from 'react';
 
-export default props => (
+export default ({
+  fill = null,
+  light = false,
+  disabled = false,
+  colors = {},
+  ...rest
+}) => (
   <svg
     width={79}
     height={60}
     viewBox="0 0 79 60"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    {...props}
+    {...rest}
   >
     <title>Guilty_Salamander</title>
     <desc>Created using Figma</desc>

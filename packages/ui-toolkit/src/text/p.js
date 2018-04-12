@@ -5,6 +5,7 @@ import is from 'styled-is';
 
 export default styled.p`
   color: ${props => props.theme.text};
+  margin: 0;
 
   line-height: ${remcalc(24)};
   font-size: ${remcalc(15)};
@@ -12,6 +13,10 @@ export default styled.p`
   ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}
+  `};
+
+  ${is('optional')`
+    color: ${props => props.theme.greyDark}
   `};
 
   ${is('center')`
