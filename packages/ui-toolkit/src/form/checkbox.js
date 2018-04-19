@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import BaseInput from './base/input';
 import BaseToggle from './base/toggle';
-import Baseline from '../baseline';
 
 const Li = styled.li`
   list-style-type: none;
@@ -17,19 +16,16 @@ const Li = styled.li`
 `;
 
 const Ul = styled.ul`
-  margin: 0;
   padding: 0;
 `;
 
 const CheckboxItem = BaseInput(({ children }) => <Li>{children}</Li>);
 
-const CheckboxStyled = Baseline(
-  BaseInput(
-    BaseToggle({
-      container: CheckboxItem,
-      type: 'checkbox'
-    })
-  )
+const CheckboxStyled = BaseInput(
+  BaseToggle({
+    container: CheckboxItem,
+    type: 'checkbox'
+  })
 );
 
 /**
@@ -39,7 +35,7 @@ const Checkbox = ({ children, ...rest }) => (
   <CheckboxStyled {...rest}>{children}</CheckboxStyled>
 );
 
-export const CheckboxList = Baseline(Ul);
+export const CheckboxList = Ul;
 
 export default Checkbox;
 

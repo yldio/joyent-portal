@@ -35,19 +35,10 @@ const Box = styled.div`
   background: ${props => props.hex};
   padding: ${remcalc(18)} ${remcalc(26)};
   box-sizing: border-box;
-
-  ${is('bottom')`
-    margin-bottom: ${remcalc(45)};
-  `};
-
-  ${is('right')`
-    margin-right: ${remcalc(45)};
-  `};
 `;
 
-const ClipboardIconActionable = Clipboard.extend`
+const ClipboardIconActionable = styled(Clipboard)`
   cursor: pointer;
-  margin-left: ${remcalc(12)};
 
   path {
     fill: ${props => props.theme.white};
@@ -58,9 +49,8 @@ const ClipboardIconActionable = Clipboard.extend`
   `};
 `;
 
-const Paragraph = P.extend`
+const Paragraph = styled(P)`
   font-size: ${remcalc(13)};
-  margin: 0;
   font-weight: bold;
   color: ${props => props.theme.white};
   -webkit-text-fill-color: currentcolor;
@@ -75,7 +65,6 @@ const Paragraph = P.extend`
 
 const Code = styled.code`
   font-size: ${remcalc(13)};
-  margin: 0;
   color: ${props => props.theme.white};
 
   ${is('dark')`
@@ -89,15 +78,10 @@ const List = styled.ul`
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: 0;
   height: ${remcalc(48)};
 
   li {
     padding: 0;
-
-    &:not(:last-child) {
-      margin-bottom: ${remcalc(6)};
-    }
   }
 `;
 

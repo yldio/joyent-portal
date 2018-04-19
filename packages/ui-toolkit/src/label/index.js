@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Baseline from '../baseline';
 import remcalc from 'remcalc';
+import is from 'styled-is';
 
 const Label = styled.label`
   font-size: ${remcalc(15)};
@@ -10,7 +10,10 @@ const Label = styled.label`
   display: block;
   color: ${props => props.theme.secondary};
   text-align: left;
-  margin-bottom: ${remcalc(3)};
+
+  ${is('inline')`
+    display: inline-block;
+  `};
 `;
 
-export default Baseline(Label);
+export default Label;

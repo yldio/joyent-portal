@@ -1,16 +1,12 @@
 import React from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 import remcalc from 'remcalc';
 import is from 'styled-is';
 
 import { Close } from '../icons';
 
-const CloseIcon = Close.extend`
-  margin-left: ${remcalc(12)};
-
-  ${is('onClick')`
-    cursor: pointer;
-  `};
+const CloseIcon = styled(Close)`
+  cursor: pointer;
 `;
 
 const Container = styled.div`
@@ -47,19 +43,17 @@ const Tag = styled.li`
   `};
 `;
 
-export default withTheme(
-  ({ theme, children, active, onRemoveClick, ...rest }) => (
-    <Container>
-      <Tag active={active} {...rest}>
-        {children}
-        {onRemoveClick ? (
-          <CloseIcon
-            fill={active ? theme.primaryActive : theme.text}
-            disabled
-            onClick={onRemoveClick}
-          />
-        ) : null}
-      </Tag>
-    </Container>
-  )
+export default ({ theme, children, active, onRemoveClick, ...rest }) => (
+  <Container>
+    <Tag active={active} {...rest}>
+      {children}
+      {onRemoveClick ? (
+        <CloseIcon
+          fill={active ? 'primaryActive' : 'text'}
+          disabled
+          onClick={onRemoveClick}
+        />
+      ) : null}
+    </Tag>
+  </Container>
 );

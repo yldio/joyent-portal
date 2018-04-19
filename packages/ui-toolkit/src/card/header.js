@@ -4,18 +4,19 @@ import PropTypes from 'prop-types';
 import is, { isNot } from 'styled-is';
 import isBoolean from 'lodash.isboolean';
 import remcalc from 'remcalc';
+import styled from 'styled-components';
 
-import Baseline from '../baseline';
 import Card, { BaseCard } from './card';
 
-const BaseHeader = BaseCard.extend`
+const BaseHeader = styled(BaseCard)`
   flex-direction: row;
   z-index: 1;
   line-height: ${remcalc(24)};
   height: auto;
   max-width: 100%;
-
-  margin: ${remcalc(-1)} ${remcalc(-1)} 0 ${remcalc(-1)};
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
 
   ${is('radius')`
     border-radius: ${remcalc(4)};
@@ -24,7 +25,6 @@ const BaseHeader = BaseCard.extend`
   `};
 
   ${is('parentCollapsed')`
-    margin: ${remcalc(-1)};
     box-shadow: none;
   `};
 
@@ -49,14 +49,9 @@ const BaseHeader = BaseCard.extend`
     border-color: ${props => props.theme.grey};
     box-shadow: none;
   `};
-
-  button {
-    margin-bottom: 0;
-    margin-top: 0;
-  }
 `;
 
-const BaseBox = BaseCard.extend`
+const BaseBox = styled(BaseCard)`
   width: ${remcalc(46)};
   min-width: ${remcalc(46)};
   min-height: ${remcalc(46)};
@@ -96,7 +91,7 @@ const BaseBox = BaseCard.extend`
   `};
 `;
 
-const BaseMeta = BaseCard.extend`
+const BaseMeta = styled(BaseCard)`
   box-sizing: border-box;
   min-height: ${remcalc(47)};
   max-width: 100%;
@@ -157,7 +152,7 @@ Box.defaultProps = {
   border: null
 };
 
-export const Meta = Baseline(({ children, ...rest }) => (
+export const Meta = ({ children, ...rest }) => (
   <Subscriber channel="card">
     {value => (
       <BaseMeta {...rest} {...value} name="card-header-meta" collapsed>
@@ -165,7 +160,7 @@ export const Meta = Baseline(({ children, ...rest }) => (
       </BaseMeta>
     )}
   </Subscriber>
-));
+);
 
 const Header = ({ children, transparent, shadow, ...rest }) => {
   const render = ({ secondary, tertiary, collapsed, actionable, ...value }) => {
@@ -217,4 +212,4 @@ Header.defaultProps = {
   children: null
 };
 
-export default Baseline(Header);
+export default Header;

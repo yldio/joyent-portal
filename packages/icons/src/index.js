@@ -40,5 +40,6 @@ export { default as Start } from './start';
 export { default as Stop } from './stop';
 export { default as Storage } from './storage';
 export { default as Tags } from './tags';
+export { default as Tick } from './tick';
 export { default as Triton } from './triton';
 export { default as User } from './user';

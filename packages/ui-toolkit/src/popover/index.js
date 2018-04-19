@@ -8,7 +8,6 @@ import is from 'styled-is';
 
 import style from '../tooltip/style';
 import { default as BaseTarget } from '../tooltip/target';
-import Baseline from '../baseline';
 
 const arrowClassName = rndId();
 
@@ -16,7 +15,7 @@ const Popper = styled(BasePopper)`
   box-shadow: 0 ${remcalc(2)} ${remcalc(6)} rgba(0, 0, 0, 0.1);
   border: ${remcalc(1)} solid ${props => props.theme.grey};
 
-  padding: ${remcalc(15)} ${remcalc(18)} ${remcalc(3)} ${remcalc(18)};
+  padding: ${remcalc(9)} 0;
 
   ${style({
     background: 'white',
@@ -33,17 +32,17 @@ const StyledTarget = styled(BaseTarget)`
     height: 100%;
     width: 100%;
 
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
   `};
 `;
 
-export const Target = Baseline(({ children, box = false, ...rest }) => (
+export const Target = ({ children, box = false, ...rest }) => (
   <StyledTarget box={box} tag={box ? 'div' : false} {...rest}>
     {children}
   </StyledTarget>
-));
+);
 
 export default class Popover extends Component {
   static contextTypes = {
