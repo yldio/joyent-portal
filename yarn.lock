@@ -3742,7 +3742,7 @@ duplexer@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
 
-duplexify@^3.4.2, duplexify@^3.5.3:
+duplexify@^3.4.2, duplexify@^3.5.3, duplexify@^3.5.4:
   version "3.5.4"
   resolved "https://registry.yarnpkg.com/duplexify/-/duplexify-3.5.4.tgz#4bb46c1796eabebeec4ca9a2e66b808cb7a3d8b4"
   dependencies:
@@ -5205,11 +5205,14 @@ handlebars@^4.0.2, handlebars@^4.0.3:
   optionalDependencies:
     uglify-js "^2.6"
 
-hapi-render-react-joyent-document@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/hapi-render-react-joyent-document/-/hapi-render-react-joyent-document-5.0.0.tgz#3e182a1afdae8e1874d322caed3d883bfd85efde"
+hapi-render-react-joyent-document@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/hapi-render-react-joyent-document/-/hapi-render-react-joyent-document-7.0.1.tgz#3c7846547f7bcdab668c5d94b748a3d769828ac6"
   dependencies:
-    through2 "^2.0.3"
+    duplexify "^3.5.4"
+    pumpify "^1.4.0"
+    react-helmet-async "0.0.5"
+    string-to-stream "^1.1.0"
 
 hapi-render-react@^2.5.2:
   version "2.5.2"
@@ -6527,13 +6530,14 @@ joyent-manifest-editor@^1.4.0:
     prop-types "^15.6.0"
     react-codemirror "^1.0.0"
 
-joyent-react-scripts@^8.0.3:
-  version "8.0.3"
-  resolved "https://registry.yarnpkg.com/joyent-react-scripts/-/joyent-react-scripts-8.0.3.tgz#0fa8684c924dbc582711c948167234278d925c5f"
+joyent-react-scripts@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/joyent-react-scripts/-/joyent-react-scripts-8.2.0.tgz#fb6d96e59775945d45264577e379c108a06b8cc6"
   dependencies:
     apr-for-each "^3.0.3"
     apr-main "^4.0.3"
     babel-minify-webpack-plugin "^0.3.1"
+    babel-register "^6.26.0"
     duplicate-package-checker-webpack-plugin "^2.1.0"
     execa "^0.10.0"
     graphql "^0.13.1"
@@ -8682,7 +8686,7 @@ pump@^2.0.0, pump@^2.0.1:
     end-of-stream "^1.1.0"
     once "^1.3.1"
 
-pumpify@^1.3.3:
+pumpify@^1.3.3, pumpify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/pumpify/-/pumpify-1.4.0.tgz#80b7c5df7e24153d03f0e7ac8a05a5d068bd07fb"
   dependencies:
@@ -8947,6 +8951,15 @@ react-group@^1.0.5:
   dependencies:
     prop-types "^15.5.10"
 
+react-helmet-async@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/react-helmet-async/-/react-helmet-async-0.0.5.tgz#c751aa6caba95b60d31eff9ff1283cb6fa284dba"
+  dependencies:
+    deep-equal "^1.0.1"
+    invariant "^2.2.2"
+    prop-types "^15.6.0"
+    shallowequal "^1.0.2"
+
 react-icon-base@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-icon-base/-/react-icon-base-2.1.0.tgz#a196e33fdf1e7aaa1fda3aefbb68bdad9e82a79d"
@@ -9207,7 +9220,7 @@ read-pkg@^3.0.0:
     normalize-package-data "^2.3.2"
     path-type "^3.0.0"
 
-"readable-stream@1 || 2", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.4, readable-stream@^2.0.6, readable-stream@^2.1.4, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.2.9, readable-stream@^2.3.3:
+"readable-stream@1 || 2", readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.4, readable-stream@^2.0.6, readable-stream@^2.1.0, readable-stream@^2.1.4, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.2.9, readable-stream@^2.3.3:
   version "2.3.6"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.6.tgz#b11c27d88b8ff1fbe070643cf94b0c79ae1b0aaf"
   dependencies:
@@ -9932,6 +9945,10 @@ sha.js@^2.4.0, sha.js@^2.4.8:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+shallowequal@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.0.2.tgz#1561dbdefb8c01408100319085764da3fcf83f8f"
+
 shebang-command@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-1.2.0.tgz#44aac65b695b03398968c39f363fee5deafdf1ea"
@@ -10305,6 +10322,13 @@ string-length@^1.0.1:
   resolved "https://registry.yarnpkg.com/string-length/-/string-length-1.0.1.tgz#56970fb1c38558e9e70b728bf3de269ac45adfac"
   dependencies:
     strip-ansi "^3.0.0"
+
+string-to-stream@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/string-to-stream/-/string-to-stream-1.1.1.tgz#aba78f73e70661b130ee3e1c0192be4fef6cb599"
+  dependencies:
+    inherits "^2.0.1"
+    readable-stream "^2.1.0"
 
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"
@@ -10695,7 +10719,7 @@ throat@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-4.1.0.tgz#89037cbc92c56ab18926e6ba4cbb200e15672a6a"
 
-through2@^2.0.0, through2@^2.0.2, through2@^2.0.3:
+through2@^2.0.0, through2@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
   dependencies:
