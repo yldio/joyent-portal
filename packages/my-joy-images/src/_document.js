@@ -51,6 +51,7 @@ const getState = request => {
 module.exports = Document({
   namespace: 'images/',
   assets,
+  Html: require('./html'),
   indexFile,
   getState
 });

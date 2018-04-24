@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from 'styled-components';
 import { Provider as ReduxProvider } from 'react-redux';
 import { ApolloProvider } from 'react-apollo';
@@ -22,7 +23,9 @@ ReactDOM.hydrate(
     <ThemeProvider theme={theme}>
       <ReduxProvider store={createStore()}>
         <BrowserRouter>
-          <App />
+          <HelmetProvider context={{}}>
+            <App />
+          </HelmetProvider>
         </BrowserRouter>
       </ReduxProvider>
     </ThemeProvider>
