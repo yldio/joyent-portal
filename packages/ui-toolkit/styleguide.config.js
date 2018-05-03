@@ -3,6 +3,7 @@ const { NODE_ENV } = process.env;
 const env = NODE_ENV === 'production' ? 'prod' : 'dev';
 
 // const resolvePkg = require('resolve-pkg');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const webpackConfig = require(`joyent-react-scripts/config/webpack.config.${env}.js`);
 const { defaultHandlers } = require('react-docgen');
 const dnHandler = require('react-docgen-displayname-handler');
@@ -14,6 +15,7 @@ module.exports = {
   },
   pagePerSection: true,
   webpackConfig: Object.assign(webpackConfig, {
+    plugins: webpackConfig.plugins.filter((plugin) => plugin.constructor.name !== 'LodashModuleReplacementPlugin'),
     resolve: Object.assign(webpackConfig.resolve, {
       alias: Object.assign(webpackConfig.resolve.alias, {
         'rsg-components/Wrapper': path.join(__dirname, 'src/styleguide/wrapper')

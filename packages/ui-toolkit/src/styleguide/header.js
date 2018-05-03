@@ -48,8 +48,7 @@ export default () => (
         <a href="#!/Download">Downloads</a>
       </li>
     </List>
-    {decodeURIComponent(window.location.href).split('/#!/')[1] ||
-    '/' !== '/' ? (
+    {decodeURIComponent(window.location.href).split('/#!/')[1] !== '/' ? (
       <Logo />
     ) : null}
     <a
