@@ -53,7 +53,7 @@ export const Metadata = ({
         inside the instance.{' '}
         <a
           target="__blank"
-          href="https://docs.joyent.com/public-cloud/tags-metadata/metadata"
+          href="https://docs.joyent.com/public-cloud/tags-metadata"
           rel="noopener noreferrer"
         >
           Read the docs
