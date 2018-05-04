@@ -49,9 +49,11 @@ const Firewall = ({
     </Title>
     {expanded ? (
       <Description>
-        Cloud Firewall rules control traffic across instances. Enabling the
-        firewall adds a default set of rules and rules defined by your chosen
-        tags.{' '}
+        Cloud firewall rules secure instances by defining network traffic rules,
+        controlling incoming and outgoing traffic. Enabling the firewall applies
+        only rules which match your instance. Although these rules are created
+        in the firewall console, the addition of tags can alter the firewall
+        rules.{' '}
         <a
           target="__blank"
           href="https://docs.joyent.com/public-cloud/network/firewall"
