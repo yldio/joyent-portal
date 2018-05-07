@@ -1,7 +1,9 @@
 const Main = require('apr-main');
 const CloudApiGql = require('cloudapi-gql');
 const Url = require('url');
+
 const Server = require('./server');
+const Ui = require('my-joy-instances');
 
 const {
   PORT = 4002,
@@ -25,19 +27,24 @@ Main(async () => {
     BASE_URL
   });
 
-  await server.register({
-    plugin: CloudApiGql,
-    options: {
-      authStrategy: 'sso',
-      keyPath,
-      keyId,
-      apiBaseUrl,
-      dcName
+  await server.register([
+    {
+      plugin: CloudApiGql,
+      options: {
+        authStrategy: 'sso',
+        keyPath,
+        keyId,
+        apiBaseUrl,
+        dcName
+      },
+      routes: {
+        prefix: `/${PREFIX}`
+      }
     },
-    routes: {
-      prefix: `/${PREFIX}`
+    {
+      plugin: Ui
     }
-  });
+  ]);
 
   await server.start();
 });

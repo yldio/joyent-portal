@@ -1,3 +1,4 @@
+const Boom = require('boom');
 const Inert = require('inert');
 const Path = require('path');
 const RenderReact = require('hapi-render-react');
@@ -8,8 +9,21 @@ const Fs = require('mz/fs');
 const { NAMESPACE = 'images' } = process.env;
 
 exports.register = async server => {
+  let manifest = {};
+
+  try {
+    manifest = require('../build/asset-manifest.json');
+  } catch (err) {
+    if (NODE_ENV === 'production') {
+      throw err;
+    } else {
+      console.error(err);
+    }
+  }
+
   const relativeTo = Path.join(__dirname, 'app');
-  const buildRoot = Path.join(__dirname, `../build/${NAMESPACE}/static/`);
+  const buildRoot = Path.join(__dirname, '../build');
+  const buildStatic = Path.join(buildRoot, `${NAMESPACE}`);
   const publicRoot = Path.join(__dirname, `../public/static/`);
 
   await server.register([
@@ -56,15 +70,41 @@ exports.register = async server => {
         const { params } = request;
         const { rest } = params;
 
-        const publicPathname = Path.join(publicRoot, rest);
-        const buildPathname = Path.join(buildRoot, rest);
+        if (!rest) {
+          return Boom.notFound();
+        }
 
-        const [err] = await Intercept(
+        const publicPathname = Path.join(publicRoot, rest);
+        const [err1] = await Intercept(
           Fs.access(publicPathname, Fs.constants.R_OK)
         );
 
-        const file = err ? buildPathname : publicPathname;
-        return h.file(file, { confine: false });
+        if (!err1) {
+          return h.file(publicPathname, {
+            confine: publicRoot
+          });
+        }
+
+        const filename = manifest[rest];
+        if (!filename) {
+          return Boom.notFound();
+        }
+
+        const buildMapPathname = Path.join(buildRoot, filename);
+        const [err2] = await Intercept(
+          Fs.access(buildMapPathname, Fs.constants.R_OK)
+        );
+
+        if (!err2) {
+          return h.file(buildMapPathname, {
+            confine: buildStatic
+          });
+        }
+
+        const buildPathname = Path.join(buildStatic, rest);
+        return h.file(buildPathname, {
+          confine: buildStatic
+        });
       }
     },
     {

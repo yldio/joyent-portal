@@ -1,11 +1,19 @@
 const React = require('react');
 
-module.exports = ({ htmlAttrs = {}, bodyAttrs = {}, head = [], children = null }) => (
+module.exports = ({
+  htmlAttrs = {},
+  bodyAttrs = {},
+  head = [],
+  children = null
+}) => (
   <html {...htmlAttrs}>
     <head>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+      <meta charSet="utf-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      />
       <meta name="theme-color" content="#1E313B" />
 
       {head}

@@ -6,6 +6,7 @@
   "repository": "github:yldio/joyent-portal",
   "scripts": {
     "dev": "lerna run dev --parallel --stream",
+    "ssr": "npm run build:bundle; lerna run dev --scope joyent-portal-bundle --stream",
     "test": "redrun -s build:test test:run",
     "test:ci": "CI=1 redrun -s build:test test:ci:run",
     "lint": "lerna run lint --stream",

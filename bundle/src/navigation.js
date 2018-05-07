@@ -1,7 +1,9 @@
 const Main = require('apr-main');
 const Nav = require('hapi-webconsole-nav');
 const Url = require('url');
+
 const Server = require('./server');
+const Ui = require('my-joy-navigation');
 
 const Regions = require('../data/regions');
 const Categories = require('../data/categories');
@@ -30,22 +32,27 @@ Main(async () => {
     BASE_URL
   });
 
-  await server.register({
-    plugin: Nav,
-    options: {
-      keyPath,
-      keyId,
-      apiBaseUrl,
-      dcName,
-      baseUrl,
-      regions: Regions,
-      accountServices: Account,
-      categories: Categories
+  await server.register([
+    {
+      plugin: Nav,
+      options: {
+        keyPath,
+        keyId,
+        apiBaseUrl,
+        dcName,
+        baseUrl,
+        regions: Regions,
+        accountServices: Account,
+        categories: Categories
+      },
+      routes: {
+        prefix: `/${PREFIX}`
+      }
     },
-    routes: {
-      prefix: `/${PREFIX}`
+    {
+      plugin: Ui
     }
-  });
+  ]);
 
   await server.start();
 });

@@ -15,7 +15,9 @@ module.exports = {
   },
   pagePerSection: true,
   webpackConfig: Object.assign(webpackConfig, {
-    plugins: webpackConfig.plugins.filter((plugin) => plugin.constructor.name !== 'LodashModuleReplacementPlugin'),
+    plugins: webpackConfig.plugins.filter(
+      plugin => plugin.constructor.name !== 'LodashModuleReplacementPlugin'
+    ),
     resolve: Object.assign(webpackConfig.resolve, {
       alias: Object.assign(webpackConfig.resolve.alias, {
         'rsg-components/Wrapper': path.join(__dirname, 'src/styleguide/wrapper')

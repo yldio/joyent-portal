@@ -23,7 +23,6 @@ const Color = styled.div`
 
   margin: ${remcalc(-1)} 0 ${remcalc(-1)} ${remcalc(-1)};
   min-width: ${remcalc(12)};
-  min-height: 100%;
 
   ${is('success')`
     background-color: ${props => props.theme.green};

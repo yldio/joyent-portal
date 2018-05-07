@@ -7,10 +7,21 @@ const Url = require('url');
 const Intercept = require('apr-intercept');
 const Fs = require('mz/fs');
 
-const { NAMESPACE = 'navigation' } = process.env;
+const { NAMESPACE = 'navigation', NODE_ENV = 'development' } = process.env;
 
 exports.register = async server => {
-  const manifest = require('../build/asset-manifest.json');
+  let manifest = {};
+
+  try {
+    manifest = require('../build/asset-manifest.json');
+  } catch (err) {
+    if (NODE_ENV === 'production') {
+      throw err;
+    } else {
+      console.error(err);
+    }
+  }
+
   const buildRoot = Path.join(__dirname, '../build');
   const buildStatic = Path.join(buildRoot, `${NAMESPACE}`);
   const publicRoot = Path.join(__dirname, `../public/static`);
