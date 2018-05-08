@@ -19,7 +19,7 @@
     "test": "NODE_ENV=test joyent-react-scripts test --env=jsdom",
     "test:ci": "redrun test",
     "build:es": "babel src --out-dir dist/es",
-    "build:umd": "UMD=1 babel src --out-dir dist/umd"
+    "build:umd": "SSR=1 UMD=1 babel src --out-dir dist/umd"
   },
   "dependencies": {
     "remcalc": "^1.0.10",

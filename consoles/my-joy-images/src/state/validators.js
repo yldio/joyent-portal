@@ -63,10 +63,7 @@ const Schemas = {
 
 /*****************************************************************************/
 
-export const addTag = tag => {
-  console.log(tag);
-  validateSchema(Schemas.tag, tag);
-};
+export const addTag = tag => validateSchema(Schemas.tag, tag);
 
 export const instanceName = ({ name }) =>
   !name ? null : validateSchema(Schemas.instanceName, { name });

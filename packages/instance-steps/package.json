@@ -12,7 +12,7 @@
     "dev": "NODE_ENV=development redrun -p build:es build:umd -- --watch --source-maps inline",
     "prepublish": "NODE_ENV=production redrun -p build:es build:umd",
     "build:es": "babel src --out-dir dist/es --copy-files",
-    "build:umd": "UMD=1 babel src --out-dir dist/umd --copy-files",
+    "build:umd": "SSR=1 UMD=1 babel src --out-dir dist/umd --copy-files",
     "build:test": "NODE_ENV=production redrun build:lib",
     "build:lib": "NODE_ENV=production redrun -p build:es build:umd",
     "build:bundle": "echo 0",

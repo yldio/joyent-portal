@@ -222,7 +222,6 @@ class CreateInstance extends Component {
             <ReduxForm form={IC_F} onSubmit={handleSubmit}>
               {({ handleSubmit, submitting }) => (
                 <form onSubmit={handleSubmit}>
-                  {console.log({ isFormValid: this.isFormValid() })}
                   <Button
                     disabled={disabled || !this.isFormValid()}
                     loading={submitting}
