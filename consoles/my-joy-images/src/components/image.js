@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Field } from 'redux-form';
-import Flex from 'styled-flex-component';
+import Flex, { FlexItem } from 'styled-flex-component';
 import { Padding, Margin } from 'styled-components-spacing';
 import remcalc from 'remcalc';
 
@@ -56,7 +56,6 @@ const Content = styled(Padding)`
 
 const Max = styled(Flex)`
   max-width: 100%;
-  height: 100%;
 `;
 
 const Actions = styled(Flex)`
@@ -74,6 +73,7 @@ const ActionsWrapper = styled(Flex)`
 const PopoverDivider = styled(BasePopoverDivider)`
   width: 100%;
 `;
+
 
 export const Image = ({
   name,
@@ -97,15 +97,19 @@ export const Image = ({
             <CardHeader white radius>
               <Padding left={2} right={2}>
                 <Flex full alignCenter>
-                  <Margin right={2}>
-                    {React.createElement(OS[os], {
-                      width: '24',
-                      height: '24'
-                    })}
-                  </Margin>
-                  <A to={`/images/${id}/summary`} component={Link}>
-                    {name}
-                  </A>
+                  <FlexItem>
+                    <Margin right={2}>
+                      {React.createElement(OS[os], {
+                        width: '24',
+                        height: '24'
+                      })}
+                    </Margin>
+                  </FlexItem>
+                  <FlexItem>
+                    <A to={`/images/${id}/summary`} component={Link}>
+                      {name}
+                    </A>
+                  </FlexItem>
                 </Flex>
               </Padding>
             </CardHeader>

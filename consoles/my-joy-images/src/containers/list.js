@@ -42,9 +42,6 @@ export const List = ({
   handleRemove
 }) => (
   <ViewContainer main>
-    <Margin top={5}>
-      <H3>Images</H3>
-    </Margin>
     <Margin top={4}>
       <ReduxForm form={LIST_TOOLBAR_FORM}>
         {props => <ToolbarForm {...props} actionable={!loading} />}

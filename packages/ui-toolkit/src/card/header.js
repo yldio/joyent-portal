@@ -12,7 +12,6 @@ const BaseHeader = styled(BaseCard)`
   flex-direction: row;
   z-index: 1;
   line-height: ${remcalc(24)};
-  height: auto;
   max-width: 100%;
   border-top: 0px;
   border-left: 0px;
