@@ -35,7 +35,7 @@ const names = {
   name: 'IC_NAME',
   image: 'IC_IMAGE',
   package: 'IC_PACKAGE',
-  network: 'IC_NETWORK',
+  networks: 'IC_NETWORKS',
   tags: 'IC_TAGS',
   metadata: 'IC_METADATA',
   userScript: 'IC_USERSCRIPT',
@@ -69,9 +69,9 @@ class CreateInstance extends Component {
   isFormValid = () => {
     const { steps } = this.props;
 
-    return Object.keys(this.isValids).filter(
-      name => !this.isValids[name](steps[name] || {})
-    ).length;
+    return Object.keys(this.isValids).every(name =>
+      this.isValids[name](steps[name] || {})
+    );
   };
 
   isStepValid = step => {
@@ -95,7 +95,7 @@ class CreateInstance extends Component {
       name,
       image,
       package: packageResult,
-      network,
+      networks,
       tags,
       metadata,
       userScript,
@@ -136,7 +136,7 @@ class CreateInstance extends Component {
               <Package
                 ref={this.setIsValid('package')}
                 expanded={step === 'package'}
-                next="network"
+                next="networks"
                 saved={steps.package}
                 onDefocus={handleDefocus('package')}
                 preview={packageResult}
@@ -144,12 +144,12 @@ class CreateInstance extends Component {
             </Margin>
             <Margin bottom="5">
               <Network
-                ref={this.setIsValid('network')}
-                expanded={step === 'network'}
+                ref={this.setIsValid('networks')}
+                expanded={step === 'networks'}
                 next="tags"
                 saved={steps.network}
-                onDefocus={handleDefocus('network')}
-                preview={network}
+                onDefocus={handleDefocus('networks')}
+                preview={networks}
               />
             </Margin>
             <Margin bottom="5">
@@ -223,7 +223,11 @@ class CreateInstance extends Component {
             <ReduxForm form={IC_F} onSubmit={handleSubmit}>
               {({ handleSubmit, submitting }) => (
                 <form onSubmit={handleSubmit}>
-                  <Button disabled={disabled} loading={submitting}>
+                  {console.log({ isFormValid: this.isFormValid() })}
+                  <Button
+                    disabled={disabled || !this.isFormValid()}
+                    loading={submitting}
+                  >
                     Deploy
                   </Button>
                 </form>
@@ -243,7 +247,7 @@ export default compose(
       name: values[names.name],
       image: values[names.image],
       package: values[names.package],
-      network: values[names.network],
+      networks: values[names.networks],
       tags: values[names.tags],
       metadata: values[names.metadata],
       userScript: values[names.userScript],
@@ -255,17 +259,20 @@ export default compose(
     const error = get(form, `${IC_F}.error`, null);
 
     // Maybe re-use saved to only write the rule once
-    const disabled = Boolean(
-      !this.isFormValid &&
-        steps.name &&
-        steps.image &&
-        steps.image.id &&
-        steps.package &&
-        steps.network
+    const disabled = !(
+      !error &&
+      steps.name &&
+      steps.name.name &&
+      steps.image &&
+      steps.image.id &&
+      steps.package &&
+      steps.package.id &&
+      steps.networks &&
+      Array.isArray(steps.networks)
     );
 
     return {
-      disabled: !disabled,
+      disabled,
       forms: Object.keys(form), // improve this
       error,
       steps

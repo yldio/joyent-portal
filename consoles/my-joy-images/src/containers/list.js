@@ -11,7 +11,6 @@ import { set } from 'react-redux-values';
 import Fuse from 'fuse.js';
 
 import {
-  H3,
   ViewContainer,
   Divider,
   StatusLoader,

@@ -74,7 +74,6 @@ const PopoverDivider = styled(BasePopoverDivider)`
   width: 100%;
 `;
 
-
 export const Image = ({
   name,
   id,
