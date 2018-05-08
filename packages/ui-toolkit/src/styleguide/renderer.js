@@ -7,6 +7,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import theme from '../theme';
 import Header from './header';
 import Parallax from './parallax';
+import BottomNav from './bottomNav';
 
 const Main = styled(Row)`
   padding-top: ${remcalc(24)};
@@ -71,6 +72,7 @@ const StyleGuideRenderer = ({
               )}
               <Col xs={hasSidebar ? 9 : 12} lg={hasSidebar ? 8 : 12}>
                 {children}
+                <BottomNav items={toc.props.sections} link={link} />
               </Col>
             </Main>
           </Grid>
