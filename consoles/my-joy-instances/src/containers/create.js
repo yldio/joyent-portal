@@ -38,7 +38,7 @@ const names = {
   networks: 'IC_NETWORKS',
   tags: 'IC_TAGS',
   metadata: 'IC_METADATA',
-  userScript: 'IC_USERSCRIPT',
+  'user-script': 'IC_USERSCRIPT',
   firewall: 'IC_FIREWALL',
   cns: 'IC_CNS',
   affinity: 'IC_AFFINITY'
@@ -98,7 +98,6 @@ class CreateInstance extends Component {
       networks,
       tags,
       metadata,
-      userScript,
       firewall,
       cns,
       affinity
@@ -176,12 +175,12 @@ class CreateInstance extends Component {
             </Margin>
             <Margin bottom="5">
               <UserScript
-                ref={this.setIsValid('userScript')}
+                ref={this.setIsValid('user-script')}
                 expanded={step === 'user-script'}
                 next="firewall"
-                saved={steps.userScript && steps.userScript.lines}
+                saved={get(steps, 'user-script.lines', false)}
                 onDefocus={handleDefocus('user-script')}
-                preview={userScript}
+                preview={steps['user-script']}
                 optional
               />
             </Margin>
@@ -250,7 +249,7 @@ export default compose(
       networks: values[names.networks],
       tags: values[names.tags],
       metadata: values[names.metadata],
-      userScript: values[names.userScript],
+      'user-script': values[names['user-script']],
       firewall: values[names.firewall],
       cns: values[names.cns],
       affinity: values[names.affinity]
@@ -329,8 +328,8 @@ export default compose(
             network => steps.networks[network]
           );
 
-        if (steps.userScript && steps.userScript.length) {
-          _metadata.push({ name: 'user-script', value: steps.userScript });
+        if (steps['user-script'] && steps['user-script'].length) {
+          _metadata.push({ name: 'user-script', value: steps['user-script'] });
         }
 
         steps.tags &&

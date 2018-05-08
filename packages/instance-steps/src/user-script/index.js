@@ -32,7 +32,7 @@ const UserScript = ({
   handleEdit,
   ...props
 }) => (
-  <Step name="userScript" getValue={handleGetValue} {...props}>
+  <Step name="user-script" getValue={handleGetValue} {...props}>
     <StepHeader icon={<ScriptIcon />}>User script</StepHeader>
     <StepDescription href="https://docs.joyent.com/private-cloud/instances/using-mdata#UsingtheMetadataAPI-ListofMetadataKeys">
       Insert code to execute when the machine starts (first boot only for KVM,
