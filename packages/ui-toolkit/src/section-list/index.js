@@ -5,7 +5,7 @@ import remcalc from 'remcalc';
 const UnorderedList = styled.ul`
   background: ${props => props.theme.disabled};
   list-style-type: none;
-  padding: 0 0 ${remcalc(3)} 0;
+  padding: 0 0 ${remcalc(12)} 0;
   max-height: ${remcalc(50)};
   overflow-x: auto;
   overflow-y: hidden;

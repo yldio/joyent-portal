@@ -26,7 +26,7 @@ export const Anchor = styled(BaseAnchor)`
   text-decoration: none;
   cursor: pointer;
   padding: 0 ${remcalc(12)};
-  padding-bottom: ${remcalc(6)};
+  padding-bottom: ${remcalc(15)};
   position: relative;
 
   &.active {

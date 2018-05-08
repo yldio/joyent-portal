@@ -28,7 +28,7 @@ const Menu = ({ links = [] }) => {
 
   return (
     <ViewContainer plain>
-      <Margin bottom={4}>
+      <Margin bottom="5" top="1">
         <SectionList>{getMenuItems(_links)}</SectionList>
       </Margin>
     </ViewContainer>

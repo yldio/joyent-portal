@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import get from 'lodash.get';
 
-import { Menu } from '@components/navigation';
+import Menu from '@components/menu';
 
 export default connect((state, { match }) => {
   const instanceId = get(match, 'params.instance');
