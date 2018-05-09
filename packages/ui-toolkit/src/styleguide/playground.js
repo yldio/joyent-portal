@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import is from 'styled-is';
 import remcalc from 'remcalc';
 
-const Wrapper = styled.section;
+const Wrapper = styled.section``;
 
 const Tabs = styled.ul`
   list-style: none;
@@ -133,8 +133,8 @@ class Playground extends Component {
             </Button>
           </TabHeader>
           {states.length
-            ? states.map(state => (
-                <TabHeader active={tab === state}>
+            ? states.map((state, i) => (
+                <TabHeader active={tab === state} key={`tabHeader${i}`}>
                   <Button
                     active={tab === state}
                     onClick={() => this.changeTab(state)}
@@ -158,7 +158,7 @@ class Playground extends Component {
         </Tab>
         {states.length
           ? states.map((state, i) => (
-              <Tab active={tab === state} data-preview={name}>
+              <Tab active={tab === state} data-preview={name} key={`tab${i}`}>
                 {this.showPreview(preview, propCode.split(regex)[i + 1])}
               </Tab>
             ))

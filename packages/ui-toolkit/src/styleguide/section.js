@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { Card, H2, P, H4 } from '../';
 import remcalc from 'remcalc';
 
+const CardStyled = styled(Card)``;
+
 const Header = styled.header`
   background: ${props => props.theme.primary};
   padding: ${remcalc(50)} ${remcalc(120)};
@@ -23,7 +25,7 @@ export default allProps => {
 
   if (depth === 1) {
     return (
-      <Card>
+      <CardStyled>
         <Header>
           <H2 white>{name}</H2>
           {description ? <P white>{description}</P> : null}
@@ -33,7 +35,7 @@ export default allProps => {
           {components}
           {sections}
         </Main>
-      </Card>
+      </CardStyled>
     );
   }
 
