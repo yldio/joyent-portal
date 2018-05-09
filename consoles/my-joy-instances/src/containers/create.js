@@ -306,27 +306,30 @@ export default compose(
 
     return {
       handleDefocus: name => value => {
-        return dispatch(set({ name: names[name], value }))
+        return dispatch(set({ name: names[name], value }));
       },
 
       handleSubmit: async () => {
         const _affinity = steps.affinity ? parseAffRule(steps.affinity) : null;
         const _name = steps.name && steps.name.name.toLowerCase();
 
-        const _metadata = (steps.metadata && steps.metadata.map(a => omit(a, 'open'))) || [];
+        const _metadata =
+          (steps.metadata && steps.metadata.map(a => omit(a, 'open'))) || [];
 
         const _tags =
-          steps.tags &&
-          uniqBy(steps.tags.map(a => omit(a, 'expanded')), 'name').map(a =>
-            omit(a, 'expanded')
-          );
+          (steps.tags &&
+            uniqBy(steps.tags.map(a => omit(a, 'expanded')), 'name').map(a =>
+              omit(a, 'expanded')
+            )) ||
+          [];
 
-        const _networks =
-          steps.networks &&
-          steps.networks.map(({ id }) => id);
+        const _networks = steps.networks && steps.networks.map(({ id }) => id);
 
         if (steps['user-script'] && steps['user-script'].lines) {
-          _metadata.push({ name: 'user-script', value: steps['user-script'].script });
+          _metadata.push({
+            name: 'user-script',
+            value: steps['user-script'].script
+          });
         }
 
         if (steps.cns) {
@@ -336,10 +339,10 @@ export default compose(
           });
         }
 
-        if (steps.cns && (steps.cns.cnsServices && steps.cns.cnsEnabled)) {
+        if (steps.cns && (steps.cns.serviceNames && steps.cns.cnsEnabled)) {
           _tags.push({
             name: 'triton.cns.services',
-            value: steps.cns.cnsServices.join(',')
+            value: steps.cns.serviceNames.join(',')
           });
         }
 
