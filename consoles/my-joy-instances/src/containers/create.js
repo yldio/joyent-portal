@@ -323,9 +323,7 @@ export default compose(
 
         const _networks =
           steps.networks &&
-          Object.keys(steps.networks).filter(
-            network => steps.networks[network]
-          );
+          steps.networks.map(({ id }) => id);
 
         if (steps['user-script'] && steps['user-script'].length) {
           _metadata.push({ name: 'user-script', value: steps['user-script'] });
