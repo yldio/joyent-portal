@@ -32,7 +32,7 @@ const Form = styled.form`
   padding-top: ${remcalc(1)};
 `;
 
-const Network = ({
+const Networks = ({
   preview = [],
   initialValues,
   handleGetValue,
@@ -43,7 +43,7 @@ const Network = ({
   loading,
   ...props
 }) => (
-  <Step name="network" getValue={handleGetValue} {...props}>
+  <Step name="networks" getValue={handleGetValue} {...props}>
     <StepHeader icon={<NetworkIcon />}>Networks</StepHeader>
     <StepDescription href={'https://docs.joyent.com/public-cloud/network/sdn'}>
       Instances are automatically connected to a private fabric network, which
@@ -193,4 +193,4 @@ export default compose(
       }
     })
   )
-)(Network);
+)(Networks);

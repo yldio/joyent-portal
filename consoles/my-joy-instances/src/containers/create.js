@@ -21,7 +21,7 @@ import {
   Name,
   Image,
   Package,
-  Network,
+  Networks,
   Tags,
   Metadata,
   UserScript,
@@ -142,11 +142,11 @@ class CreateInstance extends Component {
               />
             </Margin>
             <Margin bottom="5">
-              <Network
+              <Networks
                 ref={this.setIsValid('networks')}
                 expanded={step === 'networks'}
                 next="tags"
-                saved={steps.network}
+                saved={steps.networks}
                 onDefocus={handleDefocus('networks')}
                 preview={networks}
               />
