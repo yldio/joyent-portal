@@ -39,7 +39,7 @@ const TagList = styled(BaseTagList)`
 
 const Tag = ({ name, value, onRemoveClick }) => (
   <Margin right={1} bottom={1} key={`${name}-${value}`}>
-    <TagItem onRemoveClick={onRemoveClick}>
+    <TagItem fill="grey" onRemoveClick={onRemoveClick}>
       {name ? `${name}: ${value}` : value}
     </TagItem>
   </Margin>
@@ -96,28 +96,30 @@ const TagsContainer = ({
           ) : null}
           {addOpen ? (
             <Fragment>
-              <ReduxForm
-                form={IC_TAG_F_ADD}
-                destroyOnUnmount={false}
-                forceUnregisterOnUnmount={true}
-                shouldAsyncValidate={shouldAsyncValidate}
-                asyncValidate={handleValidate}
-                onSubmit={handleAddTag}
-              >
-                {props => (
-                  <Fragment>
-                    <KeyValue
-                      {...props}
-                      method="add"
-                      input="input"
-                      type="tag"
-                      expanded
-                      borderless
-                      onCancel={() => handleChangeAddOpen(false)}
-                    />
-                  </Fragment>
-                )}
-              </ReduxForm>
+              <Margin top={2}>
+                <ReduxForm
+                  form={IC_TAG_F_ADD}
+                  destroyOnUnmount={false}
+                  forceUnregisterOnUnmount={true}
+                  shouldAsyncValidate={shouldAsyncValidate}
+                  asyncValidate={handleValidate}
+                  onSubmit={handleAddTag}
+                >
+                  {props => (
+                    <Fragment>
+                      <KeyValue
+                        {...props}
+                        method="add"
+                        input="input"
+                        type="tag"
+                        expanded
+                        borderless
+                        onCancel={() => handleChangeAddOpen(false)}
+                      />
+                    </Fragment>
+                  )}
+                </ReduxForm>
+              </Margin>
             </Fragment>
           ) : (
             <Margin top={5}>

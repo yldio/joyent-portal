@@ -210,7 +210,7 @@ export const KeyValue = ({
           onClick={handleHeaderClick}
         >
           <PaddingMaxWidth left={borderless ? 0 : 3} right={borderless ? 0 : 3}>
-            <Flex alignCenter justifyBetween full>
+            <Flex alignCenter justifyBetween>
               <Meta>
                 {method === 'add' || method === 'create' ? (
                   <H4>{`${titleCase(method)} ${type}`}</H4>

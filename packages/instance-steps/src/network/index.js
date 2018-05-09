@@ -9,6 +9,8 @@ import get from 'lodash.get';
 import forceArray from 'force-array';
 import includes from 'lodash.includes';
 import find from 'lodash.find';
+import styled from 'styled-components';
+import remcalc from 'remcalc';
 
 import Step, {
   Header as StepHeader,
@@ -25,6 +27,10 @@ import { Forms, Values } from '../constants';
 
 const { IC_NW_F } = Forms;
 const { IC_NW_V_INFO_EXPANDED, IC_NW_V_MACHINES_EXPANDED } = Values;
+
+const Form = styled.form`
+  padding-top: ${remcalc(1)};
+`;
 
 const Network = ({
   preview = [],
@@ -78,7 +84,7 @@ const Network = ({
                 <StatusLoader />
               ) : (
                 <Fragment>
-                  <form>
+                  <Form>
                     {networks.map(
                       (
                         {
@@ -105,7 +111,7 @@ const Network = ({
                         />
                       )
                     )}
-                  </form>
+                  </Form>
                   <Margin top="5">
                     <Button type="button" component={Link} to={next}>
                       Save

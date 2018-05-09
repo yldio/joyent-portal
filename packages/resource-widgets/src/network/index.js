@@ -6,6 +6,7 @@ import { Margin, Padding } from 'styled-components-spacing';
 import styled from 'styled-components';
 import Flex, { FlexItem } from 'styled-flex-component';
 import remcalc from 'remcalc';
+import { isNot } from 'styled-is';
 
 import {
   H4,
@@ -13,7 +14,7 @@ import {
   Small,
   DotIcon,
   Card,
-  CardHeader,
+  CardHeader as BaseCardHeader,
   CardHeaderMeta,
   CardHeaderBox,
   CardOutlet,
@@ -36,6 +37,12 @@ const Box = styled.div`
   border: ${remcalc(1)} solid ${props => props.theme.grey};
   border-radius: ${remcalc(4)};
   min-width: ${remcalc(300)};
+`;
+
+const CardHeader = styled(BaseCardHeader)`
+  ${isNot('secondary')`
+    background-color: #f7f7f7;
+  `};
 `;
 
 export const Collapsed = ({ name, fabric, ...network }) => (
@@ -186,7 +193,7 @@ export const Expanded = ({
                 <Fragment>
                   <Margin top={3}>
                     <Card collapsed={!infoExpanded} actionable={!infoExpanded}>
-                      <CardHeader
+                      <BaseCardHeader
                         secondary={false}
                         transparent={false}
                         onClick={onInfoClick}
@@ -199,7 +206,7 @@ export const Expanded = ({
                         <CardHeaderBox>
                           <ArrowIcon direction={infoExpanded ? 'up' : 'down'} />
                         </CardHeaderBox>
-                      </CardHeader>
+                      </BaseCardHeader>
                       {infoExpanded ? (
                         <CardOutlet>
                           <Padding all={3}>
@@ -277,7 +284,7 @@ export const Expanded = ({
                         collapsed={!machinesExpanded}
                         actionable={!machinesExpanded}
                       >
-                        <CardHeader
+                        <BaseCardHeader
                           secondary={false}
                           transparent={false}
                           onClick={onMachinesClick}
@@ -292,7 +299,7 @@ export const Expanded = ({
                               direction={machinesExpanded ? 'up' : 'down'}
                             />
                           </CardHeaderBox>
-                        </CardHeader>
+                        </BaseCardHeader>
                         {machinesExpanded ? (
                           <CardOutlet>
                             <Padding top={2} bottom={2} left={3} right={3}>

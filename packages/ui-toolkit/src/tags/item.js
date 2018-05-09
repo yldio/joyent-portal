@@ -46,13 +46,13 @@ const Tag = styled.li`
 `;
 
 export default withTheme(
-  ({ theme, children, active, onRemoveClick, ...rest }) => (
+  ({ theme, children, active, onRemoveClick, fill = null, ...rest }) => (
     <Container>
       <Tag active={active} {...rest}>
         {children}
         {onRemoveClick ? (
           <CloseIcon
-            fill={active ? theme.primaryActive : theme.text}
+            fill={fill ? fill : active ? theme.primaryActive : theme.text}
             disabled
             onClick={onRemoveClick}
           />
