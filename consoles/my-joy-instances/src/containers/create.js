@@ -280,7 +280,7 @@ export default compose(
     const parseAffRule = ({
       conditional,
       placement,
-      identity,
+      type: identity,
       name,
       pattern,
       value
