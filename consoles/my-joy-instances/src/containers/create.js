@@ -339,7 +339,12 @@ export default compose(
           });
         }
 
-        if (steps.cns && (steps.cns.serviceNames && steps.cns.cnsEnabled)) {
+        if (
+          steps.cns &&
+          (steps.cns.serviceNames &&
+            steps.cns.serviceNames.length &&
+            steps.cns.cnsEnabled)
+        ) {
           _tags.push({
             name: 'triton.cns.services',
             value: steps.cns.serviceNames.join(',')
