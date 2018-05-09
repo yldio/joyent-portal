@@ -84,7 +84,7 @@ const CnsContainer = ({
           </Cns>
           <Margin top={5}>
             <Button type="button" component={Link} to={next}>
-              Save
+              Next
             </Button>
           </Margin>
           <Margin top={3}>

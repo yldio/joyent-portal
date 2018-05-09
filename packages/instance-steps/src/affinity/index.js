@@ -170,7 +170,7 @@ const Affinity = ({
           {!addOpen && exitingRule ? (
             <Margin top={5}>
               <Button type="button" component={Link} to={next}>
-                Save
+                Next
               </Button>
             </Margin>
           ) : null}
@@ -186,7 +186,7 @@ export default compose(
     const creatingRule = get(form, `${IC_AFF_F_ADD}.values`, null);
     const exitingRule = get(values, IC_AFF_V_AFF, null);
 
-    const addOpen = get(values, IC_AFF_V_ADD_OPEN, false);
+    const addOpen = get(values, IC_AFF_V_ADD_OPEN, true);
     const editOpen = get(values, IC_AFF_V_EDIT_OPEN, false);
 
     return {

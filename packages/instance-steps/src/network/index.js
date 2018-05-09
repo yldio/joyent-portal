@@ -114,7 +114,7 @@ const Network = ({
                   </Form>
                   <Margin top="5">
                     <Button type="button" component={Link} to={next}>
-                      Save
+                      Next
                     </Button>
                   </Margin>
                 </Fragment>

@@ -105,7 +105,7 @@ const PackageComponent = ({
                     </Packages>
                     <Margin top="4">
                       <Button type="button" component={Link} to={next}>
-                        Save
+                        Next
                       </Button>
                     </Margin>
                   </Fragment>
