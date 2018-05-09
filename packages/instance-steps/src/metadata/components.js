@@ -49,6 +49,7 @@ export default ({
             }
             editor={Editor}
             disabled={disabled}
+            shadow={false}
           />
           {addOpen || index !== metadata.length - 1 ? (
             <Margin bottom={2} />

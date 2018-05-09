@@ -175,7 +175,7 @@ export const List = ({
               searchLabel="Filter instances"
               searchable={!_loading}
               actionLabel="Create Instance"
-              actionTo="/instances/~create"
+              actionTo="/instances/~create/name"
             />
           )}
         </ReduxForm>

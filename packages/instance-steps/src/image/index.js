@@ -80,7 +80,7 @@ const Image = ({
                     />
                     <Margin top="2">
                       <Button type="button" component={Link} to={next}>
-                        Save
+                        Next
                       </Button>
                     </Margin>
                   </Fragment>

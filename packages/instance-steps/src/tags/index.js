@@ -137,7 +137,7 @@ const TagsContainer = ({
                 </FlexItem>
                 <FlexItem>
                   <Button type="button" component={Link} to={next}>
-                    Save
+                    Next
                   </Button>
                 </FlexItem>
               </Flex>

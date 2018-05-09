@@ -90,6 +90,7 @@ const Metadata = ({
                     onCancel={() => handleChangeAddOpen(false)}
                     editor={Editor}
                     expanded
+                    shadow={false}
                   />
                 </Fragment>
               ) : (
@@ -108,7 +109,7 @@ const Metadata = ({
                     </FlexItem>
                     <FlexItem>
                       <Button type="button" component={Link} to={next}>
-                        Save
+                        Next
                       </Button>
                     </FlexItem>
                   </Flex>

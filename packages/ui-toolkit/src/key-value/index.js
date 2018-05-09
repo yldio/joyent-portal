@@ -189,6 +189,7 @@ export const KeyValue = ({
   onlyValue = false,
   noRemove = false,
   borderless = false,
+  shadow = true,
   customHeader,
   headless = false
 }) => {
@@ -200,7 +201,7 @@ export const KeyValue = ({
       actionable={Boolean(handleHeaderClick)}
       borderless={borderless}
       headless={headless}
-      shadow
+      shadow={shadow}
     >
       {headless ? null : (
         <Header
