@@ -3,21 +3,27 @@ import Flex, { FlexItem } from 'styled-flex-component';
 import { Margin } from 'styled-components-spacing';
 
 import { H3, TickIcon } from 'joyent-ui-toolkit';
-import { StatusIcon } from 'joyent-ui-resource-step';
+import { StatusIcon, ErrorIcon } from 'joyent-ui-resource-step';
 
 export const Preview = ({ enabled }) => (
   <Flex>
     <FlexItem>
       <Margin right={2}>
-        <StatusIcon
-          fill="green"
-          border="greenDark"
-          Icon={() => <TickIcon fill="white" />}
-        />
+        {enabled ? (
+          <StatusIcon
+            fill="green"
+            border="greenDark"
+            Icon={() => <TickIcon fill="white" />}
+          />
+        ) : (
+          <ErrorIcon noLabel inverted />
+        )}
       </Margin>
     </FlexItem>
     <FlexItem>
-      <H3>{enabled ? 'Firewall enabled' : 'Firewall not enabled'}</H3>
+      <H3>
+        {enabled ? 'Firewall rules are enabled' : 'Firewall rules are disabled'}
+      </H3>
     </FlexItem>
   </Flex>
 );

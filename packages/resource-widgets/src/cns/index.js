@@ -203,6 +203,7 @@ const CnsHostnames = ({
             {services.map(value => (
               <TagItem
                 active
+                fill={'rgba(66, 134, 244, 0.1)'}
                 key={value}
                 onRemoveClick={
                   onRemoveService && (() => onRemoveService(value))

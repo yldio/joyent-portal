@@ -39,7 +39,7 @@ const TagList = styled(BaseTagList)`
 
 const Tag = ({ name, value, onRemoveClick }) => (
   <Margin right={1} bottom={1} key={`${name}-${value}`}>
-    <TagItem fill="grey" onRemoveClick={onRemoveClick}>
+    <TagItem iconFill="grey" onRemoveClick={onRemoveClick}>
       {name ? `${name}: ${value}` : value}
     </TagItem>
   </Margin>

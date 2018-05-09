@@ -32,6 +32,10 @@ const Tag = styled.li`
       background: ${props => props.theme.disabled};
   `};
 
+  ${is('fill')`
+    background: ${props => props.fill};
+  `};
+
   ${is('error')`
       border: ${remcalc(1)} solid ${props => props.theme.red};
   `};
@@ -46,13 +50,23 @@ const Tag = styled.li`
 `;
 
 export default withTheme(
-  ({ theme, children, active, onRemoveClick, fill = null, ...rest }) => (
+  ({
+    theme,
+    children,
+    active,
+    onRemoveClick,
+    fill = null,
+    iconFill = null,
+    ...rest
+  }) => (
     <Container>
-      <Tag active={active} {...rest}>
+      <Tag fill={fill} active={active} {...rest}>
         {children}
         {onRemoveClick ? (
           <CloseIcon
-            fill={fill ? fill : active ? theme.primaryActive : theme.text}
+            fill={
+              iconFill ? iconFill : active ? theme.primaryActive : theme.text
+            }
             disabled
             onClick={onRemoveClick}
           />
