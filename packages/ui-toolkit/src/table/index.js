@@ -314,11 +314,7 @@ export const Th = ({ children, ...rest }) => (
       >
         {children}
         {!showSort || !header ? null : (
-          <ArrowIcon
-            marginLeft={remcalc(9)}
-            marginBottom={remcalc(2)}
-            direction={sortOrder === 'asc' ? 'down' : 'up'}
-          />
+          <ArrowIcon direction={sortOrder === 'asc' ? 'down' : 'up'} />
         )}
       </BaseTh>
     )}

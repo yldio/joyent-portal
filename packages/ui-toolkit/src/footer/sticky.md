@@ -19,21 +19,21 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   <StickyFooter bottom>
     <Row between="xs" middle="xs">
       <Col xs={7}>
-        <Button type="button" secondary icon>
+        <Button type="button" secondary>
           <StartIcon />
           <span>Start</span>
         </Button>
-        <Button type="button" secondary icon>
+        <Button type="button" secondary>
           <StopIcon />
           <span>Stop</span>
         </Button>
-        <Button type="button" secondary icon>
+        <Button type="button" secondary>
           <ResetIcon />
           <span>Reboot</span>
         </Button>
       </Col>
       <Col xs={5}>
-        <Button type="button" error secondary right icon>
+        <Button type="button" error secondary right>
           <DeleteIcon fill="#D2433A" />
           <span>Remove</span>
         </Button>
