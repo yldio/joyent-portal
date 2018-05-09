@@ -79,24 +79,24 @@ exports.register = async server => {
           });
         }
 
+        const buildPathname = Path.join(buildStatic, 'static', rest);
+        const [err2] = await Intercept(
+          Fs.access(buildPathname, Fs.constants.R_OK)
+        );
+
+        if (!err2) {
+          return h.file(buildPathname, {
+            confine: buildStatic
+          });
+        }
+
         const filename = manifest[rest];
         if (!filename) {
           return Boom.notFound();
         }
 
         const buildMapPathname = Path.join(buildRoot, filename);
-        const [err2] = await Intercept(
-          Fs.access(buildMapPathname, Fs.constants.R_OK)
-        );
-
-        if (!err2) {
-          return h.file(buildMapPathname, {
-            confine: buildStatic
-          });
-        }
-
-        const buildPathname = Path.join(buildStatic, rest);
-        return h.file(buildPathname, {
+        return h.file(buildMapPathname, {
           confine: buildStatic
         });
       }
