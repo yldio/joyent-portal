@@ -1,7 +1,6 @@
 import React from 'react';
 import remcalc from 'remcalc';
 import styled from 'styled-components';
-import { Arrow } from 'joyent-icons';
 
 const BottomNav = styled.div`
   display: flex;
@@ -10,8 +9,6 @@ const BottomNav = styled.div`
 `;
 
 const Link = styled.a`
-  display: flex;
-  align-items: center;
   color: #3b46cc;
   font-size: 15px;
   line-height: 24px;
@@ -32,16 +29,14 @@ export default props => {
       <div>
         {selectedIndex > 0 ? (
           <Link href={`/#!/${items[selectedIndex - 1]}`}>
-            <Arrow direction="right" fill="#3B46CC" /> &nbsp;{' '}
-            {items[selectedIndex - 1]}
+            &larr; {items[selectedIndex - 1]}
           </Link>
         ) : null}
       </div>
       <div>
         {selectedIndex < items.length ? (
           <Link href={`/#!/${items[selectedIndex + 1]}`}>
-            {items[selectedIndex + 1]} &nbsp;{' '}
-            <Arrow direction="left" fill="#3B46CC" />
+            {items[selectedIndex + 1]} &rarr;
           </Link>
         ) : null}
       </div>
