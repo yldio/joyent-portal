@@ -34,24 +34,24 @@ exports[`renders <Network /> without throwing 1`] = `
   margin-bottom: 1.875rem;
 }
 
-.c19 {
+.c20 {
   margin-right: 1.875rem;
 }
 
-.c22 {
+.c23 {
   margin-right: 0.375rem;
 }
 
-.c14 {
+.c15 {
   padding-right: 0rem;
   padding-left: 0rem;
 }
 
-.c17 {
+.c18 {
   padding: 1.875rem;
 }
 
-.c18 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -71,7 +71,7 @@ exports[`renders <Network /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c21 {
+.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -95,7 +95,7 @@ exports[`renders <Network /> without throwing 1`] = `
   align-items: center;
 }
 
-.c20 {
+.c21 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -112,7 +112,7 @@ exports[`renders <Network /> without throwing 1`] = `
   display: block;
 }
 
-.c11 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -120,46 +120,46 @@ exports[`renders <Network /> without throwing 1`] = `
   overflow: visible;
 }
 
-.c11[type='checkbox'],
-.c11[type='radio'] {
+.c12[type='checkbox'],
+.c12[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c11[type='number']::-webkit-inner-spin-button,
-.c11[type='number']::-webkit-outer-spin-button {
+.c12[type='number']::-webkit-inner-spin-button,
+.c12[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c11[type='search'] {
+.c12[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c11[type='search']::-webkit-search-cancel-button,
-.c11[type='search']::-webkit-search-decoration {
+.c12[type='search']::-webkit-search-cancel-button,
+.c12[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c11::-webkit-file-upload-button {
+.c12::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c23 {
+.c24 {
   color: rgb(73,73,73);
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
 
-.c15 {
+.c16 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -189,7 +189,7 @@ exports[`renders <Network /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c5 {
+.c6 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -216,7 +216,7 @@ exports[`renders <Network /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c16 {
+.c17 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -232,7 +232,7 @@ exports[`renders <Network /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c4 {
+.c5 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -244,7 +244,7 @@ exports[`renders <Network /> without throwing 1`] = `
   border-right: 0px;
 }
 
-.c6 {
+.c7 {
   width: 2.875rem;
   min-width: 2.875rem;
   min-height: 2.875rem;
@@ -273,7 +273,7 @@ exports[`renders <Network /> without throwing 1`] = `
   box-shadow: none;
 }
 
-.c13 {
+.c14 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -307,33 +307,33 @@ exports[`renders <Network /> without throwing 1`] = `
   color: inherit;
 }
 
-.c10 {
+.c11 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c10:checked + label::after {
+.c11:checked + label::after {
   opacity: 1;
 }
 
-.c10:selected + label::after {
+.c11:selected + label::after {
   opacity: 1;
 }
 
-.c10:checked + label {
+.c11:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:selected + label {
+.c11:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:disabled + label {
+.c11:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c12 {
+.c13 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -351,7 +351,7 @@ exports[`renders <Network /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c12::after {
+.c13::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -368,7 +368,7 @@ exports[`renders <Network /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -377,7 +377,7 @@ exports[`renders <Network /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c9 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -389,11 +389,11 @@ exports[`renders <Network /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 label {
+.c9 label {
   font-weight: 400;
 }
 
-.c7 {
+.c8 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -403,6 +403,10 @@ exports[`renders <Network /> without throwing 1`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
+}
+
+.c4 {
+  background-color: #f7f7f7;
 }
 
 @media only screen and (min-width:0em) {
@@ -438,27 +442,27 @@ exports[`renders <Network /> without throwing 1`] = `
         name="card"
       >
         <div
-          className="c4 c5"
+          className="c4 c5 c6"
           disabled={false}
           name="card-header"
         >
           <div
-            className="c6 c5"
+            className="c7 c6"
             disabled={false}
             name="card-header-box"
           >
             <div
-              className="c7"
+              className="c8"
               name={undefined}
               role="group"
               style={undefined}
             >
               <li
-                className="c8"
+                className="c9"
               >
                 <div
                   checked={false}
-                  className="c9"
+                  className="c10"
                   disabled={false}
                   id="l"
                   onBlur={undefined}
@@ -466,14 +470,14 @@ exports[`renders <Network /> without throwing 1`] = `
                 >
                   <input
                     checked={false}
-                    className="c10 c11"
+                    className="c11 c12"
                     disabled={false}
                     id="m"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
-                    className="c12"
+                    className="c13"
                     htmlFor="m"
                   />
                 </div>
@@ -481,44 +485,44 @@ exports[`renders <Network /> without throwing 1`] = `
             </div>
           </div>
           <div
-            className="c13 c5"
+            className="c14 c6"
             disabled={false}
             name="card-header-meta"
           >
             <div
-              className="c14"
+              className="c15"
             >
               <h4
-                className="c15"
+                className="c16"
               />
             </div>
           </div>
         </div>
         <div
-          className="c16 c3"
+          className="c17 c3"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c17"
+            className="c18"
           >
             <div
-              className="c18"
+              className="c19"
             >
               <div
-                className="c19"
+                className="c20"
               >
                 <div
-                  className="c20"
+                  className="c21"
                 >
                   <div
-                    className="c21"
+                    className="c22"
                   >
                     <div
-                      className="c20"
+                      className="c21"
                     >
                       <div
-                        className="c22"
+                        className="c23"
                       >
                         <svg
                           height="16"
@@ -539,10 +543,10 @@ exports[`renders <Network /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c20"
+                      className="c21"
                     >
                       <p
-                        className="c23"
+                        className="c24"
                       >
                         Private
                       </p>
@@ -551,19 +555,19 @@ exports[`renders <Network /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c19"
+                className="c20"
               >
                 <div
-                  className="c20"
+                  className="c21"
                 >
                   <div
-                    className="c21"
+                    className="c22"
                   >
                     <div
-                      className="c20"
+                      className="c21"
                     >
                       <div
-                        className="c22"
+                        className="c23"
                       >
                         <svg
                           height="13"
@@ -579,10 +583,10 @@ exports[`renders <Network /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c20"
+                      className="c21"
                     >
                       <p
-                        className="c23"
+                        className="c24"
                       >
                         Data center network
                       </p>
@@ -910,28 +914,28 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   margin-bottom: 1.875rem;
 }
 
-.c21 {
+.c22 {
   margin-right: 1.875rem;
 }
 
-.c24 {
+.c25 {
   margin-right: 0.375rem;
 }
 
-.c18 {
+.c19 {
   margin-bottom: 1.125rem;
 }
 
-.c14 {
+.c15 {
   padding-right: 0rem;
   padding-left: 0rem;
 }
 
-.c17 {
+.c18 {
   padding: 1.875rem;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -951,7 +955,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c23 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -975,7 +979,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   align-items: center;
 }
 
-.c22 {
+.c23 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -992,7 +996,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   display: block;
 }
 
-.c11 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1000,46 +1004,46 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   overflow: visible;
 }
 
-.c11[type='checkbox'],
-.c11[type='radio'] {
+.c12[type='checkbox'],
+.c12[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c11[type='number']::-webkit-inner-spin-button,
-.c11[type='number']::-webkit-outer-spin-button {
+.c12[type='number']::-webkit-inner-spin-button,
+.c12[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c11[type='search'] {
+.c12[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c11[type='search']::-webkit-search-cancel-button,
-.c11[type='search']::-webkit-search-decoration {
+.c12[type='search']::-webkit-search-cancel-button,
+.c12[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c11::-webkit-file-upload-button {
+.c12::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c19 {
+.c20 {
   color: rgb(73,73,73);
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
 
-.c15 {
+.c16 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -1069,7 +1073,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c5 {
+.c6 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1096,7 +1100,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c16 {
+.c17 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1112,7 +1116,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c4 {
+.c5 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1124,7 +1128,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   border-right: 0px;
 }
 
-.c6 {
+.c7 {
   width: 2.875rem;
   min-width: 2.875rem;
   min-height: 2.875rem;
@@ -1153,7 +1157,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   box-shadow: none;
 }
 
-.c13 {
+.c14 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -1187,33 +1191,33 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   color: inherit;
 }
 
-.c10 {
+.c11 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c10:checked + label::after {
+.c11:checked + label::after {
   opacity: 1;
 }
 
-.c10:selected + label::after {
+.c11:selected + label::after {
   opacity: 1;
 }
 
-.c10:checked + label {
+.c11:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:selected + label {
+.c11:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:disabled + label {
+.c11:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c12 {
+.c13 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -1231,7 +1235,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c12::after {
+.c13::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -1248,7 +1252,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -1257,7 +1261,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c9 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1269,11 +1273,11 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 label {
+.c9 label {
   font-weight: 400;
 }
 
-.c7 {
+.c8 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -1283,6 +1287,10 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
+}
+
+.c4 {
+  background-color: #f7f7f7;
 }
 
 @media only screen and (min-width:0em) {
@@ -1318,27 +1326,27 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
         name="card"
       >
         <div
-          className="c4 c5"
+          className="c4 c5 c6"
           disabled={false}
           name="card-header"
         >
           <div
-            className="c6 c5"
+            className="c7 c6"
             disabled={false}
             name="card-header-box"
           >
             <div
-              className="c7"
+              className="c8"
               name="1"
               role="group"
               style={undefined}
             >
               <li
-                className="c8"
+                className="c9"
               >
                 <div
                   checked={false}
-                  className="c9"
+                  className="c10"
                   disabled={false}
                   id="n"
                   onBlur={undefined}
@@ -1346,14 +1354,14 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
                 >
                   <input
                     checked={false}
-                    className="c10 c11"
+                    className="c11 c12"
                     disabled={false}
                     id="o"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
-                    className="c12"
+                    className="c13"
                     htmlFor="o"
                   />
                 </div>
@@ -1361,15 +1369,15 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
             </div>
           </div>
           <div
-            className="c13 c5"
+            className="c14 c6"
             disabled={false}
             name="card-header-meta"
           >
             <div
-              className="c14"
+              className="c15"
             >
               <h4
-                className="c15"
+                className="c16"
               >
                 name
               </h4>
@@ -1377,39 +1385,39 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c16 c3"
+          className="c17 c3"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c17"
+            className="c18"
           >
             <div
-              className="c18"
+              className="c19"
             >
               <p
-                className="c19"
+                className="c20"
               >
                 description
               </p>
             </div>
             <div
-              className="c20"
+              className="c21"
             >
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c22"
+                  className="c23"
                 >
                   <div
-                    className="c23"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <div
-                        className="c24"
+                        className="c25"
                       >
                         <svg
                           height="16"
@@ -1430,10 +1438,10 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         Private
                       </p>
@@ -1442,19 +1450,19 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c22"
+                  className="c23"
                 >
                   <div
-                    className="c23"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <div
-                        className="c24"
+                        className="c25"
                       >
                         <svg
                           height="13"
@@ -1470,10 +1478,10 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         Data center network
                       </p>
@@ -1803,28 +1811,28 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   margin-bottom: 1.875rem;
 }
 
-.c21 {
+.c22 {
   margin-right: 1.875rem;
 }
 
-.c24 {
+.c25 {
   margin-right: 0.375rem;
 }
 
-.c18 {
+.c19 {
   margin-bottom: 1.125rem;
 }
 
-.c14 {
+.c15 {
   padding-right: 0rem;
   padding-left: 0rem;
 }
 
-.c17 {
+.c18 {
   padding: 1.875rem;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1844,7 +1852,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   align-content: stretch;
 }
 
-.c23 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1868,7 +1876,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   align-items: center;
 }
 
-.c22 {
+.c23 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1885,7 +1893,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   display: block;
 }
 
-.c11 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1893,46 +1901,46 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   overflow: visible;
 }
 
-.c11[type='checkbox'],
-.c11[type='radio'] {
+.c12[type='checkbox'],
+.c12[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c11[type='number']::-webkit-inner-spin-button,
-.c11[type='number']::-webkit-outer-spin-button {
+.c12[type='number']::-webkit-inner-spin-button,
+.c12[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c11[type='search'] {
+.c12[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c11[type='search']::-webkit-search-cancel-button,
-.c11[type='search']::-webkit-search-decoration {
+.c12[type='search']::-webkit-search-cancel-button,
+.c12[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c11::-webkit-file-upload-button {
+.c12::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c19 {
+.c20 {
   color: rgb(73,73,73);
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
 
-.c15 {
+.c16 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -1962,7 +1970,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   border-color: rgb(216,216,216);
 }
 
-.c5 {
+.c6 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1989,7 +1997,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   flex: 0 0 2.875rem;
 }
 
-.c16 {
+.c17 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2005,7 +2013,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   background-color: transparent;
 }
 
-.c4 {
+.c5 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2017,7 +2025,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   border-right: 0px;
 }
 
-.c6 {
+.c7 {
   width: 2.875rem;
   min-width: 2.875rem;
   min-height: 2.875rem;
@@ -2046,7 +2054,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   box-shadow: none;
 }
 
-.c13 {
+.c14 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -2080,33 +2088,33 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   color: inherit;
 }
 
-.c10 {
+.c11 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c10:checked + label::after {
+.c11:checked + label::after {
   opacity: 1;
 }
 
-.c10:selected + label::after {
+.c11:selected + label::after {
   opacity: 1;
 }
 
-.c10:checked + label {
+.c11:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:selected + label {
+.c11:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:disabled + label {
+.c11:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c12 {
+.c13 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -2124,7 +2132,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   height: 1.125rem;
 }
 
-.c12::after {
+.c13::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -2141,7 +2149,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   transform: rotate(-45deg);
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -2150,7 +2158,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c9 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2162,11 +2170,11 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   align-items: center;
 }
 
-.c8 label {
+.c9 label {
   font-weight: 400;
 }
 
-.c7 {
+.c8 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -2176,6 +2184,10 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
+}
+
+.c4 {
+  background-color: #f7f7f7;
 }
 
 @media only screen and (min-width:0em) {
@@ -2211,27 +2223,27 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
         name="card"
       >
         <div
-          className="c4 c5"
+          className="c4 c5 c6"
           disabled={false}
           name="card-header"
         >
           <div
-            className="c6 c5"
+            className="c7 c6"
             disabled={false}
             name="card-header-box"
           >
             <div
-              className="c7"
+              className="c8"
               name="1"
               role="group"
               style={undefined}
             >
               <li
-                className="c8"
+                className="c9"
               >
                 <div
                   checked={false}
-                  className="c9"
+                  className="c10"
                   disabled={false}
                   id="p"
                   onBlur={undefined}
@@ -2239,14 +2251,14 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
                 >
                   <input
                     checked={false}
-                    className="c10 c11"
+                    className="c11 c12"
                     disabled={false}
                     id="q"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
-                    className="c12"
+                    className="c13"
                     htmlFor="q"
                   />
                 </div>
@@ -2254,15 +2266,15 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
             </div>
           </div>
           <div
-            className="c13 c5"
+            className="c14 c6"
             disabled={false}
             name="card-header-meta"
           >
             <div
-              className="c14"
+              className="c15"
             >
               <h4
-                className="c15"
+                className="c16"
               >
                 name
               </h4>
@@ -2270,39 +2282,39 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
           </div>
         </div>
         <div
-          className="c16 c3"
+          className="c17 c3"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c17"
+            className="c18"
           >
             <div
-              className="c18"
+              className="c19"
             >
               <p
-                className="c19"
+                className="c20"
               >
                 description
               </p>
             </div>
             <div
-              className="c20"
+              className="c21"
             >
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c22"
+                  className="c23"
                 >
                   <div
-                    className="c23"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <div
-                        className="c24"
+                        className="c25"
                       >
                         <svg
                           height="16"
@@ -2323,10 +2335,10 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
                       </div>
                     </div>
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         Private
                       </p>
@@ -2335,19 +2347,19 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
                 </div>
               </div>
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c22"
+                  className="c23"
                 >
                   <div
-                    className="c23"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <div
-                        className="c24"
+                        className="c25"
                       >
                         <svg
                           height="13"
@@ -2363,10 +2375,10 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
                       </div>
                     </div>
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         Data center network
                       </p>
@@ -2696,37 +2708,37 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   margin-bottom: 1.875rem;
 }
 
-.c21 {
+.c22 {
   margin-right: 1.875rem;
 }
 
-.c24 {
+.c25 {
   margin-right: 0.375rem;
 }
 
-.c18 {
+.c19 {
   margin-bottom: 1.125rem;
 }
 
-.c25 {
+.c26 {
   margin-top: 1.125rem;
 }
 
-.c14 {
+.c15 {
   padding-right: 0rem;
   padding-left: 0rem;
 }
 
-.c17 {
+.c18 {
   padding: 1.875rem;
 }
 
-.c28 {
+.c29 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2746,7 +2758,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c23 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2770,7 +2782,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   align-items: center;
 }
 
-.c22 {
+.c23 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -2787,7 +2799,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   display: block;
 }
 
-.c11 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2795,46 +2807,46 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   overflow: visible;
 }
 
-.c11[type='checkbox'],
-.c11[type='radio'] {
+.c12[type='checkbox'],
+.c12[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c11[type='number']::-webkit-inner-spin-button,
-.c11[type='number']::-webkit-outer-spin-button {
+.c12[type='number']::-webkit-inner-spin-button,
+.c12[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c11[type='search'] {
+.c12[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c11[type='search']::-webkit-search-cancel-button,
-.c11[type='search']::-webkit-search-decoration {
+.c12[type='search']::-webkit-search-cancel-button,
+.c12[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c11::-webkit-file-upload-button {
+.c12::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c19 {
+.c20 {
   color: rgb(73,73,73);
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
 
-.c15 {
+.c16 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -2864,7 +2876,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c5 {
+.c6 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2891,7 +2903,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c26 {
+.c27 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2919,7 +2931,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c16 {
+.c17 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2935,7 +2947,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c4 {
+.c5 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2947,7 +2959,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   border-right: 0px;
 }
 
-.c27 {
+.c28 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -2960,7 +2972,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   box-shadow: none;
 }
 
-.c6 {
+.c7 {
   width: 2.875rem;
   min-width: 2.875rem;
   min-height: 2.875rem;
@@ -2989,7 +3001,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   box-shadow: none;
 }
 
-.c13 {
+.c14 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -3023,33 +3035,33 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   color: inherit;
 }
 
-.c10 {
+.c11 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c10:checked + label::after {
+.c11:checked + label::after {
   opacity: 1;
 }
 
-.c10:selected + label::after {
+.c11:selected + label::after {
   opacity: 1;
 }
 
-.c10:checked + label {
+.c11:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:selected + label {
+.c11:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:disabled + label {
+.c11:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c12 {
+.c13 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -3067,7 +3079,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c12::after {
+.c13::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -3084,7 +3096,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -3093,7 +3105,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c9 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3105,11 +3117,11 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 label {
+.c9 label {
   font-weight: 400;
 }
 
-.c7 {
+.c8 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -3119,6 +3131,10 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
+}
+
+.c4 {
+  background-color: #f7f7f7;
 }
 
 @media only screen and (min-width:0em) {
@@ -3154,27 +3170,27 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
         name="card"
       >
         <div
-          className="c4 c5"
+          className="c4 c5 c6"
           disabled={false}
           name="card-header"
         >
           <div
-            className="c6 c5"
+            className="c7 c6"
             disabled={false}
             name="card-header-box"
           >
             <div
-              className="c7"
+              className="c8"
               name="1"
               role="group"
               style={undefined}
             >
               <li
-                className="c8"
+                className="c9"
               >
                 <div
                   checked={false}
-                  className="c9"
+                  className="c10"
                   disabled={false}
                   id="t"
                   onBlur={undefined}
@@ -3182,14 +3198,14 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                 >
                   <input
                     checked={false}
-                    className="c10 c11"
+                    className="c11 c12"
                     disabled={false}
                     id="u"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
-                    className="c12"
+                    className="c13"
                     htmlFor="u"
                   />
                 </div>
@@ -3197,15 +3213,15 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
             </div>
           </div>
           <div
-            className="c13 c5"
+            className="c14 c6"
             disabled={false}
             name="card-header-meta"
           >
             <div
-              className="c14"
+              className="c15"
             >
               <h4
-                className="c15"
+                className="c16"
               >
                 name
               </h4>
@@ -3213,39 +3229,39 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c16 c3"
+          className="c17 c3"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c17"
+            className="c18"
           >
             <div
-              className="c18"
+              className="c19"
             >
               <p
-                className="c19"
+                className="c20"
               >
                 description
               </p>
             </div>
             <div
-              className="c20"
+              className="c21"
             >
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c22"
+                  className="c23"
                 >
                   <div
-                    className="c23"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <div
-                        className="c24"
+                        className="c25"
                       >
                         <svg
                           height="16"
@@ -3266,10 +3282,10 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         Private
                       </p>
@@ -3278,19 +3294,19 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c22"
+                  className="c23"
                 >
                   <div
-                    className="c23"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <div
-                        className="c24"
+                        className="c25"
                       >
                         <svg
                           height="16.2"
@@ -3306,10 +3322,10 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         Fabric network
                       </p>
@@ -3318,19 +3334,19 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c22"
+                  className="c23"
                 >
                   <div
-                    className="c23"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <div
-                        className="c24"
+                        className="c25"
                       >
                         <svg
                           height="17"
@@ -3438,10 +3454,10 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         0 instances
                       </p>
@@ -3451,36 +3467,36 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
               </div>
             </div>
             <div
-              className="c25"
+              className="c26"
             >
               <div
-                className="c26"
+                className="c27"
                 disabled={false}
                 name="card"
               >
                 <div
-                  className="c27 c26"
+                  className="c28 c27"
                   disabled={false}
                   name="card-header"
                   onClick={undefined}
                 >
                   <div
-                    className="c13 c26"
+                    className="c14 c27"
                     disabled={false}
                     name="card-header-meta"
                   >
                     <div
-                      className="c28"
+                      className="c29"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         Network information
                       </p>
                     </div>
                   </div>
                   <div
-                    className="c6 c5"
+                    className="c7 c6"
                     disabled={false}
                     name="card-header-box"
                   >
@@ -3825,49 +3841,49 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   margin-bottom: 1.875rem;
 }
 
-.c21 {
+.c22 {
   margin-right: 1.875rem;
 }
 
-.c24 {
+.c25 {
   margin-right: 0.375rem;
 }
 
-.c18 {
+.c19 {
   margin-bottom: 1.125rem;
 }
 
-.c25 {
+.c26 {
   margin-top: 1.125rem;
 }
 
-.c29 {
+.c30 {
   margin-bottom: 0.75rem;
 }
 
-.c32 {
+.c33 {
   margin-top: 0.1875rem;
 }
 
-.c14 {
+.c15 {
   padding-right: 0rem;
   padding-left: 0rem;
 }
 
-.c17 {
+.c18 {
   padding: 1.875rem;
 }
 
-.c26 {
+.c27 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c27 {
+.c28 {
   padding: 1.125rem;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3887,7 +3903,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c23 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3911,7 +3927,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   align-items: center;
 }
 
-.c28 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3934,7 +3950,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c22 {
+.c23 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3951,7 +3967,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   display: block;
 }
 
-.c11 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3959,46 +3975,46 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   overflow: visible;
 }
 
-.c11[type='checkbox'],
-.c11[type='radio'] {
+.c12[type='checkbox'],
+.c12[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c11[type='number']::-webkit-inner-spin-button,
-.c11[type='number']::-webkit-outer-spin-button {
+.c12[type='number']::-webkit-inner-spin-button,
+.c12[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c11[type='search'] {
+.c12[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c11[type='search']::-webkit-search-cancel-button,
-.c11[type='search']::-webkit-search-decoration {
+.c12[type='search']::-webkit-search-cancel-button,
+.c12[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c11::-webkit-file-upload-button {
+.c12::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c19 {
+.c20 {
   color: rgb(73,73,73);
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
 
-.c31 {
+.c32 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -4008,7 +4024,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   text-align: left;
 }
 
-.c15 {
+.c16 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -4038,7 +4054,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c5 {
+.c6 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4065,7 +4081,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c16 {
+.c17 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4081,7 +4097,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c4 {
+.c5 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -4093,7 +4109,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   border-right: 0px;
 }
 
-.c6 {
+.c7 {
   width: 2.875rem;
   min-width: 2.875rem;
   min-height: 2.875rem;
@@ -4122,7 +4138,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   box-shadow: none;
 }
 
-.c13 {
+.c14 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -4156,33 +4172,33 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   color: inherit;
 }
 
-.c10 {
+.c11 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c10:checked + label::after {
+.c11:checked + label::after {
   opacity: 1;
 }
 
-.c10:selected + label::after {
+.c11:selected + label::after {
   opacity: 1;
 }
 
-.c10:checked + label {
+.c11:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:selected + label {
+.c11:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:disabled + label {
+.c11:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c12 {
+.c13 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -4200,7 +4216,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c12::after {
+.c13::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -4217,7 +4233,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -4226,7 +4242,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c9 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4238,11 +4254,11 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 label {
+.c9 label {
   font-weight: 400;
 }
 
-.c7 {
+.c8 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -4254,7 +4270,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c33 {
+.c34 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -4278,65 +4294,69 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c33:focus {
+.c34:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c33::-webkit-input-placeholder {
+.c34::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33::-moz-placeholder {
+.c34::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:-ms-input-placeholder {
+.c34:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:invalid {
+.c34:invalid {
   box-shadow: none;
 }
 
-.c33:disabled {
+.c34:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c33:disabled::-webkit-input-placeholder {
+.c34:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:disabled::-moz-placeholder {
+.c34:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:disabled:-ms-input-placeholder {
+.c34:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:disabled {
+.c34:disabled {
   color: rgb(73,73,73);
 }
 
-.c33:disabled::-webkit-input-placeholder {
+.c34:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c33:disabled::-moz-placeholder {
+.c34:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c33:disabled:-ms-input-placeholder {
+.c34:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c30 {
+.c31 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
+}
+
+.c4 {
+  background-color: #f7f7f7;
 }
 
 @media only screen and (min-width:0em) {
@@ -4372,27 +4392,27 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
         name="card"
       >
         <div
-          className="c4 c5"
+          className="c4 c5 c6"
           disabled={false}
           name="card-header"
         >
           <div
-            className="c6 c5"
+            className="c7 c6"
             disabled={false}
             name="card-header-box"
           >
             <div
-              className="c7"
+              className="c8"
               name="1"
               role="group"
               style={undefined}
             >
               <li
-                className="c8"
+                className="c9"
               >
                 <div
                   checked={false}
-                  className="c9"
+                  className="c10"
                   disabled={false}
                   id="v"
                   onBlur={undefined}
@@ -4400,14 +4420,14 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                 >
                   <input
                     checked={false}
-                    className="c10 c11"
+                    className="c11 c12"
                     disabled={false}
                     id="w"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
-                    className="c12"
+                    className="c13"
                     htmlFor="w"
                   />
                 </div>
@@ -4415,15 +4435,15 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
             </div>
           </div>
           <div
-            className="c13 c5"
+            className="c14 c6"
             disabled={false}
             name="card-header-meta"
           >
             <div
-              className="c14"
+              className="c15"
             >
               <h4
-                className="c15"
+                className="c16"
               >
                 name
               </h4>
@@ -4431,39 +4451,39 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c16 c3"
+          className="c17 c3"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c17"
+            className="c18"
           >
             <div
-              className="c18"
+              className="c19"
             >
               <p
-                className="c19"
+                className="c20"
               >
                 description
               </p>
             </div>
             <div
-              className="c20"
+              className="c21"
             >
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c22"
+                  className="c23"
                 >
                   <div
-                    className="c23"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <div
-                        className="c24"
+                        className="c25"
                       >
                         <svg
                           height="16"
@@ -4484,10 +4504,10 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         Private
                       </p>
@@ -4496,19 +4516,19 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c22"
+                  className="c23"
                 >
                   <div
-                    className="c23"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <div
-                        className="c24"
+                        className="c25"
                       >
                         <svg
                           height="16.2"
@@ -4524,10 +4544,10 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         Fabric network
                       </p>
@@ -4536,19 +4556,19 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c22"
+                  className="c23"
                 >
                   <div
-                    className="c23"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <div
-                        className="c24"
+                        className="c25"
                       >
                         <svg
                           height="17"
@@ -4656,10 +4676,10 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         0 instances
                       </p>
@@ -4669,7 +4689,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
               </div>
             </div>
             <div
-              className="c25"
+              className="c26"
             >
               <div
                 className="c3"
@@ -4677,28 +4697,28 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                 name="card"
               >
                 <div
-                  className="c4 c5"
+                  className="c5 c6"
                   disabled={false}
                   name="card-header"
                   onClick={undefined}
                 >
                   <div
-                    className="c13 c5"
+                    className="c14 c6"
                     disabled={false}
                     name="card-header-meta"
                   >
                     <div
-                      className="c26"
+                      className="c27"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         Network information
                       </p>
                     </div>
                   </div>
                   <div
-                    className="c6 c5"
+                    className="c7 c6"
                     disabled={false}
                     name="card-header-box"
                   >
@@ -4721,39 +4741,39 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                   </div>
                 </div>
                 <div
-                  className="c16 c3"
+                  className="c17 c3"
                   disabled={false}
                   name="card-outlet"
                 >
                   <div
-                    className="c27"
+                    className="c28"
                   >
                     <div
-                      className="c28"
+                      className="c29"
                     >
                       <div
-                        className="c22"
+                        className="c23"
                       >
                         <div
-                          className="c29"
+                          className="c30"
                         >
                           <div
-                            className="c7"
+                            className="c8"
                             name="id"
                             role="group"
                             style={undefined}
                           >
                             <label
-                              className="c30 c31"
+                              className="c31 c32"
                               htmlFor="x"
                             >
                               ID
                             </label>
                             <div
-                              className="c32"
+                              className="c33"
                             >
                               <input
-                                className="c33"
+                                className="c34"
                                 disabled={false}
                                 id="x"
                                 onBlur={null}
@@ -4764,25 +4784,25 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c22"
+                        className="c23"
                       >
                         <div
-                          className="c7"
+                          className="c8"
                           name="subnet"
                           role="group"
                           style={undefined}
                         >
                           <label
-                            className="c30 c31"
+                            className="c31 c32"
                             htmlFor="y"
                           >
                             Subnet
                           </label>
                           <div
-                            className="c32"
+                            className="c33"
                           >
                             <input
-                              className="c33"
+                              className="c34"
                               disabled={false}
                               id="y"
                               onBlur={null}
@@ -4792,25 +4812,25 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c22"
+                        className="c23"
                       >
                         <div
-                          className="c7"
+                          className="c8"
                           name="ip-range"
                           role="group"
                           style={undefined}
                         >
                           <label
-                            className="c30 c31"
+                            className="c31 c32"
                             htmlFor="z"
                           >
                             IP range
                           </label>
                           <div
-                            className="c32"
+                            className="c33"
                           >
                             <input
-                              className="c33"
+                              className="c34"
                               disabled={false}
                               id="z"
                               onBlur={null}
@@ -5145,28 +5165,28 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   margin-bottom: 1.875rem;
 }
 
-.c21 {
+.c22 {
   margin-right: 1.875rem;
 }
 
-.c24 {
+.c25 {
   margin-right: 0.375rem;
 }
 
-.c18 {
+.c19 {
   margin-bottom: 1.125rem;
 }
 
-.c14 {
+.c15 {
   padding-right: 0rem;
   padding-left: 0rem;
 }
 
-.c17 {
+.c18 {
   padding: 1.875rem;
 }
 
-.c20 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5186,7 +5206,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c23 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5210,7 +5230,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   align-items: center;
 }
 
-.c22 {
+.c23 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -5227,7 +5247,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   display: block;
 }
 
-.c11 {
+.c12 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -5235,46 +5255,46 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   overflow: visible;
 }
 
-.c11[type='checkbox'],
-.c11[type='radio'] {
+.c12[type='checkbox'],
+.c12[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c11[type='number']::-webkit-inner-spin-button,
-.c11[type='number']::-webkit-outer-spin-button {
+.c12[type='number']::-webkit-inner-spin-button,
+.c12[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c11[type='search'] {
+.c12[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c11[type='search']::-webkit-search-cancel-button,
-.c11[type='search']::-webkit-search-decoration {
+.c12[type='search']::-webkit-search-cancel-button,
+.c12[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c11::-webkit-file-upload-button {
+.c12::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c19 {
+.c20 {
   color: rgb(73,73,73);
   margin: 0;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
 
-.c15 {
+.c16 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -5304,7 +5324,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c5 {
+.c6 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5331,7 +5351,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c16 {
+.c17 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5347,7 +5367,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c4 {
+.c5 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -5359,7 +5379,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   border-right: 0px;
 }
 
-.c6 {
+.c7 {
   width: 2.875rem;
   min-width: 2.875rem;
   min-height: 2.875rem;
@@ -5388,7 +5408,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   box-shadow: none;
 }
 
-.c13 {
+.c14 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -5422,33 +5442,33 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   color: inherit;
 }
 
-.c10 {
+.c11 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c10:checked + label::after {
+.c11:checked + label::after {
   opacity: 1;
 }
 
-.c10:selected + label::after {
+.c11:selected + label::after {
   opacity: 1;
 }
 
-.c10:checked + label {
+.c11:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:selected + label {
+.c11:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c10:disabled + label {
+.c11:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c12 {
+.c13 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -5466,7 +5486,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c12::after {
+.c13::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -5483,7 +5503,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c9 {
+.c10 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -5492,7 +5512,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c8 {
+.c9 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5504,11 +5524,11 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 label {
+.c9 label {
   font-weight: 400;
 }
 
-.c7 {
+.c8 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -5518,6 +5538,10 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   -webkit-padding-start: 0;
   -webkit-padding-end: 0;
   -webkit-padding-after: 0;
+}
+
+.c4 {
+  background-color: #f7f7f7;
 }
 
 @media only screen and (min-width:0em) {
@@ -5553,27 +5577,27 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
         name="card"
       >
         <div
-          className="c4 c5"
+          className="c4 c5 c6"
           disabled={false}
           name="card-header"
         >
           <div
-            className="c6 c5"
+            className="c7 c6"
             disabled={false}
             name="card-header-box"
           >
             <div
-              className="c7"
+              className="c8"
               name="1"
               role="group"
               style={undefined}
             >
               <li
-                className="c8"
+                className="c9"
               >
                 <div
                   checked={false}
-                  className="c9"
+                  className="c10"
                   disabled={false}
                   id="r"
                   onBlur={undefined}
@@ -5581,14 +5605,14 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
                 >
                   <input
                     checked={false}
-                    className="c10 c11"
+                    className="c11 c12"
                     disabled={false}
                     id="s"
                     onBlur={undefined}
                     type="checkbox"
                   />
                   <label
-                    className="c12"
+                    className="c13"
                     htmlFor="s"
                   />
                 </div>
@@ -5596,15 +5620,15 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
             </div>
           </div>
           <div
-            className="c13 c5"
+            className="c14 c6"
             disabled={false}
             name="card-header-meta"
           >
             <div
-              className="c14"
+              className="c15"
             >
               <h4
-                className="c15"
+                className="c16"
               >
                 name
               </h4>
@@ -5612,39 +5636,39 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c16 c3"
+          className="c17 c3"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c17"
+            className="c18"
           >
             <div
-              className="c18"
+              className="c19"
             >
               <p
-                className="c19"
+                className="c20"
               >
                 description
               </p>
             </div>
             <div
-              className="c20"
+              className="c21"
             >
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c22"
+                  className="c23"
                 >
                   <div
-                    className="c23"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <div
-                        className="c24"
+                        className="c25"
                       >
                         <svg
                           height="16"
@@ -5664,10 +5688,10 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         Public
                       </p>
@@ -5676,19 +5700,19 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c21"
+                className="c22"
               >
                 <div
-                  className="c22"
+                  className="c23"
                 >
                   <div
-                    className="c23"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <div
-                        className="c24"
+                        className="c25"
                       >
                         <svg
                           height="13"
@@ -5704,10 +5728,10 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c22"
+                      className="c23"
                     >
                       <p
-                        className="c19"
+                        className="c20"
                       >
                         Data center network
                       </p>

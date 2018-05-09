@@ -77,7 +77,7 @@ export default compose(
       return {
         script,
         lines,
-        handleGetValue: () => ({ lines }),
+        handleGetValue: () => ({ script, lines }),
         create: !script.value,
         edit: script.value,
         formOpen

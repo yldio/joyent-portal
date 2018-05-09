@@ -305,15 +305,15 @@ export default compose(
     };
 
     return {
-      handleDefocus: name => value =>
-        dispatch(set({ name: names[name], value })),
+      handleDefocus: name => value => {
+        return dispatch(set({ name: names[name], value }))
+      },
 
       handleSubmit: async () => {
         const _affinity = steps.affinity ? parseAffRule(steps.affinity) : null;
         const _name = steps.name && steps.name.name.toLowerCase();
 
-        const _metadata =
-          steps.metadata && steps.metadata.map(a => omit(a, 'open'));
+        const _metadata = (steps.metadata && steps.metadata.map(a => omit(a, 'open'))) || [];
 
         const _tags =
           steps.tags &&
@@ -325,19 +325,19 @@ export default compose(
           steps.networks &&
           steps.networks.map(({ id }) => id);
 
-        if (steps['user-script'] && steps['user-script'].length) {
-          _metadata.push({ name: 'user-script', value: steps['user-script'] });
+        if (steps['user-script'] && steps['user-script'].lines) {
+          _metadata.push({ name: 'user-script', value: steps['user-script'].script });
         }
 
-        steps.tags &&
-          steps.cns &&
-          steps.tags.push({
+        if (steps.cns) {
+          _tags.push({
             name: 'triton.cns.disable',
             value: !steps.cns.cnsEnabled
           });
+        }
 
         if (steps.cns && (steps.cns.cnsServices && steps.cns.cnsEnabled)) {
-          steps.tags.push({
+          _tags.push({
             name: 'triton.cns.services',
             value: steps.cns.cnsServices.join(',')
           });
