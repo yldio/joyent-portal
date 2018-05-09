@@ -19,7 +19,8 @@ const previousAndNextSections = data => {
   const items = data.items;
   const link = data.link;
   const sectionNames = items.map(item => item.name);
-  const index = items.findIndex(item => item.name === link);
+  const index =
+    data.link === '/' ? 0 : items.findIndex(item => item.name === link);
   let ret = { prevSection: null, nextSection: null };
 
   if (index > -1) {
