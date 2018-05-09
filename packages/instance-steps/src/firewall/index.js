@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { Margin } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import { compose, graphql } from 'react-apollo';
+import { Link } from 'react-router-dom';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import get from 'lodash.get';
@@ -14,7 +15,7 @@ import Step, {
   Outlet as StepOutlet
 } from 'joyent-ui-resource-step';
 
-import { P, FirewallIcon } from 'joyent-ui-toolkit';
+import { Button, P, FirewallIcon } from 'joyent-ui-toolkit';
 
 import {
   TagRules,
@@ -123,6 +124,11 @@ const Firewall = ({
               </P>
             </Margin>
           ) : null}
+          <Margin top={5}>
+            <Button type="button" component={Link} to={next}>
+              Next
+            </Button>
+          </Margin>
         </Fragment>
       )}
     </StepOutlet>
