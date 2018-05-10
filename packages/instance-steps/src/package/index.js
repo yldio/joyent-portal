@@ -48,9 +48,10 @@ const PackageComponent = ({
 }) => (
   <Step name="package" getValue={handleGetValue} {...props}>
     <StepHeader icon={<PackageIcon />}>Package</StepHeader>
-    <StepDescription>
-      A package defines the specs of your instance. On Triton, packages can only
-      increase in size.
+    <StepDescription href="https://docs.joyent.com/public-cloud/instances/packages">
+      Triton packages determine the resources allocated to your instance
+      including RAM, disk space, CPU, IO_PRIORITY, and more. Once set, package
+      size can only increase.
     </StepDescription>
     <StepPreview>
       <Margin top={3}>
