@@ -19,7 +19,7 @@ import Step, {
 import { Button, KeyValue, MetadataIcon } from 'joyent-ui-toolkit';
 
 import { Forms, Values } from '../constants';
-import Preview from './components';
+import { default as Preview, Overview } from './components';
 import Editor from 'joyent-ui-toolkit/dist/es/editor';
 import { addMetadata as validateMetadata } from '../validators';
 
@@ -58,18 +58,20 @@ const Metadata = ({
       {({ next }) => (
         <Margin top="5">
           {metadata.length ? (
-            <Preview
-              metadata={metadata}
-              handleCancelEdit={handleCancelEdit}
-              handleRemoveMetadata={handleRemoveMetadata}
-              handleToggleExpanded={handleToggleExpanded}
-              handleUpdateMetadata={handleUpdateMetadata}
-              handleAddMetadata={handleAddMetadata}
-              shouldAsyncValidate={shouldAsyncValidate}
-              handleAsyncValidate={handleAsyncValidate}
-              handleChangeAddOpen={handleChangeAddOpen}
-              addOpen={addOpen}
-            />
+            <Fragment>
+              <Preview
+                metadata={metadata}
+                handleCancelEdit={handleCancelEdit}
+                handleRemoveMetadata={handleRemoveMetadata}
+                handleToggleExpanded={handleToggleExpanded}
+                handleUpdateMetadata={handleUpdateMetadata}
+                handleAddMetadata={handleAddMetadata}
+                shouldAsyncValidate={shouldAsyncValidate}
+                handleAsyncValidate={handleAsyncValidate}
+                handleChangeAddOpen={handleChangeAddOpen}
+                addOpen={addOpen}
+              />
+            </Fragment>
           ) : null}
           <ReduxForm
             form={IC_MD_F_ADD}

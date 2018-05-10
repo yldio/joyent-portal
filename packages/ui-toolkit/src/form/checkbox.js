@@ -9,9 +9,27 @@ const Li = styled.li`
   list-style-type: none;
   display: flex;
   align-items: center;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  height: 24px;
 
   label {
     font-weight: 400;
+  }
+
+  label::after {
+    width: 0.475rem;
+    height: 0.205rem;
+    top: 0.4125rem;
+    left: 0.35rem;
+  }
+
+  div[type='checkbox'],
+  div[type='checkbox'] input,
+  div[type='checkbox'] label {
+    height: 24px;
+    width: 24px;
   }
 `;
 

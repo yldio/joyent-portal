@@ -20,6 +20,7 @@ import Step, {
 } from 'joyent-ui-resource-step';
 
 import {
+  H3,
   Button,
   TagsIcon,
   TagList as BaseTagList,
@@ -36,6 +37,14 @@ const { IC_TAG_V_ADD_OPEN, IC_TAG_V_TAGS } = Values;
 const TagList = styled(BaseTagList)`
   margin-bottom: ${remcalc(-6)};
 `;
+
+const TagCount = ({ total = 0 }) => (
+  <Margin bottom={5}>
+    <H3>
+      {total} Tag{total === 1 ? '' : 's'}
+    </H3>
+  </Margin>
+);
 
 const Tag = ({ name, value, onRemoveClick }) => (
   <Margin right={1} bottom={1} key={`${name}-${value}`}>
@@ -67,13 +76,10 @@ const TagsContainer = ({
     </StepDescription>
     <StepPreview>
       <Margin top="3">
+        <TagCount total={preview.length} />
         <TagList>
           {preview.map(({ name, value }, index) => (
-            <Tag
-              name={name}
-              value={value}
-              onRemoveClick={() => handleRemoveTag(index)}
-            />
+            <Tag name={name} value={value} />
           ))}
         </TagList>
       </Margin>
@@ -83,6 +89,7 @@ const TagsContainer = ({
         <Fragment>
           {tags.length ? (
             <Margin top={5}>
+              <TagCount total={tags.length} />
               <TagList>
                 {tags.map(({ name, value }, index) => (
                   <Tag
