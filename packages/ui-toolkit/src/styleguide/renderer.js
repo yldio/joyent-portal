@@ -10,6 +10,7 @@ import Parallax from './parallax';
 
 const Main = styled(Row)`
   padding-top: ${remcalc(24)};
+  width: 100%;
 `;
 
 const Sidebar = styled.div`
