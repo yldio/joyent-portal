@@ -4,6 +4,7 @@ import { Field } from 'redux-form';
 import { Margin, Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
+import styled from 'styled-components';
 
 import {
   H3,
@@ -13,9 +14,14 @@ import {
   TagList,
   TagItem,
   P,
+  Checkbox,
   Strong,
   Card
 } from 'joyent-ui-toolkit';
+
+const Form = styled.form`
+  margin-bottom: 0 !important;
+`;
 
 const capitalizeFirstLetter = string =>
   string.charAt(0).toUpperCase() + string.slice(1);
@@ -170,47 +176,30 @@ export const ToggleFirewallForm = ({
     : undefined;
 
   return (
-    <form onChange={onChange}>
-      <FormGroup name="enabled" type="checkbox" field={Field}>
-        <Flex alignCenter>
-          {left ? (
-            <Fragment>
-              <Margin right={2}>
-                <Toggle disabled={submitting} />
-              </Margin>
-              <FormLabel big marginless>
-                Enable Firewall
-              </FormLabel>
-            </Fragment>
-          ) : (
-            <Fragment>
-              <FormLabel big marginless>
-                Enable Firewall
-              </FormLabel>
-              <Margin left={2}>
-                <Toggle disabled={submitting} />
-              </Margin>
-            </Fragment>
-          )}
-        </Flex>
+    <Form onChange={onChange}>
+      <FormGroup type="checkbox" name="enabled" field={Field}>
+        <Checkbox disabled={submitting}>
+          <FormLabel noMargin actionable>
+            <Margin left={2} right={2}>
+              Enable Firewall
+            </Margin>
+          </FormLabel>
+        </Checkbox>
       </FormGroup>
-    </form>
+    </Form>
   );
 };
 
 export const ToggleInactiveForm = () => (
-  <form>
-    <FormGroup name="inactive" type="checkbox" field={Field}>
-      <Flex alignCenter>
-        <Fragment>
-          <Margin right={2}>
-            <Toggle />
-          </Margin>
-          <FormLabel big marginless>
+  <Form>
+    <FormGroup type="checkbox" name="inactive" field={Field}>
+      <Checkbox>
+        <FormLabel noMargin actionable>
+          <Margin left={2} right={2}>
             Show inactive rules
-          </FormLabel>
-        </Fragment>
-      </Flex>
+          </Margin>
+        </FormLabel>
+      </Checkbox>
     </FormGroup>
-  </form>
+  </Form>
 );

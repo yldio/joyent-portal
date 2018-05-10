@@ -2,12 +2,16 @@ import React, { PureComponent, Fragment } from 'react';
 import { Field } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
 
-import { FormGroup, H3 } from 'joyent-ui-toolkit';
+import { FormGroup, H3, Button } from 'joyent-ui-toolkit';
 import Editor from 'joyent-ui-toolkit/dist/es/editor';
 
 class EditorField extends PureComponent {
   render() {
-    return <Editor {...this.props} onBlur={null} mode="sh" />;
+    return (
+      <Fragment>
+        <Editor {...this.props} onBlur={null} mode="sh" />
+      </Fragment>
+    );
   }
 }
 

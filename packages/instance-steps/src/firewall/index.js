@@ -15,7 +15,7 @@ import Step, {
   Outlet as StepOutlet
 } from 'joyent-ui-resource-step';
 
-import { Button, P, FirewallIcon } from 'joyent-ui-toolkit';
+import { H3, Button, P, FirewallIcon } from 'joyent-ui-toolkit';
 
 import {
   TagRules,
@@ -67,11 +67,7 @@ const Firewall = ({
                 >
                   {props => (
                     <Margin right={5}>
-                      <ToggleFirewallForm
-                        {...props}
-                        submitting={loading}
-                        left
-                      />
+                      <ToggleFirewallForm {...props} submitting={loading} />
                     </Margin>
                   )}
                 </ReduxForm>
@@ -94,7 +90,15 @@ const Firewall = ({
           {enabled && !loading && !defaultRules.length && !tagRules.length ? (
             <Margin top={5}>
               <Empty borderTop>
-                Sorry, but we weren’t able to find any firewall rules.
+                <Fragment>
+                  <H3>No Firewall rules found</H3>
+                  <Margin top={1}>
+                    <P>
+                      Try viewing inactive rules instead to see firewalls that
+                      can potentially affect your instance
+                    </P>
+                  </Margin>
+                </Fragment>
               </Empty>
             </Margin>
           ) : null}
