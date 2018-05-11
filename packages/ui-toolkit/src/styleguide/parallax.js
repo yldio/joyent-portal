@@ -53,10 +53,19 @@ const Img = styled.img`
 const gutterWidth = 47 + 70;
 const windowWidth = (window || {}).outerWidth + 70;
 
+const isScrolledOutsideView = () => {
+  const elem = document.getElementById('parallaxWrapper');
+  const eleHeight = elem.clientHeight;
+  const scrollY = window.scrollY;
+
+  return scrollY > eleHeight;
+};
+
 export default class extends Component {
   state = {
     value: parseInt(windowWidth / gutterWidth, 10),
-    windowWidth
+    windowWidth,
+    show: true
   };
 
   render() {
@@ -67,13 +76,25 @@ export default class extends Component {
       });
     });
 
+    if (this.props.hideAfterScroll) {
+      window.addEventListener('scroll', () => {
+        if (this.state.show && isScrolledOutsideView()) {
+          this.setState({ show: false });
+        }
+      });
+    }
+
     const array = Array.apply(null, { length: this.state.value }).map(
       Number.call,
       Number
     );
 
+    if (!this.state.show) {
+      return null;
+    }
+
     return (
-      <Wrapper>
+      <Wrapper id="parallaxWrapper">
         {array.map((g, i) => (
           <Gutter key={g} style={{ left: gutterWidth * i }} />
         ))}
