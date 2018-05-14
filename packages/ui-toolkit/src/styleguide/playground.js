@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import is from 'styled-is';
 import remcalc from 'remcalc';
+import { Margin } from 'styled-components-spacing';
 
 const Wrapper = styled.section``;
 
@@ -124,14 +125,16 @@ class Playground extends Component {
     return (
       <Wrapper>
         <Tabs>
-          <TabHeader active={tab === 'component'}>
-            <Button
-              active={tab === 'component'}
-              onClick={() => this.changeTab('component')}
-            >
-              {(propCode.split(nameRegex)[1] || 'Component').split(/\s/g)[0]}
-            </Button>
-          </TabHeader>
+          <Margin right={5}>
+            <TabHeader active={tab === 'component'}>
+              <Button
+                active={tab === 'component'}
+                onClick={() => this.changeTab('component')}
+              >
+                {(propCode.split(nameRegex)[1] || 'Component').split(/\s/g)[0]}
+              </Button>
+            </TabHeader>
+          </Margin>
           {states.length
             ? states.map((state, i) => (
                 <TabHeader active={tab === state} key={`tabHeader${i}`}>
