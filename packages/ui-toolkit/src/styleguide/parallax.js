@@ -53,12 +53,17 @@ const Img = styled.img`
 const gutterWidth = 47 + 70;
 const windowWidth = (window || {}).outerWidth + 70;
 
+let isScrolling;
+
 const isScrolledOutsideView = () => {
   const elem = document.getElementById('parallaxWrapper');
-  const eleHeight = elem.clientHeight;
-  const scrollY = window.scrollY;
+  if (elem) {
+    const eleHeight = elem.clientHeight;
+    const scrollY = window.scrollY;
 
-  return scrollY > eleHeight;
+    return scrollY >= eleHeight;
+  }
+  return true;
 };
 
 export default class extends Component {
@@ -68,6 +73,35 @@ export default class extends Component {
     show: true
   };
 
+  componentDidMount() {
+    if (this.props.hideAfterScroll) {
+      isScrolledOutsideView()
+        ? this.setState({ show: false })
+        : window.addEventListener('scroll', this.scrollStopHandler);
+    }
+  }
+
+  scrollStopHandler = () => {
+    window.clearTimeout(isScrolling);
+    isScrolling = setTimeout(() => {
+      isScrolledOutsideView()
+        ? this.setState({ show: false }, () =>
+            window.removeEventListener('scroll', this.scrollStopHandler)
+          )
+        : this.skipParallax();
+    }, 66);
+  };
+
+  skipParallax = () => {
+    if (this.state.show) {
+      window.scroll({
+        top: document.getElementsByTagName('header')[0].offsetTop,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   render() {
     window.addEventListener('resize', () => {
       this.setState({
@@ -75,14 +109,6 @@ export default class extends Component {
         value: parseInt(this.state.windowWidth / gutterWidth, 10)
       });
     });
-
-    if (this.props.hideAfterScroll) {
-      window.addEventListener('scroll', () => {
-        if (this.state.show && isScrolledOutsideView()) {
-          this.setState({ show: false });
-        }
-      });
-    }
 
     const array = Array.apply(null, { length: this.state.value }).map(
       Number.call,
