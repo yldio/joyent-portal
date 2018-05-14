@@ -9,7 +9,7 @@ import {
   P as BaseP,
   H3 as BaseH3,
   Divider,
-  TagList,
+  TagList as BaseTagList,
   Input,
   Toggle as BaseToggle,
   Small,
@@ -22,6 +22,10 @@ import {
   FormMeta,
   TagItem
 } from 'joyent-ui-toolkit';
+
+const TagList = styled(BaseTagList)`
+  margin-bottom: ${remcalc(-6)};
+`;
 
 const SmallBordered = styled(Small)`
   padding-right: ${remcalc(12)};
@@ -201,16 +205,18 @@ const CnsHostnames = ({
         <Margin top={1}>
           <TagList>
             {services.map(value => (
-              <TagItem
-                active
-                fill={'rgba(66, 134, 244, 0.1)'}
-                key={value}
-                onRemoveClick={
-                  onRemoveService && (() => onRemoveService(value))
-                }
-              >
-                {value}
-              </TagItem>
+              <Margin right={1} bottom={1}>
+                <TagItem
+                  active
+                  fill={'rgba(66, 134, 244, 0.1)'}
+                  key={value}
+                  onRemoveClick={
+                    onRemoveService && (() => onRemoveService(value))
+                  }
+                >
+                  {value}
+                </TagItem>
+              </Margin>
             ))}
           </TagList>
         </Margin>

@@ -30,7 +30,7 @@ import {
   MemoryIcon
 } from 'joyent-ui-toolkit';
 
-import { NoPackages } from 'joyent-logo-assets';
+import { EmptyState } from 'joyent-icons';
 
 const GroupIcons = {
   MEMORY: <MemoryIcon fill="#32ABCF" />,
@@ -304,7 +304,7 @@ export const Empty = ({ children, ...rest }) => (
     <Padding all={6}>
       <Flex alignCenter justifyCenter column>
         <Margin bottom={2}>
-          <NoPackages />
+          <EmptyState />
         </Margin>
         <NoPackagesTitle>{children}</NoPackagesTitle>
       </Flex>

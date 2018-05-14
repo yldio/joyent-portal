@@ -59,6 +59,7 @@ export const Header = ({ icon = null, children }) => (
                   <FlexItem alignCenter>
                     <Link
                       to={expanded ? `/${namespace}` : `/${namespace}/${name}`}
+                      id={'expand-card-' + name}
                     >
                       <Flex alignCenter>
                         {expanded ? 'Save and Collase' : 'Expand'}

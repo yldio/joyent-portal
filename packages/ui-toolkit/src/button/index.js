@@ -87,7 +87,6 @@ const Button = styled(BaseButton)`
   text-align: center;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   letter-spacing: normal;
   text-decoration: none;
 
