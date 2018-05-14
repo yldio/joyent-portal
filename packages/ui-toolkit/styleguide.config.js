@@ -60,7 +60,17 @@ module.exports = {
       name: 'Grids',
       content: 'src/grids/Readme.md',
       description:
-        'Triton’s grid aims to have maximum coverage over a wide range of devices. With a maximum container width of 964px, we are able to display the main desktop experience all the way down to a tradional landscape tablet device.'
+        'Triton’s grid aims to have maximum coverage over a wide range of devices. With a maximum container width of 964px, we are able to display the main desktop experience all the way down to a tradional landscape tablet device.',
+      sections: [
+        {
+          name: 'Horizontal',
+          content: 'src/grids/Readme.md'
+        },
+        {
+          name: 'Vertical',
+          content: 'src/grids/vertical.md'
+        }
+      ]
     },
     {
       name: 'Superscript',
