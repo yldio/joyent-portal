@@ -82,23 +82,31 @@ export default class extends Component {
   }
 
   scrollStopHandler = () => {
-    window.clearTimeout(isScrolling);
-    isScrolling = setTimeout(() => {
-      isScrolledOutsideView()
-        ? this.setState({ show: false }, () =>
-            window.removeEventListener('scroll', this.scrollStopHandler)
-          )
-        : this.skipParallax();
-    }, 66);
+    window.removeEventListener('scroll', this.scrollStopHandler);
+    window.addEventListener('scroll', this.checkpoint);
+
+    isScrolledOutsideView()
+      ? this.setState({ show: false })
+      : this.skipParallax();
   };
 
   skipParallax = () => {
-    if (this.state.show) {
+    if (
+      this.state.show &&
+      window.scrollY < document.getElementsByTagName('header')[0].offsetTop
+    ) {
       window.scroll({
         top: document.getElementsByTagName('header')[0].offsetTop,
         left: 0,
         behavior: 'smooth'
       });
+    }
+  };
+
+  checkpoint = () => {
+    if (isScrolledOutsideView()) {
+      window.removeEventListener('scroll', this.checkpoint);
+      this.setState({ show: false });
     }
   };
 
@@ -124,7 +132,7 @@ export default class extends Component {
         {array.map((g, i) => (
           <Gutter key={g} style={{ left: gutterWidth * i }} />
         ))}
-        <Parallax offsetYMax={50} offsetYMin={-50} slowerScrollRate tag="main">
+        <Parallax offsetYMax={50} offsetYMin={-50} tag="main">
           <Text>
             <Img src={Plus} />
             <Img topRight src={Plus} />
@@ -136,6 +144,10 @@ export default class extends Component {
               elements, components and guidelines, for anyone developing
               products within the Joyent and Triton ecosystems.
             </P>
+          </Text>
+        </Parallax>
+        <Parallax offsetYMax={200} offsetYMin={0} slowerScrollRate tag="main">
+          <Text>
             <P white style={{ marginTop: remcalc(60), position: 'absolute' }}>
               Scroll down
             </P>
