@@ -61,7 +61,7 @@ const StyleGuideRenderer = ({
     <ThemeProvider theme={fullTheme}>
       <ParallaxProvider>
         <Fragment>
-          {link === '/' ? <Parallax hideAfterScroll="true" /> : null}
+          {link === '/' ? <Parallax hideAfterScroll={true} /> : null}
           <Header />
           <Grid style={{ marginLeft: 0, zIndex: 2, position: 'relative' }}>
             <Main>
