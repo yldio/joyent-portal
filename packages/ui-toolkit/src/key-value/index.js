@@ -27,6 +27,10 @@ import { H4 } from '../text/headings';
 import Button from '../button';
 import Divider from '../divider';
 
+const Form = styled.form`
+  margin-bottom: 0;
+`;
+
 const CollapsedKeyValue = styled.div`
   word-break: break-all;
   line-height: 1.5;
@@ -348,7 +352,7 @@ KeyValue.propTypes = {
 };
 
 export default withTheme(({ handleSubmit, ...rest }) => (
-  <form onSubmit={handleSubmit}>
+  <Form onSubmit={handleSubmit}>
     <KeyValue {...rest} />
-  </form>
+  </Form>
 ));

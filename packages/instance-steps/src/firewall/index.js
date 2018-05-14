@@ -5,6 +5,7 @@ import { compose, graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
+import { change } from 'redux-form';
 import get from 'lodash.get';
 import forceArray from 'force-array';
 
@@ -39,6 +40,8 @@ const Firewall = ({
   tagRules = [],
   loading = false,
   enabled = false,
+  showInactiveRules = null,
+  showInactive = false,
   ...props
 }) => (
   <Step name="firewall" getValue={handleGetValue} {...props}>
@@ -98,6 +101,15 @@ const Firewall = ({
                       can potentially affect your instance
                     </P>
                   </Margin>
+                  <Margin top={2}>
+                    <Button
+                      secondary
+                      onClick={showInactiveRules}
+                      disabled={showInactive}
+                    >
+                      View Inactive Rules
+                    </Button>
+                  </Margin>
                 </Fragment>
               </Empty>
             </Margin>
@@ -142,7 +154,9 @@ const Firewall = ({
 export default compose(
   connect(({ form, values }, ownProps) => ({
     ...ownProps,
-    enabled: get(form, `${IC_FW_F_ENABLED}.values.enabled`, false),
+    enabled:
+      console.log(form, values) ||
+      get(form, `${IC_FW_F_ENABLED}.values.enabled`, false),
     showInactive: get(form, `${IC_FW_F_INACTIVE}.values.inactive`, false),
     tags: get(values, IC_TAG_V_TAGS, [])
   })),
@@ -184,5 +198,9 @@ export default compose(
         handleGetValue: () => ({ enabled, defaultRules, tagRules })
       };
     }
-  })
+  }),
+  connect(null, (dispatch, { ...args }) => ({
+    showInactiveRules: () =>
+      dispatch(change(IC_FW_F_INACTIVE, 'inactive', true))
+  }))
 )(Firewall);

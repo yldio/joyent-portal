@@ -124,7 +124,7 @@ export const Meta = ({
                     loading={submitting}
                     inline
                   >
-                    Add
+                    Save
                   </Button>
                 </Margin>
               </Flex>
