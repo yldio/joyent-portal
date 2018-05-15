@@ -748,13 +748,14 @@ exports[`renders <Cns /> without throwing 1`] = `
                     >
                       <div
                         className="c24"
+                        id="cns-service-name-input"
                         name="name"
                         role="group"
                         style={undefined}
                       >
                         <label
                           className="c25 c26"
-                          htmlFor="k"
+                          htmlFor="cns-service-name-input"
                         >
                           Attach to new CNS service name
                         </label>
@@ -764,7 +765,7 @@ exports[`renders <Cns /> without throwing 1`] = `
                           <input
                             className="c28"
                             disabled={false}
-                            id="k"
+                            id="cns-service-name-input"
                             onBlur={null}
                             placeholder="Example: mySQLdb"
                           />
@@ -783,6 +784,7 @@ exports[`renders <Cns /> without throwing 1`] = `
                         data-ui-button="true"
                         disabled={undefined}
                         href=""
+                        id="cns-service-name-add-button"
                         type="submit"
                       >
                         Add
@@ -2470,13 +2472,14 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                     >
                       <div
                         className="c35"
+                        id="cns-service-name-input"
                         name="name"
                         role="group"
                         style={undefined}
                       >
                         <label
                           className="c36 c37"
-                          htmlFor="u"
+                          htmlFor="cns-service-name-input"
                         >
                           Attach to new CNS service name
                         </label>
@@ -2486,7 +2489,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                           <input
                             className="c38"
                             disabled={false}
-                            id="u"
+                            id="cns-service-name-input"
                             onBlur={null}
                             placeholder="Example: mySQLdb"
                           />
@@ -2505,6 +2508,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                         data-ui-button="true"
                         disabled={undefined}
                         href=""
+                        id="cns-service-name-add-button"
                         type="submit"
                       >
                         Add
@@ -4038,13 +4042,14 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
                     >
                       <div
                         className="c29"
+                        id="cns-service-name-input"
                         name="name"
                         role="group"
                         style={undefined}
                       >
                         <label
                           className="c30 c31"
-                          htmlFor="m"
+                          htmlFor="cns-service-name-input"
                         >
                           Attach to new CNS service name
                         </label>
@@ -4054,7 +4059,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
                           <input
                             className="c33"
                             disabled={false}
-                            id="m"
+                            id="cns-service-name-input"
                             onBlur={null}
                             placeholder="Example: mySQLdb"
                           />
@@ -4073,6 +4078,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
                         data-ui-button="true"
                         disabled={undefined}
                         href=""
+                        id="cns-service-name-add-button"
                         type="submit"
                       >
                         Add
@@ -5350,6 +5356,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       <li
                         className="c40"
                         fill="rgba(66, 134, 244, 0.1)"
+                        id="cns-tag-0"
                       >
                         serbice
                       </li>
@@ -5360,6 +5367,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       <li
                         className="c40"
                         fill="rgba(66, 134, 244, 0.1)"
+                        id="cns-tag-1"
                       >
                         dssasda
                       </li>
@@ -5370,6 +5378,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       <li
                         className="c40"
                         fill="rgba(66, 134, 244, 0.1)"
+                        id="cns-tag-2"
                       >
                         dsasd
                       </li>
@@ -5392,13 +5401,14 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                     >
                       <div
                         className="c42"
+                        id="cns-service-name-input"
                         name="name"
                         role="group"
                         style={undefined}
                       >
                         <label
                           className="c34 c35"
-                          htmlFor="p"
+                          htmlFor="cns-service-name-input"
                         >
                           Attach to new CNS service name
                         </label>
@@ -5408,7 +5418,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                           <input
                             className="c43"
                             disabled={true}
-                            id="p"
+                            id="cns-service-name-input"
                             onBlur={null}
                             placeholder="Example: mySQLdb"
                           />
@@ -5427,6 +5437,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                         data-ui-button="true"
                         disabled={undefined}
                         href=""
+                        id="cns-service-name-add-button"
                         type="submit"
                       >
                         Add
@@ -6765,13 +6776,14 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                     >
                       <div
                         className="c29"
+                        id="cns-service-name-input"
                         name="name"
                         role="group"
                         style={undefined}
                       >
                         <label
                           className="c30 c31"
-                          htmlFor="n"
+                          htmlFor="cns-service-name-input"
                         >
                           Attach to new CNS service name
                         </label>
@@ -6781,7 +6793,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                           <input
                             className="c33"
                             disabled={false}
-                            id="n"
+                            id="cns-service-name-input"
                             onBlur={null}
                             placeholder="Example: mySQLdb"
                           />
@@ -6800,6 +6812,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                         data-ui-button="true"
                         disabled={undefined}
                         href=""
+                        id="cns-service-name-add-button"
                         type="submit"
                       >
                         Add
@@ -7689,6 +7702,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
                       <li
                         className="c27"
                         fill="rgba(66, 134, 244, 0.1)"
+                        id="cns-tag-0"
                       >
                         serbice
                         <svg
@@ -7718,6 +7732,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
                       <li
                         className="c27"
                         fill="rgba(66, 134, 244, 0.1)"
+                        id="cns-tag-1"
                       >
                         dssasda
                         <svg
@@ -7747,6 +7762,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
                       <li
                         className="c27"
                         fill="rgba(66, 134, 244, 0.1)"
+                        id="cns-tag-2"
                       >
                         dsasd
                         <svg
@@ -7788,13 +7804,14 @@ exports[`renders <Cns services /> without throwing 1`] = `
                     >
                       <div
                         className="c32"
+                        id="cns-service-name-input"
                         name="name"
                         role="group"
                         style={undefined}
                       >
                         <label
                           className="c21 c22"
-                          htmlFor="s"
+                          htmlFor="cns-service-name-input"
                         >
                           Attach to new CNS service name
                         </label>
@@ -7804,7 +7821,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
                           <input
                             className="c34"
                             disabled={false}
-                            id="s"
+                            id="cns-service-name-input"
                             onBlur={null}
                             placeholder="Example: mySQLdb"
                           />
@@ -7823,6 +7840,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
                         data-ui-button="true"
                         disabled={undefined}
                         href=""
+                        id="cns-service-name-add-button"
                         type="submit"
                       >
                         Add

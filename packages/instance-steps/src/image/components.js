@@ -111,12 +111,20 @@ export const ImageType = ({ setImageType, vms }) => (
   <Margin bottom={3}>
     <SectionList>
       <SectionListItem>
-        <SectionListAnchor active={vms} onClick={() => setImageType(true)}>
+        <SectionListAnchor
+          id={'image-type-hwvm'}
+          active={vms}
+          onClick={() => setImageType(true)}
+        >
           Hardware virtual machine
         </SectionListAnchor>
       </SectionListItem>
       <SectionListItem>
-        <SectionListAnchor active={!vms} onClick={() => setImageType(false)}>
+        <SectionListAnchor
+          id={'image-type-ic'}
+          active={!vms}
+          onClick={() => setImageType(false)}
+        >
           Infrastructure container
         </SectionListAnchor>
       </SectionListItem>

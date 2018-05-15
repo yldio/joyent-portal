@@ -74,6 +74,7 @@ const Bold = styled.span`
 `;
 
 const TextareaKeyValue = ({
+  id = null,
   type,
   submitting,
   onlyName,
@@ -84,7 +85,12 @@ const TextareaKeyValue = ({
     {!onlyValue ? (
       <Row>
         <Col xs={12}>
-          <FormGroup name="name" field={Field} fluid>
+          <FormGroup
+            id={id ? 'kv-input-key-' + id : null}
+            name="name"
+            field={Field}
+            fluid
+          >
             <FormLabel>{titleCase(type)} key</FormLabel>
             <Margin top={0.5}>
               <Input onBlur={null} type="text" disabled={submitting} />
@@ -102,7 +108,12 @@ const TextareaKeyValue = ({
     {!onlyName ? (
       <Row>
         <Col xs={12}>
-          <FormGroup name="value" field={Field} fluid>
+          <FormGroup
+            id={id ? 'kv-input-value-' + id : null}
+            name="value"
+            field={Field}
+            fluid
+          >
             <FormLabel>{titleCase(type)} value</FormLabel>
             <Margin top={0.5}>
               <Textarea
@@ -127,6 +138,7 @@ const TextareaKeyValue = ({
 );
 
 const InputKeyValue = ({
+  id = null,
   type,
   submitting,
   typeLabel,
@@ -136,7 +148,12 @@ const InputKeyValue = ({
   <Flex wrap justifyStart contentStretch>
     {!onlyValue ? (
       <FlexItem basis="auto">
-        <FormGroup name="name" field={Field} fluid>
+        <FormGroup
+          id={id ? 'kv-input-name-' + id : null}
+          name="name"
+          field={Field}
+          fluid
+        >
           <FormLabel>
             {titleCase(type)} {typeLabel}
           </FormLabel>
@@ -154,7 +171,12 @@ const InputKeyValue = ({
     {!onlyName ? (
       <Fragment>
         <FlexItem basis="auto">
-          <FormGroup name="value" field={Field} fluid>
+          <FormGroup
+            id={id ? 'kv-input-value-' + id : null}
+            name="value"
+            field={Field}
+            fluid
+          >
             <FormLabel>{titleCase(type)} value</FormLabel>
             <Margin top={0.5}>
               <Input onBlur={null} type="text" disabled={submitting} />
@@ -172,6 +194,7 @@ const InputKeyValue = ({
 );
 
 export const KeyValue = ({
+  id = null,
   disabled = false,
   input = 'input',
   type = 'metadata',
@@ -266,6 +289,7 @@ export const KeyValue = ({
             ) : null}
             {input === 'input' ? (
               <InputKeyValue
+                id={id}
                 onBlur={null}
                 type={type}
                 typeLabel={typeLabel}
@@ -276,6 +300,7 @@ export const KeyValue = ({
             ) : null}
             {input === 'textarea' ? (
               <TextareaKeyValue
+                id={id}
                 type={type}
                 submitting={disabled || submitting}
                 onlyName={onlyName}
@@ -290,6 +315,7 @@ export const KeyValue = ({
               <Row between="xs" middle="xs">
                 <Col xs={method === 'add' ? 12 : 7}>
                   <MarginalButton
+                    id={id ? 'kv-cancel-button-' + id : null}
                     type="button"
                     onClick={onCancel}
                     disabled={disabled || submitting}
@@ -298,6 +324,7 @@ export const KeyValue = ({
                     <span>Cancel</span>
                   </MarginalButton>
                   <Button
+                    id={id ? 'kv-submit-button-' + id : null}
                     type="submit"
                     disabled={pristine || invalid}
                     loading={submitting && !removing}
@@ -316,6 +343,7 @@ export const KeyValue = ({
                       right
                       icon
                       error
+                      id={id ? 'kv-remove-button-' + id : null}
                     >
                       <Margin right={2}>
                         <DeleteIcon

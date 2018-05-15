@@ -84,7 +84,7 @@ const Name = ({
           >
             {props => (
               <Form onSubmit={null}>
-                <FormGroup name="name" fluid field={Field}>
+                <FormGroup id={'input-name'} name="name" fluid field={Field}>
                   <FormLabel>Instance name</FormLabel>
                   <Margin top="0.5">
                     <Flex>
@@ -94,6 +94,7 @@ const Name = ({
                       <FlexItem>
                         <Margin left="1" inline>
                           <Button
+                            id={'randomize-button-name'}
                             type="button"
                             loading={randomizing}
                             onClick={handleRandomize}
@@ -113,7 +114,12 @@ const Name = ({
                   <FormMeta />
                 </FormGroup>
                 <Margin top="5">
-                  <Button type="button" component={Link} to={next}>
+                  <Button
+                    id={'next-button-name'}
+                    type="button"
+                    component={Link}
+                    to={next}
+                  >
                     Next
                   </Button>
                 </Margin>

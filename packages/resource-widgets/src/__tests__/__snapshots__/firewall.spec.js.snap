@@ -5089,6 +5089,7 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
 >
   <div
     className="c1"
+    id="fw-toggle-firewall"
     name="enabled"
     role="group"
     style={undefined}
@@ -5101,7 +5102,7 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
         checked={false}
         className="c3"
         disabled={false}
-        id="k"
+        id="fw-toggle-firewall"
         onBlur={undefined}
         type="checkbox"
       >
@@ -5122,7 +5123,7 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
         checked={false}
         className="c7"
         disabled={false}
-        id="k"
+        id="fw-toggle-firewall"
         onBlur={undefined}
       >
         <label
@@ -5343,6 +5344,7 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
 >
   <div
     className="c1"
+    id="fw-toggle-firewall"
     name="enabled"
     role="group"
     style={undefined}
@@ -5355,7 +5357,7 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
         checked={false}
         className="c3"
         disabled={true}
-        id="m"
+        id="fw-toggle-firewall"
         onBlur={undefined}
         type="checkbox"
       >
@@ -5376,7 +5378,7 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
         checked={false}
         className="c7"
         disabled={true}
-        id="m"
+        id="fw-toggle-firewall"
         onBlur={undefined}
       >
         <label
@@ -5596,6 +5598,7 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
 >
   <div
     className="c1"
+    id="fw-toggle-inactive"
     name="inactive"
     role="group"
     style={undefined}
@@ -5608,7 +5611,7 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
         checked={false}
         className="c3"
         disabled={false}
-        id="o"
+        id="fw-toggle-inactive"
         onBlur={undefined}
         type="checkbox"
       >
@@ -5629,7 +5632,7 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
         checked={false}
         className="c7"
         disabled={false}
-        id="o"
+        id="fw-toggle-inactive"
         onBlur={undefined}
       >
         <label

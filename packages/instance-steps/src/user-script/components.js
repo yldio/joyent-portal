@@ -17,7 +17,7 @@ class EditorField extends PureComponent {
 
 export default () => (
   <form name="user-script">
-    <FormGroup name="value" field={Field} fluid>
+    <FormGroup id="userscript-editor" name="value" field={Field} fluid>
       <Field name="value" component={EditorField} />
     </FormGroup>
   </form>

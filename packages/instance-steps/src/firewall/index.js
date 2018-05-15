@@ -141,7 +141,12 @@ const Firewall = ({
             </Margin>
           ) : null}
           <Margin top={5}>
-            <Button type="button" component={Link} to={next}>
+            <Button
+              id={'next-button-firewall'}
+              type="button"
+              component={Link}
+              to={next}
+            >
               Next
             </Button>
           </Margin>

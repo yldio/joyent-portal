@@ -79,7 +79,12 @@ const Image = ({
                       onSelectLatest={handleSelectLatest}
                     />
                     <Margin top="2">
-                      <Button type="button" component={Link} to={next}>
+                      <Button
+                        id={'next-button-image'}
+                        type="button"
+                        component={Link}
+                        to={next}
+                      >
                         Next
                       </Button>
                     </Margin>

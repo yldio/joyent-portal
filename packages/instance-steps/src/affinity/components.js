@@ -34,9 +34,19 @@ const Input = styled(BaseInput)`
 
 const Values = touched => (
   <Margin right={1}>
-    <Select style={style} touched={touched} width={remcalc(130)} embedded>
-      <option value="equalling">equalling</option>
-      <option value="starting">starting with</option>
+    <Select
+      id={'affinity-rule-3-select'}
+      style={style}
+      touched={touched}
+      width={remcalc(130)}
+      embedded
+    >
+      <option id={'affinity-rule-3-equalling'} value="equalling">
+        equalling
+      </option>
+      <option id={'affinity-rule-3-starting'} value="starting">
+        starting with
+      </option>
     </Select>
   </Margin>
 );
@@ -54,9 +64,14 @@ export const Rule = ({ valid, ...rule }) => (
             touched={rule.conditional}
             width={remcalc(86)}
             embedded
+            id={'affinity-rule-0-select'}
           >
-            <option value="should">should</option>
-            <option value="must">must</option>
+            <option id={'affinity-rule-0-should'} value="should">
+              should
+            </option>
+            <option id={'affinity-rule-0-must'} value="must">
+              must
+            </option>
           </Select>
         </FormGroup>
       </Margin>
@@ -70,9 +85,14 @@ export const Rule = ({ valid, ...rule }) => (
             touched={rule.placement}
             width={remcalc(100)}
             embedded
+            id={'affinity-rule-1-select'}
           >
-            <option value="same">the same</option>
-            <option value="different">a different</option>
+            <option id={'affinity-rule-1-same'} value="same">
+              the same
+            </option>
+            <option id={'affinity-rule-1-different'} value="different">
+              a different
+            </option>
           </Select>
         </FormGroup>
       </Margin>
@@ -82,21 +102,26 @@ export const Rule = ({ valid, ...rule }) => (
       <Margin horizontal={1}>
         <FormGroup name="type" field={Field}>
           <Select
+            id={'affinity-rule-2-select'}
             style={style}
             touched={rule.type}
             width={remcalc(135)}
             embedded
             left
           >
-            <option value="name">instance name</option>
-            <option value="tag">tag</option>
+            <option id={'affinity-rule-2-name'} value="name">
+              instance name
+            </option>
+            <option id={'affinity-rule-2-tag'} value="tag">
+              tag
+            </option>
           </Select>
         </FormGroup>
       </Margin>
       <FormGroup name="pattern" field={Field}>
         {Values(rule.pattern)}
       </FormGroup>
-      <FormGroup name="value" field={Field}>
+      <FormGroup id={'affinity-rule-input'} name="value" field={Field}>
         <Input
           onBlur={null}
           style={style}
