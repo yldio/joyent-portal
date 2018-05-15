@@ -103,7 +103,7 @@ export const AddServiceForm = ({
     <Flex wrap alignCenter={invalid} alignEnd={!invalid}>
       <FlexItem>
         <Flex collumn>
-          <FormGroup name="name" field={Field}>
+          <FormGroup id="cns-service-name-input" name="name" field={Field}>
             <FormLabel>Attach to new CNS service name</FormLabel>
             <Margin top={0.5}>
               <Input
@@ -120,6 +120,7 @@ export const AddServiceForm = ({
       <FlexItem>
         <Margin left={2}>
           <Button
+            id="cns-service-name-add-button"
             type="submit"
             disabled={submitting}
             loading={submitting}
@@ -204,7 +205,7 @@ const CnsHostnames = ({
         <FormLabel>Existing CNS service name(s)</FormLabel>
         <Margin top={1}>
           <TagList>
-            {services.map(value => (
+            {services.map((value, index) => (
               <Margin right={1} bottom={1}>
                 <TagItem
                   active
@@ -213,6 +214,7 @@ const CnsHostnames = ({
                   onRemoveClick={
                     onRemoveService && (() => onRemoveService(value))
                   }
+                  id={'cns-tag-' + index}
                 >
                   {value}
                 </TagItem>

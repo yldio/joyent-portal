@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import Flex, { FlexItem } from 'styled-flex-component';
 import remcalc from 'remcalc';
 import { isNot } from 'styled-is';
+import paramCase from 'param-case';
 
 import {
   H4,
@@ -121,7 +122,11 @@ export const Expanded = ({
           <CardHeader secondary={selected}>
             {readOnly ? null : (
               <CardHeaderBox>
-                <FormGroup name={id} field={Field}>
+                <FormGroup
+                  id={'network-checkbox-' + paramCase(name)}
+                  name={id}
+                  field={Field}
+                >
                   <Checkbox noMargin checked={selected} />
                 </FormGroup>
               </CardHeaderBox>

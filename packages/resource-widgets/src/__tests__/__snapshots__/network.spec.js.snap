@@ -479,6 +479,7 @@ exports[`renders <Network /> without throwing 1`] = `
           >
             <div
               className="c8"
+              id="network-checkbox-"
               name={undefined}
               role="group"
               style={undefined}
@@ -490,7 +491,7 @@ exports[`renders <Network /> without throwing 1`] = `
                   checked={false}
                   className="c10"
                   disabled={false}
-                  id="l"
+                  id="network-checkbox-"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -1389,6 +1390,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
           >
             <div
               className="c8"
+              id="network-checkbox-name"
               name="1"
               role="group"
               style={undefined}
@@ -1400,7 +1402,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
                   checked={false}
                   className="c10"
                   disabled={false}
-                  id="n"
+                  id="network-checkbox-name"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -2312,6 +2314,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
           >
             <div
               className="c8"
+              id="network-checkbox-name"
               name="1"
               role="group"
               style={undefined}
@@ -2323,7 +2326,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
                   checked={false}
                   className="c10"
                   disabled={false}
-                  id="p"
+                  id="network-checkbox-name"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -3285,6 +3288,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
           >
             <div
               className="c8"
+              id="network-checkbox-name"
               name="1"
               role="group"
               style={undefined}
@@ -3296,7 +3300,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                   checked={false}
                   className="c10"
                   disabled={false}
-                  id="t"
+                  id="network-checkbox-name"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -4533,6 +4537,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
           >
             <div
               className="c8"
+              id="network-checkbox-name"
               name="1"
               role="group"
               style={undefined}
@@ -4544,7 +4549,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                   checked={false}
                   className="c10"
                   disabled={false}
-                  id="v"
+                  id="network-checkbox-name"
                   onBlur={undefined}
                   type="checkbox"
                 >
@@ -5744,6 +5749,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
           >
             <div
               className="c8"
+              id="network-checkbox-name"
               name="1"
               role="group"
               style={undefined}
@@ -5755,7 +5761,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
                   checked={false}
                   className="c10"
                   disabled={false}
-                  id="r"
+                  id="network-checkbox-name"
                   onBlur={undefined}
                   type="checkbox"
                 >

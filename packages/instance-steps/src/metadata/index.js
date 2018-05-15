@@ -89,6 +89,7 @@ const Metadata = ({
                     method="add"
                     input="textarea"
                     type="metadata"
+                    id="metadata"
                     onCancel={() => handleChangeAddOpen(false)}
                     editor={Editor}
                     expanded
@@ -101,6 +102,7 @@ const Metadata = ({
                     <FlexItem>
                       <Margin right={1}>
                         <Button
+                          id={'button-add-metadata'}
                           type="button"
                           onClick={() => handleChangeAddOpen(true)}
                           secondary
@@ -110,7 +112,12 @@ const Metadata = ({
                       </Margin>
                     </FlexItem>
                     <FlexItem>
-                      <Button type="button" component={Link} to={next}>
+                      <Button
+                        id={'next-button-metadata'}
+                        type="button"
+                        component={Link}
+                        to={next}
+                      >
                         Next
                       </Button>
                     </FlexItem>

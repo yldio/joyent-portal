@@ -177,7 +177,12 @@ export const ToggleFirewallForm = ({
 
   return (
     <Form onChange={onChange}>
-      <FormGroup type="checkbox" name="enabled" field={Field}>
+      <FormGroup
+        id={'fw-toggle-firewall'}
+        type="checkbox"
+        name="enabled"
+        field={Field}
+      >
         <Checkbox disabled={submitting}>
           <FormLabel noMargin actionable>
             <Margin left={2} right={2}>
@@ -192,7 +197,12 @@ export const ToggleFirewallForm = ({
 
 export const ToggleInactiveForm = () => (
   <Form>
-    <FormGroup type="checkbox" name="inactive" field={Field}>
+    <FormGroup
+      id={'fw-toggle-inactive'}
+      type="checkbox"
+      name="inactive"
+      field={Field}
+    >
       <Checkbox>
         <FormLabel noMargin actionable>
           <Margin left={2} right={2}>

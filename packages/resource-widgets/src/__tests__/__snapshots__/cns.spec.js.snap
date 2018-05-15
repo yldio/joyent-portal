@@ -278,13 +278,14 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
       >
         <div
           className="c3"
+          id="cns-service-name-input"
           name="name"
           role="group"
           style={undefined}
         >
           <label
             className="c4 c5"
-            htmlFor="k"
+            htmlFor="cns-service-name-input"
           >
             Attach to new CNS service name
           </label>
@@ -294,7 +295,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
             <input
               className="c7"
               disabled={false}
-              id="k"
+              id="cns-service-name-input"
               onBlur={null}
               placeholder="Example: mySQLdb"
             />
@@ -313,6 +314,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
           data-ui-button="true"
           disabled={undefined}
           href=""
+          id="cns-service-name-add-button"
           type="submit"
         >
           Add
@@ -601,13 +603,14 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
       >
         <div
           className="c3"
+          id="cns-service-name-input"
           name="name"
           role="group"
           style={undefined}
         >
           <label
             className="c4 c5"
-            htmlFor="l"
+            htmlFor="cns-service-name-input"
           >
             Attach to new CNS service name
           </label>
@@ -617,7 +620,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
             <input
               className="c7"
               disabled={false}
-              id="l"
+              id="cns-service-name-input"
               onBlur={null}
               placeholder="Example: mySQLdb"
             />
@@ -636,6 +639,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
           data-ui-button="true"
           disabled={undefined}
           href=""
+          id="cns-service-name-add-button"
           type="submit"
         >
           Add
