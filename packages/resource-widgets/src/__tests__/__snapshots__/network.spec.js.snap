@@ -239,9 +239,9 @@ exports[`renders <Network /> without throwing 1`] = `
   z-index: 1;
   line-height: 1.5rem;
   max-width: 100%;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .c7 {
@@ -387,10 +387,36 @@ exports[`renders <Network /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c9 label {
   font-weight: 400;
+}
+
+.c9 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c9 div[type='checkbox'],
+.c9 div[type='checkbox'] input,
+.c9 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c8 {
@@ -1123,9 +1149,9 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   z-index: 1;
   line-height: 1.5rem;
   max-width: 100%;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .c7 {
@@ -1271,10 +1297,36 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c9 label {
   font-weight: 400;
+}
+
+.c9 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c9 div[type='checkbox'],
+.c9 div[type='checkbox'] input,
+.c9 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c8 {
@@ -2020,9 +2072,9 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   z-index: 1;
   line-height: 1.5rem;
   max-width: 100%;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .c7 {
@@ -2168,10 +2220,36 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c9 label {
   font-weight: 400;
+}
+
+.c9 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c9 div[type='checkbox'],
+.c9 div[type='checkbox'] input,
+.c9 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c8 {
@@ -2954,9 +3032,9 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   z-index: 1;
   line-height: 1.5rem;
   max-width: 100%;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .c28 {
@@ -2966,9 +3044,9 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   z-index: 1;
   line-height: 1.5rem;
   max-width: 100%;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   box-shadow: none;
 }
 
@@ -3115,10 +3193,36 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c9 label {
   font-weight: 400;
+}
+
+.c9 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c9 div[type='checkbox'],
+.c9 div[type='checkbox'] input,
+.c9 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c8 {
@@ -4104,9 +4208,9 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   z-index: 1;
   line-height: 1.5rem;
   max-width: 100%;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .c7 {
@@ -4252,10 +4356,36 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c9 label {
   font-weight: 400;
+}
+
+.c9 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c9 div[type='checkbox'],
+.c9 div[type='checkbox'] input,
+.c9 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c8 {
@@ -5374,9 +5504,9 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   z-index: 1;
   line-height: 1.5rem;
   max-width: 100%;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .c7 {
@@ -5522,10 +5652,36 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c9 label {
   font-weight: 400;
+}
+
+.c9 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c9 div[type='checkbox'],
+.c9 div[type='checkbox'] input,
+.c9 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c8 {
