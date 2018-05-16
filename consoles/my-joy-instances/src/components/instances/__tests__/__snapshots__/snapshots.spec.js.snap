@@ -122,10 +122,36 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -408,8 +434,6 @@ Array [
                 </span>
                 <svg
                     height="6"
-                    marginBottom="0.125rem"
-                    marginLeft="0.5625rem"
                     style={
                         Object {
                             "transform": "rotate(180deg)",
@@ -937,10 +961,36 @@ exports[`renders <Item /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c3 label {
   font-weight: 400;
+}
+
+.c3 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c3 div[type='checkbox'],
+.c3 div[type='checkbox'] input,
+.c3 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c2 {
@@ -1306,10 +1356,36 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c3 label {
   font-weight: 400;
+}
+
+.c3 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c3 div[type='checkbox'],
+.c3 div[type='checkbox'] input,
+.c3 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c2 {
@@ -1876,10 +1952,36 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -2162,8 +2264,6 @@ Array [
                 </span>
                 <svg
                     height="6"
-                    marginBottom="0.125rem"
-                    marginLeft="0.5625rem"
                     style={
                         Object {
                             "transform": "rotate(180deg)",
@@ -2665,10 +2765,36 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -2951,8 +3077,6 @@ Array [
                 </span>
                 <svg
                     height="6"
-                    marginBottom="0.125rem"
-                    marginLeft="0.5625rem"
                     style={
                         Object {
                             "transform": "rotate(180deg)",
@@ -3454,10 +3578,36 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -3751,8 +3901,6 @@ Array [
                 </span>
                 <svg
                     height="6"
-                    marginBottom="0.125rem"
-                    marginLeft="0.5625rem"
                     style={
                         Object {
                             "transform": "rotate(180deg)",
@@ -4243,10 +4391,36 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -4540,8 +4714,6 @@ Array [
                 </span>
                 <svg
                     height="6"
-                    marginBottom="0.125rem"
-                    marginLeft="0.5625rem"
                     style={
                         Object {
                             "transform": "rotate(0deg)",
@@ -5032,10 +5204,36 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -5318,8 +5516,6 @@ Array [
                 </span>
                 <svg
                     height="6"
-                    marginBottom="0.125rem"
-                    marginLeft="0.5625rem"
                     style={
                         Object {
                             "transform": "rotate(180deg)",
