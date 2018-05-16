@@ -15,11 +15,21 @@ export default styled(Grid)`
   `};
 
   ${isNot('fluid')`
-    max-width: ${remcalc(1000)};
+    max-width: ${remcalc(1260)};
 
     ${breakpoints.smallOnly`
-      padding-left: ${remcalc(6)};
-      padding-right: ${remcalc(6)};
+      padding-left: ${remcalc(12)};
+      padding-right: ${remcalc(12)};
+    `};
+
+    ${breakpoints.mediumOnly`
+      padding-left: ${remcalc(30)};
+      padding-right: ${remcalc(30)};
+    `};
+
+    ${breakpoints.largeOnly`
+      padding-left: ${remcalc(70)};
+      padding-right: ${remcalc(70)};
     `};
   `};
 
