@@ -92,8 +92,8 @@ export default class extends Component {
 
   skipParallax = () => {
     if (
-      this.state.show &&
-      window.scrollY < document.getElementsByTagName('header')[0].offsetTop
+      window.scrollY < document.getElementsByTagName('header')[0].offsetTop &&
+      this.state.show
     ) {
       window.scroll({
         top: document.getElementsByTagName('header')[0].offsetTop,
@@ -106,7 +106,7 @@ export default class extends Component {
   checkpoint = () => {
     if (isScrolledOutsideView()) {
       window.removeEventListener('scroll', this.checkpoint);
-      this.setState({ show: false });
+      setTimeout(() => this.setState({ show: false }), 10);
     }
   };
 
