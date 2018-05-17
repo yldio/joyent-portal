@@ -46,47 +46,42 @@ export const Header = ({ icon = null, children }) => (
             <Flex justifyBetween>
               <FlexItem>
                 <Flex alignCenter>
-                  <FlexItem>{icon}</FlexItem>
                   <FlexItem>
-                    <Divider vertical />
+                    <Margin right="2">{icon}</Margin>
                   </FlexItem>
                   <FlexItem>
                     <H3 bold>{children}</H3>
                   </FlexItem>
-                  <FlexItem>
-                    <Divider vertical />
-                  </FlexItem>
-                  <FlexItem alignCenter>
-                    <Link
-                      to={expanded ? `/${namespace}` : `/${namespace}/${name}`}
-                      id={'expand-card-' + name}
-                    >
-                      <Flex alignCenter>
-                        {expanded ? 'Save and Collase' : 'Expand'}
-                        <Margin left={1}>
-                          <Flex>
-                            <ArrowIcon
-                              fill="primary"
-                              direction={expanded ? 'up' : 'down'}
-                            />
-                          </Flex>
+                  {/* improve this */}
+                  {optional ? (
+                    <Fragment>
+                      <FlexItem>
+                        <Margin horizontal="1">
+                          <Divider vertical />
                         </Margin>
-                      </Flex>
-                    </Link>
-                  </FlexItem>
+                      </FlexItem>
+                      <FlexItem>
+                        <P optional>Optional</P>
+                      </FlexItem>
+                    </Fragment>
+                  ) : null}
                 </Flex>
               </FlexItem>
-              {isValid && !expanded && saved ? (
-                <FlexItem>
-                  <SavedIcon />
-                </FlexItem>
-              ) : null}
-              {/* improve this */}
-              {!saved && optional ? (
-                <FlexItem>
-                  <P optional>Optional</P>
-                </FlexItem>
-              ) : null}
+              <FlexItem alignCenter>
+                <Link to={expanded ? `/${namespace}` : `/${namespace}/${name}`}>
+                  <Flex alignCenter>
+                    {expanded ? 'Save and Collase' : 'Edit'}
+                    <Margin left="1">
+                      <Flex>
+                        <ArrowIcon
+                          fill="primary"
+                          direction={expanded ? 'up' : 'down'}
+                        />
+                      </Flex>
+                    </Margin>
+                  </Flex>
+                </Link>
+              </FlexItem>
               {!expanded && !isValid ? (
                 <FlexItem>
                   <ErrorIcon />
@@ -94,7 +89,7 @@ export const Header = ({ icon = null, children }) => (
               ) : null}
             </Flex>
             {expanded || saved ? (
-              <Margin vertical={3}>
+              <Margin vertical="3">
                 <Divider noMargin />
               </Margin>
             ) : null}
@@ -173,7 +168,7 @@ export default class Step extends PureComponent {
       >
         <Card expanded={expanded} error={!expanded && !isValid}>
           <CardOutlet>
-            <Padding all={5}>{children}</Padding>
+            <Padding all="5">{children}</Padding>
           </CardOutlet>
         </Card>
       </Broadcast>
