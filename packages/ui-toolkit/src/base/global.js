@@ -26,6 +26,7 @@ export default ({ theme }) => css`
     padding: 0;
     background: ${theme.background};
     color: ${theme.text};
+    -webkit-font-smoothing: antialiased;
   }
 
   html,
