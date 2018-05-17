@@ -73,7 +73,7 @@ export default ({ background, color, border, arrow }) => css`
   }
 
   &[data-placement='top'] .${arrow}, &[data-placement='bottom'] .${arrow} {
-    left: calc(50% - ${remcalc(11)});
+    left: calc(50% - ${remcalc(6)});
   }
 
   &[data-placement^='left'] .${arrow} {

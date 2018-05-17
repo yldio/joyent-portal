@@ -1,15 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders <AddServiceForm /> without throwing 1`] = `
-.c6 {
-  margin-top: 0.1875rem;
+.c0 {
+  margin-bottom: 1.125rem;
 }
 
 .c8 {
+  margin-top: 0.1875rem;
+}
+
+.c10 {
   margin-left: 0.75rem;
 }
 
-.c0 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -36,7 +40,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c2 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,7 +60,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c1 {
+.c3 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -73,7 +77,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   display: block;
 }
 
-.c12 {
+.c14 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -85,30 +89,30 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   appearance: button;
 }
 
-.c12::-moz-focus-inner,
-.c12[type='button']::-moz-focus-inner,
-.c12[type='reset']::-moz-focus-inner,
-.c12[type='submit']::-moz-focus-inner {
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c12:-moz-focusring,
-.c12[type='button']:-moz-focusring,
-.c12[type='reset']:-moz-focusring,
-.c12[type='submit']:-moz-focusring {
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 {
+.c13 {
   min-width: 7.5rem;
 }
 
-.c10 {
+.c12 {
   display: inline-block;
 }
 
-.c9 {
+.c11 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -147,7 +151,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:focus {
+.c11:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -155,26 +159,26 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c9:hover {
+.c11:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c11:active,
+.c11:active:hover,
+.c11:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c9[disabled] {
+.c11[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c5 {
+.c7 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -184,7 +188,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   text-align: left;
 }
 
-.c3 {
+.c5 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -196,7 +200,7 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c7 {
+.c9 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -218,123 +222,134 @@ exports[`renders <AddServiceForm /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c7:focus {
+.c9:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c7::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c7::-moz-placeholder {
+.c9::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c7:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c7:invalid {
+.c9:invalid {
   box-shadow: none;
 }
 
-.c7:disabled {
+.c9:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c7:disabled::-webkit-input-placeholder {
+.c9:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c7:disabled::-moz-placeholder {
+.c9:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c7:disabled:-ms-input-placeholder {
+.c9:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4 {
+.c6 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-<form
-  onSubmit={undefined}
+.c1 {
+  margin-bottom: 0;
+}
+
+<div
+  className="c0"
 >
-  <div
-    className="c0"
-    wrap={true}
+  <form
+    className="c1"
+    onSubmit={undefined}
   >
     <div
-      className="c1"
+      className="c2"
+      wrap={true}
     >
       <div
-        className="c2"
+        className="c3"
       >
         <div
-          className="c3"
-          id="cns-service-name-input"
-          name="name"
-          role="group"
-          style={undefined}
+          className="c4"
         >
-          <label
-            className="c4 c5"
-            htmlFor="cns-service-name-input"
-          >
-            Attach to new CNS service name
-          </label>
           <div
-            className="c6"
+            className="c5"
+            name="name"
+            role="group"
+            style={undefined}
           >
-            <input
-              className="c7"
-              disabled={false}
-              id="cns-service-name-input"
-              onBlur={null}
-              placeholder="Example: mySQLdb"
-            />
+            <label
+              className="c6 c7"
+              htmlFor="k"
+            >
+              Attach to new CNS service name
+            </label>
+            <div
+              className="c8"
+            >
+              <input
+                className="c9"
+                disabled={false}
+                id="k"
+                onBlur={null}
+                placeholder="Example: mySQLdb"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="c1"
-    >
       <div
-        className="c8"
+        className="c3"
       >
-        <button
-          className="c9 c10 c11 c12"
-          data-ui-button="true"
-          disabled={undefined}
-          href=""
-          id="cns-service-name-add-button"
-          type="submit"
+        <div
+          className="c10"
         >
-          Add
-        </button>
+          <button
+            className="c11 c12 c13 c14"
+            data-ui-button="true"
+            disabled={undefined}
+            href=""
+            type="submit"
+          >
+            Add
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>
 `;
 
 exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
-.c6 {
-  margin-top: 0.1875rem;
+.c0 {
+  margin-bottom: 1.125rem;
 }
 
 .c8 {
+  margin-top: 0.1875rem;
+}
+
+.c10 {
   margin-left: 0.75rem;
 }
 
-.c0 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -361,7 +376,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c2 {
+.c4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -381,7 +396,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c1 {
+.c3 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -398,7 +413,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   display: block;
 }
 
-.c12 {
+.c14 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -410,30 +425,30 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   appearance: button;
 }
 
-.c12::-moz-focus-inner,
-.c12[type='button']::-moz-focus-inner,
-.c12[type='reset']::-moz-focus-inner,
-.c12[type='submit']::-moz-focus-inner {
+.c14::-moz-focus-inner,
+.c14[type='button']::-moz-focus-inner,
+.c14[type='reset']::-moz-focus-inner,
+.c14[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c12:-moz-focusring,
-.c12[type='button']:-moz-focusring,
-.c12[type='reset']:-moz-focusring,
-.c12[type='submit']:-moz-focusring {
+.c14:-moz-focusring,
+.c14[type='button']:-moz-focusring,
+.c14[type='reset']:-moz-focusring,
+.c14[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c11 {
+.c13 {
   min-width: 7.5rem;
 }
 
-.c10 {
+.c12 {
   display: inline-block;
 }
 
-.c9 {
+.c11 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -472,7 +487,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:focus {
+.c11:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -480,26 +495,26 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c9:hover {
+.c11:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c9:active,
-.c9:active:hover,
-.c9:active:focus {
+.c11:active,
+.c11:active:hover,
+.c11:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c9[disabled] {
+.c11[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c5 {
+.c7 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -509,7 +524,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   text-align: left;
 }
 
-.c3 {
+.c5 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -521,7 +536,7 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c7 {
+.c9 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -543,111 +558,118 @@ exports[`renders <AddServiceForm pristine /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c7:focus {
+.c9:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c7::-webkit-input-placeholder {
+.c9::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c7::-moz-placeholder {
+.c9::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c7:-ms-input-placeholder {
+.c9:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c7:invalid {
+.c9:invalid {
   box-shadow: none;
 }
 
-.c7:disabled {
+.c9:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c7:disabled::-webkit-input-placeholder {
+.c9:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c7:disabled::-moz-placeholder {
+.c9:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c7:disabled:-ms-input-placeholder {
+.c9:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c4 {
+.c6 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-<form
-  onSubmit={undefined}
+.c1 {
+  margin-bottom: 0;
+}
+
+<div
+  className="c0"
 >
-  <div
-    className="c0"
-    wrap={true}
+  <form
+    className="c1"
+    onSubmit={undefined}
   >
     <div
-      className="c1"
+      className="c2"
+      wrap={true}
     >
       <div
-        className="c2"
+        className="c3"
       >
         <div
-          className="c3"
-          id="cns-service-name-input"
-          name="name"
-          role="group"
-          style={undefined}
+          className="c4"
         >
-          <label
-            className="c4 c5"
-            htmlFor="cns-service-name-input"
-          >
-            Attach to new CNS service name
-          </label>
           <div
-            className="c6"
+            className="c5"
+            name="name"
+            role="group"
+            style={undefined}
           >
-            <input
-              className="c7"
-              disabled={false}
-              id="cns-service-name-input"
-              onBlur={null}
-              placeholder="Example: mySQLdb"
-            />
+            <label
+              className="c6 c7"
+              htmlFor="l"
+            >
+              Attach to new CNS service name
+            </label>
+            <div
+              className="c8"
+            >
+              <input
+                className="c9"
+                disabled={false}
+                id="l"
+                onBlur={null}
+                placeholder="Example: mySQLdb"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="c1"
-    >
       <div
-        className="c8"
+        className="c3"
       >
-        <button
-          className="c9 c10 c11 c12"
-          data-ui-button="true"
-          disabled={undefined}
-          href=""
-          id="cns-service-name-add-button"
-          type="submit"
+        <div
+          className="c10"
         >
-          Add
-        </button>
+          <button
+            className="c11 c12 c13 c14"
+            data-ui-button="true"
+            disabled={undefined}
+            href=""
+            type="submit"
+          >
+            Add
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>
 `;
 
 exports[`renders <Header/> without throwing 1`] = `
@@ -826,12 +848,12 @@ exports[`renders <Hostname /> without throwing 1`] = `
 `;
 
 exports[`renders <Hostname values /> without throwing 1`] = `
-.c10 {
-  margin-top: 0.1875rem;
-}
-
 .c0 {
   margin-bottom: 1.125rem;
+}
+
+.c10 {
+  margin-top: 0.1875rem;
 }
 
 .c6 {
