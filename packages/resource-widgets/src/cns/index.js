@@ -50,6 +50,10 @@ const ShortDivider = styled(Divider)`
   margin-right: 0;
 `;
 
+const Form = styled.form`
+  margin-bottom: 0;
+`;
+
 export const Header = () => (
   <Margin bottom={5}>
     <H3>CNS Default Hostnames</H3>
@@ -99,39 +103,40 @@ export const AddServiceForm = ({
   pristine,
   invalid
 }) => (
-  <form onSubmit={handleSubmit}>
-    <Flex wrap alignCenter={invalid} alignEnd={!invalid}>
-      <FlexItem>
-        <Flex collumn>
-          <FormGroup id="cns-service-name-input" name="name" field={Field}>
-            <FormLabel>Attach to new CNS service name</FormLabel>
-            <Margin top={0.5}>
-              <Input
-                onBlur={null}
-                type="text"
-                placeholder="Example: mySQLdb"
-                disabled={disabled || submitting}
-              />
-              <FormMeta />
-            </Margin>
-          </FormGroup>
-        </Flex>
-      </FlexItem>
-      <FlexItem>
-        <Margin left={2}>
-          <Button
-            id="cns-service-name-add-button"
-            type="submit"
-            disabled={submitting}
-            loading={submitting}
-            inline
-          >
-            Add
-          </Button>
-        </Margin>
-      </FlexItem>
-    </Flex>
-  </form>
+  <Margin bottom={3}>
+    <Form onSubmit={handleSubmit}>
+      <Flex wrap alignCenter={invalid} alignEnd={!invalid}>
+        <FlexItem>
+          <Flex collumn>
+            <FormGroup name="name" field={Field}>
+              <FormLabel>Attach to new CNS service name</FormLabel>
+              <Margin top={0.5}>
+                <Input
+                  onBlur={null}
+                  type="text"
+                  placeholder="Example: mySQLdb"
+                  disabled={disabled || submitting}
+                />
+                <FormMeta />
+              </Margin>
+            </FormGroup>
+          </Flex>
+        </FlexItem>
+        <FlexItem>
+          <Margin left={2}>
+            <Button
+              type="submit"
+              disabled={submitting}
+              loading={submitting}
+              inline
+            >
+              Add
+            </Button>
+          </Margin>
+        </FlexItem>
+      </Flex>
+    </Form>
+  </Margin>
 );
 
 export const Hostname = ({
@@ -200,6 +205,7 @@ const CnsHostnames = ({
 }) => (
   <Fragment>
     <HostnamesHeader />
+    {children}
     {services.length ? (
       <Margin bottom={3}>
         <FormLabel>Existing CNS service name(s)</FormLabel>
@@ -224,7 +230,6 @@ const CnsHostnames = ({
         </Margin>
       </Margin>
     ) : null}
-    {children}
     {hostnames.length &&
     hostnames.filter(({ values }) => values.length).length ? (
       <Margin top={5}>

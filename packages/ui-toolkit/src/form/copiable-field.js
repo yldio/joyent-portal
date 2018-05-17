@@ -8,7 +8,7 @@ import { Margin } from 'styled-components-spacing';
 import { FormLabel, Input } from '..';
 
 import {
-  default as Tooltip,
+  default as BaseTooltip,
   Container as TooltipContainer,
   Target as TooltipTarget
 } from '../tooltip';
@@ -27,6 +27,10 @@ const InputIconWrapper = styled.div`
     position: relative;
     left: ${remcalc(-26)};
   }
+`;
+
+const Tooltip = styled(BaseTooltip)`
+  top: ${remcalc(-6)} !important;
 `;
 
 const ClipboardIconActionable = styled(Clipboard)`

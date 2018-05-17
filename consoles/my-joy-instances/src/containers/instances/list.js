@@ -259,8 +259,12 @@ export default compose(
       const sortBy = get(values, 'instance-list-sort-by', 'name');
       const sortOrder = get(values, 'instance-list-sort-order', 'asc');
 
+      console.log(index, filter);
       // if user is searching something, get items that match that query
-      const filtered = filter ? index.search(filter) : instances;
+      const filtered =
+        filter && index.list.length
+          ? index.list.filter(i => i.name.includes(filter))
+          : instances;
 
       // from filtered instances, sort asc
       // set's mutating flag
