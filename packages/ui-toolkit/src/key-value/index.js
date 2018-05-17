@@ -351,7 +351,7 @@ export const KeyValue = ({
                           fill={disabled || submitting ? undefined : theme.red}
                         />
                       </Margin>
-                      <span>Remove</span>
+                      <span>Delete</span>
                     </Button>
                   </Col>
                 )}

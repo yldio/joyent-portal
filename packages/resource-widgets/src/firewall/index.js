@@ -76,7 +76,7 @@ const Rule = ({ enabled, rule_obj }) => {
       <Padding left={3} right={3} top={2} bottom={2}>
         <Row>
           <Col xs={3}>
-            <Flex justifyStart alignCenter contentStretch full>
+            <Flex justifyStart alignCenter contentStretch>
               <Margin right={0.5}>
                 <FlexItem>
                   <Strong style={style}>From: </Strong>
@@ -86,7 +86,7 @@ const Rule = ({ enabled, rule_obj }) => {
             </Flex>
           </Col>
           <Col xs={3}>
-            <Flex justifyStart alignCenter contentStretch full>
+            <Flex justifyStart alignCenter contentStretch>
               <Margin right={0.5}>
                 <FlexItem>
                   <Strong style={style}>To: </Strong>
@@ -96,7 +96,7 @@ const Rule = ({ enabled, rule_obj }) => {
             </Flex>
           </Col>
           <Col xs={2}>
-            <Flex justifyStart alignCenter contentStretch full>
+            <Flex justifyStart alignCenter contentStretch>
               <Margin right={0.5}>
                 <FlexItem>
                   <Strong style={style}>Protocol: </Strong>
@@ -108,7 +108,7 @@ const Rule = ({ enabled, rule_obj }) => {
             </Flex>
           </Col>
           <Col xs={2}>
-            <Flex justifyStart alignCenter contentStretch full>
+            <Flex justifyStart alignCenter contentStretch>
               <Margin right={0.5}>
                 <FlexItem>
                   <Strong style={style}>Ports: </Strong>
@@ -120,7 +120,7 @@ const Rule = ({ enabled, rule_obj }) => {
             </Flex>
           </Col>
           <Col xs={2}>
-            <Flex justifyStart alignCenter contentStretch full>
+            <Flex justifyStart alignCenter contentStretch>
               <Margin right={0.5}>
                 <FlexItem>
                   <Strong style={style}>Action: </Strong>

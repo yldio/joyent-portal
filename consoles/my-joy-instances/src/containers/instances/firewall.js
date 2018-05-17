@@ -1,12 +1,12 @@
 /* eslint-disable camelcase */
-import React, { Fragment } from 'react';
+import React from 'react';
 import intercept from 'apr-intercept';
 import { connect } from 'react-redux';
 import { compose, graphql } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { SubmissionError } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
-import remcalc from 'remcalc';
+import { default as Flex, FlexItem } from 'styled-flex-component';
 import isBoolean from 'lodash.isboolean';
 import get from 'lodash.get';
 
@@ -15,8 +15,7 @@ import {
   Message,
   MessageTitle,
   MessageDescription,
-  StatusLoader,
-  Divider
+  StatusLoader
 } from 'joyent-ui-toolkit';
 
 import {
@@ -70,38 +69,37 @@ export const Firewall = ({
         </Message>
       </Margin>
     ) : null}
-    <ReduxForm
-      form="fw-enabled"
-      destroyOnUnmount={false}
-      forceUnregisterOnUnmount={true}
-      {...{ initialValues: isBoolean(enabled) ? { enabled } : undefined }}
-      onSubmit={handleEnabledToggle}
-    >
-      {props =>
-        loading ? null : (
-          <Fragment>
-            <Margin bottom={5}>
-              <ToggleFirewallForm {...props} submitOnChange />
-            </Margin>
-            <Divider height={remcalc(1)} />
-          </Fragment>
-        )
-      }
-    </ReduxForm>
-    <ReduxForm
-      form="fw-inactive"
-      destroyOnUnmount={false}
-      forceUnregisterOnUnmount={true}
-      initialValues={{ inactive }}
-    >
-      {props =>
-        !enabled || loading ? null : (
-          <Margin top={4}>
-            <ToggleInactiveForm {...props} />
-          </Margin>
-        )
-      }
-    </ReduxForm>
+    <Flex>
+      <FlexItem>
+        <ReduxForm
+          form="fw-enabled"
+          destroyOnUnmount={false}
+          forceUnregisterOnUnmount={true}
+          {...{ initialValues: isBoolean(enabled) ? { enabled } : undefined }}
+          onSubmit={handleEnabledToggle}
+        >
+          {props =>
+            loading ? null : (
+              <Margin right={5}>
+                <ToggleFirewallForm {...props} submitOnChange />
+              </Margin>
+            )
+          }
+        </ReduxForm>
+      </FlexItem>
+      <FlexItem>
+        <ReduxForm
+          form="fw-inactive"
+          destroyOnUnmount={false}
+          forceUnregisterOnUnmount={true}
+          initialValues={{ inactive }}
+        >
+          {props =>
+            !enabled || loading ? null : <ToggleInactiveForm {...props} />
+          }
+        </ReduxForm>
+      </FlexItem>
+    </Flex>
     {!loading && !defaultRules.length && !tagRules.length ? (
       <Margin top={5}>
         <Empty borderTop>

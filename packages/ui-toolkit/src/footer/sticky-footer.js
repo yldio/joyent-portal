@@ -19,7 +19,8 @@ const Footer = styled.div`
   flex-wrap: nowrap;
   align-content: stretch;
   align-items: stretch;
-  background-color: rgba(241, 241, 241, 1);
+  background-color: ${props =>
+    props.fill ? props => props.fill : 'rgba(241, 241, 241, 1)'};
   border-top: ${remcalc(1)} solid ${props => props.theme.grey};
   max-height: ${remcalc(53)};
   min-height: ${remcalc(53)};

@@ -1,6 +1,7 @@
 import React from 'react';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
+import { default as Flex, FlexItem } from 'styled-flex-component';
 import styled, { withTheme } from 'styled-components';
 import { Margin, Padding } from 'styled-components-spacing';
 import titleCase from 'title-case';
@@ -12,10 +13,12 @@ import {
   Card,
   CardOutlet,
   Divider,
-  ResetIcon,
-  Button as BaseButton,
+  Button,
+  ButtonGroup,
+  PopoverButton,
+  PopoverItem as BasePopoverItem,
   H2 as BaseH2,
-  Label,
+  Label as BaseLabel,
   CopiableField,
   QueryBreakpoints,
   DotIcon,
@@ -23,7 +26,6 @@ import {
   StartIcon,
   StopIcon,
   EditIcon,
-  InstanceTypeIcon,
   Input,
   FormMeta,
   FormGroup
@@ -42,6 +44,10 @@ const stateColor = {
   FAILED: 'red'
 };
 
+const Label = styled(BaseLabel)`
+  font-weight: 200;
+`;
+
 const GreyLabel = styled(Label)`
   opacity: 0.5;
   padding-right: ${remcalc(3)};
@@ -51,16 +57,6 @@ const TrimedLabel = styled(Label)`
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-`;
-
-const Flex = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: flex-start;
-
-  @media (max-width: ${remcalc(767)}) {
-    display: block;
-  }
 `;
 
 const Actionable = styled(Margin)`
@@ -84,8 +80,8 @@ const H2 = styled(BaseH2)`
   margin: 0;
 `;
 
-const Button = styled(BaseButton)`
-  margin-right: ${remcalc(6)};
+const PopoverItem = styled(BasePopoverItem)`
+  padding-bottom: ${remcalc(11)};
 `;
 
 export const Meta = ({
@@ -107,7 +103,7 @@ export const Meta = ({
         <H2>
           {editingName ? (
             <form onSubmit={handleSubmit}>
-              <Flex style={{ alignItems: 'start' }}>
+              <Flex alignStart>
                 <FormGroup name="name" field={Field}>
                   <Input
                     onBlur={null}
@@ -200,127 +196,95 @@ export default withTheme(
               <Margin top={3}>
                 <Row between="xs">
                   <Col xs={9}>
-                    <Button
-                      href={`${GLOBAL.origin}/images/~create/${instance.id}`}
-                      target="__blank"
-                      rel="noopener noreferrer"
-                      secondary
-                      bold
-                      small
-                      icon
-                    >
-                      <Padding top={0.5}>
-                        <InstanceTypeIcon />
-                      </Padding>
-                    </Button>
-                    <SmallOnly>
-                      <Button
-                        href={`${GLOBAL.origin}/images/~create/${instance.id}`}
-                        target="__blank"
-                        rel="noopener noreferrer"
-                        secondary
-                        bold
-                        small
-                        icon
-                      >
-                        <Padding top={0}>
-                          <InstanceTypeIcon />
-                        </Padding>
-                      </Button>
-                    </SmallOnly>
-                    <SmallOnly>
-                      <Button
-                        type="button"
-                        loading={starting}
-                        disabled={instance.state !== 'STOPPED'}
-                        onClick={() => onAction('start')}
-                        secondary
-                        small
-                        icon
-                      >
-                        <Margin right={2}>
-                          <StartIcon disabled={instance.state !== 'STOPPED'} />
+                    <Flex>
+                      <FlexItem>
+                        <Margin right={1}>
+                          <ButtonGroup>
+                            {instance.state === 'STOPPED' ? (
+                              <Button
+                                type="button"
+                                loading={starting}
+                                disabled={instance.state !== 'STOPPED'}
+                                onClick={() => onAction('start')}
+                                secondary
+                                bold
+                                icon
+                              >
+                                <Margin right={2}>
+                                  <StartIcon
+                                    disabled={instance.state !== 'STOPPED'}
+                                  />
+                                </Margin>
+                                <span>Start</span>
+                              </Button>
+                            ) : (
+                              <Button
+                                type="button"
+                                loading={stopping}
+                                disabled={instance.state !== 'RUNNING'}
+                                onClick={() => onAction('stop')}
+                                secondary
+                                bold
+                                icon
+                              >
+                                <Margin right={2}>
+                                  <StopIcon
+                                    disabled={instance.state !== 'RUNNING'}
+                                  />
+                                </Margin>
+                                <span>Stop</span>
+                              </Button>
+                            )}
+                            <PopoverButton secondary>
+                              <PopoverItem
+                                disabled={instance.state === 'RUNNING'}
+                                onClick={() =>
+                                  instance.state === 'RUNNING'
+                                    ? null
+                                    : onAction('start')
+                                }
+                              >
+                                Start
+                              </PopoverItem>
+                              <PopoverItem
+                                disabled={instance.state === 'STOPPED'}
+                                onClick={() =>
+                                  instance.state === 'STOPPED'
+                                    ? null
+                                    : onAction('reboot')
+                                }
+                              >
+                                Restart
+                              </PopoverItem>
+                              <PopoverItem
+                                disabled={instance.state === 'STOPPED'}
+                                onClick={() =>
+                                  instance.state === 'STOPPED'
+                                    ? null
+                                    : onAction('stop')
+                                }
+                              >
+                                Stop
+                              </PopoverItem>
+                            </PopoverButton>
+                          </ButtonGroup>
                         </Margin>
-                      </Button>
-                    </SmallOnly>
-                    <Medium>
-                      <Button
-                        type="button"
-                        loading={starting}
-                        disabled={instance.state !== 'STOPPED'}
-                        onClick={() => onAction('start')}
-                        secondary
-                        bold
-                        icon
-                      >
-                        <Margin right={2}>
-                          <StartIcon disabled={instance.state !== 'STOPPED'} />
-                        </Margin>
-                        <span>Start</span>
-                      </Button>
-                    </Medium>
-                    <SmallOnly>
-                      <Button
-                        type="button"
-                        loading={stopping}
-                        disabled={instance.state !== 'RUNNING'}
-                        onClick={() => onAction('stop')}
-                        secondary
-                        small
-                        icon
-                      >
-                        <Margin right={2}>
-                          <StopIcon disabled={instance.state !== 'RUNNING'} />
-                        </Margin>
-                      </Button>
-                    </SmallOnly>
-                    <Medium>
-                      <Button
-                        type="button"
-                        loading={stopping}
-                        disabled={instance.state !== 'RUNNING'}
-                        onClick={() => onAction('stop')}
-                        secondary
-                        bold
-                        icon
-                      >
-                        <Margin right={2}>
-                          <StopIcon disabled={instance.state !== 'RUNNING'} />
-                        </Margin>
-                        <span>Stop</span>
-                      </Button>
-                    </Medium>
-                    <SmallOnly>
-                      <Button
-                        type="button"
-                        loading={rebooting}
-                        disabled={instance.state !== 'RUNNING'}
-                        onClick={() => onAction('reboot')}
-                        secondary
-                        small
-                        icon
-                      >
-                        <Margin right={2}>
-                          <ResetIcon disabled={instance.state !== 'RUNNING'} />
-                        </Margin>
-                      </Button>
-                    </SmallOnly>
-                    <Medium>
-                      <Button
-                        type="button"
-                        loading={rebooting}
-                        disabled={instance.state !== 'RUNNING'}
-                        onClick={() => onAction('reboot')}
-                        secondary
-                        bold
-                        icon
-                      >
-                        <Margin right={2}>
-                          <ResetIcon disabled={instance.state !== 'RUNNING'} />
-                        </Margin>
-                        <span>Reboot</span>
-                      </Button>
-                    </Medium>
+                      </FlexItem>
+                      <FlexItem>
+                        <Button
+                          href={`${GLOBAL.origin}/images/~create/${
+                            instance.id
+                          }`}
+                          target="__blank"
+                          rel="noopener noreferrer"
+                          secondary
+                          bold
+                          icon
+                        >
+                          Create Image
+                        </Button>
+                      </FlexItem>
+                    </Flex>
                   </Col>
                   <Col xs={3}>
                     <SmallOnly>
@@ -374,7 +338,7 @@ export default withTheme(
                             }
                           />
                         </Margin>
-                        <span>Remove</span>
+                        <span>Delete</span>
                       </Button>
                     </Medium>
                   </Col>

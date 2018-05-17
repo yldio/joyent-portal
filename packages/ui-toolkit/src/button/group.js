@@ -6,6 +6,7 @@ export default styled.span`
   & [data-ui-button='true']:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    border-left: none;
   }
 
   & [data-ui-button='true']:not(:last-child) {
