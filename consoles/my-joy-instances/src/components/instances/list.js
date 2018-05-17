@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { Field } from 'redux-form';
 import Flex from 'styled-flex-component';
 import queryString from 'query-string';
+import { Padding } from 'styled-components-spacing';
 
 import {
   Anchor,
@@ -24,8 +25,8 @@ import {
   Popover,
   PopoverContainer,
   PopoverTarget,
-  PopoverItem,
-  PopoverDivider,
+  PopoverItem as BasePopoverItem,
+  PopoverDivider as BasePopoverDivider,
   DotIcon,
   ActionsIcon
 } from 'joyent-ui-toolkit';
@@ -64,6 +65,14 @@ const MarginalPaginationItem = styled(PaginationItem)`
 
 const Actions = styled(Flex)`
   height: ${remcalc(48)};
+`;
+
+const PopoverItem = styled(BasePopoverItem)`
+  padding-bottom: ${remcalc(11)};
+`;
+
+const PopoverDivider = styled(BasePopoverDivider)`
+  margin-left: ${remcalc(-18)};
 `;
 
 export const FetchingItem = () => (
@@ -131,9 +140,14 @@ export const Item = ({
               Stop
             </PopoverItem>
             <PopoverItem disabled={!allowedActions.reboot} onClick={onReboot}>
-              Reboot
+              Restart
             </PopoverItem>
-            <PopoverDivider />
+            <PopoverItem disabled={!allowedActions.remove} onClick={onRemove}>
+              Delete
+            </PopoverItem>
+            <Padding bottom={2}>
+              <PopoverDivider />
+            </Padding>
             <PopoverItem disabled={false} onClick={onCreateImage}>
               <ItemAnchor
                 href={`${GLOBAL.origin}/images/~create/${id}`}
@@ -142,10 +156,6 @@ export const Item = ({
               >
                 Create Image
               </ItemAnchor>
-            </PopoverItem>
-            <PopoverDivider />
-            <PopoverItem disabled={!allowedActions.remove} onClick={onRemove}>
-              Remove
             </PopoverItem>
           </Popover>
         </TableTd>

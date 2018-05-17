@@ -12,7 +12,7 @@ import {
   CardOutlet,
   H2,
   P,
-  Label,
+  Label as BaseLabel,
   Divider,
   Button,
   QueryBreakpoints,
@@ -40,6 +40,10 @@ const VerticalDivider = styled.div`
   @media (max-width: ${remcalc(767)}) {
     display: none;
   }
+`;
+
+const Label = styled(BaseLabel)`
+  font-weight: 200;
 `;
 
 const GreyLabel = styled(Label)`
@@ -147,7 +151,7 @@ export default withTheme(({ theme = {}, onRemove, removing, ...image }) => (
                     <Margin right="1">
                       <DeleteIcon fill={theme.red} />
                     </Margin>
-                    <span>Remove</span>
+                    <span>Delete</span>
                   </Button>
                 </Medium>
               </Col>
