@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
+import remcalc from 'remcalc';
 
 import BaseInput from './base/input';
 import BaseToggle from './base/toggle';
@@ -12,7 +13,7 @@ const Li = styled.li`
   display: flex;
   align-items: center;
   align-content: center;
-  height: 24px;
+  height: ${remcalc(24)};
 
   label {
     font-weight: 400;
@@ -28,8 +29,8 @@ const Li = styled.li`
   div[type='checkbox'],
   div[type='checkbox'] input,
   div[type='checkbox'] label {
-    height: 24px;
-    width: 24px;
+    height: ${remcalc(24)};
+    width: ${remcalc(24)};
   }
 `;
 

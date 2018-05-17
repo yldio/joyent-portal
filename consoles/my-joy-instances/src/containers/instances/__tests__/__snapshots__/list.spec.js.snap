@@ -315,10 +315,36 @@ exports[`renders <List /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c18 label {
   font-weight: 400;
+}
+
+.c18 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c18 div[type='checkbox'],
+.c18 div[type='checkbox'] input,
+.c18 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c6 {
@@ -817,8 +843,6 @@ exports[`renders <List /> without throwing 1`] = `
             </span>
             <svg
               height="6"
-              marginBottom="0.125rem"
-              marginLeft="0.5625rem"
               style={
                 Object {
                   "transform": "rotate(180deg)",
@@ -1267,10 +1291,36 @@ exports[`renders <List error /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c25 label {
   font-weight: 400;
+}
+
+.c25 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c25 div[type='checkbox'],
+.c25 div[type='checkbox'] input,
+.c25 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c6 {
@@ -1794,8 +1844,6 @@ exports[`renders <List error /> without throwing 1`] = `
             </span>
             <svg
               height="6"
-              marginBottom="0.125rem"
-              marginLeft="0.5625rem"
               style={
                 Object {
                   "transform": "rotate(180deg)",
@@ -2230,10 +2278,36 @@ exports[`renders <List instances /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c18 label {
   font-weight: 400;
+}
+
+.c18 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c18 div[type='checkbox'],
+.c18 div[type='checkbox'] input,
+.c18 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c6 {
@@ -2941,8 +3015,6 @@ exports[`renders <List instances /> without throwing 1`] = `
             </span>
             <svg
               height="6"
-              marginBottom="0.125rem"
-              marginLeft="0.5625rem"
               style={
                 Object {
                   "transform": "rotate(180deg)",
@@ -4371,10 +4443,36 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c18 label {
   font-weight: 400;
+}
+
+.c18 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c18 div[type='checkbox'],
+.c18 div[type='checkbox'] input,
+.c18 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c6 {
@@ -5125,8 +5223,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </span>
             <svg
               height="6"
-              marginBottom="0.125rem"
-              marginLeft="0.5625rem"
               style={
                 Object {
                   "transform": "rotate(180deg)",
@@ -6871,10 +6967,36 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c18 label {
   font-weight: 400;
+}
+
+.c18 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c18 div[type='checkbox'],
+.c18 div[type='checkbox'] input,
+.c18 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c6 {
@@ -7625,8 +7747,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </span>
             <svg
               height="6"
-              marginBottom="0.125rem"
-              marginLeft="0.5625rem"
               style={
                 Object {
                   "transform": "rotate(180deg)",
@@ -9568,10 +9688,36 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c18 label {
   font-weight: 400;
+}
+
+.c18 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c18 div[type='checkbox'],
+.c18 div[type='checkbox'] input,
+.c18 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c6 {
@@ -10322,8 +10468,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </span>
             <svg
               height="6"
-              marginBottom="0.125rem"
-              marginLeft="0.5625rem"
               style={
                 Object {
                   "transform": "rotate(180deg)",

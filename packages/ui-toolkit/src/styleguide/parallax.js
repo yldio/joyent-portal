@@ -53,10 +53,61 @@ const Img = styled.img`
 const gutterWidth = 47 + 70;
 const windowWidth = (window || {}).outerWidth + 70;
 
+let isScrolling;
+
+const isScrolledOutsideView = () => {
+  const elem = document.getElementById('parallaxWrapper');
+  if (elem) {
+    const eleHeight = elem.clientHeight;
+    const scrollY = window.scrollY;
+
+    return scrollY >= eleHeight;
+  }
+  return true;
+};
+
 export default class extends Component {
   state = {
     value: parseInt(windowWidth / gutterWidth, 10),
-    windowWidth
+    windowWidth,
+    show: true
+  };
+
+  componentDidMount() {
+    if (this.props.hideAfterScroll) {
+      isScrolledOutsideView()
+        ? this.setState({ show: false })
+        : window.addEventListener('scroll', this.scrollStopHandler);
+    }
+  }
+
+  scrollStopHandler = () => {
+    window.removeEventListener('scroll', this.scrollStopHandler);
+    window.addEventListener('scroll', this.checkpoint);
+
+    isScrolledOutsideView()
+      ? this.setState({ show: false })
+      : this.skipParallax();
+  };
+
+  skipParallax = () => {
+    if (
+      this.state.show &&
+      window.scrollY < document.getElementsByTagName('header')[0].offsetTop
+    ) {
+      window.scroll({
+        top: document.getElementsByTagName('header')[0].offsetTop,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  checkpoint = () => {
+    if (isScrolledOutsideView()) {
+      window.removeEventListener('scroll', this.checkpoint);
+      this.setState({ show: false });
+    }
   };
 
   render() {
@@ -72,12 +123,16 @@ export default class extends Component {
       Number
     );
 
+    if (!this.state.show) {
+      return null;
+    }
+
     return (
-      <Wrapper>
+      <Wrapper id="parallaxWrapper">
         {array.map((g, i) => (
           <Gutter key={g} style={{ left: gutterWidth * i }} />
         ))}
-        <Parallax offsetYMax={50} offsetYMin={-50} slowerScrollRate tag="main">
+        <Parallax offsetYMax={50} offsetYMin={-50} tag="main">
           <Text>
             <Img src={Plus} />
             <Img topRight src={Plus} />
@@ -89,6 +144,10 @@ export default class extends Component {
               elements, components and guidelines, for anyone developing
               products within the Joyent and Triton ecosystems.
             </P>
+          </Text>
+        </Parallax>
+        <Parallax offsetYMax={200} offsetYMin={0} slowerScrollRate tag="main">
+          <Text>
             <P white style={{ marginTop: remcalc(60), position: 'absolute' }}>
               Scroll down
             </P>

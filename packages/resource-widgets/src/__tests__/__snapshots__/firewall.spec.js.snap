@@ -4945,35 +4945,52 @@ Array [
 `;
 
 exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
-.c4 {
+.c10 {
+  margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c5 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
 }
 
-.c3 {
+.c5[type='checkbox'],
+.c5[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c5[type='number']::-webkit-inner-spin-button,
+.c5[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c5[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c5[type='search']::-webkit-search-cancel-button,
+.c5[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c5::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c9 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -4983,7 +5000,124 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
   text-align: left;
 }
 
-.c0 {
+.c4 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c4:checked + label::after {
+  opacity: 1;
+}
+
+.c4:selected + label::after {
+  opacity: 1;
+}
+
+.c4:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c4:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c4:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c6 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c6::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c3 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c7 label {
+  font-weight: normal;
+  font-size: 0.9375rem;
+}
+
+.c2 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
+}
+
+.c2 label {
+  font-weight: 400;
+}
+
+.c2 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c2 div[type='checkbox'],
+.c2 div[type='checkbox'] input,
+.c2 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.c1 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -4995,202 +5129,122 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c2 {
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
-  font-size: 0.9375rem;
-}
-
 .c8 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
-}
-
-.c5 {
-  position: relative;
-  vertical-align: text-bottom;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c6 {
-  display: none;
-}
-
-.c6:checked + label {
-  background: #3B46CC;
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c6:checked + label:after {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c6:checked + label:active {
-  box-shadow: none;
-}
-
-.c7 {
-  outline: 0;
-  display: block;
-  width: 2.875rem;
-  height: 1.5rem;
-  position: relative;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  background: rgb(250,250,250);
-  border-radius: 1.4375rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c7::selection {
-  background: none;
-}
-
-.c7:active {
-  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
-}
-
-.c7:hover {
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c7:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c7:after,
-.c7:before {
-  position: relative;
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-}
-
-.c7:after {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-  border-radius: 50%;
-  background: rgb(255,255,255);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
-.c7:active {
-  box-shadow: inset 0 0 0 2em rgb(216,216,216);
-}
-
-.c7:before {
-  display: none;
+.c0 {
+  margin-bottom: 0 !important;
 }
 
 <form
+  className="c0"
   onChange={undefined}
 >
   <div
-    className="c0"
+    className="c1"
     name="enabled"
     role="group"
     style={undefined}
     type="checkbox"
   >
-    <div
-      className="c1"
+    <li
+      className="c2"
     >
-      <label
-        className="c2 c3"
-        htmlFor="k"
-      >
-        Enable Firewall
-      </label>
       <div
-        className="c4"
+        checked={false}
+        className="c3"
+        disabled={false}
+        id="k"
+        onBlur={undefined}
+        type="checkbox"
       >
-        <div
-          className="c5"
-        >
-          <input
-            checked={undefined}
-            className="c6"
-            disabled={false}
-            id="k"
-            onBlur={undefined}
-            type="checkbox"
-          />
-          <label
-            className="c7"
-            disabled={false}
-            htmlFor="k"
-            id="k"
-            onBlur={undefined}
-          />
-          <label
-            className="c8 c3"
-            disabled={false}
-            htmlFor="k"
-            id="k"
-            onBlur={undefined}
-          >
-             
-          </label>
-        </div>
+        <input
+          checked={false}
+          className="c4 c5"
+          disabled={false}
+          id="l"
+          onBlur={undefined}
+          type="checkbox"
+        />
+        <label
+          className="c6"
+          htmlFor="l"
+        />
       </div>
-    </div>
+      <div
+        checked={false}
+        className="c7"
+        disabled={false}
+        id="k"
+        onBlur={undefined}
+      >
+        <label
+          className="c8 c9"
+          htmlFor="l"
+        >
+          <div
+            className="c10"
+          >
+            Enable Firewall
+          </div>
+        </label>
+      </div>
+    </li>
   </div>
 </form>
 `;
 
 exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
-.c4 {
+.c10 {
+  margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c5 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
 }
 
-.c3 {
+.c5[type='checkbox'],
+.c5[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c5[type='number']::-webkit-inner-spin-button,
+.c5[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c5[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c5[type='search']::-webkit-search-cancel-button,
+.c5[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c5::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c9 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -5200,7 +5254,124 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
   text-align: left;
 }
 
-.c0 {
+.c4 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c4:checked + label::after {
+  opacity: 1;
+}
+
+.c4:selected + label::after {
+  opacity: 1;
+}
+
+.c4:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c4:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c4:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c6 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c6::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c3 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c7 label {
+  font-weight: normal;
+  font-size: 0.9375rem;
+}
+
+.c2 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
+}
+
+.c2 label {
+  font-weight: 400;
+}
+
+.c2 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c2 div[type='checkbox'],
+.c2 div[type='checkbox'] input,
+.c2 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.c1 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -5212,238 +5383,122 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c2 {
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
-  font-size: 0.9375rem;
-}
-
 .c8 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
-  color: rgb(216,216,216);
-}
-
-.c5 {
-  position: relative;
-  vertical-align: text-bottom;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c6 {
-  display: none;
-}
-
-.c6:checked + label {
-  background: #3B46CC;
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c6:checked + label:after {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c6:checked + label:active {
-  box-shadow: none;
-}
-
-.c6:checked + label {
-  background: rgb(250,250,250);
-  border: 0.0625rem solid rgb(216,216,216);
-}
-
-.c6:checked + label:after {
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
-.c7 {
-  outline: 0;
-  display: block;
-  width: 2.875rem;
-  height: 1.5rem;
-  position: relative;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  background: rgb(250,250,250);
-  border-radius: 1.4375rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: 0.0625rem solid rgb(216,216,216);
-  cursor: not-allowed;
 }
 
-.c7::selection {
-  background: none;
-}
-
-.c7:active {
-  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
-}
-
-.c7:hover {
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c7:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c7:after,
-.c7:before {
-  position: relative;
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-}
-
-.c7:after {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-  border-radius: 50%;
-  background: rgb(255,255,255);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
-.c7:active {
-  box-shadow: inset 0 0 0 2em rgb(216,216,216);
-}
-
-.c7:before {
-  display: none;
-}
-
-.c7:active {
-  box-shadow: none;
-}
-
-.c7:active:after {
-  padding-right: 0;
-}
-
-.c7:before {
-  cursor: not-allowed;
-}
-
-.c7:after {
-  cursor: not-allowed;
-  background: rgb(230,230,230);
-}
-
-.c7:hover {
-  border: 0.0625rem solid rgb(216,216,216);
-}
-
-.c7:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
+.c0 {
+  margin-bottom: 0 !important;
 }
 
 <form
+  className="c0"
   onChange={undefined}
 >
   <div
-    className="c0"
+    className="c1"
     name="enabled"
     role="group"
     style={undefined}
     type="checkbox"
   >
-    <div
-      className="c1"
+    <li
+      className="c2"
     >
-      <label
-        className="c2 c3"
-        htmlFor="l"
-      >
-        Enable Firewall
-      </label>
       <div
-        className="c4"
+        checked={false}
+        className="c3"
+        disabled={true}
+        id="m"
+        onBlur={undefined}
+        type="checkbox"
       >
-        <div
-          className="c5"
-        >
-          <input
-            checked={undefined}
-            className="c6"
-            disabled={true}
-            id="l"
-            onBlur={undefined}
-            type="checkbox"
-          />
-          <label
-            className="c7"
-            disabled={true}
-            htmlFor="l"
-            id="l"
-            onBlur={undefined}
-          />
-          <label
-            className="c8 c3"
-            disabled={true}
-            htmlFor="l"
-            id="l"
-            onBlur={undefined}
-          >
-             
-          </label>
-        </div>
+        <input
+          checked={false}
+          className="c4 c5"
+          disabled={true}
+          id="n"
+          onBlur={undefined}
+          type="checkbox"
+        />
+        <label
+          className="c6"
+          htmlFor="n"
+        />
       </div>
-    </div>
+      <div
+        checked={false}
+        className="c7"
+        disabled={true}
+        id="m"
+        onBlur={undefined}
+      >
+        <label
+          className="c8 c9"
+          htmlFor="n"
+        >
+          <div
+            className="c10"
+          >
+            Enable Firewall
+          </div>
+        </label>
+      </div>
+    </li>
   </div>
 </form>
 `;
 
 exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
-.c2 {
+.c10 {
   margin-right: 0.75rem;
+  margin-left: 0.75rem;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.c5 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
 }
 
-.c7 {
+.c5[type='checkbox'],
+.c5[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.c5[type='number']::-webkit-inner-spin-button,
+.c5[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.c5[type='search'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  outline-offset: -0.125rem;
+}
+
+.c5[type='search']::-webkit-search-cancel-button,
+.c5[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c5::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  font: inherit;
+}
+
+.c9 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -5453,7 +5508,124 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
   text-align: left;
 }
 
-.c0 {
+.c4 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  display: none;
+}
+
+.c4:checked + label::after {
+  opacity: 1;
+}
+
+.c4:selected + label::after {
+  opacity: 1;
+}
+
+.c4:checked + label {
+  border-color: rgb(59,70,204);
+}
+
+.c4:selected + label {
+  border-color: rgb(59,70,204);
+}
+
+.c4:disabled + label {
+  background-color: rgb(249,249,249);
+  cursor: not-allowed;
+}
+
+.c6 {
+  color: rgb(100,100,100);
+  position: absolute;
+  width: 1.125rem;
+  height: 1.125rem;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+  border: 0.0625rem solid rgb(216,216,216);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.c6::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.125rem;
+  background: transparent;
+  top: 0.3125rem;
+  left: 0.25rem;
+  border: 0.125rem solid rgb(45,45,45);
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c3 {
+  display: inline-block;
+  vertical-align: text-bottom;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.c7 label {
+  font-weight: normal;
+  font-size: 0.9375rem;
+}
+
+.c2 {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
+}
+
+.c2 label {
+  font-weight: 400;
+}
+
+.c2 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c2 div[type='checkbox'],
+.c2 div[type='checkbox'] input,
+.c2 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.c1 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -5469,159 +5641,66 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
-  font-size: 0.9375rem;
-}
-
-.c6 {
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c3 {
-  position: relative;
-  vertical-align: text-bottom;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c4 {
-  display: none;
-}
-
-.c4:checked + label {
-  background: #3B46CC;
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c4:checked + label:after {
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c4:checked + label:active {
-  box-shadow: none;
-}
-
-.c5 {
-  outline: 0;
-  display: block;
-  width: 2.875rem;
-  height: 1.5rem;
-  position: relative;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  box-sizing: border-box;
-  background: rgb(250,250,250);
-  border-radius: 1.4375rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c5::selection {
-  background: none;
+.c0 {
+  margin-bottom: 0 !important;
 }
 
-.c5:active {
-  box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
-}
-
-.c5:hover {
-  border: 0.0625rem solid rgb(59,70,204);
-}
-
-.c5:hover:after {
-  box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
-}
-
-.c5:after,
-.c5:before {
-  position: relative;
-  display: block;
-  content: '';
-  width: 50%;
-  height: 100%;
-}
-
-.c5:after {
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
-  border-radius: 50%;
-  background: rgb(255,255,255);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  -webkit-transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  transition: transform 0.3s cubic-bezier(0.175,0.885,0.32,1.275);
-  box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
-}
-
-.c5:active {
-  box-shadow: inset 0 0 0 2em rgb(216,216,216);
-}
-
-.c5:before {
-  display: none;
-}
-
-<form>
+<form
+  className="c0"
+>
   <div
-    className="c0"
+    className="c1"
     name="inactive"
     role="group"
     style={undefined}
     type="checkbox"
   >
-    <div
-      className="c1"
+    <li
+      className="c2"
     >
       <div
-        className="c2"
+        checked={false}
+        className="c3"
+        disabled={false}
+        id="o"
+        onBlur={undefined}
+        type="checkbox"
       >
-        <div
-          className="c3"
-        >
-          <input
-            checked={undefined}
-            className="c4"
-            id="m"
-            onBlur={undefined}
-            type="checkbox"
-          />
-          <label
-            className="c5"
-            htmlFor="m"
-            id="m"
-            onBlur={undefined}
-          />
-          <label
-            className="c6 c7"
-            htmlFor="m"
-            id="m"
-            onBlur={undefined}
-          >
-             
-          </label>
-        </div>
+        <input
+          checked={false}
+          className="c4 c5"
+          disabled={false}
+          id="p"
+          onBlur={undefined}
+          type="checkbox"
+        />
+        <label
+          className="c6"
+          htmlFor="p"
+        />
       </div>
-      <label
-        className="c8 c7"
-        htmlFor="m"
+      <div
+        checked={false}
+        className="c7"
+        disabled={false}
+        id="o"
+        onBlur={undefined}
       >
-        Show inactive rules
-      </label>
-    </div>
+        <label
+          className="c8 c9"
+          htmlFor="p"
+        >
+          <div
+            className="c10"
+          >
+            Show inactive rules
+          </div>
+        </label>
+      </div>
+    </li>
   </div>
 </form>
 `;

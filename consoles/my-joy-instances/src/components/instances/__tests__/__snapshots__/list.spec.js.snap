@@ -141,10 +141,36 @@ exports[`renders <InstanceList /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -539,8 +565,6 @@ exports[`renders <InstanceList /> without throwing 1`] = `
           </span>
           <svg
             height="6"
-            marginBottom="0.125rem"
-            marginLeft="0.5625rem"
             style={
               Object {
                 "transform": "rotate(180deg)",
@@ -835,10 +859,36 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -1233,8 +1283,6 @@ exports[`renders <InstanceList allSelected /> without throwing 1`] = `
           </span>
           <svg
             height="6"
-            marginBottom="0.125rem"
-            marginLeft="0.5625rem"
             style={
               Object {
                 "transform": "rotate(180deg)",
@@ -1529,10 +1577,36 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -1938,8 +2012,6 @@ exports[`renders <InstanceList sortBy /> without throwing 1`] = `
           </span>
           <svg
             height="6"
-            marginBottom="0.125rem"
-            marginLeft="0.5625rem"
             style={
               Object {
                 "transform": "rotate(180deg)",
@@ -2223,10 +2295,36 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -2632,8 +2730,6 @@ exports[`renders <InstanceList sortBy sortOrder /> without throwing 1`] = `
           </span>
           <svg
             height="6"
-            marginBottom="0.125rem"
-            marginLeft="0.5625rem"
             style={
               Object {
                 "transform": "rotate(0deg)",
@@ -2917,10 +3013,36 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -3315,8 +3437,6 @@ exports[`renders <InstanceList submitting /> without throwing 1`] = `
           </span>
           <svg
             height="6"
-            marginBottom="0.125rem"
-            marginLeft="0.5625rem"
             style={
               Object {
                 "transform": "rotate(180deg)",
@@ -3611,10 +3731,36 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -4009,8 +4155,6 @@ exports[`renders <InstanceList>{children}</InstanceList> without throwing 1`] = 
           </span>
           <svg
             height="6"
-            marginBottom="0.125rem"
-            marginLeft="0.5625rem"
             style={
               Object {
                 "transform": "rotate(180deg)",
@@ -4355,10 +4499,36 @@ exports[`renders <Item /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -4857,10 +5027,36 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -5361,10 +5557,36 @@ exports[`renders <Item allowedActions /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
@@ -5852,10 +6074,36 @@ exports[`renders <Item mutating /> without throwing 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  height: 1.5rem;
 }
 
 .c5 label {
   font-weight: 400;
+}
+
+.c5 label::after {
+  width: 0.475rem;
+  height: 0.205rem;
+  top: 0.4125rem;
+  left: 0.35rem;
+}
+
+.c5 div[type='checkbox'],
+.c5 div[type='checkbox'] input,
+.c5 div[type='checkbox'] label {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .c4 {
