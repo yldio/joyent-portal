@@ -170,9 +170,9 @@ export const Hostname = ({
           }
         >
           {copy ? (
-            <CopiableField disabled md={12} text={value} />
+            <CopiableField md={12} text={value} />
           ) : (
-            <Input onBlur={null} disabled monospace fluid value={value} />
+            <Input onBlur={null} monospace fluid value={value} />
           )}
         </Margin>
       ))}

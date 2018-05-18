@@ -909,7 +909,7 @@ exports[`renders <Hostname values /> without throwing 1`] = `
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(250,250,250);
+  color: rgb(73,73,73);
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -918,9 +918,6 @@ exports[`renders <Hostname values /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -945,18 +942,6 @@ exports[`renders <Hostname values /> without throwing 1`] = `
 
 .c9:invalid {
   box-shadow: none;
-}
-
-.c9::-webkit-input-placeholder {
-  color: rgb(216,216,216);
-}
-
-.c9::-moz-placeholder {
-  color: rgb(216,216,216);
-}
-
-.c9:-ms-input-placeholder {
-  color: rgb(216,216,216);
 }
 
 .c9:disabled {
@@ -1052,7 +1037,7 @@ exports[`renders <Hostname values /> without throwing 1`] = `
   >
     <input
       className="c9"
-      disabled={true}
+      disabled={false}
       id=""
       onBlur={null}
       value="111"
@@ -1063,7 +1048,7 @@ exports[`renders <Hostname values /> without throwing 1`] = `
   >
     <input
       className="c9"
-      disabled={true}
+      disabled={false}
       id=""
       onBlur={null}
       value="111"

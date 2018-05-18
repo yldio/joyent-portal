@@ -21,6 +21,10 @@ exports[`Anchor Default Anchor 1`] = `
   text-decoration: none;
 }
 
+.c0 a:hover {
+  color: rgb(45,56,132);
+}
+
 <a
   className="c0 c1 c2"
   href="https://joyent.com"
@@ -51,6 +55,10 @@ exports[`Anchor Disabled Anchor 1`] = `
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c0 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c0:hover {
@@ -88,6 +96,10 @@ exports[`Anchor Reversed Anchor 1`] = `
 .c0:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c0 a:hover {
+  color: rgb(45,56,132);
 }
 
 <a

@@ -6,28 +6,28 @@ Array [
   margin-bottom: 1.125rem;
 }
 
-.c9 {
+.c12 {
   margin-right: 1.875rem;
 }
 
-.c20 {
+.c23 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c21 {
+.c24 {
   margin-top: 1.875rem;
 }
 
-.c26 {
+.c29 {
   margin-bottom: 0.75rem;
 }
 
-.c24 {
+.c27 {
   padding: 8rem;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -47,7 +47,7 @@ Array [
   align-content: stretch;
 }
 
-.c25 {
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -78,7 +78,7 @@ Array [
   align-items: center;
 }
 
-.c8 {
+.c11 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -95,7 +95,13 @@ Array [
   display: block;
 }
 
-.c15 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -103,36 +109,54 @@ Array [
   overflow: visible;
 }
 
-.c15[type='checkbox'],
-.c15[type='radio'] {
+.c18[type='checkbox'],
+.c18[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c15[type='number']::-webkit-inner-spin-button,
-.c15[type='number']::-webkit-outer-spin-button {
+.c18[type='number']::-webkit-inner-spin-button,
+.c18[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c15[type='search'] {
+.c18[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c15[type='search']::-webkit-search-cancel-button,
-.c15[type='search']::-webkit-search-decoration {
+.c18[type='search']::-webkit-search-cancel-button,
+.c18[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c15::-webkit-file-upload-button {
+.c18::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -142,7 +166,7 @@ Array [
   font-size: 0.9375rem;
 }
 
-.c19 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -193,7 +217,7 @@ Array [
   padding-bottom: 1.125rem;
 }
 
-.c28 {
+.c31 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -201,7 +225,7 @@ Array [
   font-size: 1.3125rem;
 }
 
-.c23 {
+.c26 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -223,33 +247,33 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c14 {
+.c17 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c14:checked + label::after {
+.c17:checked + label::after {
   opacity: 1;
 }
 
-.c14:selected + label::after {
+.c17:selected + label::after {
   opacity: 1;
 }
 
-.c14:checked + label {
+.c17:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:selected + label {
+.c17:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:disabled + label {
+.c17:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c16 {
+.c19 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -267,7 +291,7 @@ Array [
   height: 1.125rem;
 }
 
-.c16::after {
+.c19::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -284,7 +308,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c13 {
+.c16 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -293,12 +317,12 @@ Array [
   cursor: pointer;
 }
 
-.c17 label {
+.c20 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c12 {
+.c15 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -322,25 +346,25 @@ Array [
   height: 1.5rem;
 }
 
-.c12 label {
+.c15 label {
   font-weight: 400;
 }
 
-.c12 label::after {
+.c15 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c12 div[type='checkbox'],
-.c12 div[type='checkbox'] input,
-.c12 div[type='checkbox'] label {
+.c15 div[type='checkbox'],
+.c15 div[type='checkbox'] input,
+.c15 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c11 {
+.c14 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -352,23 +376,23 @@ Array [
   -webkit-padding-after: 0;
 }
 
-.c18 {
+.c21 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c27 {
+.c30 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c22 {
+.c25 {
   width: calc(100% - 0.125rem);
 }
 
-.c10 {
+.c13 {
   margin-bottom: 0 !important;
 }
 
@@ -437,31 +461,35 @@ Array [
                     Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                      
                     <a
-                        href="https://docs.joyent.com/private-cloud/install/cns"
-                        rel="noopener noreferrer"
-                        target="__blank"
+                        className="c7 c8 c9"
                     >
-                        Read the docs
+                        <a
+                            rel="noopener noreferrer"
+                            target="__blank"
+                            to="https://docs.joyent.com/private-cloud/install/cns"
+                        >
+                            Read the docs
+                        </a>
                     </a>
                 </p>
             </div>
         </div>
     </div>
     <div
-        className="c7"
+        className="c10"
     >
         <div
-            className="c8"
+            className="c11"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <form
-                    className="c10"
+                    className="c13"
                     onChange={[Function]}
                 >
                     <div
-                        className="c11"
+                        className="c14"
                         id="fw-toggle-firewall"
                         name="enabled"
                         role="group"
@@ -469,11 +497,11 @@ Array [
                         type="checkbox"
                     >
                         <li
-                            className="c12"
+                            className="c15"
                         >
                             <div
                                 checked={false}
-                                className="c13"
+                                className="c16"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
@@ -481,30 +509,30 @@ Array [
                             >
                                 <input
                                     checked={false}
-                                    className="c14 c15"
+                                    className="c17 c18"
                                     disabled={false}
                                     id="l"
                                     onBlur={undefined}
                                     type="checkbox"
                                 />
                                 <label
-                                    className="c16"
+                                    className="c19"
                                     htmlFor="l"
                                 />
                             </div>
                             <div
                                 checked={false}
-                                className="c17"
+                                className="c20"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
                             >
                                 <label
-                                    className="c18 c19"
+                                    className="c21 c22"
                                     htmlFor="l"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         Enable Firewall
                                     </div>
@@ -516,25 +544,25 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c11"
         />
     </div>
     <div
-        className="c21"
+        className="c24"
     >
         <div
-            className="c22 c23"
+            className="c25 c26"
             disabled={false}
             name="card"
         >
             <div
-                className="c24"
+                className="c27"
             >
                 <div
-                    className="c25"
+                    className="c28"
                 >
                     <div
-                        className="c26"
+                        className="c29"
                     >
                         <svg
                             height={109}
@@ -823,7 +851,7 @@ Array [
                         </svg>
                     </div>
                     <h3
-                        className="c27 c28"
+                        className="c30 c31"
                     >
                         Sorry, but we weren’t able to find any firewall rules.
                     </h3>
@@ -836,28 +864,28 @@ Array [
   margin-bottom: 1.125rem;
 }
 
-.c9 {
+.c12 {
   margin-right: 1.875rem;
 }
 
-.c20 {
+.c23 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c21 {
+.c24 {
   margin-top: 1.875rem;
 }
 
-.c26 {
+.c29 {
   margin-bottom: 0.75rem;
 }
 
-.c24 {
+.c27 {
   padding: 8rem;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -877,7 +905,7 @@ Array [
   align-content: stretch;
 }
 
-.c25 {
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -908,7 +936,7 @@ Array [
   align-items: center;
 }
 
-.c8 {
+.c11 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -925,7 +953,13 @@ Array [
   display: block;
 }
 
-.c15 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -933,36 +967,54 @@ Array [
   overflow: visible;
 }
 
-.c15[type='checkbox'],
-.c15[type='radio'] {
+.c18[type='checkbox'],
+.c18[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c15[type='number']::-webkit-inner-spin-button,
-.c15[type='number']::-webkit-outer-spin-button {
+.c18[type='number']::-webkit-inner-spin-button,
+.c18[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c15[type='search'] {
+.c18[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c15[type='search']::-webkit-search-cancel-button,
-.c15[type='search']::-webkit-search-decoration {
+.c18[type='search']::-webkit-search-cancel-button,
+.c18[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c15::-webkit-file-upload-button {
+.c18::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -972,7 +1024,7 @@ Array [
   font-size: 0.9375rem;
 }
 
-.c19 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1023,7 +1075,7 @@ Array [
   padding-bottom: 1.125rem;
 }
 
-.c28 {
+.c31 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -1031,7 +1083,7 @@ Array [
   font-size: 1.3125rem;
 }
 
-.c23 {
+.c26 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1053,33 +1105,33 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c14 {
+.c17 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c14:checked + label::after {
+.c17:checked + label::after {
   opacity: 1;
 }
 
-.c14:selected + label::after {
+.c17:selected + label::after {
   opacity: 1;
 }
 
-.c14:checked + label {
+.c17:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:selected + label {
+.c17:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:disabled + label {
+.c17:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c16 {
+.c19 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -1097,7 +1149,7 @@ Array [
   height: 1.125rem;
 }
 
-.c16::after {
+.c19::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -1114,7 +1166,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c13 {
+.c16 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -1123,12 +1175,12 @@ Array [
   cursor: pointer;
 }
 
-.c17 label {
+.c20 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c12 {
+.c15 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1152,25 +1204,25 @@ Array [
   height: 1.5rem;
 }
 
-.c12 label {
+.c15 label {
   font-weight: 400;
 }
 
-.c12 label::after {
+.c15 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c12 div[type='checkbox'],
-.c12 div[type='checkbox'] input,
-.c12 div[type='checkbox'] label {
+.c15 div[type='checkbox'],
+.c15 div[type='checkbox'] input,
+.c15 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c11 {
+.c14 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -1182,23 +1234,23 @@ Array [
   -webkit-padding-after: 0;
 }
 
-.c18 {
+.c21 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c27 {
+.c30 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c22 {
+.c25 {
   width: calc(100% - 0.125rem);
 }
 
-.c10 {
+.c13 {
   margin-bottom: 0 !important;
 }
 
@@ -1267,31 +1319,35 @@ Array [
                     Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                      
                     <a
-                        href="https://docs.joyent.com/private-cloud/install/cns"
-                        rel="noopener noreferrer"
-                        target="__blank"
+                        className="c7 c8 c9"
                     >
-                        Read the docs
+                        <a
+                            rel="noopener noreferrer"
+                            target="__blank"
+                            to="https://docs.joyent.com/private-cloud/install/cns"
+                        >
+                            Read the docs
+                        </a>
                     </a>
                 </p>
             </div>
         </div>
     </div>
     <div
-        className="c7"
+        className="c10"
     >
         <div
-            className="c8"
+            className="c11"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <form
-                    className="c10"
+                    className="c13"
                     onChange={[Function]}
                 >
                     <div
-                        className="c11"
+                        className="c14"
                         id="fw-toggle-firewall"
                         name="enabled"
                         role="group"
@@ -1299,11 +1355,11 @@ Array [
                         type="checkbox"
                     >
                         <li
-                            className="c12"
+                            className="c15"
                         >
                             <div
                                 checked={false}
-                                className="c13"
+                                className="c16"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
@@ -1311,30 +1367,30 @@ Array [
                             >
                                 <input
                                     checked={false}
-                                    className="c14 c15"
+                                    className="c17 c18"
                                     disabled={false}
                                     id="n"
                                     onBlur={undefined}
                                     type="checkbox"
                                 />
                                 <label
-                                    className="c16"
+                                    className="c19"
                                     htmlFor="n"
                                 />
                             </div>
                             <div
                                 checked={false}
-                                className="c17"
+                                className="c20"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
                             >
                                 <label
-                                    className="c18 c19"
+                                    className="c21 c22"
                                     htmlFor="n"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         Enable Firewall
                                     </div>
@@ -1346,13 +1402,13 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c11"
         >
             <form
-                className="c10"
+                className="c13"
             >
                 <div
-                    className="c11"
+                    className="c14"
                     id="fw-toggle-inactive"
                     name="inactive"
                     role="group"
@@ -1360,11 +1416,11 @@ Array [
                     type="checkbox"
                 >
                     <li
-                        className="c12"
+                        className="c15"
                     >
                         <div
                             checked={false}
-                            className="c13"
+                            className="c16"
                             disabled={false}
                             id="fw-toggle-inactive"
                             onBlur={undefined}
@@ -1372,30 +1428,30 @@ Array [
                         >
                             <input
                                 checked={false}
-                                className="c14 c15"
+                                className="c17 c18"
                                 disabled={false}
                                 id="p"
                                 onBlur={undefined}
                                 type="checkbox"
                             />
                             <label
-                                className="c16"
+                                className="c19"
                                 htmlFor="p"
                             />
                         </div>
                         <div
                             checked={false}
-                            className="c17"
+                            className="c20"
                             disabled={false}
                             id="fw-toggle-inactive"
                             onBlur={undefined}
                         >
                             <label
-                                className="c18 c19"
+                                className="c21 c22"
                                 htmlFor="p"
                             >
                                 <div
-                                    className="c20"
+                                    className="c23"
                                 >
                                     Show inactive rules
                                 </div>
@@ -1407,21 +1463,21 @@ Array [
         </div>
     </div>
     <div
-        className="c21"
+        className="c24"
     >
         <div
-            className="c22 c23"
+            className="c25 c26"
             disabled={false}
             name="card"
         >
             <div
-                className="c24"
+                className="c27"
             >
                 <div
-                    className="c25"
+                    className="c28"
                 >
                     <div
-                        className="c26"
+                        className="c29"
                     >
                         <svg
                             height={109}
@@ -1710,7 +1766,7 @@ Array [
                         </svg>
                     </div>
                     <h3
-                        className="c27 c28"
+                        className="c30 c31"
                     >
                         Sorry, but we weren’t able to find any firewall rules.
                     </h3>
@@ -1728,28 +1784,28 @@ Array [
   margin-bottom: 1.125rem;
 }
 
-.c9 {
+.c12 {
   margin-right: 1.875rem;
 }
 
-.c20 {
+.c23 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c21 {
+.c24 {
   margin-top: 1.875rem;
 }
 
-.c26 {
+.c29 {
   margin-bottom: 0.75rem;
 }
 
-.c24 {
+.c27 {
   padding: 8rem;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1769,7 +1825,7 @@ Array [
   align-content: stretch;
 }
 
-.c25 {
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1800,7 +1856,7 @@ Array [
   align-items: center;
 }
 
-.c8 {
+.c11 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1817,7 +1873,13 @@ Array [
   display: block;
 }
 
-.c15 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1825,36 +1887,54 @@ Array [
   overflow: visible;
 }
 
-.c15[type='checkbox'],
-.c15[type='radio'] {
+.c18[type='checkbox'],
+.c18[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c15[type='number']::-webkit-inner-spin-button,
-.c15[type='number']::-webkit-outer-spin-button {
+.c18[type='number']::-webkit-inner-spin-button,
+.c18[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c15[type='search'] {
+.c18[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c15[type='search']::-webkit-search-cancel-button,
-.c15[type='search']::-webkit-search-decoration {
+.c18[type='search']::-webkit-search-cancel-button,
+.c18[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c15::-webkit-file-upload-button {
+.c18::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -1864,7 +1944,7 @@ Array [
   font-size: 0.9375rem;
 }
 
-.c19 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1915,7 +1995,7 @@ Array [
   padding-bottom: 1.125rem;
 }
 
-.c28 {
+.c31 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -1923,7 +2003,7 @@ Array [
   font-size: 1.3125rem;
 }
 
-.c23 {
+.c26 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1945,33 +2025,33 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c14 {
+.c17 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c14:checked + label::after {
+.c17:checked + label::after {
   opacity: 1;
 }
 
-.c14:selected + label::after {
+.c17:selected + label::after {
   opacity: 1;
 }
 
-.c14:checked + label {
+.c17:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:selected + label {
+.c17:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:disabled + label {
+.c17:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c16 {
+.c19 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -1989,7 +2069,7 @@ Array [
   height: 1.125rem;
 }
 
-.c16::after {
+.c19::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -2006,7 +2086,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c13 {
+.c16 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -2015,12 +2095,12 @@ Array [
   cursor: pointer;
 }
 
-.c17 label {
+.c20 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c12 {
+.c15 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2044,25 +2124,25 @@ Array [
   height: 1.5rem;
 }
 
-.c12 label {
+.c15 label {
   font-weight: 400;
 }
 
-.c12 label::after {
+.c15 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c12 div[type='checkbox'],
-.c12 div[type='checkbox'] input,
-.c12 div[type='checkbox'] label {
+.c15 div[type='checkbox'],
+.c15 div[type='checkbox'] input,
+.c15 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c11 {
+.c14 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -2074,23 +2154,23 @@ Array [
   -webkit-padding-after: 0;
 }
 
-.c18 {
+.c21 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c27 {
+.c30 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c22 {
+.c25 {
   width: calc(100% - 0.125rem);
 }
 
-.c10 {
+.c13 {
   margin-bottom: 0 !important;
 }
 
@@ -2159,31 +2239,35 @@ Array [
                     Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                      
                     <a
-                        href="https://docs.joyent.com/private-cloud/install/cns"
-                        rel="noopener noreferrer"
-                        target="__blank"
+                        className="c7 c8 c9"
                     >
-                        Read the docs
+                        <a
+                            rel="noopener noreferrer"
+                            target="__blank"
+                            to="https://docs.joyent.com/private-cloud/install/cns"
+                        >
+                            Read the docs
+                        </a>
                     </a>
                 </p>
             </div>
         </div>
     </div>
     <div
-        className="c7"
+        className="c10"
     >
         <div
-            className="c8"
+            className="c11"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <form
-                    className="c10"
+                    className="c13"
                     onChange={[Function]}
                 >
                     <div
-                        className="c11"
+                        className="c14"
                         id="fw-toggle-firewall"
                         name="enabled"
                         role="group"
@@ -2191,11 +2275,11 @@ Array [
                         type="checkbox"
                     >
                         <li
-                            className="c12"
+                            className="c15"
                         >
                             <div
                                 checked={false}
-                                className="c13"
+                                className="c16"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
@@ -2203,30 +2287,30 @@ Array [
                             >
                                 <input
                                     checked={false}
-                                    className="c14 c15"
+                                    className="c17 c18"
                                     disabled={false}
                                     id="r"
                                     onBlur={undefined}
                                     type="checkbox"
                                 />
                                 <label
-                                    className="c16"
+                                    className="c19"
                                     htmlFor="r"
                                 />
                             </div>
                             <div
                                 checked={false}
-                                className="c17"
+                                className="c20"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
                             >
                                 <label
-                                    className="c18 c19"
+                                    className="c21 c22"
                                     htmlFor="r"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         Enable Firewall
                                     </div>
@@ -2238,25 +2322,25 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c11"
         />
     </div>
     <div
-        className="c21"
+        className="c24"
     >
         <div
-            className="c22 c23"
+            className="c25 c26"
             disabled={false}
             name="card"
         >
             <div
-                className="c24"
+                className="c27"
             >
                 <div
-                    className="c25"
+                    className="c28"
                 >
                     <div
-                        className="c26"
+                        className="c29"
                     >
                         <svg
                             height={109}
@@ -2545,7 +2629,7 @@ Array [
                         </svg>
                     </div>
                     <h3
-                        className="c27 c28"
+                        className="c30 c31"
                     >
                         Sorry, but we weren’t able to find any firewall rules.
                     </h3>
@@ -2558,28 +2642,28 @@ Array [
   margin-bottom: 1.125rem;
 }
 
-.c9 {
+.c12 {
   margin-right: 1.875rem;
 }
 
-.c20 {
+.c23 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c21 {
+.c24 {
   margin-top: 1.875rem;
 }
 
-.c26 {
+.c29 {
   margin-bottom: 0.75rem;
 }
 
-.c24 {
+.c27 {
   padding: 8rem;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2599,7 +2683,7 @@ Array [
   align-content: stretch;
 }
 
-.c25 {
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2630,7 +2714,7 @@ Array [
   align-items: center;
 }
 
-.c8 {
+.c11 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -2647,7 +2731,13 @@ Array [
   display: block;
 }
 
-.c15 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2655,36 +2745,54 @@ Array [
   overflow: visible;
 }
 
-.c15[type='checkbox'],
-.c15[type='radio'] {
+.c18[type='checkbox'],
+.c18[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c15[type='number']::-webkit-inner-spin-button,
-.c15[type='number']::-webkit-outer-spin-button {
+.c18[type='number']::-webkit-inner-spin-button,
+.c18[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c15[type='search'] {
+.c18[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c15[type='search']::-webkit-search-cancel-button,
-.c15[type='search']::-webkit-search-decoration {
+.c18[type='search']::-webkit-search-cancel-button,
+.c18[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c15::-webkit-file-upload-button {
+.c18::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -2694,7 +2802,7 @@ Array [
   font-size: 0.9375rem;
 }
 
-.c19 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -2745,7 +2853,7 @@ Array [
   padding-bottom: 1.125rem;
 }
 
-.c28 {
+.c31 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -2753,7 +2861,7 @@ Array [
   font-size: 1.3125rem;
 }
 
-.c23 {
+.c26 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2775,33 +2883,33 @@ Array [
   border-color: rgb(216,216,216);
 }
 
-.c14 {
+.c17 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c14:checked + label::after {
+.c17:checked + label::after {
   opacity: 1;
 }
 
-.c14:selected + label::after {
+.c17:selected + label::after {
   opacity: 1;
 }
 
-.c14:checked + label {
+.c17:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:selected + label {
+.c17:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:disabled + label {
+.c17:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c16 {
+.c19 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -2819,7 +2927,7 @@ Array [
   height: 1.125rem;
 }
 
-.c16::after {
+.c19::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -2836,7 +2944,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c13 {
+.c16 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -2845,12 +2953,12 @@ Array [
   cursor: pointer;
 }
 
-.c17 label {
+.c20 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c12 {
+.c15 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2874,25 +2982,25 @@ Array [
   height: 1.5rem;
 }
 
-.c12 label {
+.c15 label {
   font-weight: 400;
 }
 
-.c12 label::after {
+.c15 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c12 div[type='checkbox'],
-.c12 div[type='checkbox'] input,
-.c12 div[type='checkbox'] label {
+.c15 div[type='checkbox'],
+.c15 div[type='checkbox'] input,
+.c15 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c11 {
+.c14 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -2904,23 +3012,23 @@ Array [
   -webkit-padding-after: 0;
 }
 
-.c18 {
+.c21 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c27 {
+.c30 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c22 {
+.c25 {
   width: calc(100% - 0.125rem);
 }
 
-.c10 {
+.c13 {
   margin-bottom: 0 !important;
 }
 
@@ -2989,31 +3097,35 @@ Array [
                     Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                      
                     <a
-                        href="https://docs.joyent.com/private-cloud/install/cns"
-                        rel="noopener noreferrer"
-                        target="__blank"
+                        className="c7 c8 c9"
                     >
-                        Read the docs
+                        <a
+                            rel="noopener noreferrer"
+                            target="__blank"
+                            to="https://docs.joyent.com/private-cloud/install/cns"
+                        >
+                            Read the docs
+                        </a>
                     </a>
                 </p>
             </div>
         </div>
     </div>
     <div
-        className="c7"
+        className="c10"
     >
         <div
-            className="c8"
+            className="c11"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <form
-                    className="c10"
+                    className="c13"
                     onChange={[Function]}
                 >
                     <div
-                        className="c11"
+                        className="c14"
                         id="fw-toggle-firewall"
                         name="enabled"
                         role="group"
@@ -3021,11 +3133,11 @@ Array [
                         type="checkbox"
                     >
                         <li
-                            className="c12"
+                            className="c15"
                         >
                             <div
                                 checked={false}
-                                className="c13"
+                                className="c16"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
@@ -3033,30 +3145,30 @@ Array [
                             >
                                 <input
                                     checked={false}
-                                    className="c14 c15"
+                                    className="c17 c18"
                                     disabled={false}
                                     id="t"
                                     onBlur={undefined}
                                     type="checkbox"
                                 />
                                 <label
-                                    className="c16"
+                                    className="c19"
                                     htmlFor="t"
                                 />
                             </div>
                             <div
                                 checked={false}
-                                className="c17"
+                                className="c20"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
                             >
                                 <label
-                                    className="c18 c19"
+                                    className="c21 c22"
                                     htmlFor="t"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         Enable Firewall
                                     </div>
@@ -3068,13 +3180,13 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c11"
         >
             <form
-                className="c10"
+                className="c13"
             >
                 <div
-                    className="c11"
+                    className="c14"
                     id="fw-toggle-inactive"
                     name="inactive"
                     role="group"
@@ -3082,11 +3194,11 @@ Array [
                     type="checkbox"
                 >
                     <li
-                        className="c12"
+                        className="c15"
                     >
                         <div
                             checked={false}
-                            className="c13"
+                            className="c16"
                             disabled={false}
                             id="fw-toggle-inactive"
                             onBlur={undefined}
@@ -3094,30 +3206,30 @@ Array [
                         >
                             <input
                                 checked={false}
-                                className="c14 c15"
+                                className="c17 c18"
                                 disabled={false}
                                 id="v"
                                 onBlur={undefined}
                                 type="checkbox"
                             />
                             <label
-                                className="c16"
+                                className="c19"
                                 htmlFor="v"
                             />
                         </div>
                         <div
                             checked={false}
-                            className="c17"
+                            className="c20"
                             disabled={false}
                             id="fw-toggle-inactive"
                             onBlur={undefined}
                         >
                             <label
-                                className="c18 c19"
+                                className="c21 c22"
                                 htmlFor="v"
                             >
                                 <div
-                                    className="c20"
+                                    className="c23"
                                 >
                                     Show inactive rules
                                 </div>
@@ -3129,21 +3241,21 @@ Array [
         </div>
     </div>
     <div
-        className="c21"
+        className="c24"
     >
         <div
-            className="c22 c23"
+            className="c25 c26"
             disabled={false}
             name="card"
         >
             <div
-                className="c24"
+                className="c27"
             >
                 <div
-                    className="c25"
+                    className="c28"
                 >
                     <div
-                        className="c26"
+                        className="c29"
                     >
                         <svg
                             height={109}
@@ -3432,7 +3544,7 @@ Array [
                         </svg>
                     </div>
                     <h3
-                        className="c27 c28"
+                        className="c30 c31"
                     >
                         Sorry, but we weren’t able to find any firewall rules.
                     </h3>
@@ -3450,7 +3562,7 @@ Array [
   margin-bottom: 1.125rem;
 }
 
-.c12 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3470,7 +3582,7 @@ Array [
   align-content: stretch;
 }
 
-.c13 {
+.c16 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3487,19 +3599,43 @@ Array [
   display: block;
 }
 
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
 .c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
+}
+
+.c11 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c9 {
+.c12 {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
-.c10 {
+.c13 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
@@ -3511,7 +3647,7 @@ Array [
   font-size: 0.9375rem;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3539,7 +3675,7 @@ Array [
   flex: 1 0 auto;
 }
 
-.c11 {
+.c14 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -3655,39 +3791,43 @@ Array [
                     Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                      
                     <a
-                        href="https://docs.joyent.com/private-cloud/install/cns"
-                        rel="noopener noreferrer"
-                        target="__blank"
+                        className="c7 c8 c9"
                     >
-                        Read the docs
+                        <a
+                            rel="noopener noreferrer"
+                            target="__blank"
+                            to="https://docs.joyent.com/private-cloud/install/cns"
+                        >
+                            Read the docs
+                        </a>
                     </a>
                 </p>
             </div>
         </div>
     </div>
     <div
-        className="c7"
+        className="c10"
     >
         <svg
             height="10"
             width="28"
         >
             <rect
-                className="c8"
+                className="c11"
                 height="6"
                 width="6"
                 x="2"
                 y="2"
             />
             <rect
-                className="c9 c8"
+                className="c12 c11"
                 height="6"
                 width="6"
                 x="11"
                 y="2"
             />
             <rect
-                className="c10 c8"
+                className="c13 c11"
                 height="6"
                 width="6"
                 x="20"
@@ -3695,19 +3835,19 @@ Array [
             />
         </svg>
         <p
-            className="c11 c6"
+            className="c14 c6"
         >
             Loading...
         </p>
     </div>
     <div
-        className="c12"
+        className="c15"
     >
         <div
-            className="c13"
+            className="c16"
         />
         <div
-            className="c13"
+            className="c16"
         />
     </div>
 </div>,
@@ -3715,7 +3855,7 @@ Array [
   margin-bottom: 1.125rem;
 }
 
-.c12 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3735,7 +3875,7 @@ Array [
   align-content: stretch;
 }
 
-.c13 {
+.c16 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3752,19 +3892,43 @@ Array [
   display: block;
 }
 
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
 .c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
+}
+
+.c11 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c9 {
+.c12 {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
-.c10 {
+.c13 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
@@ -3776,7 +3940,7 @@ Array [
   font-size: 0.9375rem;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3804,7 +3968,7 @@ Array [
   flex: 1 0 auto;
 }
 
-.c11 {
+.c14 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -3920,39 +4084,43 @@ Array [
                     Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                      
                     <a
-                        href="https://docs.joyent.com/private-cloud/install/cns"
-                        rel="noopener noreferrer"
-                        target="__blank"
+                        className="c7 c8 c9"
                     >
-                        Read the docs
+                        <a
+                            rel="noopener noreferrer"
+                            target="__blank"
+                            to="https://docs.joyent.com/private-cloud/install/cns"
+                        >
+                            Read the docs
+                        </a>
                     </a>
                 </p>
             </div>
         </div>
     </div>
     <div
-        className="c7"
+        className="c10"
     >
         <svg
             height="10"
             width="28"
         >
             <rect
-                className="c8"
+                className="c11"
                 height="6"
                 width="6"
                 x="2"
                 y="2"
             />
             <rect
-                className="c9 c8"
+                className="c12 c11"
                 height="6"
                 width="6"
                 x="11"
                 y="2"
             />
             <rect
-                className="c10 c8"
+                className="c13 c11"
                 height="6"
                 width="6"
                 x="20"
@@ -3960,19 +4128,19 @@ Array [
             />
         </svg>
         <p
-            className="c11 c6"
+            className="c14 c6"
         >
             Loading...
         </p>
     </div>
     <div
-        className="c12"
+        className="c15"
     >
         <div
-            className="c13"
+            className="c16"
         />
         <div
-            className="c13"
+            className="c16"
         />
     </div>
 </div>,
@@ -3984,32 +4152,32 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c15 {
+.c18 {
   margin-right: 1.875rem;
 }
 
-.c26 {
+.c29 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c27 {
+.c30 {
   margin-top: 1.875rem;
 }
 
-.c32 {
+.c35 {
   margin-bottom: 0.75rem;
 }
 
-.c7 {
+.c10 {
   margin-bottom: 1.875rem;
 }
 
-.c30 {
+.c33 {
   padding: 8rem;
 }
 
-.c13 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4029,7 +4197,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c31 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4060,7 +4228,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c14 {
+.c17 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4077,7 +4245,13 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   display: block;
 }
 
-.c21 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c24 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -4085,36 +4259,54 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   overflow: visible;
 }
 
-.c21[type='checkbox'],
-.c21[type='radio'] {
+.c24[type='checkbox'],
+.c24[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c21[type='number']::-webkit-inner-spin-button,
-.c21[type='number']::-webkit-outer-spin-button {
+.c24[type='number']::-webkit-inner-spin-button,
+.c24[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c21[type='search'] {
+.c24[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c21[type='search']::-webkit-search-cancel-button,
-.c21[type='search']::-webkit-search-decoration {
+.c24[type='search']::-webkit-search-cancel-button,
+.c24[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c21::-webkit-file-upload-button {
+.c24::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -4124,7 +4316,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c25 {
+.c28 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -4175,7 +4367,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c34 {
+.c37 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -4183,7 +4375,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   font-size: 1.3125rem;
 }
 
-.c11 {
+.c14 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -4191,7 +4383,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c8 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4204,23 +4396,23 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   width: 100%;
 }
 
-.c9 {
+.c12 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   min-width: 0.75rem;
   background-color: rgb(0,152,88);
   background-color: rgb(210,67,58);
 }
 
-.c10 {
+.c13 {
   padding: 1.125rem 1.125rem;
 }
 
-.c12 {
+.c15 {
   line-height: 0.875rem;
   font-size: 0.8125rem;
 }
 
-.c29 {
+.c32 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4242,33 +4434,33 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c20 {
+.c23 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c20:checked + label::after {
+.c23:checked + label::after {
   opacity: 1;
 }
 
-.c20:selected + label::after {
+.c23:selected + label::after {
   opacity: 1;
 }
 
-.c20:checked + label {
+.c23:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c20:selected + label {
+.c23:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c20:disabled + label {
+.c23:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c22 {
+.c25 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -4286,7 +4478,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c22::after {
+.c25::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -4303,7 +4495,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c19 {
+.c22 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -4312,12 +4504,12 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c23 label {
+.c26 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c18 {
+.c21 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4341,25 +4533,25 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   height: 1.5rem;
 }
 
-.c18 label {
+.c21 label {
   font-weight: 400;
 }
 
-.c18 label::after {
+.c21 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c18 div[type='checkbox'],
-.c18 div[type='checkbox'] input,
-.c18 div[type='checkbox'] label {
+.c21 div[type='checkbox'],
+.c21 div[type='checkbox'] input,
+.c21 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c17 {
+.c20 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -4371,23 +4563,23 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c24 {
+.c27 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c33 {
+.c36 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c28 {
+.c31 {
   width: calc(100% - 0.125rem);
 }
 
-.c16 {
+.c19 {
   margin-bottom: 0 !important;
 }
 
@@ -4456,35 +4648,39 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
           Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
            
           <a
-            href="https://docs.joyent.com/private-cloud/install/cns"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/private-cloud/install/cns"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
     </div>
   </div>
   <div
-    className="c7"
+    className="c10"
   >
     <div
-      className="c8"
+      className="c11"
     >
       <div
-        className="c9"
+        className="c12"
       />
       <div
-        className="c10"
+        className="c13"
       >
         <h4
-          className="c11"
+          className="c14"
         >
           Ooops!
         </h4>
         <p
-          className="c12 c6"
+          className="c15 c6"
         >
           An error occurred while loading your firewall rules
         </p>
@@ -4492,20 +4688,20 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c13"
+    className="c16"
   >
     <div
-      className="c14"
+      className="c17"
     >
       <div
-        className="c15"
+        className="c18"
       >
         <form
-          className="c16"
+          className="c19"
           onChange={[Function]}
         >
           <div
-            className="c17"
+            className="c20"
             id="fw-toggle-firewall"
             name="enabled"
             role="group"
@@ -4513,11 +4709,11 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
             type="checkbox"
           >
             <li
-              className="c18"
+              className="c21"
             >
               <div
                 checked={false}
-                className="c19"
+                className="c22"
                 disabled={false}
                 id="fw-toggle-firewall"
                 onBlur={undefined}
@@ -4525,30 +4721,30 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
               >
                 <input
                   checked={false}
-                  className="c20 c21"
+                  className="c23 c24"
                   disabled={false}
                   id="x"
                   onBlur={undefined}
                   type="checkbox"
                 />
                 <label
-                  className="c22"
+                  className="c25"
                   htmlFor="x"
                 />
               </div>
               <div
                 checked={false}
-                className="c23"
+                className="c26"
                 disabled={false}
                 id="fw-toggle-firewall"
                 onBlur={undefined}
               >
                 <label
-                  className="c24 c25"
+                  className="c27 c28"
                   htmlFor="x"
                 >
                   <div
-                    className="c26"
+                    className="c29"
                   >
                     Enable Firewall
                   </div>
@@ -4560,25 +4756,25 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c14"
+      className="c17"
     />
   </div>
   <div
-    className="c27"
+    className="c30"
   >
     <div
-      className="c28 c29"
+      className="c31 c32"
       disabled={false}
       name="card"
     >
       <div
-        className="c30"
+        className="c33"
       >
         <div
-          className="c31"
+          className="c34"
         >
           <div
-            className="c32"
+            className="c35"
           >
             <svg
               height={109}
@@ -4867,7 +5063,7 @@ exports[`renders <Firewall loadingError /> without throwing 1`] = `
             </svg>
           </div>
           <h3
-            className="c33 c34"
+            className="c36 c37"
           >
             Sorry, but we weren’t able to find any firewall rules.
           </h3>
@@ -4883,32 +5079,32 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c15 {
+.c18 {
   margin-right: 1.875rem;
 }
 
-.c26 {
+.c29 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c27 {
+.c30 {
   margin-top: 1.875rem;
 }
 
-.c32 {
+.c35 {
   margin-bottom: 0.75rem;
 }
 
-.c7 {
+.c10 {
   margin-bottom: 1.875rem;
 }
 
-.c30 {
+.c33 {
   padding: 8rem;
 }
 
-.c13 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4928,7 +5124,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c31 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4959,7 +5155,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c14 {
+.c17 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4976,7 +5172,13 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   display: block;
 }
 
-.c21 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c24 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -4984,36 +5186,54 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   overflow: visible;
 }
 
-.c21[type='checkbox'],
-.c21[type='radio'] {
+.c24[type='checkbox'],
+.c24[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c21[type='number']::-webkit-inner-spin-button,
-.c21[type='number']::-webkit-outer-spin-button {
+.c24[type='number']::-webkit-inner-spin-button,
+.c24[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c21[type='search'] {
+.c24[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c21[type='search']::-webkit-search-cancel-button,
-.c21[type='search']::-webkit-search-decoration {
+.c24[type='search']::-webkit-search-cancel-button,
+.c24[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c21::-webkit-file-upload-button {
+.c24::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -5023,7 +5243,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c25 {
+.c28 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -5074,7 +5294,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c34 {
+.c37 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -5082,7 +5302,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   font-size: 1.3125rem;
 }
 
-.c11 {
+.c14 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -5090,7 +5310,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c8 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5103,23 +5323,23 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   width: 100%;
 }
 
-.c9 {
+.c12 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   min-width: 0.75rem;
   background-color: rgb(0,152,88);
   background-color: rgb(210,67,58);
 }
 
-.c10 {
+.c13 {
   padding: 1.125rem 1.125rem;
 }
 
-.c12 {
+.c15 {
   line-height: 0.875rem;
   font-size: 0.8125rem;
 }
 
-.c29 {
+.c32 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5141,33 +5361,33 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c20 {
+.c23 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c20:checked + label::after {
+.c23:checked + label::after {
   opacity: 1;
 }
 
-.c20:selected + label::after {
+.c23:selected + label::after {
   opacity: 1;
 }
 
-.c20:checked + label {
+.c23:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c20:selected + label {
+.c23:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c20:disabled + label {
+.c23:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c22 {
+.c25 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -5185,7 +5405,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c22::after {
+.c25::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -5202,7 +5422,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c19 {
+.c22 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -5211,12 +5431,12 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c23 label {
+.c26 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c18 {
+.c21 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5240,25 +5460,25 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   height: 1.5rem;
 }
 
-.c18 label {
+.c21 label {
   font-weight: 400;
 }
 
-.c18 label::after {
+.c21 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c18 div[type='checkbox'],
-.c18 div[type='checkbox'] input,
-.c18 div[type='checkbox'] label {
+.c21 div[type='checkbox'],
+.c21 div[type='checkbox'] input,
+.c21 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c17 {
+.c20 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -5270,23 +5490,23 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c24 {
+.c27 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c33 {
+.c36 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c28 {
+.c31 {
   width: calc(100% - 0.125rem);
 }
 
-.c16 {
+.c19 {
   margin-bottom: 0 !important;
 }
 
@@ -5355,35 +5575,39 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
           Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
            
           <a
-            href="https://docs.joyent.com/private-cloud/install/cns"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/private-cloud/install/cns"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
     </div>
   </div>
   <div
-    className="c7"
+    className="c10"
   >
     <div
-      className="c8"
+      className="c11"
     >
       <div
-        className="c9"
+        className="c12"
       />
       <div
-        className="c10"
+        className="c13"
       >
         <h4
-          className="c11"
+          className="c14"
         >
           Ooops!
         </h4>
         <p
-          className="c12 c6"
+          className="c15 c6"
         >
           error
         </p>
@@ -5391,20 +5615,20 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
     </div>
   </div>
   <div
-    className="c13"
+    className="c16"
   >
     <div
-      className="c14"
+      className="c17"
     >
       <div
-        className="c15"
+        className="c18"
       >
         <form
-          className="c16"
+          className="c19"
           onChange={[Function]}
         >
           <div
-            className="c17"
+            className="c20"
             id="fw-toggle-firewall"
             name="enabled"
             role="group"
@@ -5412,11 +5636,11 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
             type="checkbox"
           >
             <li
-              className="c18"
+              className="c21"
             >
               <div
                 checked={false}
-                className="c19"
+                className="c22"
                 disabled={false}
                 id="fw-toggle-firewall"
                 onBlur={undefined}
@@ -5424,30 +5648,30 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
               >
                 <input
                   checked={false}
-                  className="c20 c21"
+                  className="c23 c24"
                   disabled={false}
                   id="z"
                   onBlur={undefined}
                   type="checkbox"
                 />
                 <label
-                  className="c22"
+                  className="c25"
                   htmlFor="z"
                 />
               </div>
               <div
                 checked={false}
-                className="c23"
+                className="c26"
                 disabled={false}
                 id="fw-toggle-firewall"
                 onBlur={undefined}
               >
                 <label
-                  className="c24 c25"
+                  className="c27 c28"
                   htmlFor="z"
                 >
                   <div
-                    className="c26"
+                    className="c29"
                   >
                     Enable Firewall
                   </div>
@@ -5459,25 +5683,25 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
       </div>
     </div>
     <div
-      className="c14"
+      className="c17"
     />
   </div>
   <div
-    className="c27"
+    className="c30"
   >
     <div
-      className="c28 c29"
+      className="c31 c32"
       disabled={false}
       name="card"
     >
       <div
-        className="c30"
+        className="c33"
       >
         <div
-          className="c31"
+          className="c34"
         >
           <div
-            className="c32"
+            className="c35"
           >
             <svg
               height={109}
@@ -5766,7 +5990,7 @@ exports[`renders <Firewall mutationError /> without throwing 1`] = `
             </svg>
           </div>
           <h3
-            className="c33 c34"
+            className="c36 c37"
           >
             Sorry, but we weren’t able to find any firewall rules.
           </h3>
@@ -5783,16 +6007,16 @@ Array [
   margin-bottom: 1.125rem;
 }
 
-.c9 {
+.c12 {
   margin-right: 1.875rem;
 }
 
-.c20 {
+.c23 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5812,7 +6036,7 @@ Array [
   align-content: stretch;
 }
 
-.c8 {
+.c11 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -5829,7 +6053,13 @@ Array [
   display: block;
 }
 
-.c15 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -5837,36 +6067,54 @@ Array [
   overflow: visible;
 }
 
-.c15[type='checkbox'],
-.c15[type='radio'] {
+.c18[type='checkbox'],
+.c18[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c15[type='number']::-webkit-inner-spin-button,
-.c15[type='number']::-webkit-outer-spin-button {
+.c18[type='number']::-webkit-inner-spin-button,
+.c18[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c15[type='search'] {
+.c18[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c15[type='search']::-webkit-search-cancel-button,
-.c15[type='search']::-webkit-search-decoration {
+.c18[type='search']::-webkit-search-cancel-button,
+.c18[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c15::-webkit-file-upload-button {
+.c18::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -5876,7 +6124,7 @@ Array [
   font-size: 0.9375rem;
 }
 
-.c19 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -5927,33 +6175,33 @@ Array [
   padding-bottom: 1.125rem;
 }
 
-.c14 {
+.c17 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c14:checked + label::after {
+.c17:checked + label::after {
   opacity: 1;
 }
 
-.c14:selected + label::after {
+.c17:selected + label::after {
   opacity: 1;
 }
 
-.c14:checked + label {
+.c17:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:selected + label {
+.c17:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:disabled + label {
+.c17:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c16 {
+.c19 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -5971,7 +6219,7 @@ Array [
   height: 1.125rem;
 }
 
-.c16::after {
+.c19::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -5988,7 +6236,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c13 {
+.c16 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -5997,12 +6245,12 @@ Array [
   cursor: pointer;
 }
 
-.c17 label {
+.c20 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c12 {
+.c15 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6026,25 +6274,25 @@ Array [
   height: 1.5rem;
 }
 
-.c12 label {
+.c15 label {
   font-weight: 400;
 }
 
-.c12 label::after {
+.c15 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c12 div[type='checkbox'],
-.c12 div[type='checkbox'] input,
-.c12 div[type='checkbox'] label {
+.c15 div[type='checkbox'],
+.c15 div[type='checkbox'] input,
+.c15 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c11 {
+.c14 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -6056,14 +6304,14 @@ Array [
   -webkit-padding-after: 0;
 }
 
-.c18 {
+.c21 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c10 {
+.c13 {
   margin-bottom: 0 !important;
 }
 
@@ -6132,31 +6380,35 @@ Array [
                     Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                      
                     <a
-                        href="https://docs.joyent.com/private-cloud/install/cns"
-                        rel="noopener noreferrer"
-                        target="__blank"
+                        className="c7 c8 c9"
                     >
-                        Read the docs
+                        <a
+                            rel="noopener noreferrer"
+                            target="__blank"
+                            to="https://docs.joyent.com/private-cloud/install/cns"
+                        >
+                            Read the docs
+                        </a>
                     </a>
                 </p>
             </div>
         </div>
     </div>
     <div
-        className="c7"
+        className="c10"
     >
         <div
-            className="c8"
+            className="c11"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <form
-                    className="c10"
+                    className="c13"
                     onChange={[Function]}
                 >
                     <div
-                        className="c11"
+                        className="c14"
                         id="fw-toggle-firewall"
                         name="enabled"
                         role="group"
@@ -6164,11 +6416,11 @@ Array [
                         type="checkbox"
                     >
                         <li
-                            className="c12"
+                            className="c15"
                         >
                             <div
                                 checked={false}
-                                className="c13"
+                                className="c16"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
@@ -6176,30 +6428,30 @@ Array [
                             >
                                 <input
                                     checked={false}
-                                    className="c14 c15"
+                                    className="c17 c18"
                                     disabled={false}
                                     id="B"
                                     onBlur={undefined}
                                     type="checkbox"
                                 />
                                 <label
-                                    className="c16"
+                                    className="c19"
                                     htmlFor="B"
                                 />
                             </div>
                             <div
                                 checked={false}
-                                className="c17"
+                                className="c20"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
                             >
                                 <label
-                                    className="c18 c19"
+                                    className="c21 c22"
                                     htmlFor="B"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         Enable Firewall
                                     </div>
@@ -6211,7 +6463,7 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c11"
         />
     </div>
 </div>,
@@ -6219,16 +6471,16 @@ Array [
   margin-bottom: 1.125rem;
 }
 
-.c9 {
+.c12 {
   margin-right: 1.875rem;
 }
 
-.c20 {
+.c23 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6248,7 +6500,7 @@ Array [
   align-content: stretch;
 }
 
-.c8 {
+.c11 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -6265,7 +6517,13 @@ Array [
   display: block;
 }
 
-.c15 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -6273,36 +6531,54 @@ Array [
   overflow: visible;
 }
 
-.c15[type='checkbox'],
-.c15[type='radio'] {
+.c18[type='checkbox'],
+.c18[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c15[type='number']::-webkit-inner-spin-button,
-.c15[type='number']::-webkit-outer-spin-button {
+.c18[type='number']::-webkit-inner-spin-button,
+.c18[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c15[type='search'] {
+.c18[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c15[type='search']::-webkit-search-cancel-button,
-.c15[type='search']::-webkit-search-decoration {
+.c18[type='search']::-webkit-search-cancel-button,
+.c18[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c15::-webkit-file-upload-button {
+.c18::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -6312,7 +6588,7 @@ Array [
   font-size: 0.9375rem;
 }
 
-.c19 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -6363,33 +6639,33 @@ Array [
   padding-bottom: 1.125rem;
 }
 
-.c14 {
+.c17 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c14:checked + label::after {
+.c17:checked + label::after {
   opacity: 1;
 }
 
-.c14:selected + label::after {
+.c17:selected + label::after {
   opacity: 1;
 }
 
-.c14:checked + label {
+.c17:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:selected + label {
+.c17:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:disabled + label {
+.c17:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c16 {
+.c19 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -6407,7 +6683,7 @@ Array [
   height: 1.125rem;
 }
 
-.c16::after {
+.c19::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -6424,7 +6700,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c13 {
+.c16 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -6433,12 +6709,12 @@ Array [
   cursor: pointer;
 }
 
-.c17 label {
+.c20 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c12 {
+.c15 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6462,25 +6738,25 @@ Array [
   height: 1.5rem;
 }
 
-.c12 label {
+.c15 label {
   font-weight: 400;
 }
 
-.c12 label::after {
+.c15 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c12 div[type='checkbox'],
-.c12 div[type='checkbox'] input,
-.c12 div[type='checkbox'] label {
+.c15 div[type='checkbox'],
+.c15 div[type='checkbox'] input,
+.c15 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c11 {
+.c14 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -6492,14 +6768,14 @@ Array [
   -webkit-padding-after: 0;
 }
 
-.c18 {
+.c21 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c10 {
+.c13 {
   margin-bottom: 0 !important;
 }
 
@@ -6568,31 +6844,35 @@ Array [
                     Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                      
                     <a
-                        href="https://docs.joyent.com/private-cloud/install/cns"
-                        rel="noopener noreferrer"
-                        target="__blank"
+                        className="c7 c8 c9"
                     >
-                        Read the docs
+                        <a
+                            rel="noopener noreferrer"
+                            target="__blank"
+                            to="https://docs.joyent.com/private-cloud/install/cns"
+                        >
+                            Read the docs
+                        </a>
                     </a>
                 </p>
             </div>
         </div>
     </div>
     <div
-        className="c7"
+        className="c10"
     >
         <div
-            className="c8"
+            className="c11"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <form
-                    className="c10"
+                    className="c13"
                     onChange={[Function]}
                 >
                     <div
-                        className="c11"
+                        className="c14"
                         id="fw-toggle-firewall"
                         name="enabled"
                         role="group"
@@ -6600,11 +6880,11 @@ Array [
                         type="checkbox"
                     >
                         <li
-                            className="c12"
+                            className="c15"
                         >
                             <div
                                 checked={false}
-                                className="c13"
+                                className="c16"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
@@ -6612,30 +6892,30 @@ Array [
                             >
                                 <input
                                     checked={false}
-                                    className="c14 c15"
+                                    className="c17 c18"
                                     disabled={false}
                                     id="D"
                                     onBlur={undefined}
                                     type="checkbox"
                                 />
                                 <label
-                                    className="c16"
+                                    className="c19"
                                     htmlFor="D"
                                 />
                             </div>
                             <div
                                 checked={false}
-                                className="c17"
+                                className="c20"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
                             >
                                 <label
-                                    className="c18 c19"
+                                    className="c21 c22"
                                     htmlFor="D"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         Enable Firewall
                                     </div>
@@ -6647,7 +6927,7 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c11"
         />
     </div>
 </div>,
@@ -6655,43 +6935,43 @@ Array [
   margin-bottom: 1.125rem;
 }
 
-.c9 {
+.c12 {
   margin-right: 1.875rem;
 }
 
-.c20 {
+.c23 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c21 {
+.c24 {
   margin-top: 1.875rem;
 }
 
-.c23 {
+.c26 {
   margin-top: 1.125rem;
 }
 
-.c24 {
+.c27 {
   margin-bottom: 0rem;
 }
 
-.c29 {
+.c32 {
   margin-right: 0.1875rem;
 }
 
-.c32 {
+.c35 {
   margin-left: 0.1875rem;
 }
 
-.c26 {
+.c29 {
   padding-top: 0.75rem;
   padding-right: 1.125rem;
   padding-bottom: 0.75rem;
   padding-left: 1.125rem;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6709,37 +6989,6 @@ Array [
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
-}
-
-.c28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .c31 {
@@ -6760,13 +7009,44 @@ Array [
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.c8 {
+.c34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -6783,7 +7063,13 @@ Array [
   display: block;
 }
 
-.c15 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -6791,36 +7077,54 @@ Array [
   overflow: visible;
 }
 
-.c15[type='checkbox'],
-.c15[type='radio'] {
+.c18[type='checkbox'],
+.c18[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c15[type='number']::-webkit-inner-spin-button,
-.c15[type='number']::-webkit-outer-spin-button {
+.c18[type='number']::-webkit-inner-spin-button,
+.c18[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c15[type='search'] {
+.c18[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c15[type='search']::-webkit-search-cancel-button,
-.c15[type='search']::-webkit-search-decoration {
+.c18[type='search']::-webkit-search-cancel-button,
+.c18[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c15::-webkit-file-upload-button {
+.c18::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -6830,7 +7134,7 @@ Array [
   font-size: 0.9375rem;
 }
 
-.c19 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -6874,7 +7178,7 @@ Array [
   display: block;
 }
 
-.c27 {
+.c30 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6884,7 +7188,7 @@ Array [
   display: block;
 }
 
-.c35 {
+.c38 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6901,7 +7205,7 @@ Array [
   padding-bottom: 1.125rem;
 }
 
-.c22 {
+.c25 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -6909,14 +7213,14 @@ Array [
   font-size: 1.3125rem;
 }
 
-.c30 {
+.c33 {
   color: rgb(73,73,73);
   font-weight: 700;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
 
-.c25 {
+.c28 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6942,33 +7246,33 @@ Array [
   cursor: default;
 }
 
-.c14 {
+.c17 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c14:checked + label::after {
+.c17:checked + label::after {
   opacity: 1;
 }
 
-.c14:selected + label::after {
+.c17:selected + label::after {
   opacity: 1;
 }
 
-.c14:checked + label {
+.c17:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:selected + label {
+.c17:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:disabled + label {
+.c17:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c16 {
+.c19 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -6986,7 +7290,7 @@ Array [
   height: 1.125rem;
 }
 
-.c16::after {
+.c19::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -7003,7 +7307,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c13 {
+.c16 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -7012,12 +7316,12 @@ Array [
   cursor: pointer;
 }
 
-.c17 label {
+.c20 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c12 {
+.c15 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7041,25 +7345,25 @@ Array [
   height: 1.5rem;
 }
 
-.c12 label {
+.c15 label {
   font-weight: 400;
 }
 
-.c12 label::after {
+.c15 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c12 div[type='checkbox'],
-.c12 div[type='checkbox'] input,
-.c12 div[type='checkbox'] label {
+.c15 div[type='checkbox'],
+.c15 div[type='checkbox'] input,
+.c15 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c11 {
+.c14 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -7071,14 +7375,14 @@ Array [
   -webkit-padding-after: 0;
 }
 
-.c18 {
+.c21 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c34 {
+.c37 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -7099,7 +7403,7 @@ Array [
   align-items: center;
 }
 
-.c33 {
+.c36 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -7112,7 +7416,7 @@ Array [
   flex-wrap: wrap;
 }
 
-.c10 {
+.c13 {
   margin-bottom: 0 !important;
 }
 
@@ -7157,7 +7461,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c30 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
@@ -7166,7 +7470,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c35 {
+  .c38 {
     -webkit-flex-basis: 16.666666666666668%;
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
@@ -7199,31 +7503,35 @@ Array [
                     Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                      
                     <a
-                        href="https://docs.joyent.com/private-cloud/install/cns"
-                        rel="noopener noreferrer"
-                        target="__blank"
+                        className="c7 c8 c9"
                     >
-                        Read the docs
+                        <a
+                            rel="noopener noreferrer"
+                            target="__blank"
+                            to="https://docs.joyent.com/private-cloud/install/cns"
+                        >
+                            Read the docs
+                        </a>
                     </a>
                 </p>
             </div>
         </div>
     </div>
     <div
-        className="c7"
+        className="c10"
     >
         <div
-            className="c8"
+            className="c11"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <form
-                    className="c10"
+                    className="c13"
                     onChange={[Function]}
                 >
                     <div
-                        className="c11"
+                        className="c14"
                         id="fw-toggle-firewall"
                         name="enabled"
                         role="group"
@@ -7231,11 +7539,11 @@ Array [
                         type="checkbox"
                     >
                         <li
-                            className="c12"
+                            className="c15"
                         >
                             <div
                                 checked={false}
-                                className="c13"
+                                className="c16"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
@@ -7243,30 +7551,30 @@ Array [
                             >
                                 <input
                                     checked={false}
-                                    className="c14 c15"
+                                    className="c17 c18"
                                     disabled={false}
                                     id="F"
                                     onBlur={undefined}
                                     type="checkbox"
                                 />
                                 <label
-                                    className="c16"
+                                    className="c19"
                                     htmlFor="F"
                                 />
                             </div>
                             <div
                                 checked={false}
-                                className="c17"
+                                className="c20"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
                             >
                                 <label
-                                    className="c18 c19"
+                                    className="c21 c22"
                                     htmlFor="F"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         Enable Firewall
                                     </div>
@@ -7278,13 +7586,13 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c11"
         >
             <form
-                className="c10"
+                className="c13"
             >
                 <div
-                    className="c11"
+                    className="c14"
                     id="fw-toggle-inactive"
                     name="inactive"
                     role="group"
@@ -7292,11 +7600,11 @@ Array [
                     type="checkbox"
                 >
                     <li
-                        className="c12"
+                        className="c15"
                     >
                         <div
                             checked={false}
-                            className="c13"
+                            className="c16"
                             disabled={false}
                             id="fw-toggle-inactive"
                             onBlur={undefined}
@@ -7304,30 +7612,30 @@ Array [
                         >
                             <input
                                 checked={false}
-                                className="c14 c15"
+                                className="c17 c18"
                                 disabled={false}
                                 id="H"
                                 onBlur={undefined}
                                 type="checkbox"
                             />
                             <label
-                                className="c16"
+                                className="c19"
                                 htmlFor="H"
                             />
                         </div>
                         <div
                             checked={false}
-                            className="c17"
+                            className="c20"
                             disabled={false}
                             id="fw-toggle-inactive"
                             onBlur={undefined}
                         >
                             <label
-                                className="c18 c19"
+                                className="c21 c22"
                                 htmlFor="H"
                             >
                                 <div
-                                    className="c20"
+                                    className="c23"
                                 >
                                     Show inactive rules
                                 </div>
@@ -7339,44 +7647,44 @@ Array [
         </div>
     </div>
     <div
-        className="c21"
+        className="c24"
     >
         <h3
-            className="c22"
+            className="c25"
         >
             Firewall rules from instance tags
         </h3>
         <div
-            className="c23"
+            className="c26"
         >
             <div
-                className="c24"
+                className="c27"
             >
                 <div
-                    className="c25"
+                    className="c28"
                     disabled={true}
                     name="card"
                 >
                     <div
-                        className="c26"
+                        className="c29"
                     >
                         <div
                             className="c3"
                         >
                             <div
-                                className="c27"
+                                className="c30"
                             >
                                 <div
-                                    className="c28"
+                                    className="c31"
                                 >
                                     <div
-                                        className="c29"
+                                        className="c32"
                                     >
                                         <div
-                                            className="c8"
+                                            className="c11"
                                         >
                                             <strong
-                                                className="c30"
+                                                className="c33"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -7388,7 +7696,7 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c31"
+                                        className="c34"
                                     >
                                         <p
                                             className="c6"
@@ -7404,19 +7712,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c27"
+                                className="c30"
                             >
                                 <div
-                                    className="c28"
+                                    className="c31"
                                 >
                                     <div
-                                        className="c29"
+                                        className="c32"
                                     >
                                         <div
-                                            className="c8"
+                                            className="c11"
                                         >
                                             <strong
-                                                className="c30"
+                                                className="c33"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -7428,16 +7736,16 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c31"
+                                        className="c34"
                                     >
                                         <div
-                                            className="c32"
+                                            className="c35"
                                         >
                                             <ul
-                                                className="c33"
+                                                className="c36"
                                             >
                                                 <li
-                                                    className="c34"
+                                                    className="c37"
                                                     fill={null}
                                                     name="wat"
                                                     style={
@@ -7453,19 +7761,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c35"
+                                className="c38"
                             >
                                 <div
-                                    className="c28"
+                                    className="c31"
                                 >
                                     <div
-                                        className="c29"
+                                        className="c32"
                                     >
                                         <div
-                                            className="c8"
+                                            className="c11"
                                         >
                                             <strong
-                                                className="c30"
+                                                className="c33"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -7477,7 +7785,7 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c31"
+                                        className="c34"
                                     >
                                         <p
                                             className="c6"
@@ -7493,19 +7801,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c35"
+                                className="c38"
                             >
                                 <div
-                                    className="c28"
+                                    className="c31"
                                 >
                                     <div
-                                        className="c29"
+                                        className="c32"
                                     >
                                         <div
-                                            className="c8"
+                                            className="c11"
                                         >
                                             <strong
-                                                className="c30"
+                                                className="c33"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -7517,7 +7825,7 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c31"
+                                        className="c34"
                                     >
                                         <p
                                             className="c6"
@@ -7533,19 +7841,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c35"
+                                className="c38"
                             >
                                 <div
-                                    className="c28"
+                                    className="c31"
                                 >
                                     <div
-                                        className="c29"
+                                        className="c32"
                                     >
                                         <div
-                                            className="c8"
+                                            className="c11"
                                         >
                                             <strong
-                                                className="c30"
+                                                className="c33"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -7557,7 +7865,7 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c31"
+                                        className="c34"
                                     >
                                         <p
                                             className="c6"
@@ -7588,16 +7896,16 @@ Array [
   margin-bottom: 1.125rem;
 }
 
-.c9 {
+.c12 {
   margin-right: 1.875rem;
 }
 
-.c20 {
+.c23 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7617,7 +7925,7 @@ Array [
   align-content: stretch;
 }
 
-.c8 {
+.c11 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -7634,7 +7942,13 @@ Array [
   display: block;
 }
 
-.c15 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -7642,36 +7956,54 @@ Array [
   overflow: visible;
 }
 
-.c15[type='checkbox'],
-.c15[type='radio'] {
+.c18[type='checkbox'],
+.c18[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c15[type='number']::-webkit-inner-spin-button,
-.c15[type='number']::-webkit-outer-spin-button {
+.c18[type='number']::-webkit-inner-spin-button,
+.c18[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c15[type='search'] {
+.c18[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c15[type='search']::-webkit-search-cancel-button,
-.c15[type='search']::-webkit-search-decoration {
+.c18[type='search']::-webkit-search-cancel-button,
+.c18[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c15::-webkit-file-upload-button {
+.c18::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -7681,7 +8013,7 @@ Array [
   font-size: 0.9375rem;
 }
 
-.c19 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -7732,33 +8064,33 @@ Array [
   padding-bottom: 1.125rem;
 }
 
-.c14 {
+.c17 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c14:checked + label::after {
+.c17:checked + label::after {
   opacity: 1;
 }
 
-.c14:selected + label::after {
+.c17:selected + label::after {
   opacity: 1;
 }
 
-.c14:checked + label {
+.c17:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:selected + label {
+.c17:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:disabled + label {
+.c17:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c16 {
+.c19 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -7776,7 +8108,7 @@ Array [
   height: 1.125rem;
 }
 
-.c16::after {
+.c19::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -7793,7 +8125,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c13 {
+.c16 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -7802,12 +8134,12 @@ Array [
   cursor: pointer;
 }
 
-.c17 label {
+.c20 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c12 {
+.c15 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7831,25 +8163,25 @@ Array [
   height: 1.5rem;
 }
 
-.c12 label {
+.c15 label {
   font-weight: 400;
 }
 
-.c12 label::after {
+.c15 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c12 div[type='checkbox'],
-.c12 div[type='checkbox'] input,
-.c12 div[type='checkbox'] label {
+.c15 div[type='checkbox'],
+.c15 div[type='checkbox'] input,
+.c15 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c11 {
+.c14 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -7861,14 +8193,14 @@ Array [
   -webkit-padding-after: 0;
 }
 
-.c18 {
+.c21 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c10 {
+.c13 {
   margin-bottom: 0 !important;
 }
 
@@ -7937,31 +8269,35 @@ Array [
                     Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                      
                     <a
-                        href="https://docs.joyent.com/private-cloud/install/cns"
-                        rel="noopener noreferrer"
-                        target="__blank"
+                        className="c7 c8 c9"
                     >
-                        Read the docs
+                        <a
+                            rel="noopener noreferrer"
+                            target="__blank"
+                            to="https://docs.joyent.com/private-cloud/install/cns"
+                        >
+                            Read the docs
+                        </a>
                     </a>
                 </p>
             </div>
         </div>
     </div>
     <div
-        className="c7"
+        className="c10"
     >
         <div
-            className="c8"
+            className="c11"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <form
-                    className="c10"
+                    className="c13"
                     onChange={[Function]}
                 >
                     <div
-                        className="c11"
+                        className="c14"
                         id="fw-toggle-firewall"
                         name="enabled"
                         role="group"
@@ -7969,11 +8305,11 @@ Array [
                         type="checkbox"
                     >
                         <li
-                            className="c12"
+                            className="c15"
                         >
                             <div
                                 checked={false}
-                                className="c13"
+                                className="c16"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
@@ -7981,30 +8317,30 @@ Array [
                             >
                                 <input
                                     checked={false}
-                                    className="c14 c15"
+                                    className="c17 c18"
                                     disabled={false}
                                     id="J"
                                     onBlur={undefined}
                                     type="checkbox"
                                 />
                                 <label
-                                    className="c16"
+                                    className="c19"
                                     htmlFor="J"
                                 />
                             </div>
                             <div
                                 checked={false}
-                                className="c17"
+                                className="c20"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
                             >
                                 <label
-                                    className="c18 c19"
+                                    className="c21 c22"
                                     htmlFor="J"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         Enable Firewall
                                     </div>
@@ -8016,7 +8352,7 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c11"
         />
     </div>
 </div>,
@@ -8024,16 +8360,16 @@ Array [
   margin-bottom: 1.125rem;
 }
 
-.c9 {
+.c12 {
   margin-right: 1.875rem;
 }
 
-.c20 {
+.c23 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8053,7 +8389,7 @@ Array [
   align-content: stretch;
 }
 
-.c8 {
+.c11 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -8070,7 +8406,13 @@ Array [
   display: block;
 }
 
-.c15 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -8078,36 +8420,54 @@ Array [
   overflow: visible;
 }
 
-.c15[type='checkbox'],
-.c15[type='radio'] {
+.c18[type='checkbox'],
+.c18[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c15[type='number']::-webkit-inner-spin-button,
-.c15[type='number']::-webkit-outer-spin-button {
+.c18[type='number']::-webkit-inner-spin-button,
+.c18[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c15[type='search'] {
+.c18[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c15[type='search']::-webkit-search-cancel-button,
-.c15[type='search']::-webkit-search-decoration {
+.c18[type='search']::-webkit-search-cancel-button,
+.c18[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c15::-webkit-file-upload-button {
+.c18::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -8117,7 +8477,7 @@ Array [
   font-size: 0.9375rem;
 }
 
-.c19 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -8168,33 +8528,33 @@ Array [
   padding-bottom: 1.125rem;
 }
 
-.c14 {
+.c17 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c14:checked + label::after {
+.c17:checked + label::after {
   opacity: 1;
 }
 
-.c14:selected + label::after {
+.c17:selected + label::after {
   opacity: 1;
 }
 
-.c14:checked + label {
+.c17:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:selected + label {
+.c17:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:disabled + label {
+.c17:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c16 {
+.c19 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -8212,7 +8572,7 @@ Array [
   height: 1.125rem;
 }
 
-.c16::after {
+.c19::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -8229,7 +8589,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c13 {
+.c16 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -8238,12 +8598,12 @@ Array [
   cursor: pointer;
 }
 
-.c17 label {
+.c20 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c12 {
+.c15 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -8267,25 +8627,25 @@ Array [
   height: 1.5rem;
 }
 
-.c12 label {
+.c15 label {
   font-weight: 400;
 }
 
-.c12 label::after {
+.c15 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c12 div[type='checkbox'],
-.c12 div[type='checkbox'] input,
-.c12 div[type='checkbox'] label {
+.c15 div[type='checkbox'],
+.c15 div[type='checkbox'] input,
+.c15 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c11 {
+.c14 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -8297,14 +8657,14 @@ Array [
   -webkit-padding-after: 0;
 }
 
-.c18 {
+.c21 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c10 {
+.c13 {
   margin-bottom: 0 !important;
 }
 
@@ -8373,31 +8733,35 @@ Array [
                     Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                      
                     <a
-                        href="https://docs.joyent.com/private-cloud/install/cns"
-                        rel="noopener noreferrer"
-                        target="__blank"
+                        className="c7 c8 c9"
                     >
-                        Read the docs
+                        <a
+                            rel="noopener noreferrer"
+                            target="__blank"
+                            to="https://docs.joyent.com/private-cloud/install/cns"
+                        >
+                            Read the docs
+                        </a>
                     </a>
                 </p>
             </div>
         </div>
     </div>
     <div
-        className="c7"
+        className="c10"
     >
         <div
-            className="c8"
+            className="c11"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <form
-                    className="c10"
+                    className="c13"
                     onChange={[Function]}
                 >
                     <div
-                        className="c11"
+                        className="c14"
                         id="fw-toggle-firewall"
                         name="enabled"
                         role="group"
@@ -8405,11 +8769,11 @@ Array [
                         type="checkbox"
                     >
                         <li
-                            className="c12"
+                            className="c15"
                         >
                             <div
                                 checked={false}
-                                className="c13"
+                                className="c16"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
@@ -8417,30 +8781,30 @@ Array [
                             >
                                 <input
                                     checked={false}
-                                    className="c14 c15"
+                                    className="c17 c18"
                                     disabled={false}
                                     id="L"
                                     onBlur={undefined}
                                     type="checkbox"
                                 />
                                 <label
-                                    className="c16"
+                                    className="c19"
                                     htmlFor="L"
                                 />
                             </div>
                             <div
                                 checked={false}
-                                className="c17"
+                                className="c20"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
                             >
                                 <label
-                                    className="c18 c19"
+                                    className="c21 c22"
                                     htmlFor="L"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         Enable Firewall
                                     </div>
@@ -8452,7 +8816,7 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c11"
         />
     </div>
 </div>,
@@ -8460,43 +8824,43 @@ Array [
   margin-bottom: 1.125rem;
 }
 
-.c9 {
+.c12 {
   margin-right: 1.875rem;
 }
 
-.c20 {
+.c23 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c21 {
+.c24 {
   margin-top: 1.875rem;
 }
 
-.c23 {
+.c26 {
   margin-top: 1.125rem;
 }
 
-.c24 {
+.c27 {
   margin-bottom: 0rem;
 }
 
-.c29 {
+.c32 {
   margin-right: 0.1875rem;
 }
 
-.c32 {
+.c35 {
   margin-left: 0.1875rem;
 }
 
-.c26 {
+.c29 {
   padding-top: 0.75rem;
   padding-right: 1.125rem;
   padding-bottom: 0.75rem;
   padding-left: 1.125rem;
 }
 
-.c7 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8514,37 +8878,6 @@ Array [
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
-}
-
-.c28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .c31 {
@@ -8565,13 +8898,44 @@ Array [
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
   align-content: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.c8 {
+.c34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -8588,7 +8952,13 @@ Array [
   display: block;
 }
 
-.c15 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c18 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -8596,36 +8966,54 @@ Array [
   overflow: visible;
 }
 
-.c15[type='checkbox'],
-.c15[type='radio'] {
+.c18[type='checkbox'],
+.c18[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c15[type='number']::-webkit-inner-spin-button,
-.c15[type='number']::-webkit-outer-spin-button {
+.c18[type='number']::-webkit-inner-spin-button,
+.c18[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c15[type='search'] {
+.c18[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c15[type='search']::-webkit-search-cancel-button,
-.c15[type='search']::-webkit-search-decoration {
+.c18[type='search']::-webkit-search-cancel-button,
+.c18[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c15::-webkit-file-upload-button {
+.c18::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -8635,7 +9023,7 @@ Array [
   font-size: 0.9375rem;
 }
 
-.c19 {
+.c22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -8679,7 +9067,7 @@ Array [
   display: block;
 }
 
-.c27 {
+.c30 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -8689,7 +9077,7 @@ Array [
   display: block;
 }
 
-.c35 {
+.c38 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -8706,7 +9094,7 @@ Array [
   padding-bottom: 1.125rem;
 }
 
-.c22 {
+.c25 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -8714,14 +9102,14 @@ Array [
   font-size: 1.3125rem;
 }
 
-.c30 {
+.c33 {
   color: rgb(73,73,73);
   font-weight: 700;
   line-height: 1.5rem;
   font-size: 0.9375rem;
 }
 
-.c25 {
+.c28 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -8747,33 +9135,33 @@ Array [
   cursor: default;
 }
 
-.c14 {
+.c17 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c14:checked + label::after {
+.c17:checked + label::after {
   opacity: 1;
 }
 
-.c14:selected + label::after {
+.c17:selected + label::after {
   opacity: 1;
 }
 
-.c14:checked + label {
+.c17:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:selected + label {
+.c17:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c14:disabled + label {
+.c17:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c16 {
+.c19 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -8791,7 +9179,7 @@ Array [
   height: 1.125rem;
 }
 
-.c16::after {
+.c19::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -8808,7 +9196,7 @@ Array [
   transform: rotate(-45deg);
 }
 
-.c13 {
+.c16 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -8817,12 +9205,12 @@ Array [
   cursor: pointer;
 }
 
-.c17 label {
+.c20 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c12 {
+.c15 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -8846,25 +9234,25 @@ Array [
   height: 1.5rem;
 }
 
-.c12 label {
+.c15 label {
   font-weight: 400;
 }
 
-.c12 label::after {
+.c15 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c12 div[type='checkbox'],
-.c12 div[type='checkbox'] input,
-.c12 div[type='checkbox'] label {
+.c15 div[type='checkbox'],
+.c15 div[type='checkbox'] input,
+.c15 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c11 {
+.c14 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -8876,14 +9264,14 @@ Array [
   -webkit-padding-after: 0;
 }
 
-.c18 {
+.c21 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c34 {
+.c37 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -8904,7 +9292,7 @@ Array [
   align-items: center;
 }
 
-.c33 {
+.c36 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -8917,7 +9305,7 @@ Array [
   flex-wrap: wrap;
 }
 
-.c10 {
+.c13 {
   margin-bottom: 0 !important;
 }
 
@@ -8962,7 +9350,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c30 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
@@ -8971,7 +9359,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c35 {
+  .c38 {
     -webkit-flex-basis: 16.666666666666668%;
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
@@ -9004,31 +9392,35 @@ Array [
                     Cloud Firewall rules control traffic across instances. Enabling the firewall adds a default set of rules and rules defined by your chosen tags.
                      
                     <a
-                        href="https://docs.joyent.com/private-cloud/install/cns"
-                        rel="noopener noreferrer"
-                        target="__blank"
+                        className="c7 c8 c9"
                     >
-                        Read the docs
+                        <a
+                            rel="noopener noreferrer"
+                            target="__blank"
+                            to="https://docs.joyent.com/private-cloud/install/cns"
+                        >
+                            Read the docs
+                        </a>
                     </a>
                 </p>
             </div>
         </div>
     </div>
     <div
-        className="c7"
+        className="c10"
     >
         <div
-            className="c8"
+            className="c11"
         >
             <div
-                className="c9"
+                className="c12"
             >
                 <form
-                    className="c10"
+                    className="c13"
                     onChange={[Function]}
                 >
                     <div
-                        className="c11"
+                        className="c14"
                         id="fw-toggle-firewall"
                         name="enabled"
                         role="group"
@@ -9036,11 +9428,11 @@ Array [
                         type="checkbox"
                     >
                         <li
-                            className="c12"
+                            className="c15"
                         >
                             <div
                                 checked={false}
-                                className="c13"
+                                className="c16"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
@@ -9048,30 +9440,30 @@ Array [
                             >
                                 <input
                                     checked={false}
-                                    className="c14 c15"
+                                    className="c17 c18"
                                     disabled={false}
                                     id="N"
                                     onBlur={undefined}
                                     type="checkbox"
                                 />
                                 <label
-                                    className="c16"
+                                    className="c19"
                                     htmlFor="N"
                                 />
                             </div>
                             <div
                                 checked={false}
-                                className="c17"
+                                className="c20"
                                 disabled={false}
                                 id="fw-toggle-firewall"
                                 onBlur={undefined}
                             >
                                 <label
-                                    className="c18 c19"
+                                    className="c21 c22"
                                     htmlFor="N"
                                 >
                                     <div
-                                        className="c20"
+                                        className="c23"
                                     >
                                         Enable Firewall
                                     </div>
@@ -9083,13 +9475,13 @@ Array [
             </div>
         </div>
         <div
-            className="c8"
+            className="c11"
         >
             <form
-                className="c10"
+                className="c13"
             >
                 <div
-                    className="c11"
+                    className="c14"
                     id="fw-toggle-inactive"
                     name="inactive"
                     role="group"
@@ -9097,11 +9489,11 @@ Array [
                     type="checkbox"
                 >
                     <li
-                        className="c12"
+                        className="c15"
                     >
                         <div
                             checked={false}
-                            className="c13"
+                            className="c16"
                             disabled={false}
                             id="fw-toggle-inactive"
                             onBlur={undefined}
@@ -9109,30 +9501,30 @@ Array [
                         >
                             <input
                                 checked={false}
-                                className="c14 c15"
+                                className="c17 c18"
                                 disabled={false}
                                 id="P"
                                 onBlur={undefined}
                                 type="checkbox"
                             />
                             <label
-                                className="c16"
+                                className="c19"
                                 htmlFor="P"
                             />
                         </div>
                         <div
                             checked={false}
-                            className="c17"
+                            className="c20"
                             disabled={false}
                             id="fw-toggle-inactive"
                             onBlur={undefined}
                         >
                             <label
-                                className="c18 c19"
+                                className="c21 c22"
                                 htmlFor="P"
                             >
                                 <div
-                                    className="c20"
+                                    className="c23"
                                 >
                                     Show inactive rules
                                 </div>
@@ -9144,44 +9536,44 @@ Array [
         </div>
     </div>
     <div
-        className="c21"
+        className="c24"
     >
         <h3
-            className="c22"
+            className="c25"
         >
             Default firewall rules
         </h3>
         <div
-            className="c23"
+            className="c26"
         >
             <div
-                className="c24"
+                className="c27"
             >
                 <div
-                    className="c25"
+                    className="c28"
                     disabled={true}
                     name="card"
                 >
                     <div
-                        className="c26"
+                        className="c29"
                     >
                         <div
                             className="c3"
                         >
                             <div
-                                className="c27"
+                                className="c30"
                             >
                                 <div
-                                    className="c28"
+                                    className="c31"
                                 >
                                     <div
-                                        className="c29"
+                                        className="c32"
                                     >
                                         <div
-                                            className="c8"
+                                            className="c11"
                                         >
                                             <strong
-                                                className="c30"
+                                                className="c33"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -9193,7 +9585,7 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c31"
+                                        className="c34"
                                     >
                                         <p
                                             className="c6"
@@ -9209,19 +9601,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c27"
+                                className="c30"
                             >
                                 <div
-                                    className="c28"
+                                    className="c31"
                                 >
                                     <div
-                                        className="c29"
+                                        className="c32"
                                     >
                                         <div
-                                            className="c8"
+                                            className="c11"
                                         >
                                             <strong
-                                                className="c30"
+                                                className="c33"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -9233,16 +9625,16 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c31"
+                                        className="c34"
                                     >
                                         <div
-                                            className="c32"
+                                            className="c35"
                                         >
                                             <ul
-                                                className="c33"
+                                                className="c36"
                                             >
                                                 <li
-                                                    className="c34"
+                                                    className="c37"
                                                     fill={null}
                                                     name="wat"
                                                     style={
@@ -9258,19 +9650,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c35"
+                                className="c38"
                             >
                                 <div
-                                    className="c28"
+                                    className="c31"
                                 >
                                     <div
-                                        className="c29"
+                                        className="c32"
                                     >
                                         <div
-                                            className="c8"
+                                            className="c11"
                                         >
                                             <strong
-                                                className="c30"
+                                                className="c33"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -9282,7 +9674,7 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c31"
+                                        className="c34"
                                     >
                                         <p
                                             className="c6"
@@ -9298,19 +9690,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c35"
+                                className="c38"
                             >
                                 <div
-                                    className="c28"
+                                    className="c31"
                                 >
                                     <div
-                                        className="c29"
+                                        className="c32"
                                     >
                                         <div
-                                            className="c8"
+                                            className="c11"
                                         >
                                             <strong
-                                                className="c30"
+                                                className="c33"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -9322,7 +9714,7 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c31"
+                                        className="c34"
                                     >
                                         <p
                                             className="c6"
@@ -9338,19 +9730,19 @@ Array [
                                 </div>
                             </div>
                             <div
-                                className="c35"
+                                className="c38"
                             >
                                 <div
-                                    className="c28"
+                                    className="c31"
                                 >
                                     <div
-                                        className="c29"
+                                        className="c32"
                                     >
                                         <div
-                                            className="c8"
+                                            className="c11"
                                         >
                                             <strong
-                                                className="c30"
+                                                className="c33"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
@@ -9362,7 +9754,7 @@ Array [
                                         </div>
                                     </div>
                                     <div
-                                        className="c31"
+                                        className="c34"
                                     >
                                         <p
                                             className="c6"

@@ -35,7 +35,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   display: block;
 }
 
-.c7 {
+.c10 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -49,40 +49,46 @@ exports[`renders <Cns /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c11 {
+.c14 {
   margin-bottom: 1.875rem;
 }
 
-.c14 {
+.c17 {
   margin-top: 0.75rem;
 }
 
-.c19 {
+.c22 {
   margin-top: 1.875rem;
 }
 
-.c20 {
+.c23 {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
 
-.c27 {
+.c30 {
   margin-top: 0.1875rem;
 }
 
-.c29 {
+.c32 {
   margin-left: 0.75rem;
 }
 
-.c35 {
+.c38 {
   margin-left: 0.375rem;
 }
 
-.c10 {
+.c13 {
   padding: 1.875rem;
 }
 
-.c33 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c36 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -94,19 +100,37 @@ exports[`renders <Cns /> without throwing 1`] = `
   appearance: button;
 }
 
-.c33::-moz-focus-inner,
-.c33[type='button']::-moz-focus-inner,
-.c33[type='reset']::-moz-focus-inner,
-.c33[type='submit']::-moz-focus-inner {
+.c36::-moz-focus-inner,
+.c36[type='button']::-moz-focus-inner,
+.c36[type='reset']::-moz-focus-inner,
+.c36[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c33:-moz-focusring,
-.c33[type='button']:-moz-focusring,
-.c33[type='reset']:-moz-focusring,
-.c33[type='submit']:-moz-focusring {
+.c36:-moz-focusring,
+.c36[type='button']:-moz-focusring,
+.c36[type='reset']:-moz-focusring,
+.c36[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -116,15 +140,15 @@ exports[`renders <Cns /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c32 {
+.c35 {
   min-width: 7.5rem;
 }
 
-.c31 {
+.c34 {
   display: inline-block;
 }
 
-.c30 {
+.c33 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -163,7 +187,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c30:focus {
+.c33:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -171,26 +195,26 @@ exports[`renders <Cns /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c30:hover {
+.c33:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c30:active,
-.c30:active:hover,
-.c30:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c30[disabled] {
+.c33[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c26 {
+.c29 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -207,7 +231,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c13 {
+.c16 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -215,12 +239,12 @@ exports[`renders <Cns /> without throwing 1`] = `
   font-size: 1.3125rem;
 }
 
-.c18 {
+.c21 {
   height: 1px;
   background-color: rgb(216,216,216);
 }
 
-.c16 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -243,7 +267,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c21 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -270,7 +294,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c23 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -290,7 +314,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c34 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -314,7 +338,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   align-items: center;
 }
 
-.c22 {
+.c25 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -331,7 +355,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   display: block;
 }
 
-.c8 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -353,7 +377,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -369,7 +393,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c24 {
+.c27 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -381,7 +405,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c28 {
+.c31 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -403,52 +427,52 @@ exports[`renders <Cns /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c28:focus {
+.c31:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c28::-webkit-input-placeholder {
+.c31::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28::-moz-placeholder {
+.c31::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:-ms-input-placeholder {
+.c31:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:invalid {
+.c31:invalid {
   box-shadow: none;
 }
 
-.c28:disabled {
+.c31:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c28:disabled::-webkit-input-placeholder {
+.c31:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled::-moz-placeholder {
+.c31:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled:-ms-input-placeholder {
+.c31:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c25 {
+.c28 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c36 {
+.c39 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -461,27 +485,27 @@ exports[`renders <Cns /> without throwing 1`] = `
   align-items: center;
 }
 
-.c38 {
+.c41 {
   display: none;
 }
 
-.c38:checked + label {
+.c41:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c38:checked + label:after {
+.c41:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c38:checked + label:active {
+.c41:checked + label:active {
   box-shadow: none;
 }
 
-.c39 {
+.c42 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -500,24 +524,24 @@ exports[`renders <Cns /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c39::selection {
+.c42::selection {
   background: none;
 }
 
-.c39:active {
+.c42:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c39:hover {
+.c42:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c39:hover:after {
+.c42:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c39:after,
-.c39:before {
+.c42:after,
+.c42:before {
   position: relative;
   display: block;
   content: '';
@@ -525,7 +549,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   height: 100%;
 }
 
-.c39:after {
+.c42:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -537,11 +561,11 @@ exports[`renders <Cns /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c39:active {
+.c42:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c39:before {
+.c42:before {
   display: none;
 }
 
@@ -549,19 +573,19 @@ exports[`renders <Cns /> without throwing 1`] = `
   font-weight: 200;
 }
 
-.c12 {
-  margin: 0;
-}
-
 .c15 {
   margin: 0;
 }
 
-.c37 {
+.c18 {
+  margin: 0;
+}
+
+.c40 {
   margin: 0 6px;
 }
 
-.c17 {
+.c20 {
   margin-left: 0;
   margin-right: 0;
 }
@@ -603,7 +627,7 @@ exports[`renders <Cns /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -612,7 +636,7 @@ exports[`renders <Cns /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -621,7 +645,7 @@ exports[`renders <Cns /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -654,11 +678,15 @@ exports[`renders <Cns /> without throwing 1`] = `
           Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
            
           <a
-            href="https://docs.joyent.com/private-cloud/install/cns"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/private-cloud/install/cns"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -668,66 +696,66 @@ exports[`renders <Cns /> without throwing 1`] = `
     className="c3"
   >
     <div
-      className="c7"
+      className="c10"
     >
       <div
-        className="c8"
+        className="c11"
         disabled={false}
         name="card"
       >
         <div
-          className="c9 c8"
+          className="c12 c11"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c10"
+            className="c13"
           >
             <div
-              className="c11"
+              className="c14"
             >
               <h3
-                className="c12 c13"
+                className="c15 c16"
               >
                 CNS Default Hostnames
               </h3>
               <div
-                className="c14"
+                className="c17"
               >
                 <p
-                  className="c15 c6"
+                  className="c18 c6"
                 >
                   Default hostnames are automatically generated from both the instance name and any attached networks.
                 </p>
               </div>
             </div>
             <div
-              className="c16"
+              className="c19"
             />
             <div
-              className="c14"
+              className="c17"
             >
               <div
-                className="c17 c18 c3"
+                className="c20 c21 c3"
                 height="0.0625rem"
               />
             </div>
             <div
-              className="c19"
+              className="c22"
             >
               <div
-                className="c20"
+                className="c23"
               >
                 <h3
-                  className="c12 c13"
+                  className="c15 c16"
                 >
                   CNS Service hostnames
                 </h3>
                 <div
-                  className="c14"
+                  className="c17"
                 >
                   <p
-                    className="c15 c6"
+                    className="c18 c6"
                   >
                     CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
                   </p>
@@ -737,33 +765,33 @@ exports[`renders <Cns /> without throwing 1`] = `
                 onSubmit={undefined}
               >
                 <div
-                  className="c21"
+                  className="c24"
                   wrap={true}
                 >
                   <div
-                    className="c22"
+                    className="c25"
                   >
                     <div
-                      className="c23"
+                      className="c26"
                     >
                       <div
-                        className="c24"
+                        className="c27"
                         id="cns-service-name-input"
                         name="name"
                         role="group"
                         style={undefined}
                       >
                         <label
-                          className="c25 c26"
+                          className="c28 c29"
                           htmlFor="cns-service-name-input"
                         >
                           Attach to new CNS service name
                         </label>
                         <div
-                          className="c27"
+                          className="c30"
                         >
                           <input
-                            className="c28"
+                            className="c31"
                             disabled={false}
                             id="cns-service-name-input"
                             onBlur={null}
@@ -774,13 +802,13 @@ exports[`renders <Cns /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c22"
+                    className="c25"
                   >
                     <div
-                      className="c29"
+                      className="c32"
                     >
                       <button
-                        className="c30 c31 c32 c33"
+                        className="c33 c34 c35 c36"
                         data-ui-button="true"
                         disabled={undefined}
                         href=""
@@ -798,36 +826,36 @@ exports[`renders <Cns /> without throwing 1`] = `
         </div>
       </div>
       <div
-        className="c19"
+        className="c22"
       >
         <div
           className="c2"
         >
           <div
-            className="c24"
+            className="c27"
             name="cns-enabled"
             role="group"
             style={undefined}
           >
             <div
-              className="c34"
+              className="c37"
             >
               <label
-                className="c25 c26"
+                className="c28 c29"
                 disabled={false}
                 htmlFor="l"
               >
                 Disabled CNS
               </label>
               <div
-                className="c35"
+                className="c38"
               >
                 <div
-                  className="c36"
+                  className="c39"
                 >
                   <input
                     checked={true}
-                    className="c37 c38"
+                    className="c40 c41"
                     disabled={false}
                     id="l"
                     onBlur={undefined}
@@ -836,7 +864,7 @@ exports[`renders <Cns /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c37 c39"
+                    className="c40 c42"
                     disabled={false}
                     htmlFor="l"
                     id="l"
@@ -845,7 +873,7 @@ exports[`renders <Cns /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c37 c25 c26"
+                    className="c40 c28 c29"
                     disabled={false}
                     htmlFor="l"
                     id="l"
@@ -901,7 +929,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   display: block;
 }
 
-.c7 {
+.c10 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -915,16 +943,40 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c11 {
+.c14 {
   margin-top: 1.875rem;
 }
 
-.c16 {
+.c19 {
   margin-left: 0.375rem;
 }
 
-.c10 {
+.c13 {
   padding: 1.875rem;
+}
+
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -934,7 +986,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c15 {
+.c18 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -951,7 +1003,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c13 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -975,7 +1027,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -997,7 +1049,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1013,7 +1065,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c12 {
+.c15 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -1025,13 +1077,13 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c14 {
+.c17 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c17 {
+.c20 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -1044,27 +1096,27 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   align-items: center;
 }
 
-.c19 {
+.c22 {
   display: none;
 }
 
-.c19:checked + label {
+.c22:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c19:checked + label:after {
+.c22:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c19:checked + label:active {
+.c22:checked + label:active {
   box-shadow: none;
 }
 
-.c20 {
+.c23 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -1083,24 +1135,24 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c20::selection {
+.c23::selection {
   background: none;
 }
 
-.c20:active {
+.c23:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c20:hover {
+.c23:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c20:hover:after {
+.c23:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c20:after,
-.c20:before {
+.c23:after,
+.c23:before {
   position: relative;
   display: block;
   content: '';
@@ -1108,7 +1160,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   height: 100%;
 }
 
-.c20:after {
+.c23:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -1120,11 +1172,11 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c20:active {
+.c23:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c20:before {
+.c23:before {
   display: none;
 }
 
@@ -1132,7 +1184,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
   font-weight: 200;
 }
 
-.c18 {
+.c21 {
   margin: 0 6px;
 }
 
@@ -1173,7 +1225,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1182,7 +1234,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1191,7 +1243,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -1224,11 +1276,15 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
           Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
            
           <a
-            href="https://docs.joyent.com/private-cloud/install/cns"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/private-cloud/install/cns"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -1238,54 +1294,54 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
     className="c3"
   >
     <div
-      className="c7"
+      className="c10"
     >
       <div
-        className="c8"
+        className="c11"
         disabled={false}
         name="card"
       >
         <div
-          className="c9 c8"
+          className="c12 c11"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c10"
+            className="c13"
           />
         </div>
       </div>
       <div
-        className="c11"
+        className="c14"
       >
         <div
           className="c2"
         >
           <div
-            className="c12"
+            className="c15"
             name="cns-enabled"
             role="group"
             style={undefined}
           >
             <div
-              className="c13"
+              className="c16"
             >
               <label
-                className="c14 c15"
+                className="c17 c18"
                 disabled={false}
                 htmlFor="r"
               >
                 Disabled CNS
               </label>
               <div
-                className="c16"
+                className="c19"
               >
                 <div
-                  className="c17"
+                  className="c20"
                 >
                   <input
                     checked={false}
-                    className="c18 c19"
+                    className="c21 c22"
                     disabled={false}
                     id="r"
                     onBlur={undefined}
@@ -1294,7 +1350,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
                   />
                   <label
                     checked={false}
-                    className="c18 c20"
+                    className="c21 c23"
                     disabled={false}
                     htmlFor="r"
                     id="r"
@@ -1303,7 +1359,7 @@ exports[`renders <Cns disabled /> without throwing 1`] = `
                   />
                   <label
                     checked={false}
-                    className="c18 c14 c15"
+                    className="c21 c17 c18"
                     disabled={false}
                     htmlFor="r"
                     id="r"
@@ -1359,7 +1415,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   display: block;
 }
 
-.c7 {
+.c10 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1369,7 +1425,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   display: block;
 }
 
-.c25 {
+.c28 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1383,62 +1439,68 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c11 {
+.c14 {
   margin-bottom: 1.875rem;
 }
 
-.c14 {
+.c17 {
   margin-top: 0.75rem;
 }
 
-.c32 {
+.c35 {
   margin-top: 1.875rem;
 }
 
-.c33 {
+.c36 {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
 
-.c24 {
+.c27 {
   margin-top: 0.1875rem;
 }
 
-.c39 {
+.c42 {
   margin-left: 0.75rem;
 }
 
-.c47 {
+.c50 {
   margin-left: 0.375rem;
 }
 
-.c22 {
+.c25 {
   margin-right: 0.375rem;
   margin-bottom: 0.1875rem;
 }
 
-.c26 {
+.c29 {
   margin-bottom: 0.1875rem;
 }
 
-.c44 {
+.c47 {
   margin-top: 0.1875rem;
   margin-bottom: 0.375rem;
 }
 
-.c45 {
+.c48 {
   margin-bottom: 0rem;
 }
 
-.c10 {
+.c13 {
   padding: 1.875rem;
 }
 
-.c20 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c23 {
   font-size: 80%;
 }
 
-.c43 {
+.c46 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1450,19 +1512,37 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   appearance: button;
 }
 
-.c43::-moz-focus-inner,
-.c43[type='button']::-moz-focus-inner,
-.c43[type='reset']::-moz-focus-inner,
-.c43[type='submit']::-moz-focus-inner {
+.c46::-moz-focus-inner,
+.c46[type='button']::-moz-focus-inner,
+.c46[type='reset']::-moz-focus-inner,
+.c46[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c43:-moz-focusring,
-.c43[type='button']:-moz-focusring,
-.c43[type='reset']:-moz-focusring,
-.c43[type='submit']:-moz-focusring {
+.c46:-moz-focusring,
+.c46[type='button']:-moz-focusring,
+.c46[type='reset']:-moz-focusring,
+.c46[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -1472,15 +1552,15 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c42 {
+.c45 {
   min-width: 7.5rem;
 }
 
-.c41 {
+.c44 {
   display: inline-block;
 }
 
-.c40 {
+.c43 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1519,7 +1599,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c40:focus {
+.c43:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1527,26 +1607,26 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c40:hover {
+.c43:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c40:active,
-.c40:active:hover,
-.c40:active:focus {
+.c43:active,
+.c43:active:hover,
+.c43:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c40[disabled] {
+.c43[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c37 {
+.c40 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1563,7 +1643,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c13 {
+.c16 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -1571,7 +1651,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   font-size: 1.3125rem;
 }
 
-.c19 {
+.c22 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   color: rgb(73,73,73);
   line-height: 1.125rem;
@@ -1579,19 +1659,19 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   font-weight: 600;
 }
 
-.c23 {
+.c26 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   color: rgb(73,73,73);
   line-height: 1.125rem;
   font-size: 0.8125rem;
 }
 
-.c31 {
+.c34 {
   height: 1px;
   background-color: rgb(216,216,216);
 }
 
-.c16 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1614,7 +1694,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c34 {
+.c37 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1641,7 +1721,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c17 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1661,7 +1741,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c46 {
+.c49 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1685,7 +1765,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   align-items: center;
 }
 
-.c21 {
+.c24 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1702,7 +1782,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   display: block;
 }
 
-.c8 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1724,7 +1804,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1740,7 +1820,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c35 {
+.c38 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -1752,7 +1832,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c38 {
+.c41 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1774,46 +1854,46 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c38:focus {
+.c41:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c38::-webkit-input-placeholder {
+.c41::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c38::-moz-placeholder {
+.c41::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c38:-ms-input-placeholder {
+.c41:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c38:invalid {
+.c41:invalid {
   box-shadow: none;
 }
 
-.c38:disabled {
+.c41:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c38:disabled::-webkit-input-placeholder {
+.c41:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c38:disabled::-moz-placeholder {
+.c41:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c38:disabled:-ms-input-placeholder {
+.c41:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28 {
+.c31 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1822,7 +1902,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(250,250,250);
+  color: rgb(73,73,73);
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -1831,88 +1911,73 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
 }
 
-.c28:focus {
+.c31:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c28::-webkit-input-placeholder {
+.c31::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28::-moz-placeholder {
+.c31::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:-ms-input-placeholder {
+.c31:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:invalid {
+.c31:invalid {
   box-shadow: none;
 }
 
-.c28::-webkit-input-placeholder {
-  color: rgb(216,216,216);
-}
-
-.c28::-moz-placeholder {
-  color: rgb(216,216,216);
-}
-
-.c28:-ms-input-placeholder {
-  color: rgb(216,216,216);
-}
-
-.c28:disabled {
+.c31:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c28:disabled::-webkit-input-placeholder {
+.c31:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled::-moz-placeholder {
+.c31:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled:-ms-input-placeholder {
+.c31:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled {
+.c31:disabled {
   color: rgb(73,73,73);
 }
 
-.c28:disabled::-webkit-input-placeholder {
+.c31:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c28:disabled::-moz-placeholder {
+.c31:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c28:disabled:-ms-input-placeholder {
+.c31:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c36 {
+.c39 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c48 {
+.c51 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -1925,27 +1990,27 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   align-items: center;
 }
 
-.c50 {
+.c53 {
   display: none;
 }
 
-.c50:checked + label {
+.c53:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c50:checked + label:after {
+.c53:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c50:checked + label:active {
+.c53:checked + label:active {
   box-shadow: none;
 }
 
-.c51 {
+.c54 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -1964,24 +2029,24 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c51::selection {
+.c54::selection {
   background: none;
 }
 
-.c51:active {
+.c54:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c51:hover {
+.c54:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c51:hover:after {
+.c54:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c51:after,
-.c51:before {
+.c54:after,
+.c54:before {
   position: relative;
   display: block;
   content: '';
@@ -1989,7 +2054,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   height: 100%;
 }
 
-.c51:after {
+.c54:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -2001,15 +2066,15 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c51:active {
+.c54:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c51:before {
+.c54:before {
   display: none;
 }
 
-.c27 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2020,16 +2085,16 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   align-items: center;
 }
 
-.c27 input {
+.c30 input {
   padding-right: 1.875rem;
 }
 
-.c27 div {
+.c30 div {
   position: relative;
   left: -1.625rem;
 }
 
-.c29 {
+.c32 {
   cursor: pointer;
 }
 
@@ -2037,25 +2102,25 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   font-weight: 200;
 }
 
-.c18 {
+.c21 {
   padding-right: 0.75rem;
   margin-right: 0.75rem;
   border-right: 0.0625rem solid rgb(216,216,216);
-}
-
-.c12 {
-  margin: 0;
 }
 
 .c15 {
   margin: 0;
 }
 
-.c49 {
+.c18 {
+  margin: 0;
+}
+
+.c52 {
   margin: 0 6px;
 }
 
-.c30 {
+.c33 {
   margin-left: 0;
   margin-right: 0;
 }
@@ -2097,7 +2162,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2106,7 +2171,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2115,7 +2180,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -2124,7 +2189,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c28 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2133,7 +2198,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c25 {
+  .c28 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -2166,11 +2231,15 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
           Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
            
           <a
-            href="https://docs.joyent.com/private-cloud/install/cns"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/private-cloud/install/cns"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -2180,50 +2249,50 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
     className="c3"
   >
     <div
-      className="c7"
+      className="c10"
     >
       <div
-        className="c8"
+        className="c11"
         disabled={false}
         name="card"
       >
         <div
-          className="c9 c8"
+          className="c12 c11"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c10"
+            className="c13"
           >
             <div
-              className="c11"
+              className="c14"
             >
               <h3
-                className="c12 c13"
+                className="c15 c16"
               >
                 CNS Default Hostnames
               </h3>
               <div
-                className="c14"
+                className="c17"
               >
                 <p
-                  className="c15 c6"
+                  className="c18 c6"
                 >
                   Default hostnames are automatically generated from both the instance name and any attached networks.
                 </p>
               </div>
             </div>
             <div
-              className="c16"
+              className="c19"
             >
               <div
                 className="c2"
               >
                 <div
-                  className="c17"
+                  className="c20"
                 >
                   <small
-                    className="c18 c19 c20"
+                    className="c21 c22 c23"
                   >
                     Instance name
                      
@@ -2231,10 +2300,10 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                     
                   </small>
                   <div
-                    className="c21"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c25"
                     >
                       <svg
                         height="16"
@@ -2254,34 +2323,33 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c21"
+                    className="c24"
                   >
                     <small
-                      className="c23 c20"
+                      className="c26 c23"
                     >
                       Public
                     </small>
                   </div>
                 </div>
                 <div
-                  className="c24"
+                  className="c27"
                 >
                   <div
                     className="c3"
                   >
                     <div
-                      className="c25"
+                      className="c28"
                     >
                       <div
-                        className="c26"
+                        className="c29"
                       />
                       <div
-                        className="c27"
-                        disabled={true}
+                        className="c30"
                       >
                         <input
-                          className="c28"
-                          disabled={true}
+                          className="c31"
+                          disabled={false}
                           id=""
                           onBlur={null}
                           value="stuffy-stuff"
@@ -2297,7 +2365,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                           }
                         >
                           <svg
-                            className="c29"
+                            className="c32"
                             height="19"
                             innerRef={undefined}
                             onClick={[Function]}
@@ -2325,10 +2393,10 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                 className="c2"
               >
                 <div
-                  className="c17"
+                  className="c20"
                 >
                   <small
-                    className="c18 c19 c20"
+                    className="c21 c22 c23"
                   >
                     Instance name
                      
@@ -2336,10 +2404,10 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                     
                   </small>
                   <div
-                    className="c21"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c25"
                     >
                       <svg
                         height="16"
@@ -2360,34 +2428,33 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c21"
+                    className="c24"
                   >
                     <small
-                      className="c23 c20"
+                      className="c26 c23"
                     >
                       Private
                     </small>
                   </div>
                 </div>
                 <div
-                  className="c24"
+                  className="c27"
                 >
                   <div
                     className="c3"
                   >
                     <div
-                      className="c25"
+                      className="c28"
                     >
                       <div
-                        className="c26"
+                        className="c29"
                       />
                       <div
-                        className="c27"
-                        disabled={true}
+                        className="c30"
                       >
                         <input
-                          className="c28"
-                          disabled={true}
+                          className="c31"
+                          disabled={false}
                           id=""
                           onBlur={null}
                           value="stuffy-stuff"
@@ -2403,7 +2470,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                           }
                         >
                           <svg
-                            className="c29"
+                            className="c32"
                             height="19"
                             innerRef={undefined}
                             onClick={[Function]}
@@ -2429,29 +2496,29 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
               </div>
             </div>
             <div
-              className="c14"
+              className="c17"
             >
               <div
-                className="c30 c31 c3"
+                className="c33 c34 c3"
                 height="0.0625rem"
               />
             </div>
             <div
-              className="c32"
+              className="c35"
             >
               <div
-                className="c33"
+                className="c36"
               >
                 <h3
-                  className="c12 c13"
+                  className="c15 c16"
                 >
                   CNS Service hostnames
                 </h3>
                 <div
-                  className="c14"
+                  className="c17"
                 >
                   <p
-                    className="c15 c6"
+                    className="c18 c6"
                   >
                     CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
                   </p>
@@ -2461,33 +2528,33 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                 onSubmit={undefined}
               >
                 <div
-                  className="c34"
+                  className="c37"
                   wrap={true}
                 >
                   <div
-                    className="c21"
+                    className="c24"
                   >
                     <div
-                      className="c17"
+                      className="c20"
                     >
                       <div
-                        className="c35"
+                        className="c38"
                         id="cns-service-name-input"
                         name="name"
                         role="group"
                         style={undefined}
                       >
                         <label
-                          className="c36 c37"
+                          className="c39 c40"
                           htmlFor="cns-service-name-input"
                         >
                           Attach to new CNS service name
                         </label>
                         <div
-                          className="c24"
+                          className="c27"
                         >
                           <input
-                            className="c38"
+                            className="c41"
                             disabled={false}
                             id="cns-service-name-input"
                             onBlur={null}
@@ -2498,13 +2565,13 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c21"
+                    className="c24"
                   >
                     <div
-                      className="c39"
+                      className="c42"
                     >
                       <button
-                        className="c40 c41 c42 c43"
+                        className="c43 c44 c45 c46"
                         data-ui-button="true"
                         disabled={undefined}
                         href=""
@@ -2518,19 +2585,19 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                 </div>
               </form>
               <div
-                className="c32"
+                className="c35"
               >
                 <div
-                  className="c16"
+                  className="c19"
                 >
                   <div
                     className="c2"
                   >
                     <div
-                      className="c17"
+                      className="c20"
                     >
                       <small
-                        className="c18 c19 c20"
+                        className="c21 c22 c23"
                       >
                         CNS service
                          
@@ -2538,10 +2605,10 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                         s
                       </small>
                       <div
-                        className="c21"
+                        className="c24"
                       >
                         <div
-                          className="c22"
+                          className="c25"
                         >
                           <svg
                             height="16"
@@ -2561,34 +2628,33 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c21"
+                        className="c24"
                       >
                         <small
-                          className="c23 c20"
+                          className="c26 c23"
                         >
                           Public
                         </small>
                       </div>
                     </div>
                     <div
-                      className="c44"
+                      className="c47"
                     >
                       <div
                         className="c3"
                       >
                         <div
-                          className="c25"
+                          className="c28"
                         >
                           <div
-                            className="c26"
+                            className="c29"
                           />
                           <div
-                            className="c27"
-                            disabled={true}
+                            className="c30"
                           >
                             <input
-                              className="c28"
-                              disabled={true}
+                              className="c31"
+                              disabled={false}
                               id=""
                               onBlur={null}
                               value="serbice"
@@ -2604,7 +2670,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                               }
                             >
                               <svg
-                                className="c29"
+                                className="c32"
                                 height="19"
                                 innerRef={undefined}
                                 onClick={[Function]}
@@ -2628,24 +2694,23 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c44"
+                      className="c47"
                     >
                       <div
                         className="c3"
                       >
                         <div
-                          className="c25"
+                          className="c28"
                         >
                           <div
-                            className="c26"
+                            className="c29"
                           />
                           <div
-                            className="c27"
-                            disabled={true}
+                            className="c30"
                           >
                             <input
-                              className="c28"
-                              disabled={true}
+                              className="c31"
+                              disabled={false}
                               id=""
                               onBlur={null}
                               value="dssasda"
@@ -2661,7 +2726,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                               }
                             >
                               <svg
-                                className="c29"
+                                className="c32"
                                 height="19"
                                 innerRef={undefined}
                                 onClick={[Function]}
@@ -2685,24 +2750,23 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c24"
+                      className="c27"
                     >
                       <div
                         className="c3"
                       >
                         <div
-                          className="c25"
+                          className="c28"
                         >
                           <div
-                            className="c26"
+                            className="c29"
                           />
                           <div
-                            className="c27"
-                            disabled={true}
+                            className="c30"
                           >
                             <input
-                              className="c28"
-                              disabled={true}
+                              className="c31"
+                              disabled={false}
                               id=""
                               onBlur={null}
                               value="dsasd"
@@ -2718,7 +2782,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                               }
                             >
                               <svg
-                                className="c29"
+                                className="c32"
                                 height="19"
                                 innerRef={undefined}
                                 onClick={[Function]}
@@ -2743,13 +2807,13 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c45"
+                    className="c48"
                   >
                     <div
-                      className="c17"
+                      className="c20"
                     >
                       <small
-                        className="c18 c19 c20"
+                        className="c21 c22 c23"
                       >
                         CNS service
                          
@@ -2757,10 +2821,10 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                         s
                       </small>
                       <div
-                        className="c21"
+                        className="c24"
                       >
                         <div
-                          className="c22"
+                          className="c25"
                         >
                           <svg
                             height="16"
@@ -2781,34 +2845,33 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c21"
+                        className="c24"
                       >
                         <small
-                          className="c23 c20"
+                          className="c26 c23"
                         >
                           Private
                         </small>
                       </div>
                     </div>
                     <div
-                      className="c44"
+                      className="c47"
                     >
                       <div
                         className="c3"
                       >
                         <div
-                          className="c25"
+                          className="c28"
                         >
                           <div
-                            className="c26"
+                            className="c29"
                           />
                           <div
-                            className="c27"
-                            disabled={true}
+                            className="c30"
                           >
                             <input
-                              className="c28"
-                              disabled={true}
+                              className="c31"
+                              disabled={false}
                               id=""
                               onBlur={null}
                               value="serbice"
@@ -2824,7 +2887,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                               }
                             >
                               <svg
-                                className="c29"
+                                className="c32"
                                 height="19"
                                 innerRef={undefined}
                                 onClick={[Function]}
@@ -2848,24 +2911,23 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c44"
+                      className="c47"
                     >
                       <div
                         className="c3"
                       >
                         <div
-                          className="c25"
+                          className="c28"
                         >
                           <div
-                            className="c26"
+                            className="c29"
                           />
                           <div
-                            className="c27"
-                            disabled={true}
+                            className="c30"
                           >
                             <input
-                              className="c28"
-                              disabled={true}
+                              className="c31"
+                              disabled={false}
                               id=""
                               onBlur={null}
                               value="dssasda"
@@ -2881,7 +2943,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                               }
                             >
                               <svg
-                                className="c29"
+                                className="c32"
                                 height="19"
                                 innerRef={undefined}
                                 onClick={[Function]}
@@ -2905,24 +2967,23 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c24"
+                      className="c27"
                     >
                       <div
                         className="c3"
                       >
                         <div
-                          className="c25"
+                          className="c28"
                         >
                           <div
-                            className="c26"
+                            className="c29"
                           />
                           <div
-                            className="c27"
-                            disabled={true}
+                            className="c30"
                           >
                             <input
-                              className="c28"
-                              disabled={true}
+                              className="c31"
+                              disabled={false}
                               id=""
                               onBlur={null}
                               value="dsasd"
@@ -2938,7 +2999,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                               }
                             >
                               <svg
-                                className="c29"
+                                className="c32"
                                 height="19"
                                 innerRef={undefined}
                                 onClick={[Function]}
@@ -2969,36 +3030,36 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
         </div>
       </div>
       <div
-        className="c32"
+        className="c35"
       >
         <div
           className="c2"
         >
           <div
-            className="c35"
+            className="c38"
             name="cns-enabled"
             role="group"
             style={undefined}
           >
             <div
-              className="c46"
+              className="c49"
             >
               <label
-                className="c36 c37"
+                className="c39 c40"
                 disabled={false}
                 htmlFor="v"
               >
                 Disabled CNS
               </label>
               <div
-                className="c47"
+                className="c50"
               >
                 <div
-                  className="c48"
+                  className="c51"
                 >
                   <input
                     checked={true}
-                    className="c49 c50"
+                    className="c52 c53"
                     disabled={false}
                     id="v"
                     onBlur={undefined}
@@ -3007,7 +3068,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c49 c51"
+                    className="c52 c54"
                     disabled={false}
                     htmlFor="v"
                     id="v"
@@ -3016,7 +3077,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c49 c36 c37"
+                    className="c52 c39 c40"
                     disabled={false}
                     htmlFor="v"
                     id="v"
@@ -3072,7 +3133,7 @@ exports[`renders <Cns loading /> without throwing 1`] = `
   display: block;
 }
 
-.c7 {
+.c10 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3086,23 +3147,47 @@ exports[`renders <Cns loading /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c10 {
+.c13 {
   padding: 1.875rem;
 }
 
-.c12 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
+}
+
+.c15 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c13 {
+.c16 {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
-.c14 {
+.c17 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
@@ -3114,7 +3199,7 @@ exports[`renders <Cns loading /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3142,7 +3227,7 @@ exports[`renders <Cns loading /> without throwing 1`] = `
   flex: 1 0 auto;
 }
 
-.c15 {
+.c18 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -3159,7 +3244,7 @@ exports[`renders <Cns loading /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3181,7 +3266,7 @@ exports[`renders <Cns loading /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3238,7 +3323,7 @@ exports[`renders <Cns loading /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -3247,7 +3332,7 @@ exports[`renders <Cns loading /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -3256,7 +3341,7 @@ exports[`renders <Cns loading /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -3289,11 +3374,15 @@ exports[`renders <Cns loading /> without throwing 1`] = `
           Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
            
           <a
-            href="https://docs.joyent.com/private-cloud/install/cns"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/private-cloud/install/cns"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -3303,44 +3392,44 @@ exports[`renders <Cns loading /> without throwing 1`] = `
     className="c3"
   >
     <div
-      className="c7"
+      className="c10"
     >
       <div
-        className="c8"
+        className="c11"
         disabled={false}
         name="card"
       >
         <div
-          className="c9 c8"
+          className="c12 c11"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c10"
+            className="c13"
           >
             <div
-              className="c11"
+              className="c14"
             >
               <svg
                 height="10"
                 width="28"
               >
                 <rect
-                  className="c12"
+                  className="c15"
                   height="6"
                   width="6"
                   x="2"
                   y="2"
                 />
                 <rect
-                  className="c13 c12"
+                  className="c16 c15"
                   height="6"
                   width="6"
                   x="11"
                   y="2"
                 />
                 <rect
-                  className="c14 c12"
+                  className="c17 c15"
                   height="6"
                   width="6"
                   x="20"
@@ -3348,7 +3437,7 @@ exports[`renders <Cns loading /> without throwing 1`] = `
                 />
               </svg>
               <p
-                className="c15 c6"
+                className="c18 c6"
               >
                 Loading...
               </p>
@@ -3396,7 +3485,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   display: block;
 }
 
-.c7 {
+.c10 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3410,36 +3499,42 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c11 {
+.c14 {
   margin-bottom: 1.875rem;
 }
 
-.c19 {
+.c22 {
   margin-top: 0.75rem;
 }
 
-.c24 {
+.c27 {
   margin-top: 1.875rem;
 }
 
-.c25 {
+.c28 {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
 
-.c32 {
+.c35 {
   margin-top: 0.1875rem;
 }
 
-.c34 {
+.c37 {
   margin-left: 0.75rem;
 }
 
-.c10 {
+.c13 {
   padding: 1.875rem;
 }
 
-.c38 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c41 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3451,19 +3546,37 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   appearance: button;
 }
 
-.c38::-moz-focus-inner,
-.c38[type='button']::-moz-focus-inner,
-.c38[type='reset']::-moz-focus-inner,
-.c38[type='submit']::-moz-focus-inner {
+.c41::-moz-focus-inner,
+.c41[type='button']::-moz-focus-inner,
+.c41[type='reset']::-moz-focus-inner,
+.c41[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c38:-moz-focusring,
-.c38[type='button']:-moz-focusring,
-.c38[type='reset']:-moz-focusring,
-.c38[type='submit']:-moz-focusring {
+.c41:-moz-focusring,
+.c41[type='button']:-moz-focusring,
+.c41[type='reset']:-moz-focusring,
+.c41[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -3473,15 +3586,15 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c37 {
+.c40 {
   min-width: 7.5rem;
 }
 
-.c36 {
+.c39 {
   display: inline-block;
 }
 
-.c35 {
+.c38 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3520,7 +3633,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c35:focus {
+.c38:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3528,26 +3641,26 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c35:hover {
+.c38:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
+.c38:active,
+.c38:active:hover,
+.c38:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c35[disabled] {
+.c38[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31 {
+.c34 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -3564,7 +3677,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c18 {
+.c21 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -3572,7 +3685,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   font-size: 1.3125rem;
 }
 
-.c15 {
+.c18 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -3580,12 +3693,12 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c23 {
+.c26 {
   height: 1px;
   background-color: rgb(216,216,216);
 }
 
-.c21 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3608,7 +3721,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c26 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3635,7 +3748,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c28 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3655,7 +3768,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c27 {
+.c30 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3672,7 +3785,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   display: block;
 }
 
-.c12 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3685,23 +3798,23 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   width: 100%;
 }
 
-.c13 {
+.c16 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   min-width: 0.75rem;
   background-color: rgb(0,152,88);
   background-color: rgb(210,67,58);
 }
 
-.c14 {
+.c17 {
   padding: 1.125rem 1.125rem;
 }
 
-.c16 {
+.c19 {
   line-height: 0.875rem;
   font-size: 0.8125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3723,7 +3836,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3739,7 +3852,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c29 {
+.c32 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -3751,7 +3864,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c33 {
+.c36 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -3773,46 +3886,46 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c33:focus {
+.c36:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c33::-webkit-input-placeholder {
+.c36::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33::-moz-placeholder {
+.c36::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:-ms-input-placeholder {
+.c36:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:invalid {
+.c36:invalid {
   box-shadow: none;
 }
 
-.c33:disabled {
+.c36:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c33:disabled::-webkit-input-placeholder {
+.c36:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:disabled::-moz-placeholder {
+.c36:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:disabled:-ms-input-placeholder {
+.c36:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c30 {
+.c33 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
@@ -3822,15 +3935,15 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   font-weight: 200;
 }
 
-.c17 {
-  margin: 0;
-}
-
 .c20 {
   margin: 0;
 }
 
-.c22 {
+.c23 {
+  margin: 0;
+}
+
+.c25 {
   margin-left: 0;
   margin-right: 0;
 }
@@ -3872,7 +3985,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -3881,7 +3994,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -3890,7 +4003,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -3923,11 +4036,15 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
           Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
            
           <a
-            href="https://docs.joyent.com/private-cloud/install/cns"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/private-cloud/install/cns"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -3937,40 +4054,40 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
     className="c3"
   >
     <div
-      className="c7"
+      className="c10"
     >
       <div
-        className="c8"
+        className="c11"
         disabled={false}
         name="card"
       >
         <div
-          className="c9 c8"
+          className="c12 c11"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c10"
+            className="c13"
           >
             <div
-              className="c11"
+              className="c14"
             >
               <div
-                className="c12"
+                className="c15"
               >
                 <div
-                  className="c13"
+                  className="c16"
                 />
                 <div
-                  className="c14"
+                  className="c17"
                 >
                   <h4
-                    className="c15"
+                    className="c18"
                   >
                     Ooops!
                   </h4>
                   <p
-                    className="c16 c6"
+                    className="c19 c6"
                   >
                     An error occurred while loading your CNS services
                   </p>
@@ -3978,50 +4095,50 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
               </div>
             </div>
             <div
-              className="c11"
+              className="c14"
             >
               <h3
-                className="c17 c18"
+                className="c20 c21"
               >
                 CNS Default Hostnames
               </h3>
               <div
-                className="c19"
+                className="c22"
               >
                 <p
-                  className="c20 c6"
+                  className="c23 c6"
                 >
                   Default hostnames are automatically generated from both the instance name and any attached networks.
                 </p>
               </div>
             </div>
             <div
-              className="c21"
+              className="c24"
             />
             <div
-              className="c19"
+              className="c22"
             >
               <div
-                className="c22 c23 c3"
+                className="c25 c26 c3"
                 height="0.0625rem"
               />
             </div>
             <div
-              className="c24"
+              className="c27"
             >
               <div
-                className="c25"
+                className="c28"
               >
                 <h3
-                  className="c17 c18"
+                  className="c20 c21"
                 >
                   CNS Service hostnames
                 </h3>
                 <div
-                  className="c19"
+                  className="c22"
                 >
                   <p
-                    className="c20 c6"
+                    className="c23 c6"
                   >
                     CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
                   </p>
@@ -4031,33 +4148,33 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
                 onSubmit={undefined}
               >
                 <div
-                  className="c26"
+                  className="c29"
                   wrap={true}
                 >
                   <div
-                    className="c27"
+                    className="c30"
                   >
                     <div
-                      className="c28"
+                      className="c31"
                     >
                       <div
-                        className="c29"
+                        className="c32"
                         id="cns-service-name-input"
                         name="name"
                         role="group"
                         style={undefined}
                       >
                         <label
-                          className="c30 c31"
+                          className="c33 c34"
                           htmlFor="cns-service-name-input"
                         >
                           Attach to new CNS service name
                         </label>
                         <div
-                          className="c32"
+                          className="c35"
                         >
                           <input
-                            className="c33"
+                            className="c36"
                             disabled={false}
                             id="cns-service-name-input"
                             onBlur={null}
@@ -4068,13 +4185,13 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c27"
+                    className="c30"
                   >
                     <div
-                      className="c34"
+                      className="c37"
                     >
                       <button
-                        className="c35 c36 c37 c38"
+                        className="c38 c39 c40 c41"
                         data-ui-button="true"
                         disabled={undefined}
                         href=""
@@ -4131,7 +4248,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   display: block;
 }
 
-.c7 {
+.c10 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4141,7 +4258,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   display: block;
 }
 
-.c25 {
+.c28 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4155,71 +4272,77 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c11 {
+.c14 {
   margin-bottom: 1.875rem;
 }
 
-.c14 {
+.c17 {
   margin-top: 0.75rem;
 }
 
-.c32 {
+.c35 {
   margin-top: 1.875rem;
 }
 
-.c33 {
+.c36 {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
 
-.c24 {
+.c27 {
   margin-top: 0.1875rem;
 }
 
-.c44 {
+.c47 {
   margin-left: 0.75rem;
 }
 
-.c53 {
+.c56 {
   margin-left: 0.375rem;
 }
 
-.c22 {
+.c25 {
   margin-right: 0.375rem;
   margin-bottom: 0.1875rem;
 }
 
-.c26 {
+.c29 {
   margin-bottom: 0.1875rem;
 }
 
-.c36 {
+.c39 {
   margin-top: 0.375rem;
 }
 
-.c39 {
+.c42 {
   margin-right: 0.375rem;
   margin-bottom: 0.375rem;
 }
 
-.c49 {
+.c52 {
   margin-top: 0.1875rem;
   margin-bottom: 0.375rem;
 }
 
-.c50 {
+.c53 {
   margin-bottom: 0rem;
 }
 
-.c10 {
+.c13 {
   padding: 1.875rem;
 }
 
-.c20 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c23 {
   font-size: 80%;
 }
 
-.c48 {
+.c51 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -4231,19 +4354,37 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   appearance: button;
 }
 
-.c48::-moz-focus-inner,
-.c48[type='button']::-moz-focus-inner,
-.c48[type='reset']::-moz-focus-inner,
-.c48[type='submit']::-moz-focus-inner {
+.c51::-moz-focus-inner,
+.c51[type='button']::-moz-focus-inner,
+.c51[type='reset']::-moz-focus-inner,
+.c51[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c48:-moz-focusring,
-.c48[type='button']:-moz-focusring,
-.c48[type='reset']:-moz-focusring,
-.c48[type='submit']:-moz-focusring {
+.c51:-moz-focusring,
+.c51[type='button']:-moz-focusring,
+.c51[type='reset']:-moz-focusring,
+.c51[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -4253,15 +4394,15 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c47 {
+.c50 {
   min-width: 7.5rem;
 }
 
-.c46 {
+.c49 {
   display: inline-block;
 }
 
-.c45 {
+.c48 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4300,7 +4441,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c45:focus {
+.c48:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4308,26 +4449,26 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c45:hover {
+.c48:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c45:active,
-.c45:active:hover,
-.c45:active:focus {
+.c48:active,
+.c48:active:hover,
+.c48:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c45[disabled] {
+.c48[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c35 {
+.c38 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -4344,7 +4485,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c13 {
+.c16 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -4352,7 +4493,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   font-size: 1.3125rem;
 }
 
-.c19 {
+.c22 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   color: rgb(73,73,73);
   line-height: 1.125rem;
@@ -4360,19 +4501,19 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   font-weight: 600;
 }
 
-.c23 {
+.c26 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   color: rgb(73,73,73);
   line-height: 1.125rem;
   font-size: 0.8125rem;
 }
 
-.c31 {
+.c34 {
   height: 1px;
   background-color: rgb(216,216,216);
 }
 
-.c16 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4395,7 +4536,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c41 {
+.c44 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4422,7 +4563,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c17 {
+.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4442,7 +4583,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c51 {
+.c54 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4466,7 +4607,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   align-items: center;
 }
 
-.c21 {
+.c24 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -4483,7 +4624,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   display: block;
 }
 
-.c8 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4505,7 +4646,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4521,7 +4662,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c42 {
+.c45 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -4533,7 +4674,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c28 {
+.c31 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -4542,7 +4683,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
   border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(250,250,250);
+  color: rgb(73,73,73);
   font-size: 0.9375rem;
   line-height: normal !important;
   font-style: normal;
@@ -4551,82 +4692,67 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
 }
 
-.c28:focus {
+.c31:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c28::-webkit-input-placeholder {
+.c31::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28::-moz-placeholder {
+.c31::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:-ms-input-placeholder {
+.c31:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:invalid {
+.c31:invalid {
   box-shadow: none;
 }
 
-.c28::-webkit-input-placeholder {
-  color: rgb(216,216,216);
-}
-
-.c28::-moz-placeholder {
-  color: rgb(216,216,216);
-}
-
-.c28:-ms-input-placeholder {
-  color: rgb(216,216,216);
-}
-
-.c28:disabled {
+.c31:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c28:disabled::-webkit-input-placeholder {
+.c31:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled::-moz-placeholder {
+.c31:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled:-ms-input-placeholder {
+.c31:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c28:disabled {
+.c31:disabled {
   color: rgb(73,73,73);
 }
 
-.c28:disabled::-webkit-input-placeholder {
+.c31:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c28:disabled::-moz-placeholder {
+.c31:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c28:disabled:-ms-input-placeholder {
+.c31:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c43 {
+.c46 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -4651,71 +4777,71 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c43:focus {
+.c46:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c43::-webkit-input-placeholder {
+.c46::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c43::-moz-placeholder {
+.c46::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c43:-ms-input-placeholder {
+.c46:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c43:invalid {
+.c46:invalid {
   box-shadow: none;
 }
 
-.c43::-webkit-input-placeholder {
+.c46::-webkit-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c43::-moz-placeholder {
+.c46::-moz-placeholder {
   color: rgb(216,216,216);
 }
 
-.c43:-ms-input-placeholder {
+.c46:-ms-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c43:disabled {
+.c46:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c43:disabled::-webkit-input-placeholder {
+.c46:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c43:disabled::-moz-placeholder {
+.c46:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c43:disabled:-ms-input-placeholder {
+.c46:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34 {
+.c37 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c52 {
+.c55 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   color: rgb(216,216,216);
 }
 
-.c54 {
+.c57 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -4728,36 +4854,36 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   align-items: center;
 }
 
-.c56 {
+.c59 {
   display: none;
 }
 
-.c56:checked + label {
+.c59:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c56:checked + label:after {
+.c59:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c56:checked + label:active {
+.c59:checked + label:active {
   box-shadow: none;
 }
 
-.c56:checked + label {
+.c59:checked + label {
   background: rgb(250,250,250);
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c56:checked + label:after {
+.c59:checked + label:after {
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c57 {
+.c60 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -4777,24 +4903,24 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c57::selection {
+.c60::selection {
   background: none;
 }
 
-.c57:active {
+.c60:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c57:hover {
+.c60:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c57:hover:after {
+.c60:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c57:after,
-.c57:before {
+.c60:after,
+.c60:before {
   position: relative;
   display: block;
   content: '';
@@ -4802,7 +4928,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   height: 100%;
 }
 
-.c57:after {
+.c60:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -4814,40 +4940,40 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c57:active {
+.c60:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c57:before {
+.c60:before {
   display: none;
 }
 
-.c57:active {
+.c60:active {
   box-shadow: none;
 }
 
-.c57:active:after {
+.c60:active:after {
   padding-right: 0;
 }
 
-.c57:before {
+.c60:before {
   cursor: not-allowed;
 }
 
-.c57:after {
+.c60:after {
   cursor: not-allowed;
   background: rgb(230,230,230);
 }
 
-.c57:hover {
+.c60:hover {
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c57:hover:after {
+.c60:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c27 {
+.c30 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4858,20 +4984,20 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   align-items: center;
 }
 
-.c27 input {
+.c30 input {
   padding-right: 1.875rem;
 }
 
-.c27 div {
+.c30 div {
   position: relative;
   left: -1.625rem;
 }
 
-.c29 {
+.c32 {
   cursor: pointer;
 }
 
-.c40 {
+.c43 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -4894,7 +5020,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   border: 0.0625rem solid rgb(45,56,132);
 }
 
-.c38 {
+.c41 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -4911,29 +5037,29 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   font-weight: 200;
 }
 
-.c37 {
+.c40 {
   margin-bottom: -0.375rem;
 }
 
-.c18 {
+.c21 {
   padding-right: 0.75rem;
   margin-right: 0.75rem;
   border-right: 0.0625rem solid rgb(216,216,216);
-}
-
-.c12 {
-  margin: 0;
 }
 
 .c15 {
   margin: 0;
 }
 
-.c55 {
+.c18 {
+  margin: 0;
+}
+
+.c58 {
   margin: 0 6px;
 }
 
-.c30 {
+.c33 {
   margin-left: 0;
   margin-right: 0;
 }
@@ -4975,7 +5101,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -4984,7 +5110,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -4993,7 +5119,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -5002,7 +5128,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c28 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -5011,7 +5137,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c25 {
+  .c28 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -5044,11 +5170,15 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
           Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
            
           <a
-            href="https://docs.joyent.com/private-cloud/install/cns"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/private-cloud/install/cns"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -5058,50 +5188,50 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
     className="c3"
   >
     <div
-      className="c7"
+      className="c10"
     >
       <div
-        className="c8"
+        className="c11"
         disabled={false}
         name="card"
       >
         <div
-          className="c9 c8"
+          className="c12 c11"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c10"
+            className="c13"
           >
             <div
-              className="c11"
+              className="c14"
             >
               <h3
-                className="c12 c13"
+                className="c15 c16"
               >
                 CNS Default Hostnames
               </h3>
               <div
-                className="c14"
+                className="c17"
               >
                 <p
-                  className="c15 c6"
+                  className="c18 c6"
                 >
                   Default hostnames are automatically generated from both the instance name and any attached networks.
                 </p>
               </div>
             </div>
             <div
-              className="c16"
+              className="c19"
             >
               <div
                 className="c2"
               >
                 <div
-                  className="c17"
+                  className="c20"
                 >
                   <small
-                    className="c18 c19 c20"
+                    className="c21 c22 c23"
                   >
                     Instance name
                      
@@ -5109,10 +5239,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                     
                   </small>
                   <div
-                    className="c21"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c25"
                     >
                       <svg
                         height="16"
@@ -5132,34 +5262,33 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c21"
+                    className="c24"
                   >
                     <small
-                      className="c23 c20"
+                      className="c26 c23"
                     >
                       Public
                     </small>
                   </div>
                 </div>
                 <div
-                  className="c24"
+                  className="c27"
                 >
                   <div
                     className="c3"
                   >
                     <div
-                      className="c25"
+                      className="c28"
                     >
                       <div
-                        className="c26"
+                        className="c29"
                       />
                       <div
-                        className="c27"
-                        disabled={true}
+                        className="c30"
                       >
                         <input
-                          className="c28"
-                          disabled={true}
+                          className="c31"
+                          disabled={false}
                           id=""
                           onBlur={null}
                           value="stuffy-stuff"
@@ -5175,7 +5304,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                           }
                         >
                           <svg
-                            className="c29"
+                            className="c32"
                             height="19"
                             innerRef={undefined}
                             onClick={[Function]}
@@ -5203,10 +5332,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                 className="c2"
               >
                 <div
-                  className="c17"
+                  className="c20"
                 >
                   <small
-                    className="c18 c19 c20"
+                    className="c21 c22 c23"
                   >
                     Instance name
                      
@@ -5214,10 +5343,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                     
                   </small>
                   <div
-                    className="c21"
+                    className="c24"
                   >
                     <div
-                      className="c22"
+                      className="c25"
                     >
                       <svg
                         height="16"
@@ -5238,34 +5367,33 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c21"
+                    className="c24"
                   >
                     <small
-                      className="c23 c20"
+                      className="c26 c23"
                     >
                       Private
                     </small>
                   </div>
                 </div>
                 <div
-                  className="c24"
+                  className="c27"
                 >
                   <div
                     className="c3"
                   >
                     <div
-                      className="c25"
+                      className="c28"
                     >
                       <div
-                        className="c26"
+                        className="c29"
                       />
                       <div
-                        className="c27"
-                        disabled={true}
+                        className="c30"
                       >
                         <input
-                          className="c28"
-                          disabled={true}
+                          className="c31"
+                          disabled={false}
                           id=""
                           onBlur={null}
                           value="stuffy-stuff"
@@ -5281,7 +5409,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                           }
                         >
                           <svg
-                            className="c29"
+                            className="c32"
                             height="19"
                             innerRef={undefined}
                             onClick={[Function]}
@@ -5307,29 +5435,29 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
               </div>
             </div>
             <div
-              className="c14"
+              className="c17"
             >
               <div
-                className="c30 c31 c3"
+                className="c33 c34 c3"
                 height="0.0625rem"
               />
             </div>
             <div
-              className="c32"
+              className="c35"
             >
               <div
-                className="c33"
+                className="c36"
               >
                 <h3
-                  className="c12 c13"
+                  className="c15 c16"
                 >
                   CNS Service hostnames
                 </h3>
                 <div
-                  className="c14"
+                  className="c17"
                 >
                   <p
-                    className="c15 c6"
+                    className="c18 c6"
                   >
                     CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
                   </p>
@@ -5339,22 +5467,22 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                 className="c2"
               >
                 <label
-                  className="c34 c35"
+                  className="c37 c38"
                   htmlFor=""
                 >
                   Existing CNS service name(s)
                 </label>
                 <div
-                  className="c36"
+                  className="c39"
                 >
                   <ul
-                    className="c37 c38"
+                    className="c40 c41"
                   >
                     <div
-                      className="c39"
+                      className="c42"
                     >
                       <li
-                        className="c40"
+                        className="c43"
                         fill="rgba(66, 134, 244, 0.1)"
                         id="cns-tag-0"
                       >
@@ -5362,10 +5490,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       </li>
                     </div>
                     <div
-                      className="c39"
+                      className="c42"
                     >
                       <li
-                        className="c40"
+                        className="c43"
                         fill="rgba(66, 134, 244, 0.1)"
                         id="cns-tag-1"
                       >
@@ -5373,10 +5501,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       </li>
                     </div>
                     <div
-                      className="c39"
+                      className="c42"
                     >
                       <li
-                        className="c40"
+                        className="c43"
                         fill="rgba(66, 134, 244, 0.1)"
                         id="cns-tag-2"
                       >
@@ -5390,33 +5518,33 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                 onSubmit={undefined}
               >
                 <div
-                  className="c41"
+                  className="c44"
                   wrap={true}
                 >
                   <div
-                    className="c21"
+                    className="c24"
                   >
                     <div
-                      className="c17"
+                      className="c20"
                     >
                       <div
-                        className="c42"
+                        className="c45"
                         id="cns-service-name-input"
                         name="name"
                         role="group"
                         style={undefined}
                       >
                         <label
-                          className="c34 c35"
+                          className="c37 c38"
                           htmlFor="cns-service-name-input"
                         >
                           Attach to new CNS service name
                         </label>
                         <div
-                          className="c24"
+                          className="c27"
                         >
                           <input
-                            className="c43"
+                            className="c46"
                             disabled={true}
                             id="cns-service-name-input"
                             onBlur={null}
@@ -5427,13 +5555,13 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c21"
+                    className="c24"
                   >
                     <div
-                      className="c44"
+                      className="c47"
                     >
                       <button
-                        className="c45 c46 c47 c48"
+                        className="c48 c49 c50 c51"
                         data-ui-button="true"
                         disabled={undefined}
                         href=""
@@ -5447,19 +5575,19 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                 </div>
               </form>
               <div
-                className="c32"
+                className="c35"
               >
                 <div
-                  className="c16"
+                  className="c19"
                 >
                   <div
                     className="c2"
                   >
                     <div
-                      className="c17"
+                      className="c20"
                     >
                       <small
-                        className="c18 c19 c20"
+                        className="c21 c22 c23"
                       >
                         CNS service
                          
@@ -5467,10 +5595,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                         s
                       </small>
                       <div
-                        className="c21"
+                        className="c24"
                       >
                         <div
-                          className="c22"
+                          className="c25"
                         >
                           <svg
                             height="16"
@@ -5490,34 +5618,33 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c21"
+                        className="c24"
                       >
                         <small
-                          className="c23 c20"
+                          className="c26 c23"
                         >
                           Public
                         </small>
                       </div>
                     </div>
                     <div
-                      className="c49"
+                      className="c52"
                     >
                       <div
                         className="c3"
                       >
                         <div
-                          className="c25"
+                          className="c28"
                         >
                           <div
-                            className="c26"
+                            className="c29"
                           />
                           <div
-                            className="c27"
-                            disabled={true}
+                            className="c30"
                           >
                             <input
-                              className="c28"
-                              disabled={true}
+                              className="c31"
+                              disabled={false}
                               id=""
                               onBlur={null}
                               value="serbice"
@@ -5533,7 +5660,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                               }
                             >
                               <svg
-                                className="c29"
+                                className="c32"
                                 height="19"
                                 innerRef={undefined}
                                 onClick={[Function]}
@@ -5557,24 +5684,23 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c49"
+                      className="c52"
                     >
                       <div
                         className="c3"
                       >
                         <div
-                          className="c25"
+                          className="c28"
                         >
                           <div
-                            className="c26"
+                            className="c29"
                           />
                           <div
-                            className="c27"
-                            disabled={true}
+                            className="c30"
                           >
                             <input
-                              className="c28"
-                              disabled={true}
+                              className="c31"
+                              disabled={false}
                               id=""
                               onBlur={null}
                               value="dssasda"
@@ -5590,7 +5716,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                               }
                             >
                               <svg
-                                className="c29"
+                                className="c32"
                                 height="19"
                                 innerRef={undefined}
                                 onClick={[Function]}
@@ -5614,24 +5740,23 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c24"
+                      className="c27"
                     >
                       <div
                         className="c3"
                       >
                         <div
-                          className="c25"
+                          className="c28"
                         >
                           <div
-                            className="c26"
+                            className="c29"
                           />
                           <div
-                            className="c27"
-                            disabled={true}
+                            className="c30"
                           >
                             <input
-                              className="c28"
-                              disabled={true}
+                              className="c31"
+                              disabled={false}
                               id=""
                               onBlur={null}
                               value="dsasd"
@@ -5647,7 +5772,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                               }
                             >
                               <svg
-                                className="c29"
+                                className="c32"
                                 height="19"
                                 innerRef={undefined}
                                 onClick={[Function]}
@@ -5672,13 +5797,13 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c50"
+                    className="c53"
                   >
                     <div
-                      className="c17"
+                      className="c20"
                     >
                       <small
-                        className="c18 c19 c20"
+                        className="c21 c22 c23"
                       >
                         CNS service
                          
@@ -5686,10 +5811,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                         s
                       </small>
                       <div
-                        className="c21"
+                        className="c24"
                       >
                         <div
-                          className="c22"
+                          className="c25"
                         >
                           <svg
                             height="16"
@@ -5710,34 +5835,33 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c21"
+                        className="c24"
                       >
                         <small
-                          className="c23 c20"
+                          className="c26 c23"
                         >
                           Private
                         </small>
                       </div>
                     </div>
                     <div
-                      className="c49"
+                      className="c52"
                     >
                       <div
                         className="c3"
                       >
                         <div
-                          className="c25"
+                          className="c28"
                         >
                           <div
-                            className="c26"
+                            className="c29"
                           />
                           <div
-                            className="c27"
-                            disabled={true}
+                            className="c30"
                           >
                             <input
-                              className="c28"
-                              disabled={true}
+                              className="c31"
+                              disabled={false}
                               id=""
                               onBlur={null}
                               value="serbice"
@@ -5753,7 +5877,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                               }
                             >
                               <svg
-                                className="c29"
+                                className="c32"
                                 height="19"
                                 innerRef={undefined}
                                 onClick={[Function]}
@@ -5777,24 +5901,23 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c49"
+                      className="c52"
                     >
                       <div
                         className="c3"
                       >
                         <div
-                          className="c25"
+                          className="c28"
                         >
                           <div
-                            className="c26"
+                            className="c29"
                           />
                           <div
-                            className="c27"
-                            disabled={true}
+                            className="c30"
                           >
                             <input
-                              className="c28"
-                              disabled={true}
+                              className="c31"
+                              disabled={false}
                               id=""
                               onBlur={null}
                               value="dssasda"
@@ -5810,7 +5933,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                               }
                             >
                               <svg
-                                className="c29"
+                                className="c32"
                                 height="19"
                                 innerRef={undefined}
                                 onClick={[Function]}
@@ -5834,24 +5957,23 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c24"
+                      className="c27"
                     >
                       <div
                         className="c3"
                       >
                         <div
-                          className="c25"
+                          className="c28"
                         >
                           <div
-                            className="c26"
+                            className="c29"
                           />
                           <div
-                            className="c27"
-                            disabled={true}
+                            className="c30"
                           >
                             <input
-                              className="c28"
-                              disabled={true}
+                              className="c31"
+                              disabled={false}
                               id=""
                               onBlur={null}
                               value="dsasd"
@@ -5867,7 +5989,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                               }
                             >
                               <svg
-                                className="c29"
+                                className="c32"
                                 height="19"
                                 innerRef={undefined}
                                 onClick={[Function]}
@@ -5898,36 +6020,36 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
         </div>
       </div>
       <div
-        className="c32"
+        className="c35"
       >
         <div
           className="c2"
         >
           <div
-            className="c42"
+            className="c45"
             name="cns-enabled"
             role="group"
             style={undefined}
           >
             <div
-              className="c51"
+              className="c54"
             >
               <label
-                className="c52 c35"
+                className="c55 c38"
                 disabled={true}
                 htmlFor="q"
               >
                 Disabled CNS
               </label>
               <div
-                className="c53"
+                className="c56"
               >
                 <div
-                  className="c54"
+                  className="c57"
                 >
                   <input
                     checked={true}
-                    className="c55 c56"
+                    className="c58 c59"
                     disabled={true}
                     id="q"
                     onBlur={undefined}
@@ -5936,7 +6058,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c55 c57"
+                    className="c58 c60"
                     disabled={true}
                     htmlFor="q"
                     id="q"
@@ -5945,7 +6067,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c55 c52 c35"
+                    className="c58 c55 c38"
                     disabled={true}
                     htmlFor="q"
                     id="q"
@@ -6001,7 +6123,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   display: block;
 }
 
-.c7 {
+.c10 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6015,40 +6137,46 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c11 {
+.c14 {
   margin-bottom: 1.875rem;
 }
 
-.c19 {
+.c22 {
   margin-top: 0.75rem;
 }
 
-.c24 {
+.c27 {
   margin-top: 1.875rem;
 }
 
-.c25 {
+.c28 {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
 
-.c32 {
+.c35 {
   margin-top: 0.1875rem;
 }
 
-.c34 {
+.c37 {
   margin-left: 0.75rem;
 }
 
-.c40 {
+.c43 {
   margin-left: 0.375rem;
 }
 
-.c10 {
+.c13 {
   padding: 1.875rem;
 }
 
-.c38 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c41 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -6060,19 +6188,37 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   appearance: button;
 }
 
-.c38::-moz-focus-inner,
-.c38[type='button']::-moz-focus-inner,
-.c38[type='reset']::-moz-focus-inner,
-.c38[type='submit']::-moz-focus-inner {
+.c41::-moz-focus-inner,
+.c41[type='button']::-moz-focus-inner,
+.c41[type='reset']::-moz-focus-inner,
+.c41[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c38:-moz-focusring,
-.c38[type='button']:-moz-focusring,
-.c38[type='reset']:-moz-focusring,
-.c38[type='submit']:-moz-focusring {
+.c41:-moz-focusring,
+.c41[type='button']:-moz-focusring,
+.c41[type='reset']:-moz-focusring,
+.c41[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -6082,15 +6228,15 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c37 {
+.c40 {
   min-width: 7.5rem;
 }
 
-.c36 {
+.c39 {
   display: inline-block;
 }
 
-.c35 {
+.c38 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6129,7 +6275,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c35:focus {
+.c38:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6137,26 +6283,26 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c35:hover {
+.c38:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c35:active,
-.c35:active:hover,
-.c35:active:focus {
+.c38:active,
+.c38:active:hover,
+.c38:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c35[disabled] {
+.c38[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31 {
+.c34 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -6173,7 +6319,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c18 {
+.c21 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -6181,7 +6327,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   font-size: 1.3125rem;
 }
 
-.c15 {
+.c18 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -6189,12 +6335,12 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c23 {
+.c26 {
   height: 1px;
   background-color: rgb(216,216,216);
 }
 
-.c21 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6217,7 +6363,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c26 {
+.c29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6244,7 +6390,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c28 {
+.c31 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6264,7 +6410,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c39 {
+.c42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6288,7 +6434,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c27 {
+.c30 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -6305,7 +6451,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   display: block;
 }
 
-.c12 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6318,23 +6464,23 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   width: 100%;
 }
 
-.c13 {
+.c16 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   min-width: 0.75rem;
   background-color: rgb(0,152,88);
   background-color: rgb(210,67,58);
 }
 
-.c14 {
+.c17 {
   padding: 1.125rem 1.125rem;
 }
 
-.c16 {
+.c19 {
   line-height: 0.875rem;
   font-size: 0.8125rem;
 }
 
-.c8 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6356,7 +6502,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -6372,7 +6518,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c29 {
+.c32 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -6384,7 +6530,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c33 {
+.c36 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -6406,52 +6552,52 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c33:focus {
+.c36:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c33::-webkit-input-placeholder {
+.c36::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33::-moz-placeholder {
+.c36::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:-ms-input-placeholder {
+.c36:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:invalid {
+.c36:invalid {
   box-shadow: none;
 }
 
-.c33:disabled {
+.c36:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c33:disabled::-webkit-input-placeholder {
+.c36:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:disabled::-moz-placeholder {
+.c36:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c33:disabled:-ms-input-placeholder {
+.c36:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c30 {
+.c33 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c41 {
+.c44 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -6464,27 +6610,27 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c43 {
+.c46 {
   display: none;
 }
 
-.c43:checked + label {
+.c46:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c43:checked + label:after {
+.c46:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c43:checked + label:active {
+.c46:checked + label:active {
   box-shadow: none;
 }
 
-.c44 {
+.c47 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -6503,24 +6649,24 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c44::selection {
+.c47::selection {
   background: none;
 }
 
-.c44:active {
+.c47:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c44:hover {
+.c47:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c44:hover:after {
+.c47:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c44:after,
-.c44:before {
+.c47:after,
+.c47:before {
   position: relative;
   display: block;
   content: '';
@@ -6528,7 +6674,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   height: 100%;
 }
 
-.c44:after {
+.c47:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -6540,11 +6686,11 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c44:active {
+.c47:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c44:before {
+.c47:before {
   display: none;
 }
 
@@ -6552,19 +6698,19 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   font-weight: 200;
 }
 
-.c17 {
-  margin: 0;
-}
-
 .c20 {
   margin: 0;
 }
 
-.c42 {
+.c23 {
+  margin: 0;
+}
+
+.c45 {
   margin: 0 6px;
 }
 
-.c22 {
+.c25 {
   margin-left: 0;
   margin-right: 0;
 }
@@ -6606,7 +6752,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -6615,7 +6761,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -6624,7 +6770,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -6657,11 +6803,15 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
           Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
            
           <a
-            href="https://docs.joyent.com/private-cloud/install/cns"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/private-cloud/install/cns"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -6671,40 +6821,40 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
     className="c3"
   >
     <div
-      className="c7"
+      className="c10"
     >
       <div
-        className="c8"
+        className="c11"
         disabled={false}
         name="card"
       >
         <div
-          className="c9 c8"
+          className="c12 c11"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c10"
+            className="c13"
           >
             <div
-              className="c11"
+              className="c14"
             >
               <div
-                className="c12"
+                className="c15"
               >
                 <div
-                  className="c13"
+                  className="c16"
                 />
                 <div
-                  className="c14"
+                  className="c17"
                 >
                   <h4
-                    className="c15"
+                    className="c18"
                   >
                     Ooops!
                   </h4>
                   <p
-                    className="c16 c6"
+                    className="c19 c6"
                   >
                     mutation error
                   </p>
@@ -6712,50 +6862,50 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
               </div>
             </div>
             <div
-              className="c11"
+              className="c14"
             >
               <h3
-                className="c17 c18"
+                className="c20 c21"
               >
                 CNS Default Hostnames
               </h3>
               <div
-                className="c19"
+                className="c22"
               >
                 <p
-                  className="c20 c6"
+                  className="c23 c6"
                 >
                   Default hostnames are automatically generated from both the instance name and any attached networks.
                 </p>
               </div>
             </div>
             <div
-              className="c21"
+              className="c24"
             />
             <div
-              className="c19"
+              className="c22"
             >
               <div
-                className="c22 c23 c3"
+                className="c25 c26 c3"
                 height="0.0625rem"
               />
             </div>
             <div
-              className="c24"
+              className="c27"
             >
               <div
-                className="c25"
+                className="c28"
               >
                 <h3
-                  className="c17 c18"
+                  className="c20 c21"
                 >
                   CNS Service hostnames
                 </h3>
                 <div
-                  className="c19"
+                  className="c22"
                 >
                   <p
-                    className="c20 c6"
+                    className="c23 c6"
                   >
                     CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
                   </p>
@@ -6765,33 +6915,33 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                 onSubmit={undefined}
               >
                 <div
-                  className="c26"
+                  className="c29"
                   wrap={true}
                 >
                   <div
-                    className="c27"
+                    className="c30"
                   >
                     <div
-                      className="c28"
+                      className="c31"
                     >
                       <div
-                        className="c29"
+                        className="c32"
                         id="cns-service-name-input"
                         name="name"
                         role="group"
                         style={undefined}
                       >
                         <label
-                          className="c30 c31"
+                          className="c33 c34"
                           htmlFor="cns-service-name-input"
                         >
                           Attach to new CNS service name
                         </label>
                         <div
-                          className="c32"
+                          className="c35"
                         >
                           <input
-                            className="c33"
+                            className="c36"
                             disabled={false}
                             id="cns-service-name-input"
                             onBlur={null}
@@ -6802,13 +6952,13 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c27"
+                    className="c30"
                   >
                     <div
-                      className="c34"
+                      className="c37"
                     >
                       <button
-                        className="c35 c36 c37 c38"
+                        className="c38 c39 c40 c41"
                         data-ui-button="true"
                         disabled={undefined}
                         href=""
@@ -6826,36 +6976,36 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
         </div>
       </div>
       <div
-        className="c24"
+        className="c27"
       >
         <div
           className="c2"
         >
           <div
-            className="c29"
+            className="c32"
             name="cns-enabled"
             role="group"
             style={undefined}
           >
             <div
-              className="c39"
+              className="c42"
             >
               <label
-                className="c30 c31"
+                className="c33 c34"
                 disabled={false}
                 htmlFor="o"
               >
                 Disabled CNS
               </label>
               <div
-                className="c40"
+                className="c43"
               >
                 <div
-                  className="c41"
+                  className="c44"
                 >
                   <input
                     checked={true}
-                    className="c42 c43"
+                    className="c45 c46"
                     disabled={false}
                     id="o"
                     onBlur={undefined}
@@ -6864,7 +7014,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c42 c44"
+                    className="c45 c47"
                     disabled={false}
                     htmlFor="o"
                     id="o"
@@ -6873,7 +7023,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c42 c30 c31"
+                    className="c45 c33 c34"
                     disabled={false}
                     htmlFor="o"
                     id="o"
@@ -6929,7 +7079,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   display: block;
 }
 
-.c7 {
+.c10 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6943,49 +7093,55 @@ exports[`renders <Cns services /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c11 {
+.c14 {
   margin-bottom: 1.875rem;
 }
 
-.c14 {
+.c17 {
   margin-top: 0.75rem;
 }
 
-.c19 {
+.c22 {
   margin-top: 1.875rem;
 }
 
-.c20 {
+.c23 {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
 
-.c33 {
+.c36 {
   margin-top: 0.1875rem;
 }
 
-.c35 {
+.c38 {
   margin-left: 0.75rem;
 }
 
-.c41 {
+.c44 {
   margin-left: 0.375rem;
 }
 
-.c23 {
+.c26 {
   margin-top: 0.375rem;
 }
 
-.c26 {
+.c29 {
   margin-right: 0.375rem;
   margin-bottom: 0.375rem;
 }
 
-.c10 {
+.c13 {
   padding: 1.875rem;
 }
 
-.c39 {
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c42 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -6997,19 +7153,37 @@ exports[`renders <Cns services /> without throwing 1`] = `
   appearance: button;
 }
 
-.c39::-moz-focus-inner,
-.c39[type='button']::-moz-focus-inner,
-.c39[type='reset']::-moz-focus-inner,
-.c39[type='submit']::-moz-focus-inner {
+.c42::-moz-focus-inner,
+.c42[type='button']::-moz-focus-inner,
+.c42[type='reset']::-moz-focus-inner,
+.c42[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c39:-moz-focusring,
-.c39[type='button']:-moz-focusring,
-.c39[type='reset']:-moz-focusring,
-.c39[type='submit']:-moz-focusring {
+.c42:-moz-focusring,
+.c42[type='button']:-moz-focusring,
+.c42[type='reset']:-moz-focusring,
+.c42[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -7019,15 +7193,15 @@ exports[`renders <Cns services /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c38 {
+.c41 {
   min-width: 7.5rem;
 }
 
-.c37 {
+.c40 {
   display: inline-block;
 }
 
-.c36 {
+.c39 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -7066,7 +7240,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c36:focus {
+.c39:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7074,26 +7248,26 @@ exports[`renders <Cns services /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c36:hover {
+.c39:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c36:active,
-.c36:active:hover,
-.c36:active:focus {
+.c39:active,
+.c39:active:hover,
+.c39:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c36[disabled] {
+.c39[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c22 {
+.c25 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -7110,7 +7284,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c13 {
+.c16 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -7118,12 +7292,12 @@ exports[`renders <Cns services /> without throwing 1`] = `
   font-size: 1.3125rem;
 }
 
-.c18 {
+.c21 {
   height: 1px;
   background-color: rgb(216,216,216);
 }
 
-.c16 {
+.c19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7146,7 +7320,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c29 {
+.c32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7173,7 +7347,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c31 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7193,7 +7367,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c40 {
+.c43 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7217,7 +7391,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   align-items: center;
 }
 
-.c30 {
+.c33 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -7234,7 +7408,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   display: block;
 }
 
-.c8 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7256,7 +7430,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -7272,7 +7446,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c32 {
+.c35 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -7284,7 +7458,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c34 {
+.c37 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -7306,52 +7480,52 @@ exports[`renders <Cns services /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c34:focus {
+.c37:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c34::-webkit-input-placeholder {
+.c37::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34::-moz-placeholder {
+.c37::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:-ms-input-placeholder {
+.c37:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:invalid {
+.c37:invalid {
   box-shadow: none;
 }
 
-.c34:disabled {
+.c37:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c34:disabled::-webkit-input-placeholder {
+.c37:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:disabled::-moz-placeholder {
+.c37:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:disabled:-ms-input-placeholder {
+.c37:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c21 {
+.c24 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c42 {
+.c45 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -7364,27 +7538,27 @@ exports[`renders <Cns services /> without throwing 1`] = `
   align-items: center;
 }
 
-.c44 {
+.c47 {
   display: none;
 }
 
-.c44:checked + label {
+.c47:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c44:checked + label:after {
+.c47:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c44:checked + label:active {
+.c47:checked + label:active {
   box-shadow: none;
 }
 
-.c45 {
+.c48 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -7403,24 +7577,24 @@ exports[`renders <Cns services /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c45::selection {
+.c48::selection {
   background: none;
 }
 
-.c45:active {
+.c48:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c45:hover {
+.c48:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c45:hover:after {
+.c48:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c45:after,
-.c45:before {
+.c48:after,
+.c48:before {
   position: relative;
   display: block;
   content: '';
@@ -7428,7 +7602,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   height: 100%;
 }
 
-.c45:after {
+.c48:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -7440,20 +7614,20 @@ exports[`renders <Cns services /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c45:active {
+.c48:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c45:before {
+.c48:before {
   display: none;
 }
 
-.c28 {
+.c31 {
   margin-left: 0.75rem;
   cursor: pointer;
 }
 
-.c27 {
+.c30 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -7476,7 +7650,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   border: 0.0625rem solid rgb(45,56,132);
 }
 
-.c25 {
+.c28 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -7493,23 +7667,23 @@ exports[`renders <Cns services /> without throwing 1`] = `
   font-weight: 200;
 }
 
-.c24 {
+.c27 {
   margin-bottom: -0.375rem;
-}
-
-.c12 {
-  margin: 0;
 }
 
 .c15 {
   margin: 0;
 }
 
-.c43 {
+.c18 {
+  margin: 0;
+}
+
+.c46 {
   margin: 0 6px;
 }
 
-.c17 {
+.c20 {
   margin-left: 0;
   margin-right: 0;
 }
@@ -7551,7 +7725,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -7560,7 +7734,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -7569,7 +7743,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -7602,11 +7776,15 @@ exports[`renders <Cns services /> without throwing 1`] = `
           Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
            
           <a
-            href="https://docs.joyent.com/private-cloud/install/cns"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/private-cloud/install/cns"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -7616,66 +7794,66 @@ exports[`renders <Cns services /> without throwing 1`] = `
     className="c3"
   >
     <div
-      className="c7"
+      className="c10"
     >
       <div
-        className="c8"
+        className="c11"
         disabled={false}
         name="card"
       >
         <div
-          className="c9 c8"
+          className="c12 c11"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c10"
+            className="c13"
           >
             <div
-              className="c11"
+              className="c14"
             >
               <h3
-                className="c12 c13"
+                className="c15 c16"
               >
                 CNS Default Hostnames
               </h3>
               <div
-                className="c14"
+                className="c17"
               >
                 <p
-                  className="c15 c6"
+                  className="c18 c6"
                 >
                   Default hostnames are automatically generated from both the instance name and any attached networks.
                 </p>
               </div>
             </div>
             <div
-              className="c16"
+              className="c19"
             />
             <div
-              className="c14"
+              className="c17"
             >
               <div
-                className="c17 c18 c3"
+                className="c20 c21 c3"
                 height="0.0625rem"
               />
             </div>
             <div
-              className="c19"
+              className="c22"
             >
               <div
-                className="c20"
+                className="c23"
               >
                 <h3
-                  className="c12 c13"
+                  className="c15 c16"
                 >
                   CNS Service hostnames
                 </h3>
                 <div
-                  className="c14"
+                  className="c17"
                 >
                   <p
-                    className="c15 c6"
+                    className="c18 c6"
                   >
                     CNS service hostnames are created by attaching a CNS service name to one or more instances. You can serve multiple instances under the same hostname by assigning them to a matching CNS service name.
                   </p>
@@ -7685,28 +7863,28 @@ exports[`renders <Cns services /> without throwing 1`] = `
                 className="c2"
               >
                 <label
-                  className="c21 c22"
+                  className="c24 c25"
                   htmlFor=""
                 >
                   Existing CNS service name(s)
                 </label>
                 <div
-                  className="c23"
+                  className="c26"
                 >
                   <ul
-                    className="c24 c25"
+                    className="c27 c28"
                   >
                     <div
-                      className="c26"
+                      className="c29"
                     >
                       <li
-                        className="c27"
+                        className="c30"
                         fill="rgba(66, 134, 244, 0.1)"
                         id="cns-tag-0"
                       >
                         serbice
                         <svg
-                          className="c28"
+                          className="c31"
                           height="11.31"
                           innerRef={undefined}
                           onClick={[Function]}
@@ -7727,16 +7905,16 @@ exports[`renders <Cns services /> without throwing 1`] = `
                       </li>
                     </div>
                     <div
-                      className="c26"
+                      className="c29"
                     >
                       <li
-                        className="c27"
+                        className="c30"
                         fill="rgba(66, 134, 244, 0.1)"
                         id="cns-tag-1"
                       >
                         dssasda
                         <svg
-                          className="c28"
+                          className="c31"
                           height="11.31"
                           innerRef={undefined}
                           onClick={[Function]}
@@ -7757,16 +7935,16 @@ exports[`renders <Cns services /> without throwing 1`] = `
                       </li>
                     </div>
                     <div
-                      className="c26"
+                      className="c29"
                     >
                       <li
-                        className="c27"
+                        className="c30"
                         fill="rgba(66, 134, 244, 0.1)"
                         id="cns-tag-2"
                       >
                         dsasd
                         <svg
-                          className="c28"
+                          className="c31"
                           height="11.31"
                           innerRef={undefined}
                           onClick={[Function]}
@@ -7793,33 +7971,33 @@ exports[`renders <Cns services /> without throwing 1`] = `
                 onSubmit={undefined}
               >
                 <div
-                  className="c29"
+                  className="c32"
                   wrap={true}
                 >
                   <div
-                    className="c30"
+                    className="c33"
                   >
                     <div
-                      className="c31"
+                      className="c34"
                     >
                       <div
-                        className="c32"
+                        className="c35"
                         id="cns-service-name-input"
                         name="name"
                         role="group"
                         style={undefined}
                       >
                         <label
-                          className="c21 c22"
+                          className="c24 c25"
                           htmlFor="cns-service-name-input"
                         >
                           Attach to new CNS service name
                         </label>
                         <div
-                          className="c33"
+                          className="c36"
                         >
                           <input
-                            className="c34"
+                            className="c37"
                             disabled={false}
                             id="cns-service-name-input"
                             onBlur={null}
@@ -7830,13 +8008,13 @@ exports[`renders <Cns services /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c30"
+                    className="c33"
                   >
                     <div
-                      className="c35"
+                      className="c38"
                     >
                       <button
-                        className="c36 c37 c38 c39"
+                        className="c39 c40 c41 c42"
                         data-ui-button="true"
                         disabled={undefined}
                         href=""
@@ -7854,36 +8032,36 @@ exports[`renders <Cns services /> without throwing 1`] = `
         </div>
       </div>
       <div
-        className="c19"
+        className="c22"
       >
         <div
           className="c2"
         >
           <div
-            className="c32"
+            className="c35"
             name="cns-enabled"
             role="group"
             style={undefined}
           >
             <div
-              className="c40"
+              className="c43"
             >
               <label
-                className="c21 c22"
+                className="c24 c25"
                 disabled={false}
                 htmlFor="t"
               >
                 Disabled CNS
               </label>
               <div
-                className="c41"
+                className="c44"
               >
                 <div
-                  className="c42"
+                  className="c45"
                 >
                   <input
                     checked={true}
-                    className="c43 c44"
+                    className="c46 c47"
                     disabled={false}
                     id="t"
                     onBlur={undefined}
@@ -7892,7 +8070,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c43 c45"
+                    className="c46 c48"
                     disabled={false}
                     htmlFor="t"
                     id="t"
@@ -7901,7 +8079,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c43 c21 c22"
+                    className="c46 c24 c25"
                     disabled={false}
                     htmlFor="t"
                     id="t"
@@ -7957,7 +8135,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   display: block;
 }
 
-.c7 {
+.c10 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -7971,16 +8149,40 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c11 {
+.c14 {
   margin-top: 1.875rem;
 }
 
-.c16 {
+.c19 {
   margin-left: 0.375rem;
 }
 
-.c10 {
+.c13 {
   padding: 1.875rem;
+}
+
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -7990,7 +8192,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c15 {
+.c18 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -8007,7 +8209,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c13 {
+.c16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8031,7 +8233,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   align-items: center;
 }
 
-.c8 {
+.c11 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -8053,7 +8255,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c9 {
+.c12 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -8069,7 +8271,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c12 {
+.c15 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -8081,13 +8283,13 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c14 {
+.c17 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c17 {
+.c20 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -8100,27 +8302,27 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   align-items: center;
 }
 
-.c19 {
+.c22 {
   display: none;
 }
 
-.c19:checked + label {
+.c22:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c19:checked + label:after {
+.c22:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c19:checked + label:active {
+.c22:checked + label:active {
   box-shadow: none;
 }
 
-.c20 {
+.c23 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -8139,24 +8341,24 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c20::selection {
+.c23::selection {
   background: none;
 }
 
-.c20:active {
+.c23:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c20:hover {
+.c23:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c20:hover:after {
+.c23:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c20:after,
-.c20:before {
+.c23:after,
+.c23:before {
   position: relative;
   display: block;
   content: '';
@@ -8164,7 +8366,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   height: 100%;
 }
 
-.c20:after {
+.c23:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -8176,11 +8378,11 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c20:active {
+.c23:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c20:before {
+.c23:before {
   display: none;
 }
 
@@ -8188,7 +8390,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
   font-weight: 200;
 }
 
-.c18 {
+.c21 {
   margin: 0 6px;
 }
 
@@ -8229,7 +8431,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -8238,7 +8440,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -8247,7 +8449,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:64em) {
-  .c7 {
+  .c10 {
     -webkit-flex-basis: 75%;
     -ms-flex-preferred-size: 75%;
     flex-basis: 75%;
@@ -8280,11 +8482,15 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
           Triton CNS is used to automatically update hostnames for your instances. You can serve multiple instances (with multiple IP addresses) under the same hostname by matching the CNS service names.
            
           <a
-            href="https://docs.joyent.com/private-cloud/install/cns"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/private-cloud/install/cns"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -8294,54 +8500,54 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
     className="c3"
   >
     <div
-      className="c7"
+      className="c10"
     >
       <div
-        className="c8"
+        className="c11"
         disabled={false}
         name="card"
       >
         <div
-          className="c9 c8"
+          className="c12 c11"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c10"
+            className="c13"
           />
         </div>
       </div>
       <div
-        className="c11"
+        className="c14"
       >
         <div
           className="c2"
         >
           <div
-            className="c12"
+            className="c15"
             name="cns-enabled"
             role="group"
             style={undefined}
           >
             <div
-              className="c13"
+              className="c16"
             >
               <label
-                className="c14 c15"
+                className="c17 c18"
                 disabled={false}
                 htmlFor="w"
               >
                 Disabled CNS
               </label>
               <div
-                className="c16"
+                className="c19"
               >
                 <div
-                  className="c17"
+                  className="c20"
                 >
                   <input
                     checked={false}
-                    className="c18 c19"
+                    className="c21 c22"
                     disabled={false}
                     id="w"
                     onBlur={undefined}
@@ -8350,7 +8556,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
                   />
                   <label
                     checked={false}
-                    className="c18 c20"
+                    className="c21 c23"
                     disabled={false}
                     htmlFor="w"
                     id="w"
@@ -8359,7 +8565,7 @@ exports[`renders <Cns services hostnames /> without throwing 1`] = `
                   />
                   <label
                     checked={false}
-                    className="c18 c14 c15"
+                    className="c21 c17 c18"
                     disabled={false}
                     htmlFor="w"
                     id="w"

@@ -34,7 +34,7 @@ import { EmptyState } from 'joyent-icons';
 
 const GroupIcons = {
   MEMORY: <MemoryIcon fill="#32ABCF" />,
-  STORAGE: <StorageIcon fill="#A88A83" />,
+  STORAGE: <StorageIcon fill="#DADADA" />,
   GENERAL: <GeneralIcon fill="#E08A0E" />,
   COMPUTE: <CpuIcon fill="#8043DC" />
 };
@@ -106,7 +106,7 @@ export const Filters = ({ onResetFilters }) => (
         <Checkbox>
           <FormLabel noMargin actionable>
             <Flex alignCenter>
-              <Margin left={1}>{GroupIcons.GENERAL}</Margin>
+              <Margin left={1}>{GroupIcons.STORAGE}</Margin>
               <Margin left={1} right={3}>
                 Storage Optimized
               </Margin>

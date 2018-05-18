@@ -44,11 +44,18 @@ export default ({ theme }) => css`
   }
 
   .CodeMirror {
+    height: 130px;
     border: solid ${remcalc(1)} ${theme.grey};
     margin: ${remcalc(8)} 0 ${remcalc(8)} 0;
     font-family: "Roboto Mono", monospace !important;
   }
-
+  
+  .CodeMirror.cm-s-eclipse.CodeMirror-wrap,
+  .CodeMirror-gutter,
+  .CodeMirror-scroll {
+    height: auto !important;
+  }
+  
   [name=user-script] .CodeMirror {
     margin: 0;
   }

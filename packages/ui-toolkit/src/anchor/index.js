@@ -11,11 +11,16 @@ const A = styled(BaseA)`
 const BaseLink = styled(({ component, children, ...rest }) =>
   React.createElement(component, rest, children)
 )`
+  ${props => console.log(props.theme)}
   color: ${props => props.theme.primary};
   -webkit-text-fill-color: currentcolor;
 
   &:hover {
     text-decoration: none;
+  }
+
+  a:hover{
+    color: ${props => props.theme.primaryActive};
   }
 
   ${isOr('secondary', 'reversed')`

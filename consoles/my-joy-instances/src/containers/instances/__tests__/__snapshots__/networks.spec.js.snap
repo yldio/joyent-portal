@@ -5,12 +5,36 @@ exports[`renders <Networks /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c12 {
+.c15 {
   margin-bottom: 0.75rem;
 }
 
-.c10 {
+.c13 {
   padding: 8rem;
+}
+
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -61,7 +85,7 @@ exports[`renders <Networks /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c7 {
+.c10 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -69,7 +93,7 @@ exports[`renders <Networks /> without throwing 1`] = `
   font-size: 1.3125rem;
 }
 
-.c11 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -100,7 +124,7 @@ exports[`renders <Networks /> without throwing 1`] = `
   align-items: center;
 }
 
-.c9 {
+.c12 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -122,12 +146,12 @@ exports[`renders <Networks /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c13 {
+.c16 {
   color: rgb(151,151,151);
   text-align: center;
 }
 
-.c8 {
+.c11 {
   width: calc(100% - 0.125rem);
   background: transparent;
 }
@@ -197,11 +221,15 @@ exports[`renders <Networks /> without throwing 1`] = `
           Use predefined or customized fabric networks which can be public-facing or private. All fabrics are isolated from other customers giving you complete control over the network environment. Read more on fabrics.
            
           <a
-            href="https://docs.joyent.com/public-cloud/network/sdn"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/public-cloud/network/sdn"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -211,24 +239,24 @@ exports[`renders <Networks /> without throwing 1`] = `
     className="c2"
   >
     <h3
-      className="c7"
+      className="c10"
     >
       Networks attached to this instance
     </h3>
   </div>
   <div
-    className="c8 c9"
+    className="c11 c12"
     disabled={false}
     name="card"
   >
     <div
-      className="c10"
+      className="c13"
     >
       <div
-        className="c11"
+        className="c14"
       >
         <div
-          className="c12"
+          className="c15"
         >
           <svg
             height={109}
@@ -517,7 +545,7 @@ exports[`renders <Networks /> without throwing 1`] = `
           </svg>
         </div>
         <h3
-          className="c13 c7"
+          className="c16 c10"
         >
           You have no networks attached to this instance
         </h3>
@@ -532,8 +560,32 @@ exports[`renders <Networks error /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c8 {
+.c11 {
   margin-bottom: 1.875rem;
+}
+
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -584,7 +636,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c7 {
+.c10 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -592,7 +644,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   font-size: 1.3125rem;
 }
 
-.c12 {
+.c15 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -600,7 +652,7 @@ exports[`renders <Networks error /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c9 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -613,18 +665,18 @@ exports[`renders <Networks error /> without throwing 1`] = `
   width: 100%;
 }
 
-.c10 {
+.c13 {
   border-radius: 0.1875rem 0 0 0.1875rem;
   min-width: 0.75rem;
   background-color: rgb(0,152,88);
   background-color: rgb(210,67,58);
 }
 
-.c11 {
+.c14 {
   padding: 1.125rem 1.125rem;
 }
 
-.c13 {
+.c16 {
   line-height: 0.875rem;
   font-size: 0.8125rem;
 }
@@ -694,11 +746,15 @@ exports[`renders <Networks error /> without throwing 1`] = `
           Use predefined or customized fabric networks which can be public-facing or private. All fabrics are isolated from other customers giving you complete control over the network environment. Read more on fabrics.
            
           <a
-            href="https://docs.joyent.com/public-cloud/network/sdn"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/public-cloud/network/sdn"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -708,30 +764,30 @@ exports[`renders <Networks error /> without throwing 1`] = `
     className="c2"
   >
     <h3
-      className="c7"
+      className="c10"
     >
       Networks attached to this instance
     </h3>
   </div>
   <div
-    className="c8"
+    className="c11"
   >
     <div
-      className="c9"
+      className="c12"
     >
       <div
-        className="c10"
+        className="c13"
       />
       <div
-        className="c11"
+        className="c14"
       >
         <h4
-          className="c12"
+          className="c15"
         >
           Ooops!
         </h4>
         <p
-          className="c13 c6"
+          className="c16 c6"
         >
           An error occurred while loading your networks
         </p>
@@ -747,18 +803,42 @@ exports[`renders <Networks loading /> without throwing 1`] = `
 }
 
 .c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
+}
+
+.c12 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c10 {
+.c13 {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
-.c11 {
+.c14 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
@@ -770,7 +850,7 @@ exports[`renders <Networks loading /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c8 {
+.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -798,7 +878,7 @@ exports[`renders <Networks loading /> without throwing 1`] = `
   flex: 1 0 auto;
 }
 
-.c12 {
+.c15 {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -849,7 +929,7 @@ exports[`renders <Networks loading /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c7 {
+.c10 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -922,11 +1002,15 @@ exports[`renders <Networks loading /> without throwing 1`] = `
           Use predefined or customized fabric networks which can be public-facing or private. All fabrics are isolated from other customers giving you complete control over the network environment. Read more on fabrics.
            
           <a
-            href="https://docs.joyent.com/public-cloud/network/sdn"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/public-cloud/network/sdn"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -936,34 +1020,34 @@ exports[`renders <Networks loading /> without throwing 1`] = `
     className="c2"
   >
     <h3
-      className="c7"
+      className="c10"
     >
       Networks attached to this instance
     </h3>
   </div>
   <div
-    className="c8"
+    className="c11"
   >
     <svg
       height="10"
       width="28"
     >
       <rect
-        className="c9"
+        className="c12"
         height="6"
         width="6"
         x="2"
         y="2"
       />
       <rect
-        className="c10 c9"
+        className="c13 c12"
         height="6"
         width="6"
         x="11"
         y="2"
       />
       <rect
-        className="c11 c9"
+        className="c14 c12"
         height="6"
         width="6"
         x="20"
@@ -971,7 +1055,7 @@ exports[`renders <Networks loading /> without throwing 1`] = `
       />
     </svg>
     <p
-      className="c12 c6"
+      className="c15 c6"
     >
       Loading...
     </p>
@@ -984,29 +1068,53 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c9 {
+.c12 {
   margin-bottom: 1.875rem;
 }
 
-.c19 {
+.c22 {
   margin-right: 1.875rem;
 }
 
-.c22 {
+.c25 {
   margin-right: 0.375rem;
 }
 
-.c23 {
+.c26 {
   margin-top: 1.125rem;
 }
 
-.c14 {
+.c17 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c17 {
+.c20 {
   padding: 1.875rem;
+}
+
+.c9 {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration-skip: objects;
+}
+
+.c8 {
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+}
+
+.c7 {
+  color: rgb(59,70,204);
+  -webkit-text-fill-color: currentcolor;
+}
+
+.c7:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c7 a:hover {
+  color: rgb(45,56,132);
 }
 
 .c6 {
@@ -1050,7 +1158,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   display: block;
 }
 
-.c8 {
+.c11 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1067,7 +1175,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c7 {
+.c10 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -1075,7 +1183,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   font-size: 1.3125rem;
 }
 
-.c15 {
+.c18 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -1085,7 +1193,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   color: rgb(255,255,255);
 }
 
-.c18 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1105,7 +1213,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c21 {
+.c24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1129,7 +1237,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   align-items: center;
 }
 
-.c20 {
+.c23 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -1146,7 +1254,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   display: block;
 }
 
-.c10 {
+.c13 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1168,7 +1276,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c12 {
+.c15 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1198,7 +1306,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c24 {
+.c27 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1226,7 +1334,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c27 {
+.c30 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1253,7 +1361,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c16 {
+.c19 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1269,7 +1377,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c11 {
+.c14 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1281,7 +1389,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c25 {
+.c28 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1294,7 +1402,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   box-shadow: none;
 }
 
-.c26 {
+.c29 {
   width: 2.875rem;
   min-width: 2.875rem;
   min-height: 2.875rem;
@@ -1323,7 +1431,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
   box-shadow: none;
 }
 
-.c13 {
+.c16 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -1398,7 +1506,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c8 {
+  .c11 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1407,7 +1515,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c8 {
+  .c11 {
     -webkit-flex-basis: 66.66666666666667%;
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
@@ -1440,11 +1548,15 @@ exports[`renders <Networks networks /> without throwing 1`] = `
           Use predefined or customized fabric networks which can be public-facing or private. All fabrics are isolated from other customers giving you complete control over the network environment. Read more on fabrics.
            
           <a
-            href="https://docs.joyent.com/public-cloud/network/sdn"
-            rel="noopener noreferrer"
-            target="__blank"
+            className="c7 c8 c9"
           >
-            Read the docs
+            <a
+              rel="noopener noreferrer"
+              target="__blank"
+              to="https://docs.joyent.com/public-cloud/network/sdn"
+            >
+              Read the docs
+            </a>
           </a>
         </p>
       </div>
@@ -1454,7 +1566,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
     className="c2"
   >
     <h3
-      className="c7"
+      className="c10"
     >
       Networks attached to this instance
     </h3>
@@ -1463,31 +1575,31 @@ exports[`renders <Networks networks /> without throwing 1`] = `
     className="c3"
   >
     <div
-      className="c8"
+      className="c11"
     >
       <div
-        className="c9"
+        className="c12"
       >
         <div
-          className="c10"
+          className="c13"
           disabled={false}
           name="card"
         >
           <div
-            className="c11 c12"
+            className="c14 c15"
             disabled={false}
             name="card-header"
           >
             <div
-              className="c13 c12"
+              className="c16 c15"
               disabled={false}
               name="card-header-meta"
             >
               <div
-                className="c14"
+                className="c17"
               >
                 <h4
-                  className="c15"
+                  className="c18"
                 >
                   name
                 </h4>
@@ -1495,12 +1607,12 @@ exports[`renders <Networks networks /> without throwing 1`] = `
             </div>
           </div>
           <div
-            className="c16 c10"
+            className="c19 c13"
             disabled={false}
             name="card-outlet"
           >
             <div
-              className="c17"
+              className="c20"
             >
               <div
                 className="c2"
@@ -1512,22 +1624,22 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                 </p>
               </div>
               <div
-                className="c18"
+                className="c21"
               >
                 <div
-                  className="c19"
+                  className="c22"
                 >
                   <div
-                    className="c20"
+                    className="c23"
                   >
                     <div
-                      className="c21"
+                      className="c24"
                     >
                       <div
-                        className="c20"
+                        className="c23"
                       >
                         <div
-                          className="c22"
+                          className="c25"
                         >
                           <svg
                             height="16"
@@ -1548,7 +1660,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c20"
+                        className="c23"
                       >
                         <p
                           className="c6"
@@ -1560,19 +1672,19 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                   </div>
                 </div>
                 <div
-                  className="c19"
+                  className="c22"
                 >
                   <div
-                    className="c20"
+                    className="c23"
                   >
                     <div
-                      className="c21"
+                      className="c24"
                     >
                       <div
-                        className="c20"
+                        className="c23"
                       >
                         <div
-                          className="c22"
+                          className="c25"
                         >
                           <svg
                             height="16.2"
@@ -1588,7 +1700,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c20"
+                        className="c23"
                       >
                         <p
                           className="c6"
@@ -1600,19 +1712,19 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                   </div>
                 </div>
                 <div
-                  className="c19"
+                  className="c22"
                 >
                   <div
-                    className="c20"
+                    className="c23"
                   >
                     <div
-                      className="c21"
+                      className="c24"
                     >
                       <div
-                        className="c20"
+                        className="c23"
                       >
                         <div
-                          className="c22"
+                          className="c25"
                         >
                           <svg
                             height="17"
@@ -1720,7 +1832,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c20"
+                        className="c23"
                       >
                         <p
                           className="c6"
@@ -1733,26 +1845,26 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c23"
+                className="c26"
               >
                 <div
-                  className="c24"
+                  className="c27"
                   disabled={false}
                   name="card"
                 >
                   <div
-                    className="c25 c24"
+                    className="c28 c27"
                     disabled={false}
                     name="card-header"
                     onClick={[Function]}
                   >
                     <div
-                      className="c13 c24"
+                      className="c16 c27"
                       disabled={false}
                       name="card-header-meta"
                     >
                       <div
-                        className="c14"
+                        className="c17"
                       >
                         <p
                           className="c6"
@@ -1762,7 +1874,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c26 c27"
+                      className="c29 c30"
                       disabled={false}
                       name="card-header-box"
                     >
@@ -1787,26 +1899,26 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                 </div>
               </div>
               <div
-                className="c23"
+                className="c26"
               >
                 <div
-                  className="c24"
+                  className="c27"
                   disabled={false}
                   name="card"
                 >
                   <div
-                    className="c25 c24"
+                    className="c28 c27"
                     disabled={false}
                     name="card-header"
                     onClick={[Function]}
                   >
                     <div
-                      className="c13 c24"
+                      className="c16 c27"
                       disabled={false}
                       name="card-header-meta"
                     >
                       <div
-                        className="c14"
+                        className="c17"
                       >
                         <p
                           className="c6"
@@ -1816,7 +1928,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c26 c27"
+                      className="c29 c30"
                       disabled={false}
                       name="card-header-box"
                     >
@@ -1850,31 +1962,31 @@ exports[`renders <Networks networks /> without throwing 1`] = `
     className="c3"
   >
     <div
-      className="c8"
+      className="c11"
     >
       <div
-        className="c9"
+        className="c12"
       >
         <div
-          className="c10"
+          className="c13"
           disabled={false}
           name="card"
         >
           <div
-            className="c11 c12"
+            className="c14 c15"
             disabled={false}
             name="card-header"
           >
             <div
-              className="c13 c12"
+              className="c16 c15"
               disabled={false}
               name="card-header-meta"
             >
               <div
-                className="c14"
+                className="c17"
               >
                 <h4
-                  className="c15"
+                  className="c18"
                 >
                   name2
                 </h4>
@@ -1882,12 +1994,12 @@ exports[`renders <Networks networks /> without throwing 1`] = `
             </div>
           </div>
           <div
-            className="c16 c10"
+            className="c19 c13"
             disabled={false}
             name="card-outlet"
           >
             <div
-              className="c17"
+              className="c20"
             >
               <div
                 className="c2"
@@ -1899,22 +2011,22 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                 </p>
               </div>
               <div
-                className="c18"
+                className="c21"
               >
                 <div
-                  className="c19"
+                  className="c22"
                 >
                   <div
-                    className="c20"
+                    className="c23"
                   >
                     <div
-                      className="c21"
+                      className="c24"
                     >
                       <div
-                        className="c20"
+                        className="c23"
                       >
                         <div
-                          className="c22"
+                          className="c25"
                         >
                           <svg
                             height="16"
@@ -1935,7 +2047,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c20"
+                        className="c23"
                       >
                         <p
                           className="c6"
@@ -1947,19 +2059,19 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                   </div>
                 </div>
                 <div
-                  className="c19"
+                  className="c22"
                 >
                   <div
-                    className="c20"
+                    className="c23"
                   >
                     <div
-                      className="c21"
+                      className="c24"
                     >
                       <div
-                        className="c20"
+                        className="c23"
                       >
                         <div
-                          className="c22"
+                          className="c25"
                         >
                           <svg
                             height="13"
@@ -1975,7 +2087,7 @@ exports[`renders <Networks networks /> without throwing 1`] = `
                         </div>
                       </div>
                       <div
-                        className="c20"
+                        className="c23"
                       >
                         <p
                           className="c6"

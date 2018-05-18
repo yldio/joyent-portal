@@ -9,7 +9,12 @@ class EditorField extends PureComponent {
   render() {
     return (
       <Fragment>
-        <Editor {...this.props} onBlur={null} mode="sh" />
+        <Editor
+          value="&#13;&#13;&#13;&#13;"
+          {...this.props}
+          onBlur={null}
+          mode="sh"
+        />
       </Fragment>
     );
   }

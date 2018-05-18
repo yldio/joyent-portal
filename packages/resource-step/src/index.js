@@ -1,6 +1,6 @@
 import React, { Fragment, PureComponent } from 'react';
 import { Broadcast, Subscriber } from 'joy-react-broadcast';
-import { Link as BaseLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Flex, { FlexItem } from 'styled-flex-component';
 import { Margin, Padding } from 'styled-components-spacing';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
@@ -14,7 +14,8 @@ import {
   Divider,
   H3,
   P,
-  ArrowIcon
+  ArrowIcon,
+  Anchor
 } from 'joyent-ui-toolkit';
 
 import { Saved as SavedIcon, Error as ErrorIcon } from './status-icon';
@@ -28,14 +29,6 @@ const Card = styled(BaseCard)`
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.1);
   `};
 }`;
-
-const Link = styled(BaseLink)`
-  color: ${props => props.theme.primary};
-
-  :active {
-    color: #436275;
-  }
-`;
 
 export const Header = ({ icon = null, children }) => (
   <Subscriber channel="create-resource-group">
@@ -68,19 +61,23 @@ export const Header = ({ icon = null, children }) => (
                 </Flex>
               </FlexItem>
               <FlexItem alignCenter>
-                <Link to={expanded ? `/${namespace}` : `/${namespace}/${name}`}>
-                  <Flex alignCenter>
-                    {expanded ? 'Save and Collase' : 'Edit'}
-                    <Margin left="1">
-                      <Flex>
-                        <ArrowIcon
-                          fill="primary"
-                          direction={expanded ? 'up' : 'down'}
-                        />
-                      </Flex>
-                    </Margin>
-                  </Flex>
-                </Link>
+                <Anchor>
+                  <Link
+                    to={expanded ? `/${namespace}` : `/${namespace}/${name}`}
+                  >
+                    <Flex alignCenter>
+                      {expanded ? 'Save and Collase' : 'Edit'}
+                      <Margin left="1">
+                        <Flex>
+                          <ArrowIcon
+                            fill="primary"
+                            direction={expanded ? 'up' : 'down'}
+                          />
+                        </Flex>
+                      </Margin>
+                    </Flex>
+                  </Link>
+                </Anchor>
               </FlexItem>
               {!expanded && !isValid ? (
                 <FlexItem>
@@ -107,7 +104,14 @@ export const Description = ({ href = '', children }) => (
         <Row>
           <Col xs={12} sm={8}>
             <P>
-              {children} {href ? <Link to={href}>Read the docs</Link> : null}
+              {children}{' '}
+              {href ? (
+                <Anchor>
+                  <Link to={href} target={'_blank'}>
+                    Read the docs
+                  </Link>
+                </Anchor>
+              ) : null}
             </P>
           </Col>
         </Row>

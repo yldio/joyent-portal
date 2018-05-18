@@ -159,9 +159,7 @@ const Firewall = ({
 export default compose(
   connect(({ form, values }, ownProps) => ({
     ...ownProps,
-    enabled:
-      console.log(form, values) ||
-      get(form, `${IC_FW_F_ENABLED}.values.enabled`, false),
+    enabled: get(form, `${IC_FW_F_ENABLED}.values.enabled`, false),
     showInactive: get(form, `${IC_FW_F_INACTIVE}.values.inactive`, false),
     tags: get(values, IC_TAG_V_TAGS, [])
   })),
