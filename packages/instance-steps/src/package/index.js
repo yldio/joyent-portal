@@ -27,6 +27,9 @@ import { Filters, Packages, Package, Overview } from './components';
 import getPackages from '../graphql/get-packages.gql';
 import priceData from './prices.json';
 import { Forms, Values } from '../constants';
+import { QueryBreakpoints } from 'joyent-ui-toolkit';
+
+const { SmallOnly, Medium } = QueryBreakpoints;
 
 const { IC_PKG_F_SELECT, IC_PKG_F_FILTER } = Forms;
 
@@ -84,14 +87,7 @@ const PackageComponent = ({
                   <StatusLoader />
                 ) : (
                   <Fragment>
-                    <Packages
-                      {...props}
-                      hasVms={hasVms}
-                      sortBy={sortBy}
-                      sortOrder={sortOrder}
-                      onSortBy={handleSortBy}
-                      packages={packages.length}
-                    >
+                    <SmallOnly>
                       {packages.map(({ id, ...pkg }) => (
                         <Package
                           key={id}
@@ -100,10 +96,33 @@ const PackageComponent = ({
                           hasVms={hasVms}
                           onRowClick={handleRowClick}
                           sortBy={sortBy}
+                          xs
                           {...pkg}
                         />
                       ))}
-                    </Packages>
+                    </SmallOnly>
+                    <Medium>
+                      <Packages
+                        {...props}
+                        hasVms={hasVms}
+                        sortBy={sortBy}
+                        sortOrder={sortOrder}
+                        onSortBy={handleSortBy}
+                        packages={packages.length}
+                      >
+                        {packages.map(({ id, ...pkg }) => (
+                          <Package
+                            key={id}
+                            id={id}
+                            selected={selected.id === id}
+                            hasVms={hasVms}
+                            onRowClick={handleRowClick}
+                            sortBy={sortBy}
+                            {...pkg}
+                          />
+                        ))}
+                      </Packages>
+                    </Medium>
                     <Margin top="4">
                       <Button type="button" component={Link} to={next}>
                         Next

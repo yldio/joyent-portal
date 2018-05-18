@@ -14,13 +14,13 @@ import {
   FormGroup,
   Card,
   Button,
-  TableTh,
+  TableTh as BaseTableTh,
   TableTr,
-  TableThead,
+  TableThead as BaseTableThead,
   Divider,
   TableTbody,
   Table,
-  TableTd,
+  TableTd as BaseTableTd,
   Radio,
   Checkbox,
   FormLabel,
@@ -31,6 +31,7 @@ import {
 } from 'joyent-ui-toolkit';
 
 import { NoPackages } from 'joyent-logo-assets';
+import { breakpoints } from 'joyent-ui-toolkit/dist/es/breakpoints/screens';
 
 const GroupIcons = {
   MEMORY: <MemoryIcon fill="#32ABCF" />,
@@ -57,6 +58,67 @@ const FullWidthCard = styled(Card)`
   `};
   ${isNot('borderTop')`
     border-top: none;
+  `};
+`;
+
+const TableThead = styled(BaseTableThead)`
+  ${is('smallScreen')`
+    background-color: transparent;
+  `};
+`;
+
+const TableTh = styled(BaseTableTh)`
+  @media only screen and (min-width: ${remcalc(
+      breakpoints.medium.lower
+    )}) and (max-width: ${remcalc(700)}) {
+    &:not(:first-child) {
+      width: auto;
+    }
+    padding: 0 ${remcalc(3)};
+  }
+
+  ${is('smallScreen')`
+    border: none;
+    color: #979797;
+    font-size: ${remcalc(13)};
+    height: auto;
+    padding: 0;
+  `};
+`;
+
+const TableTd = styled(BaseTableTd)`
+  @media only screen and (min-width: ${remcalc(
+      breakpoints.medium.lower
+    )}) and (max-width: ${remcalc(700)}) {
+    &:not(:first-child) {
+      width: auto;
+    }
+    padding: 0 ${remcalc(3)};
+  }
+
+  ${is('smallScreen')`
+    border: none;
+    font-size: ${remcalc(15)};
+    height: auto;
+    padding: ${remcalc(4)} 0;
+  `};
+`;
+
+const FormItem = styled('form')`
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+
+  ${is('selected')`
+    border-color: #3B46CC;
+    background-color: rgba(59,70,204,0.05);
+  `};
+`;
+
+const PackageSpecs = styled('div')`
+  border-top: 1px solid #d8d8d8;
+
+  ${is('selected')`
+    border-color: #3B46CC;
   `};
 `;
 
@@ -142,48 +204,143 @@ export const Package = ({
   ssd,
   hasVms,
   sortBy,
-  onRowClick
-}) => (
-  <TableTrActionable onClick={() => onRowClick(id)}>
-    <TableTd right selected={selected}>
-      <FormGroup name="package" value={id} type="radio" field={Field} fluid>
-        <Radio onBlur={null} noMargin>
-          <Flex alignCenter>
-            <Margin left={5} right={1}>
-              {GroupIcons[group]}
-            </Margin>
-            <Margin left={1} right={2}>
-              <FormLabel
-                style={{ fontWeight: sortBy === 'name' ? 'bold' : 'normal' }}
-                noMargin
-                actionable
-              >
-                {name}
-              </FormLabel>
-            </Margin>
-          </Flex>
-        </Radio>
-      </FormGroup>
-    </TableTd>
-    <TableTd right selected={selected} bold={sortBy === 'memory'}>
-      {bytes(memory, { decimalPlaces: 0, unitSeparator: ' ' })}
-    </TableTd>
-    <TableTd right selected={selected} bold={sortBy === 'disk'}>
-      <Margin inline right={1}>
-        {bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })}
-      </Margin>
-      {ssd && <Sup badge>SSD</Sup>}
-    </TableTd>
-    {hasVms && (
-      <TableTd right bold={sortBy === 'vcpus'} selected={selected}>
-        {vcpus}
+  onRowClick,
+  xs
+}) => {
+  return xs ? (
+    <FormItem selected={selected}>
+      <Padding all={2} onClick={() => onRowClick(id)}>
+        <FormGroup name="package" value={id} type="radio" field={Field} fluid>
+          <Radio onBlur={null} noMargin>
+            <Flex alignCenter>
+              <Margin left={2} right={1}>
+                {GroupIcons[group]}
+              </Margin>
+              <Margin left={1} right={2}>
+                <FormLabel style={{ fontWeight: '600' }} noMargin actionable>
+                  {`${name}  `}
+                  {ssd && <Sup badge>SSD</Sup>}
+                </FormLabel>
+              </Margin>
+            </Flex>
+          </Radio>
+        </FormGroup>
+      </Padding>
+      <PackageSpecs selected={selected}>
+        <Padding top={1} left={2} bottom={1}>
+          <Table>
+            <TableThead smallScreen>
+              <TableTr>
+                <TableTh left smallScreen>
+                  <Padding top={1}>
+                    <span>RAM </span>
+                  </Padding>
+                </TableTh>
+                <TableTh left smallScreen>
+                  <Padding top={1}>
+                    <span>Disk </span>
+                  </Padding>
+                </TableTh>
+                {hasVms && (
+                  <TableTh left smallScreen>
+                    <Padding top={1}>
+                      <span>vCPU</span>
+                    </Padding>
+                  </TableTh>
+                )}
+                <TableTh left smallScreen>
+                  <Padding top={1}>
+                    <span>$/hour</span>
+                  </Padding>
+                </TableTh>
+              </TableTr>
+            </TableThead>
+            <TableTbody>
+              <TableTrActionable onClick={() => onRowClick(id)}>
+                <TableTd
+                  left
+                  selected={selected}
+                  bold={sortBy === 'memory'}
+                  smallScreen
+                >
+                  {bytes(memory, { decimalPlaces: 0, unitSeparator: ' ' })}
+                </TableTd>
+                <TableTd
+                  left
+                  selected={selected}
+                  bold={sortBy === 'disk'}
+                  smallScreen
+                >
+                  <Margin inline right={1}>
+                    {bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })}
+                  </Margin>
+                </TableTd>
+                {hasVms && (
+                  <TableTd
+                    left
+                    bold={sortBy === 'vcpus'}
+                    selected={selected}
+                    smallScreen
+                  >
+                    {vcpus}
+                  </TableTd>
+                )}
+                <TableTd
+                  left
+                  bold={sortBy === 'price'}
+                  selected={selected}
+                  smallScreen
+                >
+                  {fourDecimals(price)}
+                </TableTd>
+              </TableTrActionable>
+            </TableTbody>
+          </Table>
+        </Padding>
+      </PackageSpecs>
+    </FormItem>
+  ) : (
+    <TableTrActionable onClick={() => onRowClick(id)}>
+      <TableTd right selected={selected}>
+        <FormGroup name="package" value={id} type="radio" field={Field} fluid>
+          <Radio onBlur={null} noMargin>
+            <Flex alignCenter>
+              <Margin left={5} right={1}>
+                {GroupIcons[group]}
+              </Margin>
+              <Margin left={1} right={2}>
+                <FormLabel
+                  style={{ fontWeight: sortBy === 'name' ? 'bold' : 'normal' }}
+                  noMargin
+                  actionable
+                >
+                  {name}
+                </FormLabel>
+              </Margin>
+            </Flex>
+          </Radio>
+        </FormGroup>
       </TableTd>
-    )}
-    <TableTd right bold={sortBy === 'price'} selected={selected}>
-      {fourDecimals(price)}
-    </TableTd>
-  </TableTrActionable>
-);
+      <TableTd right selected={selected} bold={sortBy === 'memory'}>
+        {bytes(memory, { decimalPlaces: 0, unitSeparator: ' ' })}
+      </TableTd>
+      <TableTd right selected={selected} bold={sortBy === 'disk'}>
+        <Margin inline right={1}>
+          {bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })}
+        </Margin>
+        {ssd && <Sup badge>SSD</Sup>}
+      </TableTd>
+      {hasVms && (
+        <TableTd right bold={sortBy === 'vcpus'} selected={selected}>
+          {vcpus}
+        </TableTd>
+      )}
+      <TableTd right bold={sortBy === 'price'} selected={selected}>
+        {fourDecimals(price)}
+      </TableTd>
+    </TableTrActionable>
+  );
+};
 
 export const Packages = ({
   pristine,

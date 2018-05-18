@@ -45,7 +45,6 @@ const Label = styled.label`
   height: ${remcalc(18)};
   box-sizing: border-box;
   top: 0;
-  right: 0;
   cursor: pointer;
 
   background-color: rgb(255, 255, 255);
