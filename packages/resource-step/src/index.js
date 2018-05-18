@@ -70,7 +70,7 @@ export const Header = ({ icon = null, children }) => (
               <FlexItem alignCenter>
                 <Link to={expanded ? `/${namespace}` : `/${namespace}/${name}`}>
                   <Flex alignCenter>
-                    {expanded ? 'Save and Collase' : 'Edit'}
+                    {expanded ? 'Save and Collapse' : 'Edit'}
                     <Margin left="1">
                       <Flex>
                         <ArrowIcon
