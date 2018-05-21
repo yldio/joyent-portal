@@ -76,7 +76,7 @@ const Rule = ({ enabled, rule_obj }) => {
       <Padding left={3} right={3} top={2} bottom={2}>
         <Row>
           <Col xs={3}>
-            <Flex justifyStart alignCenter contentStretch full>
+            <Flex justifyStart alignCenter contentStretch>
               <Margin right={0.5}>
                 <FlexItem>
                   <Strong style={style}>From: </Strong>
@@ -86,7 +86,7 @@ const Rule = ({ enabled, rule_obj }) => {
             </Flex>
           </Col>
           <Col xs={3}>
-            <Flex justifyStart alignCenter contentStretch full>
+            <Flex justifyStart alignCenter contentStretch>
               <Margin right={0.5}>
                 <FlexItem>
                   <Strong style={style}>To: </Strong>
@@ -96,7 +96,7 @@ const Rule = ({ enabled, rule_obj }) => {
             </Flex>
           </Col>
           <Col xs={2}>
-            <Flex justifyStart alignCenter contentStretch full>
+            <Flex justifyStart alignCenter contentStretch>
               <Margin right={0.5}>
                 <FlexItem>
                   <Strong style={style}>Protocol: </Strong>
@@ -108,7 +108,7 @@ const Rule = ({ enabled, rule_obj }) => {
             </Flex>
           </Col>
           <Col xs={2}>
-            <Flex justifyStart alignCenter contentStretch full>
+            <Flex justifyStart alignCenter contentStretch>
               <Margin right={0.5}>
                 <FlexItem>
                   <Strong style={style}>Ports: </Strong>
@@ -120,7 +120,7 @@ const Rule = ({ enabled, rule_obj }) => {
             </Flex>
           </Col>
           <Col xs={2}>
-            <Flex justifyStart alignCenter contentStretch full>
+            <Flex justifyStart alignCenter contentStretch>
               <Margin right={0.5}>
                 <FlexItem>
                   <Strong style={style}>Action: </Strong>
@@ -177,7 +177,12 @@ export const ToggleFirewallForm = ({
 
   return (
     <Form onChange={onChange}>
-      <FormGroup type="checkbox" name="enabled" field={Field}>
+      <FormGroup
+        id={'fw-toggle-firewall'}
+        type="checkbox"
+        name="enabled"
+        field={Field}
+      >
         <Checkbox disabled={submitting}>
           <FormLabel noMargin actionable>
             <Margin left={2} right={2}>
@@ -192,7 +197,12 @@ export const ToggleFirewallForm = ({
 
 export const ToggleInactiveForm = () => (
   <Form>
-    <FormGroup type="checkbox" name="inactive" field={Field}>
+    <FormGroup
+      id={'fw-toggle-inactive'}
+      type="checkbox"
+      name="inactive"
+      field={Field}
+    >
       <Checkbox>
         <FormLabel noMargin actionable>
           <Margin left={2} right={2}>

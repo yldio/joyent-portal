@@ -12,6 +12,7 @@ export { default as Delete } from './delete';
 export { default as Dot } from './dot';
 export { default as Duplicate } from './duplicate';
 export { default as Edit } from './edit';
+export { default as EmptyState } from './empty-state';
 export { default as Fabric } from './fabric';
 // export { default as Filter } from './filter';
 export { default as Firewall } from './firewall';

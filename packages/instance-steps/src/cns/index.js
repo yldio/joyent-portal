@@ -83,7 +83,12 @@ const CnsContainer = ({
             </ReduxForm>
           </Cns>
           <Margin top={5}>
-            <Button type="button" component={Link} to={next}>
+            <Button
+              id={'next-button-cns'}
+              type="button"
+              component={Link}
+              to={next}
+            >
               Next
             </Button>
           </Margin>

@@ -6,7 +6,7 @@ import is, { isNot } from 'styled-is';
 import remcalc from 'remcalc';
 
 import { H3, Card } from 'joyent-ui-toolkit';
-import { NoPackages } from 'joyent-logo-assets';
+import { EmptyState } from 'joyent-icons';
 
 const NoPackagesTitle = styled(H3)`
   color: ${props => props.theme.greyDark};
@@ -28,7 +28,7 @@ export default ({ children, ...rest }) => (
     <Padding all={6}>
       <Flex alignCenter justifyCenter column>
         <Margin bottom={2}>
-          <NoPackages />
+          <EmptyState />
         </Margin>
         <NoPackagesTitle>{children}</NoPackagesTitle>
       </Flex>

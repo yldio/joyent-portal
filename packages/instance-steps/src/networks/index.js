@@ -113,7 +113,12 @@ const Networks = ({
                     )}
                   </Form>
                   <Margin top="5">
-                    <Button type="button" component={Link} to={next}>
+                    <Button
+                      id={'next-button-networks'}
+                      type="button"
+                      component={Link}
+                      to={next}
+                    >
                       Next
                     </Button>
                   </Margin>

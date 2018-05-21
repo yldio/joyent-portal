@@ -96,11 +96,6 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
 }
 
 .c10 {
@@ -246,21 +241,6 @@ Array [
 }
 
 .c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c18 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -1274,21 +1254,17 @@ Array [
                                     <ul
                                         className="c16"
                                     >
-                                        <div
+                                        <li
                                             className="c17"
-                                        >
-                                            <li
-                                                className="c18"
-                                                fill={null}
-                                                name="wat"
-                                                style={
-                                                    Object {
-                                                        "color": "#D8D8D8",
-                                                      }
-                                                }
-                                                value=""
-                                            />
-                                        </div>
+                                            fill={null}
+                                            name="wat"
+                                            style={
+                                                Object {
+                                                    "color": "#D8D8D8",
+                                                  }
+                                            }
+                                            value=""
+                                        />
                                     </ul>
                                 </div>
                             </div>
@@ -1468,11 +1444,6 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
 }
 
 .c9 {
@@ -1871,11 +1842,6 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
 }
 
 .c9 {
@@ -2274,11 +2240,6 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
 }
 
 .c9 {
@@ -2681,11 +2642,6 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
 }
 
 .c9 {
@@ -3092,11 +3048,6 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
 }
 
 .c9 {
@@ -3169,7 +3120,7 @@ Array [
   display: block;
 }
 
-.c15 {
+.c14 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3220,21 +3171,6 @@ Array [
 }
 
 .c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c14 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -3278,7 +3214,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c15 {
+  .c14 {
     -webkit-flex-basis: 16.666666666666668%;
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
@@ -3373,28 +3309,24 @@ Array [
                                 <ul
                                     className="c12"
                                 >
-                                    <div
+                                    <li
                                         className="c13"
-                                    >
-                                        <li
-                                            className="c14"
-                                            fill={null}
-                                            name="wat"
-                                            style={
-                                                Object {
-                                                    "color": "#D8D8D8",
-                                                  }
-                                            }
-                                            value=""
-                                        />
-                                    </div>
+                                        fill={null}
+                                        name="wat"
+                                        style={
+                                            Object {
+                                                "color": "#D8D8D8",
+                                              }
+                                        }
+                                        value=""
+                                    />
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div
-                    className="c15"
+                    className="c14"
                 >
                     <div
                         className="c5"
@@ -3434,7 +3366,7 @@ Array [
                     </div>
                 </div>
                 <div
-                    className="c15"
+                    className="c14"
                 >
                     <div
                         className="c5"
@@ -3474,7 +3406,7 @@ Array [
                     </div>
                 </div>
                 <div
-                    className="c15"
+                    className="c14"
                 >
                     <div
                         className="c5"
@@ -3618,11 +3550,6 @@ Array [
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
 }
 
 .c10 {
@@ -3768,21 +3695,6 @@ Array [
 }
 
 .c17 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-}
-
-.c18 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -4796,21 +4708,17 @@ Array [
                                     <ul
                                         className="c16"
                                     >
-                                        <div
+                                        <li
                                             className="c17"
-                                        >
-                                            <li
-                                                className="c18"
-                                                fill={null}
-                                                name="wat"
-                                                style={
-                                                    Object {
-                                                        "color": "#D8D8D8",
-                                                      }
-                                                }
-                                                value=""
-                                            />
-                                        </div>
+                                            fill={null}
+                                            name="wat"
+                                            style={
+                                                Object {
+                                                    "color": "#D8D8D8",
+                                                  }
+                                            }
+                                            value=""
+                                        />
                                     </ul>
                                 </div>
                             </div>
@@ -5146,6 +5054,7 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
 >
   <div
     className="c1"
+    id="fw-toggle-firewall"
     name="enabled"
     role="group"
     style={undefined}
@@ -5158,7 +5067,7 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
         checked={false}
         className="c3"
         disabled={false}
-        id="k"
+        id="fw-toggle-firewall"
         onBlur={undefined}
         type="checkbox"
       >
@@ -5179,7 +5088,7 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
         checked={false}
         className="c7"
         disabled={false}
-        id="k"
+        id="fw-toggle-firewall"
         onBlur={undefined}
       >
         <label
@@ -5400,6 +5309,7 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
 >
   <div
     className="c1"
+    id="fw-toggle-firewall"
     name="enabled"
     role="group"
     style={undefined}
@@ -5412,7 +5322,7 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
         checked={false}
         className="c3"
         disabled={true}
-        id="m"
+        id="fw-toggle-firewall"
         onBlur={undefined}
         type="checkbox"
       >
@@ -5433,7 +5343,7 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
         checked={false}
         className="c7"
         disabled={true}
-        id="m"
+        id="fw-toggle-firewall"
         onBlur={undefined}
       >
         <label
@@ -5653,6 +5563,7 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
 >
   <div
     className="c1"
+    id="fw-toggle-inactive"
     name="inactive"
     role="group"
     style={undefined}
@@ -5665,7 +5576,7 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
         checked={false}
         className="c3"
         disabled={false}
-        id="o"
+        id="fw-toggle-inactive"
         onBlur={undefined}
         type="checkbox"
       >
@@ -5686,7 +5597,7 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
         checked={false}
         className="c7"
         disabled={false}
-        id="o"
+        id="fw-toggle-inactive"
         onBlur={undefined}
       >
         <label

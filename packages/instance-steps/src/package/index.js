@@ -124,7 +124,12 @@ const PackageComponent = ({
                       </Packages>
                     </Medium>
                     <Margin top="4">
-                      <Button type="button" component={Link} to={next}>
+                      <Button
+                        id={'next-button-packages'}
+                        type="button"
+                        component={Link}
+                        to={next}
+                      >
                         Next
                       </Button>
                     </Margin>

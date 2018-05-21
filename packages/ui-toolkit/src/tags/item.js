@@ -11,12 +11,6 @@ const CloseIcon = styled(Close)`
   `};
 `;
 
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-`;
-
 const Tag = styled.li`
   border: ${remcalc(1)} solid ${props => props.theme.grey};
   box-sizing: border-box;
@@ -59,19 +53,15 @@ export default withTheme(
     iconFill = null,
     ...rest
   }) => (
-    <Container>
-      <Tag fill={fill} active={active} {...rest}>
-        {children}
-        {onRemoveClick ? (
-          <CloseIcon
-            fill={
-              iconFill ? iconFill : active ? theme.primaryActive : theme.text
-            }
-            disabled
-            onClick={onRemoveClick}
-          />
-        ) : null}
-      </Tag>
-    </Container>
+    <Tag fill={fill} active={active} {...rest}>
+      {children}
+      {onRemoveClick ? (
+        <CloseIcon
+          fill={iconFill ? iconFill : active ? theme.primaryActive : theme.text}
+          disabled
+          onClick={onRemoveClick}
+        />
+      ) : null}
+    </Tag>
   )
 );

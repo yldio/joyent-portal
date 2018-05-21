@@ -96,6 +96,7 @@ const TagsContainer = ({
                     name={name}
                     value={value}
                     onRemoveClick={() => handleRemoveTag(index)}
+                    id={'tag-' + index}
                   />
                 ))}
               </TagList>
@@ -119,6 +120,7 @@ const TagsContainer = ({
                         method="add"
                         input="input"
                         type="tag"
+                        id="tag"
                         expanded
                         borderless
                         onCancel={() => handleChangeAddOpen(false)}
@@ -134,6 +136,7 @@ const TagsContainer = ({
                 <FlexItem>
                   <Margin right={1}>
                     <Button
+                      id={'add-tag-button'}
                       type="button"
                       onClick={() => handleChangeAddOpen(true)}
                       secondary
@@ -143,7 +146,12 @@ const TagsContainer = ({
                   </Margin>
                 </FlexItem>
                 <FlexItem>
-                  <Button type="button" component={Link} to={next}>
+                  <Button
+                    id={'next-button-tags'}
+                    type="button"
+                    component={Link}
+                    to={next}
+                  >
                     Next
                   </Button>
                 </FlexItem>

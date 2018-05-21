@@ -70,7 +70,6 @@ exports[`renders <Metadata /> without throwing 1`] = `
   text-align: center;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
@@ -446,20 +445,20 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c38 {
+.c39 {
   margin-top: 0.75rem;
 }
 
-.c45 {
+.c46 {
   margin-right: 0.75rem;
 }
 
-.c25 {
+.c26 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c32 {
+.c33 {
   padding-left: 1.125rem;
   padding-right: 1.125rem;
   padding-top: 1.125rem;
@@ -522,7 +521,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   text-align: center;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
@@ -578,94 +576,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   pointer-events: none;
 }
 
-.c41 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c41:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c41:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c41:active,
-.c41:active:hover,
-.c41:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c41[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c41:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c41:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c41:active,
-.c41:active:hover,
-.c41:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
 .c42 {
   box-sizing: border-box;
   display: inline-block;
@@ -687,7 +597,6 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   text-align: center;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
@@ -704,10 +613,9 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
@@ -739,23 +647,23 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 }
 
 .c42:focus {
-  background-color: rgb(250,250,250);
+  background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
 .c42:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
 }
 
 .c42:active,
 .c42:active:hover,
 .c42:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
 }
 
-.c44 {
+.c43 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -776,7 +684,94 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   text-align: center;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c43:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c43:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c43:active,
+.c43:active:hover,
+.c43:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c43[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c43:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c43:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c43:active,
+.c43:active:hover,
+.c43:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c45 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
@@ -812,7 +807,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   float: right;
 }
 
-.c44:focus {
+.c45:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -820,57 +815,57 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c44:hover {
+.c45:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c44:active,
-.c44:active:hover,
-.c44:active:focus {
+.c45:active,
+.c45:active:hover,
+.c45:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c44[disabled] {
+.c45[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c44:focus {
+.c45:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c44:hover {
+.c45:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c44:active,
-.c44:active:hover,
-.c44:active:focus {
+.c45:active,
+.c45:active:hover,
+.c45:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c44:focus {
+.c45:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c44:hover {
+.c45:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c44:active,
-.c44:active:hover,
-.c44:active:focus {
+.c45:active,
+.c45:active:hover,
+.c45:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
@@ -909,7 +904,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c39 {
+.c40 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -928,7 +923,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c33 {
+.c34 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -938,7 +933,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   display: block;
 }
 
-.c35 {
+.c36 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -948,7 +943,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   display: block;
 }
 
-.c43 {
+.c44 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -973,7 +968,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   font-size: 1.3125rem;
 }
 
-.c29 {
+.c30 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: 600;
@@ -1020,7 +1015,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c26 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1048,7 +1043,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   align-items: center;
 }
 
-.c20 {
+.c21 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1071,7 +1066,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
 }
 
-.c23 {
+.c24 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1098,7 +1093,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c31 {
+.c32 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1120,7 +1115,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c30 {
+.c31 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1136,7 +1131,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c22 {
+.c23 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -1148,7 +1143,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -1207,7 +1202,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   float: right;
 }
 
-.c34 {
+.c35 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -1281,7 +1276,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   color: rgba(73,73,73,0.5);
 }
 
-.c37 {
+.c38 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 6rem;
@@ -1306,62 +1301,62 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   resize: vertical;
 }
 
-.c37:focus {
+.c38:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c37::-webkit-input-placeholder {
+.c38::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37::-moz-placeholder {
+.c38::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37:-ms-input-placeholder {
+.c38:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37:invalid {
+.c38:invalid {
   box-shadow: none;
 }
 
-.c37:disabled {
+.c38:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c37:disabled::-webkit-input-placeholder {
+.c38:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37:disabled::-moz-placeholder {
+.c38:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37:disabled:-ms-input-placeholder {
+.c38:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37:disabled {
+.c38:disabled {
   color: rgb(73,73,73);
 }
 
-.c37:disabled::-webkit-input-placeholder {
+.c38:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c37:disabled::-moz-placeholder {
+.c38:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c37:disabled:-ms-input-placeholder {
+.c38:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c36 {
+.c37 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1380,24 +1375,28 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c21 {
+.c20 {
+  margin-bottom: 0;
+}
+
+.c22 {
   border-top: 0;
   border-left: 0;
   border-right: 0;
 }
 
-.c40 {
+.c41 {
   margin-right: 0.375rem;
 }
 
-.c24 {
+.c25 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c27 {
+.c28 {
   height: 2.9375rem;
   max-width: 98%;
 }
@@ -1421,7 +1420,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c39 {
+  .c40 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1430,7 +1429,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c39 {
+  .c40 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1439,7 +1438,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c33 {
+  .c34 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1448,7 +1447,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c35 {
+  .c36 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -1457,7 +1456,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c43 {
+  .c44 {
     display: none;
   }
 }
@@ -1567,32 +1566,33 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
     className="c19"
   >
     <form
+      className="c20"
       onSubmit={undefined}
     >
       <div
-        className="c20"
+        className="c21"
         disabled={false}
         name="card"
       >
         <div
-          className="c21 c22 c23"
+          className="c22 c23 c24"
           disabled={false}
           name="card-header"
           onClick={false}
         >
           <div
-            className="c24 c25"
+            className="c25 c26"
           >
             <div
-              className="c26"
+              className="c27"
             >
               <div
-                className="c27 c28 c23"
+                className="c28 c29 c24"
                 disabled={false}
                 name="card-header-meta"
               >
                 <h4
-                  className="c29"
+                  className="c30"
                 >
                   Add metadata
                 </h4>
@@ -1601,28 +1601,29 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c30 c31"
+          className="c31 c32"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c32"
+            className="c33"
           >
             <div
               className="c15"
             >
               <div
-                className="c33"
+                className="c34"
               >
                 <div
-                  className="c34"
+                  className="c35"
+                  id={null}
                   name="name"
                   role="group"
                   style={undefined}
                 >
                   <label
                     className="c5 c6"
-                    htmlFor="w"
+                    htmlFor={null}
                   >
                     Metadata
                      key
@@ -1633,14 +1634,14 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
                     <input
                       className="c8"
                       disabled={false}
-                      id="w"
+                      id={null}
                       onBlur={null}
                     />
                     <div
                       className="c15"
                     >
                       <div
-                        className="c35"
+                        className="c36"
                       />
                     </div>
                   </div>
@@ -1655,17 +1656,18 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
               className="c15"
             >
               <div
-                className="c33"
+                className="c34"
               >
                 <div
-                  className="c34"
+                  className="c35"
+                  id={null}
                   name="value"
                   role="group"
                   style={undefined}
                 >
                   <label
                     className="c5 c6"
-                    htmlFor="x"
+                    htmlFor={null}
                   >
                     Metadata
                      value
@@ -1674,9 +1676,9 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
                     className="c7"
                   >
                     <textarea
-                      className="c36 c37"
+                      className="c37 c38"
                       disabled={false}
-                      id="x"
+                      id={null}
                       name="name"
                       onBlur={undefined}
                     />
@@ -1685,7 +1687,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
                     className="c15"
                   >
                     <div
-                      className="c35"
+                      className="c36"
                     />
                   </div>
                 </div>
@@ -1696,19 +1698,20 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
               </div>
             </div>
             <div
-              className="c38"
+              className="c39"
             >
               <div
-                className="c39"
+                className="c40"
               >
                 <div
-                  className="c33"
+                  className="c34"
                 >
                   <button
-                    className="c40 c41 c11 c12 c13"
+                    className="c41 c42 c11 c12 c13"
                     data-ui-button="true"
                     disabled={false}
                     href=""
+                    id={null}
                     onClick={[Function]}
                     type="button"
                   >
@@ -1717,10 +1720,11 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
                     </span>
                   </button>
                   <button
-                    className="c42 c11 c12 c13"
+                    className="c43 c11 c12 c13"
                     data-ui-button="true"
                     disabled={true}
                     href=""
+                    id={null}
                     type="submit"
                   >
                     <span>
@@ -1729,19 +1733,20 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
                   </button>
                 </div>
                 <div
-                  className="c43"
+                  className="c44"
                 >
                   <button
-                    className="c44 c11 c12 c13"
+                    className="c45 c11 c12 c13"
                     data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
+                    id={null}
                     onClick={[Function]}
                     type="button"
                   >
                     <div
-                      className="c45"
+                      className="c46"
                     >
                       <svg
                         height="16"
@@ -1761,7 +1766,7 @@ exports[`renders <Metadata addOpen /> without throwing 1`] = `
                       </svg>
                     </div>
                     <span>
-                      Remove
+                      Delete
                     </span>
                   </button>
                 </div>
@@ -1852,7 +1857,6 @@ exports[`renders <Metadata error /> without throwing 1`] = `
   text-align: center;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
@@ -2399,7 +2403,6 @@ exports[`renders <Metadata loading /> without throwing 1`] = `
   text-align: center;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
@@ -2811,11 +2814,11 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-bottom: 1.125rem;
 }
 
-.c38 {
+.c39 {
   margin-top: 0.75rem;
 }
 
-.c46 {
+.c47 {
   margin-right: 0.75rem;
 }
 
@@ -2823,12 +2826,12 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-bottom: 0.75rem;
 }
 
-.c25 {
+.c26 {
   padding-right: 1.125rem;
   padding-left: 1.125rem;
 }
 
-.c32 {
+.c33 {
   padding-left: 1.125rem;
   padding-right: 1.125rem;
   padding-top: 1.125rem;
@@ -2862,24 +2865,24 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c49 {
+.c50 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c50 {
+.c51 {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
-.c51 {
+.c52 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
-.c48 {
+.c49 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2936,7 +2939,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   text-align: center;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
@@ -2992,94 +2994,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   pointer-events: none;
 }
 
-.c42 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c42:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c42:hover {
-  background-color: rgb(72,83,217);
-  border: solid 0.0625rem rgb(45,56,132);
-}
-
-.c42:active,
-.c42:active:hover,
-.c42:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c42[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c42:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c42:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c42:active,
-.c42:active:hover,
-.c42:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
 .c43 {
   box-sizing: border-box;
   display: inline-block;
@@ -3101,7 +3015,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   text-align: center;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
@@ -3118,10 +3031,9 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   background-color: rgb(59,70,204);
   border-radius: 0.25rem;
   border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
@@ -3153,23 +3065,23 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 .c43:focus {
-  background-color: rgb(250,250,250);
+  background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
 .c43:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
 }
 
 .c43:active,
 .c43:active:hover,
 .c43:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
 }
 
-.c45 {
+.c44 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3190,7 +3102,94 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   text-align: center;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c44:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c44:hover {
+  background-color: rgb(72,83,217);
+  border: solid 0.0625rem rgb(45,56,132);
+}
+
+.c44:active,
+.c44:active:hover,
+.c44:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c44[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c44:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c44:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c44:active,
+.c44:active:hover,
+.c44:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c46 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
@@ -3226,7 +3225,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   float: right;
 }
 
-.c45:focus {
+.c46:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3234,62 +3233,62 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c45:hover {
+.c46:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c45:active,
-.c45:active:hover,
-.c45:active:focus {
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c45[disabled] {
+.c46[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c45:focus {
+.c46:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c45:hover {
+.c46:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c45:active,
-.c45:active:hover,
-.c45:active:focus {
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c45:focus {
+.c46:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c45:hover {
+.c46:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c45:active,
-.c45:active:hover,
-.c45:active:focus {
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c47 {
+.c48 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3310,7 +3309,6 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   text-align: center;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
@@ -3351,7 +3349,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   float: right;
 }
 
-.c47:focus {
+.c48:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3359,74 +3357,74 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c47:hover {
+.c48:hover {
   background-color: rgb(72,83,217);
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c47:active,
-.c47:active:hover,
-.c47:active:focus {
+.c48:active,
+.c48:active:hover,
+.c48:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c47[disabled] {
+.c48[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c47:focus {
+.c48:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c47:hover {
+.c48:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c47:active,
-.c47:active:hover,
-.c47:active:focus {
+.c48:active,
+.c48:active:hover,
+.c48:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c47:focus {
+.c48:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c47:hover {
+.c48:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c47:active,
-.c47:active:hover,
-.c47:active:focus {
+.c48:active,
+.c48:active:hover,
+.c48:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c47:focus {
+.c48:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c47:hover {
+.c48:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c47:active,
-.c47:active:hover,
-.c47:active:focus {
+.c48:active,
+.c48:active:hover,
+.c48:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
@@ -3465,7 +3463,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c39 {
+.c40 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3484,7 +3482,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c33 {
+.c34 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3494,7 +3492,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   display: block;
 }
 
-.c35 {
+.c36 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3504,7 +3502,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   display: block;
 }
 
-.c40 {
+.c41 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3514,7 +3512,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   display: block;
 }
 
-.c44 {
+.c45 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3578,7 +3576,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c26 {
+.c27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3606,7 +3604,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   align-items: center;
 }
 
-.c31 {
+.c32 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3628,7 +3626,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c20 {
+.c21 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3652,7 +3650,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c23 {
+.c24 {
   box-sizing: content-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3680,7 +3678,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   flex: 0 0 2.875rem;
 }
 
-.c30 {
+.c31 {
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3696,7 +3694,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c22 {
+.c23 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -3708,7 +3706,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c28 {
+.c29 {
   box-sizing: border-box;
   min-height: 2.9375rem;
   max-width: 100%;
@@ -3767,7 +3765,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   float: right;
 }
 
-.c34 {
+.c35 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -3841,7 +3839,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   color: rgba(73,73,73,0.5);
 }
 
-.c37 {
+.c38 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 6rem;
@@ -3866,62 +3864,62 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   resize: vertical;
 }
 
-.c37:focus {
+.c38:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c37::-webkit-input-placeholder {
+.c38::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37::-moz-placeholder {
+.c38::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37:-ms-input-placeholder {
+.c38:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37:invalid {
+.c38:invalid {
   box-shadow: none;
 }
 
-.c37:disabled {
+.c38:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c37:disabled::-webkit-input-placeholder {
+.c38:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37:disabled::-moz-placeholder {
+.c38:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37:disabled:-ms-input-placeholder {
+.c38:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37:disabled {
+.c38:disabled {
   color: rgb(73,73,73);
 }
 
-.c37:disabled::-webkit-input-placeholder {
+.c38:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c37:disabled::-moz-placeholder {
+.c38:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c37:disabled:-ms-input-placeholder {
+.c38:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c36 {
+.c37 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3940,7 +3938,11 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   font-size: 0.8125rem;
 }
 
-.c29 {
+.c20 {
+  margin-bottom: 0;
+}
+
+.c30 {
   word-break: break-all;
   line-height: 1.5;
   white-space: nowrap;
@@ -3949,24 +3951,24 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
   display: block;
 }
 
-.c21 {
+.c22 {
   border-top: 0;
   border-left: 0;
   border-right: 0;
 }
 
-.c41 {
+.c42 {
   margin-right: 0.375rem;
 }
 
-.c24 {
+.c25 {
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
   box-sizing: border-box;
 }
 
-.c27 {
+.c28 {
   height: 2.9375rem;
   max-width: 98%;
 }
@@ -3990,7 +3992,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c39 {
+  .c40 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -3999,7 +4001,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c39 {
+  .c40 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4008,7 +4010,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c33 {
+  .c34 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -4017,7 +4019,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c35 {
+  .c36 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4026,7 +4028,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c40 {
+  .c41 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4035,7 +4037,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c44 {
+  .c45 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -4148,32 +4150,33 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
     className="c19"
   >
     <form
+      className="c20"
       onSubmit={undefined}
     >
       <div
-        className="c20"
+        className="c21"
         disabled={false}
         name="card"
       >
         <div
-          className="c21 c22 c23"
+          className="c22 c23 c24"
           disabled={false}
           name="card-header"
           onClick={[Function]}
         >
           <div
-            className="c24 c25"
+            className="c25 c26"
           >
             <div
-              className="c26"
+              className="c27"
             >
               <div
-                className="c27 c28 c23"
+                className="c28 c29 c24"
                 disabled={false}
                 name="card-header-meta"
               >
                 <div
-                  className="c29"
+                  className="c30"
                 />
               </div>
               <svg
@@ -4197,28 +4200,29 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c30 c31"
+          className="c31 c32"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c32"
+            className="c33"
           >
             <div
               className="c15"
             >
               <div
-                className="c33"
+                className="c34"
               >
                 <div
-                  className="c34"
+                  className="c35"
+                  id={null}
                   name="name"
                   role="group"
                   style={undefined}
                 >
                   <label
                     className="c5 c6"
-                    htmlFor="B"
+                    htmlFor={null}
                   >
                     Metadata
                      key
@@ -4229,14 +4233,14 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     <input
                       className="c8"
                       disabled={false}
-                      id="B"
+                      id={null}
                       onBlur={null}
                     />
                     <div
                       className="c15"
                     >
                       <div
-                        className="c35"
+                        className="c36"
                       />
                     </div>
                   </div>
@@ -4251,17 +4255,18 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               className="c15"
             >
               <div
-                className="c33"
+                className="c34"
               >
                 <div
-                  className="c34"
+                  className="c35"
+                  id={null}
                   name="value"
                   role="group"
                   style={undefined}
                 >
                   <label
                     className="c5 c6"
-                    htmlFor="C"
+                    htmlFor={null}
                   >
                     Metadata
                      value
@@ -4270,9 +4275,9 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     className="c7"
                   >
                     <textarea
-                      className="c36 c37"
+                      className="c37 c38"
                       disabled={false}
-                      id="C"
+                      id={null}
                       name="name"
                       onBlur={undefined}
                     />
@@ -4281,7 +4286,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     className="c15"
                   >
                     <div
-                      className="c35"
+                      className="c36"
                     />
                   </div>
                 </div>
@@ -4292,19 +4297,20 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               </div>
             </div>
             <div
-              className="c38"
+              className="c39"
             >
               <div
-                className="c39"
+                className="c40"
               >
                 <div
-                  className="c40"
+                  className="c41"
                 >
                   <button
-                    className="c41 c42 c11 c12 c13"
+                    className="c42 c43 c11 c12 c13"
                     data-ui-button="true"
                     disabled={false}
                     href=""
+                    id={null}
                     onClick={[Function]}
                     type="button"
                   >
@@ -4313,10 +4319,11 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     </span>
                   </button>
                   <button
-                    className="c43 c11 c12 c13"
+                    className="c44 c11 c12 c13"
                     data-ui-button="true"
                     disabled={true}
                     href=""
+                    id={null}
                     type="submit"
                   >
                     <span>
@@ -4325,19 +4332,20 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                   </button>
                 </div>
                 <div
-                  className="c44"
+                  className="c45"
                 >
                   <button
-                    className="c45 c11 c12 c13"
+                    className="c46 c11 c12 c13"
                     data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
+                    id={null}
                     onClick={[Function]}
                     type="button"
                   >
                     <div
-                      className="c46"
+                      className="c47"
                     >
                       <svg
                         height="16"
@@ -4357,7 +4365,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                       </svg>
                     </div>
                     <span>
-                      Remove
+                      Delete
                     </span>
                   </button>
                 </div>
@@ -4372,32 +4380,33 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
     className="c19"
   >
     <form
+      className="c20"
       onSubmit={undefined}
     >
       <div
-        className="c20"
+        className="c21"
         disabled={false}
         name="card"
       >
         <div
-          className="c21 c22 c23"
+          className="c22 c23 c24"
           disabled={false}
           name="card-header"
           onClick={[Function]}
         >
           <div
-            className="c24 c25"
+            className="c25 c26"
           >
             <div
-              className="c26"
+              className="c27"
             >
               <div
-                className="c27 c28 c23"
+                className="c28 c29 c24"
                 disabled={false}
                 name="card-header-meta"
               >
                 <div
-                  className="c29"
+                  className="c30"
                 />
               </div>
               <svg
@@ -4421,28 +4430,29 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c30 c31"
+          className="c31 c32"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c32"
+            className="c33"
           >
             <div
               className="c15"
             >
               <div
-                className="c33"
+                className="c34"
               >
                 <div
-                  className="c34"
+                  className="c35"
+                  id={null}
                   name="name"
                   role="group"
                   style={undefined}
                 >
                   <label
                     className="c5 c6"
-                    htmlFor="D"
+                    htmlFor={null}
                   >
                     Metadata
                      key
@@ -4453,14 +4463,14 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     <input
                       className="c8"
                       disabled={false}
-                      id="D"
+                      id={null}
                       onBlur={null}
                     />
                     <div
                       className="c15"
                     >
                       <div
-                        className="c35"
+                        className="c36"
                       />
                     </div>
                   </div>
@@ -4475,17 +4485,18 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               className="c15"
             >
               <div
-                className="c33"
+                className="c34"
               >
                 <div
-                  className="c34"
+                  className="c35"
+                  id={null}
                   name="value"
                   role="group"
                   style={undefined}
                 >
                   <label
                     className="c5 c6"
-                    htmlFor="E"
+                    htmlFor={null}
                   >
                     Metadata
                      value
@@ -4494,9 +4505,9 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     className="c7"
                   >
                     <textarea
-                      className="c36 c37"
+                      className="c37 c38"
                       disabled={false}
-                      id="E"
+                      id={null}
                       name="name"
                       onBlur={undefined}
                     />
@@ -4505,7 +4516,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     className="c15"
                   >
                     <div
-                      className="c35"
+                      className="c36"
                     />
                   </div>
                 </div>
@@ -4516,19 +4527,20 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               </div>
             </div>
             <div
-              className="c38"
+              className="c39"
             >
               <div
-                className="c39"
+                className="c40"
               >
                 <div
-                  className="c40"
+                  className="c41"
                 >
                   <button
-                    className="c41 c42 c11 c12 c13"
+                    className="c42 c43 c11 c12 c13"
                     data-ui-button="true"
                     disabled={false}
                     href=""
+                    id={null}
                     onClick={[Function]}
                     type="button"
                   >
@@ -4537,10 +4549,11 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     </span>
                   </button>
                   <button
-                    className="c43 c11 c12 c13"
+                    className="c44 c11 c12 c13"
                     data-ui-button="true"
                     disabled={true}
                     href=""
+                    id={null}
                     type="submit"
                   >
                     <span>
@@ -4549,19 +4562,20 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                   </button>
                 </div>
                 <div
-                  className="c44"
+                  className="c45"
                 >
                   <button
-                    className="c45 c11 c12 c13"
+                    className="c46 c11 c12 c13"
                     data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
+                    id={null}
                     onClick={[Function]}
                     type="button"
                   >
                     <div
-                      className="c46"
+                      className="c47"
                     >
                       <svg
                         height="16"
@@ -4581,7 +4595,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                       </svg>
                     </div>
                     <span>
-                      Remove
+                      Delete
                     </span>
                   </button>
                 </div>
@@ -4596,32 +4610,33 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
     className="c19"
   >
     <form
+      className="c20"
       onSubmit={undefined}
     >
       <div
-        className="c20"
+        className="c21"
         disabled={false}
         name="card"
       >
         <div
-          className="c21 c22 c23"
+          className="c22 c23 c24"
           disabled={false}
           name="card-header"
           onClick={[Function]}
         >
           <div
-            className="c24 c25"
+            className="c25 c26"
           >
             <div
-              className="c26"
+              className="c27"
             >
               <div
-                className="c27 c28 c23"
+                className="c28 c29 c24"
                 disabled={false}
                 name="card-header-meta"
               >
                 <div
-                  className="c29"
+                  className="c30"
                 />
               </div>
               <svg
@@ -4645,28 +4660,29 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
           </div>
         </div>
         <div
-          className="c30 c31"
+          className="c31 c32"
           disabled={false}
           name="card-outlet"
         >
           <div
-            className="c32"
+            className="c33"
           >
             <div
               className="c15"
             >
               <div
-                className="c33"
+                className="c34"
               >
                 <div
-                  className="c34"
+                  className="c35"
+                  id={null}
                   name="name"
                   role="group"
                   style={undefined}
                 >
                   <label
                     className="c5 c6"
-                    htmlFor="F"
+                    htmlFor={null}
                   >
                     Metadata
                      key
@@ -4677,14 +4693,14 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     <input
                       className="c8"
                       disabled={false}
-                      id="F"
+                      id={null}
                       onBlur={null}
                     />
                     <div
                       className="c15"
                     >
                       <div
-                        className="c35"
+                        className="c36"
                       />
                     </div>
                   </div>
@@ -4699,17 +4715,18 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               className="c15"
             >
               <div
-                className="c33"
+                className="c34"
               >
                 <div
-                  className="c34"
+                  className="c35"
+                  id={null}
                   name="value"
                   role="group"
                   style={undefined}
                 >
                   <label
                     className="c5 c6"
-                    htmlFor="G"
+                    htmlFor={null}
                   >
                     Metadata
                      value
@@ -4718,9 +4735,9 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     className="c7"
                   >
                     <textarea
-                      className="c36 c37"
+                      className="c37 c38"
                       disabled={false}
-                      id="G"
+                      id={null}
                       name="name"
                       onBlur={undefined}
                     />
@@ -4729,7 +4746,7 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     className="c15"
                   >
                     <div
-                      className="c35"
+                      className="c36"
                     />
                   </div>
                 </div>
@@ -4740,19 +4757,20 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
               </div>
             </div>
             <div
-              className="c38"
+              className="c39"
             >
               <div
-                className="c39"
+                className="c40"
               >
                 <div
-                  className="c40"
+                  className="c41"
                 >
                   <button
-                    className="c41 c42 c11 c12 c13"
+                    className="c42 c43 c11 c12 c13"
                     data-ui-button="true"
                     disabled={false}
                     href=""
+                    id={null}
                     onClick={[Function]}
                     type="button"
                   >
@@ -4761,10 +4779,11 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                     </span>
                   </button>
                   <button
-                    className="c43 c11 c12 c13"
+                    className="c44 c11 c12 c13"
                     data-ui-button="true"
                     disabled={true}
                     href=""
+                    id={null}
                     type="submit"
                   >
                     <span>
@@ -4773,40 +4792,41 @@ exports[`renders <Metadata metadata /> without throwing 1`] = `
                   </button>
                 </div>
                 <div
-                  className="c44"
+                  className="c45"
                 >
                   <button
-                    className="c47 c11 c12 c13"
+                    className="c48 c11 c12 c13"
                     data-ui-button="true"
                     disabled={false}
                     href=""
                     icon={true}
+                    id={null}
                     onClick={[Function]}
                     type="button"
                   >
                     <div
-                      className="c48"
+                      className="c49"
                     >
                       <svg
                         height="10"
                         width="28"
                       >
                         <rect
-                          className="c49"
+                          className="c50"
                           height="6"
                           width="6"
                           x="2"
                           y="2"
                         />
                         <rect
-                          className="c50 c49"
+                          className="c51 c50"
                           height="6"
                           width="6"
                           x="11"
                           y="2"
                         />
                         <rect
-                          className="c51 c49"
+                          className="c52 c50"
                           height="6"
                           width="6"
                           x="20"

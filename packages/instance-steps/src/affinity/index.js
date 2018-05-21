@@ -150,6 +150,7 @@ const Affinity = ({
                     noRemove
                     borderless
                     headless
+                    id="affinity"
                     onCancel={() => handleChangeAddOpen(false)}
                   />
                 </Margin>
@@ -169,7 +170,12 @@ const Affinity = ({
           ) : null}
           {!addOpen && exitingRule ? (
             <Margin top={5}>
-              <Button type="button" component={Link} to={next}>
+              <Button
+                id={'next-button-affinity'}
+                type="button"
+                component={Link}
+                to={next}
+              >
                 Next
               </Button>
             </Margin>

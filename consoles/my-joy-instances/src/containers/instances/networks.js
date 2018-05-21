@@ -37,7 +37,9 @@ export const Networks = ({
         complete control over the network environment. Read more on fabrics.
       </Description>
     </Margin>
-    <H3>Networks attached to this instance</H3>
+    <Margin bottom={3}>
+      <H3>Networks attached to this instance</H3>
+    </Margin>
     {loading ? <StatusLoader /> : null}
     {!loading && error && !networks.length ? (
       <Margin bottom={5}>
@@ -79,14 +81,14 @@ export default compose(
       }
     }),
     props: ({ data }) => {
+      console.log(data);
       const { loading, error, variables } = data;
       const { id } = variables;
 
-      const machines = get(data, 'machines.results', []);
+      const machines = get(data, 'machine', []);
       const instance = find(forceArray(machines), ['id', id]);
       const values = get(instance, 'networks', []);
       const networks = reverse(sortBy(values, 'public'));
-
       return {
         networks,
         instance,
