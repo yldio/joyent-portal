@@ -79,7 +79,7 @@ const TableTh = styled(BaseTableTh)`
 
   ${is('smallScreen')`
     border: none;
-    color: #979797;
+    color: ${props => props.theme.greyDark};
     font-size: ${remcalc(13)};
     height: auto;
     padding: 0;
@@ -105,20 +105,20 @@ const TableTd = styled(BaseTableTd)`
 `;
 
 const FormItem = styled('form')`
-  border: 1px solid #d8d8d8;
+  border: 1px solid ${props => props.theme.grey};
   border-radius: 4px;
 
   ${is('selected')`
-    border-color: #3B46CC;
+    border-color: ${props => props.theme.primary};
     background-color: rgba(59,70,204,0.05);
   `};
 `;
 
 const PackageSpecs = styled('div')`
-  border-top: 1px solid #d8d8d8;
+  border-top: 1px solid ${props => props.theme.grey};
 
   ${is('selected')`
-    border-color: #3B46CC;
+    border-color: ${props => props.theme.primary};
   `};
 `;
 
