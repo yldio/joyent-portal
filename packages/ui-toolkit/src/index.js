@@ -21,7 +21,8 @@ export { default as Breadcrumb, Item as BreadcrumbItem } from './breadcrumb';
 
 export {
   styled as StyledBreakpoints,
-  query as QueryBreakpoints
+  query as QueryBreakpoints,
+  breakpoints as ValueBreakpoints
 } from './breakpoints';
 
 export {

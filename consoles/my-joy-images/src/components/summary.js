@@ -6,7 +6,7 @@ import Flex, { FlexItem } from 'styled-flex-component';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import titleCase from 'title-case';
 import remcalc from 'remcalc';
-import { breakpoints } from 'joyent-ui-toolkit/dist/es/breakpoints/screens';
+import { ValueBreakpoints as breakpoints } from 'joyent-ui-toolkit';
 
 import {
   Card,

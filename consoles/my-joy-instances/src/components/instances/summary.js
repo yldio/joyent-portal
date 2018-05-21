@@ -8,7 +8,7 @@ import titleCase from 'title-case';
 import get from 'lodash.get';
 import remcalc from 'remcalc';
 import { Field } from 'redux-form';
-import { breakpoints } from 'joyent-ui-toolkit/dist/es/breakpoints/screens';
+import { ValueBreakpoints as breakpoints } from 'joyent-ui-toolkit';
 
 import {
   Card,

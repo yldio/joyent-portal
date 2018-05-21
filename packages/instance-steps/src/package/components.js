@@ -31,7 +31,7 @@ import {
 } from 'joyent-ui-toolkit';
 
 import { NoPackages } from 'joyent-logo-assets';
-import { breakpoints } from 'joyent-ui-toolkit/dist/es/breakpoints/screens';
+import { ValueBreakpoints as breakpoints } from 'joyent-ui-toolkit';
 import { EmptyState } from 'joyent-icons';
 
 const GroupIcons = {
