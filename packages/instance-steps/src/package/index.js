@@ -23,7 +23,13 @@ import Step, {
 
 import { Button, PackageIcon, StatusLoader } from 'joyent-ui-toolkit';
 
-import { Filters, Packages, Package, Overview } from './components';
+import {
+  Filters,
+  Packages,
+  Package,
+  MobilePackage,
+  Overview
+} from './components';
 import getPackages from '../graphql/get-packages.gql';
 import priceData from './prices.json';
 import { Forms, Values } from '../constants';
@@ -89,14 +95,13 @@ const PackageComponent = ({
                   <Fragment>
                     <SmallOnly>
                       {packages.map(({ id, ...pkg }) => (
-                        <Package
+                        <MobilePackage
                           key={id}
                           id={id}
                           selected={selected.id === id}
                           hasVms={hasVms}
                           onRowClick={handleRowClick}
                           sortBy={sortBy}
-                          xs
                           {...pkg}
                         />
                       ))}
