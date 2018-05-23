@@ -64,7 +64,7 @@ const Name = ({
     isValid={handleValidate(preview)}
     {...props}
   >
-    <StepHeader icon={<NameIcon />}>Name this instance</StepHeader>
+    <StepHeader icon={<NameIcon />}>Instance name</StepHeader>
     <StepDescription>
       Your instance name will be used to identify this specific instance.
     </StepDescription>
