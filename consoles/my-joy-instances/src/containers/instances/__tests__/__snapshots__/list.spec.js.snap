@@ -156,7 +156,7 @@ exports[`renders <List /> without throwing 1`] = `
 .c0 {
   box-sizing: border-box;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 78.75rem;
   padding-bottom: 1.125rem;
 }
 
@@ -267,7 +267,6 @@ exports[`renders <List /> without throwing 1`] = `
   height: 1.125rem;
   box-sizing: border-box;
   top: 0;
-  right: 0;
   cursor: pointer;
   background-color: rgb(255,255,255);
   box-shadow: none;
@@ -682,21 +681,35 @@ exports[`renders <List /> without throwing 1`] = `
   }
 }
 
-@media only screen and (max-width:47.9375rem) {
+@media only screen and (max-width:37.4375rem) {
   .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.5rem) and (max-width:62.4375rem) {
+  .c0 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media only screen and (min-width:62.5rem) and (max-width:87.4375rem) {
+  .c0 {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+  }
+}
+
+@media only screen and (min-width:37.4375rem) {
   .c25 {
     width: 10rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c26 {
     width: 8.125rem;
     display: table-cell;
@@ -1094,7 +1107,7 @@ exports[`renders <List error /> without throwing 1`] = `
 .c0 {
   box-sizing: border-box;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 78.75rem;
   padding-bottom: 1.125rem;
 }
 
@@ -1242,7 +1255,6 @@ exports[`renders <List error /> without throwing 1`] = `
   height: 1.125rem;
   box-sizing: border-box;
   top: 0;
-  right: 0;
   cursor: pointer;
   background-color: rgb(255,255,255);
   box-shadow: none;
@@ -1657,21 +1669,35 @@ exports[`renders <List error /> without throwing 1`] = `
   }
 }
 
-@media only screen and (max-width:47.9375rem) {
+@media only screen and (max-width:37.4375rem) {
   .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.5rem) and (max-width:62.4375rem) {
+  .c0 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media only screen and (min-width:62.5rem) and (max-width:87.4375rem) {
+  .c0 {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+  }
+}
+
+@media only screen and (min-width:37.4375rem) {
   .c32 {
     width: 10rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c33 {
     width: 8.125rem;
     display: table-cell;
@@ -2127,7 +2153,7 @@ exports[`renders <List instances /> without throwing 1`] = `
 .c0 {
   box-sizing: border-box;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 78.75rem;
   padding-bottom: 1.125rem;
 }
 
@@ -2228,7 +2254,6 @@ exports[`renders <List instances /> without throwing 1`] = `
   height: 1.125rem;
   box-sizing: border-box;
   top: 0;
-  right: 0;
   cursor: pointer;
   background-color: rgb(255,255,255);
   box-shadow: none;
@@ -2838,35 +2863,49 @@ exports[`renders <List instances /> without throwing 1`] = `
   }
 }
 
-@media only screen and (max-width:47.9375rem) {
+@media only screen and (max-width:37.4375rem) {
   .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.5rem) and (max-width:62.4375rem) {
+  .c0 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media only screen and (min-width:62.5rem) and (max-width:87.4375rem) {
+  .c0 {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+  }
+}
+
+@media only screen and (min-width:37.4375rem) {
   .c25 {
     width: 10rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c26 {
     width: 8.125rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c34 {
     width: 10rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c35 {
     width: 8.125rem;
     display: table-cell;
@@ -4235,14 +4274,14 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 .c0 {
   box-sizing: border-box;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 78.75rem;
   padding-bottom: 1.125rem;
 }
 
 .c51 {
   box-sizing: border-box;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 78.75rem;
 }
 
 .c3 {
@@ -4412,7 +4451,6 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   height: 1.125rem;
   box-sizing: border-box;
   top: 0;
-  right: 0;
   cursor: pointer;
   background-color: rgb(255,255,255);
   box-shadow: none;
@@ -5058,42 +5096,70 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   }
 }
 
-@media only screen and (max-width:47.9375rem) {
+@media only screen and (max-width:37.4375rem) {
   .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
-@media only screen and (max-width:47.9375rem) {
+@media only screen and (min-width:37.5rem) and (max-width:62.4375rem) {
+  .c0 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media only screen and (min-width:62.5rem) and (max-width:87.4375rem) {
+  .c0 {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+  }
+}
+
+@media only screen and (max-width:37.4375rem) {
   .c51 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.5rem) and (max-width:62.4375rem) {
+  .c51 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media only screen and (min-width:62.5rem) and (max-width:87.4375rem) {
+  .c51 {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+  }
+}
+
+@media only screen and (min-width:37.4375rem) {
   .c25 {
     width: 10rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c26 {
     width: 8.125rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c34 {
     width: 10rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c35 {
     width: 8.125rem;
     display: table-cell;
@@ -5681,7 +5747,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           >
             <span
               name="react-responsive-mock"
-              query="only screen and (max-width: 47.9375rem)"
+              query="only screen and (max-width: 37.4375rem)"
             >
               <button
                 className="c55 c13 c56 c57"
@@ -5715,7 +5781,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             >
               <span
                 name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
+                query="only screen and (min-width: 37.5rem)"
               >
                 <button
                   className="c59 c13 c56 c57"
@@ -5754,7 +5820,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </div>
             <span
               name="react-responsive-mock"
-              query="only screen and (max-width: 47.9375rem)"
+              query="only screen and (max-width: 37.4375rem)"
             >
               <button
                 className="c55 c13 c56 c57"
@@ -5788,7 +5854,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             >
               <span
                 name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
+                query="only screen and (min-width: 37.5rem)"
               >
                 <button
                   className="c59 c13 c56 c57"
@@ -5827,7 +5893,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             </div>
             <span
               name="react-responsive-mock"
-              query="only screen and (max-width: 47.9375rem)"
+              query="only screen and (max-width: 37.4375rem)"
             >
               <button
                 className="c55 c13 c56 c57"
@@ -5877,7 +5943,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
             >
               <span
                 name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
+                query="only screen and (min-width: 37.5rem)"
               >
                 <button
                   className="c59 c13 c56 c57"
@@ -5933,7 +5999,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
         >
           <span
             name="react-responsive-mock"
-            query="only screen and (max-width: 47.9375rem)"
+            query="only screen and (max-width: 37.4375rem)"
           >
             <button
               className="c61 c13 c56 c57"
@@ -5964,7 +6030,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
           </span>
           <span
             name="react-responsive-mock"
-            query="only screen and (min-width: 48rem)"
+            query="only screen and (min-width: 37.5rem)"
           >
             <button
               className="c62 c13 c56 c57"
@@ -6807,14 +6873,14 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 .c0 {
   box-sizing: border-box;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 78.75rem;
   padding-bottom: 1.125rem;
 }
 
 .c51 {
   box-sizing: border-box;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 78.75rem;
 }
 
 .c3 {
@@ -6984,7 +7050,6 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   height: 1.125rem;
   box-sizing: border-box;
   top: 0;
-  right: 0;
   cursor: pointer;
   background-color: rgb(255,255,255);
   box-shadow: none;
@@ -7630,42 +7695,70 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   }
 }
 
-@media only screen and (max-width:47.9375rem) {
+@media only screen and (max-width:37.4375rem) {
   .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
-@media only screen and (max-width:47.9375rem) {
+@media only screen and (min-width:37.5rem) and (max-width:62.4375rem) {
+  .c0 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media only screen and (min-width:62.5rem) and (max-width:87.4375rem) {
+  .c0 {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+  }
+}
+
+@media only screen and (max-width:37.4375rem) {
   .c51 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.5rem) and (max-width:62.4375rem) {
+  .c51 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media only screen and (min-width:62.5rem) and (max-width:87.4375rem) {
+  .c51 {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+  }
+}
+
+@media only screen and (min-width:37.4375rem) {
   .c25 {
     width: 10rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c26 {
     width: 8.125rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c34 {
     width: 10rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c35 {
     width: 8.125rem;
     display: table-cell;
@@ -8253,7 +8346,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           >
             <span
               name="react-responsive-mock"
-              query="only screen and (max-width: 47.9375rem)"
+              query="only screen and (max-width: 37.4375rem)"
             >
               <button
                 className="c55 c13 c56 c57"
@@ -8287,7 +8380,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             >
               <span
                 name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
+                query="only screen and (min-width: 37.5rem)"
               >
                 <button
                   className="c59 c13 c56 c57"
@@ -8326,7 +8419,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </div>
             <span
               name="react-responsive-mock"
-              query="only screen and (max-width: 47.9375rem)"
+              query="only screen and (max-width: 37.4375rem)"
             >
               <button
                 className="c55 c13 c56 c57"
@@ -8360,7 +8453,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             >
               <span
                 name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
+                query="only screen and (min-width: 37.5rem)"
               >
                 <button
                   className="c59 c13 c56 c57"
@@ -8399,7 +8492,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             </div>
             <span
               name="react-responsive-mock"
-              query="only screen and (max-width: 47.9375rem)"
+              query="only screen and (max-width: 37.4375rem)"
             >
               <button
                 className="c55 c13 c56 c57"
@@ -8449,7 +8542,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
             >
               <span
                 name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
+                query="only screen and (min-width: 37.5rem)"
               >
                 <button
                   className="c59 c13 c56 c57"
@@ -8505,7 +8598,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
         >
           <span
             name="react-responsive-mock"
-            query="only screen and (max-width: 47.9375rem)"
+            query="only screen and (max-width: 37.4375rem)"
           >
             <button
               className="c61 c13 c56 c57"
@@ -8536,7 +8629,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
           </span>
           <span
             name="react-responsive-mock"
-            query="only screen and (min-width: 48rem)"
+            query="only screen and (min-width: 37.5rem)"
           >
             <button
               className="c62 c13 c56 c57"
@@ -9574,14 +9667,14 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 .c0 {
   box-sizing: border-box;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 78.75rem;
   padding-bottom: 1.125rem;
 }
 
 .c51 {
   box-sizing: border-box;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 78.75rem;
 }
 
 .c3 {
@@ -9751,7 +9844,6 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   height: 1.125rem;
   box-sizing: border-box;
   top: 0;
-  right: 0;
   cursor: pointer;
   background-color: rgb(255,255,255);
   box-shadow: none;
@@ -10397,42 +10489,70 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   }
 }
 
-@media only screen and (max-width:47.9375rem) {
+@media only screen and (max-width:37.4375rem) {
   .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
-@media only screen and (max-width:47.9375rem) {
+@media only screen and (min-width:37.5rem) and (max-width:62.4375rem) {
+  .c0 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media only screen and (min-width:62.5rem) and (max-width:87.4375rem) {
+  .c0 {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+  }
+}
+
+@media only screen and (max-width:37.4375rem) {
   .c51 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.5rem) and (max-width:62.4375rem) {
+  .c51 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media only screen and (min-width:62.5rem) and (max-width:87.4375rem) {
+  .c51 {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+  }
+}
+
+@media only screen and (min-width:37.4375rem) {
   .c25 {
     width: 10rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c26 {
     width: 8.125rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c34 {
     width: 10rem;
     display: table-cell;
   }
 }
 
-@media only screen and (min-width:47.9375rem) {
+@media only screen and (min-width:37.4375rem) {
   .c35 {
     width: 8.125rem;
     display: table-cell;
@@ -11020,7 +11140,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           >
             <span
               name="react-responsive-mock"
-              query="only screen and (max-width: 47.9375rem)"
+              query="only screen and (max-width: 37.4375rem)"
             >
               <button
                 className="c55 c13 c56 c57"
@@ -11054,7 +11174,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             >
               <span
                 name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
+                query="only screen and (min-width: 37.5rem)"
               >
                 <button
                   className="c59 c13 c56 c57"
@@ -11093,7 +11213,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </div>
             <span
               name="react-responsive-mock"
-              query="only screen and (max-width: 47.9375rem)"
+              query="only screen and (max-width: 37.4375rem)"
             >
               <button
                 className="c60 c13 c56 c57"
@@ -11127,7 +11247,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             >
               <span
                 name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
+                query="only screen and (min-width: 37.5rem)"
               >
                 <button
                   className="c61 c13 c56 c57"
@@ -11166,7 +11286,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             </div>
             <span
               name="react-responsive-mock"
-              query="only screen and (max-width: 47.9375rem)"
+              query="only screen and (max-width: 37.4375rem)"
             >
               <button
                 className="c60 c13 c56 c57"
@@ -11216,7 +11336,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
             >
               <span
                 name="react-responsive-mock"
-                query="only screen and (min-width: 48rem)"
+                query="only screen and (min-width: 37.5rem)"
               >
                 <button
                   className="c61 c13 c56 c57"
@@ -11272,7 +11392,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
         >
           <span
             name="react-responsive-mock"
-            query="only screen and (max-width: 47.9375rem)"
+            query="only screen and (max-width: 37.4375rem)"
           >
             <button
               className="c63 c13 c56 c57"
@@ -11303,7 +11423,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
           </span>
           <span
             name="react-responsive-mock"
-            query="only screen and (min-width: 48rem)"
+            query="only screen and (min-width: 37.5rem)"
           >
             <button
               className="c64 c13 c56 c57"
@@ -11539,7 +11659,7 @@ exports[`renders <List loading /> without throwing 1`] = `
 .c0 {
   box-sizing: border-box;
   width: 100%;
-  max-width: 62.5rem;
+  max-width: 78.75rem;
   padding-bottom: 1.125rem;
 }
 
@@ -11710,10 +11830,24 @@ exports[`renders <List loading /> without throwing 1`] = `
   }
 }
 
-@media only screen and (max-width:47.9375rem) {
+@media only screen and (max-width:37.4375rem) {
   .c0 {
-    padding-left: 0.375rem;
-    padding-right: 0.375rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+@media only screen and (min-width:37.5rem) and (max-width:62.4375rem) {
+  .c0 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media only screen and (min-width:62.5rem) and (max-width:87.4375rem) {
+  .c0 {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
   }
 }
 

@@ -4,7 +4,7 @@ import emotion from 'preact-emotion';
 import remcalc from 'remcalc';
 import outy from 'outy';
 
-import { breakpoints } from 'joyent-ui-toolkit/dist/es/breakpoints/screens';
+import { ValueBreakpoints as breakpoints } from 'joyent-ui-toolkit';
 
 export const Item = emotion('div')`
   order: 0;

@@ -6,6 +6,7 @@ import Flex, { FlexItem } from 'styled-flex-component';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
 import titleCase from 'title-case';
 import remcalc from 'remcalc';
+import { ValueBreakpoints as breakpoints } from 'joyent-ui-toolkit';
 
 import {
   Card,
@@ -37,7 +38,7 @@ const VerticalDivider = styled.div`
   align-self: flex-end;
   margin: 0 ${remcalc(18)};
 
-  @media (max-width: ${remcalc(767)}) {
+  @media (max-width: ${remcalc(breakpoints.small.upper)}) {
     display: none;
   }
 `;

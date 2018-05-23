@@ -13,14 +13,21 @@ import * as Assets from 'joyent-logo-assets';
 import {
   H3,
   P,
-  FormGroup,
+  FormGroup as BaseFormGroup,
   SectionList as BaseSectionList,
   SectionListItem,
   SectionListAnchor,
   H4 as BaseH4,
   Select,
-  Card as BaseCard
+  Card as BaseCard,
+  StyledBreakpoints as breakpoints
 } from 'joyent-ui-toolkit';
+
+const imageColSize = {
+  small: 6,
+  medium: 4,
+  large: 3
+};
 
 const Version = styled(Select)`
   min-width: 100%;
@@ -40,6 +47,11 @@ const SectionList = styled(BaseSectionList)`
 
 const Card = styled(BaseCard)`
   border-bottom: 0;
+  width: 100%;
+`;
+
+const FormGroup = styled(BaseFormGroup)`
+  width: 100%;
 `;
 
 const H4 = styled(BaseH4)`
@@ -79,7 +91,7 @@ const Image = ({ onClick, active, ...image }) => {
   const Logo = Assets[pascalCase(imageName)] || Assets.Placeholder;
 
   return (
-    <Col md={2} sm={3}>
+    <Col lg={3} md={4} xs={6}>
       <Margin bottom={3}>
         <Card id={id} onClick={handleCardClick} active={active} preview>
           <Logo

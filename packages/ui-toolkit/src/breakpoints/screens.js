@@ -2,33 +2,33 @@ import remcalc from 'remcalc';
 
 export const breakpoints = {
   small: {
-    upper: 767
+    upper: 599
   },
   medium: {
-    upper: 1023,
-    lower: 768
+    upper: 999,
+    lower: 600
   },
   large: {
-    upper: 1199,
-    lower: 1024
+    upper: 1399,
+    lower: 1000
   },
   xlarge: {
-    lower: 1200
+    lower: 1400
   }
 };
 
 export default {
-  // >= 768px
+  // >= 599px
   smallOnly: `only screen and (max-width: ${remcalc(breakpoints.small.upper)})`,
   small: `only screen and (min-width: ${remcalc(breakpoints.small.upper)})`,
-  // >= 1024px
+  // >= 999px
   mediumOnly: `only screen and (min-width: ${remcalc(breakpoints.medium.lower)})
     and (max-width: ${remcalc(breakpoints.medium.upper)})`,
   mediumDown: `only screen and (max-width: ${remcalc(
     breakpoints.medium.upper
   )})`,
   medium: `only screen and (min-width: ${remcalc(breakpoints.medium.lower)})`,
-  // >= 1200px
+  // >= 1400px
   largeOnly: `only screen and (min-width: ${remcalc(breakpoints.large.lower)})
     and (max-width: ${remcalc(breakpoints.large.upper)})`,
   largeDown: `only screen and (max-width: ${remcalc(breakpoints.large.upper)})`,

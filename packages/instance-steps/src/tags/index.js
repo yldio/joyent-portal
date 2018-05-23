@@ -69,7 +69,7 @@ const TagsContainer = ({
   ...props
 }) => (
   <Step name="tags" getValue={handleGetValue} {...props}>
-    <StepHeader icon={<TagsIcon />}>Tags</StepHeader>
+    <StepHeader icon={1 === 0 && <TagsIcon />}>Tags</StepHeader>
     <StepDescription href="https://docs.joyent.com/public-cloud/tags-metadata/tags">
       Tags can be used to identify your instances, group multiple instances
       together, define firewall and affinity rules, and more.

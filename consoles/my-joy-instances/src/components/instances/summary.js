@@ -8,6 +8,7 @@ import titleCase from 'title-case';
 import get from 'lodash.get';
 import remcalc from 'remcalc';
 import { Field } from 'redux-form';
+import { ValueBreakpoints as breakpoints } from 'joyent-ui-toolkit';
 
 import {
   Card,
@@ -71,7 +72,7 @@ const VerticalDivider = styled.div`
   align-self: flex-end;
   margin: 0 ${remcalc(12)};
 
-  @media (max-width: ${remcalc(767)}) {
+  @media (max-width: ${remcalc(breakpoints.small.upper)}) {
     display: none;
   }
 `;
