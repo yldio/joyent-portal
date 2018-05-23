@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { Field } from 'redux-form';
-import { Row, Col as BaseCol } from 'joyent-react-styled-flexboxgrid';
+import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 import { Margin } from 'styled-components-spacing';
 import pascalCase from 'pascal-case';
 import titleCase from 'title-case';
@@ -43,20 +43,6 @@ const Version = styled(Select)`
 
 const SectionList = styled(BaseSectionList)`
   background: transparent;
-`;
-
-const Col = styled(BaseCol)`
-  ${breakpoints.smallOnly`
-    width: ${imageColSize.small / 12 * 100}%;
-  `};
-
-  ${breakpoints.mediumOnly`
-    width: ${imageColSize.medium / 12 * 100}%;
-  `};
-
-  ${breakpoints.large`
-    width: ${imageColSize.large / 12 * 100}%;
-  `};
 `;
 
 const Card = styled(BaseCard)`
@@ -105,7 +91,7 @@ const Image = ({ onClick, active, ...image }) => {
   const Logo = Assets[pascalCase(imageName)] || Assets.Placeholder;
 
   return (
-    <Col lg={3} md={4} sm={6}>
+    <Col lg={3} md={4} xs={6}>
       <Margin bottom={3}>
         <Card id={id} onClick={handleCardClick} active={active} preview>
           <Logo
