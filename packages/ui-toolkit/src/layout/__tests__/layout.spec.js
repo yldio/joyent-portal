@@ -32,7 +32,7 @@ describe('Layout', () => {
       .toJSON();
 
     expect(tree).toMatchSnapshot();
-    expect(tree).toHaveStyleRule('max-width', remcalc(1000));
+    expect(tree).toHaveStyleRule('max-width', remcalc(1260));
   });
 
   test('ViewContainer fluid', () => {
