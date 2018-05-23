@@ -9,7 +9,7 @@ const { default: Table, Thead, Tr, Th, Tbody } = require('./');
 <Table>
   <Thead>
     <Tr>
-      <Th xs="32" padding="0" paddingLeft="12" middle left>
+      <Th xs="32" middle left>
         <FormGroup style={{ display: 'flex', alignItems: 'center' }}>
           <Checkbox noMargin />
         </FormGroup>
@@ -23,7 +23,7 @@ const { default: Table, Thead, Tr, Th, Tbody } = require('./');
       <Th xs="0" sm="160" left middle actionable>
         <span>Created </span>
       </Th>
-      <Th xs="60" padding="0" />
+      <Th xs="60" />
     </Tr>
   </Thead>
   <Tbody />
@@ -44,8 +44,6 @@ const { default: Table, Tfoot, Tr, Th } = require('./');
       <Th
         style={{ borderTop: '1px solid rgb(216,216,216)' }}
         xs="32"
-        padding="0"
-        paddingLeft="12"
         middle
         left
       >
@@ -83,11 +81,7 @@ const { default: Table, Tfoot, Tr, Th } = require('./');
       >
         <span>Created </span>
       </Th>
-      <Th
-        style={{ borderTop: '1px solid rgb(216,216,216)' }}
-        xs="60"
-        padding="0"
-      />
+      <Th style={{ borderTop: '1px solid rgb(216,216,216)' }} xs="60" />
     </Tr>
   </Tfoot>
 </Table>;
@@ -111,8 +105,6 @@ const { default: Flex } = require('styled-flex-component');
         <Th
           style={{ borderTop: '1px solid rgb(216,216,216)' }}
           xs="32"
-          padding="0"
-          paddingLeft="12"
           middle
           left
         >
@@ -150,16 +142,12 @@ const { default: Flex } = require('styled-flex-component');
         >
           <span>Created </span>
         </Th>
-        <Th
-          style={{ borderTop: '1px solid rgb(216,216,216)' }}
-          xs="60"
-          padding="0"
-        />
+        <Th style={{ borderTop: '1px solid rgb(216,216,216)' }} xs="60" />
       </Tr>
     </Thead>
   </Table>
   <Card>
-    <Padding all={5}>
+    <Padding all="5">
       <Flex alignCenter justifyCenter column>
         <H3>No instances yet?</H3>
         <P center>
@@ -187,7 +175,7 @@ const { Dot, Actions } = require('../icons');
 <Table>
   <Thead>
     <Tr>
-      <Th xs="32" padding="0" paddingLeft="12" middle left>
+      <Th xs="32" middle left>
         <FormGroup>
           <Checkbox noMargin />
         </FormGroup>
@@ -201,12 +189,12 @@ const { Dot, Actions } = require('../icons');
       <Th xs="0" sm="160" left middle actionable>
         <span>Created </span>
       </Th>
-      <Th xs="60" padding="0" />
+      <Th xs="60" />
     </Tr>
   </Thead>
   <Tbody>
     <Tr>
-      <Td padding="0" paddingLeft="12" middle left>
+      <Td middle left>
         <FormGroup>
           <Checkbox noMargin checked />
         </FormGroup>
@@ -222,12 +210,12 @@ const { Dot, Actions } = require('../icons');
       <Td xs="0" sm="160" middle left>
         about 2 months
       </Td>
-      <Td padding="0" center hasBorder="left">
+      <Td hasBorder="left" center>
         <Actions />
       </Td>
     </Tr>
     <Tr>
-      <Td padding="0" paddingLeft="12" middle left>
+      <Td middle left>
         <FormGroup>
           <Checkbox noMargin />
         </FormGroup>
@@ -243,7 +231,7 @@ const { Dot, Actions } = require('../icons');
       <Td xs="0" sm="160" middle left>
         about 1 hour
       </Td>
-      <Td padding="0" center hasBorder="left">
+      <Td hasBorder="left" center>
         <Actions />
       </Td>
     </Tr>
@@ -263,7 +251,7 @@ const { Dot } = require('../icons');
 <Table>
   <Thead>
     <Tr>
-      <Th xs="32" padding="0" paddingLeft="12" middle left />
+      <Th xs="32" middle left />
       <Th sortOrder="asc" showSort left middle selected actionable>
         <span>Name </span>
       </Th>
@@ -277,7 +265,7 @@ const { Dot } = require('../icons');
   </Thead>
   <Tbody>
     <Tr>
-      <Td padding="0" paddingLeft="12" middle left selected>
+      <Td middle left selected>
         <FormGroup>
           <Radio noMargin checked />
         </FormGroup>
@@ -295,7 +283,7 @@ const { Dot } = require('../icons');
       </Td>
     </Tr>
     <Tr>
-      <Td padding="0" paddingLeft="12" middle left>
+      <Td middle left>
         <FormGroup>
           <Radio noMargin />
         </FormGroup>

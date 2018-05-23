@@ -7,7 +7,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card>
         <code>{`<Card />`}</code>
       </Card>
@@ -15,7 +15,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary>
         <code>{`<Card secondary />`}</code>
       </Card>
@@ -23,7 +23,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary>
         <code>{`<Card tertiary />`}</code>
       </Card>
@@ -41,7 +41,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card collapsed>
         <code>{`<Card collapsed />`}</code>
       </Card>
@@ -49,7 +49,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary collapsed>
         <code>{`<Card secondary collapsed />`}</code>
       </Card>
@@ -57,7 +57,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary collapsed>
         <code>{`<Card tertiary collapsed />`}</code>
       </Card>
@@ -75,7 +75,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card shadow>
         <code>{`<Card shadow />`}</code>
       </Card>
@@ -83,7 +83,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary shadow>
         <code>{`<Card secondary shadow />`}</code>
       </Card>
@@ -91,7 +91,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary shadow>
         <code>{`<Card tertiary shadow />`}</code>
       </Card>
@@ -99,7 +99,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card collapsed shadow>
         <code>{`<Card collapsed shadow />`}</code>
       </Card>
@@ -107,7 +107,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary collapsed shadow>
         <code>{`<Card secondary collapsed shadow />`}</code>
       </Card>
@@ -115,7 +115,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary collapsed shadow>
         <code>{`<Card tertiary collapsed shadow />`}</code>
       </Card>
@@ -133,7 +133,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card shadow actionable>
         <code>{`<Card shadow actionable />`}</code>
       </Card>
@@ -141,7 +141,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary shadow actionable>
         <code>{`<Card secondary shadow actionable />`}</code>
       </Card>
@@ -149,7 +149,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary shadow actionable>
         <code>{`<Card tertiary shadow actionable />`}</code>
       </Card>
@@ -157,7 +157,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card collapsed shadow actionable>
         <code>{`<Card collapsed shadow actionable />`}</code>
       </Card>
@@ -165,7 +165,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary collapsed shadow actionable>
         <code>{`<Card secondary collapsed shadow actionable />`}</code>
       </Card>
@@ -173,7 +173,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary collapsed shadow actionable>
         <code>{`<Card tertiary collapsed shadow actionable />`}</code>
       </Card>
@@ -191,7 +191,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card shadow active>
         <code>{`<Card shadow active />`}</code>
       </Card>
@@ -199,7 +199,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary shadow active>
         <code>{`<Card secondary shadow active />`}</code>
       </Card>
@@ -207,7 +207,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary shadow active>
         <code>{`<Card tertiary shadow active />`}</code>
       </Card>
@@ -215,7 +215,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card collapsed shadow active>
         <code>{`<Card collapsed shadow active />`}</code>
       </Card>
@@ -223,7 +223,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary collapsed shadow active>
         <code>{`<Card secondary collapsed shadow active />`}</code>
       </Card>
@@ -231,7 +231,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary collapsed shadow active>
         <code>{`<Card tertiary collapsed shadow active />`}</code>
       </Card>
@@ -249,7 +249,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card shadow>
         <Header>
           <code>{`<Header />`}</code>
@@ -260,7 +260,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary shadow>
         <Header>
           <code>{`<Header />`}</code>
@@ -271,7 +271,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary shadow>
         <Header>
           <code>{`<Header />`}</code>
@@ -282,7 +282,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card collapsed shadow>
         <Header>
           <code>{`<Header />`}</code>
@@ -292,7 +292,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary collapsed shadow>
         <Header>
           <code>{`<Header />`}</code>
@@ -302,7 +302,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary collapsed shadow>
         <Header>
           <code>{`<Header />`}</code>
@@ -322,7 +322,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card shadow>
         <Header shadow>
           <code>{`<Header shadow />`}</code>
@@ -333,7 +333,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary shadow>
         <Header shadow>
           <code>{`<Header shadow />`}</code>
@@ -344,7 +344,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary shadow>
         <Header shadow>
           <code>{`<Header shadow />`}</code>
@@ -355,7 +355,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card collapsed shadow>
         <Header shadow>
           <code>{`<Header shadow />`}</code>
@@ -365,7 +365,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary collapsed shadow>
         <Header shadow>
           <code>{`<Header shadow />`}</code>
@@ -375,7 +375,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary collapsed shadow>
         <Header shadow>
           <code>{`<Header shadow />`}</code>
@@ -395,7 +395,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card shadow>
         <Header transparent shadow>
           <code>{`<Header transparent shadow />`}</code>
@@ -406,7 +406,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary shadow>
         <Header transparent shadow>
           <code>{`<Header transparent shadow />`}</code>
@@ -417,7 +417,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary shadow>
         <Header transparent shadow>
           <code>{`<Header transparent shadow />`}</code>
@@ -428,7 +428,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card collapsed shadow>
         <Header transparent shadow>
           <code>{`<Header transparent shadow />`}</code>
@@ -438,7 +438,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary collapsed shadow>
         <Header transparent shadow>
           <code>{`<Header transparent shadow />`}</code>
@@ -448,7 +448,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary collapsed shadow>
         <Header transparent shadow>
           <code>{`<Header transparent shadow />`}</code>
@@ -468,7 +468,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -488,7 +488,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -508,7 +508,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -528,7 +528,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card collapsed shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -547,7 +547,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary collapsed shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -566,7 +566,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary collapsed shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -595,7 +595,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card shadow>
         <Header>
           <HeaderBox border="right">
@@ -617,7 +617,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary shadow>
         <Header>
           <HeaderBox border="right">
@@ -639,7 +639,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary shadow>
         <Header>
           <HeaderBox border="right">
@@ -661,7 +661,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card collapsed shadow>
         <Header>
           <HeaderBox border="right">
@@ -682,7 +682,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary collapsed shadow>
         <Header>
           <HeaderBox border="right">
@@ -703,7 +703,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary collapsed shadow>
         <Header>
           <HeaderBox border="right">
@@ -734,7 +734,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card shadow>
         <Header secondary={false}>
           <HeaderBox border="right">
@@ -756,7 +756,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary={false} shadow>
         <Header secondary>
           <HeaderBox border="right">
@@ -778,7 +778,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary shadow>
         <Header secondary={false}>
           <HeaderBox border="right">
@@ -800,7 +800,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card collapsed shadow>
         <Header secondary={false}>
           <HeaderBox border="right">
@@ -821,7 +821,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary collapsed shadow>
         <Header secondary={false}>
           <HeaderBox border="right">
@@ -842,7 +842,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary collapsed shadow>
         <Header secondary={false}>
           <HeaderBox border="right">
@@ -873,7 +873,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -898,7 +898,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -923,7 +923,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -948,7 +948,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card collapsed shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -973,7 +973,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary collapsed shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -998,7 +998,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary collapsed shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -1033,7 +1033,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -1098,7 +1098,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -1163,7 +1163,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary shadow>
         <Header shadow>
           <HeaderBox border="right">
@@ -1238,7 +1238,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
 
 [
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card shadow disabled>
         <Header shadow>
           <HeaderBox border="right">
@@ -1263,7 +1263,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary shadow disabled>
         <Header shadow>
           <HeaderBox border="right">
@@ -1288,7 +1288,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary shadow disabled>
         <Header shadow>
           <HeaderBox border="right">
@@ -1313,7 +1313,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card collapsed shadow disabled>
         <Header shadow>
           <HeaderBox border="right">
@@ -1338,7 +1338,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card secondary collapsed shadow disabled>
         <Header shadow>
           <HeaderBox border="right">
@@ -1363,7 +1363,7 @@ const { Row, Col } = require('joyent-react-styled-flexboxgrid');
   </Row>,
   <br />,
   <Row>
-    <Col xs={12}>
+    <Col xs="12">
       <Card tertiary collapsed shadow disabled>
         <Header shadow>
           <HeaderBox border="right">

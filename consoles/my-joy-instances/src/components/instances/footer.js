@@ -26,7 +26,7 @@ export default ({
 }) => (
   <StickyFooter fill="#FAFAFA" fixed bottom>
     <Row between="xs" middle="xs">
-      <Col xs={7}>
+      <Col xs="7">
         <Flex>
           {onStart && [
             <SmallOnly key="small-only">
@@ -125,7 +125,7 @@ export default ({
         </Flex>
       </Col>
       {onRemove && (
-        <Col xs={5}>
+        <Col xs="5">
           <SmallOnly key="small-only">
             <Button
               type="button"

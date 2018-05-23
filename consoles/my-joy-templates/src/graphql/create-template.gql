@@ -17,5 +17,20 @@ mutation createTemplate(
     enableFirewall: $firewall_enabled
   ) {
     id
+    name
+    package
+    image
+    enableFirewall
+    networks
+    userdata
+    metadata {
+      name
+      value
+    }
+    tags {
+      name
+      value
+    }
+    created
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 import {
@@ -17,6 +17,8 @@ import Create, { Success as CreateSuccess } from '@containers/create';
 import Duplicate from '@containers/duplicate';
 import List from '@containers/list';
 import Summary from '@containers/summary';
+
+const { REACT_APP_DEV = false } = process.env;
 
 export default () => (
   <PageContainer>
@@ -65,6 +67,41 @@ export default () => (
     <Route path="/~server-error" component={ServerError} exact />
 
     <Route path="/" component={() => <Redirect to="/templates" />} exact />
+
+    {REACT_APP_DEV ? (
+      <Fragment>
+        <Route
+          path="/instances"
+          component={({ location }) =>
+            window.location.replace(
+              `${window.location.protocol}//${window.location.hostname}:3069${
+                location.pathname
+              }${location.search}`
+            )
+          }
+        />
+        <Route
+          path="/images"
+          component={({ location }) =>
+            window.location.replace(
+              `${window.location.protocol}//${window.location.hostname}:3070${
+                location.pathname
+              }${location.search}`
+            )
+          }
+        />
+        <Route
+          path="/service-groups"
+          component={({ location }) =>
+            window.location.replace(
+              `${window.location.protocol}//${window.location.hostname}:3072${
+                location.pathname
+              }${location.search}`
+            )
+          }
+        />
+      </Fragment>
+    ) : null}
 
     <noscript>
       <ViewContainer main>

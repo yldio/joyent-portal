@@ -98,8 +98,8 @@ export const Item = ({
   onClick
 }) => (
   <TableTr>
-    <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
-      <FormGroup name={id} paddingTop={remcalc(4)} field={Field}>
+    <TableTd middle left>
+      <FormGroup name={id} field={Field}>
         <Checkbox noMargin />
       </FormGroup>
     </TableTd>
@@ -125,12 +125,12 @@ export const Item = ({
       <code>{id.substring(0, 7)}</code>
     </TableTd>
     {mutating ? (
-      <TableTd padding="0" hasBorder="left" center middle>
+      <TableTd hasBorder="left" center middle>
         <ActionsIcon disabled />
       </TableTd>
     ) : (
       <PopoverContainer clickable>
-        <TableTd padding="0" hasBorder="left">
+        <TableTd hasBorder="left">
           <PopoverTarget box>
             <Actions alignCenter justifyCenter>
               <ActionsIcon />
@@ -149,7 +149,7 @@ export const Item = ({
             <PopoverItem disabled={!allowedActions.remove} onClick={onRemove}>
               Delete
             </PopoverItem>
-            <Padding bottom={2}>
+            <Padding bottom="2">
               <PopoverDivider />
             </Padding>
             <PopoverItem disabled={false} onClick={onCreateImage}>
@@ -191,8 +191,8 @@ export default ({
       <Table>
         <TableThead>
           <TableTr>
-            <TableTh xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
-              <FormGroup paddingTop={remcalc(4)}>
+            <TableTh xs="32" middle left>
+              <FormGroup>
                 <Checkbox
                   checked={allSelected}
                   disabled={submitting || noInstances}
@@ -246,7 +246,7 @@ export default ({
             >
               <span>Short ID </span>
             </TableTh>
-            <TableTh xs="60" padding="0" />
+            <TableTh xs="60" />
           </TableTr>
         </TableThead>
         <TableTbody>{children}</TableTbody>

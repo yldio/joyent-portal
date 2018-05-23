@@ -265,7 +265,7 @@ export default compose(
         const { instance } = ownProps;
         const { id } = instance;
 
-        if (!(await Confirm(`Do you want to ${action} "${instance.name}"?`))) {
+        if (!await Confirm(`Do you want to ${action} "${instance.name}"?`)) {
           return;
         }
 

@@ -61,10 +61,10 @@ const CnsContainer = ({
       </Description>
     </Margin>
     <Row>
-      <Col xs={12} sm={12} md={9}>
+      <Col xs="12" sm="12" md="9">
         <Card>
           <CardOutlet>
-            <Padding all={5}>
+            <Padding all="5">
               {loading ? <StatusLoader /> : null}
               {!loading && loadingError ? (
                 <Margin bottom="5">

@@ -14,8 +14,8 @@ export const EditForm = props => (
 
 export default ({ norMargin, name, value, onClick, onRemoveClick, active }) => (
   <Margin
-    right={norMargin ? 0 : 1}
-    bottom={norMargin ? 0 : 1}
+    right={norMargin ? '0' : '1'}
+    bottom={norMargin ? '0' : '1'}
     key={`${name}-${value}`}
   >
     <TagItem onClick={onClick} active={active} onRemoveClick={onRemoveClick}>

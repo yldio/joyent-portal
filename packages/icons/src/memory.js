@@ -19,6 +19,8 @@ export default ({
         width="21.68"
         height="21.68"
         viewBox="0 0 21.68 21.68"
+        style={{ ...style, ...rotateStyle }}
+        {...rest}
       >
         <path
           fill={calcFill({ fill, disabled, light, colors })}

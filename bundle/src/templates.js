@@ -7,6 +7,7 @@ const Graphi = require('graphi');
 const Url = require('url');
 
 const Server = require('./server');
+const Ui = require('my-joy-templates');
 
 const {
   PORT = 4005,
@@ -67,6 +68,9 @@ Main(async () => {
       routes: {
         prefix: `/${PREFIX}`
       }
+    },
+    {
+      plugin: Ui
     }
   ]);
 

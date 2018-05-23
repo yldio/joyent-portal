@@ -349,13 +349,13 @@ export default compose(
         handleAction: async ({ name, selected = [] }) => {
           // eslint-disable-next-line no-alert
           if (
-            !(await Confirm(
+            !await Confirm(
               `Do you want to ${name} ${
                 selected.length === 1
                   ? `"${selected[0].name}"`
                   : `${selected.length} snapshots`
               }`
-            ))
+            )
           ) {
             return;
           }

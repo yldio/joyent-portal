@@ -88,7 +88,7 @@ export const Image = ({
     <CardAnchor to={`/images/${id}`} component={Link}>
       <Card radius>
         {removing ? (
-          <Padding all={2}>
+          <Padding all="2">
             <StatusLoader />
           </Padding>
         ) : (

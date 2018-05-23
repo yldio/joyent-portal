@@ -170,9 +170,7 @@ const Header = ({ children, transparent, shadow, ...rest }) => {
     // if parent is primary, become secondary
     const isSecondary = isBoolean(rest.secondary)
       ? rest.secondary
-      : transparent
-        ? secondary
-        : secondary || parentPrimary;
+      : transparent ? secondary : secondary || parentPrimary;
     // if parent is primary, don't become transparent
     const isTransparent = transparent || secondary || tertiary;
 

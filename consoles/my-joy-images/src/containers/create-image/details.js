@@ -80,7 +80,7 @@ const NameContainer = ({
             ) : null}
             {description ? (
               <Row>
-                <Col xs={12} sm={8}>
+                <Col xs="12" sm="8">
                   <Margin top="1">
                     <P>{description}</P>
                   </Margin>

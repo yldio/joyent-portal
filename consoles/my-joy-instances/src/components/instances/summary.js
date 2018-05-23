@@ -99,7 +99,7 @@ export const Meta = ({
   ...instance
 }) => [
   <Row middle="xs">
-    <Col xs={12}>
+    <Col xs="12">
       <Margin bottom="1">
         <H2>
           {editingName ? (
@@ -129,7 +129,7 @@ export const Meta = ({
           ) : (
             <Flex>
               {instance.name}
-              <Actionable left={2} onClick={editName}>
+              <Actionable left="2" onClick={editName}>
                 <EditIcon />
               </Actionable>
             </Flex>
@@ -187,14 +187,14 @@ export default ({
   ...props
 }) => (
   <Row>
-    <Col xs={12} sm={12} md={9}>
+    <Col xs="12" sm="12" md="9">
       <Card>
         <CardOutlet>
-          <Padding all={5}>
+          <Padding all="5">
             <Meta {...instance} {...props} />
             <Margin top="3">
               <Row between="xs">
-                <Col xs={9}>
+                <Col xs="9">
                   <Flex>
                     <FlexItem>
                       <Margin right="1">
@@ -283,7 +283,7 @@ export default ({
                     </FlexItem>
                   </Flex>
                 </Col>
-                <Col xs={3}>
+                <Col xs="3">
                   <SmallOnly>
                     <Button
                       type="button"

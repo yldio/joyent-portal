@@ -148,16 +148,14 @@ export const Hostname = ({
   ...hostname
 }) => (
   <Fragment>
-    <Margin bottom={noMargin ? 0 : 3}>
+    <Margin bottom={noMargin ? '0' : '3'}>
       <Flex>
         <SmallBordered bold noMargin>
           {network && service
             ? 'Network CNS service'
             : network
               ? 'Network'
-              : service
-                ? 'CNS service'
-                : 'Instance name'}{' '}
+              : service ? 'CNS service' : 'Instance name'}{' '}
           hostname{values.length === 1 ? '' : 's'}
         </SmallBordered>
         <FlexItem>
@@ -177,7 +175,7 @@ export const Hostname = ({
           }
         >
           {copy ? (
-            <CopiableField disabled md={12} text={value} />
+            <CopiableField disabled md="12" text={value} />
           ) : (
             <Input onBlur={null} disabled monospace fluid value={value} />
           )}
@@ -214,7 +212,7 @@ const CnsHostnames = ({
         <Margin top="1">
           <TagList>
             {services.map((value, index) => (
-              <Margin right={1} bottom={1}>
+              <Margin right="1" bottom="1">
                 <TagItem
                   active
                   fill="rgba(66, 134, 244, 0.1)"

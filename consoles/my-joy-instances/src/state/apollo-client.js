@@ -2,6 +2,7 @@ import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import fetch from 'cross-fetch';
+import get from 'lodash.get';
 
 import global from './global';
 
@@ -14,7 +15,9 @@ const {
 const PORT = REACT_APP_GQL_PORT ? `:${REACT_APP_GQL_PORT}` : '';
 const URI = `${REACT_APP_GQL_PROTOCOL}://${REACT_APP_GQL_HOSTNAME}${PORT}/instances/graphql`;
 
-export default (opts = {}) => {
+export default (opts = {}, request = {}) => {
+  const host = get(request, 'raw.req.headers.host', '');
+
   let cache = new InMemoryCache();
 
   if (global.__APOLLO_STATE__) {
@@ -24,7 +27,7 @@ export default (opts = {}) => {
   return new ApolloClient({
     cache,
     link: new HttpLink({
-      uri: URI,
+      uri: host ? `${REACT_APP_GQL_PROTOCOL}//${host}/instances/graphql` : URI,
       credentials: 'same-origin',
       fetch,
       headers: {

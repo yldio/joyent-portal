@@ -43,8 +43,8 @@ export const Item = ({ name, state, created, onStart, onRemove, mutating }) => (
       </TableTd>
     ) : (
       <Fragment>
-        <TableTd padding="0" paddingLeft={remcalc(12)} middle left>
-          <FormGroup paddingTop={remcalc(4)} name={name} field={Field}>
+        <TableTd middle left>
+          <FormGroup name={name} field={Field}>
             <Checkbox noMargin />
           </FormGroup>
         </TableTd>
@@ -59,7 +59,7 @@ export const Item = ({ name, state, created, onStart, onRemove, mutating }) => (
           {distanceInWordsToNow(created)}
         </TableTd>
         <PopoverContainer clickable>
-          <TableTd padding="0" hasBorder="left">
+          <TableTd hasBorder="left">
             <PopoverTarget box>
               <ActionsIcon />
             </PopoverTarget>
@@ -111,8 +111,8 @@ export default ({
     <Table>
       <TableThead>
         <TableTr>
-          <TableTh xs="32" padding="0" paddingLeft={remcalc(12)} middle left>
-            <FormGroup paddingTop={remcalc(4)}>
+          <TableTh xs="32" middle left>
+            <FormGroup>
               <Checkbox
                 checked={allSelected}
                 disabled={submitting}
@@ -154,7 +154,7 @@ export default ({
           >
             <span>Created </span>
           </TableTh>
-          <TableTh xs="60" padding="0" />
+          <TableTh xs="60" />
         </TableTr>
       </TableThead>
       <TableTbody>

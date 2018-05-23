@@ -1,0 +1,16 @@
+mutation createServiceGroup($name: String!, $template: ID!, $capacity: Int!) {
+  createGroup(name: $name, template: $template, capacity: $capacity) {
+    id
+    name
+    template {
+      id
+      name
+      package
+      image
+      created
+    }
+    capacity
+    created
+    updated
+  }
+}

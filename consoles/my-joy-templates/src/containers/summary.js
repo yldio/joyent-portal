@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { If, Then, Else } from 'react-if';
 import { set, destroyAll } from 'react-redux-values';
 import { compose, graphql } from 'react-apollo';
 import { connect } from 'react-redux';
@@ -35,33 +36,45 @@ const Summary = ({
 }) => (
   <ViewContainer main>
     <Margin top="5">
-      {error ? (
-        <Margin bottom="3">
-          <Message error>
-            <MessageTitle>Ooops!</MessageTitle>
-            <MessageDescription>
-              {isString(error)
-                ? error
-                : 'An error occurred while loading your templates'}
-            </MessageDescription>
-          </Message>
-        </Margin>
-      ) : null}
-      {loading && !template ? (
-        <StatusLoader />
-      ) : (
-        <Fragment>
-          <Margin bottom="5">
-            <Meta
-              {...template}
-              removing={removing}
-              onDuplicate={handleDuplicate}
-              onRemove={handleRemove}
-            />
+      <If condition={error}>
+        <Then>
+          <Margin bottom="3">
+            <Message error>
+              <MessageTitle>Ooops!</MessageTitle>
+              <MessageDescription>
+                <If condition={isString(error)}>
+                  <Then>
+                    <Fragment>{error}</Fragment>
+                  </Then>
+                  <Else>An error occurred while loading your template</Else>
+                </If>
+              </MessageDescription>
+            </Message>
           </Margin>
-          <Template {...template} />
-        </Fragment>
-      )}
+        </Then>
+      </If>
+      <If condition={loading && !template}>
+        <Then>
+          <StatusLoader />
+        </Then>
+        <Else>
+          <If condition={template}>
+            <Then>
+              <Fragment>
+                <Margin bottom="5">
+                  <Meta
+                    {...template}
+                    removing={removing}
+                    onDuplicate={handleDuplicate}
+                    onRemove={handleRemove}
+                  />
+                </Margin>
+                <Template {...template} />
+              </Fragment>
+            </Then>
+          </If>
+        </Else>
+      </If>
     </Margin>
   </ViewContainer>
 );
@@ -119,7 +132,7 @@ export default compose(
         const { id } = template;
 
         // eslint-disable-next-line no-alert
-        if (!(await Confirm(`Do you want to remove ${template.name}`))) {
+        if (!await Confirm(`Do you want to remove ${template.name}`)) {
           return;
         }
 

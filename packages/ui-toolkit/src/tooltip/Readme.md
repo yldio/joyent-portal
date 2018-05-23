@@ -5,7 +5,7 @@ const { default: Tooltip, Container, Target } = require('./');
 const { P } = require('../text');
 
 <Row center="xs" between="xs" style={{ marginTop: 60 }}>
-  <Col xs={2}>
+  <Col xs="2">
     <Container>
       <Target>Hello</Target>
       <Tooltip placement="top">
@@ -13,7 +13,7 @@ const { P } = require('../text');
       </Tooltip>
     </Container>
   </Col>
-  <Col xs={2}>
+  <Col xs="2">
     <Container>
       <Target>Hello</Target>
       <Tooltip placement="right">
@@ -21,7 +21,7 @@ const { P } = require('../text');
       </Tooltip>
     </Container>
   </Col>
-  <Col xs={2}>
+  <Col xs="2">
     <Container>
       <Target>Hello</Target>
       <Tooltip placement="bottom">
@@ -29,7 +29,7 @@ const { P } = require('../text');
       </Tooltip>
     </Container>
   </Col>
-  <Col xs={2}>
+  <Col xs="2">
     <Container>
       <Target>Hello</Target>
       <Tooltip placement="left">
@@ -49,7 +49,7 @@ const { default: Tooltip, Container, Target } = require('./');
 const { P } = require('../text');
 
 <Row center="xs" between="xs">
-  <Col xs={3}>
+  <Col xs="3">
     <Container hoverable>
       <Target>Hover here</Target>
       <Tooltip placement="top">
@@ -69,7 +69,7 @@ const { default: Tooltip, Container, Target } = require('./');
 const { P } = require('../text');
 
 <Row center="xs" between="xs">
-  <Col xs={2}>
+  <Col xs="2">
     <Container clickable>
       <Target>Click here</Target>
       <Tooltip placement="top">

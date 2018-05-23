@@ -1,0 +1,16 @@
+query groups {
+  groups {
+    id
+    name
+    template {
+      id
+      name
+      package
+      image
+      created
+    }
+    capacity
+    created
+    updated
+  }
+}

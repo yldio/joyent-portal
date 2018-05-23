@@ -69,7 +69,7 @@ const Datacenters = ({ expanded, regions = [] }) =>
               <RegionContainer>
                 <Row>
                   {regions[region].map(({ name, datacenters }) => (
-                    <Col key={name} xs={12} md={6} lg={3}>
+                    <Col key={name} xs="12" md="6" lg="3">
                       <DatacenterPlace>{name}</DatacenterPlace>
                       {datacenters.map(({ name, url }) => (
                         <Datacenter key={name}>

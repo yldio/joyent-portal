@@ -106,13 +106,13 @@ export const Meta = ({ name, version, type, published_at, state, os }) => (
 
 export default ({ theme = {}, onRemove, removing, ...image }) => (
   <Row>
-    <Col xs={12} sm={12} md={9}>
+    <Col xs="12" sm="12" md="9">
       <Card>
         <CardOutlet>
-          <Padding all={5}>
+          <Padding all="5">
             <Meta {...image} />
             <Row between="xs">
-              <Col xs={9}>
+              <Col xs="9">
                 <SmallOnly>
                   <Button type="button" small icon>
                     <DuplicateIcon light />
@@ -133,7 +133,7 @@ export default ({ theme = {}, onRemove, removing, ...image }) => (
                   </Button>
                 </Medium>
               </Col>
-              <Col xs={3}>
+              <Col xs="3">
                 <SmallOnly>
                   <Button type="button" small icon error right>
                     <DeleteIcon fill="red" />
@@ -170,7 +170,7 @@ export default ({ theme = {}, onRemove, removing, ...image }) => (
               <CopiableField text={image.id} label="UUID" />
             </Margin>
             <Row>
-              <Col xs={12} md={7}>
+              <Col xs="12" md="7">
                 <Margin bottom="3">
                   <FormLabel>Operating system</FormLabel>
                   <Input

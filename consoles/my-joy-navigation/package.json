@@ -15,16 +15,16 @@
     "build": "PREACT=1 joyent-react-scripts build"
   },
   "dependencies": {
-    "apollo-cache-inmemory": "^1.1.12",
-    "apollo-client": "^2.2.8",
-    "apollo-link": "^1.2.1",
-    "apollo-link-http": "^1.5.3",
+    "apollo-cache-inmemory": "^1.2.2",
+    "apollo-client": "^2.3.2",
+    "apollo-link": "^1.2.2",
+    "apollo-link-http": "^1.5.4",
     "apollo-link-state": "^0.4.1",
     "apr-intercept": "^3.0.3",
     "boom": "^7.2.0",
-    "emotion": "^9.1.1",
-    "emotion-theming": "^9.0.0",
-    "graphql-tag": "^2.8.0",
+    "emotion": "^9.1.3",
+    "emotion-theming": "^9.1.2",
+    "graphql-tag": "^2.9.2",
     "inert": "^5.1.0",
     "joyent-icons": "^5.1.0",
     "joyent-ui-toolkit": "^6.0.0",
@@ -34,20 +34,20 @@
     "mz": "^2.7.0",
     "outy": "^0.1.2",
     "pascal-case": "^2.0.1",
-    "preact": "^8.2.7",
+    "preact": "^8.2.9",
     "preact-compat": "^3.18.0",
-    "preact-emotion": "^9.1.1",
+    "preact-emotion": "^9.1.3",
     "preact-emotion-flexboxgrid": "^2.0.1",
-    "react-apollo": "^2.1.2",
+    "react-apollo": "^2.1.4",
     "remcalc": "^1.0.10",
-    "stickybits": "^3.2.0"
+    "stickybits": "^3.3.2"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
+    "babel-eslint": "^8.2.3",
     "babel-preset-joyent-portal": "^7.0.1",
     "eslint": "^4.19.1",
     "eslint-config-joyent-portal": "^3.3.1",
-    "joyent-react-scripts": "^8.2.0",
-    "redrun": "^6.0.2"
+    "joyent-react-scripts": "^8.2.1",
+    "redrun": "^6.0.4"
   }
 }

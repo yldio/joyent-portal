@@ -125,7 +125,7 @@ class Playground extends Component {
     return (
       <Wrapper>
         <Tabs>
-          <Margin right={5}>
+          <Margin right="5">
             <TabHeader active={tab === 'component'}>
               <Button
                 active={tab === 'component'}

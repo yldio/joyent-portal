@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import get from 'lodash.get';
 
@@ -26,6 +26,8 @@ import {
   Snapshots as InstanceSnapshots,
   UserScript as InstanceUserScript
 } from '@containers/instances';
+
+const { REACT_APP_DEV = false } = process.env;
 
 export default () => (
   <PageContainer>
@@ -101,6 +103,41 @@ export default () => (
     <Route path="/~server-error" exact component={ServerError} />
 
     <Route path="/" exact component={() => <Redirect to="/instances" />} />
+
+    {REACT_APP_DEV ? (
+      <Fragment>
+        <Route
+          path="/images"
+          component={({ location }) =>
+            window.location.replace(
+              `${window.location.protocol}//${window.location.hostname}:3070${
+                location.pathname
+              }${location.search}`
+            )
+          }
+        />
+        <Route
+          path="/templates"
+          component={({ location }) =>
+            window.location.replace(
+              `${window.location.protocol}//${window.location.hostname}:3071${
+                location.pathname
+              }${location.search}`
+            )
+          }
+        />
+        <Route
+          path="/service-groups"
+          component={({ location }) =>
+            window.location.replace(
+              `${window.location.protocol}//${window.location.hostname}:3072${
+                location.pathname
+              }${location.search}`
+            )
+          }
+        />
+      </Fragment>
+    ) : null}
 
     <noscript>
       <ViewContainer main>

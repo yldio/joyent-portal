@@ -5,7 +5,7 @@ import { P } from 'joyent-ui-toolkit';
 
 export default ({ children }) => (
   <Row>
-    <Col xs={12} sm={8}>
+    <Col xs="12" sm="8">
       <Margin bottom="3">
         <P>{children}</P>
       </Margin>

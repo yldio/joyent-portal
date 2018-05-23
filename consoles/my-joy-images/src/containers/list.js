@@ -78,7 +78,7 @@ export const List = ({
       </Margin>
       <Row>
         {images.map(image => (
-          <Col sm={4}>
+          <Col sm="4">
             <Image
               {...image}
               onCreateInstance={() => handleCreateInstance(image)}

@@ -81,7 +81,7 @@ const TextareaKeyValue = ({
   <Fragment>
     {onlyValue ? null : (
       <Row>
-        <Col xs={12}>
+        <Col xs="12">
           <FormGroup
             id={id ? 'kv-input-key-' + id : null}
             name="name"
@@ -92,7 +92,7 @@ const TextareaKeyValue = ({
             <Margin top="0.5">
               <Input onBlur={null} type="text" disabled={submitting} />
               <Row>
-                <Col sm={7}>
+                <Col sm="7">
                   <FormMeta />
                 </Col>
               </Row>
@@ -103,7 +103,7 @@ const TextareaKeyValue = ({
     )}
     {onlyName ? null : (
       <Row>
-        <Col xs={12}>
+        <Col xs="12">
           <FormGroup
             id={id ? 'kv-input-value-' + id : null}
             name="value"
@@ -121,7 +121,7 @@ const TextareaKeyValue = ({
               />
             </Margin>
             <Row>
-              <Col sm={7}>
+              <Col sm="7">
                 <FormMeta />
               </Col>
             </Row>
@@ -155,7 +155,7 @@ const InputKeyValue = ({
           <Margin right="3" top="0.5">
             <Input onBlur={null} type="text" disabled={submitting} />
             <Row>
-              <Col sm={7}>
+              <Col sm="7">
                 <FormMeta />
               </Col>
             </Row>
@@ -176,7 +176,7 @@ const InputKeyValue = ({
             <Margin top="0.5">
               <Input onBlur={null} type="text" disabled={submitting} />
               <Row>
-                <Col sm={7}>
+                <Col sm="7">
                   <FormMeta />
                 </Col>
               </Row>
@@ -232,7 +232,10 @@ export const KeyValue = ({
           actionable={Boolean(handleHeaderClick)}
           onClick={handleHeaderClick}
         >
-          <PaddingMaxWidth left={borderless ? 0 : 3} right={borderless ? 0 : 3}>
+          <PaddingMaxWidth
+            left={borderless ? '0' : '3'}
+            right={borderless ? '0' : '3'}
+          >
             <Flex alignCenter justifyBetween>
               <Meta>
                 {method === 'add' || method === 'create' ? (
@@ -272,7 +275,7 @@ export const KeyValue = ({
           >
             {error && !submitting ? (
               <Row>
-                <Col xs={12}>
+                <Col xs="12">
                   <Margin bottom="5">
                     <Message error>
                       <MessageTitle>Ooops!</MessageTitle>
@@ -309,7 +312,7 @@ export const KeyValue = ({
             {noActions ? null : (
               <Margin top="2">
                 <Row between="xs" middle="xs">
-                  <Col xs={method === 'add' ? 12 : 7}>
+                  <Col xs={method === 'add' ? '12' : '7'}>
                     <MarginalButton
                       id={id ? 'kv-cancel-button-' + id : null}
                       type="button"
@@ -329,7 +332,7 @@ export const KeyValue = ({
                     </Button>
                   </Col>
                   {!noRemove && (
-                    <Col xs={method === 'add' ? false : 5}>
+                    <Col xs={method === 'add' ? false : '5'}>
                       <Button
                         type="button"
                         onClick={onRemove}

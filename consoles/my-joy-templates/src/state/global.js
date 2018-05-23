@@ -1,9 +1,12 @@
 import { canUseDOM } from 'exenv';
 import queryString from 'query-string';
 
+const { NODE_ENV = 'development' } = process.env;
+
 export const Global = () => {
   if (!canUseDOM) {
     return {
+      protocol: NODE_ENV === 'development' ? 'http:' : 'https:',
       cookie: ''
     };
   }

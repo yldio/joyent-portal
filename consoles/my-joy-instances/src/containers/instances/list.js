@@ -365,13 +365,13 @@ export default compose(
       handleAction: async ({ selected, name }) => {
         // eslint-disable-next-line no-alert
         if (
-          !(await Confirm(
+          !await Confirm(
             `Do you want to ${name} ${
               selected.length === 1
                 ? `"${selected[0].name}"`
                 : `${selected.length} instances`
             }`
-          ))
+          )
         ) {
           return;
         }

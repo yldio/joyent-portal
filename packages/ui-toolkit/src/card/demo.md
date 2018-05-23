@@ -75,7 +75,7 @@ const { Fragment } = React;
     <Card>
       <Padding left="3" right="3" top="1.5" bottom="1.5">
         <Row>
-          <Col xs={3}>
+          <Col xs="3">
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right="0.5">
                 <FlexItem>
@@ -89,7 +89,7 @@ const { Fragment } = React;
               </Flex>
             </Flex>
           </Col>
-          <Col xs={3}>
+          <Col xs="3">
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right="0.5">
                 <FlexItem>
@@ -103,7 +103,7 @@ const { Fragment } = React;
               </Flex>
             </Flex>
           </Col>
-          <Col xs={2}>
+          <Col xs="2">
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right="0.5">
                 <FlexItem>
@@ -117,7 +117,7 @@ const { Fragment } = React;
               </Flex>
             </Flex>
           </Col>
-          <Col xs={2}>
+          <Col xs="2">
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right="0.5">
                 <FlexItem>
@@ -131,7 +131,7 @@ const { Fragment } = React;
               </Flex>
             </Flex>
           </Col>
-          <Col xs={2}>
+          <Col xs="2">
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right="0.5">
                 <FlexItem>
@@ -153,7 +153,7 @@ const { Fragment } = React;
     <Card>
       <Padding left="3" right="3" top="1.5" bottom="1.5">
         <Row>
-          <Col xs={3}>
+          <Col xs="3">
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right="0.5">
                 <FlexItem>
@@ -167,7 +167,7 @@ const { Fragment } = React;
               </Flex>
             </Flex>
           </Col>
-          <Col xs={3}>
+          <Col xs="3">
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right="0.5">
                 <FlexItem>
@@ -181,7 +181,7 @@ const { Fragment } = React;
               </Flex>
             </Flex>
           </Col>
-          <Col xs={2}>
+          <Col xs="2">
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right="0.5">
                 <FlexItem>
@@ -195,7 +195,7 @@ const { Fragment } = React;
               </Flex>
             </Flex>
           </Col>
-          <Col xs={2}>
+          <Col xs="2">
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right="0.5">
                 <FlexItem>
@@ -209,7 +209,7 @@ const { Fragment } = React;
               </Flex>
             </Flex>
           </Col>
-          <Col xs={2}>
+          <Col xs="2">
             <Flex justifyStart alignCenter contentStretch full>
               <Margin right="0.5">
                 <FlexItem>
@@ -230,7 +230,7 @@ const { Fragment } = React;
   <Card>
     <Padding left="3" right="3" top="1.5" bottom="1.5">
       <Row>
-        <Col xs={3}>
+        <Col xs="3">
           <Flex justifyStart alignCenter contentStretch full>
             <Margin right="0.5">
               <FlexItem>
@@ -244,7 +244,7 @@ const { Fragment } = React;
             </Flex>
           </Flex>
         </Col>
-        <Col xs={3}>
+        <Col xs="3">
           <Flex justifyStart alignCenter contentStretch full>
             <Margin right="0.5">
               <FlexItem>
@@ -258,7 +258,7 @@ const { Fragment } = React;
             </Flex>
           </Flex>
         </Col>
-        <Col xs={2}>
+        <Col xs="2">
           <Flex justifyStart alignCenter contentStretch full>
             <Margin right="0.5">
               <FlexItem>
@@ -272,7 +272,7 @@ const { Fragment } = React;
             </Flex>
           </Flex>
         </Col>
-        <Col xs={2}>
+        <Col xs="2">
           <Flex justifyStart alignCenter contentStretch full>
             <Margin right="0.5">
               <FlexItem>
@@ -286,7 +286,7 @@ const { Fragment } = React;
             </Flex>
           </Flex>
         </Col>
-        <Col xs={2}>
+        <Col xs="2">
           <Flex justifyStart alignCenter contentStretch full>
             <Margin right="0.5">
               <FlexItem>
