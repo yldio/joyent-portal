@@ -122,8 +122,8 @@ export const Expanded = ({
   ...network
 }) => (
   <Row>
-    <Col xs={12} sm={8}>
-      <Margin bottom={noMargin ? 0 : 5}>
+    <Col xs="12" sm="8">
+      <Margin bottom={noMargin ? '0' : '5'}>
         <Card>
           <CardHeader secondary={selected}>
             {readOnly ? null : (
@@ -138,7 +138,7 @@ export const Expanded = ({
               </CardHeaderBox>
             )}
             <CardHeaderMeta>
-              <Padding left={readOnly ? 3 : 0} right={readOnly ? 3 : 0}>
+              <Padding left={readOnly ? '3' : '0'} right={readOnly ? '3' : '0'}>
                 <H4 white={selected}>{name}</H4>
               </Padding>
             </CardHeaderMeta>
@@ -183,11 +183,11 @@ export const Expanded = ({
                 </Margin>
                 <Medium>
                   {fabric ? (
-                    <Margin right={5}>
+                    <Margin right="5">
                       <FlexItem>
                         <Flex alignCenter>
                           <FlexItem>
-                            <Margin right={1}>
+                            <Margin right="1">
                               <InstanceCountIcon />
                             </Margin>
                           </FlexItem>
@@ -244,7 +244,7 @@ export const Expanded = ({
                       </BaseCardHeader>
                       {infoExpanded ? (
                         <CardOutlet>
-                          <Padding all={3}>
+                          <Padding all="3">
                             <Flex column>
                               {network.internet_nat ? (
                                 <FlexItem>

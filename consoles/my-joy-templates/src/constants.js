@@ -9,6 +9,8 @@ export const Forms = {
 export const Values = {
   TL_R_V: id => `TEMPLATE_LIST_REMOVING_VALUE-${id}`,
   TL_E_V: 'TEMPLATE_LIST_ERROR_VALUE',
+  TL_SB_V: 'TEMPLATE_LIST_SORT_BY_VALUE',
+  TL_SO_V: 'TEMPLATE_LIST_SORT_ORDER_VALUE',
   TS_R_V: id => `TEMPLATE_SUMMARY_REMOVING_VALUE-${id}`,
   TS_E_V: id => `TEMPLATE_SUMMARY_ERROR_VALUE-${id}`
 };

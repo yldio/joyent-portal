@@ -90,10 +90,7 @@ describe('Button', () => {
     expect(tree).toMatchSnapshot();
     expect(tree).toHaveStyleRule('color', theme.text.replace(/ /g, ''));
     expect(tree).toHaveStyleRule('font-size', remcalc(15));
-    expect(tree).toHaveStyleRule(
-      'font-weight',
-      `${theme.font.weight.normal}`
-    );
+    expect(tree).toHaveStyleRule('font-weight', `${theme.font.weight.normal}`);
   });
 
   test('H5', () => {

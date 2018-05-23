@@ -49,7 +49,7 @@ export const Header = withRouter(({ icon = null, location, children }) => (
       <Subscriber channel="create-resource-step">
         {({ expanded, optional, saved, name, isValid, readOnly }) => (
           <Fragment>
-            <Flex justifyBetween>
+            <Flex justifyBetween alignCenter>
               <FlexItem>
                 <Flex alignCenter>
                   <Medium>
@@ -78,7 +78,7 @@ export const Header = withRouter(({ icon = null, location, children }) => (
                 </Flex>
               </FlexItem>
               {readOnly ? null : (
-                <FlexItem alignCenter>
+                <FlexItem>
                   <Link
                     to={expanded ? `/${namespace}` : `/${namespace}/${name}`}
                   >
@@ -119,7 +119,7 @@ export const Description = ({ href = '', children }) => (
     {({ expanded }) =>
       expanded ? (
         <Row>
-          <Col xs={12} sm={8}>
+          <Col xs="12" sm="8">
             <P>
               {children} {href ? <Link to={href}>Read the docs</Link> : null}
             </P>

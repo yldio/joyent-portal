@@ -19,15 +19,8 @@ import {
   SectionListAnchor,
   H4 as BaseH4,
   Select,
-  Card as BaseCard,
-  StyledBreakpoints as breakpoints
+  Card as BaseCard
 } from 'joyent-ui-toolkit';
-
-const imageColSize = {
-  small: 6,
-  medium: 4,
-  large: 3
-};
 
 const Version = styled(Select)`
   min-width: 100%;
@@ -35,9 +28,16 @@ const Version = styled(Select)`
   cursor: pointer;
 
   select {
-    margin: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+
+    &:focus {
+      border-color: ${props => props.theme.grey};
+      outline: 0;
+    }
   }
 `;
 
@@ -46,8 +46,17 @@ const SectionList = styled(BaseSectionList)`
 `;
 
 const Card = styled(BaseCard)`
-  border-bottom: 0;
   width: 100%;
+
+  ${is('active')`
+    select {
+      border-color: ${props => props.theme.primary};
+
+      &:focus {
+        border-color: ${props => props.theme.primary};
+      }
+    }
+  `};
 `;
 
 const FormGroup = styled(BaseFormGroup)`
@@ -91,7 +100,7 @@ const Image = ({ onClick, active, ...image }) => {
   const Logo = Assets[pascalCase(imageName)] || Assets.Placeholder;
 
   return (
-    <Col lg={3} md={4} xs={6}>
+    <Col xs="6" md="4" lg="3">
       <Margin bottom="3">
         <Card id={id} onClick={handleCardClick} active={active} preview>
           <Logo

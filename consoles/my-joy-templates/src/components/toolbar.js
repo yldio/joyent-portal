@@ -1,5 +1,6 @@
 import React from 'react';
 import Flex from 'styled-flex-component';
+import { If, Then } from 'react-if';
 import { Margin } from 'styled-components-spacing';
 import { Link } from 'react-router-dom';
 import { Field } from 'redux-form';
@@ -22,20 +23,22 @@ export const Toolbar = ({
         <Input placeholder={searchPlaceholder} disabled={!searchable} />
       </Margin>
     </FormGroup>
-    {actionable ? (
-      <FormGroup right>
-        <Button
-          type={actionTo || onActionClick ? 'button' : 'submit'}
-          component={actionTo ? Link : undefined}
-          to={actionTo}
-          onClick={onActionClick}
-          icon
-          fluid
-        >
-          {actionLabel}
-        </Button>
-      </FormGroup>
-    ) : null}
+    <If condition={actionable}>
+      <Then>
+        <FormGroup right>
+          <Button
+            type={actionTo || onActionClick ? 'button' : 'submit'}
+            component={actionTo ? Link : undefined}
+            to={actionTo}
+            onClick={onActionClick}
+            icon
+            fluid
+          >
+            {actionLabel}
+          </Button>
+        </FormGroup>
+      </Then>
+    </If>
   </Flex>
 );
 

@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Margin, Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import titleCase from 'title-case';
+import paramCase from 'param-case';
 import plur from 'plur';
 
-import { H2, P, Anchor, Button, Card, CardOutlet } from 'joyent-ui-toolkit';
+import {
+  H2,
+  P,
+  Anchor,
+  Button,
+  Card,
+  CardOutlet,
+  ExternalIcon
+} from 'joyent-ui-toolkit';
 
 export const Title = ({ children, ...props }) => (
   <Margin bottom="3">
@@ -36,24 +45,38 @@ export default ({
           <Flex alignCenter>
             <FlexItem>
               <Margin right="1">
-                <Button to={`/${plur(object)}/${id}`} component={Link}>
+                <Button
+                  to={`/${paramCase(plur(object))}/${id}`}
+                  component={Link}
+                >
                   View {object}
                 </Button>
               </Margin>
             </FlexItem>
             <FlexItem>
               <Margin right="3">
-                <Button to={`/${plur(object)}`} component={Link} secondary>
+                <Button
+                  to={`/${paramCase(plur(object))}`}
+                  component={Link}
+                  secondary
+                >
                   {titleCase(object)} list
                 </Button>
               </Margin>
             </FlexItem>
             {altCreateTo ? (
-              <FlexItem>
-                <Anchor to={altCreateTo} component={Link}>
-                  Create {name} from {object}
-                </Anchor>
-              </FlexItem>
+              <Fragment>
+                <FlexItem>
+                  <Anchor to={altCreateTo} component={Link}>
+                    Create {name} from {object}
+                  </Anchor>
+                </FlexItem>
+                <FlexItem>
+                  <Margin left="1">
+                    <ExternalIcon height="12" width="12" fill="primary" />
+                  </Margin>
+                </FlexItem>
+              </Fragment>
             ) : null}
           </Flex>
         </Margin>

@@ -8,9 +8,12 @@ import { Link } from 'react-router-dom';
 import { Field } from 'redux-form';
 
 import {
+  Card,
+  CardOutlet,
   Anchor,
   Button,
   P,
+  H3,
   FormGroup,
   Checkbox,
   Table,
@@ -21,7 +24,8 @@ import {
   TableTbody,
   StickyFooter,
   StatusLoader,
-  DeleteIcon
+  DeleteIcon,
+  EmptyStateIcon
 } from 'joyent-ui-toolkit';
 
 const A = styled(Anchor)`
@@ -93,27 +97,47 @@ export const BulkFooter = ({ items = [], onRemove }) => {
 export const LoadingRow = ({ children }) => (
   <TableTr colSpan="5">
     <TableTd colSpan="5" middle center>
-      <StatusLoader>{children}</StatusLoader>
+      <Margin vertical="5">
+        <StatusLoader>{children}</StatusLoader>
+      </Margin>
     </TableTd>
   </TableTr>
 );
 
-export const Empty = ({ filter = false }) => (
+export const EmptyCard = () => (
+  <Card>
+    <CardOutlet>
+      <Row center="xs">
+        <Col xs="12" sm="9" md="8" lg="6">
+          <Padding all="5">
+            <Margin bottom="3">
+              <EmptyStateIcon />
+            </Margin>
+            <Margin bottom="2">
+              <H3 bold>No templates found</H3>
+            </Margin>
+            <P>You can create a new template with the below button.</P>
+            <Margin top="3">
+              <Button
+                type="button"
+                component={Link}
+                to="/templates/~create/name"
+              >
+                Create template
+              </Button>
+            </Margin>
+          </Padding>
+        </Col>
+      </Row>
+    </CardOutlet>
+  </Card>
+);
+
+export const EmptyRow = () => (
   <TableTr colSpan="5">
     <TableTd colSpan="5" middle center>
       <Padding vertical="4">
-        <P>
-          {filter
-            ? 'You have no templates that match your query'
-            : "You haven't created any templates yet, but they're really easy to set up. Click below to get going."}
-        </P>
-        {filter ? null : (
-          <Margin top="3">
-            <Button type="button" component={Link} to="/templates/~create">
-              Create template
-            </Button>
-          </Margin>
-        )}
+        <P>You have no templates that match your query</P>
       </Padding>
     </TableTd>
   </TableTr>
@@ -121,11 +145,9 @@ export const Empty = ({ filter = false }) => (
 
 export const Item = ({ id = '', name, image, created, ...template }) => (
   <TableTr>
-    <TableTd padding="0" middle left>
+    <TableTd middle left>
       <FormGroup name={id} field={Field}>
-        <Margin left="3" inline>
-          <Checkbox noMargin />
-        </Margin>
+        <Checkbox noMargin />
       </FormGroup>
     </TableTd>
     <TableTd middle left>
@@ -133,13 +155,13 @@ export const Item = ({ id = '', name, image, created, ...template }) => (
         {name}
       </A>
     </TableTd>
-    <TableTd middle left>
+    <TableTd xs="0" sm="160" middle left>
       {image.substring(0, 7)}
     </TableTd>
-    <TableTd middle left>
+    <TableTd xs="0" sm="160" middle left>
       {template.package.substring(0, 7)}
     </TableTd>
-    <TableTd middle left>
+    <TableTd xs="0" sm="180" middle left>
       {distanceInWordsToNow(created)}
     </TableTd>
   </TableTr>
@@ -158,28 +180,60 @@ export default ({
     <Table>
       <TableThead>
         <TableTr>
-          <TableTh xs="42" padding="0" middle center>
+          <TableTh xs="42" middle left>
             <FormGroup>
-              <Margin left="3" inline>
-                <Checkbox
-                  checked={checked}
-                  disabled={submitting}
-                  onChange={onToggleCheckAll}
-                  noMargin
-                />
-              </Margin>
+              <Checkbox
+                checked={checked}
+                disabled={submitting}
+                onChange={onToggleCheckAll}
+                noMargin
+              />
             </FormGroup>
           </TableTh>
-          <TableTh left middle actionable>
-            <span>Template name</span>
+          <TableTh
+            sortOrder={sortOrder}
+            showSort={sortBy === 'name'}
+            onClick={() => onSortBy('name')}
+            left
+            middle
+            actionable
+          >
+            <span>Name</span>
           </TableTh>
-          <TableTh left middle actionable>
+          <TableTh
+            xs="0"
+            sm="160"
+            sortOrder={sortOrder}
+            showSort={sortBy === 'image'}
+            onClick={() => onSortBy('image')}
+            left
+            middle
+            actionable
+          >
             <span>Image</span>
           </TableTh>
-          <TableTh xs="0" sm="160" left middle actionable>
+          <TableTh
+            xs="0"
+            sm="160"
+            sortOrder={sortOrder}
+            showSort={sortBy === 'package'}
+            onClick={() => onSortBy('package')}
+            left
+            middle
+            actionable
+          >
             <span>Package</span>
           </TableTh>
-          <TableTh xs="160" left middle actionable>
+          <TableTh
+            xs="0"
+            sm="180"
+            sortOrder={sortOrder}
+            showSort={sortBy === 'created'}
+            onClick={() => onSortBy('created')}
+            left
+            middle
+            actionable
+          >
             <span>Created</span>
           </TableTh>
         </TableTr>

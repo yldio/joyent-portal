@@ -94,6 +94,10 @@ export const H4 = styled.h4`
     display: inline-block;
   `};
 
+  ${is('bold')`
+    font-weight: ${props => props.theme.font.weight.semibold};
+  `};
+
   ${is('white')`
     -webkit-text-fill-color: currentcolor;
     color: ${props => props.theme.white}

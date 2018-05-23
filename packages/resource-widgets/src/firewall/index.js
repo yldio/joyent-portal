@@ -73,7 +73,7 @@ const Rule = ({ enabled, rule_obj }) => {
     <Card disabled={!enabled}>
       <Padding left="3" right="3" top="2" bottom="2">
         <Row>
-          <Col xs={3}>
+          <Col xs="3">
             <Flex justifyStart alignCenter contentStretch>
               <Margin right="0.5">
                 <FlexItem>
@@ -83,7 +83,7 @@ const Rule = ({ enabled, rule_obj }) => {
               <Flex alignCenter>{froms}</Flex>
             </Flex>
           </Col>
-          <Col xs={3}>
+          <Col xs="3">
             <Flex justifyStart alignCenter contentStretch>
               <Margin right="0.5">
                 <FlexItem>
@@ -93,7 +93,7 @@ const Rule = ({ enabled, rule_obj }) => {
               <Flex alignCenter>{tos}</Flex>
             </Flex>
           </Col>
-          <Col xs={2}>
+          <Col xs="2">
             <Flex justifyStart alignCenter contentStretch>
               <Margin right="0.5">
                 <FlexItem>
@@ -105,7 +105,7 @@ const Rule = ({ enabled, rule_obj }) => {
               </Flex>
             </Flex>
           </Col>
-          <Col xs={2}>
+          <Col xs="2">
             <Flex justifyStart alignCenter contentStretch>
               <Margin right="0.5">
                 <FlexItem>
@@ -117,7 +117,7 @@ const Rule = ({ enabled, rule_obj }) => {
               </Flex>
             </Flex>
           </Col>
-          <Col xs={2}>
+          <Col xs="2">
             <Flex justifyStart alignCenter contentStretch>
               <Margin right="0.5">
                 <FlexItem>
@@ -138,7 +138,7 @@ const Rule = ({ enabled, rule_obj }) => {
 export const Rules = ({ rules = [] }) => (
   <Fragment>
     {rules.map((rule, index) => (
-      <Margin key={rule.id} bottom={index === rules.length - 1 ? 0 : 2}>
+      <Margin key={rule.id} bottom={index === rules.length - 1 ? '0' : '2'}>
         <Rule {...rule} />
       </Margin>
     ))}

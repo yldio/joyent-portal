@@ -25,7 +25,7 @@ const FullWidthCard = styled(Card)`
 
 export default ({ children, ...rest }) => (
   <FullWidthCard {...rest}>
-    <Padding all={6}>
+    <Padding all="6">
       <Flex alignCenter justifyCenter column>
         <Margin bottom="2">
           <EmptyState />

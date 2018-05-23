@@ -1,0 +1,5 @@
+mutation removeServiceGroup($id: ID!) {
+  deleteGroup(id: $id) {
+    id
+  }
+}

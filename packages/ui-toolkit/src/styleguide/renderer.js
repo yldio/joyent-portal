@@ -66,11 +66,11 @@ const StyleGuideRenderer = ({
           <Grid style={{ marginLeft: 0, zIndex: 2, position: 'relative' }}>
             <Main>
               {hasSidebar && (
-                <Col xs={3}>
+                <Col xs="3">
                   <Sidebar>{toc}</Sidebar>
                 </Col>
               )}
-              <Col xs={hasSidebar ? 9 : 12} lg={hasSidebar ? 8 : 12}>
+              <Col xs={hasSidebar ? '9' : '12'} lg={hasSidebar ? '8' : '12'}>
                 {children}
                 <BottomNav items={toc.props.sections} link={link} />
               </Col>

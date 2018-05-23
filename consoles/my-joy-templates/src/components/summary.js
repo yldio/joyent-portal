@@ -1,4 +1,5 @@
 import React, { Fragment, PureComponent } from 'react';
+import { If, Then, Else } from 'react-if';
 import ReduxForm from 'declarative-redux-form';
 import { Link } from 'react-router-dom';
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now';
@@ -134,55 +135,57 @@ export const Meta = ({
             </Padding>
           </FlexItem>
         </Flex>
-        {actions ? (
-          <Fragment>
-            <Margin top="3" bottom="3">
-              <Hr />
-            </Margin>
-            <Row between="xs">
-              <Col xs="6">
-                <Margin right="1" inline>
+        <If condition={actions}>
+          <Then>
+            <Fragment>
+              <Margin top="3" bottom="3">
+                <Hr />
+              </Margin>
+              <Row between="xs">
+                <Col xs="6">
+                  <Margin right="1" inline>
+                    <Button
+                      type="button"
+                      to={`/service-groups/~create/name?template=${id}`}
+                      component={Link}
+                      bold
+                      icon
+                    >
+                      <span>Create Service Group</span>
+                    </Button>
+                  </Margin>
                   <Button
                     type="button"
-                    to={`/service-groups/~create?template=${id}`}
+                    to={`/templates/~duplicate/${id}/name`}
                     component={Link}
+                    secondary
                     bold
                     icon
                   >
-                    <span>Create Service Group</span>
+                    <span>Duplicate</span>
                   </Button>
-                </Margin>
-                <Button
-                  type="button"
-                  to={`/templates/~duplicate/${id}/name`}
-                  component={Link}
-                  secondary
-                  bold
-                  icon
-                >
-                  <span>Duplicate</span>
-                </Button>
-              </Col>
-              <Col xs="6">
-                <Button
-                  type="button"
-                  onClick={onRemove}
-                  loading={removing}
-                  secondary
-                  bold
-                  right
-                  icon
-                  error
-                >
-                  <Margin right="2">
-                    <DeleteIcon fill="red" />
-                  </Margin>
-                  <span>Remove</span>
-                </Button>
-              </Col>
-            </Row>
-          </Fragment>
-        ) : null}
+                </Col>
+                <Col xs="6">
+                  <Button
+                    type="button"
+                    onClick={onRemove}
+                    loading={removing}
+                    secondary
+                    bold
+                    right
+                    icon
+                    error
+                  >
+                    <Margin right="2">
+                      <DeleteIcon fill="red" />
+                    </Margin>
+                    <span>Remove</span>
+                  </Button>
+                </Col>
+              </Row>
+            </Fragment>
+          </Then>
+        </If>
       </Padding>
     </CardOutlet>
   </Card>
@@ -255,11 +258,27 @@ const Network = ({ name, fabric, ...network }) => (
                 <Flex alignCenter>
                   <FlexItem>
                     <Margin right="1">
-                      {network.public ? <PublicIcon /> : <PrivateIcon />}
+                      <If condition={network.public}>
+                        <Then>
+                          <PublicIcon />
+                        </Then>
+                        <Else>
+                          <PrivateIcon />
+                        </Else>
+                      </If>
                     </Margin>
                   </FlexItem>
                   <FlexItem>
-                    <P>{network.public ? 'Public' : 'Private'}</P>
+                    <P>
+                      <If condition={network.public}>
+                        <Then>
+                          <Fragment>Public</Fragment>
+                        </Then>
+                        <Else>
+                          <Fragment>Private</Fragment>
+                        </Else>
+                      </If>
+                    </P>
                   </FlexItem>
                 </Flex>
               </FlexItem>
@@ -269,11 +288,27 @@ const Network = ({ name, fabric, ...network }) => (
                 <Flex alignCenter>
                   <FlexItem>
                     <Margin right="1">
-                      {fabric ? <FabricIcon /> : <DataCenterIcon />}
+                      <If condition={fabric}>
+                        <Then>
+                          <FabricIcon />
+                        </Then>
+                        <Else>
+                          <DataCenterIcon />
+                        </Else>
+                      </If>
                     </Margin>
                   </FlexItem>
                   <FlexItem>
-                    <P>{fabric ? 'Fabric network' : 'Data center network'}</P>
+                    <P>
+                      <If condition={fabric}>
+                        <Then>
+                          <Fragment>Fabric network</Fragment>
+                        </Then>
+                        <Else>
+                          <Fragment>Data center network</Fragment>
+                        </Else>
+                      </If>
+                    </P>
                   </FlexItem>
                 </Flex>
               </FlexItem>

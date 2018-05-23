@@ -64,7 +64,7 @@ const Services = ({ expanded = false, categories = [], loading }) =>
           <Row>
             {!loading &&
               categories.map(({ name, services }) => (
-                <CategoryWrapper xs={12} sm={6} md={4}>
+                <CategoryWrapper xs="12" sm="6" md="4">
                   <ServiceCategory>{name}</ServiceCategory>
                   {services.map(({ name, description, url, tags }) => (
                     <Service>

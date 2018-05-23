@@ -1,0 +1,21 @@
+mutation updateServiceGroup(
+  $id: ID!
+  $name: String!
+  $template: ID!
+  $capacity: Int!
+) {
+  updateGroup(id: $id, name: $name, template: $template, capacity: $capacity) {
+    id
+    name
+    template {
+      id
+      name
+      package
+      image
+      created
+    }
+    capacity
+    created
+    updated
+  }
+}

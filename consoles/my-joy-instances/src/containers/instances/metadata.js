@@ -316,7 +316,7 @@ export default compose(
             'initialValues.name'
           );
 
-          if (!(await Confirm(`Do you want to remove "${name}"?`))) {
+          if (!await Confirm(`Do you want to remove "${name}"?`)) {
             return;
           }
 

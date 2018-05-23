@@ -285,7 +285,7 @@ export default compose(
         },
         handleRemove: async (form, { name }) => {
           // eslint-disable-next-line no-alert
-          if (!(await Confirm(`Do you want to remove "${name}"?`))) {
+          if (!await Confirm(`Do you want to remove "${name}"?`)) {
             return;
           }
 

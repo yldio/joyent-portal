@@ -2,7 +2,7 @@ import intercept from 'apr-intercept';
 import keys from 'lodash.keys';
 import reduce from 'apr-reduce';
 import assign from 'lodash.assign';
-import yup from 'yup';
+import * as yup from 'yup';
 
 /*****************************************************************************/
 

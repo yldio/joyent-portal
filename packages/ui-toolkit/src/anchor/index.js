@@ -23,6 +23,11 @@ const BaseLink = styled(({ component, children, ...rest }) =>
     -webkit-text-fill-color: currentcolor;
   `};
 
+  ${isOr('tertiary')`
+    color: ${props => props.theme.text};
+    -webkit-text-fill-color: currentcolor;
+  `};
+
   ${is('disabled')`
     color: ${props => props.theme.grey};
     -webkit-text-fill-color: currentcolor;

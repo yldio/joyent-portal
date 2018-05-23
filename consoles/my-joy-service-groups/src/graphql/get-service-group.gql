@@ -1,0 +1,16 @@
+query group($id: ID!) {
+  group(id: $id) {
+    id
+    name
+    template {
+      id
+      name
+      package
+      image
+      created
+    }
+    capacity
+    created
+    updated
+  }
+}

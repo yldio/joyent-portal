@@ -30,7 +30,6 @@ import {
   MemoryIcon
 } from 'joyent-ui-toolkit';
 
-import { NoPackages } from 'joyent-logo-assets';
 import { ValueBreakpoints as breakpoints } from 'joyent-ui-toolkit';
 import { EmptyState } from 'joyent-icons';
 
@@ -54,9 +53,11 @@ const NoPackagesTitle = styled(H3)`
 
 const FullWidthCard = styled(Card)`
   width: calc(100% - ${remcalc(2)});
+
   ${is('transparent')`
     background: transparent;
   `};
+
   ${isNot('borderTop')`
     border-top: none;
   `};
@@ -207,14 +208,14 @@ export const MobilePackage = ({
   onRowClick
 }) => (
   <FormItem selected={selected}>
-    <Padding all={2} onClick={() => onRowClick(id)}>
+    <Padding all="2" onClick={() => onRowClick(id)}>
       <FormGroup name="package" value={id} type="radio" field={Field} fluid>
         <Radio onBlur={null} noMargin>
           <Flex alignCenter>
-            <Margin left={2} right={1}>
+            <Margin left="2" right="1">
               {GroupIcons[group]}
             </Margin>
-            <Margin left={1} right={2}>
+            <Margin left="1" right="2">
               <FormLabel style={{ fontWeight: '600' }} noMargin actionable>
                 {`${name}  `}
                 {ssd && <Sup badge>SSD</Sup>}
@@ -225,29 +226,29 @@ export const MobilePackage = ({
       </FormGroup>
     </Padding>
     <PackageSpecs selected={selected}>
-      <Padding top={1} left={2} bottom={1}>
+      <Padding top="1" left="2" bottom="1">
         <Table>
           <TableThead smallScreen>
             <TableTr>
               <TableTh left smallScreen>
-                <Padding top={1}>
+                <Padding top="1">
                   <span>RAM </span>
                 </Padding>
               </TableTh>
               <TableTh left smallScreen>
-                <Padding top={1}>
+                <Padding top="1">
                   <span>Disk </span>
                 </Padding>
               </TableTh>
               {hasVms && (
                 <TableTh left smallScreen>
-                  <Padding top={1}>
+                  <Padding top="1">
                     <span>vCPU</span>
                   </Padding>
                 </TableTh>
               )}
               <TableTh left smallScreen>
-                <Padding top={1}>
+                <Padding top="1">
                   <span>$/hour</span>
                 </Padding>
               </TableTh>
@@ -269,7 +270,7 @@ export const MobilePackage = ({
                 bold={sortBy === 'disk'}
                 smallScreen
               >
-                <Margin inline right={1}>
+                <Margin inline right="1">
                   {bytes(disk, { decimalPlaces: 0, unitSeparator: ' ' })}
                 </Margin>
               </TableTd>
@@ -470,7 +471,7 @@ export const Overview = ({
 
 export const Empty = ({ children, ...rest }) => (
   <FullWidthCard {...rest}>
-    <Padding all={6}>
+    <Padding all="6">
       <Flex alignCenter justifyCenter column>
         <Margin bottom="2">
           <EmptyState />

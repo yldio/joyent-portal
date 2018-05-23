@@ -9,7 +9,7 @@ const P = styled(BaseP)`
 
 export default ({ href = '', children }) => (
   <Row>
-    <Col xs={12} sm={7}>
+    <Col xs="12" sm="7">
       <P>
         {children}{' '}
         {href ? (

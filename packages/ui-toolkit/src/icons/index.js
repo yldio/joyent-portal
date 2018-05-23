@@ -16,7 +16,10 @@ import {
   Dot as BaseDot,
   Duplicate as BaseDuplicate,
   Edit as BaseEdit,
+  EmptyState as BaseEmptyState,
+  External as BaseExternal,
   Fabric as BaseFabric,
+  // Filter as BaseFilter,
   Firewall as BaseFirewall,
   General as BaseGeneral,
   Id as BaseId,
@@ -43,8 +46,9 @@ import {
   Stop as BaseStop,
   Storage as BaseStorage,
   Tags as BaseTags,
-  Triton as BaseTriton,
+  Template as BaseTemplate,
   Tick as BaseTick,
+  Triton as BaseTriton,
   User as BaseUser
 } from 'joyent-icons';
 
@@ -67,7 +71,10 @@ export const Delete = Colors(BaseDelete);
 export const Dot = Colors(BaseDot);
 export const Duplicate = Colors(BaseDuplicate);
 export const Edit = Colors(BaseEdit);
+export const EmptyState = Colors(BaseEmptyState);
+export const External = Colors(BaseExternal);
 export const Fabric = Colors(BaseFabric);
+// export const Filter = Colors(Filter);
 export const Firewall = Colors(BaseFirewall);
 export const General = Colors(BaseGeneral);
 export const Id = Colors(BaseId);
@@ -94,6 +101,7 @@ export const Start = Colors(BaseStart);
 export const Stop = Colors(BaseStop);
 export const Storage = Colors(BaseStorage);
 export const Tags = Colors(BaseTags);
+export const Template = Colors(BaseTemplate);
 export const Tick = Colors(BaseTick);
 export const Triton = Colors(BaseTriton);
 export const User = Colors(BaseUser);

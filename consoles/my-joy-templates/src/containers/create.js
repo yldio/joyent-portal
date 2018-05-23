@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import { If, Then } from 'react-if';
 import ReduxForm from 'declarative-redux-form';
 import { SubmissionError, destroy } from 'redux-form';
 import { Margin, Padding } from 'styled-components-spacing';
@@ -40,7 +41,9 @@ import { Provider as ResourceSteps } from 'joyent-ui-resource-step';
 
 import { Forms } from '@root/constants';
 import parseError from '@state/parse-error';
+import ListTemplates from '@graphql/list-templates.gql';
 import CreateTemplateMutation from '@graphql/create-template.gql';
+import GetTemplate from '@graphql/get-template.gql';
 
 const { TC_F } = Forms;
 const names = {
@@ -118,14 +121,18 @@ class CreateTemplate extends Component {
           <H3>Create Template</H3>
         </Margin>
         <Padding top="5">
-          {error ? (
-            <Margin bottom="2">
-              <Message error>
-                <MessageTitle>Ooops!</MessageTitle>
-                <MessageDescription>{error}</MessageDescription>
-              </Message>
-            </Margin>
-          ) : null}
+          <If condition={error}>
+            <Then>
+              <Margin bottom="2">
+                <Message error>
+                  <MessageTitle>Ooops!</MessageTitle>
+                  <MessageDescription>
+                    <Fragment>{error}</Fragment>
+                  </MessageDescription>
+                </Message>
+              </Margin>
+            </Then>
+          </If>
           <ResourceSteps namespace="templates/~create">
             <Margin bottom="5">
               <Name
@@ -226,14 +233,18 @@ class CreateTemplate extends Component {
             </Margin>
           </ResourceSteps>
           <Margin bottom="5">
-            {error ? (
-              <Margin bottom="2">
-                <Message error>
-                  <MessageTitle>Ooops!</MessageTitle>
-                  <MessageDescription>{error}</MessageDescription>
-                </Message>
-              </Margin>
-            ) : null}
+            <If condition={error}>
+              <Then>
+                <Margin bottom="2">
+                  <Message error>
+                    <MessageTitle>Ooops!</MessageTitle>
+                    <MessageDescription>
+                      <Fragment>{error}</Fragment>
+                    </MessageDescription>
+                  </Message>
+                </Margin>
+              </Then>
+            </If>
             <ReduxForm form={TC_F} onSubmit={handleSubmit}>
               {({ handleSubmit, submitting }) => (
                 <form onSubmit={handleSubmit}>
@@ -261,7 +272,7 @@ export const Success = ({ match }) => {
       <Margin top="5">
         <PostCreation
           id={id}
-          altCreateTo={`/service-groups/~create?template=${id}`}
+          altCreateTo={`/service-groups/~create/name?template=${id}`}
           object="template"
           name="service group"
         >
@@ -323,7 +334,33 @@ export default compose(
       handleSubmit: async () => {
         const [err, res] = await intercept(
           createTemplate({
-            variables: generatePayload(steps)
+            variables: generatePayload(steps),
+            update: (proxy, { data: { createTemplate: template } }) => {
+              try {
+                proxy.writeQuery({
+                  query: ListTemplates,
+                  data: {
+                    templates: proxy
+                      .readQuery({ query: ListTemplates })
+                      .templates.concat([template])
+                  }
+                });
+              } catch (err) {
+                // eslint-disable-next-line no-console
+                console.error(err);
+              }
+
+              try {
+                proxy.writeQuery({
+                  query: GetTemplate,
+                  variables: { id: template.id },
+                  data: { template }
+                });
+              } catch (err) {
+                // eslint-disable-next-line no-console
+                console.error(err);
+              }
+            }
           })
         );
 
@@ -333,10 +370,12 @@ export default compose(
           });
         }
 
+        const { data } = res;
+        const { createTemplate: ct } = data;
+        const { id } = ct;
+
         dispatch([destroyAll(), forms.map(name => destroy(name))]);
-        history.push(
-          `/templates/~create/${res.data.createTemplate.id}/success`
-        );
+        history.push(`/templates/~create/${id}/success`);
       }
     };
   })

@@ -203,7 +203,7 @@ Array [
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   width: 2rem;
   display: table-cell;
@@ -326,7 +326,7 @@ Array [
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   width: 3.75rem;
   display: table-cell;
@@ -587,9 +587,14 @@ Array [
                 className="c4"
             >
                 <svg
-                    height={109}
+                    height="109"
+                    style={
+                        Object {
+                            "transform": "rotate(0deg)",
+                          }
+                    }
                     viewBox="0 0 119.34 109.47"
-                    width={119}
+                    width="119"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlnsXlink="http://www.w3.org/1999/xlink"
                 >
@@ -924,7 +929,7 @@ exports[`renders <Item /> without throwing 1`] = `
   font: inherit;
 }
 
-.c9 {
+.c8 {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -933,7 +938,7 @@ exports[`renders <Item /> without throwing 1`] = `
   margin-left: 0rem;
 }
 
-.c12 {
+.c11 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -1081,7 +1086,7 @@ exports[`renders <Item /> without throwing 1`] = `
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
@@ -1096,29 +1101,7 @@ exports[`renders <Item /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c8 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c8:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c8:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c10 {
+.c9 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1134,32 +1117,32 @@ exports[`renders <Item /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c10:not(:first-child) {
+.c9:not(:first-child) {
   border-left-width: 0;
 }
 
-.c10:not(:last-child) {
+.c9:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   border-bottom-width: 0;
   border-left-width: 0.0625rem !important;
 }
 
-.c11:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c11:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1180,7 +1163,7 @@ exports[`renders <Item /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c10 {
+  .c9 {
     width: 10rem;
     display: table-cell;
   }
@@ -1232,19 +1215,19 @@ exports[`renders <Item /> without throwing 1`] = `
     </div>
   </td>
   <td
-    className="c8"
+    className="c1"
     disabled={undefined}
     name="td"
     selected={undefined}
   />
   <td
-    className="c8"
+    className="c1"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     <span
-      className="c9"
+      className="c8"
       color={undefined}
       size="0.75rem"
     />
@@ -1252,7 +1235,7 @@ exports[`renders <Item /> without throwing 1`] = `
     
   </td>
   <td
-    className="c10"
+    className="c9"
     disabled={undefined}
     name="td"
     selected={undefined}
@@ -1260,14 +1243,14 @@ exports[`renders <Item /> without throwing 1`] = `
     almost NaN years
   </td>
   <td
-    className="c11"
+    className="c10"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     <div
       box={true}
-      className="c12"
+      className="c11"
       onClick={[Function]}
       onMouseEnter={undefined}
       onMouseLeave={undefined}
@@ -1340,7 +1323,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   font: inherit;
 }
 
-.c9 {
+.c8 {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -1349,7 +1332,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   margin-left: 0rem;
 }
 
-.c12 {
+.c11 {
   cursor: pointer;
   height: 100%;
   width: 100%;
@@ -1497,7 +1480,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   vertical-align: middle;
   text-align: left;
@@ -1512,29 +1495,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-right-width: 0;
 }
 
-.c8 {
-  border-width: 0.0625rem;
-  border-style: solid;
-  border-color: rgb(216,216,216);
-  border-spacing: 0;
-  white-space: nowrap;
-  box-sizing: border-box;
-  padding: 0 1.5rem;
-  height: 3.75rem;
-  vertical-align: middle;
-  text-align: left;
-  border-bottom-width: 0;
-}
-
-.c8:not(:first-child) {
-  border-left-width: 0;
-}
-
-.c8:not(:last-child) {
-  border-right-width: 0;
-}
-
-.c10 {
+.c9 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
@@ -1550,32 +1511,32 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
   border-bottom-width: 0;
 }
 
-.c10:not(:first-child) {
+.c9:not(:first-child) {
   border-left-width: 0;
 }
 
-.c10:not(:last-child) {
+.c9:not(:last-child) {
   border-right-width: 0;
 }
 
-.c11 {
+.c10 {
   border-width: 0.0625rem;
   border-style: solid;
   border-color: rgb(216,216,216);
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   border-bottom-width: 0;
   border-left-width: 0.0625rem !important;
 }
 
-.c11:not(:first-child) {
+.c10:not(:first-child) {
   border-left-width: 0;
 }
 
-.c11:not(:last-child) {
+.c10:not(:last-child) {
   border-right-width: 0;
 }
 
@@ -1596,7 +1557,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:37.4375rem) {
-  .c10 {
+  .c9 {
     width: 10rem;
     display: table-cell;
   }
@@ -1648,7 +1609,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
     </div>
   </td>
   <td
-    className="c8"
+    className="c1"
     disabled={undefined}
     name="td"
     selected={undefined}
@@ -1656,13 +1617,13 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
     name
   </td>
   <td
-    className="c8"
+    className="c1"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     <span
-      className="c9"
+      className="c8"
       color={undefined}
       size="0.75rem"
     />
@@ -1670,7 +1631,7 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
     Started
   </td>
   <td
-    className="c10"
+    className="c9"
     disabled={undefined}
     name="td"
     selected={undefined}
@@ -1678,14 +1639,14 @@ exports[`renders <Item {...item} /> without throwing 1`] = `
     6 months
   </td>
   <td
-    className="c11"
+    className="c10"
     disabled={undefined}
     name="td"
     selected={undefined}
   >
     <div
       box={true}
-      className="c12"
+      className="c11"
       onClick={[Function]}
       onMouseEnter={undefined}
       onMouseLeave={undefined}
@@ -2146,7 +2107,7 @@ Array [
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   width: 2rem;
   display: table-cell;
@@ -2269,7 +2230,7 @@ Array [
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   width: 3.75rem;
   display: table-cell;
@@ -2530,9 +2491,14 @@ Array [
                 className="c4"
             >
                 <svg
-                    height={109}
+                    height="109"
+                    style={
+                        Object {
+                            "transform": "rotate(0deg)",
+                          }
+                    }
                     viewBox="0 0 119.34 109.47"
-                    width={119}
+                    width="119"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlnsXlink="http://www.w3.org/1999/xlink"
                 >
@@ -3029,7 +2995,7 @@ Array [
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   width: 2rem;
   display: table-cell;
@@ -3152,7 +3118,7 @@ Array [
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   width: 3.75rem;
   display: table-cell;
@@ -3413,9 +3379,14 @@ Array [
                 className="c4"
             >
                 <svg
-                    height={109}
+                    height="109"
+                    style={
+                        Object {
+                            "transform": "rotate(0deg)",
+                          }
+                    }
                     viewBox="0 0 119.34 109.47"
-                    width={119}
+                    width="119"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlnsXlink="http://www.w3.org/1999/xlink"
                 >
@@ -3912,7 +3883,7 @@ Array [
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   width: 2rem;
   display: table-cell;
@@ -3971,7 +3942,7 @@ Array [
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   width: 3.75rem;
   display: table-cell;
@@ -4296,9 +4267,14 @@ Array [
                 className="c4"
             >
                 <svg
-                    height={109}
+                    height="109"
+                    style={
+                        Object {
+                            "transform": "rotate(0deg)",
+                          }
+                    }
                     viewBox="0 0 119.34 109.47"
-                    width={119}
+                    width="119"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlnsXlink="http://www.w3.org/1999/xlink"
                 >
@@ -4795,7 +4771,7 @@ Array [
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   width: 2rem;
   display: table-cell;
@@ -4854,7 +4830,7 @@ Array [
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   width: 3.75rem;
   display: table-cell;
@@ -5179,9 +5155,14 @@ Array [
                 className="c4"
             >
                 <svg
-                    height={109}
+                    height="109"
+                    style={
+                        Object {
+                            "transform": "rotate(0deg)",
+                          }
+                    }
                     viewBox="0 0 119.34 109.47"
-                    width={119}
+                    width="119"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlnsXlink="http://www.w3.org/1999/xlink"
                 >
@@ -5678,7 +5659,7 @@ Array [
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   width: 2rem;
   display: table-cell;
@@ -5801,7 +5782,7 @@ Array [
   border-spacing: 0;
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 0 0rem;
+  padding: 0 1.5rem;
   height: 3.75rem;
   width: 3.75rem;
   display: table-cell;
@@ -6062,9 +6043,14 @@ Array [
                 className="c4"
             >
                 <svg
-                    height={109}
+                    height="109"
+                    style={
+                        Object {
+                            "transform": "rotate(0deg)",
+                          }
+                    }
                     viewBox="0 0 119.34 109.47"
-                    width={119}
+                    width="119"
                     xmlns="http://www.w3.org/2000/svg"
                     xmlnsXlink="http://www.w3.org/1999/xlink"
                 >

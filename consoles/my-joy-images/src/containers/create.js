@@ -76,7 +76,7 @@ const Create = ({
       {({ handleSubmit, submitting }) =>
         !loading && !loadingError ? (
           <form onSubmit={handleSubmit}>
-            <Margin top={step === 'tag' ? 7 : 4}>
+            <Margin top={step === 'tag' ? '7' : '4'}>
               <Button disabled={disabled} loading={submitting}>
                 Create Image
               </Button>

@@ -2,7 +2,6 @@ import React from 'react';
 import { Field } from 'redux-form';
 import { Margin } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
-import remcalc from 'remcalc';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
 
 import {
@@ -31,7 +30,6 @@ export default ({ placeholderName, randomizing, onRandomize }) => (
         <Margin left="1">
           <Button
             type="button"
-            marginTop={remcalc(8)}
             onClick={onRandomize}
             loading={randomizing}
             marginless
@@ -54,7 +52,7 @@ export default ({ placeholderName, randomizing, onRandomize }) => (
       </FormGroup>
     </Margin>
     <Row>
-      <Col xs={12} sm={8}>
+      <Col xs="12" sm="8">
         <Margin top="3">
           <FormGroup name="description" fluid field={Field}>
             <FormLabel>Description</FormLabel>

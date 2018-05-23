@@ -18,7 +18,7 @@ export default ({ children, ...rest }) => (
     <Padding top="1" bottom="1">
       <Container>
         <Row name="breadcrum">
-          <Col xs={12}>{children}</Col>
+          <Col xs="12">{children}</Col>
         </Row>
       </Container>
     </Padding>

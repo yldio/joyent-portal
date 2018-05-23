@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import { set } from 'react-redux-values';
-import { Field } from 'redux-form';
-import { reset } from 'redux-form';
+import { withRouter } from 'react-router';
+import { Field, reset } from 'redux-form';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
 import get from 'lodash.get';
@@ -50,6 +50,7 @@ const Form = styled.form`
 `;
 
 const NameContainer = ({
+  history,
   randomizable = false,
   initialValues,
   handleValidate,
@@ -84,8 +85,8 @@ const NameContainer = ({
             enableReinitialize
             keepDirtyOnReinitialize
           >
-            {props => (
-              <Form onSubmit={null}>
+            {({ invalid }) => (
+              <Form onSubmit={() => history.push(next)}>
                 <FormGroup id="input-name" name="name" fluid field={Field}>
                   <FormLabel>Instance name</FormLabel>
                   <Margin top="0.5">
@@ -113,7 +114,8 @@ const NameContainer = ({
                                 Randomize
                               </Button>
                             </Margin>
-                          </FlexItem>) : null}
+                          </FlexItem>
+                        ) : null}
                       </Flex>
                     </SmallOnly>
                     <Medium>
@@ -151,6 +153,7 @@ const NameContainer = ({
                     id="next-button-name"
                     type="button"
                     component={Link}
+                    disabled={invalid}
                     to={next}
                   >
                     Next
@@ -194,6 +197,7 @@ const Name = ({ type = 'instance', ...props }) =>
   );
 
 const Container = compose(
+  withRouter,
   graphql(GetRandomName, {
     options: () => ({
       ssr: false
