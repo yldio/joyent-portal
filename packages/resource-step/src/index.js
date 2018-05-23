@@ -21,7 +21,7 @@ import { Saved as SavedIcon, Error as ErrorIcon } from './status-icon';
 
 import { QueryBreakpoints } from 'joyent-ui-toolkit';
 
-const { Medium } = QueryBreakpoints;
+const { SmallOnly, Medium } = QueryBreakpoints;
 
 const Card = styled(BaseCard)`
   ${is('error')`
@@ -176,7 +176,12 @@ export default class Step extends PureComponent {
       >
         <Card expanded={expanded} error={!expanded && !isValid}>
           <CardOutlet>
-            <Padding all="5">{children}</Padding>
+            <SmallOnly>
+              <Padding all="3">{children}</Padding>
+            </SmallOnly>
+            <Medium>
+              <Padding all="5">{children}</Padding>
+            </Medium>
           </CardOutlet>
         </Card>
       </Broadcast>
