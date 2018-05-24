@@ -15,6 +15,10 @@ exports[`renders <List /> without throwing 1`] = `
 }
 
 .c31 {
+  padding: 1.125rem;
+}
+
+.c32 {
   padding: 1.875rem;
 }
 
@@ -929,12 +933,28 @@ exports[`renders <List /> without throwing 1`] = `
       disabled={false}
       name="card-outlet"
     >
-      <div
-        className="c31"
+      <span
+        name="react-responsive-mock"
+        query="only screen and (max-width: 37.4375rem)"
       >
-        You haven't created any instances yet, but they're really easy to set up.
-                Click above to get going.
-      </div>
+        <div
+          className="c31"
+        >
+          You haven't created any instances yet, but they're really easy to set up.
+                  Click above to get going.
+        </div>
+      </span>
+      <span
+        name="react-responsive-mock"
+        query="only screen and (min-width: 37.5rem)"
+      >
+        <div
+          className="c32"
+        >
+          You haven't created any instances yet, but they're really easy to set up.
+                  Click above to get going.
+        </div>
+      </span>
     </div>
   </div>
 </div>
@@ -959,6 +979,10 @@ exports[`renders <List error /> without throwing 1`] = `
 }
 
 .c38 {
+  padding: 1.125rem;
+}
+
+.c39 {
   padding: 1.875rem;
 }
 
@@ -1942,12 +1966,28 @@ exports[`renders <List error /> without throwing 1`] = `
       disabled={false}
       name="card-outlet"
     >
-      <div
-        className="c38"
+      <span
+        name="react-responsive-mock"
+        query="only screen and (max-width: 37.4375rem)"
       >
-        You haven't created any instances yet, but they're really easy to set up.
-                Click above to get going.
-      </div>
+        <div
+          className="c38"
+        >
+          You haven't created any instances yet, but they're really easy to set up.
+                  Click above to get going.
+        </div>
+      </span>
+      <span
+        name="react-responsive-mock"
+        query="only screen and (min-width: 37.5rem)"
+      >
+        <div
+          className="c39"
+        >
+          You haven't created any instances yet, but they're really easy to set up.
+                  Click above to get going.
+        </div>
+      </span>
     </div>
   </div>
 </div>

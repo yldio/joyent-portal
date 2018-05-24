@@ -19,6 +19,10 @@ import {
 
 import { Saved as SavedIcon, Error as ErrorIcon } from './status-icon';
 
+import { QueryBreakpoints } from 'joyent-ui-toolkit';
+
+const { SmallOnly, Medium } = QueryBreakpoints;
+
 const Card = styled(BaseCard)`
   ${is('error')`
     border: ${remcalc(1)} solid ${props => props.theme.redDark};
@@ -46,25 +50,29 @@ export const Header = ({ icon = null, children }) => (
             <Flex justifyBetween>
               <FlexItem>
                 <Flex alignCenter>
-                  <FlexItem>
-                    <Margin right="2">{icon}</Margin>
-                  </FlexItem>
+                  <Medium>
+                    <FlexItem>
+                      <Margin right="2">{icon}</Margin>
+                    </FlexItem>
+                  </Medium>
                   <FlexItem>
                     <H3 bold>{children}</H3>
                   </FlexItem>
                   {/* improve this */}
-                  {optional ? (
-                    <Fragment>
-                      <FlexItem>
-                        <Margin horizontal="1">
-                          <Divider vertical />
-                        </Margin>
-                      </FlexItem>
-                      <FlexItem>
-                        <P optional>Optional</P>
-                      </FlexItem>
-                    </Fragment>
-                  ) : null}
+                  <Medium>
+                    {optional ? (
+                      <Fragment>
+                        <FlexItem>
+                          <Margin horizontal="1">
+                            <Divider vertical />
+                          </Margin>
+                        </FlexItem>
+                        <FlexItem>
+                          <P optional>Optional</P>
+                        </FlexItem>
+                      </Fragment>
+                    ) : null}
+                  </Medium>
                 </Flex>
               </FlexItem>
               <FlexItem alignCenter>
@@ -168,7 +176,12 @@ export default class Step extends PureComponent {
       >
         <Card expanded={expanded} error={!expanded && !isValid}>
           <CardOutlet>
-            <Padding all="5">{children}</Padding>
+            <SmallOnly>
+              <Padding all="3">{children}</Padding>
+            </SmallOnly>
+            <Medium>
+              <Padding all="5">{children}</Padding>
+            </Medium>
           </CardOutlet>
         </Card>
       </Broadcast>

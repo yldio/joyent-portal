@@ -33,6 +33,9 @@ import {
 import GetRandomName from '../graphql/get-random-name.gql';
 import { Forms, Values } from '../constants';
 import { instanceName as validateName } from '../validators';
+import { QueryBreakpoints } from 'joyent-ui-toolkit';
+
+const { SmallOnly, Medium } = QueryBreakpoints;
 
 const { IR_NAME_F } = Forms;
 const { IR_NAME_V_USE_RANDOM } = Values;
@@ -61,7 +64,7 @@ const Name = ({
     isValid={handleValidate(preview)}
     {...props}
   >
-    <StepHeader icon={<NameIcon />}>Name this instance</StepHeader>
+    <StepHeader icon={<NameIcon />}>Instance name</StepHeader>
     <StepDescription>
       Your instance name will be used to identify this specific instance.
     </StepDescription>
@@ -87,29 +90,57 @@ const Name = ({
                 <FormGroup id={'input-name'} name="name" fluid field={Field}>
                   <FormLabel>Instance name</FormLabel>
                   <Margin top="0.5">
-                    <Flex>
-                      <FlexItem>
-                        <Input onBlur={null} />
-                      </FlexItem>
-                      <FlexItem>
-                        <Margin left="1" inline>
-                          <Button
-                            id={'randomize-button-name'}
-                            type="button"
-                            loading={randomizing}
-                            onClick={handleRandomize}
-                            marginless
-                            secondary
-                            icon
-                          >
-                            <Margin right="1">
-                              <RandomizeIcon />
-                            </Margin>
-                            Randomize
-                          </Button>
-                        </Margin>
-                      </FlexItem>
-                    </Flex>
+                    <SmallOnly>
+                      <Flex column>
+                        <FlexItem>
+                          <Input onBlur={null} fluid />
+                        </FlexItem>
+                        <FlexItem>
+                          <Margin top="2">
+                            <Button
+                              id={'randomize-button-name'}
+                              type="button"
+                              loading={randomizing}
+                              onClick={handleRandomize}
+                              marginless
+                              secondary
+                              icon
+                              fluid
+                            >
+                              <Margin right="1">
+                                <RandomizeIcon />
+                              </Margin>
+                              Randomize
+                            </Button>
+                          </Margin>
+                        </FlexItem>
+                      </Flex>
+                    </SmallOnly>
+                    <Medium>
+                      <Flex>
+                        <FlexItem>
+                          <Input onBlur={null} />
+                        </FlexItem>
+                        <FlexItem>
+                          <Margin left="1" inline>
+                            <Button
+                              id={'randomize-button-name'}
+                              type="button"
+                              loading={randomizing}
+                              onClick={handleRandomize}
+                              marginless
+                              secondary
+                              icon
+                            >
+                              <Margin right="1">
+                                <RandomizeIcon />
+                              </Margin>
+                              Randomize
+                            </Button>
+                          </Margin>
+                        </FlexItem>
+                      </Flex>
+                    </Medium>
                   </Margin>
                   <FormMeta />
                 </FormGroup>
