@@ -49,6 +49,10 @@ const CardHeader = styled(BaseCardHeader)`
   `};
 `;
 
+const ResponsiveFormGroup = styled(FormGroup)`
+  width: 100%;
+`;
+
 export const Collapsed = ({ name, fabric, ...network }) => (
   <Margin inline right={3} top={3}>
     <Box>
@@ -262,7 +266,7 @@ export const Expanded = ({
                               ) : null}
                               <FlexItem>
                                 <Margin bottom={2}>
-                                  <FormGroup name="id">
+                                  <ResponsiveFormGroup name="id">
                                     <FormLabel>ID</FormLabel>
                                     <Margin top={0.5}>
                                       <Input
@@ -273,11 +277,11 @@ export const Expanded = ({
                                         value={id}
                                       />
                                     </Margin>
-                                  </FormGroup>
+                                  </ResponsiveFormGroup>
                                 </Margin>
                               </FlexItem>
                               <FlexItem>
-                                <FormGroup name="subnet">
+                                <ResponsiveFormGroup name="subnet">
                                   <FormLabel>Subnet</FormLabel>
                                   <Margin top={0.5}>
                                     <Input
@@ -288,10 +292,10 @@ export const Expanded = ({
                                       value={subnet}
                                     />
                                   </Margin>
-                                </FormGroup>
+                                </ResponsiveFormGroup>
                               </FlexItem>
                               <FlexItem>
-                                <FormGroup name="ip-range">
+                                <ResponsiveFormGroup name="ip-range">
                                   <FormLabel>IP range</FormLabel>
                                   <Margin top={0.5}>
                                     <Input
@@ -302,7 +306,7 @@ export const Expanded = ({
                                       value={`${provision_start_ip} - ${provision_end_ip}`}
                                     />
                                   </Margin>
-                                </FormGroup>
+                                </ResponsiveFormGroup>
                               </FlexItem>
                             </Flex>
                           </Padding>
