@@ -691,8 +691,8 @@ exports[`renders <AddForm /> without throwing 1`] = `
 .c23 {
   box-sizing: border-box;
   width: 18.75rem;
-  height: 6rem;
-  min-height: 6rem;
+  height: 12rem;
+  min-height: 12rem;
   padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -706,6 +706,7 @@ exports[`renders <AddForm /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -1760,8 +1761,8 @@ exports[`renders <EditForm /> without throwing 1`] = `
 .c23 {
   box-sizing: border-box;
   width: 18.75rem;
-  height: 6rem;
-  min-height: 6rem;
+  height: 12rem;
+  min-height: 12rem;
   padding: 0.8125rem 0.75rem;
   border-radius: 0.25rem;
   background-color: rgb(255,255,255);
@@ -1775,6 +1776,7 @@ exports[`renders <EditForm /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;

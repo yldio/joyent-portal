@@ -21,11 +21,9 @@ exports[`renders <Menu links /> without throwing 1`] = `
 .c6 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c6:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c1 {
@@ -57,15 +55,23 @@ exports[`renders <Menu links /> without throwing 1`] = `
   position: relative;
 }
 
-.c5.active:after {
+.c5:after {
   width: 100%;
   height: 0.0625rem;
-  background: rgb(73,73,73);
+  background: rgb(216,216,216);
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 2;
+}
+
+.c5.active:after {
+  background: rgb(73,73,73);
+}
+
+.c5.active {
+  font-weight: 600;
 }
 
 .c3 {

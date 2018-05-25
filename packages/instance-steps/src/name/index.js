@@ -45,10 +45,6 @@ const RandomizeIcon = styled(BaseRandomizeIcon)`
   width: ${remcalc(16)};
 `;
 
-const Form = styled.form`
-  margin-bottom: 0;
-`;
-
 const NameContainer = ({
   history,
   randomizable = false,
@@ -86,7 +82,7 @@ const NameContainer = ({
             keepDirtyOnReinitialize
           >
             {({ invalid }) => (
-              <Form onSubmit={() => history.push(next)}>
+              <form onSubmit={() => history.push(next)}>
                 <FormGroup id="input-name" name="name" fluid field={Field}>
                   <FormLabel>Instance name</FormLabel>
                   <Margin top="0.5">
@@ -159,7 +155,7 @@ const NameContainer = ({
                     Next
                   </Button>
                 </Margin>
-              </Form>
+              </form>
             )}
           </ReduxForm>
         </Margin>

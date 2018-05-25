@@ -17,7 +17,7 @@ const color = props =>
   props.defaultValue ? colorWithDefaultValue(props) : colorWithDisabled(props);
 
 const height = props =>
-  props.multiple ? 'auto' : props.textarea ? remcalc(96) : remcalc(48);
+  props.multiple ? 'auto' : props.textarea ? remcalc(192) : remcalc(48);
 
 const paddingTop = props => (props.multiple ? remcalc(20) : remcalc(13));
 
@@ -106,6 +106,7 @@ const style = css`
   `};
 
   ${is('monospace')`
+    white-space: pre-wrap;
     font-family: ${props => props.theme.monoFont.families};
 
       &:disabled {
@@ -164,6 +165,10 @@ const style = css`
     width: ${remcalc(120)};
   `};
 
+  ${is('borderless')`
+    border: none;
+  `};
+
   ${is('success')`
     border-color: ${props => props.theme.greenDark}
   `};
@@ -198,6 +203,14 @@ const style = css`
     font-weight: ${props => props.theme.font.weight.semibold};
     text-align: center;
     border-radius: 0;
+  `};
+
+  ${is('white')`
+    color: ${props => props.theme.white};
+  `};
+
+  ${is('dark')`
+    background: ${props => props.theme.greyDarker};
   `};
 `;
 

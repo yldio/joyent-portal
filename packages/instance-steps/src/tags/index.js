@@ -223,4 +223,4 @@ export default compose(
       ]);
     }
   }))
-)(withTheme(({ ...rest }) => <Metadata {...rest} />));
+)(withTheme(({ ...rest }) => <TagsContainer {...rest} />));

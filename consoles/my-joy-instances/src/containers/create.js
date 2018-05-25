@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Margin, Padding } from 'styled-components-spacing';
 import { graphql, compose } from 'react-apollo';
 import ReduxForm from 'declarative-redux-form';
 import { connect } from 'react-redux';
 import { SubmissionError, destroy } from 'redux-form';
 import { set, destroyAll } from 'react-redux-values';
+import Flex, { FlexItem } from 'styled-flex-component';
 import intercept from 'apr-intercept';
 import get from 'lodash.get';
-
-import { H3, ViewContainer, Button } from 'joyent-ui-toolkit';
-import { Provider as ResourceSteps } from 'joyent-ui-resource-step';
+import styled from 'styled-components';
 
 import {
   Name,
@@ -22,14 +21,20 @@ import {
   Firewall,
   CNS,
   Affinity,
-  generatePayload
+  generatePayload,
+  Footer
 } from 'joyent-ui-instance-steps';
 
-import { Forms } from '@root/constants';
+import { Provider as ResourceSteps } from 'joyent-ui-resource-step';
+import { Anchor, H3, ViewContainer, Button } from 'joyent-ui-toolkit';
+
+import { Forms, Values } from '@root/constants';
 import parseError from '@state/parse-error';
 import CreateInstanceMutation from '@graphql/create-instance.gql';
 
 const { IC_F } = Forms;
+const { IC_SHOW_CLI } = Values;
+
 const names = {
   name: 'IC_NAME',
   image: 'IC_IMAGE',
@@ -86,7 +91,16 @@ class CreateInstance extends Component {
   };
 
   render() {
-    const { match, steps, handleDefocus, handleSubmit, disabled } = this.props;
+    const {
+      match,
+      steps,
+      showCli = false,
+      handleDefocus,
+      handleToggleShowCli,
+      handleSubmit,
+      disabled
+    } = this.props;
+
     const { params } = match;
     const { step } = params;
 
@@ -101,6 +115,16 @@ class CreateInstance extends Component {
       cns,
       affinity
     } = steps;
+
+    const Mask = styled.div`
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.25);
+      position: absolute;
+      display: ${showCli ? 'block' : 'none'};
+    `;
 
     return (
       <ViewContainer main>
@@ -218,20 +242,43 @@ class CreateInstance extends Component {
             </Margin>
           </ResourceSteps>
           <Margin bottom="5">
-            <ReduxForm form={IC_F} onSubmit={handleSubmit}>
-              {({ handleSubmit, submitting }) => (
-                <form onSubmit={handleSubmit}>
-                  <Button
+            <Flex alignCenter>
+              <FlexItem>
+                <ReduxForm form={IC_F} onSubmit={handleSubmit}>
+                  {({ handleSubmit, submitting }) => (
+                    <form onSubmit={handleSubmit}>
+                      <Button
+                        disabled={disabled || !this.isFormValid()}
+                        loading={submitting}
+                      >
+                        Deploy
+                      </Button>
+                    </form>
+                  )}
+                </ReduxForm>
+              </FlexItem>
+              <FlexItem>
+                <Margin left={3}>
+                  <Anchor
                     disabled={disabled || !this.isFormValid()}
-                    loading={submitting}
+                    onClick={() => handleToggleShowCli(!showCli)}
                   >
-                    Deploy
-                  </Button>
-                </form>
-              )}
-            </ReduxForm>
+                    View CLI Details
+                  </Anchor>
+                </Margin>
+              </FlexItem>
+            </Flex>
           </Margin>
         </Padding>
+        {showCli ? (
+          <Fragment>
+            <Footer
+              getData={() => generatePayload(steps)}
+              onCloseCli={() => handleToggleShowCli(!showCli)}
+            />
+            <Mask onClick={() => handleToggleShowCli(!showCli)} />
+          </Fragment>
+        ) : null}
       </ViewContainer>
     );
   }
@@ -254,6 +301,7 @@ export default compose(
     };
 
     const error = get(form, `${IC_F}.error`, null);
+    const showCli = Boolean(values[IC_SHOW_CLI]);
 
     // Maybe re-use saved to only write the rule once
     const disabled = !(
@@ -270,6 +318,7 @@ export default compose(
 
     return {
       disabled,
+      showCli,
       forms: Object.keys(form), // improve this
       error,
       steps
@@ -277,10 +326,12 @@ export default compose(
   }),
   connect(null, (dispatch, { steps = {}, forms, history, createInstance }) => {
     return {
+      handleToggleShowCli: value => {
+        return dispatch(set({ name: IC_SHOW_CLI, value }));
+      },
       handleDefocus: name => value => {
         return dispatch(set({ name: names[name], value }));
       },
-
       handleSubmit: async () => {
         const [err, res] = await intercept(
           createInstance({

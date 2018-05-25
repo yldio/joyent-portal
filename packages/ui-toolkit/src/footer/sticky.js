@@ -10,7 +10,10 @@ const Container = styled(ViewContainer)`
   flex-wrap: nowrap;
   align-content: stretch;
   align-items: stretch;
-  background: ${props => props.theme.background};
+  background: ${props =>
+    props.fill
+      ? props.theme[props.fill] ? props.theme[props.fill] : props.fill
+      : props.theme.background};
 `;
 
 const Footer = styled.div`
@@ -20,14 +23,21 @@ const Footer = styled.div`
   align-content: stretch;
   align-items: stretch;
   background-color: ${props =>
-    props.fill ? props.theme[props.fill] : 'rgba(241, 241, 241, 1)'};
+    props.fill
+      ? props.theme[props.fill] ? props.theme[props.fill] : props.fill
+      : 'rgba(241, 241, 241, 1)'};
   border-top: ${remcalc(1)} solid ${props => props.theme.grey};
-  max-height: ${remcalc(53)};
-  min-height: ${remcalc(53)};
   line-height: ${remcalc(25)};
   height: ${remcalc(70)};
-  max-height: ${remcalc(70)};
   z-index: 1;
+
+  ${is('auto')`
+    height: auto;
+  `};
+
+  ${is('borderless')`
+    border: none;
+  `};
 
   ${is('fixed')`
     position: fixed;
@@ -38,10 +48,16 @@ const Footer = styled.div`
   ${is('bottom', 'fixed')`
     bottom: 0;
   `};
+
+  ${is('top', 'fixed')`
+    top: 0;
+  `};
 `;
 
-export default ({ children, fluid, ...rest }) => (
+export default ({ children, fluid, innerFill, ...rest }) => (
   <Footer {...rest}>
-    <Container fluid={fluid}>{children}</Container>
+    <Container fill={innerFill || rest.fill} fluid={fluid}>
+      {children}
+    </Container>
   </Footer>
 );

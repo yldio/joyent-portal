@@ -12,7 +12,7 @@ export const H1 = styled(NH1)`
   line-height: ${remcalc(45)};
   font-style: normal;
   font-stretch: normal;
-  font-weight: normal;
+  font-weight: ${props => props.theme.font.weight.normal};
   margin: 0;
 
   ${is('inline')`
@@ -36,7 +36,7 @@ export const H1 = styled(NH1)`
 export const H2 = styled.h2`
   margin: 0;
   color: ${props => props.theme.text};
-  font-weight: normal;
+  font-weight: ${props => props.theme.font.weight.normal};
   line-height: ${remcalc(30)};
   font-size: ${remcalc(24)};
 
@@ -61,7 +61,7 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
   margin: 0;
   color: ${props => props.theme.text};
-  font-weight: normal;
+  font-weight: ${props => props.theme.font.weight.normal};
   line-height: ${remcalc(26)};
   font-size: ${remcalc(21)};
 

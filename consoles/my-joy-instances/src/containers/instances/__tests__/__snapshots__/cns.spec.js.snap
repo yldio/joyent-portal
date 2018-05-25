@@ -66,15 +66,15 @@ exports[`renders <Cns /> without throwing 1`] = `
   margin-bottom: 1.875rem;
 }
 
-.c28 {
+.c27 {
   margin-top: 0.1875rem;
 }
 
-.c30 {
+.c29 {
   margin-left: 0.75rem;
 }
 
-.c36 {
+.c35 {
   margin-left: 0.375rem;
 }
 
@@ -82,7 +82,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   padding: 1.875rem;
 }
 
-.c34 {
+.c33 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -94,18 +94,18 @@ exports[`renders <Cns /> without throwing 1`] = `
   appearance: button;
 }
 
-.c34::-moz-focus-inner,
-.c34[type='button']::-moz-focus-inner,
-.c34[type='reset']::-moz-focus-inner,
-.c34[type='submit']::-moz-focus-inner {
+.c33::-moz-focus-inner,
+.c33[type='button']::-moz-focus-inner,
+.c33[type='reset']::-moz-focus-inner,
+.c33[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c34:-moz-focusring,
-.c34[type='button']:-moz-focusring,
-.c34[type='reset']:-moz-focusring,
-.c34[type='submit']:-moz-focusring {
+.c33:-moz-focusring,
+.c33[type='button']:-moz-focusring,
+.c33[type='reset']:-moz-focusring,
+.c33[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
@@ -117,15 +117,15 @@ exports[`renders <Cns /> without throwing 1`] = `
   margin: 0;
 }
 
-.c33 {
+.c32 {
   min-width: 7.5rem;
 }
 
-.c32 {
+.c31 {
   display: inline-block;
 }
 
-.c31 {
+.c30 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -164,7 +164,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c31:focus {
+.c30:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -172,26 +172,26 @@ exports[`renders <Cns /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c30:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c30:active,
+.c30:active:hover,
+.c30:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c30[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27 {
+.c26 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -211,7 +211,7 @@ exports[`renders <Cns /> without throwing 1`] = `
 .c13 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -260,7 +260,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c25 {
+.c24 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -295,7 +295,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c22 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -322,7 +322,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c24 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -342,7 +342,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c35 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -366,7 +366,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   align-items: center;
 }
 
-.c23 {
+.c22 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -383,7 +383,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   display: block;
 }
 
-.c29 {
+.c28 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -405,52 +405,52 @@ exports[`renders <Cns /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c29:focus {
+.c28:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c29::-webkit-input-placeholder {
+.c28::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29::-moz-placeholder {
+.c28::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:-ms-input-placeholder {
+.c28:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:invalid {
+.c28:invalid {
   box-shadow: none;
 }
 
-.c29:disabled {
+.c28:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c29:disabled::-webkit-input-placeholder {
+.c28:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:disabled::-moz-placeholder {
+.c28:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:disabled:-ms-input-placeholder {
+.c28:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c26 {
+.c25 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c37 {
+.c36 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -463,27 +463,27 @@ exports[`renders <Cns /> without throwing 1`] = `
   align-items: center;
 }
 
-.c39 {
+.c38 {
   display: none;
 }
 
-.c39:checked + label {
+.c38:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c39:checked + label:after {
+.c38:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c39:checked + label:active {
+.c38:checked + label:active {
   box-shadow: none;
 }
 
-.c40 {
+.c39 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -502,24 +502,24 @@ exports[`renders <Cns /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c40::selection {
+.c39::selection {
   background: none;
 }
 
-.c40:active {
+.c39:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c40:hover {
+.c39:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c40:hover:after {
+.c39:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c40:after,
-.c40:before {
+.c39:after,
+.c39:before {
   position: relative;
   display: block;
   content: '';
@@ -527,7 +527,7 @@ exports[`renders <Cns /> without throwing 1`] = `
   height: 100%;
 }
 
-.c40:after {
+.c39:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -539,11 +539,11 @@ exports[`renders <Cns /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c40:active {
+.c39:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c40:before {
+.c39:before {
   display: none;
 }
 
@@ -555,17 +555,13 @@ exports[`renders <Cns /> without throwing 1`] = `
   margin: 0;
 }
 
-.c38 {
+.c37 {
   margin: 0 6px;
 }
 
 .c17 {
   margin-left: 0;
   margin-right: 0;
-}
-
-.c21 {
-  margin-bottom: 0;
 }
 
 .c5 {
@@ -757,36 +753,35 @@ exports[`renders <Cns /> without throwing 1`] = `
                 className="c2"
               >
                 <form
-                  className="c21"
                   onSubmit={undefined}
                 >
                   <div
-                    className="c22"
+                    className="c21"
                     wrap={true}
                   >
                     <div
-                      className="c23"
+                      className="c22"
                     >
                       <div
-                        className="c24"
+                        className="c23"
                       >
                         <div
-                          className="c25"
+                          className="c24"
                           name="name"
                           role="group"
                           style={undefined}
                         >
                           <label
-                            className="c26 c27"
+                            className="c25 c26"
                             htmlFor="k"
                           >
                             Attach to new CNS service name
                           </label>
                           <div
-                            className="c28"
+                            className="c27"
                           >
                             <input
-                              className="c29"
+                              className="c28"
                               disabled={false}
                               id="k"
                               onBlur={null}
@@ -797,13 +792,13 @@ exports[`renders <Cns /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c23"
+                      className="c22"
                     >
                       <div
-                        className="c30"
+                        className="c29"
                       >
                         <button
-                          className="c31 c32 c33 c34"
+                          className="c30 c31 c32 c33"
                           data-ui-button="true"
                           disabled={undefined}
                           href=""
@@ -827,30 +822,30 @@ exports[`renders <Cns /> without throwing 1`] = `
           className="c2"
         >
           <div
-            className="c25"
+            className="c24"
             name="cns-enabled"
             role="group"
             style={undefined}
           >
             <div
-              className="c35"
+              className="c34"
             >
               <label
-                className="c26 c27"
+                className="c25 c26"
                 disabled={false}
                 htmlFor="l"
               >
                 Disabled CNS
               </label>
               <div
-                className="c36"
+                className="c35"
               >
                 <div
-                  className="c37"
+                  className="c36"
                 >
                   <input
                     checked={true}
-                    className="c38 c39"
+                    className="c37 c38"
                     disabled={false}
                     id="l"
                     onBlur={undefined}
@@ -859,7 +854,7 @@ exports[`renders <Cns /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c38 c40"
+                    className="c37 c39"
                     disabled={false}
                     htmlFor="l"
                     id="l"
@@ -868,7 +863,7 @@ exports[`renders <Cns /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c38 c26 c27"
+                    className="c37 c25 c26"
                     disabled={false}
                     htmlFor="l"
                     id="l"
@@ -1442,11 +1437,11 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c40 {
+.c39 {
   margin-left: 0.75rem;
 }
 
-.c48 {
+.c47 {
   margin-left: 0.375rem;
 }
 
@@ -1459,12 +1454,12 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   margin-bottom: 0.1875rem;
 }
 
-.c45 {
+.c44 {
   margin-top: 0.1875rem;
   margin-bottom: 0.375rem;
 }
 
-.c46 {
+.c45 {
   margin-bottom: 0rem;
 }
 
@@ -1476,7 +1471,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   font-size: 80%;
 }
 
-.c44 {
+.c43 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1488,18 +1483,18 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   appearance: button;
 }
 
-.c44::-moz-focus-inner,
-.c44[type='button']::-moz-focus-inner,
-.c44[type='reset']::-moz-focus-inner,
-.c44[type='submit']::-moz-focus-inner {
+.c43::-moz-focus-inner,
+.c43[type='button']::-moz-focus-inner,
+.c43[type='reset']::-moz-focus-inner,
+.c43[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c44:-moz-focusring,
-.c44[type='button']:-moz-focusring,
-.c44[type='reset']:-moz-focusring,
-.c44[type='submit']:-moz-focusring {
+.c43:-moz-focusring,
+.c43[type='button']:-moz-focusring,
+.c43[type='reset']:-moz-focusring,
+.c43[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
@@ -1511,15 +1506,15 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   margin: 0;
 }
 
-.c43 {
+.c42 {
   min-width: 7.5rem;
 }
 
-.c42 {
+.c41 {
   display: inline-block;
 }
 
-.c41 {
+.c40 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1558,7 +1553,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c41:focus {
+.c40:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1566,26 +1561,26 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c41:hover {
+.c40:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c41:active,
-.c41:active:hover,
-.c41:active:focus {
+.c40:active,
+.c40:active:hover,
+.c40:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c41[disabled] {
+.c40[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c38 {
+.c37 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1605,7 +1600,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
 .c13 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -1669,7 +1664,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c36 {
+.c35 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -1704,7 +1699,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c35 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1751,7 +1746,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c47 {
+.c46 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1792,7 +1787,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   display: block;
 }
 
-.c39 {
+.c38 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -1814,42 +1809,42 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c39:focus {
+.c38:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c39::-webkit-input-placeholder {
+.c38::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c39::-moz-placeholder {
+.c38::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c39:-ms-input-placeholder {
+.c38:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c39:invalid {
+.c38:invalid {
   box-shadow: none;
 }
 
-.c39:disabled {
+.c38:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c39:disabled::-webkit-input-placeholder {
+.c38:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c39:disabled::-moz-placeholder {
+.c38:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c39:disabled:-ms-input-placeholder {
+.c38:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
@@ -1874,6 +1869,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -1946,13 +1942,13 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   color: rgb(73,73,73);
 }
 
-.c37 {
+.c36 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c49 {
+.c48 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -1965,27 +1961,27 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   align-items: center;
 }
 
-.c51 {
+.c50 {
   display: none;
 }
 
-.c51:checked + label {
+.c50:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c51:checked + label:after {
+.c50:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c51:checked + label:active {
+.c50:checked + label:active {
   box-shadow: none;
 }
 
-.c52 {
+.c51 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -2004,24 +2000,24 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c52::selection {
+.c51::selection {
   background: none;
 }
 
-.c52:active {
+.c51:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c52:hover {
+.c51:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c52:hover:after {
+.c51:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c52:after,
-.c52:before {
+.c51:after,
+.c51:before {
   position: relative;
   display: block;
   content: '';
@@ -2029,7 +2025,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   height: 100%;
 }
 
-.c52:after {
+.c51:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -2041,11 +2037,11 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c52:active {
+.c51:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c52:before {
+.c51:before {
   display: none;
 }
 
@@ -2087,17 +2083,13 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
   margin: 0;
 }
 
-.c50 {
+.c49 {
   margin: 0 6px;
 }
 
 .c30 {
   margin-left: 0;
   margin-right: 0;
-}
-
-.c34 {
-  margin-bottom: 0;
 }
 
 .c5 {
@@ -2519,11 +2511,10 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                 className="c2"
               >
                 <form
-                  className="c34"
                   onSubmit={undefined}
                 >
                   <div
-                    className="c35"
+                    className="c34"
                     wrap={true}
                   >
                     <div
@@ -2533,13 +2524,13 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                         className="c17"
                       >
                         <div
-                          className="c36"
+                          className="c35"
                           name="name"
                           role="group"
                           style={undefined}
                         >
                           <label
-                            className="c37 c38"
+                            className="c36 c37"
                             htmlFor="u"
                           >
                             Attach to new CNS service name
@@ -2548,7 +2539,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                             className="c24"
                           >
                             <input
-                              className="c39"
+                              className="c38"
                               disabled={false}
                               id="u"
                               onBlur={null}
@@ -2562,10 +2553,10 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                       className="c21"
                     >
                       <div
-                        className="c40"
+                        className="c39"
                       >
                         <button
-                          className="c41 c42 c43 c44"
+                          className="c40 c41 c42 c43"
                           data-ui-button="true"
                           disabled={undefined}
                           href=""
@@ -2632,7 +2623,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c45"
+                      className="c44"
                     >
                       <div
                         className="c3"
@@ -2689,7 +2680,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c45"
+                      className="c44"
                     >
                       <div
                         className="c3"
@@ -2804,7 +2795,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c46"
+                    className="c45"
                   >
                     <div
                       className="c17"
@@ -2852,7 +2843,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c45"
+                      className="c44"
                     >
                       <div
                         className="c3"
@@ -2909,7 +2900,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c45"
+                      className="c44"
                     >
                       <div
                         className="c3"
@@ -3036,30 +3027,30 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
           className="c2"
         >
           <div
-            className="c36"
+            className="c35"
             name="cns-enabled"
             role="group"
             style={undefined}
           >
             <div
-              className="c47"
+              className="c46"
             >
               <label
-                className="c37 c38"
+                className="c36 c37"
                 disabled={false}
                 htmlFor="v"
               >
                 Disabled CNS
               </label>
               <div
-                className="c48"
+                className="c47"
               >
                 <div
-                  className="c49"
+                  className="c48"
                 >
                   <input
                     checked={true}
-                    className="c50 c51"
+                    className="c49 c50"
                     disabled={false}
                     id="v"
                     onBlur={undefined}
@@ -3068,7 +3059,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c50 c52"
+                    className="c49 c51"
                     disabled={false}
                     htmlFor="v"
                     id="v"
@@ -3077,7 +3068,7 @@ exports[`renders <Cns hostnames /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c50 c37 c38"
+                    className="c49 c36 c37"
                     disabled={false}
                     htmlFor="v"
                     id="v"
@@ -3503,11 +3494,11 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   margin-bottom: 1.875rem;
 }
 
-.c33 {
+.c32 {
   margin-top: 0.1875rem;
 }
 
-.c35 {
+.c34 {
   margin-left: 0.75rem;
 }
 
@@ -3515,7 +3506,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   padding: 1.875rem;
 }
 
-.c39 {
+.c38 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3527,18 +3518,18 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   appearance: button;
 }
 
-.c39::-moz-focus-inner,
-.c39[type='button']::-moz-focus-inner,
-.c39[type='reset']::-moz-focus-inner,
-.c39[type='submit']::-moz-focus-inner {
+.c38::-moz-focus-inner,
+.c38[type='button']::-moz-focus-inner,
+.c38[type='reset']::-moz-focus-inner,
+.c38[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c39:-moz-focusring,
-.c39[type='button']:-moz-focusring,
-.c39[type='reset']:-moz-focusring,
-.c39[type='submit']:-moz-focusring {
+.c38:-moz-focusring,
+.c38[type='button']:-moz-focusring,
+.c38[type='reset']:-moz-focusring,
+.c38[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
@@ -3550,15 +3541,15 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c38 {
+.c37 {
   min-width: 7.5rem;
 }
 
-.c37 {
+.c36 {
   display: inline-block;
 }
 
-.c36 {
+.c35 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3597,7 +3588,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c36:focus {
+.c35:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3605,26 +3596,26 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c36:hover {
+.c35:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c36:active,
-.c36:active:hover,
-.c36:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c36[disabled] {
+.c35[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c32 {
+.c31 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -3644,7 +3635,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
 .c18 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -3701,7 +3692,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c30 {
+.c29 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -3736,7 +3727,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c27 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3763,7 +3754,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c29 {
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3783,7 +3774,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c28 {
+.c27 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -3800,7 +3791,7 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   display: block;
 }
 
-.c34 {
+.c33 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -3822,46 +3813,46 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c34:focus {
+.c33:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c34::-webkit-input-placeholder {
+.c33::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34::-moz-placeholder {
+.c33::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:-ms-input-placeholder {
+.c33:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:invalid {
+.c33:invalid {
   box-shadow: none;
 }
 
-.c34:disabled {
+.c33:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c34:disabled::-webkit-input-placeholder {
+.c33:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:disabled::-moz-placeholder {
+.c33:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:disabled:-ms-input-placeholder {
+.c33:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31 {
+.c30 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
@@ -3907,10 +3898,6 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
 .c22 {
   margin-left: 0;
   margin-right: 0;
-}
-
-.c26 {
-  margin-bottom: 0;
 }
 
 .c5 {
@@ -4127,36 +4114,35 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
                 className="c2"
               >
                 <form
-                  className="c26"
                   onSubmit={undefined}
                 >
                   <div
-                    className="c27"
+                    className="c26"
                     wrap={true}
                   >
                     <div
-                      className="c28"
+                      className="c27"
                     >
                       <div
-                        className="c29"
+                        className="c28"
                       >
                         <div
-                          className="c30"
+                          className="c29"
                           name="name"
                           role="group"
                           style={undefined}
                         >
                           <label
-                            className="c31 c32"
+                            className="c30 c31"
                             htmlFor="m"
                           >
                             Attach to new CNS service name
                           </label>
                           <div
-                            className="c33"
+                            className="c32"
                           >
                             <input
-                              className="c34"
+                              className="c33"
                               disabled={false}
                               id="m"
                               onBlur={null}
@@ -4167,13 +4153,13 @@ exports[`renders <Cns loadingError /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c28"
+                      className="c27"
                     >
                       <div
-                        className="c35"
+                        className="c34"
                       >
                         <button
-                          className="c36 c37 c38 c39"
+                          className="c35 c36 c37 c38"
                           data-ui-button="true"
                           disabled={undefined}
                           href=""
@@ -4275,11 +4261,11 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c40 {
+.c39 {
   margin-left: 0.75rem;
 }
 
-.c54 {
+.c53 {
   margin-left: 0.375rem;
 }
 
@@ -4292,21 +4278,21 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   margin-bottom: 0.1875rem;
 }
 
-.c45 {
+.c44 {
   margin-top: 0.375rem;
 }
 
-.c48 {
+.c47 {
   margin-right: 0.375rem;
   margin-bottom: 0.375rem;
 }
 
-.c50 {
+.c49 {
   margin-top: 0.1875rem;
   margin-bottom: 0.375rem;
 }
 
-.c51 {
+.c50 {
   margin-bottom: 0rem;
 }
 
@@ -4318,7 +4304,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   font-size: 80%;
 }
 
-.c44 {
+.c43 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -4330,18 +4316,18 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   appearance: button;
 }
 
-.c44::-moz-focus-inner,
-.c44[type='button']::-moz-focus-inner,
-.c44[type='reset']::-moz-focus-inner,
-.c44[type='submit']::-moz-focus-inner {
+.c43::-moz-focus-inner,
+.c43[type='button']::-moz-focus-inner,
+.c43[type='reset']::-moz-focus-inner,
+.c43[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c44:-moz-focusring,
-.c44[type='button']:-moz-focusring,
-.c44[type='reset']:-moz-focusring,
-.c44[type='submit']:-moz-focusring {
+.c43:-moz-focusring,
+.c43[type='button']:-moz-focusring,
+.c43[type='reset']:-moz-focusring,
+.c43[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
@@ -4353,15 +4339,15 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   margin: 0;
 }
 
-.c43 {
+.c42 {
   min-width: 7.5rem;
 }
 
-.c42 {
+.c41 {
   display: inline-block;
 }
 
-.c41 {
+.c40 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4400,7 +4386,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c41:focus {
+.c40:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4408,26 +4394,26 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c41:hover {
+.c40:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c41:active,
-.c41:active:hover,
-.c41:active:focus {
+.c40:active,
+.c40:active:hover,
+.c40:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c41[disabled] {
+.c40[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c38 {
+.c37 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -4447,7 +4433,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
 .c13 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -4511,7 +4497,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c36 {
+.c35 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -4546,7 +4532,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c35 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4593,7 +4579,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c52 {
+.c51 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4655,6 +4641,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -4727,7 +4714,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   color: rgb(73,73,73);
 }
 
-.c39 {
+.c38 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -4752,71 +4739,71 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c39:focus {
+.c38:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c39::-webkit-input-placeholder {
+.c38::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c39::-moz-placeholder {
+.c38::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c39:-ms-input-placeholder {
+.c38:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c39:invalid {
+.c38:invalid {
   box-shadow: none;
 }
 
-.c39::-webkit-input-placeholder {
+.c38::-webkit-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c39::-moz-placeholder {
+.c38::-moz-placeholder {
   color: rgb(216,216,216);
 }
 
-.c39:-ms-input-placeholder {
+.c38:-ms-input-placeholder {
   color: rgb(216,216,216);
 }
 
-.c39:disabled {
+.c38:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c39:disabled::-webkit-input-placeholder {
+.c38:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c39:disabled::-moz-placeholder {
+.c38:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c39:disabled:-ms-input-placeholder {
+.c38:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c37 {
+.c36 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c53 {
+.c52 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   color: rgb(216,216,216);
 }
 
-.c55 {
+.c54 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -4829,36 +4816,36 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   align-items: center;
 }
 
-.c57 {
+.c56 {
   display: none;
 }
 
-.c57:checked + label {
+.c56:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c57:checked + label:after {
+.c56:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c57:checked + label:active {
+.c56:checked + label:active {
   box-shadow: none;
 }
 
-.c57:checked + label {
+.c56:checked + label {
   background: rgb(250,250,250);
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c57:checked + label:after {
+.c56:checked + label:after {
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c58 {
+.c57 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -4878,24 +4865,24 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   cursor: not-allowed;
 }
 
-.c58::selection {
+.c57::selection {
   background: none;
 }
 
-.c58:active {
+.c57:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c58:hover {
+.c57:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c58:hover:after {
+.c57:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c58:after,
-.c58:before {
+.c57:after,
+.c57:before {
   position: relative;
   display: block;
   content: '';
@@ -4903,7 +4890,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   height: 100%;
 }
 
-.c58:after {
+.c57:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -4915,36 +4902,36 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c58:active {
+.c57:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c58:before {
+.c57:before {
   display: none;
 }
 
-.c58:active {
+.c57:active {
   box-shadow: none;
 }
 
-.c58:active:after {
+.c57:active:after {
   padding-right: 0;
 }
 
-.c58:before {
+.c57:before {
   cursor: not-allowed;
 }
 
-.c58:after {
+.c57:after {
   cursor: not-allowed;
   background: rgb(230,230,230);
 }
 
-.c58:hover {
+.c57:hover {
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c58:hover:after {
+.c57:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
@@ -4972,7 +4959,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c49 {
+.c48 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -4995,7 +4982,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   border: 0.0625rem solid rgb(45,56,132);
 }
 
-.c47 {
+.c46 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -5008,7 +4995,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c46 {
+.c45 {
   margin-bottom: -0.375rem;
 }
 
@@ -5026,17 +5013,13 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
   margin: 0;
 }
 
-.c56 {
+.c55 {
   margin: 0 6px;
 }
 
 .c30 {
   margin-left: 0;
   margin-right: 0;
-}
-
-.c34 {
-  margin-bottom: 0;
 }
 
 .c5 {
@@ -5458,11 +5441,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                 className="c2"
               >
                 <form
-                  className="c34"
                   onSubmit={undefined}
                 >
                   <div
-                    className="c35"
+                    className="c34"
                     wrap={true}
                   >
                     <div
@@ -5472,13 +5454,13 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                         className="c17"
                       >
                         <div
-                          className="c36"
+                          className="c35"
                           name="name"
                           role="group"
                           style={undefined}
                         >
                           <label
-                            className="c37 c38"
+                            className="c36 c37"
                             htmlFor="p"
                           >
                             Attach to new CNS service name
@@ -5487,7 +5469,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                             className="c24"
                           >
                             <input
-                              className="c39"
+                              className="c38"
                               disabled={true}
                               id="p"
                               onBlur={null}
@@ -5501,10 +5483,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       className="c21"
                     >
                       <div
-                        className="c40"
+                        className="c39"
                       >
                         <button
-                          className="c41 c42 c43 c44"
+                          className="c40 c41 c42 c43"
                           data-ui-button="true"
                           disabled={undefined}
                           href=""
@@ -5521,22 +5503,22 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                 className="c2"
               >
                 <label
-                  className="c37 c38"
+                  className="c36 c37"
                   htmlFor=""
                 >
                   Existing CNS service name(s)
                 </label>
                 <div
-                  className="c45"
+                  className="c44"
                 >
                   <ul
-                    className="c46 c47"
+                    className="c45 c46"
                   >
                     <div
-                      className="c48"
+                      className="c47"
                     >
                       <li
-                        className="c49"
+                        className="c48"
                         fill="rgba(66, 134, 244, 0.1)"
                         id="cns-tag-0"
                       >
@@ -5544,10 +5526,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       </li>
                     </div>
                     <div
-                      className="c48"
+                      className="c47"
                     >
                       <li
-                        className="c49"
+                        className="c48"
                         fill="rgba(66, 134, 244, 0.1)"
                         id="cns-tag-1"
                       >
@@ -5555,10 +5537,10 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       </li>
                     </div>
                     <div
-                      className="c48"
+                      className="c47"
                     >
                       <li
-                        className="c49"
+                        className="c48"
                         fill="rgba(66, 134, 244, 0.1)"
                         id="cns-tag-2"
                       >
@@ -5622,7 +5604,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c50"
+                      className="c49"
                     >
                       <div
                         className="c3"
@@ -5679,7 +5661,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c50"
+                      className="c49"
                     >
                       <div
                         className="c3"
@@ -5794,7 +5776,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                     </div>
                   </div>
                   <div
-                    className="c51"
+                    className="c50"
                   >
                     <div
                       className="c17"
@@ -5842,7 +5824,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c50"
+                      className="c49"
                     >
                       <div
                         className="c3"
@@ -5899,7 +5881,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c50"
+                      className="c49"
                     >
                       <div
                         className="c3"
@@ -6026,30 +6008,30 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
           className="c2"
         >
           <div
-            className="c36"
+            className="c35"
             name="cns-enabled"
             role="group"
             style={undefined}
           >
             <div
-              className="c52"
+              className="c51"
             >
               <label
-                className="c53 c38"
+                className="c52 c37"
                 disabled={true}
                 htmlFor="q"
               >
                 Disabled CNS
               </label>
               <div
-                className="c54"
+                className="c53"
               >
                 <div
-                  className="c55"
+                  className="c54"
                 >
                   <input
                     checked={true}
-                    className="c56 c57"
+                    className="c55 c56"
                     disabled={true}
                     id="q"
                     onBlur={undefined}
@@ -6058,7 +6040,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c56 c58"
+                    className="c55 c57"
                     disabled={true}
                     htmlFor="q"
                     id="q"
@@ -6067,7 +6049,7 @@ exports[`renders <Cns mutating /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c56 c53 c38"
+                    className="c55 c52 c37"
                     disabled={true}
                     htmlFor="q"
                     id="q"
@@ -6154,15 +6136,15 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   margin-bottom: 1.875rem;
 }
 
-.c33 {
+.c32 {
   margin-top: 0.1875rem;
 }
 
-.c35 {
+.c34 {
   margin-left: 0.75rem;
 }
 
-.c41 {
+.c40 {
   margin-left: 0.375rem;
 }
 
@@ -6170,7 +6152,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   padding: 1.875rem;
 }
 
-.c39 {
+.c38 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -6182,18 +6164,18 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   appearance: button;
 }
 
-.c39::-moz-focus-inner,
-.c39[type='button']::-moz-focus-inner,
-.c39[type='reset']::-moz-focus-inner,
-.c39[type='submit']::-moz-focus-inner {
+.c38::-moz-focus-inner,
+.c38[type='button']::-moz-focus-inner,
+.c38[type='reset']::-moz-focus-inner,
+.c38[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c39:-moz-focusring,
-.c39[type='button']:-moz-focusring,
-.c39[type='reset']:-moz-focusring,
-.c39[type='submit']:-moz-focusring {
+.c38:-moz-focusring,
+.c38[type='button']:-moz-focusring,
+.c38[type='reset']:-moz-focusring,
+.c38[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
@@ -6205,15 +6187,15 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c38 {
+.c37 {
   min-width: 7.5rem;
 }
 
-.c37 {
+.c36 {
   display: inline-block;
 }
 
-.c36 {
+.c35 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6252,7 +6234,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c36:focus {
+.c35:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6260,26 +6242,26 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c36:hover {
+.c35:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c36:active,
-.c36:active:hover,
-.c36:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c36[disabled] {
+.c35[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c32 {
+.c31 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -6299,7 +6281,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
 .c18 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -6356,7 +6338,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c30 {
+.c29 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -6391,7 +6373,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c27 {
+.c26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6418,7 +6400,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c29 {
+.c28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6438,7 +6420,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c40 {
+.c39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6462,7 +6444,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c28 {
+.c27 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -6479,7 +6461,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   display: block;
 }
 
-.c34 {
+.c33 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -6501,52 +6483,52 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c34:focus {
+.c33:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c34::-webkit-input-placeholder {
+.c33::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34::-moz-placeholder {
+.c33::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:-ms-input-placeholder {
+.c33:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:invalid {
+.c33:invalid {
   box-shadow: none;
 }
 
-.c34:disabled {
+.c33:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c34:disabled::-webkit-input-placeholder {
+.c33:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:disabled::-moz-placeholder {
+.c33:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:disabled:-ms-input-placeholder {
+.c33:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c31 {
+.c30 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c42 {
+.c41 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -6559,27 +6541,27 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   align-items: center;
 }
 
-.c44 {
+.c43 {
   display: none;
 }
 
-.c44:checked + label {
+.c43:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c44:checked + label:after {
+.c43:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c44:checked + label:active {
+.c43:checked + label:active {
   box-shadow: none;
 }
 
-.c45 {
+.c44 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -6598,24 +6580,24 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c45::selection {
+.c44::selection {
   background: none;
 }
 
-.c45:active {
+.c44:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c45:hover {
+.c44:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c45:hover:after {
+.c44:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c45:after,
-.c45:before {
+.c44:after,
+.c44:before {
   position: relative;
   display: block;
   content: '';
@@ -6623,7 +6605,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   height: 100%;
 }
 
-.c45:after {
+.c44:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -6635,11 +6617,11 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c45:active {
+.c44:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c45:before {
+.c44:before {
   display: none;
 }
 
@@ -6680,17 +6662,13 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
   margin: 0;
 }
 
-.c43 {
+.c42 {
   margin: 0 6px;
 }
 
 .c22 {
   margin-left: 0;
   margin-right: 0;
-}
-
-.c26 {
-  margin-bottom: 0;
 }
 
 .c5 {
@@ -6907,36 +6885,35 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                 className="c2"
               >
                 <form
-                  className="c26"
                   onSubmit={undefined}
                 >
                   <div
-                    className="c27"
+                    className="c26"
                     wrap={true}
                   >
                     <div
-                      className="c28"
+                      className="c27"
                     >
                       <div
-                        className="c29"
+                        className="c28"
                       >
                         <div
-                          className="c30"
+                          className="c29"
                           name="name"
                           role="group"
                           style={undefined}
                         >
                           <label
-                            className="c31 c32"
+                            className="c30 c31"
                             htmlFor="n"
                           >
                             Attach to new CNS service name
                           </label>
                           <div
-                            className="c33"
+                            className="c32"
                           >
                             <input
-                              className="c34"
+                              className="c33"
                               disabled={false}
                               id="n"
                               onBlur={null}
@@ -6947,13 +6924,13 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c28"
+                      className="c27"
                     >
                       <div
-                        className="c35"
+                        className="c34"
                       >
                         <button
-                          className="c36 c37 c38 c39"
+                          className="c35 c36 c37 c38"
                           data-ui-button="true"
                           disabled={undefined}
                           href=""
@@ -6977,30 +6954,30 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
           className="c2"
         >
           <div
-            className="c30"
+            className="c29"
             name="cns-enabled"
             role="group"
             style={undefined}
           >
             <div
-              className="c40"
+              className="c39"
             >
               <label
-                className="c31 c32"
+                className="c30 c31"
                 disabled={false}
                 htmlFor="o"
               >
                 Disabled CNS
               </label>
               <div
-                className="c41"
+                className="c40"
               >
                 <div
-                  className="c42"
+                  className="c41"
                 >
                   <input
                     checked={true}
-                    className="c43 c44"
+                    className="c42 c43"
                     disabled={false}
                     id="o"
                     onBlur={undefined}
@@ -7009,7 +6986,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c43 c45"
+                    className="c42 c44"
                     disabled={false}
                     htmlFor="o"
                     id="o"
@@ -7018,7 +6995,7 @@ exports[`renders <Cns mutationError /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c43 c31 c32"
+                    className="c42 c30 c31"
                     disabled={false}
                     htmlFor="o"
                     id="o"
@@ -7105,23 +7082,23 @@ exports[`renders <Cns services /> without throwing 1`] = `
   margin-bottom: 1.875rem;
 }
 
-.c28 {
+.c27 {
   margin-top: 0.1875rem;
 }
 
-.c30 {
+.c29 {
   margin-left: 0.75rem;
 }
 
-.c42 {
+.c41 {
   margin-left: 0.375rem;
 }
 
-.c35 {
+.c34 {
   margin-top: 0.375rem;
 }
 
-.c38 {
+.c37 {
   margin-right: 0.375rem;
   margin-bottom: 0.375rem;
 }
@@ -7130,7 +7107,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   padding: 1.875rem;
 }
 
-.c34 {
+.c33 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -7142,18 +7119,18 @@ exports[`renders <Cns services /> without throwing 1`] = `
   appearance: button;
 }
 
-.c34::-moz-focus-inner,
-.c34[type='button']::-moz-focus-inner,
-.c34[type='reset']::-moz-focus-inner,
-.c34[type='submit']::-moz-focus-inner {
+.c33::-moz-focus-inner,
+.c33[type='button']::-moz-focus-inner,
+.c33[type='reset']::-moz-focus-inner,
+.c33[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c34:-moz-focusring,
-.c34[type='button']:-moz-focusring,
-.c34[type='reset']:-moz-focusring,
-.c34[type='submit']:-moz-focusring {
+.c33:-moz-focusring,
+.c33[type='button']:-moz-focusring,
+.c33[type='reset']:-moz-focusring,
+.c33[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
@@ -7165,15 +7142,15 @@ exports[`renders <Cns services /> without throwing 1`] = `
   margin: 0;
 }
 
-.c33 {
+.c32 {
   min-width: 7.5rem;
 }
 
-.c32 {
+.c31 {
   display: inline-block;
 }
 
-.c31 {
+.c30 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -7212,7 +7189,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   border: solid 0.0625rem rgb(45,56,132);
 }
 
-.c31:focus {
+.c30:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7220,26 +7197,26 @@ exports[`renders <Cns services /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c30:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c30:active,
+.c30:active:hover,
+.c30:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c30[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27 {
+.c26 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -7259,7 +7236,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
 .c13 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -7308,7 +7285,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   background-color: transparent;
 }
 
-.c25 {
+.c24 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -7343,7 +7320,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   flex-direction: column;
 }
 
-.c22 {
+.c21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7370,7 +7347,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   align-items: flex-end;
 }
 
-.c24 {
+.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7390,7 +7367,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   align-content: stretch;
 }
 
-.c41 {
+.c40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7414,7 +7391,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   align-items: center;
 }
 
-.c23 {
+.c22 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -7431,7 +7408,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   display: block;
 }
 
-.c29 {
+.c28 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -7453,52 +7430,52 @@ exports[`renders <Cns services /> without throwing 1`] = `
   text-overflow: ellipsis;
 }
 
-.c29:focus {
+.c28:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c29::-webkit-input-placeholder {
+.c28::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29::-moz-placeholder {
+.c28::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:-ms-input-placeholder {
+.c28:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:invalid {
+.c28:invalid {
   box-shadow: none;
 }
 
-.c29:disabled {
+.c28:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c29:disabled::-webkit-input-placeholder {
+.c28:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:disabled::-moz-placeholder {
+.c28:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c29:disabled:-ms-input-placeholder {
+.c28:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c26 {
+.c25 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c43 {
+.c42 {
   position: relative;
   vertical-align: text-bottom;
   display: -webkit-box;
@@ -7511,27 +7488,27 @@ exports[`renders <Cns services /> without throwing 1`] = `
   align-items: center;
 }
 
-.c45 {
+.c44 {
   display: none;
 }
 
-.c45:checked + label {
+.c44:checked + label {
   background: #3B46CC;
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c45:checked + label:after {
+.c44:checked + label:after {
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c45:checked + label:active {
+.c44:checked + label:active {
   box-shadow: none;
 }
 
-.c46 {
+.c45 {
   outline: 0;
   display: block;
   width: 2.875rem;
@@ -7550,24 +7527,24 @@ exports[`renders <Cns services /> without throwing 1`] = `
   border: 0.0625rem solid rgb(216,216,216);
 }
 
-.c46::selection {
+.c45::selection {
   background: none;
 }
 
-.c46:active {
+.c45:active {
   box-shadow: inset 0 0 0 1.5rem rgb(216,216,216);
 }
 
-.c46:hover {
+.c45:hover {
   border: 0.0625rem solid rgb(59,70,204);
 }
 
-.c46:hover:after {
+.c45:hover:after {
   box-shadow: 0 0 0 0.0625rem rgb(59,70,204);
 }
 
-.c46:after,
-.c46:before {
+.c45:after,
+.c45:before {
   position: relative;
   display: block;
   content: '';
@@ -7575,7 +7552,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   height: 100%;
 }
 
-.c46:after {
+.c45:after {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
   transform: translateX(0%);
@@ -7587,20 +7564,20 @@ exports[`renders <Cns services /> without throwing 1`] = `
   box-shadow: 0 0 0 0.0625rem rgb(216,216,216);
 }
 
-.c46:active {
+.c45:active {
   box-shadow: inset 0 0 0 2em rgb(216,216,216);
 }
 
-.c46:before {
+.c45:before {
   display: none;
 }
 
-.c40 {
+.c39 {
   margin-left: 0.75rem;
   cursor: pointer;
 }
 
-.c39 {
+.c38 {
   border: 0.0625rem solid rgb(216,216,216);
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -7623,7 +7600,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   border: 0.0625rem solid rgb(45,56,132);
 }
 
-.c37 {
+.c36 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -7636,7 +7613,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
   flex-wrap: wrap;
 }
 
-.c36 {
+.c35 {
   margin-bottom: -0.375rem;
 }
 
@@ -7648,17 +7625,13 @@ exports[`renders <Cns services /> without throwing 1`] = `
   margin: 0;
 }
 
-.c44 {
+.c43 {
   margin: 0 6px;
 }
 
 .c17 {
   margin-left: 0;
   margin-right: 0;
-}
-
-.c21 {
-  margin-bottom: 0;
 }
 
 .c5 {
@@ -7850,36 +7823,35 @@ exports[`renders <Cns services /> without throwing 1`] = `
                 className="c2"
               >
                 <form
-                  className="c21"
                   onSubmit={undefined}
                 >
                   <div
-                    className="c22"
+                    className="c21"
                     wrap={true}
                   >
                     <div
-                      className="c23"
+                      className="c22"
                     >
                       <div
-                        className="c24"
+                        className="c23"
                       >
                         <div
-                          className="c25"
+                          className="c24"
                           name="name"
                           role="group"
                           style={undefined}
                         >
                           <label
-                            className="c26 c27"
+                            className="c25 c26"
                             htmlFor="s"
                           >
                             Attach to new CNS service name
                           </label>
                           <div
-                            className="c28"
+                            className="c27"
                           >
                             <input
-                              className="c29"
+                              className="c28"
                               disabled={false}
                               id="s"
                               onBlur={null}
@@ -7890,13 +7862,13 @@ exports[`renders <Cns services /> without throwing 1`] = `
                       </div>
                     </div>
                     <div
-                      className="c23"
+                      className="c22"
                     >
                       <div
-                        className="c30"
+                        className="c29"
                       >
                         <button
-                          className="c31 c32 c33 c34"
+                          className="c30 c31 c32 c33"
                           data-ui-button="true"
                           disabled={undefined}
                           href=""
@@ -7913,28 +7885,28 @@ exports[`renders <Cns services /> without throwing 1`] = `
                 className="c2"
               >
                 <label
-                  className="c26 c27"
+                  className="c25 c26"
                   htmlFor=""
                 >
                   Existing CNS service name(s)
                 </label>
                 <div
-                  className="c35"
+                  className="c34"
                 >
                   <ul
-                    className="c36 c37"
+                    className="c35 c36"
                   >
                     <div
-                      className="c38"
+                      className="c37"
                     >
                       <li
-                        className="c39"
+                        className="c38"
                         fill="rgba(66, 134, 244, 0.1)"
                         id="cns-tag-0"
                       >
                         serbice
                         <svg
-                          className="c40"
+                          className="c39"
                           height="11.31"
                           innerRef={undefined}
                           onClick={[Function]}
@@ -7955,16 +7927,16 @@ exports[`renders <Cns services /> without throwing 1`] = `
                       </li>
                     </div>
                     <div
-                      className="c38"
+                      className="c37"
                     >
                       <li
-                        className="c39"
+                        className="c38"
                         fill="rgba(66, 134, 244, 0.1)"
                         id="cns-tag-1"
                       >
                         dssasda
                         <svg
-                          className="c40"
+                          className="c39"
                           height="11.31"
                           innerRef={undefined}
                           onClick={[Function]}
@@ -7985,16 +7957,16 @@ exports[`renders <Cns services /> without throwing 1`] = `
                       </li>
                     </div>
                     <div
-                      className="c38"
+                      className="c37"
                     >
                       <li
-                        className="c39"
+                        className="c38"
                         fill="rgba(66, 134, 244, 0.1)"
                         id="cns-tag-2"
                       >
                         dsasd
                         <svg
-                          className="c40"
+                          className="c39"
                           height="11.31"
                           innerRef={undefined}
                           onClick={[Function]}
@@ -8028,30 +8000,30 @@ exports[`renders <Cns services /> without throwing 1`] = `
           className="c2"
         >
           <div
-            className="c25"
+            className="c24"
             name="cns-enabled"
             role="group"
             style={undefined}
           >
             <div
-              className="c41"
+              className="c40"
             >
               <label
-                className="c26 c27"
+                className="c25 c26"
                 disabled={false}
                 htmlFor="t"
               >
                 Disabled CNS
               </label>
               <div
-                className="c42"
+                className="c41"
               >
                 <div
-                  className="c43"
+                  className="c42"
                 >
                   <input
                     checked={true}
-                    className="c44 c45"
+                    className="c43 c44"
                     disabled={false}
                     id="t"
                     onBlur={undefined}
@@ -8060,7 +8032,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c44 c46"
+                    className="c43 c45"
                     disabled={false}
                     htmlFor="t"
                     id="t"
@@ -8069,7 +8041,7 @@ exports[`renders <Cns services /> without throwing 1`] = `
                   />
                   <label
                     checked={true}
-                    className="c44 c26 c27"
+                    className="c43 c25 c26"
                     disabled={false}
                     htmlFor="t"
                     id="t"

@@ -50,10 +50,6 @@ const ShortDivider = styled(Divider)`
   margin-right: 0;
 `;
 
-const Form = styled.form`
-  margin-bottom: 0;
-`;
-
 export const Header = () => (
   <Margin bottom="5">
     <H3>CNS Default Hostnames</H3>
@@ -104,7 +100,7 @@ export const AddServiceForm = ({
   invalid
 }) => (
   <Margin bottom="3">
-    <Form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <Flex wrap alignCenter={invalid} alignEnd={!invalid}>
         <FlexItem>
           <Flex collumn>
@@ -135,7 +131,7 @@ export const AddServiceForm = ({
           </Margin>
         </FlexItem>
       </Flex>
-    </Form>
+    </form>
   </Margin>
 );
 

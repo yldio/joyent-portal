@@ -66,7 +66,7 @@ export const generatePayload = steps => {
   });
 
   if (cns.serviceNames.length) {
-    metadata.push({
+    tags.push({
       name: 'triton.cns.services',
       value: cns.serviceNames.join(',')
     });
@@ -94,3 +94,4 @@ export { default as UserScript } from './user-script';
 export { default as Firewall, Preview as FirewallPreview } from './firewall';
 export { default as CNS, Preview as CnsPreview } from './cns';
 export { default as Affinity } from './affinity';
+export { default as Footer } from './footer';

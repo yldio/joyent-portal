@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import remcalc from 'remcalc';
+import is from 'styled-is';
 
 const UnorderedList = styled.ul`
   background: ${props => props.theme.disabled};
@@ -24,6 +25,10 @@ const UnorderedList = styled.ul`
     left: 0;
     z-index: 1;
   }
+
+  ${is('clear')`
+    background: none !important;
+  `};
 `;
 
 /**
