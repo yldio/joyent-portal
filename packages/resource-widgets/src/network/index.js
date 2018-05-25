@@ -29,8 +29,11 @@ import {
   DataCenterIcon,
   PublicIcon,
   PrivateIcon,
-  ArrowIcon
+  ArrowIcon,
+  QueryBreakpoints
 } from 'joyent-ui-toolkit';
+
+const { SmallOnly, Medium } = QueryBreakpoints;
 
 const Box = styled.div`
   display: inline-block;
@@ -138,7 +141,7 @@ export const Expanded = ({
             </CardHeaderMeta>
           </CardHeader>
           <CardOutlet>
-            <Padding all={5}>
+            <Padding all={{ mobile: 3, tablet: 5 }}>
               {description && (
                 <Margin bottom={3}>
                   <P>{description}</P>
@@ -175,25 +178,49 @@ export const Expanded = ({
                     </Flex>
                   </FlexItem>
                 </Margin>
-                {fabric ? (
-                  <Margin right={5}>
-                    <FlexItem>
-                      <Flex alignCenter>
-                        <FlexItem>
-                          <Margin right={1}>
-                            <InstanceCountIcon />
-                          </Margin>
-                        </FlexItem>
-                        <FlexItem>
-                          <P>{`${machines.length} instance${
-                            machines.length === 1 ? '' : 's'
-                          }`}</P>
-                        </FlexItem>
-                      </Flex>
-                    </FlexItem>
-                  </Margin>
-                ) : null}
+                <Medium>
+                  {fabric ? (
+                    <Margin right={5}>
+                      <FlexItem>
+                        <Flex alignCenter>
+                          <FlexItem>
+                            <Margin right={1}>
+                              <InstanceCountIcon />
+                            </Margin>
+                          </FlexItem>
+                          <FlexItem>
+                            <P>{`${machines.length} instance${
+                              machines.length === 1 ? '' : 's'
+                            }`}</P>
+                          </FlexItem>
+                        </Flex>
+                      </FlexItem>
+                    </Margin>
+                  ) : null}
+                </Medium>
               </Flex>
+              <SmallOnly>
+                {fabric ? (
+                  <Flex>
+                    <Margin right={5}>
+                      <FlexItem>
+                        <Flex alignCenter>
+                          <FlexItem>
+                            <Margin right={1}>
+                              <InstanceCountIcon />
+                            </Margin>
+                          </FlexItem>
+                          <FlexItem>
+                            <P>{`${machines.length} instance${
+                              machines.length === 1 ? '' : 's'
+                            }`}</P>
+                          </FlexItem>
+                        </Flex>
+                      </FlexItem>
+                    </Margin>
+                  </Flex>
+                ) : null}
+              </SmallOnly>
               {fabric ? (
                 <Fragment>
                   <Margin top={3}>
