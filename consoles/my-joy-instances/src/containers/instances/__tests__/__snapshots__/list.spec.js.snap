@@ -172,7 +172,7 @@ exports[`renders <List /> without throwing 1`] = `
 .c3 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -1153,7 +1153,7 @@ exports[`renders <List error /> without throwing 1`] = `
 .c3 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -2090,11 +2090,9 @@ exports[`renders <List instances /> without throwing 1`] = `
 .c33 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c33:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c13 {
@@ -2230,7 +2228,7 @@ exports[`renders <List instances /> without throwing 1`] = `
 .c3 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -3669,11 +3667,9 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 .c33 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c33:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c58 {
@@ -4384,7 +4380,7 @@ exports[`renders <List instances selected /> without throwing 1`] = `
 .c3 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -4425,12 +4421,10 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  background-color: rgb(250,250,250);
   border-top: 0.0625rem solid rgb(216,216,216);
-  max-height: 3.3125rem;
-  min-height: 3.3125rem;
   line-height: 1.5625rem;
   height: 4.375rem;
-  max-height: 4.375rem;
   z-index: 1;
   position: fixed;
   left: 0;
@@ -5843,10 +5837,11 @@ exports[`renders <List instances selected /> without throwing 1`] = `
   </form>
   <div
     className="c51"
-    fill="#FAFAFA"
+    fill="disabled"
   >
     <div
       className="c52 c53 c1"
+      fill="disabled"
     >
       <div
         className="c54"
@@ -6294,11 +6289,9 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 .c33 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c33:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c58 {
@@ -7009,7 +7002,7 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
 .c3 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -7050,12 +7043,10 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  background-color: rgb(250,250,250);
   border-top: 0.0625rem solid rgb(216,216,216);
-  max-height: 3.3125rem;
-  min-height: 3.3125rem;
   line-height: 1.5625rem;
   height: 4.375rem;
-  max-height: 4.375rem;
   z-index: 1;
   position: fixed;
   left: 0;
@@ -8468,10 +8459,11 @@ exports[`renders <List instances selected=all /> without throwing 1`] = `
   </form>
   <div
     className="c51"
-    fill="#FAFAFA"
+    fill="disabled"
   >
     <div
       className="c52 c53 c1"
+      fill="disabled"
     >
       <div
         className="c54"
@@ -8919,11 +8911,9 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 .c33 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c33:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c58 {
@@ -9829,7 +9819,7 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
 .c3 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -9870,12 +9860,10 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  background-color: rgb(250,250,250);
   border-top: 0.0625rem solid rgb(216,216,216);
-  max-height: 3.3125rem;
-  min-height: 3.3125rem;
   line-height: 1.5625rem;
   height: 4.375rem;
-  max-height: 4.375rem;
   z-index: 1;
   position: fixed;
   left: 0;
@@ -11288,10 +11276,11 @@ exports[`renders <List instances selected=all allowedActions /> without throwing
   </form>
   <div
     className="c51"
-    fill="#FAFAFA"
+    fill="disabled"
   >
     <div
       className="c52 c53 c1"
+      fill="disabled"
     >
       <div
         className="c54"
@@ -11831,7 +11820,7 @@ exports[`renders <List loading /> without throwing 1`] = `
 .c3 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }

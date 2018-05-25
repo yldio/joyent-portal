@@ -3,13 +3,11 @@ import { Field } from 'redux-form';
 import { Margin, Padding } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import { Row, Col } from 'joyent-react-styled-flexboxgrid';
-import styled from 'styled-components';
 
 import {
   H3,
   FormGroup,
   FormLabel,
-  Toggle,
   TagList,
   TagItem,
   P,
@@ -20,10 +18,6 @@ import {
 } from 'joyent-ui-toolkit';
 
 const { SmallOnly, MediumDown, Medium, Large } = QueryBreakpoints;
-
-const Form = styled.form`
-  margin-bottom: 0 !important;
-`;
 
 const capitalizeFirstLetter = string =>
   string.charAt(0).toUpperCase() + string.slice(1);
@@ -250,7 +244,7 @@ export const ToggleFirewallForm = ({
     : undefined;
 
   return (
-    <Form onChange={onChange}>
+    <form onChange={onChange}>
       <FormGroup
         id="fw-toggle-firewall"
         type="checkbox"
@@ -265,12 +259,12 @@ export const ToggleFirewallForm = ({
           </FormLabel>
         </Checkbox>
       </FormGroup>
-    </Form>
+    </form>
   );
 };
 
 export const ToggleInactiveForm = () => (
-  <Form>
+  <form>
     <FormGroup
       id="fw-toggle-inactive"
       type="checkbox"
@@ -285,5 +279,5 @@ export const ToggleInactiveForm = () => (
         </FormLabel>
       </Checkbox>
     </FormGroup>
-  </Form>
+  </form>
 );

@@ -14,11 +14,9 @@ exports[`Anchor Default Anchor 1`] = `
 .c0 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 <a
@@ -43,19 +41,12 @@ exports[`Anchor Disabled Anchor 1`] = `
 .c0 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: rgb(216,216,216);
   -webkit-text-fill-color: currentcolor;
   pointer-events: none;
-}
-
-.c0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 <a
@@ -81,13 +72,11 @@ exports[`Anchor Reversed Anchor 1`] = `
 .c0 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: rgb(255,255,255);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c0:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 <a

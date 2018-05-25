@@ -5,7 +5,7 @@ Array [
   .c0 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -30,7 +30,7 @@ Array [
   .c0 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -351,7 +351,7 @@ Array [
   .c0 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -376,7 +376,7 @@ Array [
   .c0 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.625rem;
   font-size: 1.3125rem;
 }
@@ -499,12 +499,12 @@ Array [
 `;
 
 exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
-.c10 {
+.c9 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c5 {
+.c4 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -512,39 +512,39 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
   overflow: visible;
 }
 
-.c5[type='checkbox'],
-.c5[type='radio'] {
+.c4[type='checkbox'],
+.c4[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c5[type='number']::-webkit-inner-spin-button,
-.c5[type='number']::-webkit-outer-spin-button {
+.c4[type='number']::-webkit-inner-spin-button,
+.c4[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c5[type='search'] {
+.c4[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c5[type='search']::-webkit-search-cancel-button,
-.c5[type='search']::-webkit-search-decoration {
+.c4[type='search']::-webkit-search-cancel-button,
+.c4[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c5::-webkit-file-upload-button {
+.c4::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9 {
+.c8 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -554,33 +554,33 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
   text-align: left;
 }
 
-.c4 {
+.c3 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c4:checked + label::after {
+.c3:checked + label::after {
   opacity: 1;
 }
 
-.c4:selected + label::after {
+.c3:selected + label::after {
   opacity: 1;
 }
 
-.c4:checked + label {
+.c3:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c4:selected + label {
+.c3:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c4:disabled + label {
+.c3:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c6 {
+.c5 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -597,7 +597,7 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c6::after {
+.c5::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -614,7 +614,7 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c3 {
+.c2 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -623,12 +623,12 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c7 label {
+.c6 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c2 {
+.c1 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -652,25 +652,25 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
   height: 1.5rem;
 }
 
-.c2 label {
+.c1 label {
   font-weight: 400;
 }
 
-.c2 label::after {
+.c1 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c2 div[type='checkbox'],
-.c2 div[type='checkbox'] input,
-.c2 div[type='checkbox'] label {
+.c1 div[type='checkbox'],
+.c1 div[type='checkbox'] input,
+.c1 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c1 {
+.c0 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -682,23 +682,18 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c8 {
+.c7 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c0 {
-  margin-bottom: 0 !important;
-}
-
 <form
-  className="c0"
   onChange={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     id="fw-toggle-firewall"
     name="enabled"
     role="group"
@@ -706,11 +701,11 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
     type="checkbox"
   >
     <li
-      className="c2"
+      className="c1"
     >
       <div
         checked={false}
-        className="c3"
+        className="c2"
         disabled={false}
         id="fw-toggle-firewall"
         onBlur={undefined}
@@ -718,30 +713,30 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
       >
         <input
           checked={false}
-          className="c4 c5"
+          className="c3 c4"
           disabled={false}
           id="l"
           onBlur={undefined}
           type="checkbox"
         />
         <label
-          className="c6"
+          className="c5"
           htmlFor="l"
         />
       </div>
       <div
         checked={false}
-        className="c7"
+        className="c6"
         disabled={false}
         id="fw-toggle-firewall"
         onBlur={undefined}
       >
         <label
-          className="c8 c9"
+          className="c7 c8"
           htmlFor="l"
         >
           <div
-            className="c10"
+            className="c9"
           >
             Enable Firewall
           </div>
@@ -753,12 +748,12 @@ exports[`renders <ToggleFirewallForm /> without throwing 1`] = `
 `;
 
 exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
-.c10 {
+.c9 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c5 {
+.c4 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -766,39 +761,39 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
   overflow: visible;
 }
 
-.c5[type='checkbox'],
-.c5[type='radio'] {
+.c4[type='checkbox'],
+.c4[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c5[type='number']::-webkit-inner-spin-button,
-.c5[type='number']::-webkit-outer-spin-button {
+.c4[type='number']::-webkit-inner-spin-button,
+.c4[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c5[type='search'] {
+.c4[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c5[type='search']::-webkit-search-cancel-button,
-.c5[type='search']::-webkit-search-decoration {
+.c4[type='search']::-webkit-search-cancel-button,
+.c4[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c5::-webkit-file-upload-button {
+.c4::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9 {
+.c8 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -808,33 +803,33 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
   text-align: left;
 }
 
-.c4 {
+.c3 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c4:checked + label::after {
+.c3:checked + label::after {
   opacity: 1;
 }
 
-.c4:selected + label::after {
+.c3:selected + label::after {
   opacity: 1;
 }
 
-.c4:checked + label {
+.c3:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c4:selected + label {
+.c3:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c4:disabled + label {
+.c3:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c6 {
+.c5 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -851,7 +846,7 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c6::after {
+.c5::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -868,7 +863,7 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c3 {
+.c2 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -877,12 +872,12 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c7 label {
+.c6 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c2 {
+.c1 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -906,25 +901,25 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
   height: 1.5rem;
 }
 
-.c2 label {
+.c1 label {
   font-weight: 400;
 }
 
-.c2 label::after {
+.c1 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c2 div[type='checkbox'],
-.c2 div[type='checkbox'] input,
-.c2 div[type='checkbox'] label {
+.c1 div[type='checkbox'],
+.c1 div[type='checkbox'] input,
+.c1 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c1 {
+.c0 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -936,23 +931,18 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c8 {
+.c7 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c0 {
-  margin-bottom: 0 !important;
-}
-
 <form
-  className="c0"
   onChange={undefined}
 >
   <div
-    className="c1"
+    className="c0"
     id="fw-toggle-firewall"
     name="enabled"
     role="group"
@@ -960,11 +950,11 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
     type="checkbox"
   >
     <li
-      className="c2"
+      className="c1"
     >
       <div
         checked={false}
-        className="c3"
+        className="c2"
         disabled={true}
         id="fw-toggle-firewall"
         onBlur={undefined}
@@ -972,30 +962,30 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
       >
         <input
           checked={false}
-          className="c4 c5"
+          className="c3 c4"
           disabled={true}
           id="n"
           onBlur={undefined}
           type="checkbox"
         />
         <label
-          className="c6"
+          className="c5"
           htmlFor="n"
         />
       </div>
       <div
         checked={false}
-        className="c7"
+        className="c6"
         disabled={true}
         id="fw-toggle-firewall"
         onBlur={undefined}
       >
         <label
-          className="c8 c9"
+          className="c7 c8"
           htmlFor="n"
         >
           <div
-            className="c10"
+            className="c9"
           >
             Enable Firewall
           </div>
@@ -1007,12 +997,12 @@ exports[`renders <ToggleFirewallForm submitting /> without throwing 1`] = `
 `;
 
 exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
-.c10 {
+.c9 {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
 
-.c5 {
+.c4 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1020,39 +1010,39 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
   overflow: visible;
 }
 
-.c5[type='checkbox'],
-.c5[type='radio'] {
+.c4[type='checkbox'],
+.c4[type='radio'] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.c5[type='number']::-webkit-inner-spin-button,
-.c5[type='number']::-webkit-outer-spin-button {
+.c4[type='number']::-webkit-inner-spin-button,
+.c4[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
-.c5[type='search'] {
+.c4[type='search'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
   outline-offset: -0.125rem;
 }
 
-.c5[type='search']::-webkit-search-cancel-button,
-.c5[type='search']::-webkit-search-decoration {
+.c4[type='search']::-webkit-search-cancel-button,
+.c4[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.c5::-webkit-file-upload-button {
+.c4::-webkit-file-upload-button {
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
   font: inherit;
 }
 
-.c9 {
+.c8 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -1062,33 +1052,33 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
   text-align: left;
 }
 
-.c4 {
+.c3 {
   font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
   display: none;
 }
 
-.c4:checked + label::after {
+.c3:checked + label::after {
   opacity: 1;
 }
 
-.c4:selected + label::after {
+.c3:selected + label::after {
   opacity: 1;
 }
 
-.c4:checked + label {
+.c3:checked + label {
   border-color: rgb(59,70,204);
 }
 
-.c4:selected + label {
+.c3:selected + label {
   border-color: rgb(59,70,204);
 }
 
-.c4:disabled + label {
+.c3:disabled + label {
   background-color: rgb(249,249,249);
   cursor: not-allowed;
 }
 
-.c6 {
+.c5 {
   color: rgb(100,100,100);
   position: absolute;
   width: 1.125rem;
@@ -1105,7 +1095,7 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
   height: 1.125rem;
 }
 
-.c6::after {
+.c5::after {
   opacity: 0;
   content: '';
   position: absolute;
@@ -1122,7 +1112,7 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
   transform: rotate(-45deg);
 }
 
-.c3 {
+.c2 {
   display: inline-block;
   vertical-align: text-bottom;
   width: 1.125rem;
@@ -1131,12 +1121,12 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
   cursor: pointer;
 }
 
-.c7 label {
+.c6 label {
   font-weight: normal;
   font-size: 0.9375rem;
 }
 
-.c2 {
+.c1 {
   list-style-type: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1160,25 +1150,25 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
   height: 1.5rem;
 }
 
-.c2 label {
+.c1 label {
   font-weight: 400;
 }
 
-.c2 label::after {
+.c1 label::after {
   width: 0.475rem;
   height: 0.205rem;
   top: 0.4125rem;
   left: 0.35rem;
 }
 
-.c2 div[type='checkbox'],
-.c2 div[type='checkbox'] input,
-.c2 div[type='checkbox'] label {
+.c1 div[type='checkbox'],
+.c1 div[type='checkbox'] input,
+.c1 div[type='checkbox'] label {
   height: 1.5rem;
   width: 1.5rem;
 }
 
-.c1 {
+.c0 {
   display: inline-block;
   padding: 0;
   border: none;
@@ -1190,22 +1180,16 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c8 {
+.c7 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
   cursor: pointer;
 }
 
-.c0 {
-  margin-bottom: 0 !important;
-}
-
-<form
-  className="c0"
->
+<form>
   <div
-    className="c1"
+    className="c0"
     id="fw-toggle-inactive"
     name="inactive"
     role="group"
@@ -1213,11 +1197,11 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
     type="checkbox"
   >
     <li
-      className="c2"
+      className="c1"
     >
       <div
         checked={false}
-        className="c3"
+        className="c2"
         disabled={false}
         id="fw-toggle-inactive"
         onBlur={undefined}
@@ -1225,30 +1209,30 @@ exports[`renders <ToggleInactiveForm /> without throwing 1`] = `
       >
         <input
           checked={false}
-          className="c4 c5"
+          className="c3 c4"
           disabled={false}
           id="p"
           onBlur={undefined}
           type="checkbox"
         />
         <label
-          className="c6"
+          className="c5"
           htmlFor="p"
         />
       </div>
       <div
         checked={false}
-        className="c7"
+        className="c6"
         disabled={false}
         id="fw-toggle-inactive"
         onBlur={undefined}
       >
         <label
-          className="c8 c9"
+          className="c7 c8"
           htmlFor="p"
         >
           <div
-            className="c10"
+            className="c9"
           >
             Show inactive rules
           </div>

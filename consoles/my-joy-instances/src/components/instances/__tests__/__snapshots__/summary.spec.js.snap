@@ -231,13 +231,11 @@ exports[`renders <Summary /> without throwing 1`] = `
 .c36 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: rgb(255,255,255);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c36:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c29 {
@@ -885,7 +883,7 @@ exports[`renders <Summary /> without throwing 1`] = `
 .c9 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.875rem;
   font-size: 1.5rem;
 }
@@ -952,6 +950,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -1031,6 +1030,7 @@ exports[`renders <Summary /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -2087,13 +2087,11 @@ exports[`renders <Summary instance /> without throwing 1`] = `
 .c35 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: rgb(255,255,255);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c35:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c29 {
@@ -2580,7 +2578,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
 .c9 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.875rem;
   font-size: 1.5rem;
 }
@@ -2647,6 +2645,7 @@ exports[`renders <Summary instance /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -4020,13 +4019,11 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 .c35 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: rgb(255,255,255);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c35:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c29 {
@@ -4513,7 +4510,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
 .c9 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.875rem;
   font-size: 1.5rem;
 }
@@ -4580,6 +4577,7 @@ exports[`renders <Summary instance /> without throwing 2`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -5949,13 +5947,11 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 .c39 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: rgb(255,255,255);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c39:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c32 {
@@ -6648,7 +6644,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
 .c9 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.875rem;
   font-size: 1.5rem;
 }
@@ -6715,6 +6711,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -6794,6 +6791,7 @@ exports[`renders <Summary starting stopping rebooting removing /> without throwi
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -7874,13 +7872,11 @@ exports[`renders <Summary state /> without throwing 1`] = `
 .c35 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: rgb(255,255,255);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c35:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c29 {
@@ -8367,7 +8363,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
 .c9 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.875rem;
   font-size: 1.5rem;
 }
@@ -8434,6 +8430,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -8513,6 +8510,7 @@ exports[`renders <Summary state /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -9569,13 +9567,11 @@ exports[`renders <Summary state /> without throwing 2`] = `
 .c35 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: rgb(255,255,255);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c35:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c29 {
@@ -10062,7 +10058,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
 .c9 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.875rem;
   font-size: 1.5rem;
 }
@@ -10129,6 +10125,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -10208,6 +10205,7 @@ exports[`renders <Summary state /> without throwing 2`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -11264,13 +11262,11 @@ exports[`renders <Summary state /> without throwing 3`] = `
 .c36 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: rgb(255,255,255);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c36:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c29 {
@@ -11919,7 +11915,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
 .c9 {
   margin: 0;
   color: rgb(73,73,73);
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.875rem;
   font-size: 1.5rem;
 }
@@ -11986,6 +11982,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;
@@ -12065,6 +12062,7 @@ exports[`renders <Summary state /> without throwing 3`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
+  white-space: pre-wrap;
   font-family: "Roboto Mono",monospace;
   width: 100%;
   min-width: 100%;

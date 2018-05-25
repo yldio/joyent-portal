@@ -58,13 +58,13 @@ export const Saved = ({ inverted, children }) => {
 };
 
 export const Error = ({ inverted = false, noLabel = false, children }) => {
-  const fill = inverted ? 'red' : 'white';
+  const statusFill = inverted ? 'red' : 'white';
   const iconFill = inverted ? 'white' : 'redDark';
 
   return (
     <StatusIcon
-      border="redDark"
-      fill={fill}
+      border={'redDark'}
+      fill={statusFill}
       Icon={() => <CloseIcon fill={iconFill} />}
     >
       {noLabel ? null : (

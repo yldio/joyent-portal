@@ -9,8 +9,7 @@ import get from 'lodash.get';
 import forceArray from 'force-array';
 import includes from 'lodash.includes';
 import find from 'lodash.find';
-import styled, { withTheme } from 'styled-components';
-import remcalc from 'remcalc';
+import { withTheme } from 'styled-components';
 
 import Step, {
   Header as StepHeader,

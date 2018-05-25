@@ -14,11 +14,9 @@ exports[`Button Default Button 1`] = `
 .c2 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c1 {
@@ -114,19 +112,12 @@ exports[`Button Disabled Button 1`] = `
 .c2 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: rgb(216,216,216);
   -webkit-text-fill-color: currentcolor;
   pointer-events: none;
-}
-
-.c2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c2:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c1 {
@@ -245,11 +236,9 @@ exports[`Button Error Button 1`] = `
 .c2 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .c1 {
@@ -368,19 +357,12 @@ exports[`Button Loading Button 1`] = `
 .c2 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: rgb(216,216,216);
   -webkit-text-fill-color: currentcolor;
   pointer-events: none;
-}
-
-.c2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c2:hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
 }
 
 .c1 {
@@ -499,13 +481,11 @@ exports[`Button Secondary Button 1`] = `
 .c2 {
   color: rgb(59,70,204);
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
   color: rgb(255,255,255);
   -webkit-text-fill-color: currentcolor;
-}
-
-.c2:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c1 {

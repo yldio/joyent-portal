@@ -44,6 +44,10 @@ export default ({ theme }) => css`
     flex-flow: column;
   }
 
+  form {
+    margin: 0;
+  }
+
   .CodeMirror {
     border: solid ${remcalc(1)} ${theme.grey};
     margin: ${remcalc(8)} 0 ${remcalc(8)} 0;

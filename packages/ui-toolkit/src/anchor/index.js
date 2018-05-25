@@ -13,12 +13,10 @@ const BaseLink = styled(({ component, children, ...rest }) =>
 )`
   color: ${props => props.theme.primary};
   -webkit-text-fill-color: currentcolor;
+  cursor: pointer;
+  text-decoration: underline;
 
-  &:hover {
-    text-decoration: none;
-  }
-
-  ${isOr('secondary', 'reversed')`
+  ${isOr('secondary', 'reversed', 'white')`
     color: ${props => props.theme.white};
     -webkit-text-fill-color: currentcolor;
   `};
@@ -32,10 +30,6 @@ const BaseLink = styled(({ component, children, ...rest }) =>
     color: ${props => props.theme.grey};
     -webkit-text-fill-color: currentcolor;
     pointer-events: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   `};
 `;
 

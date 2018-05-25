@@ -24,7 +24,7 @@ export default ({
   onReboot,
   onRemove
 }) => (
-  <StickyFooter fill="#FAFAFA" fixed bottom>
+  <StickyFooter fill="disabled" fixed bottom>
     <Row between="xs" middle="xs">
       <Col xs="7">
         <Flex>
