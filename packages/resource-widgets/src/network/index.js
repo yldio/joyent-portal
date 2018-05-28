@@ -29,8 +29,11 @@ import {
   DataCenterIcon,
   PublicIcon,
   PrivateIcon,
-  ArrowIcon
+  ArrowIcon,
+  QueryBreakpoints
 } from 'joyent-ui-toolkit';
+
+const { SmallOnly, Medium } = QueryBreakpoints;
 
 const Box = styled.div`
   display: inline-block;
@@ -44,6 +47,10 @@ const CardHeader = styled(BaseCardHeader)`
   ${isNot('secondary')`
     background-color: #f7f7f7;
   `};
+`;
+
+const ResponsiveFormGroup = styled(FormGroup)`
+  width: 100%;
 `;
 
 export const Collapsed = ({ name, fabric, ...network }) => (
@@ -138,7 +145,7 @@ export const Expanded = ({
             </CardHeaderMeta>
           </CardHeader>
           <CardOutlet>
-            <Padding all={5}>
+            <Padding all={{ mobile: 3, tablet: 5 }}>
               {description && (
                 <Margin bottom={3}>
                   <P>{description}</P>
@@ -175,25 +182,49 @@ export const Expanded = ({
                     </Flex>
                   </FlexItem>
                 </Margin>
-                {fabric ? (
-                  <Margin right={5}>
-                    <FlexItem>
-                      <Flex alignCenter>
-                        <FlexItem>
-                          <Margin right={1}>
-                            <InstanceCountIcon />
-                          </Margin>
-                        </FlexItem>
-                        <FlexItem>
-                          <P>{`${machines.length} instance${
-                            machines.length === 1 ? '' : 's'
-                          }`}</P>
-                        </FlexItem>
-                      </Flex>
-                    </FlexItem>
-                  </Margin>
-                ) : null}
+                <Medium>
+                  {fabric ? (
+                    <Margin right={5}>
+                      <FlexItem>
+                        <Flex alignCenter>
+                          <FlexItem>
+                            <Margin right={1}>
+                              <InstanceCountIcon />
+                            </Margin>
+                          </FlexItem>
+                          <FlexItem>
+                            <P>{`${machines.length} instance${
+                              machines.length === 1 ? '' : 's'
+                            }`}</P>
+                          </FlexItem>
+                        </Flex>
+                      </FlexItem>
+                    </Margin>
+                  ) : null}
+                </Medium>
               </Flex>
+              <SmallOnly>
+                {fabric ? (
+                  <Flex>
+                    <Margin right={5}>
+                      <FlexItem>
+                        <Flex alignCenter>
+                          <FlexItem>
+                            <Margin right={1}>
+                              <InstanceCountIcon />
+                            </Margin>
+                          </FlexItem>
+                          <FlexItem>
+                            <P>{`${machines.length} instance${
+                              machines.length === 1 ? '' : 's'
+                            }`}</P>
+                          </FlexItem>
+                        </Flex>
+                      </FlexItem>
+                    </Margin>
+                  </Flex>
+                ) : null}
+              </SmallOnly>
               {fabric ? (
                 <Fragment>
                   <Margin top={3}>
@@ -235,7 +266,7 @@ export const Expanded = ({
                               ) : null}
                               <FlexItem>
                                 <Margin bottom={2}>
-                                  <FormGroup name="id">
+                                  <ResponsiveFormGroup name="id">
                                     <FormLabel>ID</FormLabel>
                                     <Margin top={0.5}>
                                       <Input
@@ -246,11 +277,11 @@ export const Expanded = ({
                                         value={id}
                                       />
                                     </Margin>
-                                  </FormGroup>
+                                  </ResponsiveFormGroup>
                                 </Margin>
                               </FlexItem>
                               <FlexItem>
-                                <FormGroup name="subnet">
+                                <ResponsiveFormGroup name="subnet">
                                   <FormLabel>Subnet</FormLabel>
                                   <Margin top={0.5}>
                                     <Input
@@ -261,10 +292,10 @@ export const Expanded = ({
                                       value={subnet}
                                     />
                                   </Margin>
-                                </FormGroup>
+                                </ResponsiveFormGroup>
                               </FlexItem>
                               <FlexItem>
-                                <FormGroup name="ip-range">
+                                <ResponsiveFormGroup name="ip-range">
                                   <FormLabel>IP range</FormLabel>
                                   <Margin top={0.5}>
                                     <Input
@@ -275,7 +306,7 @@ export const Expanded = ({
                                       value={`${provision_start_ip} - ${provision_end_ip}`}
                                     />
                                   </Margin>
-                                </FormGroup>
+                                </ResponsiveFormGroup>
                               </FlexItem>
                             </Flex>
                           </Padding>
