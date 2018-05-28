@@ -48,7 +48,7 @@ exports[`renders <Network /> without throwing 1`] = `
 }
 
 .c18 {
-  padding: 1.875rem;
+  padding: 1.125rem;
 }
 
 .c19 {
@@ -449,6 +449,12 @@ exports[`renders <Network /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
+  }
+}
+
+@media (min-width:46.0625em) {
+  .c18 {
+    padding: 1.875rem;
   }
 }
 
@@ -958,7 +964,7 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
 }
 
 .c18 {
-  padding: 1.875rem;
+  padding: 1.125rem;
 }
 
 .c21 {
@@ -1359,6 +1365,12 @@ exports[`renders <Network {...network} /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
+  }
+}
+
+@media (min-width:46.0625em) {
+  .c18 {
+    padding: 1.875rem;
   }
 }
 
@@ -1881,7 +1893,7 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
 }
 
 .c18 {
-  padding: 1.875rem;
+  padding: 1.125rem;
 }
 
 .c21 {
@@ -2282,6 +2294,12 @@ exports[`renders <Network {...network} /> without throwing 3`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
+  }
+}
+
+@media (min-width:46.0625em) {
+  .c18 {
+    padding: 1.875rem;
   }
 }
 
@@ -2808,7 +2826,7 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
 }
 
 .c18 {
-  padding: 1.875rem;
+  padding: 1.125rem;
 }
 
 .c29 {
@@ -3258,6 +3276,12 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
   }
 }
 
+@media (min-width:46.0625em) {
+  .c18 {
+    padding: 1.875rem;
+  }
+}
+
 <div
   className="c0"
 >
@@ -3432,138 +3456,6 @@ exports[`renders <Network {...network} fabric /> without throwing 1`] = `
                         className="c20"
                       >
                         Fabric network
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="c22"
-              >
-                <div
-                  className="c23"
-                >
-                  <div
-                    className="c24"
-                  >
-                    <div
-                      className="c23"
-                    >
-                      <div
-                        className="c25"
-                      >
-                        <svg
-                          height="17"
-                          style={
-                            Object {
-                              "transform": "rotate(0deg)",
-                            }
-                          }
-                          version="1.1"
-                          viewBox="0 0 17 17"
-                          width="17"
-                          xmlns="http://www.w3.org/2000/svg"
-                          xmlnsXlink="http://www.w3.org/1999/xlink"
-                        >
-                          <g
-                            transform="translate(-1105 974)"
-                          >
-                            <g>
-                              <g>
-                                <use
-                                  fill="rgb(73, 73, 73)"
-                                  transform="translate(1105 -974)"
-                                  xlinkHref="#c"
-                                />
-                              </g>
-                              <g>
-                                <use
-                                  fill="rgb(73, 73, 73)"
-                                  transform="translate(1111 -974)"
-                                  xlinkHref="#c"
-                                />
-                              </g>
-                              <g>
-                                <use
-                                  fill="rgb(73, 73, 73)"
-                                  transform="translate(1117 -974)"
-                                  xlinkHref="#c"
-                                />
-                              </g>
-                              <g>
-                                <use
-                                  fill="rgb(73, 73, 73)"
-                                  transform="translate(1105 -968)"
-                                  xlinkHref="#c"
-                                />
-                              </g>
-                              <g>
-                                <g>
-                                  <use
-                                    fill="rgb(73, 73, 73)"
-                                    transform="translate(1111 -968)"
-                                    xlinkHref="#d"
-                                  />
-                                </g>
-                              </g>
-                              <g>
-                                <g>
-                                  <use
-                                    fill="rgb(73, 73, 73)"
-                                    transform="translate(1117 -968)"
-                                    xlinkHref="#d"
-                                  />
-                                </g>
-                              </g>
-                              <g>
-                                <g>
-                                  <use
-                                    fill="rgb(73, 73, 73)"
-                                    transform="translate(1105 -962)"
-                                    xlinkHref="#d"
-                                  />
-                                </g>
-                              </g>
-                              <g>
-                                <g>
-                                  <use
-                                    fill="rgb(73, 73, 73)"
-                                    transform="translate(1111 -962)"
-                                    xlinkHref="#d"
-                                  />
-                                </g>
-                              </g>
-                              <g>
-                                <g>
-                                  <use
-                                    fill="rgb(73, 73, 73)"
-                                    transform="translate(1117 -962)"
-                                    xlinkHref="#d"
-                                  />
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                          <defs>
-                            <path
-                              d="M 2.5 5C 3.88071 5 5 3.88071 5 2.5C 5 1.11929 3.88071 0 2.5 0C 1.11929 0 0 1.11929 0 2.5C 0 3.88071 1.11929 5 2.5 5Z"
-                              id="c"
-                            />
-                            <path
-                              d="M 2.5 1C 3.3 1 4 1.7 4 2.5C 4 3.3 3.3 4 2.5 4C 1.7 4 1 3.3 1 2.5C 1 1.7 1.7 1 2.5 1ZM 2.5 0C 1.1 0 0 1.1 0 2.5C 0 3.9 1.1 5 2.5 5C 3.9 5 5 3.9 5 2.5C 5 1.1 3.9 0 2.5 0Z"
-                              id="d"
-                            />
-                          </defs>
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      className="c23"
-                    >
-                      <p
-                        className="c20"
-                      >
-                        0 instances
                       </p>
                     </div>
                   </div>
@@ -3965,7 +3857,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   margin-bottom: 0.75rem;
 }
 
-.c33 {
+.c34 {
   margin-top: 0.1875rem;
 }
 
@@ -3975,7 +3867,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
 }
 
 .c18 {
-  padding: 1.875rem;
+  padding: 1.125rem;
 }
 
 .c27 {
@@ -4118,7 +4010,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   font-size: 0.9375rem;
 }
 
-.c32 {
+.c33 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-style: normal;
@@ -4399,7 +4291,7 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   -webkit-padding-after: 0;
 }
 
-.c34 {
+.c35 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 3rem;
@@ -4423,62 +4315,62 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
   max-width: 100%;
 }
 
-.c34:focus {
+.c35:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c34::-webkit-input-placeholder {
+.c35::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34::-moz-placeholder {
+.c35::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:-ms-input-placeholder {
+.c35:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:invalid {
+.c35:invalid {
   box-shadow: none;
 }
 
-.c34:disabled {
+.c35:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c34:disabled::-webkit-input-placeholder {
+.c35:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:disabled::-moz-placeholder {
+.c35:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:disabled:-ms-input-placeholder {
+.c35:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c34:disabled {
+.c35:disabled {
   color: rgb(73,73,73);
 }
 
-.c34:disabled::-webkit-input-placeholder {
+.c35:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c34:disabled::-moz-placeholder {
+.c35:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c34:disabled:-ms-input-placeholder {
+.c35:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c31 {
+.c32 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
@@ -4486,6 +4378,10 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
 
 .c4 {
   background-color: #f7f7f7;
+}
+
+.c31 {
+  width: 100%;
 }
 
 @media only screen and (min-width:0em) {
@@ -4503,6 +4399,12 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
+  }
+}
+
+@media (min-width:46.0625em) {
+  .c18 {
+    padding: 1.875rem;
   }
 }
 
@@ -4685,138 +4587,6 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                   </div>
                 </div>
               </div>
-              <div
-                className="c22"
-              >
-                <div
-                  className="c23"
-                >
-                  <div
-                    className="c24"
-                  >
-                    <div
-                      className="c23"
-                    >
-                      <div
-                        className="c25"
-                      >
-                        <svg
-                          height="17"
-                          style={
-                            Object {
-                              "transform": "rotate(0deg)",
-                            }
-                          }
-                          version="1.1"
-                          viewBox="0 0 17 17"
-                          width="17"
-                          xmlns="http://www.w3.org/2000/svg"
-                          xmlnsXlink="http://www.w3.org/1999/xlink"
-                        >
-                          <g
-                            transform="translate(-1105 974)"
-                          >
-                            <g>
-                              <g>
-                                <use
-                                  fill="rgb(73, 73, 73)"
-                                  transform="translate(1105 -974)"
-                                  xlinkHref="#c"
-                                />
-                              </g>
-                              <g>
-                                <use
-                                  fill="rgb(73, 73, 73)"
-                                  transform="translate(1111 -974)"
-                                  xlinkHref="#c"
-                                />
-                              </g>
-                              <g>
-                                <use
-                                  fill="rgb(73, 73, 73)"
-                                  transform="translate(1117 -974)"
-                                  xlinkHref="#c"
-                                />
-                              </g>
-                              <g>
-                                <use
-                                  fill="rgb(73, 73, 73)"
-                                  transform="translate(1105 -968)"
-                                  xlinkHref="#c"
-                                />
-                              </g>
-                              <g>
-                                <g>
-                                  <use
-                                    fill="rgb(73, 73, 73)"
-                                    transform="translate(1111 -968)"
-                                    xlinkHref="#d"
-                                  />
-                                </g>
-                              </g>
-                              <g>
-                                <g>
-                                  <use
-                                    fill="rgb(73, 73, 73)"
-                                    transform="translate(1117 -968)"
-                                    xlinkHref="#d"
-                                  />
-                                </g>
-                              </g>
-                              <g>
-                                <g>
-                                  <use
-                                    fill="rgb(73, 73, 73)"
-                                    transform="translate(1105 -962)"
-                                    xlinkHref="#d"
-                                  />
-                                </g>
-                              </g>
-                              <g>
-                                <g>
-                                  <use
-                                    fill="rgb(73, 73, 73)"
-                                    transform="translate(1111 -962)"
-                                    xlinkHref="#d"
-                                  />
-                                </g>
-                              </g>
-                              <g>
-                                <g>
-                                  <use
-                                    fill="rgb(73, 73, 73)"
-                                    transform="translate(1117 -962)"
-                                    xlinkHref="#d"
-                                  />
-                                </g>
-                              </g>
-                            </g>
-                          </g>
-                          <defs>
-                            <path
-                              d="M 2.5 5C 3.88071 5 5 3.88071 5 2.5C 5 1.11929 3.88071 0 2.5 0C 1.11929 0 0 1.11929 0 2.5C 0 3.88071 1.11929 5 2.5 5Z"
-                              id="c"
-                            />
-                            <path
-                              d="M 2.5 1C 3.3 1 4 1.7 4 2.5C 4 3.3 3.3 4 2.5 4C 1.7 4 1 3.3 1 2.5C 1 1.7 1.7 1 2.5 1ZM 2.5 0C 1.1 0 0 1.1 0 2.5C 0 3.9 1.1 5 2.5 5C 3.9 5 5 3.9 5 2.5C 5 1.1 3.9 0 2.5 0Z"
-                              id="d"
-                            />
-                          </defs>
-                        </svg>
-                      </div>
-                    </div>
-                    <div
-                      className="c23"
-                    >
-                      <p
-                        className="c20"
-                      >
-                        0 instances
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
             <div
               className="c26"
@@ -4888,22 +4658,22 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                           className="c30"
                         >
                           <div
-                            className="c8"
+                            className="c31 c8"
                             name="id"
                             role="group"
                             style={undefined}
                           >
                             <label
-                              className="c31 c32"
+                              className="c32 c33"
                               htmlFor="x"
                             >
                               ID
                             </label>
                             <div
-                              className="c33"
+                              className="c34"
                             >
                               <input
-                                className="c34"
+                                className="c35"
                                 disabled={false}
                                 id="x"
                                 onBlur={null}
@@ -4917,22 +4687,22 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         className="c23"
                       >
                         <div
-                          className="c8"
+                          className="c31 c8"
                           name="subnet"
                           role="group"
                           style={undefined}
                         >
                           <label
-                            className="c31 c32"
+                            className="c32 c33"
                             htmlFor="y"
                           >
                             Subnet
                           </label>
                           <div
-                            className="c33"
+                            className="c34"
                           >
                             <input
-                              className="c34"
+                              className="c35"
                               disabled={false}
                               id="y"
                               onBlur={null}
@@ -4945,22 +4715,22 @@ exports[`renders <Network {...network} infoExpanded /> without throwing 1`] = `
                         className="c23"
                       >
                         <div
-                          className="c8"
+                          className="c31 c8"
                           name="ip-range"
                           role="group"
                           style={undefined}
                         >
                           <label
-                            className="c31 c32"
+                            className="c32 c33"
                             htmlFor="z"
                           >
                             IP range
                           </label>
                           <div
-                            className="c33"
+                            className="c34"
                           >
                             <input
-                              className="c34"
+                              className="c35"
                               disabled={false}
                               id="z"
                               onBlur={null}
@@ -5313,7 +5083,7 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
 }
 
 .c18 {
-  padding: 1.875rem;
+  padding: 1.125rem;
 }
 
 .c21 {
@@ -5714,6 +5484,12 @@ exports[`renders <Network {...network} public /> without throwing 1`] = `
     -ms-flex-preferred-size: 66.66666666666667%;
     flex-basis: 66.66666666666667%;
     max-width: 66.66666666666667%;
+  }
+}
+
+@media (min-width:46.0625em) {
+  .c18 {
+    padding: 1.875rem;
   }
 }
 
