@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { withTheme } from 'styled-components';
 import { Margin } from 'styled-components-spacing';
 import { compose } from 'react-apollo';
 import { Link } from 'react-router-dom';
@@ -30,47 +31,52 @@ const UserScript = ({
   handleChangeOpenForm,
   handleSubmit,
   handleEdit,
+  theme = {},
   ...props
-}) => (
-  <Step name="user-script" getValue={handleGetValue} {...props}>
-    <StepHeader icon={<ScriptIcon />}>User script</StepHeader>
-    <StepDescription href="https://docs.joyent.com/private-cloud/instances/using-mdata#UsingtheMetadataAPI-ListofMetadataKeys">
-      Insert code to execute when the machine starts (first boot only for KVM,
-      every boot for infrastructure containers).
-    </StepDescription>
-    <StepPreview>
-      <Overview lines={preview.lines} />
-    </StepPreview>
-    <StepOutlet>
-      {({ next }) => (
-        <Margin top="5">
-          <ReduxForm
-            form={IR_US_F}
-            destroyOnUnmount={false}
-            forceUnregisterOnUnmount={true}
-            onSubmit={handleSubmit}
-          >
-            {props => (
-              <Fragment>
-                <UserScriptForm {...props} />
-                <Margin top="5">
-                  <Button
-                    id="next-button-userscript"
-                    type="button"
-                    component={Link}
-                    to={next}
-                  >
-                    Next
-                  </Button>
-                </Margin>
-              </Fragment>
-            )}
-          </ReduxForm>
-        </Margin>
-      )}
-    </StepOutlet>
-  </Step>
-);
+}) => {
+  const mobile = theme.screen === 'mobile';
+  return (
+    <Step name="user-script" getValue={handleGetValue} {...props}>
+      <StepHeader icon={<ScriptIcon />}>User script</StepHeader>
+      <StepDescription href="https://docs.joyent.com/private-cloud/instances/using-mdata#UsingtheMetadataAPI-ListofMetadataKeys">
+        Insert code to execute when the machine starts (first boot only for KVM,
+        every boot for infrastructure containers).
+      </StepDescription>
+      <StepPreview>
+        <Overview lines={preview.lines} />
+      </StepPreview>
+      <StepOutlet>
+        {({ next }) => (
+          <Margin top="5">
+            <ReduxForm
+              form={IR_US_F}
+              destroyOnUnmount={false}
+              forceUnregisterOnUnmount={true}
+              onSubmit={handleSubmit}
+            >
+              {props => (
+                <Fragment>
+                  <UserScriptForm {...props} />
+                  <Margin top={mobile ? '3' : '5'}>
+                    <Button
+                      id="next-button-userscript"
+                      type="button"
+                      component={Link}
+                      to={next}
+                      fluid={mobile}
+                    >
+                      Next
+                    </Button>
+                  </Margin>
+                </Fragment>
+              )}
+            </ReduxForm>
+          </Margin>
+        )}
+      </StepOutlet>
+    </Step>
+  );
+};
 
 export default compose(
   connect(
@@ -100,4 +106,4 @@ export default compose(
       }
     })
   )
-)(UserScript);
+)(withTheme(({ ...rest }) => <UserScript {...rest} />));
