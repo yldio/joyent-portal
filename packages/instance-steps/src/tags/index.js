@@ -10,7 +10,7 @@ import { reset } from 'redux-form';
 import { destroy } from 'redux-form';
 import get from 'lodash.get';
 import remcalc from 'remcalc';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 
 import Step, {
   Header as StepHeader,
@@ -55,114 +55,122 @@ const Tag = ({ name, value, onRemoveClick }) => (
   </Margin>
 );
 
-const TagsContainer = ({
-  handleValidate,
-  handleGetValue,
-  preview = [],
-  tags = [],
-  addOpen = true,
-  shouldAsyncValidate,
-  handleAddTag,
-  handleAsyncValidate,
-  handleChangeAddOpen,
-  handleRemoveTag,
-  handleCancelEdit,
-  ...props
-}) => (
-  <Step name="tags" getValue={handleGetValue} {...props}>
-    <StepHeader icon={<TagsIcon />}>Tags</StepHeader>
-    <StepDescription href="https://docs.joyent.com/public-cloud/tags-metadata/tags">
-      Tags can be used to identify your instances, group multiple instances
-      together, define firewall and affinity rules, and more.
-    </StepDescription>
-    <StepPreview>
-      <Margin top="3">
-        <TagCount total={preview.length} />
-        <TagList>
-          {preview.map(({ name, value }, index) => (
-            <Tag name={name} value={value} />
-          ))}
-        </TagList>
-      </Margin>
-    </StepPreview>
-    <StepOutlet>
-      {({ next }) => (
-        <Fragment>
-          {tags.length ? (
-            <Margin top="5">
-              <TagCount total={tags.length} />
-              <TagList>
-                {tags.map(({ name, value }, index) => (
-                  <Tag
-                    name={name}
-                    value={value}
-                    onRemoveClick={() => handleRemoveTag(index)}
-                    id={`tag-${index}`}
-                  />
-                ))}
-              </TagList>
-            </Margin>
-          ) : null}
-          {addOpen ? (
+const TagsContainer = withTheme(
+  ({
+    handleValidate,
+    handleGetValue,
+    preview = [],
+    tags = [],
+    addOpen = true,
+    shouldAsyncValidate,
+    handleAddTag,
+    handleAsyncValidate,
+    handleChangeAddOpen,
+    handleRemoveTag,
+    handleCancelEdit,
+    theme = {},
+    ...props
+  }) => {
+    const mobile = theme.screen === 'mobile';
+    return (
+      <Step name="tags" getValue={handleGetValue} {...props}>
+        <StepHeader icon={<TagsIcon />}>Tags</StepHeader>
+        <StepDescription href="https://docs.joyent.com/public-cloud/tags-metadata/tags">
+          Tags can be used to identify your instances, group multiple instances
+          together, define firewall and affinity rules, and more.
+        </StepDescription>
+        <StepPreview>
+          <Margin top="3">
+            <TagCount total={preview.length} />
+            <TagList>
+              {preview.map(({ name, value }, index) => (
+                <Tag name={name} value={value} />
+              ))}
+            </TagList>
+          </Margin>
+        </StepPreview>
+        <StepOutlet>
+          {({ next }) => (
             <Fragment>
-              <Margin top="2">
-                <ReduxForm
-                  form={IR_TAG_F_ADD}
-                  destroyOnUnmount={false}
-                  forceUnregisterOnUnmount={true}
-                  shouldAsyncValidate={shouldAsyncValidate}
-                  asyncValidate={handleValidate}
-                  onSubmit={handleAddTag}
-                >
-                  {props => (
-                    <Fragment>
-                      <KeyValue
-                        {...props}
-                        method="add"
-                        input="input"
-                        type="tag"
-                        id="tag"
-                        expanded
-                        borderless
-                        onCancel={() => handleChangeAddOpen(false)}
+              {tags.length ? (
+                <Margin top="5">
+                  <TagCount total={tags.length} />
+                  <TagList>
+                    {tags.map(({ name, value }, index) => (
+                      <Tag
+                        name={name}
+                        value={value}
+                        onRemoveClick={() => handleRemoveTag(index)}
+                        id={`tag-${index}`}
                       />
-                    </Fragment>
-                  )}
-                </ReduxForm>
-              </Margin>
-            </Fragment>
-          ) : (
-            <Margin top="5">
-              <Flex>
-                <FlexItem>
-                  <Margin right="1">
-                    <Button
-                      id="add-tag-button"
-                      type="button"
-                      onClick={() => handleChangeAddOpen(true)}
-                      secondary
+                    ))}
+                  </TagList>
+                </Margin>
+              ) : null}
+              {addOpen ? (
+                <Fragment>
+                  <Margin top="2">
+                    <ReduxForm
+                      form={IR_TAG_F_ADD}
+                      destroyOnUnmount={false}
+                      forceUnregisterOnUnmount={true}
+                      shouldAsyncValidate={shouldAsyncValidate}
+                      asyncValidate={handleValidate}
+                      onSubmit={handleAddTag}
                     >
-                      Add Tag
-                    </Button>
+                      {props => (
+                        <Fragment>
+                          <KeyValue
+                            {...props}
+                            method="add"
+                            input="input"
+                            type="tag"
+                            id="tag"
+                            expanded
+                            borderless
+                            onCancel={() => handleChangeAddOpen(false)}
+                          />
+                        </Fragment>
+                      )}
+                    </ReduxForm>
                   </Margin>
-                </FlexItem>
-                <FlexItem>
-                  <Button
-                    id="next-button-tags"
-                    type="button"
-                    component={Link}
-                    to={next}
-                  >
-                    Next
-                  </Button>
-                </FlexItem>
-              </Flex>
-            </Margin>
+                </Fragment>
+              ) : (
+                <Margin top="5">
+                  <Flex column={mobile}>
+                    <FlexItem>
+                      <Margin right={mobile ? '0' : '1'}>
+                        <Button
+                          id="add-tag-button"
+                          type="button"
+                          onClick={() => handleChangeAddOpen(true)}
+                          secondary
+                          fluid={mobile}
+                        >
+                          Add Tag
+                        </Button>
+                      </Margin>
+                    </FlexItem>
+                    <FlexItem>
+                      <Button
+                        id="next-button-tags"
+                        type="button"
+                        component={Link}
+                        to={next}
+                        fluid={mobile}
+                      >
+                        Next
+                      </Button>
+                    </FlexItem>
+                  </Flex>
+                </Margin>
+              )}
+            </Fragment>
           )}
-        </Fragment>
-      )}
-    </StepOutlet>
-  </Step>
+        </StepOutlet>
+      </Step>
+    );
+  }
 );
 
 export default compose(
