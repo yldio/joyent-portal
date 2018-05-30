@@ -83,7 +83,8 @@ const TextareaKeyValue = ({
   submitting,
   onlyName,
   onlyValue,
-  editor
+  editor,
+  mobile
 }) => (
   <Fragment>
     {onlyValue ? null : (
@@ -97,7 +98,12 @@ const TextareaKeyValue = ({
           >
             <FormLabel>{titleCase(type)} key</FormLabel>
             <Margin top="0.5">
-              <Input onBlur={null} type="text" disabled={submitting} />
+              <Input
+                onBlur={null}
+                type="text"
+                disabled={submitting}
+                fluid={mobile}
+              />
               <Row>
                 <Col sm="7">
                   <FormMeta />
@@ -105,6 +111,7 @@ const TextareaKeyValue = ({
               </Row>
             </Margin>
           </FormGroup>
+          <Divider height={remcalc(12)} transparent />
         </Col>
       </Row>
     )}
@@ -133,6 +140,7 @@ const TextareaKeyValue = ({
               </Col>
             </Row>
           </FormGroup>
+          <Divider height={remcalc(12)} transparent />
         </Col>
       </Row>
     )}
@@ -149,7 +157,7 @@ const InputKeyValue = ({
   fluid = false
 }) => (
   <Flex wrap justifyStart contentStretch column={fluid}>
-    {!onlyValue ? (
+    {onlyValue ? null : (
       <FlexItem basis="auto">
         <FormGroup
           id={id ? 'kv-input-name-' + id : null}
@@ -170,7 +178,7 @@ const InputKeyValue = ({
           </Margin>
         </FormGroup>
       </FlexItem>
-    ) : null}
+    )}
     {onlyName ? null : (
       <Fragment>
         <FlexItem basis="auto">
@@ -198,189 +206,186 @@ const InputKeyValue = ({
   </Flex>
 );
 
-export const KeyValue = withTheme(
-  ({
-    id = null,
-    disabled = false,
-    input = 'input',
-    type = 'metadata',
-    typeLabel = 'key',
-    method = 'add',
-    initialValues = {},
-    error = null,
-    expanded = true,
-    submitting = false,
-    pristine = true,
-    invalid = false,
-    removing = false,
-    onToggleExpanded,
-    onCancel = () => null,
-    onRemove = () => null,
-    editor = null,
-    onlyName = false,
-    onlyValue = false,
-    noRemove = false,
-    borderless = false,
-    shadow = true,
-    customHeader,
-    headless = false,
-    noActions = false,
-    theme = {}
-  }) => {
-    const handleHeaderClick = method === 'edit' && onToggleExpanded;
-    const mobile = theme.screen === 'mobile';
+export const KeyValue = ({
+  id = null,
+  disabled = false,
+  input = 'input',
+  type = 'metadata',
+  typeLabel = 'key',
+  method = 'add',
+  initialValues = {},
+  error = null,
+  expanded = true,
+  submitting = false,
+  pristine = true,
+  invalid = false,
+  removing = false,
+  onToggleExpanded,
+  onCancel = () => null,
+  onRemove = () => null,
+  theme = {},
+  editor = null,
+  onlyName = false,
+  onlyValue = false,
+  noRemove = false,
+  borderless = false,
+  shadow = true,
+  customHeader,
+  headless = false
+}) => {
+  const handleHeaderClick = method === 'edit' && onToggleExpanded;
+  const mobile = theme.screen === 'mobile';
 
-    return (
-      <Card
-        collapsed={!expanded}
-        actionable={Boolean(handleHeaderClick)}
-        borderless={borderless}
-        headless={headless}
-        shadow={shadow}
-      >
-        {headless ? null : (
-          <Header
-            secondary={false}
-            transparent={false}
-            actionable={Boolean(handleHeaderClick)}
-            onClick={handleHeaderClick}
+  return (
+    <Card
+      collapsed={!expanded}
+      actionable={Boolean(handleHeaderClick)}
+      borderless={borderless}
+      headless={headless}
+      shadow={shadow}
+    >
+      {headless ? null : (
+        <Header
+          secondary={false}
+          transparent={false}
+          actionable={Boolean(handleHeaderClick)}
+          onClick={handleHeaderClick}
+        >
+          <PaddingMaxWidth
+            left={borderless ? '0' : '3'}
+            right={borderless ? '0' : '3'}
           >
-            <PaddingMaxWidth
-              left={borderless ? '0' : '3'}
-              right={borderless ? '0' : '3'}
-            >
-              <Flex alignCenter justifyBetween>
-                <Meta>
-                  {method === 'add' || method === 'create' ? (
-                    <H4>{`${titleCase(method)} ${type}`}</H4>
-                  ) : (
-                    <CollapsedKeyValue>
-                      {customHeader ? customHeader : null}
-                      {initialValues.name ? (
-                        <Fragment>
-                          {expanded ? (
-                            <span>{`${initialValues.name}${': '}`}</span>
-                          ) : (
-                            <Bold>{`${initialValues.name}${': '}`}</Bold>
-                          )}
-                          <span>{initialValues.value}</span>
-                        </Fragment>
-                      ) : null}
-                    </CollapsedKeyValue>
-                  )}
-                </Meta>
-                {handleHeaderClick ? (
-                  <ArrowIcon
-                    onClick={onToggleExpanded}
-                    direction={expanded ? 'up' : 'down'}
-                  />
-                ) : null}
-              </Flex>
-            </PaddingMaxWidth>
-          </Header>
-        )}
-        {expanded ? (
-          <CardOutlet>
-            <Padding
-              top={headless ? '0' : '3'}
-              bottom={borderless ? '0' : '3'}
-              horizontal={borderless ? '0' : '3'}
-            >
-              {error && !submitting ? (
-                <Row>
-                  <Col xs="12">
-                    <Margin bottom="5">
-                      <Message error>
-                        <MessageTitle>Ooops!</MessageTitle>
-                        <MessageDescription>{error}</MessageDescription>
-                      </Message>
-                    </Margin>
-                  </Col>
-                </Row>
-              ) : null}
-              {input === 'input' ? (
-                <InputKeyValue
-                  id={id}
-                  onBlur={null}
-                  type={type}
-                  typeLabel={typeLabel}
-                  submitting={disabled || submitting}
-                  onlyName={onlyName}
-                  onlyValue={onlyValue}
-                  fluid={mobile}
+            <Flex alignCenter justifyBetween>
+              <Meta>
+                {method === 'add' || method === 'create' ? (
+                  <H4>{`${titleCase(method)} ${type}`}</H4>
+                ) : (
+                  <CollapsedKeyValue>
+                    {customHeader ? customHeader : null}
+                    {initialValues.name ? (
+                      <Fragment>
+                        {expanded ? (
+                          <span>{`${initialValues.name}${': '}`}</span>
+                        ) : (
+                          <Bold>{`${initialValues.name}${': '}`}</Bold>
+                        )}
+                        <span>{initialValues.value}</span>
+                      </Fragment>
+                    ) : null}
+                  </CollapsedKeyValue>
+                )}
+              </Meta>
+              {handleHeaderClick ? (
+                <ArrowIcon
+                  onClick={onToggleExpanded}
+                  direction={expanded ? 'up' : 'down'}
                 />
               ) : null}
-              {input === 'textarea' ? (
-                <TextareaKeyValue
-                  id={id}
-                  type={type}
-                  submitting={disabled || submitting}
-                  onlyName={onlyName}
-                  onlyValue={onlyValue}
-                  editor={editor}
-                />
-              ) : null}
-              {input !== 'textarea' && input !== 'input'
-                ? input(submitting)
-                : null}
-              <Margin top={mobile ? '3' : '2'}>
-                <Row between="xs" middle="xs">
-                  <Col xs={method === 'add' ? '12' : '7'} mobile={mobile}>
-                    <Margin top={mobile ? '1' : '0'} inline>
-                      <MarginalButton
-                        id={id ? 'kv-cancel-button-' + id : null}
-                        type="button"
-                        onClick={onCancel}
-                        disabled={disabled || submitting}
-                        secondary
-                        fluid={mobile}
-                      >
-                        <span>Cancel</span>
-                      </MarginalButton>
-                    </Margin>
-                    <Button
-                      id={id ? 'kv-submit-button-' + id : null}
-                      type="submit"
-                      disabled={pristine || invalid}
-                      loading={submitting && !removing}
+            </Flex>
+          </PaddingMaxWidth>
+        </Header>
+      )}
+      {expanded ? (
+        <CardOutlet>
+          <Padding
+            top={headless ? '0' : '3'}
+            bottom={borderless ? '0' : '3'}
+            horizontal={borderless ? '0' : '3'}
+          >
+            {error && !submitting ? (
+              <Row>
+                <Col xs="12">
+                  <Margin bottom="5">
+                    <Message error>
+                      <MessageTitle>Ooops!</MessageTitle>
+                      <MessageDescription>{error}</MessageDescription>
+                    </Message>
+                  </Margin>
+                </Col>
+              </Row>
+            ) : null}
+            {input === 'input' ? (
+              <InputKeyValue
+                id={id}
+                onBlur={null}
+                type={type}
+                typeLabel={typeLabel}
+                submitting={disabled || submitting}
+                onlyName={onlyName}
+                onlyValue={onlyValue}
+                fluid={mobile}
+              />
+            ) : null}
+            {input === 'textarea' ? (
+              <TextareaKeyValue
+                id={id}
+                type={type}
+                submitting={disabled || submitting}
+                onlyName={onlyName}
+                onlyValue={onlyValue}
+                editor={editor}
+                mobile={mobile}
+              />
+            ) : null}
+            {input !== 'textarea' && input !== 'input'
+              ? input(submitting)
+              : null}
+            <Margin top={mobile ? '3' : '2'}>
+              <Row between="xs" middle="xs">
+                <Col xs={method === 'add' ? '12' : '7'} mobile={mobile}>
+                  <Margin top={mobile ? '1' : '0'} inline>
+                    <MarginalButton
+                      id={id ? 'kv-cancel-button-' + id : null}
+                      type="button"
+                      onClick={onCancel}
+                      disabled={disabled || submitting}
+                      secondary
                       fluid={mobile}
                     >
-                      <span>{method === 'add' ? 'Create' : 'Save'}</span>
+                      <span>Cancel</span>
+                    </MarginalButton>
+                  </Margin>
+                  <Button
+                    id={id ? 'kv-submit-button-' + id : null}
+                    type="submit"
+                    disabled={pristine || invalid}
+                    loading={submitting && !removing}
+                    fluid={mobile}
+                  >
+                    <span>{method === 'add' ? 'Create' : 'Save'}</span>
+                  </Button>
+                </Col>
+                {!noRemove && (
+                  <Col xs={method === 'add' ? false : '5'}>
+                    <Button
+                      type="button"
+                      onClick={onRemove}
+                      disabled={disabled || submitting}
+                      loading={removing}
+                      secondary
+                      right
+                      icon
+                      error
+                      id={id ? 'kv-remove-button-' + id : null}
+                    >
+                      <Margin right="2">
+                        <DeleteIcon
+                          disabled={disabled || submitting}
+                          fill={disabled || submitting ? undefined : theme.red}
+                        />
+                      </Margin>
+                      <span>Delete</span>
                     </Button>
                   </Col>
-                  {!noRemove && (
-                    <Col xs={method === 'add' ? false : '5'}>
-                      <Button
-                        type="button"
-                        onClick={onRemove}
-                        disabled={disabled || submitting}
-                        loading={removing}
-                        secondary
-                        right
-                        icon
-                        error
-                        id={id ? 'kv-remove-button-' + id : null}
-                      >
-                        <Margin right={2}>
-                          <DeleteIcon
-                            disabled={disabled || submitting}
-                            fill={disabled || submitting ? undefined : 'red'}
-                          />
-                        </Margin>
-                        <span>Delete</span>
-                      </Button>
-                    </Col>
-                  )}
-                </Row>
-              </Margin>
-              )}
-            </Padding>
-          </CardOutlet>
-        ) : null}
-      </Card>
-    );
-  }
-);
+                )}
+              </Row>
+            </Margin>
+          </Padding>
+        </CardOutlet>
+      ) : null}
+    </Card>
+  );
+};
 
 KeyValue.propTypes = {
   input: PropTypes.oneOf(['input', 'textarea']).isRequired,
@@ -397,8 +402,8 @@ KeyValue.propTypes = {
   onRemove: PropTypes.func
 };
 
-export default ({ handleSubmit, ...rest }) => (
+export default withTheme(({ handleSubmit, ...rest }) => (
   <form onSubmit={handleSubmit}>
     <KeyValue {...rest} />
   </form>
-);
+));
