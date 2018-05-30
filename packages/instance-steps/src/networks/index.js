@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Margin } from 'styled-components-spacing';
+import { Margin, Padding } from 'styled-components-spacing';
 import { compose, graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import ReduxForm from 'declarative-redux-form';
@@ -9,7 +9,7 @@ import get from 'lodash.get';
 import forceArray from 'force-array';
 import includes from 'lodash.includes';
 import find from 'lodash.find';
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import remcalc from 'remcalc';
 
 import Step, {
@@ -28,10 +28,6 @@ import { Forms, Values } from '../constants';
 const { IR_NW_F } = Forms;
 const { IR_NW_V_INFO_EXPANDED, IR_NW_V_MACHINES_EXPANDED } = Values;
 
-const Form = styled.form`
-  padding-top: ${remcalc(1)};
-`;
-
 const Networks = ({
   preview = [],
   initialValues,
@@ -41,6 +37,7 @@ const Networks = ({
   setMachinesExpanded,
   networks = [],
   loading,
+  theme = {},
   ...props
 }) => (
   <Step name="networks" getValue={handleGetValue} {...props}>
@@ -84,40 +81,45 @@ const Networks = ({
                 <StatusLoader />
               ) : (
                 <Fragment>
-                  <Form>
-                    {networks.map(
-                      (
-                        {
-                          id,
-                          selected,
-                          infoExpanded,
-                          machinesExpanded,
-                          ...network
-                        },
-                        index
-                      ) => (
-                        <NetworkWidget
-                          noMargin={index === networks.length - 1}
-                          key={id}
-                          id={id}
-                          selected={selected}
-                          infoExpanded={infoExpanded}
-                          machinesExpanded={machinesExpanded}
-                          onInfoClick={() => setInfoExpanded(id, !infoExpanded)}
-                          onMachinesClick={() =>
-                            setMachinesExpanded(id, !machinesExpanded)
-                          }
-                          {...network}
-                        />
-                      )
-                    )}
-                  </Form>
+                  <Padding top={1}>
+                    <form>
+                      {networks.map(
+                        (
+                          {
+                            id,
+                            selected,
+                            infoExpanded,
+                            machinesExpanded,
+                            ...network
+                          },
+                          index
+                        ) => (
+                          <NetworkWidget
+                            noMargin={index === networks.length - 1}
+                            key={id}
+                            id={id}
+                            selected={selected}
+                            infoExpanded={infoExpanded}
+                            machinesExpanded={machinesExpanded}
+                            onInfoClick={() =>
+                              setInfoExpanded(id, !infoExpanded)
+                            }
+                            onMachinesClick={() =>
+                              setMachinesExpanded(id, !machinesExpanded)
+                            }
+                            {...network}
+                          />
+                        )
+                      )}
+                    </form>
+                  </Padding>
                   <Margin top="5">
                     <Button
                       id="next-button-networks"
                       type="button"
                       component={Link}
                       to={next}
+                      fluid={theme.screen === 'mobile'}
                     >
                       Next
                     </Button>
@@ -198,4 +200,4 @@ export default compose(
       }
     })
   )
-)(Networks);
+)(withTheme(({ ...rest }) => <Networks {...rest} />));
