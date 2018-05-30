@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import { Margin } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
+import { withTheme } from 'styled-components';
+
 import { compose } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import ReduxForm from 'declarative-redux-form';
@@ -41,97 +43,105 @@ const Metadata = ({
   shouldAsyncValidate,
   handleAsyncValidate,
   handleChangeAddOpen,
+  theme = {},
   ...props
-}) => (
-  <Step name="metadata" getValue={handleGetValue} {...props}>
-    <StepHeader icon={<MetadataIcon />}>Metadata</StepHeader>
-    <StepDescription href="https://docs.joyent.com/public-cloud/tags-metadata">
-      Metadata can be used to pass data to the instance. It can also be used to
-      inject a custom boot script. Unlike tags, metadata is only viewable inside
-      the instance.
-    </StepDescription>
-    <StepPreview>
-      <Margin top="3">
-        <Preview metadata={preview} disabled />
-      </Margin>
-    </StepPreview>
-    <StepOutlet>
-      {({ next }) => (
-        <Margin top="5">
-          {metadata.length ? (
-            <Fragment>
-              <Preview
-                metadata={metadata}
-                handleCancelEdit={handleCancelEdit}
-                handleRemoveMetadata={handleRemoveMetadata}
-                handleToggleExpanded={handleToggleExpanded}
-                handleUpdateMetadata={handleUpdateMetadata}
-                handleAddMetadata={handleAddMetadata}
-                shouldAsyncValidate={shouldAsyncValidate}
-                handleAsyncValidate={handleAsyncValidate}
-                handleChangeAddOpen={handleChangeAddOpen}
-                addOpen={addOpen}
-              />
-            </Fragment>
-          ) : null}
-          <ReduxForm
-            form={IR_MD_F_ADD}
-            destroyOnUnmount={false}
-            forceUnregisterOnUnmount={true}
-            onSubmit={handleAddMetadata}
-            shouldAsyncValidate={shouldAsyncValidate}
-            asyncValidate={handleAsyncValidate}
-          >
-            {props =>
-              addOpen ? (
-                <Fragment>
-                  <KeyValue
-                    {...props}
-                    method="add"
-                    input="textarea"
-                    type="metadata"
-                    id="metadata"
-                    onCancel={() => handleChangeAddOpen(false)}
-                    editor={Editor}
-                    expanded
-                    shadow={false}
-                  />
-                </Fragment>
-              ) : (
-                <Margin top="5">
-                  <Flex>
-                    <FlexItem>
-                      <Margin right="1">
-                        <Button
-                          id="button-add-metadata"
-                          type="button"
-                          onClick={() => handleChangeAddOpen(true)}
-                          secondary
-                        >
-                          Add Metadata
-                        </Button>
-                      </Margin>
-                    </FlexItem>
-                    <FlexItem>
-                      <Button
-                        id="next-button-metadata"
-                        type="button"
-                        component={Link}
-                        to={next}
-                      >
-                        Next
-                      </Button>
-                    </FlexItem>
-                  </Flex>
-                </Margin>
-              )
-            }
-          </ReduxForm>
+}) => {
+  const mobile = theme.screen === 'mobile';
+
+  return (
+    <Step name="metadata" getValue={handleGetValue} {...props}>
+      <StepHeader icon={<MetadataIcon />}>Metadata</StepHeader>
+      <StepDescription href="https://docs.joyent.com/public-cloud/tags-metadata">
+        Metadata can be used to pass data to the instance. It can also be used
+        to inject a custom boot script. Unlike tags, metadata is only viewable
+        inside the instance.
+      </StepDescription>
+      <StepPreview>
+        <Margin top="3">
+          <Preview metadata={preview} disabled />
         </Margin>
-      )}
-    </StepOutlet>
-  </Step>
-);
+      </StepPreview>
+      <StepOutlet>
+        {({ next }) => (
+          <Margin top="5">
+            {metadata.length ? (
+              <Fragment>
+                <Preview
+                  metadata={metadata}
+                  handleCancelEdit={handleCancelEdit}
+                  handleRemoveMetadata={handleRemoveMetadata}
+                  handleToggleExpanded={handleToggleExpanded}
+                  handleUpdateMetadata={handleUpdateMetadata}
+                  handleAddMetadata={handleAddMetadata}
+                  shouldAsyncValidate={shouldAsyncValidate}
+                  handleAsyncValidate={handleAsyncValidate}
+                  handleChangeAddOpen={handleChangeAddOpen}
+                  addOpen={addOpen}
+                />
+              </Fragment>
+            ) : null}
+            <ReduxForm
+              form={IR_MD_F_ADD}
+              destroyOnUnmount={false}
+              forceUnregisterOnUnmount={true}
+              onSubmit={handleAddMetadata}
+              shouldAsyncValidate={shouldAsyncValidate}
+              asyncValidate={handleAsyncValidate}
+            >
+              {props =>
+                addOpen ? (
+                  <Fragment>
+                    <KeyValue
+                      {...props}
+                      method="add"
+                      input="textarea"
+                      type="metadata"
+                      id="metadata"
+                      onCancel={() => handleChangeAddOpen(false)}
+                      editor={Editor}
+                      expanded
+                      shadow={false}
+                    />
+                  </Fragment>
+                ) : (
+                  <Margin top="5">
+                    <Flex column={mobile}>
+                      <FlexItem>
+                        <Margin right={mobile ? '0' : '1'}>
+                          <Button
+                            id="button-add-metadata"
+                            type="button"
+                            onClick={() => handleChangeAddOpen(true)}
+                            secondary
+                          >
+                            Add Metadata
+                          </Button>
+                        </Margin>
+                      </FlexItem>
+                      <FlexItem>
+                        <Margin top={mobile ? 1 : 0}>
+                          <Button
+                            id="next-button-metadata"
+                            type="button"
+                            component={Link}
+                            to={next}
+                            fluid={mobile}
+                          >
+                            Next
+                          </Button>
+                        </Margin>
+                      </FlexItem>
+                    </Flex>
+                  </Margin>
+                )
+              }
+            </ReduxForm>
+          </Margin>
+        )}
+      </StepOutlet>
+    </Step>
+  );
+};
 
 export default compose(
   connect(({ values }, ownProps) => {
@@ -203,4 +213,4 @@ export default compose(
       ]);
     }
   }))
-)(Metadata);
+)(withTheme(({ ...rest }) => <Metadata {...rest} />));
