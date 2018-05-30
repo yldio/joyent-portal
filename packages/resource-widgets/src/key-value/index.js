@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Margin, Padding } from 'styled-components-spacing';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Row, Col } from 'joyent-react-styled-flexboxgrid';
+import { Row, Col as BaseCol } from 'joyent-react-styled-flexboxgrid';
 import { Field } from 'redux-form';
 import remcalc from 'remcalc';
 import titleCase from 'title-case';
@@ -68,6 +68,13 @@ const Meta = styled(CardHeaderMeta)`
 
 const Bold = styled.span`
   font-weight: ${props => props.theme.font.weight.semibold};
+`;
+
+const Col = styled(BaseCol)`
+  ${is('mobile')`
+    display: flex;
+    flex-direction: column-reverse;
+  `};
 `;
 
 const TextareaKeyValue = ({
@@ -138,10 +145,11 @@ const InputKeyValue = ({
   submitting,
   typeLabel,
   onlyName,
-  onlyValue
+  onlyValue,
+  fluid = false
 }) => (
-  <Flex wrap justifyStart contentStretch>
-    {onlyValue ? null : (
+  <Flex wrap justifyStart contentStretch column={fluid}>
+    {!onlyValue ? (
       <FlexItem basis="auto">
         <FormGroup
           id={id ? 'kv-input-name-' + id : null}
@@ -152,8 +160,8 @@ const InputKeyValue = ({
           <FormLabel>
             {titleCase(type)} {typeLabel}
           </FormLabel>
-          <Margin right="3" top="0.5">
-            <Input onBlur={null} type="text" disabled={submitting} />
+          <Margin right={fluid ? '0' : '3'} top="0.5">
+            <Input onBlur={null} type="text" disabled={submitting} fluid />
             <Row>
               <Col sm="7">
                 <FormMeta />
@@ -162,26 +170,28 @@ const InputKeyValue = ({
           </Margin>
         </FormGroup>
       </FlexItem>
-    )}
+    ) : null}
     {onlyName ? null : (
       <Fragment>
         <FlexItem basis="auto">
-          <FormGroup
-            id={id ? 'kv-input-value-' + id : null}
-            name="value"
-            field={Field}
-            fluid
-          >
-            <FormLabel>{titleCase(type)} value</FormLabel>
-            <Margin top="0.5">
-              <Input onBlur={null} type="text" disabled={submitting} />
-              <Row>
-                <Col sm="7">
-                  <FormMeta />
-                </Col>
-              </Row>
-            </Margin>
-          </FormGroup>
+          <Margin top={fluid ? '2' : '0'}>
+            <FormGroup
+              id={id ? 'kv-input-value-' + id : null}
+              name="value"
+              field={Field}
+              fluid
+            >
+              <FormLabel>{titleCase(type)} value</FormLabel>
+              <Margin top="0.5">
+                <Input onBlur={null} type="text" disabled={submitting} fluid />
+                <Row>
+                  <Col sm="7">
+                    <FormMeta />
+                  </Col>
+                </Row>
+              </Margin>
+            </FormGroup>
+          </Margin>
         </FlexItem>
       </Fragment>
     )}
@@ -216,6 +226,7 @@ export const KeyValue = ({
   noActions = false
 }) => {
   const handleHeaderClick = method === 'edit' && onToggleExpanded;
+  const mobile = theme.screen === 'mobile';
 
   return (
     <Card
@@ -294,6 +305,7 @@ export const KeyValue = ({
                 submitting={disabled || submitting}
                 onlyName={onlyName}
                 onlyValue={onlyValue}
+                fluid={mobile}
               />
             ) : null}
             {input === 'textarea' ? (
@@ -309,12 +321,34 @@ export const KeyValue = ({
             {input !== 'textarea' && input !== 'input'
               ? input(submitting)
               : null}
-            {noActions ? null : (
-              <Margin top="2">
-                <Row between="xs" middle="xs">
-                  <Col xs={method === 'add' ? '12' : '7'}>
+            <Margin top={mobile ? '3' : '2'}>
+              <Row between="xs" middle="xs">
+                <Col xs={method === 'add' ? '12' : '7'} mobile={mobile}>
+                  <Margin top={mobile ? '1' : '0'} inline>
                     <MarginalButton
                       id={id ? 'kv-cancel-button-' + id : null}
+                      type="button"
+                      onClick={onCancel}
+                      disabled={disabled || submitting}
+                      secondary
+                      fluid={mobile}
+                    >
+                      <span>Cancel</span>
+                    </MarginalButton>
+                  </Margin>
+                  <Button
+                    id={id ? 'kv-submit-button-' + id : null}
+                    type="submit"
+                    disabled={pristine || invalid}
+                    loading={submitting && !removing}
+                    fluid={mobile}
+                  >
+                    <span>{method === 'add' ? 'Create' : 'Save'}</span>
+                  </Button>
+                </Col>
+                {!noRemove && (
+                  <Col xs={method === 'add' ? false : '5'}>
+                    <Button
                       type="button"
                       onClick={onCancel}
                       disabled={disabled || submitting}
