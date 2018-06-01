@@ -9,13 +9,17 @@ import {
   H3,
   FormGroup,
   FormLabel,
+  Toggle,
   TagList,
   TagItem,
   P,
   Checkbox,
   Strong,
-  Card
+  Card,
+  QueryBreakpoints
 } from 'joyent-ui-toolkit';
+
+const { SmallOnly, MediumDown, Medium, Large } = QueryBreakpoints;
 
 const Form = styled.form`
   margin-bottom: 0 !important;
@@ -71,66 +75,138 @@ const Rule = ({ enabled, rule_obj }) => {
   const tos = rule_obj.to.map((p, index) => parsePartial(p, index, style));
   return (
     <Card disabled={!enabled}>
-      <Padding left="3" right="3" top="2" bottom="2">
-        <Row>
-          <Col xs="3">
-            <Flex justifyStart alignCenter contentStretch>
-              <Margin right="0.5">
-                <FlexItem>
-                  <Strong style={style}>From: </Strong>
-                </FlexItem>
+      <MediumDown>
+        <Flex column>
+          <Padding horizontal="3" vertical="2">
+            <Flex row>
+              <Margin horizontal="1" inline>
+                <Strong style={style}>From: </Strong>
+                <Margin horizontal="1" inline>
+                  {froms}
+                </Margin>
               </Margin>
-              <Flex alignCenter>{froms}</Flex>
-            </Flex>
-          </Col>
-          <Col xs="3">
-            <Flex justifyStart alignCenter contentStretch>
-              <Margin right="0.5">
-                <FlexItem>
-                  <Strong style={style}>To: </Strong>
-                </FlexItem>
+              <Margin left="5" right="1" inline>
+                <Strong style={style}>To: </Strong>
+                <Margin horizontal="1" inline>
+                  {tos}
+                </Margin>
               </Margin>
-              <Flex alignCenter>{tos}</Flex>
             </Flex>
-          </Col>
-          <Col xs="2">
-            <Flex justifyStart alignCenter contentStretch>
-              <Margin right="0.5">
-                <FlexItem>
+          </Padding>
+          <Padding
+            horizontal="3"
+            vertical="2"
+            style={{ 'border-top': '1px solid #D8D8D8' }}
+          >
+            <SmallOnly>
+              <Flex column>
+                <Margin horizontal="1" inline>
                   <Strong style={style}>Protocol: </Strong>
-                </FlexItem>
-              </Margin>
-              <Flex alignCenter>
-                <P style={style}>{protocol.name}</P>
-              </Flex>
-            </Flex>
-          </Col>
-          <Col xs="2">
-            <Flex justifyStart alignCenter contentStretch>
-              <Margin right="0.5">
-                <FlexItem>
+                  <Margin horizontal="1" inline>
+                    {protocol.name}
+                  </Margin>
+                </Margin>
+                <Margin horizontal="1" inline>
                   <Strong style={style}>Ports: </Strong>
-                </FlexItem>
-              </Margin>
-              <Flex alignCenter>
-                <P style={style}>{protocol.targets.join(';')}</P>
-              </Flex>
-            </Flex>
-          </Col>
-          <Col xs="2">
-            <Flex justifyStart alignCenter contentStretch>
-              <Margin right="0.5">
-                <FlexItem>
+                  <Margin horizontal="1" inline>
+                    {protocol.targets.join(';')}
+                  </Margin>
+                </Margin>
+                <Margin horizontal="1" inline>
                   <Strong style={style}>Action: </Strong>
-                </FlexItem>
-              </Margin>
-              <Flex alignCenter>
-                <P style={style}>{capitalizeFirstLetter(action)}</P>
+                  <Margin horizontal="1" inline>
+                    {capitalizeFirstLetter(action)}
+                  </Margin>
+                </Margin>
               </Flex>
-            </Flex>
-          </Col>
-        </Row>
-      </Padding>
+            </SmallOnly>
+            <Medium>
+              <Flex row>
+                <Margin left="1" right="4" inline>
+                  <Strong style={style}>Protocol: </Strong>
+                  <Margin horizontal="1" inline>
+                    {protocol.name}
+                  </Margin>
+                </Margin>
+                <Margin horizontal="4" inline>
+                  <Strong style={style}>Ports: </Strong>
+                  <Margin horizontal="1" inline>
+                    {protocol.targets.join(';')}
+                  </Margin>
+                </Margin>
+                <Margin left="4" right="1" inline>
+                  <Strong style={style}>Action: </Strong>
+                  <Margin horizontal="1" inline>
+                    {capitalizeFirstLetter(action)}
+                  </Margin>
+                </Margin>
+              </Flex>
+            </Medium>
+          </Padding>
+        </Flex>
+      </MediumDown>
+      <Large>
+        <Padding left="3" right="3" top="2" bottom="2">
+          <Row>
+            <Col xs="3">
+              <Flex justifyStart alignCenter contentStretch>
+                <Margin right="0.5">
+                  <FlexItem>
+                    <Strong style={style}>From: </Strong>
+                  </FlexItem>
+                </Margin>
+                <Flex alignCenter>{froms}</Flex>
+              </Flex>
+            </Col>
+            <Col xs="3">
+              <Flex justifyStart alignCenter contentStretch>
+                <Margin right="0.5">
+                  <FlexItem>
+                    <Strong style={style}>To: </Strong>
+                  </FlexItem>
+                </Margin>
+                <Flex alignCenter>{tos}</Flex>
+              </Flex>
+            </Col>
+            <Col xs="2">
+              <Flex justifyStart alignCenter contentStretch>
+                <Margin right="0.5">
+                  <FlexItem>
+                    <Strong style={style}>Protocol: </Strong>
+                  </FlexItem>
+                </Margin>
+                <Flex alignCenter>
+                  <P style={style}>{protocol.name}</P>
+                </Flex>
+              </Flex>
+            </Col>
+            <Col xs="2">
+              <Flex justifyStart alignCenter contentStretch>
+                <Margin right="0.5">
+                  <FlexItem>
+                    <Strong style={style}>Ports: </Strong>
+                  </FlexItem>
+                </Margin>
+                <Flex alignCenter>
+                  <P style={style}>{protocol.targets.join(';')}</P>
+                </Flex>
+              </Flex>
+            </Col>
+            <Col xs="2">
+              <Flex justifyStart alignCenter contentStretch>
+                <Margin right="0.5">
+                  <FlexItem>
+                    <Strong style={style}>Action: </Strong>
+                  </FlexItem>
+                </Margin>
+                <Flex alignCenter>
+                  <P style={style}>{capitalizeFirstLetter(action)}</P>
+                </Flex>
+              </Flex>
+            </Col>
+          </Row>
+        </Padding>
+      </Large>
     </Card>
   );
 };

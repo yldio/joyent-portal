@@ -91,7 +91,7 @@ const TextareaKeyValue = ({
       <Row>
         <Col xs="12">
           <FormGroup
-            id={id ? 'kv-input-key-' + id : null}
+            id={id ? `kv-input-key-${id}` : null}
             name="name"
             field={Field}
             fluid
@@ -119,7 +119,7 @@ const TextareaKeyValue = ({
       <Row>
         <Col xs="12">
           <FormGroup
-            id={id ? 'kv-input-value-' + id : null}
+            id={id ? `kv-input-value-${id}` : null}
             name="value"
             field={Field}
             fluid
@@ -160,7 +160,7 @@ const InputKeyValue = ({
     {onlyValue ? null : (
       <FlexItem basis="auto">
         <FormGroup
-          id={id ? 'kv-input-name-' + id : null}
+          id={id ? `kv-input-name-${id}` : null}
           name="name"
           field={Field}
           fluid
@@ -184,7 +184,7 @@ const InputKeyValue = ({
         <FlexItem basis="auto">
           <Margin top={fluid ? '2' : '0'}>
             <FormGroup
-              id={id ? 'kv-input-value-' + id : null}
+              id={id ? `kv-input-value-${id}` : null}
               name="value"
               field={Field}
               fluid
@@ -335,7 +335,7 @@ export const KeyValue = ({
                 <Col xs={method === 'add' ? '12' : '7'} mobile={mobile}>
                   <Margin top={mobile ? '1' : '0'} inline>
                     <MarginalButton
-                      id={id ? 'kv-cancel-button-' + id : null}
+                      id={id ? `kv-cancel-button-${id}` : null}
                       type="button"
                       onClick={onCancel}
                       disabled={disabled || submitting}
@@ -346,7 +346,7 @@ export const KeyValue = ({
                     </MarginalButton>
                   </Margin>
                   <Button
-                    id={id ? 'kv-submit-button-' + id : null}
+                    id={id ? `kv-submit-button-${id}` : null}
                     type="submit"
                     disabled={pristine || invalid}
                     loading={submitting && !removing}
@@ -366,7 +366,7 @@ export const KeyValue = ({
                       right
                       icon
                       error
-                      id={id ? 'kv-remove-button-' + id : null}
+                      id={id ? `kv-remove-button-${id}` : null}
                     >
                       <Margin right="2">
                         <DeleteIcon
