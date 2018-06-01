@@ -10,6 +10,7 @@ import Flex, { FlexItem } from 'styled-flex-component';
 import is from 'styled-is';
 
 import {
+  Divider,
   H4,
   Button,
   Message,

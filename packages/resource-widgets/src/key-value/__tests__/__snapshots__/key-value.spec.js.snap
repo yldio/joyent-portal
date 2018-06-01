@@ -7,14 +7,23 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 }
 
 .c22 {
-  margin-top: 0.1875rem;
+  margin-top: 0rem;
 }
 
 .c23 {
+  margin-top: 0.1875rem;
+}
+
+.c24 {
   margin-top: 0.75rem;
 }
 
-.c34 {
+.c27 {
+  display: inline-block;
+  margin-top: 0rem;
+}
+
+.c36 {
   margin-right: 0.75rem;
 }
 
@@ -49,7 +58,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -78,7 +87,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   display: block;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -88,7 +97,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   display: block;
 }
 
-.c32 {
+.c34 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -176,7 +185,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c30 {
+.c32 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -188,30 +197,30 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   appearance: button;
 }
 
-.c30::-moz-focus-inner,
-.c30[type='button']::-moz-focus-inner,
-.c30[type='reset']::-moz-focus-inner,
-.c30[type='submit']::-moz-focus-inner {
+.c32::-moz-focus-inner,
+.c32[type='button']::-moz-focus-inner,
+.c32[type='reset']::-moz-focus-inner,
+.c32[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c30:-moz-focusring,
-.c30[type='button']:-moz-focusring,
-.c30[type='reset']:-moz-focusring,
-.c30[type='submit']:-moz-focusring {
+.c32:-moz-focusring,
+.c32[type='button']:-moz-focusring,
+.c32[type='reset']:-moz-focusring,
+.c32[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c29 {
+.c31 {
   min-width: 7.5rem;
 }
 
-.c28 {
+.c30 {
   display: inline-block;
 }
 
-.c27 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -254,7 +263,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c29:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -262,43 +271,43 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c29:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31 {
+.c33 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -342,7 +351,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c31:focus {
+.c33:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -350,43 +359,43 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c33[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c33:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33 {
+.c35 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -442,7 +451,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   float: right;
 }
 
-.c33:focus {
+.c35:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -450,57 +459,57 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c33[disabled] {
+.c35[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c33:focus {
+.c35:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c33:focus {
+.c35:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c33:hover {
+.c35:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
@@ -688,7 +697,8 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
-  max-width: 22.1875rem;
+  width: 100%;
+  min-width: 100%;
   text-overflow: ellipsis;
 }
 
@@ -743,7 +753,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c26 {
+.c28 {
   margin-right: 0.375rem;
 }
 
@@ -760,7 +770,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -769,7 +779,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -787,7 +797,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c26 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -796,7 +806,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c32 {
+  .c34 {
     display: none;
   }
 }
@@ -888,63 +898,71 @@ exports[`renders <KeyValue /> without throwing 1`] = `
             className="c14"
           >
             <div
-              className="c15"
-              id={null}
-              name="value"
-              role="group"
-              style={undefined}
+              className="c22"
             >
-              <label
-                className="c16 c17"
-                htmlFor={null}
-              >
-                Metadata
-                 value
-              </label>
               <div
-                className="c22"
+                className="c15"
+                id={null}
+                name="value"
+                role="group"
+                style={undefined}
               >
-                <input
-                  className="c19"
-                  disabled={false}
-                  id={null}
-                  onBlur={null}
-                />
-                <div
-                  className="c20"
+                <label
+                  className="c16 c17"
+                  htmlFor={null}
                 >
-                  <div
-                    className="c21"
+                  Metadata
+                   value
+                </label>
+                <div
+                  className="c23"
+                >
+                  <input
+                    className="c19"
+                    disabled={false}
+                    id={null}
+                    onBlur={null}
                   />
+                  <div
+                    className="c20"
+                  >
+                    <div
+                      className="c21"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <div
-            className="c24"
+            className="c25"
           >
             <div
-              className="c25"
+              className="c26"
             >
-              <button
-                className="c26 c27 c28 c29 c30"
-                data-ui-button="true"
-                disabled={false}
-                href=""
-                id={null}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="c27"
               >
-                <span>
-                  Cancel
-                </span>
-              </button>
+                <button
+                  className="c28 c29 c30 c31 c32"
+                  data-ui-button="true"
+                  disabled={false}
+                  href=""
+                  id={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Cancel
+                  </span>
+                </button>
+              </div>
               <button
-                className="c31 c28 c29 c30"
+                className="c33 c30 c31 c32"
                 data-ui-button="true"
                 disabled={true}
                 href=""
@@ -957,10 +975,10 @@ exports[`renders <KeyValue /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c32"
+              className="c34"
             >
               <button
-                className="c33 c28 c29 c30"
+                className="c35 c30 c31 c32"
                 data-ui-button="true"
                 disabled={false}
                 href=""
@@ -970,7 +988,7 @@ exports[`renders <KeyValue /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c34"
+                  className="c36"
                 >
                   <svg
                     height="16"
@@ -1209,14 +1227,23 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
 }
 
 .c22 {
-  margin-top: 0.1875rem;
+  margin-top: 0rem;
 }
 
 .c23 {
+  margin-top: 0.1875rem;
+}
+
+.c24 {
   margin-top: 0.75rem;
 }
 
-.c34 {
+.c27 {
+  display: inline-block;
+  margin-top: 0rem;
+}
+
+.c36 {
   margin-right: 0.75rem;
 }
 
@@ -1251,7 +1278,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1280,7 +1307,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   display: block;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1290,7 +1317,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   display: block;
 }
 
-.c32 {
+.c34 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -1378,7 +1405,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c30 {
+.c32 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -1390,30 +1417,30 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   appearance: button;
 }
 
-.c30::-moz-focus-inner,
-.c30[type='button']::-moz-focus-inner,
-.c30[type='reset']::-moz-focus-inner,
-.c30[type='submit']::-moz-focus-inner {
+.c32::-moz-focus-inner,
+.c32[type='button']::-moz-focus-inner,
+.c32[type='reset']::-moz-focus-inner,
+.c32[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c30:-moz-focusring,
-.c30[type='button']:-moz-focusring,
-.c30[type='reset']:-moz-focusring,
-.c30[type='submit']:-moz-focusring {
+.c32:-moz-focusring,
+.c32[type='button']:-moz-focusring,
+.c32[type='reset']:-moz-focusring,
+.c32[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c29 {
+.c31 {
   min-width: 7.5rem;
 }
 
-.c28 {
+.c30 {
   display: inline-block;
 }
 
-.c27 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1456,7 +1483,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c29:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1464,43 +1491,43 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c29:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31 {
+.c33 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1544,7 +1571,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c31:focus {
+.c33:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1552,43 +1579,43 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c33[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c33:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33 {
+.c35 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -1644,7 +1671,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   float: right;
 }
 
-.c33:focus {
+.c35:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1652,57 +1679,57 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c33[disabled] {
+.c35[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c33:focus {
+.c35:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c33:focus {
+.c35:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c33:hover {
+.c35:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
@@ -1890,7 +1917,8 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
-  max-width: 22.1875rem;
+  width: 100%;
+  min-width: 100%;
   text-overflow: ellipsis;
 }
 
@@ -1945,7 +1973,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c26 {
+.c28 {
   margin-right: 0.375rem;
 }
 
@@ -1962,7 +1990,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1971,7 +1999,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1989,7 +2017,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c26 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1998,7 +2026,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c32 {
+  .c34 {
     display: none;
   }
 }
@@ -2090,63 +2118,71 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
             className="c14"
           >
             <div
-              className="c15"
-              id={null}
-              name="value"
-              role="group"
-              style={undefined}
+              className="c22"
             >
-              <label
-                className="c16 c17"
-                htmlFor={null}
-              >
-                Metadata
-                 value
-              </label>
               <div
-                className="c22"
+                className="c15"
+                id={null}
+                name="value"
+                role="group"
+                style={undefined}
               >
-                <input
-                  className="c19"
-                  disabled={false}
-                  id={null}
-                  onBlur={null}
-                />
-                <div
-                  className="c20"
+                <label
+                  className="c16 c17"
+                  htmlFor={null}
                 >
-                  <div
-                    className="c21"
+                  Metadata
+                   value
+                </label>
+                <div
+                  className="c23"
+                >
+                  <input
+                    className="c19"
+                    disabled={false}
+                    id={null}
+                    onBlur={null}
                   />
+                  <div
+                    className="c20"
+                  >
+                    <div
+                      className="c21"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <div
-            className="c24"
+            className="c25"
           >
             <div
-              className="c25"
+              className="c26"
             >
-              <button
-                className="c26 c27 c28 c29 c30"
-                data-ui-button="true"
-                disabled={false}
-                href=""
-                id={null}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="c27"
               >
-                <span>
-                  Cancel
-                </span>
-              </button>
+                <button
+                  className="c28 c29 c30 c31 c32"
+                  data-ui-button="true"
+                  disabled={false}
+                  href=""
+                  id={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Cancel
+                  </span>
+                </button>
+              </div>
               <button
-                className="c31 c28 c29 c30"
+                className="c33 c30 c31 c32"
                 data-ui-button="true"
                 disabled={true}
                 href=""
@@ -2159,10 +2195,10 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c32"
+              className="c34"
             >
               <button
-                className="c33 c28 c29 c30"
+                className="c35 c30 c31 c32"
                 data-ui-button="true"
                 disabled={false}
                 href=""
@@ -2172,7 +2208,7 @@ exports[`renders <KeyValue input="input" /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c34"
+                  className="c36"
                 >
                   <svg
                     height="16"
@@ -2209,11 +2245,16 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c23 {
+.c24 {
   margin-top: 0.75rem;
 }
 
-.c33 {
+.c26 {
+  display: inline-block;
+  margin-top: 0rem;
+}
+
+.c35 {
   margin-right: 0.75rem;
 }
 
@@ -2248,7 +2289,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2287,7 +2328,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   display: block;
 }
 
-.c31 {
+.c33 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -2325,7 +2366,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   align-items: center;
 }
 
-.c29 {
+.c31 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -2337,30 +2378,30 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   appearance: button;
 }
 
-.c29::-moz-focus-inner,
-.c29[type='button']::-moz-focus-inner,
-.c29[type='reset']::-moz-focus-inner,
-.c29[type='submit']::-moz-focus-inner {
+.c31::-moz-focus-inner,
+.c31[type='button']::-moz-focus-inner,
+.c31[type='reset']::-moz-focus-inner,
+.c31[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c29:-moz-focusring,
-.c29[type='button']:-moz-focusring,
-.c29[type='reset']:-moz-focusring,
-.c29[type='submit']:-moz-focusring {
+.c31:-moz-focusring,
+.c31[type='button']:-moz-focusring,
+.c31[type='reset']:-moz-focusring,
+.c31[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c28 {
+.c30 {
   min-width: 7.5rem;
 }
 
-.c27 {
+.c29 {
   display: inline-block;
 }
 
-.c26 {
+.c28 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2403,7 +2444,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c26:focus {
+.c28:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2411,43 +2452,43 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c26:hover {
+.c28:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c26[disabled] {
+.c28[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c26:focus {
+.c28:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c26:hover {
+.c28:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c26:active,
-.c26:active:hover,
-.c26:active:focus {
+.c28:active,
+.c28:active:hover,
+.c28:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c30 {
+.c32 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2491,7 +2532,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c30:focus {
+.c32:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2499,43 +2540,43 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c30:hover {
+.c32:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c30:active,
-.c30:active:hover,
-.c30:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c30[disabled] {
+.c32[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c30:focus {
+.c32:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c30:hover {
+.c32:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c30:active,
-.c30:active:hover,
-.c30:active:focus {
+.c32:active,
+.c32:active:hover,
+.c32:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c32 {
+.c34 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -2591,7 +2632,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   float: right;
 }
 
-.c32:focus {
+.c34:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -2599,57 +2640,57 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c32:hover {
+.c34:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c32:active,
-.c32:active:hover,
-.c32:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c32[disabled] {
+.c34[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c32:focus {
+.c34:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c32:hover {
+.c34:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c32:active,
-.c32:active:hover,
-.c32:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c32:focus {
+.c34:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c32:hover {
+.c34:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c32:active,
-.c32:active:hover,
-.c32:active:focus {
+.c34:active,
+.c34:active:hover,
+.c34:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
@@ -2670,6 +2711,13 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   font-weight: 400;
   line-height: 1.5rem;
   font-size: 0.9375rem;
+}
+
+.c21 {
+  height: 1px;
+  background-color: rgb(216,216,216);
+  height: 0.75rem;
+  background-color: transparent;
 }
 
 .c0 {
@@ -2880,7 +2928,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   color: rgba(73,73,73,0.5);
 }
 
-.c22 {
+.c23 {
   box-sizing: border-box;
   width: 18.75rem;
   height: 6rem;
@@ -2905,62 +2953,62 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   resize: vertical;
 }
 
-.c22:focus {
+.c23:focus {
   border-color: rgb(59,70,204);
   outline: 0;
 }
 
-.c22::-webkit-input-placeholder {
+.c23::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c22::-moz-placeholder {
+.c23::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c22:-ms-input-placeholder {
+.c23:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c22:invalid {
+.c23:invalid {
   box-shadow: none;
 }
 
-.c22:disabled {
+.c23:disabled {
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
 }
 
-.c22:disabled::-webkit-input-placeholder {
+.c23:disabled::-webkit-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c22:disabled::-moz-placeholder {
+.c23:disabled::-moz-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c22:disabled:-ms-input-placeholder {
+.c23:disabled:-ms-input-placeholder {
   color: rgba(73,73,73,0.5);
 }
 
-.c22:disabled {
+.c23:disabled {
   color: rgb(73,73,73);
 }
 
-.c22:disabled::-webkit-input-placeholder {
+.c23:disabled::-webkit-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c22:disabled::-moz-placeholder {
+.c23:disabled::-moz-placeholder {
   color: rgb(73,73,73);
 }
 
-.c22:disabled:-ms-input-placeholder {
+.c23:disabled:-ms-input-placeholder {
   color: rgb(73,73,73);
 }
 
-.c21 {
+.c22 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2985,7 +3033,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c25 {
+.c27 {
   margin-right: 0.375rem;
 }
 
@@ -3002,7 +3050,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -3011,7 +3059,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -3038,7 +3086,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c31 {
+  .c33 {
     display: none;
   }
 }
@@ -3123,6 +3171,10 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
                 </div>
               </div>
             </div>
+            <div
+              className="c21 c13"
+              height="0.75rem"
+            />
           </div>
         </div>
         <div
@@ -3149,7 +3201,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
                 className="c18"
               >
                 <textarea
-                  className="c21 c22"
+                  className="c22 c23"
                   disabled={false}
                   id={null}
                   name="name"
@@ -3164,32 +3216,40 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
                 />
               </div>
             </div>
+            <div
+              className="c21 c13"
+              height="0.75rem"
+            />
           </div>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <div
-            className="c24"
+            className="c25"
           >
             <div
               className="c14"
             >
-              <button
-                className="c25 c26 c27 c28 c29"
-                data-ui-button="true"
-                disabled={false}
-                href=""
-                id={null}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="c26"
               >
-                <span>
-                  Cancel
-                </span>
-              </button>
+                <button
+                  className="c27 c28 c29 c30 c31"
+                  data-ui-button="true"
+                  disabled={false}
+                  href=""
+                  id={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Cancel
+                  </span>
+                </button>
+              </div>
               <button
-                className="c30 c27 c28 c29"
+                className="c32 c29 c30 c31"
                 data-ui-button="true"
                 disabled={true}
                 href=""
@@ -3202,10 +3262,10 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c31"
+              className="c33"
             >
               <button
-                className="c32 c27 c28 c29"
+                className="c34 c29 c30 c31"
                 data-ui-button="true"
                 disabled={false}
                 href=""
@@ -3215,7 +3275,7 @@ exports[`renders <KeyValue input="textarea" /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c33"
+                  className="c35"
                 >
                   <svg
                     height="16"
@@ -3254,14 +3314,23 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 }
 
 .c22 {
-  margin-top: 0.1875rem;
+  margin-top: 0rem;
 }
 
 .c23 {
+  margin-top: 0.1875rem;
+}
+
+.c24 {
   margin-top: 0.75rem;
 }
 
-.c34 {
+.c27 {
+  display: inline-block;
+  margin-top: 0rem;
+}
+
+.c36 {
   margin-right: 0.75rem;
 }
 
@@ -3296,7 +3365,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3325,7 +3394,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   display: block;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3335,7 +3404,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   display: block;
 }
 
-.c32 {
+.c34 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -3423,7 +3492,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c30 {
+.c32 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -3435,30 +3504,30 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   appearance: button;
 }
 
-.c30::-moz-focus-inner,
-.c30[type='button']::-moz-focus-inner,
-.c30[type='reset']::-moz-focus-inner,
-.c30[type='submit']::-moz-focus-inner {
+.c32::-moz-focus-inner,
+.c32[type='button']::-moz-focus-inner,
+.c32[type='reset']::-moz-focus-inner,
+.c32[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c30:-moz-focusring,
-.c30[type='button']:-moz-focusring,
-.c30[type='reset']:-moz-focusring,
-.c30[type='submit']:-moz-focusring {
+.c32:-moz-focusring,
+.c32[type='button']:-moz-focusring,
+.c32[type='reset']:-moz-focusring,
+.c32[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c29 {
+.c31 {
   min-width: 7.5rem;
 }
 
-.c28 {
+.c30 {
   display: inline-block;
 }
 
-.c27 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3501,7 +3570,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c29:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3509,43 +3578,43 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c29:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31 {
+.c33 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3589,7 +3658,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c31:focus {
+.c33:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3597,43 +3666,43 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c33[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c33:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33 {
+.c35 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3689,7 +3758,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   float: right;
 }
 
-.c33:focus {
+.c35:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3697,57 +3766,57 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c33[disabled] {
+.c35[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c33:focus {
+.c35:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c33:focus {
+.c35:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c33:hover {
+.c35:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
@@ -3935,7 +4004,8 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
-  max-width: 22.1875rem;
+  width: 100%;
+  min-width: 100%;
   text-overflow: ellipsis;
 }
 
@@ -3990,7 +4060,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c26 {
+.c28 {
   margin-right: 0.375rem;
 }
 
@@ -4007,7 +4077,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4016,7 +4086,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4034,7 +4104,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c26 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -4043,7 +4113,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c32 {
+  .c34 {
     display: none;
   }
 }
@@ -4135,63 +4205,71 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
             className="c14"
           >
             <div
-              className="c15"
-              id={null}
-              name="value"
-              role="group"
-              style={undefined}
+              className="c22"
             >
-              <label
-                className="c16 c17"
-                htmlFor={null}
-              >
-                Metadata
-                 value
-              </label>
               <div
-                className="c22"
+                className="c15"
+                id={null}
+                name="value"
+                role="group"
+                style={undefined}
               >
-                <input
-                  className="c19"
-                  disabled={false}
-                  id={null}
-                  onBlur={null}
-                />
-                <div
-                  className="c20"
+                <label
+                  className="c16 c17"
+                  htmlFor={null}
                 >
-                  <div
-                    className="c21"
+                  Metadata
+                   value
+                </label>
+                <div
+                  className="c23"
+                >
+                  <input
+                    className="c19"
+                    disabled={false}
+                    id={null}
+                    onBlur={null}
                   />
+                  <div
+                    className="c20"
+                  >
+                    <div
+                      className="c21"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <div
-            className="c24"
+            className="c25"
           >
             <div
-              className="c25"
+              className="c26"
             >
-              <button
-                className="c26 c27 c28 c29 c30"
-                data-ui-button="true"
-                disabled={false}
-                href=""
-                id={null}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="c27"
               >
-                <span>
-                  Cancel
-                </span>
-              </button>
+                <button
+                  className="c28 c29 c30 c31 c32"
+                  data-ui-button="true"
+                  disabled={false}
+                  href=""
+                  id={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Cancel
+                  </span>
+                </button>
+              </div>
               <button
-                className="c31 c28 c29 c30"
+                className="c33 c30 c31 c32"
                 data-ui-button="true"
                 disabled={true}
                 href=""
@@ -4204,10 +4282,10 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c32"
+              className="c34"
             >
               <button
-                className="c33 c28 c29 c30"
+                className="c35 c30 c31 c32"
                 data-ui-button="true"
                 disabled={false}
                 href=""
@@ -4217,7 +4295,7 @@ exports[`renders <KeyValue method="add" /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c34"
+                  className="c36"
                 >
                   <svg
                     height="16"
@@ -4256,14 +4334,23 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 }
 
 .c22 {
-  margin-top: 0.1875rem;
+  margin-top: 0rem;
 }
 
 .c23 {
+  margin-top: 0.1875rem;
+}
+
+.c24 {
   margin-top: 0.75rem;
 }
 
-.c34 {
+.c27 {
+  display: inline-block;
+  margin-top: 0rem;
+}
+
+.c36 {
   margin-right: 0.75rem;
 }
 
@@ -4298,7 +4385,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4327,7 +4414,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   display: block;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4337,7 +4424,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   display: block;
 }
 
-.c32 {
+.c34 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4425,7 +4512,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c30 {
+.c32 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -4437,30 +4524,30 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   appearance: button;
 }
 
-.c30::-moz-focus-inner,
-.c30[type='button']::-moz-focus-inner,
-.c30[type='reset']::-moz-focus-inner,
-.c30[type='submit']::-moz-focus-inner {
+.c32::-moz-focus-inner,
+.c32[type='button']::-moz-focus-inner,
+.c32[type='reset']::-moz-focus-inner,
+.c32[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c30:-moz-focusring,
-.c30[type='button']:-moz-focusring,
-.c30[type='reset']:-moz-focusring,
-.c30[type='submit']:-moz-focusring {
+.c32:-moz-focusring,
+.c32[type='button']:-moz-focusring,
+.c32[type='reset']:-moz-focusring,
+.c32[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c29 {
+.c31 {
   min-width: 7.5rem;
 }
 
-.c28 {
+.c30 {
   display: inline-block;
 }
 
-.c27 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4503,7 +4590,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c29:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4511,43 +4598,43 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c29:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31 {
+.c33 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4591,7 +4678,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c31:focus {
+.c33:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4599,43 +4686,43 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c33[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c33:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33 {
+.c35 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -4691,7 +4778,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   float: right;
 }
 
-.c33:focus {
+.c35:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -4699,57 +4786,57 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c33[disabled] {
+.c35[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c33:focus {
+.c35:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c33:focus {
+.c35:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c33:hover {
+.c35:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
@@ -4929,7 +5016,8 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
-  max-width: 22.1875rem;
+  width: 100%;
+  min-width: 100%;
   text-overflow: ellipsis;
 }
 
@@ -4993,7 +5081,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c26 {
+.c28 {
   margin-right: 0.375rem;
 }
 
@@ -5010,7 +5098,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -5019,7 +5107,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -5037,7 +5125,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c26 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -5046,7 +5134,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c32 {
+  .c34 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -5139,63 +5227,71 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
             className="c14"
           >
             <div
-              className="c15"
-              id={null}
-              name="value"
-              role="group"
-              style={undefined}
+              className="c22"
             >
-              <label
-                className="c16 c17"
-                htmlFor={null}
-              >
-                Metadata
-                 value
-              </label>
               <div
-                className="c22"
+                className="c15"
+                id={null}
+                name="value"
+                role="group"
+                style={undefined}
               >
-                <input
-                  className="c19"
-                  disabled={false}
-                  id={null}
-                  onBlur={null}
-                />
-                <div
-                  className="c20"
+                <label
+                  className="c16 c17"
+                  htmlFor={null}
                 >
-                  <div
-                    className="c21"
+                  Metadata
+                   value
+                </label>
+                <div
+                  className="c23"
+                >
+                  <input
+                    className="c19"
+                    disabled={false}
+                    id={null}
+                    onBlur={null}
                   />
+                  <div
+                    className="c20"
+                  >
+                    <div
+                      className="c21"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <div
-            className="c24"
+            className="c25"
           >
             <div
-              className="c25"
+              className="c26"
             >
-              <button
-                className="c26 c27 c28 c29 c30"
-                data-ui-button="true"
-                disabled={false}
-                href=""
-                id={null}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="c27"
               >
-                <span>
-                  Cancel
-                </span>
-              </button>
+                <button
+                  className="c28 c29 c30 c31 c32"
+                  data-ui-button="true"
+                  disabled={false}
+                  href=""
+                  id={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Cancel
+                  </span>
+                </button>
+              </div>
               <button
-                className="c31 c28 c29 c30"
+                className="c33 c30 c31 c32"
                 data-ui-button="true"
                 disabled={true}
                 href=""
@@ -5208,10 +5304,10 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c32"
+              className="c34"
             >
               <button
-                className="c33 c28 c29 c30"
+                className="c35 c30 c31 c32"
                 data-ui-button="true"
                 disabled={false}
                 href=""
@@ -5221,7 +5317,7 @@ exports[`renders <KeyValue method="edit" /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c34"
+                  className="c36"
                 >
                   <svg
                     height="16"
@@ -5260,11 +5356,20 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 }
 
 .c22 {
-  margin-top: 0.1875rem;
+  margin-top: 0rem;
 }
 
 .c23 {
+  margin-top: 0.1875rem;
+}
+
+.c24 {
   margin-top: 0.75rem;
+}
+
+.c27 {
+  display: inline-block;
+  margin-top: 0rem;
 }
 
 .c5 {
@@ -5298,7 +5403,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5327,7 +5432,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   display: block;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -5337,7 +5442,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   display: block;
 }
 
-.c32 {
+.c34 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -5425,7 +5530,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c30 {
+.c32 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -5437,39 +5542,39 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   appearance: button;
 }
 
-.c30::-moz-focus-inner,
-.c30[type='button']::-moz-focus-inner,
-.c30[type='reset']::-moz-focus-inner,
-.c30[type='submit']::-moz-focus-inner {
+.c32::-moz-focus-inner,
+.c32[type='button']::-moz-focus-inner,
+.c32[type='reset']::-moz-focus-inner,
+.c32[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c30:-moz-focusring,
-.c30[type='button']:-moz-focusring,
-.c30[type='reset']:-moz-focusring,
-.c30[type='submit']:-moz-focusring {
+.c32:-moz-focusring,
+.c32[type='button']:-moz-focusring,
+.c32[type='reset']:-moz-focusring,
+.c32[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c35 {
+.c37 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c36 {
+.c38 {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
-.c37 {
+.c39 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
-.c34 {
+.c36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5497,15 +5602,15 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   flex: 1 0 auto;
 }
 
-.c29 {
+.c31 {
   min-width: 7.5rem;
 }
 
-.c28 {
+.c30 {
   display: inline-block;
 }
 
-.c27 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5548,7 +5653,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c29:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5556,43 +5661,43 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c29:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31 {
+.c33 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5636,7 +5741,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c31:focus {
+.c33:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5644,43 +5749,43 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c33[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c33:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33 {
+.c35 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -5741,7 +5846,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   float: right;
 }
 
-.c33:focus {
+.c35:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -5749,74 +5854,74 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c33[disabled] {
+.c35[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c33:focus {
+.c35:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c33:focus {
+.c35:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c33:hover {
+.c35:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c33:focus {
+.c35:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
@@ -6004,7 +6109,8 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
-  max-width: 22.1875rem;
+  width: 100%;
+  min-width: 100%;
   text-overflow: ellipsis;
 }
 
@@ -6059,7 +6165,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c26 {
+.c28 {
   margin-right: 0.375rem;
 }
 
@@ -6076,7 +6182,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -6085,7 +6191,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -6103,7 +6209,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c26 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -6112,7 +6218,7 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c32 {
+  .c34 {
     display: none;
   }
 }
@@ -6204,63 +6310,71 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
             className="c14"
           >
             <div
-              className="c15"
-              id={null}
-              name="value"
-              role="group"
-              style={undefined}
+              className="c22"
             >
-              <label
-                className="c16 c17"
-                htmlFor={null}
-              >
-                Metadata
-                 value
-              </label>
               <div
-                className="c22"
+                className="c15"
+                id={null}
+                name="value"
+                role="group"
+                style={undefined}
               >
-                <input
-                  className="c19"
-                  disabled={false}
-                  id={null}
-                  onBlur={null}
-                />
-                <div
-                  className="c20"
+                <label
+                  className="c16 c17"
+                  htmlFor={null}
                 >
-                  <div
-                    className="c21"
+                  Metadata
+                   value
+                </label>
+                <div
+                  className="c23"
+                >
+                  <input
+                    className="c19"
+                    disabled={false}
+                    id={null}
+                    onBlur={null}
                   />
+                  <div
+                    className="c20"
+                  >
+                    <div
+                      className="c21"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <div
-            className="c24"
+            className="c25"
           >
             <div
-              className="c25"
+              className="c26"
             >
-              <button
-                className="c26 c27 c28 c29 c30"
-                data-ui-button="true"
-                disabled={false}
-                href=""
-                id={null}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="c27"
               >
-                <span>
-                  Cancel
-                </span>
-              </button>
+                <button
+                  className="c28 c29 c30 c31 c32"
+                  data-ui-button="true"
+                  disabled={false}
+                  href=""
+                  id={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Cancel
+                  </span>
+                </button>
+              </div>
               <button
-                className="c31 c28 c29 c30"
+                className="c33 c30 c31 c32"
                 data-ui-button="true"
                 disabled={true}
                 href=""
@@ -6273,10 +6387,10 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c32"
+              className="c34"
             >
               <button
-                className="c33 c28 c29 c30"
+                className="c35 c30 c31 c32"
                 data-ui-button="true"
                 disabled={false}
                 href=""
@@ -6286,28 +6400,28 @@ exports[`renders <KeyValue removing /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c34"
+                  className="c36"
                 >
                   <svg
                     height="10"
                     width="28"
                   >
                     <rect
-                      className="c35"
+                      className="c37"
                       height="6"
                       width="6"
                       x="2"
                       y="2"
                     />
                     <rect
-                      className="c36 c35"
+                      className="c38 c37"
                       height="6"
                       width="6"
                       x="11"
                       y="2"
                     />
                     <rect
-                      className="c37 c35"
+                      className="c39 c37"
                       height="6"
                       width="6"
                       x="20"
@@ -6332,14 +6446,23 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 }
 
 .c22 {
-  margin-top: 0.1875rem;
+  margin-top: 0rem;
 }
 
 .c23 {
+  margin-top: 0.1875rem;
+}
+
+.c24 {
   margin-top: 0.75rem;
 }
 
-.c38 {
+.c27 {
+  display: inline-block;
+  margin-top: 0rem;
+}
+
+.c40 {
   margin-right: 0.75rem;
 }
 
@@ -6374,7 +6497,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6403,7 +6526,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   display: block;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6413,7 +6536,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   display: block;
 }
 
-.c36 {
+.c38 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -6501,7 +6624,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c30 {
+.c32 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -6513,39 +6636,39 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   appearance: button;
 }
 
-.c30::-moz-focus-inner,
-.c30[type='button']::-moz-focus-inner,
-.c30[type='reset']::-moz-focus-inner,
-.c30[type='submit']::-moz-focus-inner {
+.c32::-moz-focus-inner,
+.c32[type='button']::-moz-focus-inner,
+.c32[type='reset']::-moz-focus-inner,
+.c32[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c30:-moz-focusring,
-.c30[type='button']:-moz-focusring,
-.c30[type='reset']:-moz-focusring,
-.c30[type='submit']:-moz-focusring {
+.c32:-moz-focusring,
+.c32[type='button']:-moz-focusring,
+.c32[type='reset']:-moz-focusring,
+.c32[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c33 {
+.c35 {
   fill: rgb(59,70,204);
   stroke: rgb(59,70,204);
   -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
   animation: iCqDak 1.5s ease-out 0s infinite;
 }
 
-.c34 {
+.c36 {
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
-.c35 {
+.c37 {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
-.c32 {
+.c34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6573,15 +6696,15 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   flex: 1 0 auto;
 }
 
-.c29 {
+.c31 {
   min-width: 7.5rem;
 }
 
-.c28 {
+.c30 {
   display: inline-block;
 }
 
-.c31 {
+.c33 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6625,7 +6748,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c31:focus {
+.c33:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6633,43 +6756,43 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c33[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c33:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c37 {
+.c39 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6730,7 +6853,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   float: right;
 }
 
-.c37:focus {
+.c39:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6738,79 +6861,79 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c37:hover {
+.c39:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c39:active,
+.c39:active:hover,
+.c39:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c37[disabled] {
+.c39[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c37:focus {
+.c39:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c37:hover {
+.c39:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c39:active,
+.c39:active:hover,
+.c39:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c37:focus {
+.c39:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c37:hover {
+.c39:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c39:active,
+.c39:active:hover,
+.c39:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
 
-.c37:focus {
+.c39:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c37:hover {
+.c39:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c37:active,
-.c37:active:hover,
-.c37:active:focus {
+.c39:active,
+.c39:active:hover,
+.c39:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c27 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -6858,7 +6981,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c29:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -6866,55 +6989,55 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c29:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c29:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
@@ -7105,7 +7228,8 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   background-color: rgb(250,250,250);
   color: rgb(216,216,216);
   cursor: not-allowed;
-  max-width: 22.1875rem;
+  width: 100%;
+  min-width: 100%;
   text-overflow: ellipsis;
 }
 
@@ -7172,7 +7296,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c26 {
+.c28 {
   margin-right: 0.375rem;
 }
 
@@ -7189,7 +7313,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -7198,7 +7322,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -7216,7 +7340,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c26 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -7225,7 +7349,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c36 {
+  .c38 {
     display: none;
   }
 }
@@ -7317,63 +7441,71 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
             className="c14"
           >
             <div
-              className="c15"
-              id={null}
-              name="value"
-              role="group"
-              style={undefined}
+              className="c22"
             >
-              <label
-                className="c16 c17"
-                htmlFor={null}
-              >
-                Metadata
-                 value
-              </label>
               <div
-                className="c22"
+                className="c15"
+                id={null}
+                name="value"
+                role="group"
+                style={undefined}
               >
-                <input
-                  className="c19"
-                  disabled={true}
-                  id={null}
-                  onBlur={null}
-                />
-                <div
-                  className="c20"
+                <label
+                  className="c16 c17"
+                  htmlFor={null}
                 >
-                  <div
-                    className="c21"
+                  Metadata
+                   value
+                </label>
+                <div
+                  className="c23"
+                >
+                  <input
+                    className="c19"
+                    disabled={true}
+                    id={null}
+                    onBlur={null}
                   />
+                  <div
+                    className="c20"
+                  >
+                    <div
+                      className="c21"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <div
-            className="c24"
+            className="c25"
           >
             <div
-              className="c25"
+              className="c26"
             >
-              <button
-                className="c26 c27 c28 c29 c30"
-                data-ui-button="true"
-                disabled={true}
-                href=""
-                id={null}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="c27"
               >
-                <span>
-                  Cancel
-                </span>
-              </button>
+                <button
+                  className="c28 c29 c30 c31 c32"
+                  data-ui-button="true"
+                  disabled={true}
+                  href=""
+                  id={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Cancel
+                  </span>
+                </button>
+              </div>
               <button
-                className="c31 c28 c29 c30"
+                className="c33 c30 c31 c32"
                 data-ui-button="true"
                 disabled={true}
                 href=""
@@ -7381,28 +7513,28 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
                 type="submit"
               >
                 <div
-                  className="c32"
+                  className="c34"
                 >
                   <svg
                     height="10"
                     width="28"
                   >
                     <rect
-                      className="c33"
+                      className="c35"
                       height="6"
                       width="6"
                       x="2"
                       y="2"
                     />
                     <rect
-                      className="c34 c33"
+                      className="c36 c35"
                       height="6"
                       width="6"
                       x="11"
                       y="2"
                     />
                     <rect
-                      className="c35 c33"
+                      className="c37 c35"
                       height="6"
                       width="6"
                       x="20"
@@ -7413,10 +7545,10 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c36"
+              className="c38"
             >
               <button
-                className="c37 c28 c29 c30"
+                className="c39 c30 c31 c32"
                 data-ui-button="true"
                 disabled={true}
                 href=""
@@ -7426,7 +7558,7 @@ exports[`renders <KeyValue submitting /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c38"
+                  className="c40"
                 >
                   <svg
                     height="16"
@@ -7465,14 +7597,23 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 }
 
 .c22 {
-  margin-top: 0.1875rem;
+  margin-top: 0rem;
 }
 
 .c23 {
+  margin-top: 0.1875rem;
+}
+
+.c24 {
   margin-top: 0.75rem;
 }
 
-.c34 {
+.c27 {
+  display: inline-block;
+  margin-top: 0rem;
+}
+
+.c36 {
   margin-right: 0.75rem;
 }
 
@@ -7507,7 +7648,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c24 {
+.c25 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -7536,7 +7677,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   display: block;
 }
 
-.c25 {
+.c26 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -7546,7 +7687,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   display: block;
 }
 
-.c32 {
+.c34 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -7634,7 +7775,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   flex-basis: auto;
 }
 
-.c30 {
+.c32 {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
@@ -7646,30 +7787,30 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   appearance: button;
 }
 
-.c30::-moz-focus-inner,
-.c30[type='button']::-moz-focus-inner,
-.c30[type='reset']::-moz-focus-inner,
-.c30[type='submit']::-moz-focus-inner {
+.c32::-moz-focus-inner,
+.c32[type='button']::-moz-focus-inner,
+.c32[type='reset']::-moz-focus-inner,
+.c32[type='submit']::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.c30:-moz-focusring,
-.c30[type='button']:-moz-focusring,
-.c30[type='reset']:-moz-focusring,
-.c30[type='submit']:-moz-focusring {
+.c32:-moz-focusring,
+.c32[type='button']:-moz-focusring,
+.c32[type='reset']:-moz-focusring,
+.c32[type='submit']:-moz-focusring {
   outline: 0.0625rem dotted ButtonText;
 }
 
-.c29 {
+.c31 {
   min-width: 7.5rem;
 }
 
-.c28 {
+.c30 {
   display: inline-block;
 }
 
-.c27 {
+.c29 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -7712,7 +7853,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c27:focus {
+.c29:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7720,43 +7861,43 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c27[disabled] {
+.c29[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c27:focus {
+.c29:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c27:hover {
+.c29:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c27:active,
-.c27:active:hover,
-.c27:active:focus {
+.c29:active,
+.c29:active:hover,
+.c29:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c31 {
+.c33 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -7800,7 +7941,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c31:focus {
+.c33:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7808,43 +7949,43 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c31[disabled] {
+.c33[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c31:focus {
+.c33:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c31:hover {
+.c33:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c31:active,
-.c31:active:hover,
-.c31:active:focus {
+.c33:active,
+.c33:active:hover,
+.c33:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c33 {
+.c35 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -7900,7 +8041,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   float: right;
 }
 
-.c33:focus {
+.c35:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -7908,57 +8049,57 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c33[disabled] {
+.c35[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c33:focus {
+.c35:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c33:hover {
+.c35:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c33:focus {
+.c35:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c33:hover {
+.c35:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c33:active,
-.c33:active:hover,
-.c33:active:focus {
+.c35:active,
+.c35:active:hover,
+.c35:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
@@ -8146,7 +8287,8 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   -moz-appearance: none;
   appearance: none;
   outline: 0;
-  max-width: 22.1875rem;
+  width: 100%;
+  min-width: 100%;
   text-overflow: ellipsis;
 }
 
@@ -8201,7 +8343,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c26 {
+.c28 {
   margin-right: 0.375rem;
 }
 
@@ -8218,7 +8360,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -8227,7 +8369,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c24 {
+  .c25 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -8245,7 +8387,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c25 {
+  .c26 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -8254,7 +8396,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c32 {
+  .c34 {
     display: none;
   }
 }
@@ -8346,63 +8488,71 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
             className="c14"
           >
             <div
-              className="c15"
-              id={null}
-              name="value"
-              role="group"
-              style={undefined}
+              className="c22"
             >
-              <label
-                className="c16 c17"
-                htmlFor={null}
-              >
-                Tag
-                 value
-              </label>
               <div
-                className="c22"
+                className="c15"
+                id={null}
+                name="value"
+                role="group"
+                style={undefined}
               >
-                <input
-                  className="c19"
-                  disabled={false}
-                  id={null}
-                  onBlur={null}
-                />
-                <div
-                  className="c20"
+                <label
+                  className="c16 c17"
+                  htmlFor={null}
                 >
-                  <div
-                    className="c21"
+                  Tag
+                   value
+                </label>
+                <div
+                  className="c23"
+                >
+                  <input
+                    className="c19"
+                    disabled={false}
+                    id={null}
+                    onBlur={null}
                   />
+                  <div
+                    className="c20"
+                  >
+                    <div
+                      className="c21"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div
-          className="c23"
+          className="c24"
         >
           <div
-            className="c24"
+            className="c25"
           >
             <div
-              className="c25"
+              className="c26"
             >
-              <button
-                className="c26 c27 c28 c29 c30"
-                data-ui-button="true"
-                disabled={false}
-                href=""
-                id={null}
-                onClick={[Function]}
-                type="button"
+              <div
+                className="c27"
               >
-                <span>
-                  Cancel
-                </span>
-              </button>
+                <button
+                  className="c28 c29 c30 c31 c32"
+                  data-ui-button="true"
+                  disabled={false}
+                  href=""
+                  id={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span>
+                    Cancel
+                  </span>
+                </button>
+              </div>
               <button
-                className="c31 c28 c29 c30"
+                className="c33 c30 c31 c32"
                 data-ui-button="true"
                 disabled={true}
                 href=""
@@ -8415,10 +8565,10 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
               </button>
             </div>
             <div
-              className="c32"
+              className="c34"
             >
               <button
-                className="c33 c28 c29 c30"
+                className="c35 c30 c31 c32"
                 data-ui-button="true"
                 disabled={false}
                 href=""
@@ -8428,7 +8578,7 @@ exports[`renders <KeyValue type="tag" /> without throwing 1`] = `
                 type="button"
               >
                 <div
-                  className="c34"
+                  className="c36"
                 >
                   <svg
                     height="16"
