@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { Margin } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import { withTheme } from 'styled-components';
-
 import { compose } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import ReduxForm from 'declarative-redux-form';

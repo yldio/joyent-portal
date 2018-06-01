@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { withTheme } from 'styled-components';
 import { Margin } from 'styled-components-spacing';
 import Flex, { FlexItem } from 'styled-flex-component';
 import { compose, graphql } from 'react-apollo';
@@ -42,119 +43,126 @@ const Firewall = ({
   enabled = false,
   showInactiveRules = null,
   showInactive = false,
+  theme = {},
   ...props
-}) => (
-  <Step name="firewall" getValue={handleGetValue} {...props}>
-    <StepHeader icon={<FirewallIcon />}>Firewall rules</StepHeader>
-    <StepDescription href="https://docs.joyent.com/public-cloud/network/firewall">
-      Cloud firewall rules secure instances by defining network traffic rules,
-      controlling incoming and outgoing traffic. Enabling the firewall applies
-      only rules which match your instance. Although these rules are created in
-      the firewall console, the addition of tags can alter the firewall rules.
-    </StepDescription>
-    <StepPreview>
-      <Margin top="3">
-        <Preview {...preview} />
-      </Margin>
-    </StepPreview>
-    <StepOutlet>
-      {({ next }) => (
-        <Fragment>
-          <Margin top="5">
-            <Flex>
-              <FlexItem>
-                <ReduxForm
-                  form={IR_FW_F_ENABLED}
-                  destroyOnUnmount={false}
-                  forceUnregisterOnUnmount={true}
-                >
-                  {props => (
-                    <Margin right="5">
-                      <ToggleFirewallForm {...props} submitting={loading} />
+}) => {
+  const mobile = theme.screen === 'mobile';
+
+  return (
+    <Step name="firewall" getValue={handleGetValue} {...props}>
+      <StepHeader icon={<FirewallIcon />}>Firewall rules</StepHeader>
+      <StepDescription href="https://docs.joyent.com/public-cloud/network/firewall">
+        Cloud firewall rules secure instances by defining network traffic rules,
+        controlling incoming and outgoing traffic. Enabling the firewall applies
+        only rules which match your instance. Although these rules are created
+        in the firewall console, the addition of tags can alter the firewall
+        rules.
+      </StepDescription>
+      <StepPreview>
+        <Margin top="3">
+          <Preview {...preview} />
+        </Margin>
+      </StepPreview>
+      <StepOutlet>
+        {({ next }) => (
+          <Fragment>
+            <Margin top="5">
+              <Flex column={mobile}>
+                <FlexItem>
+                  <ReduxForm
+                    form={IR_FW_F_ENABLED}
+                    destroyOnUnmount={false}
+                    forceUnregisterOnUnmount={true}
+                  >
+                    {props => (
+                      <Margin right="5" bottom={mobile ? '2' : '0'}>
+                        <ToggleFirewallForm {...props} submitting={loading} />
+                      </Margin>
+                    )}
+                  </ReduxForm>
+                </FlexItem>
+                <FlexItem>
+                  <ReduxForm
+                    form={IR_FW_F_INACTIVE}
+                    destroyOnUnmount={false}
+                    forceUnregisterOnUnmount={true}
+                  >
+                    {props =>
+                      enabled && !loading ? (
+                        <ToggleInactiveForm {...props} />
+                      ) : null
+                    }
+                  </ReduxForm>
+                </FlexItem>
+              </Flex>
+            </Margin>
+            {enabled && !loading && !defaultRules.length && !tagRules.length ? (
+              <Margin top="5">
+                <Empty borderTop>
+                  <Fragment>
+                    <H3>No Firewall rules found</H3>
+                    <Margin top="1">
+                      <P>
+                        Try viewing inactive rules instead to see firewalls that
+                        can potentially affect your instance
+                      </P>
                     </Margin>
-                  )}
-                </ReduxForm>
-              </FlexItem>
-              <FlexItem>
-                <ReduxForm
-                  form={IR_FW_F_INACTIVE}
-                  destroyOnUnmount={false}
-                  forceUnregisterOnUnmount={true}
-                >
-                  {props =>
-                    enabled && !loading ? (
-                      <ToggleInactiveForm {...props} />
-                    ) : null
-                  }
-                </ReduxForm>
-              </FlexItem>
-            </Flex>
-          </Margin>
-          {enabled && !loading && !defaultRules.length && !tagRules.length ? (
+                    <Margin top="2">
+                      <Button
+                        secondary
+                        onClick={showInactiveRules}
+                        disabled={showInactive}
+                      >
+                        View Inactive Rules
+                      </Button>
+                    </Margin>
+                  </Fragment>
+                </Empty>
+              </Margin>
+            ) : null}
+            {!loading && enabled && defaultRules.length ? (
+              <Margin top="5">
+                <DefaultRules rules={defaultRules} />
+              </Margin>
+            ) : null}
+            {!loading && enabled && tagRules.length ? (
+              <Margin top="5">
+                <TagRules rules={tagRules} />
+              </Margin>
+            ) : null}
+            {!loading && enabled && (tagRules.length || defaultRules.length) ? (
+              <Margin top="5">
+                <P>
+                  *Other firewall rules may apply as defined by wildcard(s),
+                  IP(s), subnet(s), tag(s) or VM(s). Please see{' '}
+                  <a
+                    href="https://apidocs.joyent.com/cloudapi/#firewall-rule-syntax"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    firewall rule list
+                  </a>{' '}
+                  for more details.
+                </P>
+              </Margin>
+            ) : null}
             <Margin top="5">
-              <Empty borderTop>
-                <Fragment>
-                  <H3>No Firewall rules found</H3>
-                  <Margin top="1">
-                    <P>
-                      Try viewing inactive rules instead to see firewalls that
-                      can potentially affect your instance
-                    </P>
-                  </Margin>
-                  <Margin top="2">
-                    <Button
-                      secondary
-                      onClick={showInactiveRules}
-                      disabled={showInactive}
-                    >
-                      View Inactive Rules
-                    </Button>
-                  </Margin>
-                </Fragment>
-              </Empty>
+              <Button
+                id="next-button-firewall"
+                type="button"
+                component={Link}
+                to={next}
+                fluid={mobile}
+              >
+                Next
+              </Button>
             </Margin>
-          ) : null}
-          {!loading && enabled && defaultRules.length ? (
-            <Margin top="5">
-              <DefaultRules rules={defaultRules} />
-            </Margin>
-          ) : null}
-          {!loading && enabled && tagRules.length ? (
-            <Margin top="5">
-              <TagRules rules={tagRules} />
-            </Margin>
-          ) : null}
-          {!loading && enabled && (tagRules.length || defaultRules.length) ? (
-            <Margin top="5">
-              <P>
-                *Other firewall rules may apply as defined by wildcard(s),
-                IP(s), subnet(s), tag(s) or VM(s). Please see{' '}
-                <a
-                  href="https://apidocs.joyent.com/cloudapi/#firewall-rule-syntax"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  firewall rule list
-                </a>{' '}
-                for more details.
-              </P>
-            </Margin>
-          ) : null}
-          <Margin top="5">
-            <Button
-              id="next-button-firewall"
-              type="button"
-              component={Link}
-              to={next}
-            >
-              Next
-            </Button>
-          </Margin>
-        </Fragment>
-      )}
-    </StepOutlet>
-  </Step>
-);
+          </Fragment>
+        )}
+      </StepOutlet>
+    </Step>
+  );
+};
 
 export default compose(
   connect(({ form, values }, ownProps) => ({
@@ -206,6 +214,4 @@ export default compose(
     showInactiveRules: () =>
       dispatch(change(IR_FW_F_INACTIVE, 'inactive', true))
   }))
-)(Firewall);
-
-export { Preview } from './components';
+)(withTheme(({ ...rest }) => <Firewall {...rest} />));
