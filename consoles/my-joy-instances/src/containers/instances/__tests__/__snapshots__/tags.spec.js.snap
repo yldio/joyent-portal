@@ -461,7 +461,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c43 {
+.c46 {
   margin-top: 1.875rem;
   margin-bottom: 1.125rem;
 }
@@ -471,11 +471,20 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-right: 1.125rem;
 }
 
-.c34 {
+.c35 {
+  margin-top: 0rem;
+}
+
+.c36 {
   margin-top: 0.75rem;
 }
 
-.c42 {
+.c39 {
+  display: inline-block;
+  margin-top: 0rem;
+}
+
+.c45 {
   margin-right: 0.75rem;
 }
 
@@ -602,7 +611,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   pointer-events: none;
 }
 
-.c38 {
+.c41 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -645,7 +654,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c38:focus {
+.c41:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -653,43 +662,43 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c38:hover {
+.c41:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c38:active,
-.c38:active:hover,
-.c38:active:focus {
+.c41:active,
+.c41:active:hover,
+.c41:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c38[disabled] {
+.c41[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c38:focus {
+.c41:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c38:hover {
+.c41:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c38:active,
-.c38:active:hover,
-.c38:active:focus {
+.c41:active,
+.c41:active:hover,
+.c41:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c39 {
+.c42 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -733,7 +742,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c39:focus {
+.c42:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -741,43 +750,43 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c39:hover {
+.c42:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c39:active,
-.c39:active:hover,
-.c39:active:focus {
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c39[disabled] {
+.c42[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c39:focus {
+.c42:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c39:hover {
+.c42:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c39:active,
-.c39:active:hover,
-.c39:active:focus {
+.c42:active,
+.c42:active:hover,
+.c42:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c41 {
+.c44 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -833,7 +842,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   float: right;
 }
 
-.c41:focus {
+.c44:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -841,57 +850,57 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c41:hover {
+.c44:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c41:active,
-.c41:active:hover,
-.c41:active:focus {
+.c44:active,
+.c44:active:hover,
+.c44:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c41[disabled] {
+.c44[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c41:focus {
+.c44:focus {
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
 }
 
-.c41:hover {
+.c44:hover {
   background-color: rgb(247,247,247);
   border-color: rgb(216,216,216);
 }
 
-.c41:active,
-.c41:active:hover,
-.c41:active:focus {
+.c44:active,
+.c44:active:hover,
+.c44:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
 }
 
-.c41:focus {
+.c44:focus {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c41:hover {
+.c44:hover {
   color: rgb(205,37,27);
   background-color: rgb(255,255,255);
   border-color: rgb(205,37,27);
 }
 
-.c41:active,
-.c41:active:hover,
-.c41:active:focus {
+.c44:active,
+.c44:active:hover,
+.c44:active:focus {
   background-color: rgba(210,67,58,0.1);
   border-color: rgb(205,37,27);
 }
@@ -930,7 +939,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c35 {
+.c37 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -949,7 +958,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c33 {
+.c34 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -959,7 +968,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   display: block;
 }
 
-.c36 {
+.c38 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -969,7 +978,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   display: block;
 }
 
-.c40 {
+.c43 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -986,7 +995,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   padding-bottom: 1.125rem;
 }
 
-.c44 {
+.c47 {
   margin: 0;
   color: rgb(73,73,73);
   font-weight: normal;
@@ -1348,13 +1357,75 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   color: rgba(73,73,73,0.5);
 }
 
+.c33 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.c33:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c33::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c33::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c33:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c33:invalid {
+  box-shadow: none;
+}
+
+.c33:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c33:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c33:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c33:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
 .c5 {
   font-weight: 600;
   white-space: pre;
   font-size: 0.8125rem;
 }
 
-.c45 {
+.c48 {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -1373,7 +1444,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c37 {
+.c40 {
   margin-right: 0.375rem;
 }
 
@@ -1408,7 +1479,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c35 {
+  .c37 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1417,7 +1488,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c35 {
+  .c37 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -1426,7 +1497,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c33 {
+  .c34 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -1435,7 +1506,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c36 {
+  .c38 {
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1444,7 +1515,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c40 {
+  .c43 {
     display: none;
   }
 }
@@ -1599,7 +1670,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                   className="c32"
                 >
                   <input
-                    className="c8"
+                    className="c33"
                     disabled={false}
                     id={null}
                     onBlur={null}
@@ -1608,7 +1679,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                     className="c15"
                   >
                     <div
-                      className="c33"
+                      className="c34"
                     />
                   </div>
                 </div>
@@ -1618,63 +1689,71 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
               className="c30"
             >
               <div
-                className="c31"
-                id={null}
-                name="value"
-                role="group"
-                style={undefined}
+                className="c35"
               >
-                <label
-                  className="c5 c6"
-                  htmlFor={null}
-                >
-                  Tag
-                   value
-                </label>
                 <div
-                  className="c7"
+                  className="c31"
+                  id={null}
+                  name="value"
+                  role="group"
+                  style={undefined}
                 >
-                  <input
-                    className="c8"
-                    disabled={false}
-                    id={null}
-                    onBlur={null}
-                  />
-                  <div
-                    className="c15"
+                  <label
+                    className="c5 c6"
+                    htmlFor={null}
                   >
-                    <div
+                    Tag
+                     value
+                  </label>
+                  <div
+                    className="c7"
+                  >
+                    <input
                       className="c33"
+                      disabled={false}
+                      id={null}
+                      onBlur={null}
                     />
+                    <div
+                      className="c15"
+                    >
+                      <div
+                        className="c34"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="c34"
+            className="c36"
           >
             <div
-              className="c35"
+              className="c37"
             >
               <div
-                className="c36"
+                className="c38"
               >
-                <button
-                  className="c37 c38 c11 c12 c13"
-                  data-ui-button="true"
-                  disabled={false}
-                  href=""
-                  id={null}
-                  onClick={[Function]}
-                  type="button"
+                <div
+                  className="c39"
                 >
-                  <span>
-                    Cancel
-                  </span>
-                </button>
+                  <button
+                    className="c40 c41 c11 c12 c13"
+                    data-ui-button="true"
+                    disabled={false}
+                    href=""
+                    id={null}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span>
+                      Cancel
+                    </span>
+                  </button>
+                </div>
                 <button
-                  className="c39 c11 c12 c13"
+                  className="c42 c11 c12 c13"
                   data-ui-button="true"
                   disabled={true}
                   href=""
@@ -1687,10 +1766,10 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                 </button>
               </div>
               <div
-                className="c40"
+                className="c43"
               >
                 <button
-                  className="c41 c11 c12 c13"
+                  className="c44 c11 c12 c13"
                   data-ui-button="true"
                   disabled={false}
                   href=""
@@ -1700,7 +1779,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
                   type="button"
                 >
                   <div
-                    className="c42"
+                    className="c45"
                   >
                     <svg
                       height="16"
@@ -1731,10 +1810,10 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
     </div>
   </form>
   <div
-    className="c43"
+    className="c46"
   >
     <h3
-      className="c44"
+      className="c47"
     >
       0
        tag
@@ -1742,7 +1821,7 @@ exports[`renders <Tags addOpen /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c45"
+    className="c48"
   />
 </div>
 `;
@@ -2208,7 +2287,7 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin-top: 0.1875rem;
 }
 
-.c45 {
+.c48 {
   margin-top: 1.875rem;
   margin-bottom: 1.125rem;
 }
@@ -2218,11 +2297,20 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   margin-right: 1.125rem;
 }
 
-.c36 {
+.c37 {
+  margin-top: 0rem;
+}
+
+.c38 {
   margin-top: 0.75rem;
 }
 
-.c44 {
+.c41 {
+  display: inline-block;
+  margin-top: 0rem;
+}
+
+.c47 {
   margin-right: 0.75rem;
 }
 
@@ -2273,181 +2361,6 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   display: inline-block;
 }
 
-.c40 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c40:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c40:hover {
-  background-color: rgb(72,83,217);
-  border-color: rgb(45,56,132);
-}
-
-.c40:active,
-.c40:active:hover,
-.c40:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c40[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c40:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c40:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c40:active,
-.c40:active:hover,
-.c40:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c41 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c41:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c41:hover {
-  background-color: rgb(72,83,217);
-  border-color: rgb(45,56,132);
-}
-
-.c41:active,
-.c41:active:hover,
-.c41:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c41[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c41:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c41:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c41:active,
-.c41:active:hover,
-.c41:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
 .c43 {
   box-sizing: border-box;
   display: inline-block;
@@ -2489,19 +2402,6 @@ exports[`renders <Tags editing /> without throwing 1`] = `
   -webkit-text-fill-color: currentcolor;
   background-color: rgb(255,255,255);
   border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  float: right;
 }
 
 .c43:focus {
@@ -2546,1228 +2446,9 @@ exports[`renders <Tags editing /> without throwing 1`] = `
 .c43:active:focus {
   background-color: rgb(230,230,230);
   border-color: rgb(216,216,216);
-}
-
-.c43:focus {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c43:hover {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c43:active,
-.c43:active:hover,
-.c43:active:focus {
-  background-color: rgba(210,67,58,0.1);
-  border-color: rgb(205,37,27);
-}
-
-.c10 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  max-width: 100%;
-}
-
-.c10:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c10:hover {
-  background-color: rgb(72,83,217);
-  border-color: rgb(45,56,132);
-}
-
-.c10:active,
-.c10:active:hover,
-.c10:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c10[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c10:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c10:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c10:active,
-.c10:active:hover,
-.c10:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c6 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  font-style: normal;
-  font-stretch: normal;
-  display: block;
-  color: rgb(70,70,70);
-  text-align: left;
-}
-
-.c1 {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.c15 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c37 {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
-}
-
-.c35 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c38 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c42 {
-  box-sizing: border-box;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.625rem;
-  padding-left: 0.625rem;
-  display: block;
-}
-
-.c0 {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 78.75rem;
-  padding-bottom: 1.125rem;
-}
-
-.c46 {
-  margin: 0;
-  color: rgb(73,73,73);
-  font-weight: normal;
-  line-height: 1.625rem;
-  font-size: 1.3125rem;
-}
-
-.c14 {
-  height: 1px;
-  background-color: rgb(216,216,216);
-  height: 0.6875rem;
-  background-color: transparent;
-}
-
-.c16 {
-  height: 1px;
-  background-color: rgb(216,216,216);
-  height: 0.0625rem;
-}
-
-.c17 {
-  height: 1px;
-  background-color: rgb(216,216,216);
-  height: 1.5rem;
-  background-color: transparent;
-}
-
-.c29 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c18 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
-  cursor: pointer;
-}
-
-.c21 {
-  box-sizing: content-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  position: relative;
-  border-width: 0.0625rem;
-  border-style: solid;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  color: rgb(73,73,73);
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  cursor: pointer;
-  min-height: auto;
-  height: 2.875rem;
-  -webkit-flex: 0 0 2.875rem;
-  -ms-flex: 0 0 2.875rem;
-  flex: 0 0 2.875rem;
-}
-
-.c28 {
-  box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  border-width: 0;
-  background-color: transparent;
-}
-
-.c20 {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  z-index: 1;
-  line-height: 1.5rem;
-  max-width: 100%;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-}
-
-.c26 {
-  box-sizing: border-box;
-  min-height: 2.9375rem;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  overflow: hidden;
-  background-color: transparent;
-  border-width: 0;
-  box-shadow: none;
-  color: inherit;
-}
-
-.c4 {
-  display: inline-block;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-}
-
-.c9 {
-  display: inline-block;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  float: right;
-}
-
-.c33 {
-  display: inline-block;
-  padding: 0;
-  border: none;
-  overflow: hidden;
-  height: auto;
-  -webkit-padding-before: 0;
-  -webkit-padding-start: 0;
-  -webkit-padding-end: 0;
-  -webkit-padding-after: 0;
-  width: 100%;
-}
-
-.c3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-}
-
-.c24 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c31 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-}
-
-.c32 {
-  -webkit-order: 0;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  display: block;
-  -webkit-flex-basis: auto;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-}
-
-.c8 {
-  box-sizing: border-box;
-  width: 18.75rem;
-  height: 3rem;
-  min-height: 3rem;
-  padding: 0.8125rem 0.75rem;
-  border-radius: 0.25rem;
-  background-color: rgb(255,255,255);
-  border: 0.0625rem solid rgb(216,216,216);
-  color: rgb(73,73,73);
-  font-size: 0.9375rem;
-  line-height: normal !important;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: 0;
-  max-width: 22.1875rem;
-  text-overflow: ellipsis;
-}
-
-.c8:focus {
-  border-color: rgb(59,70,204);
-  outline: 0;
-}
-
-.c8::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c8::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c8:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c8:invalid {
-  box-shadow: none;
-}
-
-.c8:disabled {
-  background-color: rgb(250,250,250);
-  color: rgb(216,216,216);
-  cursor: not-allowed;
-}
-
-.c8:disabled::-webkit-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c8:disabled::-moz-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c8:disabled:-ms-input-placeholder {
-  color: rgba(73,73,73,0.5);
-}
-
-.c5 {
-  font-weight: 600;
-  white-space: pre;
-  font-size: 0.8125rem;
-}
-
-.c47 {
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.c27 {
-  word-break: break-all;
-  line-height: 1.5;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-}
-
-.c19 {
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-}
-
-.c39 {
-  margin-right: 0.375rem;
-}
-
-.c22 {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.c25 {
-  height: 2.9375rem;
-  max-width: 98%;
-}
-
-@media only screen and (min-width:48em) {
-  .c1 {
-    width: 46rem;
-  }
-}
-
-@media only screen and (min-width:64em) {
-  .c1 {
-    width: 56rem;
-  }
-}
-
-@media only screen and (min-width:75em) {
-  .c1 {
-    width: 59rem;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c37 {
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c37 {
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (min-width:48em) {
-  .c35 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c38 {
-    -webkit-flex-basis: 58.333333333333336%;
-    -ms-flex-preferred-size: 58.333333333333336%;
-    flex-basis: 58.333333333333336%;
-    max-width: 58.333333333333336%;
-  }
-}
-
-@media only screen and (min-width:0em) {
-  .c42 {
-    -webkit-flex-basis: 41.66666666666667%;
-    -ms-flex-preferred-size: 41.66666666666667%;
-    flex-basis: 41.66666666666667%;
-    max-width: 41.66666666666667%;
-  }
-}
-
-@media only screen and (max-width:37.4375rem) {
-  .c0 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-}
-
-@media only screen and (min-width:37.5rem) and (max-width:62.4375rem) {
-  .c0 {
-    padding-left: 1.875rem;
-    padding-right: 1.875rem;
-  }
-}
-
-@media only screen and (min-width:62.5rem) and (max-width:87.4375rem) {
-  .c0 {
-    padding-left: 4.375rem;
-    padding-right: 4.375rem;
-  }
-}
-
-<div
-  className="c0 c1"
->
-  <div
-    className="c2"
-  >
-    <form
-      onSubmit={undefined}
-    >
-      <div
-        className="c3"
-      >
-        <div
-          className="c4"
-          name="filter"
-          role="group"
-          style={undefined}
-        >
-          <label
-            className="c5 c6"
-            htmlFor="y"
-          >
-            Filter tags
-          </label>
-          <div
-            className="c7"
-          >
-            <input
-              className="c8"
-              disabled={false}
-              id="y"
-              onBlur={undefined}
-              placeholder="Search by name or value"
-            />
-          </div>
-        </div>
-        <div
-          className="c9"
-          role="group"
-          style={undefined}
-        >
-          <button
-            className="c10 c11 c12 c13"
-            data-ui-button="true"
-            disabled={true}
-            href=""
-            icon={true}
-            onClick={[Function]}
-            to={undefined}
-            type="button"
-          >
-            Add Tag
-          </button>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div
-    className="c14 c15"
-    height="0.6875rem"
-  />
-  <div
-    className="c16 c15"
-    height="0.0625rem"
-  />
-  <div
-    className="c17 c15"
-    height="1.5rem"
-  />
-  <form
-    onSubmit={undefined}
-  >
-    <div
-      className="c18"
-      disabled={false}
-      name="card"
-    >
-      <div
-        className="c19 c20 c21"
-        disabled={false}
-        name="card-header"
-        onClick={[Function]}
-      >
-        <div
-          className="c22 c23"
-        >
-          <div
-            className="c24"
-          >
-            <div
-              className="c25 c26 c21"
-              disabled={false}
-              name="card-header-meta"
-            >
-              <div
-                className="c27"
-              >
-                <span>
-                  name1: 
-                </span>
-                <span>
-                  value1
-                </span>
-              </div>
-            </div>
-            <svg
-              height="6"
-              onClick={[Function]}
-              style={
-                Object {
-                  "transform": "rotate(180deg)",
-                }
-              }
-              viewBox="0 0 9.6 6"
-              width="9.6"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
-                fill="rgb(73, 73, 73)"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div
-        className="c28 c29"
-        disabled={false}
-        name="card-outlet"
-      >
-        <div
-          className="c30"
-        >
-          <div
-            className="c31"
-            wrap={true}
-          >
-            <div
-              className="c32"
-            >
-              <div
-                className="c33"
-                id={null}
-                name="name"
-                role="group"
-                style={undefined}
-              >
-                <label
-                  className="c5 c6"
-                  htmlFor={null}
-                >
-                  Tag
-                   
-                  key
-                </label>
-                <div
-                  className="c34"
-                >
-                  <input
-                    className="c8"
-                    disabled={false}
-                    id={null}
-                    onBlur={null}
-                  />
-                  <div
-                    className="c15"
-                  >
-                    <div
-                      className="c35"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="c32"
-            >
-              <div
-                className="c33"
-                id={null}
-                name="value"
-                role="group"
-                style={undefined}
-              >
-                <label
-                  className="c5 c6"
-                  htmlFor={null}
-                >
-                  Tag
-                   value
-                </label>
-                <div
-                  className="c7"
-                >
-                  <input
-                    className="c8"
-                    disabled={false}
-                    id={null}
-                    onBlur={null}
-                  />
-                  <div
-                    className="c15"
-                  >
-                    <div
-                      className="c35"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="c36"
-          >
-            <div
-              className="c37"
-            >
-              <div
-                className="c38"
-              >
-                <button
-                  className="c39 c40 c11 c12 c13"
-                  data-ui-button="true"
-                  disabled={false}
-                  href=""
-                  id={null}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <span>
-                    Cancel
-                  </span>
-                </button>
-                <button
-                  className="c41 c11 c12 c13"
-                  data-ui-button="true"
-                  disabled={true}
-                  href=""
-                  id={null}
-                  type="submit"
-                >
-                  <span>
-                    Save
-                  </span>
-                </button>
-              </div>
-              <div
-                className="c42"
-              >
-                <button
-                  className="c43 c11 c12 c13"
-                  data-ui-button="true"
-                  disabled={false}
-                  href=""
-                  icon={true}
-                  id={null}
-                  onClick={[Function]}
-                  type="button"
-                >
-                  <div
-                    className="c44"
-                  >
-                    <svg
-                      height="16"
-                      style={
-                        Object {
-                          "transform": "rotate(0deg)",
-                        }
-                      }
-                      viewBox="0 0 12 16"
-                      width="12"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
-                        fill="rgb(210, 67, 58)"
-                      />
-                    </svg>
-                  </div>
-                  <span>
-                    Delete
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>
-  <div
-    className="c45"
-  >
-    <h3
-      className="c46"
-    >
-      0
-       tag
-      s
-    </h3>
-  </div>
-  <ul
-    className="c47"
-  />
-</div>
-`;
-
-exports[`renders <Tags editing.removing /> without throwing 1`] = `
-.c2 {
-  margin-bottom: 1.125rem;
-}
-
-.c7 {
-  margin-top: 0.1875rem;
-}
-
-.c48 {
-  margin-top: 1.875rem;
-  margin-bottom: 1.125rem;
-}
-
-.c34 {
-  margin-top: 0.1875rem;
-  margin-right: 1.125rem;
-}
-
-.c36 {
-  margin-top: 0.75rem;
-}
-
-.c23 {
-  padding-right: 1.125rem;
-  padding-left: 1.125rem;
-}
-
-.c30 {
-  padding-left: 1.125rem;
-  padding-right: 1.125rem;
-  padding-top: 1.125rem;
-  padding-bottom: 1.125rem;
-}
-
-.c13 {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-}
-
-.c13::-moz-focus-inner,
-.c13[type='button']::-moz-focus-inner,
-.c13[type='reset']::-moz-focus-inner,
-.c13[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.c13:-moz-focusring,
-.c13[type='button']:-moz-focusring,
-.c13[type='reset']:-moz-focusring,
-.c13[type='submit']:-moz-focusring {
-  outline: 0.0625rem dotted ButtonText;
-}
-
-.c45 {
-  fill: rgb(59,70,204);
-  stroke: rgb(59,70,204);
-  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
-  animation: iCqDak 1.5s ease-out 0s infinite;
-}
-
-.c46 {
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-}
-
-.c47 {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
 }
 
 .c44 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 1.25rem;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
-}
-
-.c12 {
-  min-width: 7.5rem;
-}
-
-.c11 {
-  display: inline-block;
-}
-
-.c40 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c40:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c40:hover {
-  background-color: rgb(72,83,217);
-  border-color: rgb(45,56,132);
-}
-
-.c40:active,
-.c40:active:hover,
-.c40:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c40[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c40:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c40:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c40:active,
-.c40:active:hover,
-.c40:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c41 {
   box-sizing: border-box;
   display: inline-block;
   -webkit-box-pack: center;
@@ -3811,7 +2492,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   border-color: rgb(216,216,216);
 }
 
-.c41:focus {
+.c44:focus {
   outline: 0;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -3819,40 +2500,159 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   border-color: rgb(45,56,132);
 }
 
-.c41:hover {
+.c44:hover {
   background-color: rgb(72,83,217);
   border-color: rgb(45,56,132);
 }
 
-.c41:active,
-.c41:active:hover,
-.c41:active:focus {
+.c44:active,
+.c44:active:hover,
+.c44:active:focus {
   background-image: none;
   outline: 0;
   background-color: rgb(45,56,132);
   border-color: rgb(45,56,132);
 }
 
-.c41[disabled] {
+.c44[disabled] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.c41:focus {
+.c44:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(216,216,216);
 }
 
-.c41:hover {
+.c44:hover {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
 }
 
-.c41:active,
-.c41:active:hover,
-.c41:active:focus {
+.c44:active,
+.c44:active:hover,
+.c44:active:focus {
   background-color: rgb(250,250,250);
   border-color: rgb(250,250,250);
+}
+
+.c46 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: right;
+}
+
+.c46:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c46:hover {
+  background-color: rgb(72,83,217);
+  border-color: rgb(45,56,132);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c46[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c46:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c46:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c46:focus {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c46:hover {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
 }
 
 .c10 {
@@ -3953,147 +2753,6 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   border-color: rgb(250,250,250);
 }
 
-.c43 {
-  box-sizing: border-box;
-  display: inline-block;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 3rem;
-  height: 3rem;
-  min-width: 7.5rem;
-  padding: 0.9375rem 1.125rem;
-  position: relative;
-  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
-  font-size: 0.9375rem;
-  text-align: center;
-  font-style: normal;
-  font-stretch: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
-  letter-spacing: normal;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  white-space: nowrap;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  color: rgb(255,255,255);
-  -webkit-text-fill-color: currentcolor;
-  background-image: none;
-  background-color: rgb(59,70,204);
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgb(45,56,132);
-  color: rgb(70,70,70);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-  color: rgb(210,67,58);
-  -webkit-text-fill-color: currentcolor;
-  background-color: rgb(255,255,255);
-  border-color: rgb(210,67,58);
-  cursor: not-allowed;
-  pointer-events: none;
-  color: rgb(216,216,216);
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  float: right;
-}
-
-.c43:focus {
-  outline: 0;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: rgb(59,70,204);
-  border-color: rgb(45,56,132);
-}
-
-.c43:hover {
-  background-color: rgb(72,83,217);
-  border-color: rgb(45,56,132);
-}
-
-.c43:active,
-.c43:active:hover,
-.c43:active:focus {
-  background-image: none;
-  outline: 0;
-  background-color: rgb(45,56,132);
-  border-color: rgb(45,56,132);
-}
-
-.c43[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.c43:focus {
-  background-color: rgb(255,255,255);
-  border-color: rgb(216,216,216);
-}
-
-.c43:hover {
-  background-color: rgb(247,247,247);
-  border-color: rgb(216,216,216);
-}
-
-.c43:active,
-.c43:active:hover,
-.c43:active:focus {
-  background-color: rgb(230,230,230);
-  border-color: rgb(216,216,216);
-}
-
-.c43:focus {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c43:hover {
-  color: rgb(205,37,27);
-  background-color: rgb(255,255,255);
-  border-color: rgb(205,37,27);
-}
-
-.c43:active,
-.c43:active:hover,
-.c43:active:focus {
-  background-color: rgba(210,67,58,0.1);
-  border-color: rgb(205,37,27);
-}
-
-.c43:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(216,216,216);
-}
-
-.c43:hover {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
-.c43:active,
-.c43:active:hover,
-.c43:active:focus {
-  background-color: rgb(250,250,250);
-  border-color: rgb(250,250,250);
-}
-
 .c6 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
@@ -4128,7 +2787,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c37 {
+.c39 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4147,7 +2806,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   margin-left: -0.625rem;
 }
 
-.c35 {
+.c36 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4157,7 +2816,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   display: block;
 }
 
-.c38 {
+.c40 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4167,7 +2826,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   display: block;
 }
 
-.c42 {
+.c45 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -4553,6 +3212,68 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   color: rgba(73,73,73,0.5);
 }
 
+.c35 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.c35:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c35::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c35::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c35:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c35:invalid {
+  box-shadow: none;
+}
+
+.c35:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c35:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c35:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c35:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
 .c5 {
   font-weight: 600;
   white-space: pre;
@@ -4587,7 +3308,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
   border-right: 0;
 }
 
-.c39 {
+.c42 {
   margin-right: 0.375rem;
 }
 
@@ -4622,7 +3343,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c37 {
+  .c39 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4631,7 +3352,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c37 {
+  .c39 {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -4640,7 +3361,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:48em) {
-  .c35 {
+  .c36 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4649,7 +3370,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c38 {
+  .c40 {
     -webkit-flex-basis: 58.333333333333336%;
     -ms-flex-preferred-size: 58.333333333333336%;
     flex-basis: 58.333333333333336%;
@@ -4658,7 +3379,1515 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
 }
 
 @media only screen and (min-width:0em) {
-  .c42 {
+  .c45 {
+    -webkit-flex-basis: 41.66666666666667%;
+    -ms-flex-preferred-size: 41.66666666666667%;
+    flex-basis: 41.66666666666667%;
+    max-width: 41.66666666666667%;
+  }
+}
+
+@media only screen and (max-width:37.4375rem) {
+  .c0 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+@media only screen and (min-width:37.5rem) and (max-width:62.4375rem) {
+  .c0 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+@media only screen and (min-width:62.5rem) and (max-width:87.4375rem) {
+  .c0 {
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+  }
+}
+
+<div
+  className="c0 c1"
+>
+  <div
+    className="c2"
+  >
+    <form
+      onSubmit={undefined}
+    >
+      <div
+        className="c3"
+      >
+        <div
+          className="c4"
+          name="filter"
+          role="group"
+          style={undefined}
+        >
+          <label
+            className="c5 c6"
+            htmlFor="y"
+          >
+            Filter tags
+          </label>
+          <div
+            className="c7"
+          >
+            <input
+              className="c8"
+              disabled={false}
+              id="y"
+              onBlur={undefined}
+              placeholder="Search by name or value"
+            />
+          </div>
+        </div>
+        <div
+          className="c9"
+          role="group"
+          style={undefined}
+        >
+          <button
+            className="c10 c11 c12 c13"
+            data-ui-button="true"
+            disabled={true}
+            href=""
+            icon={true}
+            onClick={[Function]}
+            to={undefined}
+            type="button"
+          >
+            Add Tag
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div
+    className="c14 c15"
+    height="0.6875rem"
+  />
+  <div
+    className="c16 c15"
+    height="0.0625rem"
+  />
+  <div
+    className="c17 c15"
+    height="1.5rem"
+  />
+  <form
+    onSubmit={undefined}
+  >
+    <div
+      className="c18"
+      disabled={false}
+      name="card"
+    >
+      <div
+        className="c19 c20 c21"
+        disabled={false}
+        name="card-header"
+        onClick={[Function]}
+      >
+        <div
+          className="c22 c23"
+        >
+          <div
+            className="c24"
+          >
+            <div
+              className="c25 c26 c21"
+              disabled={false}
+              name="card-header-meta"
+            >
+              <div
+                className="c27"
+              >
+                <span>
+                  name1: 
+                </span>
+                <span>
+                  value1
+                </span>
+              </div>
+            </div>
+            <svg
+              height="6"
+              onClick={[Function]}
+              style={
+                Object {
+                  "transform": "rotate(180deg)",
+                }
+              }
+              viewBox="0 0 9.6 6"
+              width="9.6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.6,1.12,8.24,0,4.8,3.5,1.36,0,0,1.12,4.8,6Z"
+                fill="rgb(73, 73, 73)"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c28 c29"
+        disabled={false}
+        name="card-outlet"
+      >
+        <div
+          className="c30"
+        >
+          <div
+            className="c31"
+            wrap={true}
+          >
+            <div
+              className="c32"
+            >
+              <div
+                className="c33"
+                id={null}
+                name="name"
+                role="group"
+                style={undefined}
+              >
+                <label
+                  className="c5 c6"
+                  htmlFor={null}
+                >
+                  Tag
+                   
+                  key
+                </label>
+                <div
+                  className="c34"
+                >
+                  <input
+                    className="c35"
+                    disabled={false}
+                    id={null}
+                    onBlur={null}
+                  />
+                  <div
+                    className="c15"
+                  >
+                    <div
+                      className="c36"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="c32"
+            >
+              <div
+                className="c37"
+              >
+                <div
+                  className="c33"
+                  id={null}
+                  name="value"
+                  role="group"
+                  style={undefined}
+                >
+                  <label
+                    className="c5 c6"
+                    htmlFor={null}
+                  >
+                    Tag
+                     value
+                  </label>
+                  <div
+                    className="c7"
+                  >
+                    <input
+                      className="c35"
+                      disabled={false}
+                      id={null}
+                      onBlur={null}
+                    />
+                    <div
+                      className="c15"
+                    >
+                      <div
+                        className="c36"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="c38"
+          >
+            <div
+              className="c39"
+            >
+              <div
+                className="c40"
+              >
+                <div
+                  className="c41"
+                >
+                  <button
+                    className="c42 c43 c11 c12 c13"
+                    data-ui-button="true"
+                    disabled={false}
+                    href=""
+                    id={null}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span>
+                      Cancel
+                    </span>
+                  </button>
+                </div>
+                <button
+                  className="c44 c11 c12 c13"
+                  data-ui-button="true"
+                  disabled={true}
+                  href=""
+                  id={null}
+                  type="submit"
+                >
+                  <span>
+                    Save
+                  </span>
+                </button>
+              </div>
+              <div
+                className="c45"
+              >
+                <button
+                  className="c46 c11 c12 c13"
+                  data-ui-button="true"
+                  disabled={false}
+                  href=""
+                  icon={true}
+                  id={null}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <div
+                    className="c47"
+                  >
+                    <svg
+                      height="16"
+                      style={
+                        Object {
+                          "transform": "rotate(0deg)",
+                        }
+                      }
+                      viewBox="0 0 12 16"
+                      width="12"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.67,0V1.5H0V3H12V1.5H9.33V0ZM0,4,1.33,16h9.34L12,4ZM8,5h2.51l-1,10H8ZM1.49,5H4V15H2.53ZM7,15H5V5H7Z"
+                        fill="rgb(210, 67, 58)"
+                      />
+                    </svg>
+                  </div>
+                  <span>
+                    Delete
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div
+    className="c48"
+  >
+    <h3
+      className="c49"
+    >
+      0
+       tag
+      s
+    </h3>
+  </div>
+  <ul
+    className="c50"
+  />
+</div>
+`;
+
+exports[`renders <Tags editing.removing /> without throwing 1`] = `
+.c2 {
+  margin-bottom: 1.125rem;
+}
+
+.c7 {
+  margin-top: 0.1875rem;
+}
+
+.c51 {
+  margin-top: 1.875rem;
+  margin-bottom: 1.125rem;
+}
+
+.c34 {
+  margin-top: 0.1875rem;
+  margin-right: 1.125rem;
+}
+
+.c37 {
+  margin-top: 0rem;
+}
+
+.c38 {
+  margin-top: 0.75rem;
+}
+
+.c41 {
+  display: inline-block;
+  margin-top: 0rem;
+}
+
+.c23 {
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
+}
+
+.c30 {
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+}
+
+.c13 {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+.c13::-moz-focus-inner,
+.c13[type='button']::-moz-focus-inner,
+.c13[type='reset']::-moz-focus-inner,
+.c13[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.c13:-moz-focusring,
+.c13[type='button']:-moz-focusring,
+.c13[type='reset']:-moz-focusring,
+.c13[type='submit']:-moz-focusring {
+  outline: 0.0625rem dotted ButtonText;
+}
+
+.c48 {
+  fill: rgb(59,70,204);
+  stroke: rgb(59,70,204);
+  -webkit-animation: iCqDak 1.5s ease-out 0s infinite;
+  animation: iCqDak 1.5s ease-out 0s infinite;
+}
+
+.c49 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c50 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.c47 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 1.25rem;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c12 {
+  min-width: 7.5rem;
+}
+
+.c11 {
+  display: inline-block;
+}
+
+.c43 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c43:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c43:hover {
+  background-color: rgb(72,83,217);
+  border-color: rgb(45,56,132);
+}
+
+.c43:active,
+.c43:active:hover,
+.c43:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c43[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c43:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c43:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c43:active,
+.c43:active:hover,
+.c43:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c44 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c44:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c44:hover {
+  background-color: rgb(72,83,217);
+  border-color: rgb(45,56,132);
+}
+
+.c44:active,
+.c44:active:hover,
+.c44:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c44[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c44:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c44:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c44:active,
+.c44:active:hover,
+.c44:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c10 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.c10:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c10:hover {
+  background-color: rgb(72,83,217);
+  border-color: rgb(45,56,132);
+}
+
+.c10:active,
+.c10:active:hover,
+.c10:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c10[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c10:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c10:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c10:active,
+.c10:active:hover,
+.c10:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c46 {
+  box-sizing: border-box;
+  display: inline-block;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 3rem;
+  height: 3rem;
+  min-width: 7.5rem;
+  padding: 0.9375rem 1.125rem;
+  position: relative;
+  font-family: "Libre Franklin",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica,sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  -webkit-text-fill-color: currentcolor;
+  background-image: none;
+  background-color: rgb(59,70,204);
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgb(45,56,132);
+  color: rgb(70,70,70);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  color: rgb(210,67,58);
+  -webkit-text-fill-color: currentcolor;
+  background-color: rgb(255,255,255);
+  border-color: rgb(210,67,58);
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgb(216,216,216);
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  float: right;
+}
+
+.c46:focus {
+  outline: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(59,70,204);
+  border-color: rgb(45,56,132);
+}
+
+.c46:hover {
+  background-color: rgb(72,83,217);
+  border-color: rgb(45,56,132);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-image: none;
+  outline: 0;
+  background-color: rgb(45,56,132);
+  border-color: rgb(45,56,132);
+}
+
+.c46[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.c46:focus {
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c46:hover {
+  background-color: rgb(247,247,247);
+  border-color: rgb(216,216,216);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-color: rgb(230,230,230);
+  border-color: rgb(216,216,216);
+}
+
+.c46:focus {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c46:hover {
+  color: rgb(205,37,27);
+  background-color: rgb(255,255,255);
+  border-color: rgb(205,37,27);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-color: rgba(210,67,58,0.1);
+  border-color: rgb(205,37,27);
+}
+
+.c46:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(216,216,216);
+}
+
+.c46:hover {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c46:active,
+.c46:active:hover,
+.c46:active:focus {
+  background-color: rgb(250,250,250);
+  border-color: rgb(250,250,250);
+}
+
+.c6 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-style: normal;
+  font-stretch: normal;
+  display: block;
+  color: rgb(70,70,70);
+  text-align: left;
+}
+
+.c1 {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.c15 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c39 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -0.625rem;
+  margin-left: -0.625rem;
+}
+
+.c36 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c40 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c45 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  display: block;
+}
+
+.c0 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 78.75rem;
+  padding-bottom: 1.125rem;
+}
+
+.c52 {
+  margin: 0;
+  color: rgb(73,73,73);
+  font-weight: normal;
+  line-height: 1.625rem;
+  font-size: 1.3125rem;
+}
+
+.c14 {
+  height: 1px;
+  background-color: rgb(216,216,216);
+  height: 0.6875rem;
+  background-color: transparent;
+}
+
+.c16 {
+  height: 1px;
+  background-color: rgb(216,216,216);
+  height: 0.0625rem;
+}
+
+.c17 {
+  height: 1px;
+  background-color: rgb(216,216,216);
+  height: 1.5rem;
+  background-color: transparent;
+}
+
+.c29 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+}
+
+.c18 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  box-shadow: 0 0.125rem 0 0 rgba(0,0,0,0.05);
+  cursor: pointer;
+}
+
+.c21 {
+  box-sizing: content-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  border-width: 0.0625rem;
+  border-style: solid;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  color: rgb(73,73,73);
+  background-color: rgb(255,255,255);
+  border-color: rgb(216,216,216);
+  cursor: pointer;
+  min-height: auto;
+  height: 2.875rem;
+  -webkit-flex: 0 0 2.875rem;
+  -ms-flex: 0 0 2.875rem;
+  flex: 0 0 2.875rem;
+}
+
+.c28 {
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-width: 0;
+  background-color: transparent;
+}
+
+.c20 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  z-index: 1;
+  line-height: 1.5rem;
+  max-width: 100%;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.c26 {
+  box-sizing: border-box;
+  min-height: 2.9375rem;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  overflow: hidden;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: none;
+  color: inherit;
+}
+
+.c4 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+}
+
+.c9 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  float: right;
+}
+
+.c33 {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+  height: auto;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c31 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.c32 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  display: block;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+.c8 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  max-width: 22.1875rem;
+  text-overflow: ellipsis;
+}
+
+.c8:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c8::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:invalid {
+  box-shadow: none;
+}
+
+.c8:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c8:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c8:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c35 {
+  box-sizing: border-box;
+  width: 18.75rem;
+  height: 3rem;
+  min-height: 3rem;
+  padding: 0.8125rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: rgb(255,255,255);
+  border: 0.0625rem solid rgb(216,216,216);
+  color: rgb(73,73,73);
+  font-size: 0.9375rem;
+  line-height: normal !important;
+  font-style: normal;
+  font-stretch: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  width: 100%;
+  min-width: 100%;
+  text-overflow: ellipsis;
+}
+
+.c35:focus {
+  border-color: rgb(59,70,204);
+  outline: 0;
+}
+
+.c35::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c35::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c35:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c35:invalid {
+  box-shadow: none;
+}
+
+.c35:disabled {
+  background-color: rgb(250,250,250);
+  color: rgb(216,216,216);
+  cursor: not-allowed;
+}
+
+.c35:disabled::-webkit-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c35:disabled::-moz-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c35:disabled:-ms-input-placeholder {
+  color: rgba(73,73,73,0.5);
+}
+
+.c5 {
+  font-weight: 600;
+  white-space: pre;
+  font-size: 0.8125rem;
+}
+
+.c53 {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c27 {
+  word-break: break-all;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.c19 {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.c42 {
+  margin-right: 0.375rem;
+}
+
+.c22 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c25 {
+  height: 2.9375rem;
+  max-width: 98%;
+}
+
+@media only screen and (min-width:48em) {
+  .c1 {
+    width: 46rem;
+  }
+}
+
+@media only screen and (min-width:64em) {
+  .c1 {
+    width: 56rem;
+  }
+}
+
+@media only screen and (min-width:75em) {
+  .c1 {
+    width: 59rem;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c39 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c39 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width:48em) {
+  .c36 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c40 {
+    -webkit-flex-basis: 58.333333333333336%;
+    -ms-flex-preferred-size: 58.333333333333336%;
+    flex-basis: 58.333333333333336%;
+    max-width: 58.333333333333336%;
+  }
+}
+
+@media only screen and (min-width:0em) {
+  .c45 {
     -webkit-flex-basis: 41.66666666666667%;
     -ms-flex-preferred-size: 41.66666666666667%;
     flex-basis: 41.66666666666667%;
@@ -4846,7 +5075,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                   className="c34"
                 >
                   <input
-                    className="c8"
+                    className="c35"
                     disabled={false}
                     id={null}
                     onBlur={null}
@@ -4855,7 +5084,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                     className="c15"
                   >
                     <div
-                      className="c35"
+                      className="c36"
                     />
                   </div>
                 </div>
@@ -4865,63 +5094,71 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
               className="c32"
             >
               <div
-                className="c33"
-                id={null}
-                name="value"
-                role="group"
-                style={undefined}
+                className="c37"
               >
-                <label
-                  className="c5 c6"
-                  htmlFor={null}
-                >
-                  Tag
-                   value
-                </label>
                 <div
-                  className="c7"
+                  className="c33"
+                  id={null}
+                  name="value"
+                  role="group"
+                  style={undefined}
                 >
-                  <input
-                    className="c8"
-                    disabled={false}
-                    id={null}
-                    onBlur={null}
-                  />
-                  <div
-                    className="c15"
+                  <label
+                    className="c5 c6"
+                    htmlFor={null}
                   >
-                    <div
+                    Tag
+                     value
+                  </label>
+                  <div
+                    className="c7"
+                  >
+                    <input
                       className="c35"
+                      disabled={false}
+                      id={null}
+                      onBlur={null}
                     />
+                    <div
+                      className="c15"
+                    >
+                      <div
+                        className="c36"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="c36"
+            className="c38"
           >
             <div
-              className="c37"
+              className="c39"
             >
               <div
-                className="c38"
+                className="c40"
               >
-                <button
-                  className="c39 c40 c11 c12 c13"
-                  data-ui-button="true"
-                  disabled={false}
-                  href=""
-                  id={null}
-                  onClick={[Function]}
-                  type="button"
+                <div
+                  className="c41"
                 >
-                  <span>
-                    Cancel
-                  </span>
-                </button>
+                  <button
+                    className="c42 c43 c11 c12 c13"
+                    data-ui-button="true"
+                    disabled={false}
+                    href=""
+                    id={null}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span>
+                      Cancel
+                    </span>
+                  </button>
+                </div>
                 <button
-                  className="c41 c11 c12 c13"
+                  className="c44 c11 c12 c13"
                   data-ui-button="true"
                   disabled={true}
                   href=""
@@ -4934,10 +5171,10 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                 </button>
               </div>
               <div
-                className="c42"
+                className="c45"
               >
                 <button
-                  className="c43 c11 c12 c13"
+                  className="c46 c11 c12 c13"
                   data-ui-button="true"
                   disabled={false}
                   href=""
@@ -4947,28 +5184,28 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
                   type="button"
                 >
                   <div
-                    className="c44"
+                    className="c47"
                   >
                     <svg
                       height="10"
                       width="28"
                     >
                       <rect
-                        className="c45"
+                        className="c48"
                         height="6"
                         width="6"
                         x="2"
                         y="2"
                       />
                       <rect
-                        className="c46 c45"
+                        className="c49 c48"
                         height="6"
                         width="6"
                         x="11"
                         y="2"
                       />
                       <rect
-                        className="c47 c45"
+                        className="c50 c48"
                         height="6"
                         width="6"
                         x="20"
@@ -4985,10 +5222,10 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
     </div>
   </form>
   <div
-    className="c48"
+    className="c51"
   >
     <h3
-      className="c49"
+      className="c52"
     >
       0
        tag
@@ -4996,7 +5233,7 @@ exports[`renders <Tags editing.removing /> without throwing 1`] = `
     </h3>
   </div>
   <ul
-    className="c50"
+    className="c53"
   />
 </div>
 `;

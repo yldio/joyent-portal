@@ -6849,14 +6849,51 @@ Array [
 }
 
 .c29 {
-  margin-right: 0.1875rem;
+  display: inline-block;
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+}
+
+.c31 {
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 1.875rem;
 }
 
 .c32 {
   margin-left: 0.1875rem;
 }
 
-.c26 {
+.c35 {
+  display: inline-block;
+  margin-right: 1.5rem;
+  margin-left: 0.375rem;
+}
+
+.c36 {
+  display: inline-block;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.c37 {
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 1.5rem;
+}
+
+.c41 {
+  margin-right: 0.1875rem;
+}
+
+.c27 {
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.c38 {
   padding-top: 0.75rem;
   padding-right: 1.125rem;
   padding-bottom: 0.75rem;
@@ -6883,7 +6920,53 @@ Array [
   align-content: stretch;
 }
 
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .c28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6914,7 +6997,7 @@ Array [
   align-items: center;
 }
 
-.c31 {
+.c42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7047,7 +7130,7 @@ Array [
   display: block;
 }
 
-.c27 {
+.c39 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -7057,7 +7140,7 @@ Array [
   display: block;
 }
 
-.c35 {
+.c43 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -7329,7 +7412,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c39 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
@@ -7338,7 +7421,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c35 {
+  .c43 {
     -webkit-flex-basis: 16.666666666666668%;
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
@@ -7543,11 +7626,12 @@ Array [
                     disabled={true}
                     name="card"
                 >
-                    <div
-                        className="c26"
+                    <span
+                        name="react-responsive-mock"
+                        query="only screen and (max-width: 62.4375rem)"
                     >
                         <div
-                            className="c3"
+                            className="c26"
                         >
                             <div
                                 className="c27"
@@ -7558,97 +7642,87 @@ Array [
                                     <div
                                         className="c29"
                                     >
-                                        <div
-                                            className="c8"
-                                        >
-                                            <strong
-                                                className="c30"
-                                                style={
-                                                    Object {
-                                                        "color": "#D8D8D8",
-                                                      }
-                                                }
-                                            >
-                                                From: 
-                                            </strong>
-                                        </div>
-                                    </div>
-                                    <div
-                                        className="c31"
-                                    >
-                                        <p
-                                            className="c6"
+                                        <strong
+                                            className="c30"
                                             style={
                                                 Object {
                                                     "color": "#D8D8D8",
                                                   }
                                             }
                                         >
-                                            Any
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                className="c27"
-                            >
-                                <div
-                                    className="c28"
-                                >
-                                    <div
-                                        className="c29"
-                                    >
+                                            From: 
+                                        </strong>
                                         <div
-                                            className="c8"
+                                            className="c29"
                                         >
-                                            <strong
-                                                className="c30"
+                                            <p
+                                                className="c6"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
                                                       }
                                                 }
                                             >
-                                                To: 
-                                            </strong>
+                                                Any
+                                            </p>
                                         </div>
                                     </div>
                                     <div
                                         className="c31"
                                     >
-                                        <div
-                                            className="c32"
+                                        <strong
+                                            className="c30"
+                                            style={
+                                                Object {
+                                                    "color": "#D8D8D8",
+                                                  }
+                                            }
                                         >
-                                            <ul
-                                                className="c33"
+                                            To: 
+                                        </strong>
+                                        <div
+                                            className="c29"
+                                        >
+                                            <div
+                                                className="c32"
                                             >
-                                                <li
-                                                    className="c34"
-                                                    fill={null}
-                                                    name="wat"
-                                                    style={
-                                                        Object {
-                                                            "color": "#D8D8D8",
-                                                          }
-                                                    }
-                                                    value=""
-                                                />
-                                            </ul>
+                                                <ul
+                                                    className="c33"
+                                                >
+                                                    <li
+                                                        className="c34"
+                                                        fill={null}
+                                                        name="wat"
+                                                        style={
+                                                            Object {
+                                                                "color": "#D8D8D8",
+                                                              }
+                                                        }
+                                                        value=""
+                                                    />
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div
-                                className="c35"
+                                className="c27"
+                                style={
+                                    Object {
+                                        "border-top": "1px solid #D8D8D8",
+                                      }
+                                }
                             >
-                                <div
-                                    className="c28"
+                                <span
+                                    name="react-responsive-mock"
+                                    query="only screen and (max-width: 37.4375rem)"
                                 >
                                     <div
-                                        className="c29"
+                                        className="c26"
                                     >
                                         <div
-                                            className="c8"
+                                            className="c29"
                                         >
                                             <strong
                                                 className="c30"
@@ -7660,35 +7734,14 @@ Array [
                                             >
                                                 Protocol: 
                                             </strong>
+                                            <div
+                                                className="c29"
+                                            >
+                                                tcp
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div
-                                        className="c31"
-                                    >
-                                        <p
-                                            className="c6"
-                                            style={
-                                                Object {
-                                                    "color": "#D8D8D8",
-                                                  }
-                                            }
-                                        >
-                                            tcp
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                className="c35"
-                            >
-                                <div
-                                    className="c28"
-                                >
-                                    <div
-                                        className="c29"
-                                    >
                                         <div
-                                            className="c8"
+                                            className="c29"
                                         >
                                             <strong
                                                 className="c30"
@@ -7700,35 +7753,14 @@ Array [
                                             >
                                                 Ports: 
                                             </strong>
+                                            <div
+                                                className="c29"
+                                            >
+                                                all
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div
-                                        className="c31"
-                                    >
-                                        <p
-                                            className="c6"
-                                            style={
-                                                Object {
-                                                    "color": "#D8D8D8",
-                                                  }
-                                            }
-                                        >
-                                            all
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                className="c35"
-                            >
-                                <div
-                                    className="c28"
-                                >
-                                    <div
-                                        className="c29"
-                                    >
                                         <div
-                                            className="c8"
+                                            className="c29"
                                         >
                                             <strong
                                                 className="c30"
@@ -7740,26 +7772,305 @@ Array [
                                             >
                                                 Action: 
                                             </strong>
+                                            <div
+                                                className="c29"
+                                            >
+                                                Allow
+                                            </div>
                                         </div>
                                     </div>
+                                </span>
+                                <span
+                                    name="react-responsive-mock"
+                                    query="only screen and (min-width: 37.5rem)"
+                                >
                                     <div
-                                        className="c31"
+                                        className="c28"
                                     >
-                                        <p
-                                            className="c6"
-                                            style={
-                                                Object {
-                                                    "color": "#D8D8D8",
-                                                  }
-                                            }
+                                        <div
+                                            className="c35"
                                         >
-                                            Allow
-                                        </p>
+                                            <strong
+                                                className="c30"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                Protocol: 
+                                            </strong>
+                                            <div
+                                                className="c29"
+                                            >
+                                                tcp
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c36"
+                                        >
+                                            <strong
+                                                className="c30"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                Ports: 
+                                            </strong>
+                                            <div
+                                                className="c29"
+                                            >
+                                                all
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c37"
+                                        >
+                                            <strong
+                                                className="c30"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                Action: 
+                                            </strong>
+                                            <div
+                                                className="c29"
+                                            >
+                                                Allow
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                    <span
+                        name="react-responsive-mock"
+                        query="only screen and (min-width: 62.5rem)"
+                    >
+                        <div
+                            className="c38"
+                        >
+                            <div
+                                className="c3"
+                            >
+                                <div
+                                    className="c39"
+                                >
+                                    <div
+                                        className="c40"
+                                    >
+                                        <div
+                                            className="c41"
+                                        >
+                                            <div
+                                                className="c8"
+                                            >
+                                                <strong
+                                                    className="c30"
+                                                    style={
+                                                        Object {
+                                                            "color": "#D8D8D8",
+                                                          }
+                                                    }
+                                                >
+                                                    From: 
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c42"
+                                        >
+                                            <p
+                                                className="c6"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                Any
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    className="c39"
+                                >
+                                    <div
+                                        className="c40"
+                                    >
+                                        <div
+                                            className="c41"
+                                        >
+                                            <div
+                                                className="c8"
+                                            >
+                                                <strong
+                                                    className="c30"
+                                                    style={
+                                                        Object {
+                                                            "color": "#D8D8D8",
+                                                          }
+                                                    }
+                                                >
+                                                    To: 
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c42"
+                                        >
+                                            <div
+                                                className="c32"
+                                            >
+                                                <ul
+                                                    className="c33"
+                                                >
+                                                    <li
+                                                        className="c34"
+                                                        fill={null}
+                                                        name="wat"
+                                                        style={
+                                                            Object {
+                                                                "color": "#D8D8D8",
+                                                              }
+                                                        }
+                                                        value=""
+                                                    />
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    className="c43"
+                                >
+                                    <div
+                                        className="c40"
+                                    >
+                                        <div
+                                            className="c41"
+                                        >
+                                            <div
+                                                className="c8"
+                                            >
+                                                <strong
+                                                    className="c30"
+                                                    style={
+                                                        Object {
+                                                            "color": "#D8D8D8",
+                                                          }
+                                                    }
+                                                >
+                                                    Protocol: 
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c42"
+                                        >
+                                            <p
+                                                className="c6"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                tcp
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    className="c43"
+                                >
+                                    <div
+                                        className="c40"
+                                    >
+                                        <div
+                                            className="c41"
+                                        >
+                                            <div
+                                                className="c8"
+                                            >
+                                                <strong
+                                                    className="c30"
+                                                    style={
+                                                        Object {
+                                                            "color": "#D8D8D8",
+                                                          }
+                                                    }
+                                                >
+                                                    Ports: 
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c42"
+                                        >
+                                            <p
+                                                className="c6"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                all
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    className="c43"
+                                >
+                                    <div
+                                        className="c40"
+                                    >
+                                        <div
+                                            className="c41"
+                                        >
+                                            <div
+                                                className="c8"
+                                            >
+                                                <strong
+                                                    className="c30"
+                                                    style={
+                                                        Object {
+                                                            "color": "#D8D8D8",
+                                                          }
+                                                    }
+                                                >
+                                                    Action: 
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c42"
+                                        >
+                                            <p
+                                                className="c6"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                Allow
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </span>
                 </div>
             </div>
         </div>
@@ -8696,14 +9007,51 @@ Array [
 }
 
 .c29 {
-  margin-right: 0.1875rem;
+  display: inline-block;
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
+}
+
+.c31 {
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 1.875rem;
 }
 
 .c32 {
   margin-left: 0.1875rem;
 }
 
-.c26 {
+.c35 {
+  display: inline-block;
+  margin-right: 1.5rem;
+  margin-left: 0.375rem;
+}
+
+.c36 {
+  display: inline-block;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.c37 {
+  display: inline-block;
+  margin-right: 0.375rem;
+  margin-left: 1.5rem;
+}
+
+.c41 {
+  margin-right: 0.1875rem;
+}
+
+.c27 {
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.c38 {
   padding-top: 0.75rem;
   padding-right: 1.125rem;
   padding-bottom: 0.75rem;
@@ -8730,7 +9078,53 @@ Array [
   align-content: stretch;
 }
 
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .c28 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8761,7 +9155,7 @@ Array [
   align-items: center;
 }
 
-.c31 {
+.c42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8894,7 +9288,7 @@ Array [
   display: block;
 }
 
-.c27 {
+.c39 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -8904,7 +9298,7 @@ Array [
   display: block;
 }
 
-.c35 {
+.c43 {
   box-sizing: border-box;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -9176,7 +9570,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c27 {
+  .c39 {
     -webkit-flex-basis: 25%;
     -ms-flex-preferred-size: 25%;
     flex-basis: 25%;
@@ -9185,7 +9579,7 @@ Array [
 }
 
 @media only screen and (min-width:0em) {
-  .c35 {
+  .c43 {
     -webkit-flex-basis: 16.666666666666668%;
     -ms-flex-preferred-size: 16.666666666666668%;
     flex-basis: 16.666666666666668%;
@@ -9390,11 +9784,12 @@ Array [
                     disabled={true}
                     name="card"
                 >
-                    <div
-                        className="c26"
+                    <span
+                        name="react-responsive-mock"
+                        query="only screen and (max-width: 62.4375rem)"
                     >
                         <div
-                            className="c3"
+                            className="c26"
                         >
                             <div
                                 className="c27"
@@ -9405,97 +9800,87 @@ Array [
                                     <div
                                         className="c29"
                                     >
-                                        <div
-                                            className="c8"
-                                        >
-                                            <strong
-                                                className="c30"
-                                                style={
-                                                    Object {
-                                                        "color": "#D8D8D8",
-                                                      }
-                                                }
-                                            >
-                                                From: 
-                                            </strong>
-                                        </div>
-                                    </div>
-                                    <div
-                                        className="c31"
-                                    >
-                                        <p
-                                            className="c6"
+                                        <strong
+                                            className="c30"
                                             style={
                                                 Object {
                                                     "color": "#D8D8D8",
                                                   }
                                             }
                                         >
-                                            Any
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                className="c27"
-                            >
-                                <div
-                                    className="c28"
-                                >
-                                    <div
-                                        className="c29"
-                                    >
+                                            From: 
+                                        </strong>
                                         <div
-                                            className="c8"
+                                            className="c29"
                                         >
-                                            <strong
-                                                className="c30"
+                                            <p
+                                                className="c6"
                                                 style={
                                                     Object {
                                                         "color": "#D8D8D8",
                                                       }
                                                 }
                                             >
-                                                To: 
-                                            </strong>
+                                                Any
+                                            </p>
                                         </div>
                                     </div>
                                     <div
                                         className="c31"
                                     >
-                                        <div
-                                            className="c32"
+                                        <strong
+                                            className="c30"
+                                            style={
+                                                Object {
+                                                    "color": "#D8D8D8",
+                                                  }
+                                            }
                                         >
-                                            <ul
-                                                className="c33"
+                                            To: 
+                                        </strong>
+                                        <div
+                                            className="c29"
+                                        >
+                                            <div
+                                                className="c32"
                                             >
-                                                <li
-                                                    className="c34"
-                                                    fill={null}
-                                                    name="wat"
-                                                    style={
-                                                        Object {
-                                                            "color": "#D8D8D8",
-                                                          }
-                                                    }
-                                                    value=""
-                                                />
-                                            </ul>
+                                                <ul
+                                                    className="c33"
+                                                >
+                                                    <li
+                                                        className="c34"
+                                                        fill={null}
+                                                        name="wat"
+                                                        style={
+                                                            Object {
+                                                                "color": "#D8D8D8",
+                                                              }
+                                                        }
+                                                        value=""
+                                                    />
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div
-                                className="c35"
+                                className="c27"
+                                style={
+                                    Object {
+                                        "border-top": "1px solid #D8D8D8",
+                                      }
+                                }
                             >
-                                <div
-                                    className="c28"
+                                <span
+                                    name="react-responsive-mock"
+                                    query="only screen and (max-width: 37.4375rem)"
                                 >
                                     <div
-                                        className="c29"
+                                        className="c26"
                                     >
                                         <div
-                                            className="c8"
+                                            className="c29"
                                         >
                                             <strong
                                                 className="c30"
@@ -9507,35 +9892,14 @@ Array [
                                             >
                                                 Protocol: 
                                             </strong>
+                                            <div
+                                                className="c29"
+                                            >
+                                                tcp
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div
-                                        className="c31"
-                                    >
-                                        <p
-                                            className="c6"
-                                            style={
-                                                Object {
-                                                    "color": "#D8D8D8",
-                                                  }
-                                            }
-                                        >
-                                            tcp
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                className="c35"
-                            >
-                                <div
-                                    className="c28"
-                                >
-                                    <div
-                                        className="c29"
-                                    >
                                         <div
-                                            className="c8"
+                                            className="c29"
                                         >
                                             <strong
                                                 className="c30"
@@ -9547,35 +9911,14 @@ Array [
                                             >
                                                 Ports: 
                                             </strong>
+                                            <div
+                                                className="c29"
+                                            >
+                                                all
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div
-                                        className="c31"
-                                    >
-                                        <p
-                                            className="c6"
-                                            style={
-                                                Object {
-                                                    "color": "#D8D8D8",
-                                                  }
-                                            }
-                                        >
-                                            all
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                className="c35"
-                            >
-                                <div
-                                    className="c28"
-                                >
-                                    <div
-                                        className="c29"
-                                    >
                                         <div
-                                            className="c8"
+                                            className="c29"
                                         >
                                             <strong
                                                 className="c30"
@@ -9587,26 +9930,305 @@ Array [
                                             >
                                                 Action: 
                                             </strong>
+                                            <div
+                                                className="c29"
+                                            >
+                                                Allow
+                                            </div>
                                         </div>
                                     </div>
+                                </span>
+                                <span
+                                    name="react-responsive-mock"
+                                    query="only screen and (min-width: 37.5rem)"
+                                >
                                     <div
-                                        className="c31"
+                                        className="c28"
                                     >
-                                        <p
-                                            className="c6"
-                                            style={
-                                                Object {
-                                                    "color": "#D8D8D8",
-                                                  }
-                                            }
+                                        <div
+                                            className="c35"
                                         >
-                                            Allow
-                                        </p>
+                                            <strong
+                                                className="c30"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                Protocol: 
+                                            </strong>
+                                            <div
+                                                className="c29"
+                                            >
+                                                tcp
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c36"
+                                        >
+                                            <strong
+                                                className="c30"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                Ports: 
+                                            </strong>
+                                            <div
+                                                className="c29"
+                                            >
+                                                all
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c37"
+                                        >
+                                            <strong
+                                                className="c30"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                Action: 
+                                            </strong>
+                                            <div
+                                                className="c29"
+                                            >
+                                                Allow
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                    <span
+                        name="react-responsive-mock"
+                        query="only screen and (min-width: 62.5rem)"
+                    >
+                        <div
+                            className="c38"
+                        >
+                            <div
+                                className="c3"
+                            >
+                                <div
+                                    className="c39"
+                                >
+                                    <div
+                                        className="c40"
+                                    >
+                                        <div
+                                            className="c41"
+                                        >
+                                            <div
+                                                className="c8"
+                                            >
+                                                <strong
+                                                    className="c30"
+                                                    style={
+                                                        Object {
+                                                            "color": "#D8D8D8",
+                                                          }
+                                                    }
+                                                >
+                                                    From: 
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c42"
+                                        >
+                                            <p
+                                                className="c6"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                Any
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    className="c39"
+                                >
+                                    <div
+                                        className="c40"
+                                    >
+                                        <div
+                                            className="c41"
+                                        >
+                                            <div
+                                                className="c8"
+                                            >
+                                                <strong
+                                                    className="c30"
+                                                    style={
+                                                        Object {
+                                                            "color": "#D8D8D8",
+                                                          }
+                                                    }
+                                                >
+                                                    To: 
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c42"
+                                        >
+                                            <div
+                                                className="c32"
+                                            >
+                                                <ul
+                                                    className="c33"
+                                                >
+                                                    <li
+                                                        className="c34"
+                                                        fill={null}
+                                                        name="wat"
+                                                        style={
+                                                            Object {
+                                                                "color": "#D8D8D8",
+                                                              }
+                                                        }
+                                                        value=""
+                                                    />
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    className="c43"
+                                >
+                                    <div
+                                        className="c40"
+                                    >
+                                        <div
+                                            className="c41"
+                                        >
+                                            <div
+                                                className="c8"
+                                            >
+                                                <strong
+                                                    className="c30"
+                                                    style={
+                                                        Object {
+                                                            "color": "#D8D8D8",
+                                                          }
+                                                    }
+                                                >
+                                                    Protocol: 
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c42"
+                                        >
+                                            <p
+                                                className="c6"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                tcp
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    className="c43"
+                                >
+                                    <div
+                                        className="c40"
+                                    >
+                                        <div
+                                            className="c41"
+                                        >
+                                            <div
+                                                className="c8"
+                                            >
+                                                <strong
+                                                    className="c30"
+                                                    style={
+                                                        Object {
+                                                            "color": "#D8D8D8",
+                                                          }
+                                                    }
+                                                >
+                                                    Ports: 
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c42"
+                                        >
+                                            <p
+                                                className="c6"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                all
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    className="c43"
+                                >
+                                    <div
+                                        className="c40"
+                                    >
+                                        <div
+                                            className="c41"
+                                        >
+                                            <div
+                                                className="c8"
+                                            >
+                                                <strong
+                                                    className="c30"
+                                                    style={
+                                                        Object {
+                                                            "color": "#D8D8D8",
+                                                          }
+                                                    }
+                                                >
+                                                    Action: 
+                                                </strong>
+                                            </div>
+                                        </div>
+                                        <div
+                                            className="c42"
+                                        >
+                                            <p
+                                                className="c6"
+                                                style={
+                                                    Object {
+                                                        "color": "#D8D8D8",
+                                                      }
+                                                }
+                                            >
+                                                Allow
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </span>
                 </div>
             </div>
         </div>
